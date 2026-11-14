@@ -6,8 +6,11 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.api import auth as auth_router
 from app.api import documents as documents_router
+from app.api import flashcards as flashcards_router
 from app.api import mindmap as mindmap_router
+from app.api import subjects as subjects_router
 from app.core.config import settings
 
 
@@ -19,7 +22,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
 app = FastAPI(
     title="AI Document-to-Mindmap API",
-    description="Backend API cho ứng dụng chuyển tài liệu học tập thành Mindmap và Flashcard.",
+    description="Backend API cho tài khoản, tài liệu, mindmap, flashcard và lịch ôn SM-2.",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -36,6 +39,9 @@ app.add_middleware(
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(documents_router.router)
 app.include_router(mindmap_router.router)
+app.include_router(flashcards_router.router)
+app.include_router(auth_router.router)
+app.include_router(subjects_router.router)
 
 
 # ── Global error handler ──────────────────────────────────────────────────────

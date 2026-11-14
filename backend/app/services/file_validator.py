@@ -74,18 +74,30 @@ async def validate_and_read(
             "(nội dung file không khớp phần mở rộng)"
         )
 
-    # 3. Đọc phần còn lại và kiểm tra tổng dung lượng
-    rest = await file.read()
-    content = header + rest
-
+    # 3. Đọc theo khối và dừng ngay khi vượt giới hạn, tránh nạp file lớn vào RAM.
+    content = bytearray(header)
     if len(content) > max_bytes:
         max_mb = max_bytes // (1024 * 1024)
         raise FileTooLargeError(
-            f"Kích thước file ({len(content) / 1024 / 1024:.1f} MB) "
-            f"vượt quá giới hạn {max_mb} MB cho phép"
+            f"Kích thước file vượt quá giới hạn {max_mb} MB cho phép"
         )
+
+    chunk_size = 1024 * 1024
+    while True:
+        remaining = max_bytes + 1 - len(content)
+        if remaining <= 0:
+            break
+        chunk = await file.read(min(chunk_size, remaining))
+        if not chunk:
+            break
+        content.extend(chunk)
+        if len(content) > max_bytes:
+            max_mb = max_bytes // (1024 * 1024)
+            raise FileTooLargeError(
+                f"Kích thước file vượt quá giới hạn {max_mb} MB cho phép"
+            )
 
     if len(content) < 16:
         raise InvalidFileError("File quá nhỏ, có thể bị hỏng hoặc rỗng")
 
-    return ext, content
+    return ext, bytes(content)

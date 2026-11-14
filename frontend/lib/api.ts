@@ -1,11 +1,16 @@
 import axios, { AxiosProgressEvent } from 'axios';
-import { Document, DocumentDetail, DocumentListResponse, DocumentFilters, MindmapResult } from './types';
+import {
+  Document, DocumentDetail, DocumentListResponse, DocumentFilters, MindmapResult,
+  Subject, User, FlashcardSessionResponse, FlashcardReviewResult, ReviewRating,
+  ProcessingRun,
+} from './types';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
 
 export const apiClient = axios.create({
   baseURL: BASE_URL,
   timeout: 30_000,
+  withCredentials: true,
 });
 
 // ── Response interceptor – chuẩn hóa lỗi ──────────────────────────────────────
@@ -25,6 +30,36 @@ apiClient.interceptors.response.use(
 );
 
 // ── Document API ───────────────────────────────────────────────────────────────
+
+export const authApi = {
+  register(email: string, password: string): Promise<User> {
+    return apiClient.post<User>('/api/auth/register', { email, password }).then((r) => r.data);
+  },
+  login(email: string, password: string): Promise<User> {
+    return apiClient.post<User>('/api/auth/login', { email, password }).then((r) => r.data);
+  },
+  me(): Promise<User> {
+    return apiClient.get<User>('/api/auth/me').then((r) => r.data);
+  },
+  async logout(): Promise<void> {
+    await apiClient.post('/api/auth/logout');
+  },
+};
+
+export const subjectsApi = {
+  list(): Promise<Subject[]> {
+    return apiClient.get<Subject[]>('/api/subjects').then((r) => r.data);
+  },
+  create(name: string): Promise<Subject> {
+    return apiClient.post<Subject>('/api/subjects', { name }).then((r) => r.data);
+  },
+  rename(id: string, name: string): Promise<Subject> {
+    return apiClient.patch<Subject>(`/api/subjects/${id}`, { name }).then((r) => r.data);
+  },
+  async delete(id: string): Promise<void> {
+    await apiClient.delete(`/api/subjects/${id}`);
+  },
+};
 
 export const documentsApi = {
   /** Upload một file với progress callback */
@@ -58,6 +93,7 @@ export const documentsApi = {
     if (filters.search) params.search = filters.search;
     if (filters.status) params.status = filters.status;
     if (filters.file_type) params.file_type = filters.file_type;
+    if (filters.subject_id) params.subject_id = filters.subject_id;
 
     return apiClient.get<DocumentListResponse>('/api/documents', { params }).then((r) => r.data);
   },
@@ -76,14 +112,25 @@ export const documentsApi = {
 // ── Mindmap API ────────────────────────────────────────────────────────────────
 
 export const mindmapApi = {
-  /** Sinh mindmap + flashcards mới từ tài liệu (mặc định: 'engine' bóc tách cấu trúc tài liệu, hoặc 'ai' dùng Ollama) */
-  generate(documentId: string, mode: 'engine' | 'ai' = 'engine'): Promise<MindmapResult> {
+  /** Xếp một tác vụ sinh mindmap + flashcards vào hàng đợi nền. */
+  start(documentId: string, mode: 'engine' | 'ai' = 'engine'): Promise<ProcessingRun> {
     return apiClient
-      .post<MindmapResult>(`/api/mindmap/${documentId}`, null, {
+      .post<ProcessingRun>(`/api/mindmap/${documentId}`, null, {
         params: { mode },
-        timeout: 180_000,
       })
       .then((r) => r.data);
+  },
+
+  getRun(runId: string): Promise<ProcessingRun> {
+    return apiClient.get<ProcessingRun>(`/api/mindmap/runs/${runId}`).then((r) => r.data);
+  },
+
+  getLatestRun(documentId: string): Promise<ProcessingRun> {
+    return apiClient.get<ProcessingRun>(`/api/mindmap/${documentId}/runs/latest`).then((r) => r.data);
+  },
+
+  listRuns(documentId: string): Promise<ProcessingRun[]> {
+    return apiClient.get<ProcessingRun[]>(`/api/mindmap/${documentId}/runs`).then((r) => r.data);
   },
 
   /** Lấy kết quả mindmap đã sinh trước đó */
@@ -94,5 +141,25 @@ export const mindmapApi = {
   /** Kiểm tra Ollama sẵn sàng chưa */
   health(): Promise<{ ollama_running: boolean; mindmap_model_loaded: boolean; models_available: string[] }> {
     return apiClient.get('/api/mindmap/health').then((r) => r.data);
+  },
+};
+
+export const flashcardsApi = {
+  session(documentId: string, limit = 30): Promise<FlashcardSessionResponse> {
+    return apiClient
+      .get<FlashcardSessionResponse>('/api/flashcards/session', { params: { document_id: documentId, limit } })
+      .then((r) => r.data);
+  },
+
+  review(cardId: string, rating: ReviewRating): Promise<FlashcardReviewResult> {
+    return apiClient
+      .post<FlashcardReviewResult>(`/api/flashcards/${cardId}/review`, { rating })
+      .then((r) => r.data);
+  },
+
+  exportAnki(documentId: string): Promise<Blob> {
+    return apiClient
+      .get(`/api/flashcards/${documentId}/export/anki`, { responseType: 'blob', timeout: 60_000 })
+      .then((r) => r.data as Blob);
   },
 };

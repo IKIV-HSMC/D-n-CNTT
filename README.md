@@ -1,8 +1,6 @@
-HEAD
 # DocMind – AI Document-to-Mindmap
 
-> **Giai đoạn 1 – Module Upload Tài Liệu**
-> Chuyển tài liệu học tập (PDF, Word, PowerPoint) thành Mindmap và Flashcard thông minh.
+> DocMind hiện có tài khoản, môn học, upload PDF/DOCX/PPTX, trích xuất văn bản, pipeline AI hai bước có thể cấu hình provider và xuất mã nguồn Mermaid.
 
 ---
 
@@ -39,6 +37,8 @@ docker compose up --build
 ```
 
 Lần đầu chạy sẽ mất 3–5 phút để tải image và cài dependencies.
+
+> Nếu đã có tài liệu từ phiên bản chưa có tài khoản, migration giữ lại file nhưng không tự gán chúng cho tài khoản mới. Hãy sao lưu hoặc upload lại các tài liệu cần tiếp tục dùng.
 
 ### 3. Kiểm tra
 
@@ -92,6 +92,24 @@ pytest tests/ -v
 
 ## API Endpoints
 
+Các API dữ liệu yêu cầu đăng nhập; phiên đăng nhập dùng cookie HTTPOnly.
+
+### Tài khoản
+```
+POST /api/auth/register
+POST /api/auth/login
+POST /api/auth/logout
+GET  /api/auth/me
+```
+
+### Môn học
+```
+GET    /api/subjects
+POST   /api/subjects
+PATCH  /api/subjects/{id}
+DELETE /api/subjects/{id}
+```
+
 ### Upload tài liệu
 ```
 POST /api/documents/upload
@@ -99,7 +117,7 @@ Content-Type: multipart/form-data
 
 Fields:
   file        - File PDF, DOCX hoặc PPTX (bắt buộc)
-  subject_id  - UUID môn học (tùy chọn, cho giai đoạn sau)
+  subject_id  - UUID môn học của tài khoản hiện tại (tùy chọn)
 ```
 
 ### Danh sách tài liệu
@@ -116,6 +134,31 @@ GET /api/documents/{id}
 ```
 DELETE /api/documents/{id}
 ```
+
+### Mindmap
+```
+POST /api/mindmap/{id}?mode=engine  # Xếp tác vụ nền, trả 202 + run_id
+POST /api/mindmap/{id}?mode=ai      # Hai bước AI: knowledge JSON → mindmap + flashcard
+GET  /api/mindmap/runs/{run_id}    # Trạng thái, tiến độ và kết quả khi hoàn tất
+GET  /api/mindmap/{id}/runs/latest # Khôi phục tác vụ mới nhất của tài liệu
+GET  /api/mindmap/{id}/runs       # Liệt kê các lần xử lý để mở snapshot cũ
+GET  /api/mindmap/{id}
+GET  /api/mindmap/{id}/reactflow
+GET  /api/mindmap/{id}/export/svg
+GET  /api/mindmap/{id}/export/mermaid
+GET  /api/mindmap/health            # Health check Ollama, không cần đăng nhập
+```
+
+Mỗi bước có thể chọn `ollama`, `gemini` hoặc `openai` qua `AI_STEP1_PROVIDER` và `AI_STEP2_PROVIDER`. Mặc định cả hai dùng Ollama local. Nếu chọn provider cloud, điền API key và tên model cho bước tương ứng trong `.env`; khóa chỉ được đọc ở backend. Khi dùng provider cloud, nội dung trích xuất của tài liệu được gửi tới nhà cung cấp đó để xử lý.
+
+### Luyện flashcard và Anki
+```
+GET  /api/flashcards/session?document_id={id}&limit=30
+POST /api/flashcards/{flashcard_id}/review
+GET  /api/flashcards/{document_id}/export/anki
+```
+
+Gửi `{"rating":"again"}`, `{"rating":"hard"}`, `{"rating":"good"}` hoặc `{"rating":"easy"}` để cập nhật lịch SM-2. Lịch và lịch sử từng lần đánh giá được lưu trong PostgreSQL. API Anki xuất các thẻ đang hoạt động của tài liệu thành `.apkg`.
 
 ---
 
@@ -139,6 +182,15 @@ DELETE /api/documents/{id}
 | `STORAGE_PATH` | `/storage/uploads` | Thư mục lưu file trên server |
 | `CORS_ORIGINS` | `["http://localhost:3000"]` | Origins được phép |
 | `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | URL backend cho frontend |
+| `AUTH_SESSION_TTL_DAYS` | `7` | Thời hạn phiên đăng nhập |
+| `AUTH_COOKIE_SECURE` | `false` | Đặt `true` khi triển khai HTTPS |
+| `AI_STEP1_PROVIDER` | `ollama` | Provider chuẩn hóa kiến thức |
+| `AI_STEP2_PROVIDER` | `ollama` | Provider tạo mindmap và flashcard |
+| `AI_STEP1_MODEL` | model Ollama mặc định | Model cho bước 1; để trống dùng `OLLAMA_MODEL` |
+| `AI_STEP2_MODEL` | model Ollama mặc định | Model cho bước 2; để trống dùng `OLLAMA_MODEL` |
+| `AI_TIMEOUT` | `180` giây | Giới hạn thời gian cho một lần gọi provider |
+| `GEMINI_API_KEY` | trống | Khóa server-side nếu chọn Gemini |
+| `OPENAI_API_KEY` | trống | Khóa server-side nếu chọn OpenAI |
 
 ---
 
@@ -154,105 +206,14 @@ docker compose down -v
 
 ---
 
-## Giai đoạn tiếp theo (ngoài phạm vi hiện tại)
+## Tình trạng tính năng
 
-- [ ] Xác thực người dùng (JWT)
-- [ ] Gọi AI để phân tích văn bản
-- [ ] Text chunking & embedding
-- [ ] Tạo Mindmap từ extracted text
-- [ ] Flashcard với thuật toán SM-2
-- [ ] Xuất file Mindmap/Flashcard
+- [x] Tài khoản, cookie phiên và phân quyền tài liệu theo chủ sở hữu
+- [x] Tạo môn học, gắn và lọc tài liệu theo môn
+- [x] Pipeline hai bước AI: JSON kiến thức rồi Mermaid/Flashcard; provider cấu hình riêng cho từng bước
+- [x] Hàng đợi PostgreSQL và worker bền vững cho tác vụ AI dài; có tiến độ, lease và retry
+- [x] Mermaid renderer có zoom/pan, tải `.mmd`/SVG và in ra PDF; chế độ sơ đồ hiện có PNG/SVG
+- [x] Flashcard có lịch ôn SM-2, lưu tiến độ và xuất Anki `.apkg`
+- [ ] OCR cho PDF scan
 
-# dự án CNTT
-
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.duthu.net/523h0062/d-an-cntt.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.duthu.net/523h0062/d-an-cntt/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-29e445575396fe3bbb4cc04e61075a7be507f997
+Worker chạy riêng trong Docker Compose và dùng PostgreSQL làm hàng đợi. API trả ngay 202; giao diện theo dõi tiến độ, khôi phục tác vụ gần nhất và chọn snapshot mindmap đã hoàn tất. Mỗi tác vụ có tối đa ba lần thử. Luyện tập và Anki luôn dùng bộ thẻ mới nhất của tài liệu.

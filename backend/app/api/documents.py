@@ -25,9 +25,13 @@ from fastapi.responses import FileResponse
 from sqlalchemy import select, func, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.api.auth import get_current_user
+from app.api.dependencies import validate_request_origin
 from app.core.config import settings
 from app.core.database import get_db
 from app.models.document import Document, DocumentStatus
+from app.models.subject import Subject
+from app.models.user import User
 from app.schemas.document import (
     DocumentDetailResponse,
     DocumentListResponse,
@@ -41,7 +45,11 @@ from app.services.file_validator import (
 )
 from app.services.text_extractor import extract_text_background
 
-router = APIRouter(prefix="/api/documents", tags=["documents"])
+router = APIRouter(
+    prefix="/api/documents",
+    tags=["documents"],
+    dependencies=[Depends(validate_request_origin)],
+)
 
 
 # ── POST /upload ─────────────────────────────────────────────────────────────
@@ -60,6 +68,7 @@ async def upload_document(
     background_tasks: BackgroundTasks,
     file: UploadFile = File(..., description="File PDF, DOCX hoặc PPTX"),
     subject_id: Optional[uuid.UUID] = Form(None, description="ID môn học (tùy chọn)"),
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> DocumentResponse:
     """Upload tài liệu và bắt đầu trích xuất văn bản nền."""
@@ -78,6 +87,19 @@ async def upload_document(
             detail={"code": "INVALID_FILE", "message": str(exc)},
         )
 
+    if subject_id is not None:
+        subject_result = await db.execute(
+            select(Subject.id).where(
+                Subject.id == subject_id,
+                Subject.owner_user_id == user.id,
+            )
+        )
+        if subject_result.scalar_one_or_none() is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail={"code": "SUBJECT_NOT_FOUND", "message": "Không tìm thấy môn học"},
+            )
+
     # 2. Lưu file với tên UUID (chống path traversal)
     stored_name = f"{uuid.uuid4()}.{ext}"
     storage_dir = Path(settings.STORAGE_PATH)
@@ -91,11 +113,17 @@ async def upload_document(
         stored_filename=stored_name,
         file_type=ext,
         file_size=len(content),
+        user_id=user.id,
         subject_id=subject_id,
         status=DocumentStatus.uploaded,
     )
     db.add(doc)
-    await db.commit()
+    try:
+        await db.commit()
+    except Exception:
+        await db.rollback()
+        file_path.unlink(missing_ok=True)
+        raise
     await db.refresh(doc)
 
     # 4. Thêm background task trích xuất (chạy SAU khi response được trả về)
@@ -123,10 +151,12 @@ async def list_documents(
     search: Optional[str] = Query(None, description="Tìm theo tên file"),
     status_filter: Optional[DocumentStatus] = Query(None, alias="status"),
     file_type: Optional[str] = Query(None, description="pdf | docx | pptx"),
+    subject_id: Optional[uuid.UUID] = Query(None, description="Lọc theo môn học"),
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> DocumentListResponse:
     """Lấy danh sách tài liệu có phân trang, tìm kiếm và lọc."""
-    stmt = select(Document)
+    stmt = select(Document).where(Document.user_id == user.id)
 
     if search:
         stmt = stmt.where(
@@ -136,6 +166,8 @@ async def list_documents(
         stmt = stmt.where(Document.status == status_filter)
     if file_type:
         stmt = stmt.where(Document.file_type == file_type.lower())
+    if subject_id:
+        stmt = stmt.where(Document.subject_id == subject_id)
 
     # Đếm tổng
     count_stmt = select(func.count()).select_from(stmt.subquery())
@@ -169,10 +201,11 @@ async def list_documents(
 )
 async def get_document(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> DocumentDetailResponse:
     """Lấy chi tiết một tài liệu, bao gồm 500 ký tự đầu của văn bản trích xuất."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
 
     preview: Optional[str] = None
     if doc.extracted_text:
@@ -195,10 +228,11 @@ async def get_document(
 )
 async def get_document_json(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> FileResponse:
     """Trả về file JSON chứa toàn bộ nội dung và metadata đã trích xuất."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
     if doc.status != DocumentStatus.extracted or not doc.extracted_text:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -242,10 +276,11 @@ async def get_document_json(
 )
 async def delete_document(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> None:
     """Xóa bản ghi DB, file vật lý và file JSON."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
 
     # Xóa file vật lý và file JSON nếu có
     file_path = Path(settings.STORAGE_PATH) / doc.stored_filename
@@ -261,8 +296,10 @@ async def delete_document(
 
 # ── Helper ─────────────────────────────────────────────────────────────────────
 
-async def _get_or_404(db: AsyncSession, document_id: uuid.UUID) -> Document:
-    result = await db.execute(select(Document).where(Document.id == document_id))
+async def _get_or_404(db: AsyncSession, document_id: uuid.UUID, user_id: uuid.UUID) -> Document:
+    result = await db.execute(
+        select(Document).where(Document.id == document_id, Document.user_id == user_id)
+    )
     doc = result.scalar_one_or_none()
     if doc is None:
         raise HTTPException(

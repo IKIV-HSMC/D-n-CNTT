@@ -1,52 +1,57 @@
 """
 mindmap.py – Endpoint sinh Mindmap + Flashcards từ tài liệu đã upload.
 
-POST  /api/mindmap/{document_id}         → sinh mới (Ollama model)
+POST  /api/mindmap/{document_id}         → sinh mới (engine hoặc pipeline AI hai bước)
 GET   /api/mindmap/{document_id}         → lấy kết quả đã lưu
 GET   /api/mindmap/{document_id}/reactflow → lấy định dạng ReactFlow
 GET   /api/mindmap/health                → kiểm tra Ollama
 
 Flow:
   1. Lấy document từ DB (phải ở status=extracted)
-  2. Gọi Ollama service → JSON {mindmap, flashcards}
-  3. Chuyển sang định dạng ReactFlow
+  2. Pipeline AI: knowledge JSON → mindmap/Mermaid/flashcards
+  3. Chuyển mindmap sang định dạng ReactFlow
   4. Lưu kết quả vào DB (trường mindmap_data) và trả về
 """
 
 from __future__ import annotations
 
 import json
+import html
 import logging
-import sys
+import re
 import uuid
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Literal, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
-from sqlalchemy import select, update
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
+from app.api.auth import get_current_user
+from app.api.dependencies import validate_request_origin
 from app.core.database import get_db
 from app.models.document import Document, DocumentStatus
+from app.models.processing_run import ProcessingRun
+from app.models.user import User
 from app.schemas.document import ErrorResponse
-from app.services.mindmap_engine import generate as engine_generate
-from app.services.ollama_service import (
-    OllamaServiceError,
-    check_ollama_health,
-    generate_mindmap_from_text,
-)
+from app.schemas.flashcard import ProcessingRunResponse
+from app.services.ai_pipeline import build_mermaid
+from app.services.ollama_service import check_ollama_health
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/mindmap", tags=["mindmap"])
+router = APIRouter(
+    prefix="/api/mindmap",
+    tags=["mindmap"],
+    dependencies=[Depends(validate_request_origin)],
+)
 
 
 # ── Health ────────────────────────────────────────────────────────────────────
 
 @router.get("/health", summary="Kiểm tra Ollama service")
 async def mindmap_health() -> dict[str, Any]:
-    """Kiểm tra Ollama đang chạy và model mindmap-model đã sẵn sàng."""
+    """Kiểm tra Ollama đang chạy và model cấu hình sẵn sàng."""
     return await check_ollama_health()
 
 
@@ -55,26 +60,28 @@ async def mindmap_health() -> dict[str, Any]:
 @router.post(
     "/{document_id}",
     summary="Sinh Mindmap + Flashcards từ tài liệu",
+    status_code=status.HTTP_202_ACCEPTED,
+    response_model=ProcessingRunResponse,
     responses={
         400: {"model": ErrorResponse},
         404: {"model": ErrorResponse},
-        503: {"model": ErrorResponse, "description": "Ollama chưa sẵn sàng"},
     },
 )
 async def generate_mindmap(
     document_id: uuid.UUID,
-    mode: str = Query("engine", description="Chế độ: 'engine' (bóc tách cấu trúc theo Heading/Mục lục) hoặc 'ai' (dùng Ollama LLM)"),
+    mode: Literal["engine", "ai"] = Query("engine", description="Chế độ: 'engine' (bóc tách cấu trúc) hoặc 'ai' (pipeline AI hai bước)"),
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> dict[str, Any]:
+) -> ProcessingRunResponse:
     """
-    Sinh Mindmap + Flashcards từ tài liệu đã được trích xuất thành công.
+    Tạo một tác vụ nền để sinh Mindmap + Flashcards từ tài liệu đã trích xuất.
 
     - Tài liệu phải có status = **extracted**.
     - Chế độ `engine`: Bóc tách cấu trúc tài liệu theo các cấp Heading (H1, H2, H3), định nghĩa và danh sách. Siêu nhanh và bám sát cấu trúc bài học.
-    - Chế độ `ai`: Gọi mô hình AI Ollama để tóm tắt.
-    - Kết quả được lưu vào cột `mindmap_data` trong DB.
+    - Chế độ `ai`: AI bước 1 chuẩn hóa kiến thức; AI bước 2 tạo mindmap, Mermaid và flashcard.
+    - Poll `GET /api/mindmap/runs/{run_id}` để theo dõi trạng thái và lấy kết quả.
     """
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
 
     if doc.status != DocumentStatus.extracted:
         raise HTTPException(
@@ -94,47 +101,109 @@ async def generate_mindmap(
             detail={"code": "EMPTY_TEXT", "message": "Tài liệu không có nội dung văn bản."},
         )
 
-    if mode == "ai":
-        # Gọi Ollama LLM
-        try:
-            result = await generate_mindmap_from_text(doc.extracted_text)
-        except OllamaServiceError as exc:
-            raise HTTPException(
-                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-                detail={"code": "OLLAMA_ERROR", "message": str(exc)},
-            ) from exc
-    else:
-        # Bóc tách cấu trúc tự nhiên bằng Engine theo Heading / Bullet points
-        title = Path(doc.original_filename).stem
-        result = engine_generate(
-            {"extracted_text": doc.extracted_text, "original_filename": doc.original_filename},
-            title=title,
+    run = ProcessingRun(document_id=doc.id, user_id=user.id, mode=mode)
+    db.add(run)
+    await db.commit()
+    await db.refresh(run)
+    return _run_response(run)
+
+
+@router.get("/runs/{run_id}", response_model=ProcessingRunResponse)
+async def get_processing_run(
+    run_id: uuid.UUID,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> ProcessingRunResponse:
+    result = await db.execute(
+        select(ProcessingRun).where(
+            ProcessingRun.id == run_id,
+            ProcessingRun.user_id == user.id,
         )
-        result["backend"] = "structure_engine"
-        result["model"] = "Bóc tách cấu trúc mục lục (Heading & Bullet points)"
+    )
+    run = result.scalar_one_or_none()
+    if run is None:
+        raise HTTPException(status_code=404, detail="Không tìm thấy tác vụ xử lý")
+    return _run_response(run)
 
-    # Chuyển đổi sang định dạng ReactFlow
-    if result.get("mindmap"):
-        try:
-            result["reactflow"] = _mindmap_to_reactflow(result["mindmap"])
-        except Exception:
-            result["reactflow"] = None
 
-    # Lưu vào DB nếu cột mindmap_data tồn tại
-    try:
-        await db.execute(
-            update(Document)
-            .where(Document.id == document_id)
-            .values(mindmap_data=json.dumps(result, ensure_ascii=False))
+@router.get("/{document_id}/runs/latest", response_model=ProcessingRunResponse)
+async def get_latest_processing_run(
+    document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> ProcessingRunResponse:
+    result = await db.execute(
+        select(ProcessingRun)
+        .where(
+            ProcessingRun.document_id == document_id,
+            ProcessingRun.user_id == user.id,
         )
-        await db.commit()
-    except Exception:
-        # Cột chưa migrate OK – không crash endpoint
-        await db.rollback()
-        logger.warning("Không lưu được mindmap_data vào DB (migration chưa chạy?).")
+        .order_by(ProcessingRun.created_at.desc())
+        .limit(1)
+    )
+    run = result.scalar_one_or_none()
+    if run is None:
+        raise HTTPException(status_code=404, detail="Tài liệu chưa có tác vụ mindmap")
+    return _run_response(run)
 
-    result["document_id"] = str(document_id)
-    return result
+
+@router.get("/{document_id}/runs", response_model=list[ProcessingRunResponse])
+async def list_processing_runs(
+    document_id: uuid.UUID,
+    limit: int = Query(20, ge=1, le=50),
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> list[ProcessingRunResponse]:
+    await _get_or_404(db, document_id, user.id)
+    result = await db.execute(
+        select(ProcessingRun)
+        .where(
+            ProcessingRun.document_id == document_id,
+            ProcessingRun.user_id == user.id,
+        )
+        .order_by(ProcessingRun.created_at.desc())
+        .limit(limit)
+    )
+    return [_run_summary_response(run) for run in result.scalars().all()]
+
+
+def _run_summary_response(run: ProcessingRun) -> ProcessingRunResponse:
+    return ProcessingRunResponse(
+        id=run.id,
+        document_id=run.document_id,
+        mode=run.mode,
+        status=run.status,
+        stage=run.stage,
+        progress=run.progress,
+        attempts=run.attempts,
+        error_message=run.error_message,
+        created_at=run.created_at,
+        started_at=run.started_at,
+        completed_at=run.completed_at,
+    )
+
+
+def _run_response(run: ProcessingRun) -> ProcessingRunResponse:
+    result_data: dict[str, Any] | None = None
+    if run.status == "completed" and run.result_data:
+        try:
+            result_data = json.loads(run.result_data)
+        except json.JSONDecodeError:
+            logger.exception("Kết quả processing run %s không phải JSON hợp lệ", run.id)
+    return ProcessingRunResponse(
+        id=run.id,
+        document_id=run.document_id,
+        mode=run.mode,
+        status=run.status,
+        stage=run.stage,
+        progress=run.progress,
+        attempts=run.attempts,
+        error_message=run.error_message,
+        result=result_data,
+        created_at=run.created_at,
+        started_at=run.started_at,
+        completed_at=run.completed_at,
+    )
 
 
 # ── GET /{id} – Lấy kết quả đã lưu ──────────────────────────────────────────
@@ -149,10 +218,11 @@ async def generate_mindmap(
 )
 async def get_mindmap(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
     """Lấy kết quả Mindmap đã được sinh trước đó (từ cột mindmap_data trong DB)."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
 
     mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
     if not mindmap_data:
@@ -178,10 +248,11 @@ async def get_mindmap(
 )
 async def get_reactflow(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
     """Trả về nodes + edges ở định dạng ReactFlow để frontend render ngay."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
     mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
 
     if not mindmap_data:
@@ -204,10 +275,11 @@ async def get_reactflow(
 )
 async def export_mindmap_svg(
     document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> Response:
     """Tải sơ đồ Mindmap dưới dạng file vector SVG chất lượng cao (không vỡ nét)."""
-    doc = await _get_or_404(db, document_id)
+    doc = await _get_or_404(db, document_id, user.id)
     mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
 
     if not mindmap_data:
@@ -220,8 +292,8 @@ async def export_mindmap_svg(
     mindmap = data.get("mindmap", {})
     svg_content = _generate_svg_from_mindmap(mindmap)
 
-    stem = Path(doc.original_filename).stem
-    filename = f"{stem}_mindmap.svg"
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "_", Path(doc.original_filename).stem).strip("._")[:80]
+    filename = f"{stem or 'mindmap'}_mindmap.svg"
 
     return Response(
         content=svg_content,
@@ -230,10 +302,43 @@ async def export_mindmap_svg(
     )
 
 
+@router.get(
+    "/{document_id}/export/mermaid",
+    summary="Tải mã nguồn Mermaid",
+    responses={404: {"model": ErrorResponse}, 400: {"model": ErrorResponse}},
+)
+async def export_mindmap_mermaid(
+    document_id: uuid.UUID,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> Response:
+    """Tải sơ đồ dưới dạng tệp .mmd có thể mở bằng Mermaid-compatible tools."""
+    doc = await _get_or_404(db, document_id, user.id)
+    if not doc.mindmap_data:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "NO_MINDMAP", "message": "Chưa có mindmap để xuất."},
+        )
+    data = json.loads(doc.mindmap_data)
+    source = data.get("mermaid") or build_mermaid(
+        Path(doc.original_filename).stem,
+        data.get("mindmap", {}).get("nodes", []),
+    )
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "_", Path(doc.original_filename).stem).strip("._")[:80]
+    filename = f"{stem or 'mindmap'}_mindmap.mmd"
+    return Response(
+        content=source,
+        media_type="text/plain; charset=utf-8",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-async def _get_or_404(db: AsyncSession, document_id: uuid.UUID) -> Document:
-    result = await db.execute(select(Document).where(Document.id == document_id))
+async def _get_or_404(db: AsyncSession, document_id: uuid.UUID, user_id: uuid.UUID) -> Document:
+    result = await db.execute(
+        select(Document).where(Document.id == document_id, Document.user_id == user_id)
+    )
     doc = result.scalar_one_or_none()
     if doc is None:
         raise HTTPException(
@@ -358,7 +463,7 @@ def _generate_svg_from_mindmap(mindmap: dict[str, Any]) -> str:
 
     # Vẽ nodes
     for idx, n in enumerate(nodes):
-        label = n["data"]["label"]
+        label = html.escape(str(n["data"]["label"]), quote=False)
         x = n["position"]["x"] + 30
         y = n["position"]["y"] + 25
         w = max(130, min(240, len(label) * 9 + 30))

@@ -1,6 +1,6 @@
 import uuid
 import enum
-from sqlalchemy import Column, String, Integer, Text, DateTime, Enum as SAEnum
+from sqlalchemy import Column, String, Integer, Text, DateTime, Enum as SAEnum, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
 from app.core.database import Base
@@ -20,8 +20,12 @@ class Document(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
 
     # Mở rộng tương lai: gắn vào user và môn học
-    user_id = Column(UUID(as_uuid=True), nullable=True, index=True)
-    subject_id = Column(UUID(as_uuid=True), nullable=True, index=True)
+    user_id = Column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=True, index=True
+    )
+    subject_id = Column(
+        UUID(as_uuid=True), ForeignKey("subjects.id", ondelete="SET NULL"), nullable=True, index=True
+    )
 
     # Thông tin file
     original_filename = Column(String(255), nullable=False)

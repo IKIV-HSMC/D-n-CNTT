@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { Search, Filter, X } from 'lucide-react';
-import { DocumentFilters, DocumentStatus } from '@/lib/types';
+import { DocumentFilters, DocumentStatus, Subject } from '@/lib/types';
 
 interface DocumentFiltersProps {
   filters: DocumentFilters;
+  subjects: Subject[];
   onChange: (f: Partial<DocumentFilters>) => void;
   onReset: () => void;
 }
@@ -27,8 +28,8 @@ const TYPE_OPTIONS: { value: 'pdf' | 'docx' | 'pptx' | ''; label: string }[] = [
 
 const selectCls = 'px-3 py-2 text-sm bg-surface-700 border border-[rgba(90,108,240,0.2)] rounded-lg text-slate-200 focus:outline-none focus:border-brand-500 transition-colors';
 
-export function DocumentFiltersBar({ filters, onChange, onReset }: DocumentFiltersProps) {
-  const hasActiveFilter = filters.search || filters.status || filters.file_type;
+export function DocumentFiltersBar({ filters, subjects, onChange, onReset }: DocumentFiltersProps) {
+  const hasActiveFilter = filters.search || filters.status || filters.file_type || filters.subject_id;
 
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -63,6 +64,18 @@ export function DocumentFiltersBar({ filters, onChange, onReset }: DocumentFilte
       >
         {TYPE_OPTIONS.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>
+        ))}
+      </select>
+
+      <select
+        value={filters.subject_id}
+        onChange={(e) => onChange({ subject_id: e.target.value, page: 1 })}
+        className={selectCls}
+        aria-label="Lọc theo môn học"
+      >
+        <option value="">Tất cả môn học</option>
+        {subjects.map((subject) => (
+          <option key={subject.id} value={subject.id}>{subject.name}</option>
         ))}
       </select>
 

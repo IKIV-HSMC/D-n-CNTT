@@ -10,7 +10,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from app.core.database import Base
-from app.models import document  # noqa: F401 – import để Base nhận diện model
+from app.models import document, flashcard, processing_run, subject, user  # noqa: F401 – import để Base nhận diện model
 
 config = context.config
 

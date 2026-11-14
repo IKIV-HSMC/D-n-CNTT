@@ -1,16 +1,18 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {
   X, BrainCircuit, Sparkles, Loader2, AlertCircle,
   ChevronRight, RotateCcw, BookOpen, FlipHorizontal2,
-  GitBranch, ListTree,
+  GitBranch, ListTree, Download,
 } from 'lucide-react';
-import { Document, MindmapResult, MindmapNode, Flashcard, MindmapStatus } from '@/lib/types';
-import { mindmapApi } from '@/lib/api';
+import { Document, MindmapResult, MindmapNode, Flashcard, MindmapStatus, ProcessingRun } from '@/lib/types';
+import { flashcardsApi, mindmapApi } from '@/lib/api';
 import { cn } from '@/lib/utils';
 import { MindmapVisual } from './MindmapVisual';
+import { FlashcardPractice } from './FlashcardPractice';
+import { MermaidMindmap } from './MermaidMindmap';
 
 interface MindmapDialogProps {
   document: Document | null;
@@ -132,25 +134,32 @@ function FlashcardItem({ card, index }: { card: Flashcard; index: number }) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 type TabKey = 'mindmap' | 'flashcards';
-type MindmapViewMode = 'visual' | 'tree';
+type MindmapViewMode = 'visual' | 'tree' | 'mermaid';
 type GenerationMode = 'engine' | 'ai';
 
 export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
   const [status, setStatus] = useState<MindmapStatus>('idle');
   const [result, setResult] = useState<MindmapResult | null>(null);
+  const [run, setRun] = useState<ProcessingRun | null>(null);
+  const [runHistory, setRunHistory] = useState<ProcessingRun[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [tab, setTab] = useState<TabKey>('mindmap');
   const [viewMode, setViewMode] = useState<MindmapViewMode>('visual');
   const [genMode, setGenMode] = useState<GenerationMode>('engine');
+  const [practiceMode, setPracticeMode] = useState(false);
+  const [ankiLoading, setAnkiLoading] = useState(false);
+  const [ankiError, setAnkiError] = useState<string | null>(null);
 
   const generate = useCallback(async (selectedMode: GenerationMode = genMode) => {
     if (!document) return;
+    setGenMode(selectedMode);
     setStatus('loading');
+    setResult(null);
+    setRun(null);
     setError(null);
     try {
-      const data = await mindmapApi.generate(document.id, selectedMode);
-      setResult(data);
-      setStatus('success');
+      const started = await mindmapApi.start(document.id, selectedMode);
+      setRun(started);
     } catch (err: unknown) {
       const e = err as { displayMessage?: string };
       setError(e.displayMessage ?? 'Có lỗi xảy ra khi sinh mindmap');
@@ -158,16 +167,119 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
     }
   }, [document, genMode]);
 
+  const applyRun = useCallback((latest: ProcessingRun) => {
+    setRun(latest);
+    setGenMode(latest.mode);
+    if (latest.status === 'completed' && latest.result) {
+      setResult(latest.result);
+      setError(null);
+      setStatus('success');
+    } else if (latest.status === 'completed') {
+      setError('Tác vụ đã hoàn tất nhưng không đọc được dữ liệu kết quả.');
+      setStatus('error');
+    } else if (latest.status === 'failed') {
+      setError(latest.error_message || 'Tác vụ xử lý thất bại. Bạn có thể thử lại.');
+      setStatus('error');
+    } else {
+      setStatus('loading');
+    }
+  }, []);
+
+  // Khôi phục tác vụ mới nhất khi mở lại hộp thoại, kể cả sau khi tải lại trang.
+  useEffect(() => {
+    if (!open || !document?.id) return;
+    let cancelled = false;
+    setStatus('loading');
+    setError(null);
+    setRun(null);
+    setResult(null);
+    setRunHistory([]);
+    mindmapApi.getLatestRun(document.id)
+      .then((latest) => {
+        if (!cancelled) applyRun(latest);
+      })
+      .catch((cause: unknown) => {
+        if (cancelled) return;
+        const apiError = cause as { response?: { status?: number }; displayMessage?: string };
+        if (apiError.response?.status === 404) {
+          setRun(null);
+          setResult(null);
+          setStatus('idle');
+        } else {
+          setError(apiError.displayMessage || 'Không thể tải trạng thái xử lý');
+          setStatus('error');
+        }
+      });
+    return () => { cancelled = true; };
+  }, [open, document?.id, applyRun]);
+
+  // Worker xử lý lâu ở backend; giao diện chỉ poll trạng thái tác vụ đang hoạt động.
+  useEffect(() => {
+    if (!open || !run || (run.status !== 'queued' && run.status !== 'processing')) return;
+    let cancelled = false;
+    const timer = window.setInterval(() => {
+      mindmapApi.getRun(run.id)
+        .then((latest) => { if (!cancelled) applyRun(latest); })
+        .catch(() => { /* Lỗi mạng tạm thời: giữ trạng thái hiện tại và poll lần tiếp theo. */ });
+    }, 1500);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
+  }, [open, run?.id, run?.status, applyRun]);
+
+  useEffect(() => {
+    if (!open || !document?.id || run?.status !== 'completed') return;
+    mindmapApi.listRuns(document.id).then(setRunHistory).catch(() => setRunHistory([]));
+  }, [open, document?.id, run?.status]);
+
+  const handleRunHistoryChange = async (runId: string) => {
+    if (!runId || runId === run?.id) return;
+    setStatus('loading');
+    try {
+      setPracticeMode(false);
+      applyRun(await mindmapApi.getRun(runId));
+    } catch (cause: unknown) {
+      const apiError = cause as { displayMessage?: string };
+      setError(apiError.displayMessage || 'Không thể mở phiên bản mindmap này');
+      setStatus('error');
+    }
+  };
+
   const handleOpenChange = (o: boolean) => {
     if (!o) {
       onClose();
       // Reset sau khi animation đóng xong
       setTimeout(() => {
         setStatus('idle');
+        setRun(null);
+        setRunHistory([]);
         setResult(null);
         setError(null);
         setTab('mindmap');
+        setPracticeMode(false);
+        setAnkiError(null);
       }, 300);
+    }
+  };
+
+  const handleDownloadAnki = async () => {
+    if (!document || ankiLoading) return;
+    setAnkiLoading(true);
+    setAnkiError(null);
+    try {
+      const blob = await flashcardsApi.exportAnki(document.id);
+      const url = URL.createObjectURL(blob);
+      const link = window.document.createElement('a');
+      link.href = url;
+      link.download = `${document.original_filename.replace(/\.[^.]+$/, '')}_anki.apkg`;
+      link.click();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (cause: unknown) {
+      const apiError = cause as { displayMessage?: string };
+      setAnkiError(apiError.displayMessage || 'Không thể xuất bộ thẻ Anki');
+    } finally {
+      setAnkiLoading(false);
     }
   };
 
@@ -176,6 +288,8 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
   const roots = tree?.get(null) ?? [];
   const nodeCount = result?.mindmap?.nodes?.length ?? 0;
   const cardCount = result?.flashcards?.length ?? 0;
+  const completedRunHistory = runHistory.filter((item) => item.status === 'completed');
+  const isLatestRun = !completedRunHistory.length || run?.id === completedRunHistory[0].id;
 
   return (
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
@@ -251,11 +365,11 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                     )}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-purple-300">🤖 Tóm tắt AI (Ollama)</span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Qwen2.5</span>
+                      <span className="text-sm font-semibold text-purple-300">🤖 Pipeline AI hai bước</span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">AI 1 → AI 2</span>
                     </div>
                     <p className="text-xs text-slate-400 leading-relaxed">
-                      Sử dụng mô hình AI để cô đọng và tóm tắt thành các ý cốt lõi ngắn gọn. Phù hợp khi muốn học nhanh cái nhìn tổng thể.
+                      AI 1 chuẩn hóa kiến thức thành JSON; AI 2 tạo mindmap Mermaid và flashcard. Provider và model được cấu hình ở backend.
                     </p>
                   </div>
                 </div>
@@ -265,7 +379,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm transition-all shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40"
                 >
                   <Sparkles size={16} />
-                  Bắt đầu tạo Mindmap ({genMode === 'engine' ? 'Theo mục lục bài học' : 'Tóm tắt AI'})
+                  Bắt đầu tạo Mindmap ({genMode === 'engine' ? 'Theo mục lục bài học' : 'Pipeline AI hai bước'})
                 </button>
               </div>
             )}
@@ -275,11 +389,27 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
               <div className="flex-1 flex flex-col items-center justify-center p-10 text-center">
                 <Loader2 size={40} className="text-brand-400 animate-spin mb-5" />
                 <h3 className="text-base font-semibold text-slate-200 mb-2">
-                  Đang phân tích tài liệu…
+                  {run?.status === 'queued' ? 'Đang chờ worker…' : 'Đang phân tích tài liệu…'}
                 </h3>
                 <p className="text-sm text-slate-500">
-                  Model AI đang xử lý nội dung. Vui lòng chờ trong giây lát.
+                  {run?.stage === 'ai_step1'
+                    ? 'AI bước 1 đang chuẩn hóa kiến thức từ tài liệu.'
+                    : run?.stage === 'ai_step2'
+                      ? 'AI bước 2 đang tạo mindmap và flashcard.'
+                      : run?.stage === 'retrying'
+                        ? `Đang chờ thử lại lần ${Math.min((run.attempts || 0) + 1, 3)} sau lỗi tạm thời.`
+                        : 'Tác vụ đang chạy ở máy chủ; bạn có thể đóng cửa sổ và quay lại sau.'}
                 </p>
+                {run && (
+                  <div className="w-full max-w-sm mt-6">
+                    <div className="mb-1.5 flex justify-between text-xs text-slate-500">
+                      <span>{run.stage}</span><span>{run.progress}%</span>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-surface-700">
+                      <div className="h-full rounded-full bg-brand-500 transition-all" style={{ width: `${run.progress}%` }} />
+                    </div>
+                  </div>
+                )}
                 <div className="mt-6 flex gap-1.5">
                   {[0, 1, 2].map((i) => (
                     <span
@@ -330,14 +460,31 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                       <span className="font-mono text-slate-600">{result.model}</span>
                     </>
                   )}
+                  {completedRunHistory.length > 1 && (
+                    <label className="flex items-center gap-2 text-xs text-slate-500">
+                      <span>Phiên bản</span>
+                      <select
+                        value={run?.id ?? ''}
+                        onChange={(event) => void handleRunHistoryChange(event.target.value)}
+                        className="max-w-[210px] rounded-lg border border-[rgba(255,255,255,0.1)] bg-surface-800 px-2 py-1.5 text-xs text-slate-300"
+                        aria-label="Chọn phiên bản mindmap"
+                      >
+                        {completedRunHistory.map((item) => (
+                          <option key={item.id} value={item.id}>
+                            {new Date(item.created_at).toLocaleString()} · {item.mode}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  )}
                   <div className="ml-auto flex items-center gap-2">
                     <button
                       onClick={() => generate(result.backend === 'structure_engine' ? 'ai' : 'engine')}
                       className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-brand-500/30 bg-brand-500/10 text-brand-300 hover:bg-brand-500/20 text-xs transition-all"
-                      title={result.backend === 'structure_engine' ? 'Chuyển sang tóm tắt bằng AI (Ollama)' : 'Chuyển sang bóc tách theo mục lục bài học'}
+                      title={result.backend === 'structure_engine' ? 'Chuyển sang pipeline AI hai bước' : 'Chuyển sang bóc tách theo mục lục bài học'}
                     >
                       <Sparkles size={11} />
-                      {result.backend === 'structure_engine' ? 'Đổi sang Tóm tắt AI' : 'Đổi sang Theo mục lục'}
+                      {result.backend === 'structure_engine' ? 'Dùng Pipeline AI' : 'Đổi sang Theo mục lục'}
                     </button>
                     <button
                       onClick={() => generate(genMode)}
@@ -397,6 +544,21 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                         <ListTree size={13} />
                         Dạng cây
                       </button>
+                      {result.mermaid && (
+                        <button
+                          onClick={() => setViewMode('mermaid')}
+                          className={cn(
+                            'flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium transition-all',
+                            viewMode === 'mermaid'
+                              ? 'bg-brand-500 text-white shadow-sm'
+                              : 'text-slate-400 hover:text-slate-200'
+                          )}
+                          title="Xem mã Mermaid và tải xuống"
+                        >
+                          <span className="font-mono">M</span>
+                          Mermaid
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -409,7 +571,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                         nodes={result.mindmap?.nodes ?? []}
                         filename={document?.original_filename}
                       />
-                    ) : (
+                    ) : viewMode === 'tree' ? (
                       <div className="rounded-xl border border-[rgba(90,108,240,0.12)] bg-surface-800/40 p-4">
                         {roots.length === 0 ? (
                           <p className="text-sm text-slate-500 p-4 text-center">
@@ -421,21 +583,58 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                           ))
                         )}
                       </div>
+                    ) : (
+                      <MermaidMindmap
+                        source={result.mermaid ?? ''}
+                        filename={document?.original_filename}
+                      />
                     )
                   )}
 
                   {tab === 'flashcards' && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {result.flashcards.length === 0 ? (
-                        <p className="text-sm text-slate-500 col-span-2 text-center py-6">
-                          Không có flashcard nào
+                    <>
+                      <div className="mb-4 flex flex-wrap items-center gap-2">
+                        <button
+                          onClick={() => {
+                            setPracticeMode((current) => !current);
+                            setAnkiError(null);
+                          }}
+                          disabled={!isLatestRun}
+                          title={!isLatestRun ? 'Lịch ôn dùng bộ thẻ mới nhất của tài liệu' : undefined}
+                          className="rounded-lg border border-brand-500/30 bg-brand-500/10 px-3 py-2 text-xs font-medium text-brand-300 hover:bg-brand-500/20 disabled:cursor-not-allowed disabled:opacity-40"
+                        >
+                          {practiceMode ? 'Quay lại danh sách thẻ' : 'Luyện thẻ đến hạn'}
+                        </button>
+                        <button
+                          onClick={handleDownloadAnki}
+                          disabled={ankiLoading || result.flashcards.length === 0 || !isLatestRun}
+                          title={!isLatestRun ? 'Anki xuất bộ thẻ mới nhất của tài liệu' : undefined}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-[rgba(255,255,255,0.1)] px-3 py-2 text-xs text-slate-300 hover:bg-white/5 disabled:cursor-not-allowed disabled:opacity-40"
+                        >
+                          {ankiLoading ? <Loader2 size={13} className="animate-spin" /> : <Download size={13} />}
+                          {ankiLoading ? 'Đang tạo .apkg…' : 'Tải Anki .apkg'}
+                        </button>
+                        {ankiError && <span role="alert" className="text-xs text-rose-300">{ankiError}</span>}
+                      </div>
+
+                      {!isLatestRun && (
+                        <p className="mb-4 text-xs text-slate-500">
+                          Đây là snapshot cũ. Luyện tập và xuất Anki dùng bộ thẻ của lần xử lý mới nhất.
                         </p>
-                      ) : (
-                        result.flashcards.map((card, i) => (
-                          <FlashcardItem key={i} card={card} index={i} />
-                        ))
                       )}
-                    </div>
+
+                      {practiceMode && document ? (
+                        <FlashcardPractice documentId={document.id} />
+                      ) : result.flashcards.length === 0 ? (
+                        <p className="py-6 text-center text-sm text-slate-500">Không có flashcard nào</p>
+                      ) : (
+                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                          {result.flashcards.map((card, i) => (
+                            <FlashcardItem key={card.id ?? i} card={card} index={i} />
+                          ))}
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </>

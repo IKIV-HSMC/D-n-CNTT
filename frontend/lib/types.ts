@@ -2,6 +2,18 @@
 
 export type DocumentStatus = 'uploaded' | 'extracting' | 'extracted' | 'failed';
 
+export interface User {
+  id: string;
+  email: string;
+  created_at: string;
+}
+
+export interface Subject {
+  id: string;
+  name: string;
+  created_at: string;
+}
+
 export interface Document {
   id: string;
   user_id: string | null;
@@ -54,6 +66,7 @@ export interface DocumentFilters {
   search: string;
   status: DocumentStatus | '';
   file_type: 'pdf' | 'docx' | 'pptx' | '';
+  subject_id: string;
   page: number;
 }
 
@@ -67,9 +80,40 @@ export interface MindmapNode {
 }
 
 export interface Flashcard {
+  id?: string;
   front: string;
   back: string;
-  node_id: string;
+  node_id: string | null;
+}
+
+export type ReviewRating = 'again' | 'hard' | 'good' | 'easy';
+
+export interface FlashcardSessionCard extends Flashcard {
+  id: string;
+  document_id: string;
+  due_at: string;
+  repetitions: number;
+  interval_days: number;
+  ease_factor: number;
+  total_reviews: number;
+  is_new: boolean;
+}
+
+export interface FlashcardSessionResponse {
+  cards: FlashcardSessionCard[];
+  returned_count: number;
+}
+
+export interface FlashcardReviewResult {
+  flashcard_id: string;
+  rating: ReviewRating;
+  reviewed_at: string;
+  due_at: string;
+  repetitions: number;
+  interval_days: number;
+  ease_factor: number;
+  total_reviews: number;
+  lapses: number;
 }
 
 export interface ReactFlowNode {
@@ -89,9 +133,37 @@ export interface MindmapResult {
   document_id: string;
   mindmap: { nodes: MindmapNode[] };
   flashcards: Flashcard[];
+  mermaid?: string;
+  knowledge?: {
+    title: string;
+    summary: string;
+    sections: Array<{ heading: string; level: number; summary: string; facts: string[] }>;
+  };
   reactflow?: { nodes: ReactFlowNode[]; edges: ReactFlowEdge[] };
   backend?: string;
   model?: string;
+  pipeline?: {
+    step1_provider: string;
+    step1_model: string;
+    step2_provider: string;
+    step2_model: string;
+    chunk_count: number;
+  };
 }
 
 export type MindmapStatus = 'idle' | 'loading' | 'success' | 'error';
+
+export interface ProcessingRun {
+  id: string;
+  document_id: string;
+  mode: 'engine' | 'ai';
+  status: 'queued' | 'processing' | 'completed' | 'failed';
+  stage: string;
+  progress: number;
+  attempts: number;
+  error_message: string | null;
+  result: MindmapResult | null;
+  created_at: string;
+  started_at: string | null;
+  completed_at: string | null;
+}
