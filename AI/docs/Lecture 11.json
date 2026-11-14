@@ -1,0 +1,166 @@
+{
+  "original_filename": "Lecture 11.pdf",
+  "extracted_text": "Lecture 10 recap\n1) Discussion of redundancy.\n2) Definition of linear independence (in terms of solutions\nof a vector equation).\n3) Linear indepenence - one or two vectors.\n6) A theorem of guaranteed dependence.\n4) Linear independence in terms of redundancy.\n5) Geometrical examples - linear independence/dependence\nof two or three vectors.\nLecture 11\nLinear independence\n(cont’d)\nBases\nDimensions\nTheorem\n1 \t2Let \t, \t,..., \tbe linearly independent vectors in \t.n\nku u \tu\n1 \t1 \t2\n1 \t2 \t1\nSuppose \tis NOT a linear combination of \t, \t,..., \t,\nthen \t, \t,..., \t, \tare linearly independent.\nn\nk \tk\nk \tk\n\n\n\tu \tu u \tu\nu u \tu \tu\nWhat is the significance\nof such a result?\n1) A set \tis called a vector space if either \tor\nis a subspace of \tfor some positive integer \t.\nn\nn\nV \tV\nV \tn\n\nDiscussion\n2) Let \tbe a vector space. A set \tis called a subspace\nof \tif \tis a vector space contained in \t.\nW \tV\nW \tV \tW\n1 1 \t1 \t1 0 0 \t0 1 1\t( , , \t) is not a linear combination of ( , , ),( , , )\t\n1 1 1 \t1 0 0 \t0 1 1\t( , , ) \t( , , ) \t( , , ) \tU \tW\t \t \t \t\n1 1 1 \t1 1 \t1\tspan{( , , )} \tspan{( , , \t)}\tU \tV\t \t \t\n1 0 0 \t0 1 1\tspan{( , , ),( , , )}\tW \t\nExample\n3\n, \t, \tare all subspaces of \t. So they are vector spaces.\tU V W\nSo \tis a subspace of\tU \tW\nand so \tis not a subspace of\tV \tW \tV \tW\t \t\nDiscussionConsider a vector space \t.\tV\nn\nV\nQuestion:\nFind a subset \tof \t,\ncontaining as few\nvectors as possible, so\nthat every vector in\nis a linear combination\nof the vectors in\n(that is, span( ) \t).\nS \tV\nV\nS\nS \tV\tSuch a set can then be used to\nbuild a 'coordinate system' for \t.\tV\nDefinition (Basis)\n1 \t2Let \t{ \t, \t,..., \t} be a subset of a vector space \t.\nThen \tis called a basis (plural bases) for \tif\nkS \tV\nS \tV\n \tu u \tu\n1. \tis linearly independent and\tS\n2. \tspans \t.\tS \tV\nExamples (Basis)\n2\n2 4 \t1 0\tShow that \t{( , ),( , )} is a basis for \t.\tS \t\n1 4 1 \t2 0 \t1\tLet \t{( , , ),( , , \t)}. Show that \tis a basis\nfor span( ).\nS \tS\nS\n \t\n3\n1 2 1 \t2 9 0 \t3 3 4\tShow that \t{( , , ),( , , ),( , , )} is a basis for \t.\tS \t\nExamples (Basis)\n4\n1 1 0 1 \t2 1 0 3 \t3 \t1 0 3\tIs \t{( , , , ),( , , , ),( , \t, , )} a basis for \t?\tS \t \t\n4\n1 1 1 1 \t0 0 1 2 \t1 0 0 1\tIs \t{( , , , ),( , , , ),( \t, , , )} a basis for \t?\tS \t \t\n1 0 0 0\tNo. ( , , , ) is not a linear combination of vectors in \t.\tS\nExamples (Basis)\n3\n1 1 1 \t0 0 1 \t1 1 0\tIs \t{( , , ),( , , ),( , , )} a basis for \t?\tS \t\nSome remarks\n2) For convenience, we say that the empty set \tis the\nbasis for the zero space.\n\n3) Except the zero space, any vector space has infinitely\nmany different bases.\n1) A basis for a vector space \tcontains the smallest\npossible number of vectors that can span \t.\nV\nV\nTheorem\n1 \t2\n1 \t2\nIf \t{ \t, \t,..., \t} is a basis for a vector space \t, then\nevery vector \tcan be expressed in the form (as a\nlinear combination of \t, \t,..., \t)\nk\nk\nS \tV\nV\n\n\nu u \tu\nv\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu\n1 \t2in exactly one way, where \t, \t,..., \t.kc c \tc \t\nDefinition1 \t2Let \t{ \t, \t,..., \t} be a basis for a vector space \tand\nbe a vector in \t. If\nkS \tV\nV\n \tu u \tu\nv\n1 \t2then the coefficients \t, \t,..., \tare called the coordinates\nof \trelative to the basis \t.\nkc c \tc\nS\tv\n1 \t2( ) \t( \t, \t,..., \t) (belonging to \t)k\nS \tkc c \tc\t\tv\nThe vector\nis called the coordinate vector of \trelative to the basis \t.\tS\tv\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu\nSome remarks\n1 \t2\n1) In order to discuss coordinate vectors meaningfully,\nthe vectors in \t{ \t, \t,..., \t} must be ordered.kS \t \tu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu1 \t2( ) \t( \t, \t,..., \t)S \tkc c \tc\t\tv\n1 \t22) Once \t{ \t, \t,..., \t} is fixed, ( ) \tis unique and\nwell-defined for each \t.\nk \tSS\nV\n\n\nu u \tu \tv\nv\n3) Different basis,\ndifferent coordinate vectors.1S2S\nv\tv\n1 \t2\n( ) \t( )S \tS\tv \tv\nExample (coordinate vectors)\n1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t\n3\n1) Prove that \tis a basis for \t.\tS\n5 \t1 9\t2) Find the coordinate vector of \t( , \t, ) relative to \t.\tS\t \t\tv\nSolution: Solve for the coefficients \t, , \tin the equation\ta b c\n5 \t1 9 \t1 2 1 \t2 9 0 \t3 3 4\t( , \t, ) \t( , , ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t \t\tv\n2 \t3 \t5\n2 \t9 \t3 \t1\n4 \t9\na \tb \tc\na \tb \tc\na \tc\n \t \t\t\n  \t \t \t\n  \t\nExample (coordinate vectors)1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t5 \t1 9 \t1 2 1 \t2 9 0 \t3 3 4\t( , \t, ) \t( , , ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t \t\tv\n2 \t3 \t5\n2 \t9 \t3 \t1\n4 \t9\na \tb \tc\na \tb \tc\na \tc\n \t \t\t\n  \t \t \t\n  \t\n1 \t2 \t3 \t5\n2 \t9 \t3 \t1\n1 \t0 \t4 \t9\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2\t, \t,\ta \tb \tc\t \t  \t\n1 \t1 2\tSo ( ) \t( , \t, ).S  \t\tv\n1 \t0 \t0 \t1\n0 \t1 \t0 \t1\n0 \t0 \t1 \t2\n \t\n \t\n \t\n \t\n \t\nunique solution\nExample (coordinate vectors)\n1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t\n3\n1) Prove that \tis a basis for \t.\tS\n5 \t1 9\t2) Find the coordinate vector of \t( , \t, ) relative to \t.\tS\t \t\tv\n3 1 3 3\t3) Find a vector \tin \tsuch that ( \t) \t( , , ).s \tw \tw\nTest information\nDate: 5th October (Friday)\nTime: 4.15pm – 5.15pm (60 minutes)\nVenue: MPSH1 (Section A + Section B). Seating plan will be made\navailable in IVLE next week. Seating will be according to your tutorial\ngroup.\nScope: Chapter 1, 2, 3 (up to and including Section 3.2)\nFormat: 3 questions. 40 marks.\nQuestions 1 and 2 from Chapters 1 and 2.\nQuestion 3 from Chapter 3.\nCalculators: Any non-programmable calculator can be used.\nGraphing calculators cannot be used.\nHelp sheet: One A4-sized, double sided, handwritten. Do not bring\nany other paper to the test.\nOthers: Answer booklet will be provided. You MUST write your answers\nin pen.\n2 3 \t2 1 0 \t3 0 1\t( , ) \t( , ) \t( , )\t \t\nExample (different bases)2\n2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n2 1 \t1 \t1 1\t{( , \t),( , )}\tS \t \t\n3 1 0 \t1 1\t{( , ),( , )}\tS \t\t1 2 3\t( ) \t( , )S \t\tv\nExample (different bases)2\n2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n5\t1\n2 \t22 3 \t1 \t1 \t1 1\t( , ) \t( , \t) \t( , )\t  \t \t\n2\n5\t1\n2 \t2( ) \t( \t, )S \t \tv\n2 1 1 1 1\t{( , ),( , )}\tS  \n3 1 0 1 1\t{( , ),( , )}\tS \nExample (different bases)2\n2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n2 3 \t1 0 \t3 1 1\t( , ) \t( , ) \t( , )\t  \t\n3 1 3\t( ) \t( \t, )S \t \tv\n2 1 1 1 1\t{( , ),( , )}\tS  \n3 1 0 1 1\t{( , ),( , )}\tS \nWhat is the significance?2\n2 3\t( , )\t \t\tv\n3 1 3\t( ) \t( \t, )S  \tv\n2\n5\t1\n2 \t2( ) \t( \t, )S  \tv\n1 2 3\t( ) \t( , )S \tv\nAt the end of\nthe day, it is the\nsame vector \t!\tv\nExample (standard basis)2\n2 3\t( , )\t \t\tv\t1 1 0 \t0 1\t{( , ),( , )}\tS \t1 2 3\t( ) \t( , )S  \t\tv \tv\n2\nIn fact, for any \t( , \t) \t,\tx y\t \t\tv\n1\n( ) \t( , \t)S x y\t \t\tv \tv\n1Such a basis (like \t) is convenient to use.\tS\n1 \t2Let \t{ \t, \t,..., \t} wherenE \t \te \te \te\n1 1 0 \t0\t( , ,..., )\t\te2 0 1 \t0\t( , ,..., )\t\te\t0 0 \t1\t( , ,..., )n \te\t..........\nFor any \t, ( )n\nE \t\tv \tv \tv\nis called the standard basis for \t.n\nE\nRemark (standard basis)\n3\n4\nRemember the standard basis for \tand the standrd\nbasis for \tcontains entirely different vectors.\nDo not be confused!\n3\nStandard basis for\n4\nStandard basis for\nSome useful rulesLet \tbe a basis for a vector space \t.\tS \tVn\nV1) For any \t, \tin \t,\nif and only if ( ) \t( ) .S \tS\nV \t\n\nu v \tu \tv\nu \tv\tS\n1 \t2 \t1 \t22) For any \t, \t,..., \t, \t, \t,..., \t,r \trV \tc c \tc\t \t\tv \tv \tv\n1 \t1 \t2 \t2 \t1 \t1 \t2 \t2( \t... \t) \t( \t) \t( \t) \t... \t( \t)r \tr \tS \tS \tS \tr \tr \tSc \tc \tc \tc \tc \tc\t \t \t \t \t \t \t\tv \tv \tv \tv \tv \tv\nTheoremLet \tbe a basis for a vector space \twhere | \t| \t.\tS \tV \tS \tk\tn\nV\nS\n1 \t2Let \t, \t,..., \t.r V\t\tv \tv \tv\n1 \t2if and only if ( \t) ,( \t) ,...,( \t) \tare linearly dependent\n(resp. independent) vectors in \t.\nS \tS \tr \tS\nk\nv \tv \tv\n1 \t21) \t, \t,..., \tare linearly dependent\n(resp. independent) vectors in\nr\nV\nv \tv \tv\nNote that ( \t) \tfor each .k\ni \tS i\t\tv\n1 \t2 \t1 \t22) span{ \t, \t,..., \t} \tif and only if span{( \t) ,( \t) ,...,( \t) }\n.\nr \tS \tS \tr \tS\nk\nV\t\n\nv \tv \tv \tv \tv \tv\nOmi\tProof: \ttted.\nA question to ponder\nFor a vector space \t, we know\nthat \tcan have many different bases.\nV\nV\nBut do all these bases have the same\nnumber of vectors?\nTheoremLet \tbe a vector space which has a basis with \tvectors.\tV \tkn\nV\nbasis for \tV\t\nThen\n(1) any subset of \twith\nmore than \tvectors is\nalways linearly dependent\n(so cannot be a basis);\nV\nk\n(2) any subset of \twith less than \tvectors cannot span\n(so also cannot be a basis);\nV \tk \tV\n\"You must have the\nright number\"\nDefinition (Dimension)\nThe dimension of a vector space \tdenoted by dim( \t),\nis defined to be the number of vectors in a basis for \t.\nV \tV\nV\nThe dimension of the zero space is defined to be zero.\nExamples (Dimension)\n1 \t2\n1) dim( \t)\n(recall a basis for \tcan be { \t, \t,..., \t}).\nn\nn\nn\nn\t\ne \te \te\n2\n2) Subspaces of \t:\t0\t{ } : dimension\t0\n2 2\t: dimension1\tlines through the origin: dimension\n3\n3) Subspaces of \t:0\t{ } : dimension\t0\n1\tlines through the origin: dimension\n2\tplanes containing the origin: dimension3 3\t: dimension\nExamples (Dimension)\n2\nFind a basis for and determine the dimension of the\nsubspace \t{( , \t, )| \t}.\tW \tx y z \ty \tz\t \t\n2\t{( , \t, )| , \t}\tx \tz z \tx z\t \t\n1 0 0 \t0 2 1\t{ ( , , ) \t( , , )| , \t}\tx \tz \tx z\t \t \t\n1 0 0 \t0 2 1\tspan{( , , ),( , , )}\t\n1 0 0 \t0 2 1\t{( , , ),( , , )} spans \tW\n1 0 0 \t0 2 1\t{( , , ),( , , )} is linearly independent (why?)\n1 0 0 \t0 2 1 \t2\t{( , , ),( , , )} is a basis for \tand dim( \t) \t.\tW \tW \t\nEnd of Lecture 11\nLecture 12:\nDimensions (cont’d)\nTransition matrices (till end of Chapter 3)",
+  "sections": [
+    {
+      "heading": "Lecture 10 recap",
+      "level": 1,
+      "text": "1) Discussion of redundancy.\n2) Definition of linear independence (in terms of solutions\nof a vector equation).\n3) Linear indepenence - one or two vectors.\n6) A theorem of guaranteed dependence.\n4) Linear independence in terms of redundancy.\n5) Geometrical examples - linear independence/dependence\nof two or three vectors."
+    },
+    {
+      "heading": "Lecture 11",
+      "level": 2,
+      "text": "Linear independence\n(cont’d)\nBases\nDimensions"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "1 \t2Let \t, \t,..., \tbe linearly independent vectors in \t.n\nku u \tu\n1 \t1 \t2\n1 \t2 \t1\nSuppose \tis NOT a linear combination of \t, \t,..., \t,\nthen \t, \t,..., \t, \tare linearly independent.\nn\nk \tk\nk \tk\n\n\n\tu \tu u \tu\nu u \tu \tu\nWhat is the significance\nof such a result?"
+    },
+    {
+      "heading": "1) A set \tis called a vector space if either \tor",
+      "level": 2,
+      "text": "is a subspace of \tfor some positive integer \t.\nn\nn\nV \tV\nV \tn\n\nDiscussion\n2) Let \tbe a vector space. A set \tis called a subspace\nof \tif \tis a vector space contained in \t.\nW \tV\nW \tV \tW"
+    },
+    {
+      "heading": "1 1 \t1 \t1 0 0 \t0 1 1\t( , , \t) is not a linear combination of ( , , ),( , , )\t",
+      "level": 2,
+      "text": "1 1 1 \t1 0 0 \t0 1 1\t( , , ) \t( , , ) \t( , , ) \tU \tW\t \t \t \t\n1 1 1 \t1 1 \t1\tspan{( , , )} \tspan{( , , \t)}\tU \tV\t \t \t\n1 0 0 \t0 1 1\tspan{( , , ),( , , )}\tW \t\nExample\n3\n, \t, \tare all subspaces of \t. So they are vector spaces.\tU V W\nSo \tis a subspace of\tU \tW\nand so \tis not a subspace of\tV \tW \tV \tW\t \t"
+    },
+    {
+      "heading": "DiscussionConsider a vector space \t.\tV",
+      "level": 2,
+      "text": "n\nV\nQuestion:\nFind a subset \tof \t,\ncontaining as few\nvectors as possible, so\nthat every vector in\nis a linear combination\nof the vectors in\n(that is, span( ) \t).\nS \tV\nV\nS\nS \tV\tSuch a set can then be used to\nbuild a 'coordinate system' for \t.\tV"
+    },
+    {
+      "heading": "Definition (Basis)",
+      "level": 2,
+      "text": "1 \t2Let \t{ \t, \t,..., \t} be a subset of a vector space \t.\nThen \tis called a basis (plural bases) for \tif\nkS \tV\nS \tV\n \tu u \tu\n1. \tis linearly independent and\tS\n2. \tspans \t.\tS \tV"
+    },
+    {
+      "heading": "Examples (Basis)",
+      "level": 2,
+      "text": "2\n2 4 \t1 0\tShow that \t{( , ),( , )} is a basis for \t.\tS \t\n1 4 1 \t2 0 \t1\tLet \t{( , , ),( , , \t)}. Show that \tis a basis\nfor span( ).\nS \tS\nS\n \t\n3\n1 2 1 \t2 9 0 \t3 3 4\tShow that \t{( , , ),( , , ),( , , )} is a basis for \t.\tS \t"
+    },
+    {
+      "heading": "Examples (Basis)",
+      "level": 2,
+      "text": "4\n1 1 0 1 \t2 1 0 3 \t3 \t1 0 3\tIs \t{( , , , ),( , , , ),( , \t, , )} a basis for \t?\tS \t \t\n4\n1 1 1 1 \t0 0 1 2 \t1 0 0 1\tIs \t{( , , , ),( , , , ),( \t, , , )} a basis for \t?\tS \t \t\n1 0 0 0\tNo. ( , , , ) is not a linear combination of vectors in \t.\tS"
+    },
+    {
+      "heading": "Examples (Basis)",
+      "level": 2,
+      "text": "3\n1 1 1 \t0 0 1 \t1 1 0\tIs \t{( , , ),( , , ),( , , )} a basis for \t?\tS \t"
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "2) For convenience, we say that the empty set \tis the\nbasis for the zero space.\n\n3) Except the zero space, any vector space has infinitely\nmany different bases.\n1) A basis for a vector space \tcontains the smallest\npossible number of vectors that can span \t.\nV\nV"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "1 \t2\n1 \t2\nIf \t{ \t, \t,..., \t} is a basis for a vector space \t, then\nevery vector \tcan be expressed in the form (as a\nlinear combination of \t, \t,..., \t)\nk\nk\nS \tV\nV\n\n\nu u \tu\nv\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu\n1 \t2in exactly one way, where \t, \t,..., \t.kc c \tc \t"
+    },
+    {
+      "heading": "Definition1 \t2Let \t{ \t, \t,..., \t} be a basis for a vector space \tand",
+      "level": 2,
+      "text": "be a vector in \t. If\nkS \tV\nV\n \tu u \tu\nv\n1 \t2then the coefficients \t, \t,..., \tare called the coordinates\nof \trelative to the basis \t.\nkc c \tc\nS\tv\n1 \t2( ) \t( \t, \t,..., \t) (belonging to \t)k\nS \tkc c \tc\t\tv\nThe vector\nis called the coordinate vector of \trelative to the basis \t.\tS\tv\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu"
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "1 \t2\n1) In order to discuss coordinate vectors meaningfully,\nthe vectors in \t{ \t, \t,..., \t} must be ordered.kS \t \tu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tv \tu \tu \tu1 \t2( ) \t( \t, \t,..., \t)S \tkc c \tc\t\tv\n1 \t22) Once \t{ \t, \t,..., \t} is fixed, ( ) \tis unique and\nwell-defined for each \t.\nk \tSS\nV\n\n\nu u \tu \tv\nv\n3) Different basis,\ndifferent coordinate vectors.1S2S\nv\tv\n1 \t2\n( ) \t( )S \tS\tv \tv"
+    },
+    {
+      "heading": "Example (coordinate vectors)",
+      "level": 2,
+      "text": "1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t\n3\n1) Prove that \tis a basis for \t.\tS\n5 \t1 9\t2) Find the coordinate vector of \t( , \t, ) relative to \t.\tS\t \t\tv\nSolution: Solve for the coefficients \t, , \tin the equation\ta b c\n5 \t1 9 \t1 2 1 \t2 9 0 \t3 3 4\t( , \t, ) \t( , , ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t \t\tv\n2 \t3 \t5\n2 \t9 \t3 \t1\n4 \t9\na \tb \tc\na \tb \tc\na \tc\n \t \t\t\n  \t \t \t\n  \t"
+    },
+    {
+      "heading": "Example (coordinate vectors)1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t5 \t1 9 \t1 2 1 \t2 9 0 \t",
+      "level": 2,
+      "text": "2 \t3 \t5\n2 \t9 \t3 \t1\n4 \t9\na \tb \tc\na \tb \tc\na \tc\n \t \t\t\n  \t \t \t\n  \t\n1 \t2 \t3 \t5\n2 \t9 \t3 \t1\n1 \t0 \t4 \t9\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2\t, \t,\ta \tb \tc\t \t  \t\n1 \t1 2\tSo ( ) \t( , \t, ).S  \t\tv\n1 \t0 \t0 \t1\n0 \t1 \t0 \t1\n0 \t0 \t1 \t2\n \t\n \t\n \t\n \t\n \t\nunique solution"
+    },
+    {
+      "heading": "Example (coordinate vectors)",
+      "level": 2,
+      "text": "1 2 1 \t2 9 0 \t3 3 4\t{( , , ),( , , ),( , , )}\tS \t\n3\n1) Prove that \tis a basis for \t.\tS\n5 \t1 9\t2) Find the coordinate vector of \t( , \t, ) relative to \t.\tS\t \t\tv\n3 1 3 3\t3) Find a vector \tin \tsuch that ( \t) \t( , , ).s \tw \tw"
+    },
+    {
+      "heading": "Test information",
+      "level": 2,
+      "text": "Date: 5th October (Friday)\nTime: 4.15pm – 5.15pm (60 minutes)\nVenue: MPSH1 (Section A + Section B). Seating plan will be made\navailable in IVLE next week. Seating will be according to your tutorial\ngroup.\nScope: Chapter 1, 2, 3 (up to and including Section 3.2)\nFormat: 3 questions. 40 marks.\nQuestions 1 and 2 from Chapters 1 and 2.\nQuestion 3 from Chapter 3.\nCalculators: Any non-programmable calculator can be used.\nGraphing calculators cannot be used.\nHelp sheet: One A4-sized, double sided, handwritten. Do not bring\nany other paper to the test.\nOthers: Answer booklet will be provided. You MUST write your answers\nin pen."
+    },
+    {
+      "heading": "2 3 \t2 1 0 \t3 0 1\t( , ) \t( , ) \t( , )\t \t",
+      "level": 2,
+      "text": "Example (different bases)2\n2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n2 1 \t1 \t1 1\t{( , \t),( , )}\tS \t \t\n3 1 0 \t1 1\t{( , ),( , )}\tS \t\t1 2 3\t( ) \t( , )S \t\tv"
+    },
+    {
+      "heading": "Example (different bases)2",
+      "level": 2,
+      "text": "2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n5\t1\n2 \t22 3 \t1 \t1 \t1 1\t( , ) \t( , \t) \t( , )\t  \t \t\n2\n5\t1\n2 \t2( ) \t( \t, )S \t \tv\n2 1 1 1 1\t{( , ),( , )}\tS  \n3 1 0 1 1\t{( , ),( , )}\tS "
+    },
+    {
+      "heading": "Example (different bases)2",
+      "level": 2,
+      "text": "2 3\t( , )\t \t\tv\n1 1 0 \t0 1\t{( , ),( , )}\tS \t\n2 3 \t1 0 \t3 1 1\t( , ) \t( , ) \t( , )\t  \t\n3 1 3\t( ) \t( \t, )S \t \tv\n2 1 1 1 1\t{( , ),( , )}\tS  \n3 1 0 1 1\t{( , ),( , )}\tS "
+    },
+    {
+      "heading": "What is the significance?2",
+      "level": 2,
+      "text": "2 3\t( , )\t \t\tv\n3 1 3\t( ) \t( \t, )S  \tv\n2\n5\t1\n2 \t2( ) \t( \t, )S  \tv\n1 2 3\t( ) \t( , )S \tv\nAt the end of\nthe day, it is the\nsame vector \t!\tv"
+    },
+    {
+      "heading": "Example (standard basis)2",
+      "level": 2,
+      "text": "2 3\t( , )\t \t\tv\t1 1 0 \t0 1\t{( , ),( , )}\tS \t1 2 3\t( ) \t( , )S  \t\tv \tv\n2\nIn fact, for any \t( , \t) \t,\tx y\t \t\tv\n1\n( ) \t( , \t)S x y\t \t\tv \tv\n1Such a basis (like \t) is convenient to use.\tS\n1 \t2Let \t{ \t, \t,..., \t} wherenE \t \te \te \te\n1 1 0 \t0\t( , ,..., )\t\te2 0 1 \t0\t( , ,..., )\t\te\t0 0 \t1\t( , ,..., )n \te\t..........\nFor any \t, ( )n\nE \t\tv \tv \tv\nis called the standard basis for \t.n\nE"
+    },
+    {
+      "heading": "Remark (standard basis)",
+      "level": 2,
+      "text": "3\n4\nRemember the standard basis for \tand the standrd\nbasis for \tcontains entirely different vectors.\nDo not be confused!\n3\nStandard basis for\n4\nStandard basis for"
+    },
+    {
+      "heading": "Some useful rulesLet \tbe a basis for a vector space \t.\tS \tVn",
+      "level": 2,
+      "text": "V1) For any \t, \tin \t,\nif and only if ( ) \t( ) .S \tS\nV \t\n\nu v \tu \tv\nu \tv\tS\n1 \t2 \t1 \t22) For any \t, \t,..., \t, \t, \t,..., \t,r \trV \tc c \tc\t \t\tv \tv \tv\n1 \t1 \t2 \t2 \t1 \t1 \t2 \t2( \t... \t) \t( \t) \t( \t) \t... \t( \t)r \tr \tS \tS \tS \tr \tr \tSc \tc \tc \tc \tc \tc\t \t \t \t \t \t \t\tv \tv \tv \tv \tv \tv"
+    },
+    {
+      "heading": "TheoremLet \tbe a basis for a vector space \twhere | \t| \t.\tS \tV \tS \tk\tn",
+      "level": 2,
+      "text": "V\nS\n1 \t2Let \t, \t,..., \t.r V\t\tv \tv \tv\n1 \t2if and only if ( \t) ,( \t) ,...,( \t) \tare linearly dependent\n(resp. independent) vectors in \t.\nS \tS \tr \tS\nk\nv \tv \tv\n1 \t21) \t, \t,..., \tare linearly dependent\n(resp. independent) vectors in\nr\nV\nv \tv \tv\nNote that ( \t) \tfor each .k\ni \tS i\t\tv\n1 \t2 \t1 \t22) span{ \t, \t,..., \t} \tif and only if span{( \t) ,( \t) ,...,( \t) }\n.\nr \tS \tS \tr \tS\nk\nV\t\n\nv \tv \tv \tv \tv \tv\nOmi\tProof: \ttted."
+    },
+    {
+      "heading": "A question to ponder",
+      "level": 2,
+      "text": "For a vector space \t, we know\nthat \tcan have many different bases.\nV\nV\nBut do all these bases have the same\nnumber of vectors?"
+    },
+    {
+      "heading": "TheoremLet \tbe a vector space which has a basis with \tvectors.\tV \tkn",
+      "level": 2,
+      "text": "V\nbasis for \tV\t\nThen\n(1) any subset of \twith\nmore than \tvectors is\nalways linearly dependent\n(so cannot be a basis);\nV\nk\n(2) any subset of \twith less than \tvectors cannot span\n(so also cannot be a basis);\nV \tk \tV\n\"You must have the\nright number\""
+    },
+    {
+      "heading": "Definition (Dimension)",
+      "level": 2,
+      "text": "The dimension of a vector space \tdenoted by dim( \t),\nis defined to be the number of vectors in a basis for \t.\nV \tV\nV\nThe dimension of the zero space is defined to be zero."
+    },
+    {
+      "heading": "Examples (Dimension)",
+      "level": 2,
+      "text": "1 \t2\n1) dim( \t)\n(recall a basis for \tcan be { \t, \t,..., \t}).\nn\nn\nn\nn\t\ne \te \te\n2\n2) Subspaces of \t:\t0\t{ } : dimension\t0\n2 2\t: dimension1\tlines through the origin: dimension\n3\n3) Subspaces of \t:0\t{ } : dimension\t0\n1\tlines through the origin: dimension\n2\tplanes containing the origin: dimension3 3\t: dimension"
+    },
+    {
+      "heading": "Examples (Dimension)",
+      "level": 2,
+      "text": "2\nFind a basis for and determine the dimension of the\nsubspace \t{( , \t, )| \t}.\tW \tx y z \ty \tz\t \t\n2\t{( , \t, )| , \t}\tx \tz z \tx z\t \t\n1 0 0 \t0 2 1\t{ ( , , ) \t( , , )| , \t}\tx \tz \tx z\t \t \t\n1 0 0 \t0 2 1\tspan{( , , ),( , , )}\t\n1 0 0 \t0 2 1\t{( , , ),( , , )} spans \tW\n1 0 0 \t0 2 1\t{( , , ),( , , )} is linearly independent (why?)\n1 0 0 \t0 2 1 \t2\t{( , , ),( , , )} is a basis for \tand dim( \t) \t.\tW \tW \t"
+    },
+    {
+      "heading": "End of Lecture 11",
+      "level": 2,
+      "text": "Lecture 12:\nDimensions (cont’d)\nTransition matrices (till end of Chapter 3)"
+    }
+  ]
+}

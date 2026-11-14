@@ -1,0 +1,176 @@
+{
+  "original_filename": "Lecture 09.pdf",
+  "extracted_text": "Lecture 08 recap\n1) Geometric vectors and Euclidean \tspace.\tn \t\n2) Identifying a vector with a matrix.\n3) Subsets of \t. Implicit and explicit representations.n\n4) Linear combination\n5) Linear span (set of all linear combinations).\n6) Determining whether a set spans \t.n\nLecture 09\nLinear combinations and\nlinear spans (cont’d)\nSubspaces\nDiscussion\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t11 \t12 \t1( \t, \t,..., \t)na \ta \ta\t\tu2 \t21 \t22 \t2( \t, \t,..., \t)na \ta \ta\t\tu1 \t2... \t( \t, \t,..., \t)k \tk \tk \tkna \ta \ta\t\tu\n1 \t2For any \t( \t, \t,..., \t) \t, consider the equation:n\nnv v \tv\t \t\tv\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\nDiscussion\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t1 \t21 \t2 \t1\n12 \t1 \t22 \t2 \t2 \t2\n1 \t1 \t2 \t2\n...\n...\n: \t: \t: \t:\n...\nk \tk\nk \tk\nn \tn \tkn \tk \tn\na c \ta c \ta c \tv\na c \ta \tc \ta \tc \tv\na c \ta \tc \ta c \tv\n \t \t \t\t\n  \t \t \t\t\n\n\n \t \t \t \t\nDiscussion\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nn\nIf a row-echelon form of\ndoes not have a zero row,\nA\nA\n(*)\n(*) is always consistent\nregardless of \tv\nspan( ) n\nS\t \t\nDiscussion\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nn\nIf a row-echelon form of\nhas at least one zero row,\nA\nA\n(*)\n(*) is not always consistent\nspan( ) n\nS\t \t0 \t0 \t0 \t0\t...\nExample\nFrom earlier example:\n3\n1 0 1 1 1 0 0 1 1\tShow that span{( , , ),( , , ),( , , )} .\t\n3\n1 1 1 1 2 0 2 1 3 2 3 1\tShow that span{( , , ),( , , ),( , , ),( , , )} .\t\n1 \t1 \t2 \t2\n1 \t2 \t1 \t3\n1 \t0 \t3 \t1\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2 \t2\n0 \t1 \t1 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nHas zero row\n1 \t1 \t0\n0 \t1 \t1\n1 \t0 \t1\n \t\n \t\n \t\n \t\n \t\nNo zero row\n1 \t1 \t0\n0 \t1 \t1\n0 \t0 \t2\n \t\n \t\n \t\n \t\n \t\nTheorem\n1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.\nIf \t, then \tcannot span \t.\nn\nk\nn\nS\nk \tn \tS\n\n\nu u \tu\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\t(*)\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nnA\n0 \t0 \t0 \t0\t...\nIf a row-echelon form of\nhas at least one zero row,\nA\n(*) is not always consistent\nIf \t, then a row-echelon form of \thas at\nleast one zero row\nk \tn\t \tA\ncannot span \t.n\nS\t\nExample\n2\n1) One vector cannot span \t.\n3\n2) One or two vectors cannot span \t.\nTheorem\n1) \tspan( )\tS\t\t0\n1 \t2 \t1 \t22) For any \t, \t,..., \tspan( ) and \t, \t,..., \t,r \trS \tc c \tc\t \t\tv \tv \tv\n1 \t1 \t2 \t2 ... \tspan( ).r \trc \tc \tc \tS\t \t \t \t\tv \tv \tv\n1 \t2Let \t{ \t, \t,..., \t} \t.n\nkS \t \t\tu u \tu\nTheorem\n1 \t1 \t2 \t2 \t1 \t2Let \t{ \t, \t,..., \t} and \t{ \t, \t,..., \t} be subsets of \t.n\nk \tmS \tu u \tu \tS \tv v \tv\t \t\nn\tn\n1 \t2Then span( \t) \tspan( \t)\tS \tS\t\nn\neach \tis a linear combination ofiu\t\n1 \t2, \t,..., \t.mv v \tv\n1 \t2 \t3 \t1 \t2Each of \t, \t, \tis a linear combination of \t, \t.\tu u \tu \tv \tv\nExample\n1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2\nIdea: The previous theorem gives us a\nnecessary and sufficient condition for\nspan{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\nExample\n1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2Each of \t, \t, \tis a linear combination of \t, \t.\tu u \tu \tv \tv\n1 2 3 \t2 \t1 1\t( , , ) \t( , \t, )\ta \tb\t \t \t\nExample\n1 0 1 \t1 2 3 \t2 \t1 1\t( , , ) \t( , , ) \t( , \t, )\t \t \t\n1 \t2 \t1 \t1 \t1\n2 \t1 \t0 \t1 \t2\n3 \t1 \t1 \t2 \t1\n\t \t\n \t\n \t\n \t\n \t\n3 \t3\t1\n5 \t5 \t5\n2 \t1 \t4\n5 \t5 \t5\n1 \t0\n0 \t1\n0 \t0 \t0 \t0 \t0\n\n \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination\n1 1 2 \t1 2 3 \t2 \t1 1\t( , , ) \t( , , ) \t( , \t, )\t \t \t\n1 2 1 \t1 2 3 \t2 \t1 1\t( \t, , ) \t( , , ) \t( , \t, )\t \t \t \t\n1 \t2 \t3\n1 \t2\nSince each of \t, \t,\nis a linear combination of \t, \t,\nu u \tu\nv \tv\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\nExample\n1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2\nCan we show\nspan{ \t, \t, \t} \tspan{ \t, \t}?\t\tu u \tu \tv \tv\n1 \t2 \t1 \t2 \t3Each of \t, \tis a linear combination of \t, \t, \t.\tv \tv \tu u \tu\n1 \t2 \t3 \t1 \t2\nShown:\nspan{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 0 1 \t1 1 2 \t1 2 1\t( , , ) \t( , , ) \t( \t, , )\ta \tb \tc\t \t \t \t\nExample1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t1 \t1 \t1 \t2\n0 \t1 \t2 \t2 \t1\n1 \t2 \t1 \t3 \t1\n\t \t\n \t\n \t\n \t\n \t\n1 \t0 \t3 \t1 \t3\n0 \t1 \t2 \t2 \t1\n0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination\n1 1 0 1 \t1 1 2 \t1 2 1\t( , , ) \t( , , ) \t( \t, , )\ta \tb \tc\t \t \t \t\tv\nExample1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t1 \t2 \t3Since each of \t, \tis a linear combination of \t, \t, \t,\tv \tv \tu u \tu\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t2Together with span{ \t, \t, \t} \tspan{ \t, \t}, we have shown\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t1 \t1 \t1 \t2\n0 \t1 \t2 \t2 \t1\n1 \t2 \t1 \t3 \t1\n\t \t\n \t\n \t\n \t\n \t\n1 \t0 \t3 \t1 \t3\n0 \t1 \t2 \t2 \t1\n0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination\nExample1 \t2 \t3\n1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 \t1 \t1 \t1 \t1 \t0\n1 \t1 \t1 \t1 \t0 \t1\n1 \t1 \t1 \t0 \t0 \t0\n1 \t1 \t1 \t2 \t1 \t1\n \t\t \t\n \t\n \t\n\t \t\n \t \t\nHow did this\nmatrix come\nabout?\nExample1 \t2 \t3\n1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 \t1 \t1 \t1 \t1 \t0\n1 \t1 \t1 \t1 \t0 \t1\n1 \t1 \t1 \t0 \t0 \t0\n1 \t1 \t1 \t2 \t1 \t1\n \t\t \t\n \t\n \t\n\t \t\n \t \t\n1 \t1 \t1 \t1 \t1 \t0\n0 \t2 \t2 \t0 \t1 \t1\n0 \t0 \t2 \t1 \t1 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\t \t\n \t\n \t\nExample1 \t2 \t3\n1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 1 1 1 1 \t1 1 0 2 \t1 0 0 1 \t0 1 0 1\t( , , , ) \t( , , , ) \t( , , , ) \t( , , , )\ta \tb \tc\t \t \t \t\tv\nhas no solution.\n1 \t1 \t2 \t3So \tis not a linear combination of \t, \t, \t.\tv \tu u \tu\nExample\n1 \t2 \t3\n1 \t2 \t3\n1 0 0 1 \t0 1 \t1 2 \t2 1 \t1 4\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , \t, ), \t( , , \t, ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tv \tv \tv \tu u \tu\n1 \t2 \t3We try to write each \tas a linear combination of \t, \t, \t.iv \tu u \tu\n1 \t0 \t2 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n1 \t2 \t4 \t1 \t1 \t1\n \t\t \t\n \t\n \t\n \t \t\t \t\n \t \t\n1 \t0 \t2 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n0 \t0 \t0 \t2 \t0 \t2\n0 \t0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\n \t\n1 \t2 \t3Which \tis NOT a linear combination of \t, \t, \t?iv \tu u \tu\nTheorem (‘useless vector’)\n1 \t2Suppose \t, \t,..., \tare vectors taken from \t.n\nku u \tu\n1 \t2 \t1If \tis a linear combination of \t, \t,..., \t, thenk \tku \tu u \tu\n1 \t2 \t1 \t1 \t2 \t1span{ \t, \t,..., \t} \tspan{ \t, \t,..., \t, \t}k \tk \tk\t \t\tu u \tu \tu u \tu \tu\nset of ALL linear\ncombinations of\nset of ALL linear\ncombinations of\nExample\n1 \t2 \t31 0 0 \t0 \t1 0 \t2 3 0\tLet \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tu \tu\n3 \t1 \t22 \t3\tClearly, \t.\t \t\tu \tu \tu1 \t2 \t3 \t1 \t2So span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tu u\n1 \t2 \t3Can you describe span{ \t, \t, \t} geometrically?\tu u \tu\nx\ny\nz\n0\tz \n1 1 0 0\t( , , )\t\tu\n2 0 \t1 0\t( , \t, )\t \t\tu\nLet \tbe a subset of \t.n\nV\tn\nV\nDefinition (Subspaces)\nV\nthen \tis said to be\na subspace of \t.n\nV\n1 \t2\nRemember: span( ) \tset of all\nlinear combinations of \t, \t,..., \t.k\nS \t\nu u \tu\nIf there exists a set of vectors\n{ \t}\n1 \t2{ \t, \t,..., \t} in n\nkS \t \tu u \tu\nsuch that span( ) \t,\tS \tV\t\nspan( )\tS \tV\t\nDefinition (Subspaces)\nLet \tbe a subset of \t.n\nV\tn\nV\nIf there exists a set of vectors\n1 \t2{ \t, \t,..., \t} in n\nkS \t \tu u \tu\n{ \t}\nsuch that span( ) \t,\tS \tV\t\nspan( )\tS \tV\t\nthen \tis said to be\na subspace of \t.n\nV\tMore precisely, we say:\n1) \tis the subspace spanned by \t.\tV \tS\n1 \t22) \tis the subspace spanned by \t, \t,..., \t.kV \tu u \tu\n3) \tspans \t.\tS \tV\nRemark\n{ \tspan{ \tis the zero subspace of \t.n\n0} = \t0}\n(Here, \tis the zero vector of \t.)n\n0\nIt is also called the zero space of \t.n\nIt is also the only subspace of \twith a finite number\n(in this case, one), and thus the least, of vectors.\nn\nRemark\nConsider the vectors in \t:n\n1 1 0 \t0\t( , ,...., )\t\te\n1 \t2 \t1 \t2{( \t, \t,..., \t)| \t, \t,..., \t}n\nn \tnu u \tu \tu u \tu\t \t\n2 0 1 \t0\t( , ,...., )\t\te\t0 0 \t1\t( , ,...., )n \te....\n1 \t1 \t2 \t2 \t1 \t2{ \t... \t| \t, \t,..., \t}n \tn \tnu \tu \tu \tu u \tu\t \t \t \t \t\te \te \te\n1 \t2the set of all linear combinations of \t, \t,..., n \te \te \te\n1 \t2span{ \t, \t,..., \t}n \te \te \te\ta subspace of n\n\nSo \tis a subspace of itself and to some extent, it can be\nthought of as the subspace of \twith the 'largest' number\nof vectors.\nn\nn\nRemark\nIn more advance textbooks on linear algebra,\n'subspace' is defined differently. We will discuss this\nbriefly later in today's lecture.\nExample (subspaces)\n1 2 \t3\t{( \t, \t)| , \t}.\tV \ta \tb \tb \ta b\t \t \t2\n1 is a subset of \t.\tV\n2\n1Is \ta subspace of \t?\tV\n1Idea: Can you try to write \tas a linear span?\tV\n2\n1So \tis a subspace of \t.\tV\n2\n1Is there a vector in \tthat is not in \t?\tV\n2\n1V\n2\n1Is \t?\tV \t\nExample (subspaces)\n1 2 \t3\t{( \t, \t)| , \t}.\tV \ta \tb \tb \ta b\t \t \t\n2\n1 0 \t2 3\nIdea: Is every vector in \ta linear combination\nof ( , ) and ( \t, )?\t\n2\n1Is \t?\tV \t\nExample (subspaces)\n2 3 \t2 \t0\t{( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t \t3\n2 is a subset of \t.\tV\n3\n2Is \ta subspace of \t?\tV\n2Idea: \tis given in implicit form. Can you find\nits explicit form?\nV\n2Describe \tgeometrically.\tV\nExample (subspaces)\n3 3 \t2 \t1\t{( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t \t3\n3 is a subset of \t.\tV\n3\n3Is \ta subspace of \t?\tV3Describe \tgeometrically.\tV\n30 0 0 \t0 \t3 0 \t2 0 \t1\t( , , ) \tsince \t( ) \t( ) \t.\tV\t \t \t \t\n3\n3\nIf \tis a subspace, then it can be expressed as a\nlinear span, that is, \tspan( ) for some finite set \t.\nV\nV \tS \tS\t\n30 0 0\tBy (first) theorem in today's lecture, ( , , ) \tspan( ) \t.\tS \tV\t \t\n3\n3So \tis not a s\tContradi \tubspace\tction! \tof \t.\tV\nExample (subspaces)\n4 {( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t3\n4 is a subset of \t.\tV\n3\n4Is \ta subspace of \t?\tV\n4\n4\nIf \tis a subspace, then it can be expressed as a\nlinear span, that is, \tspan( ) for some finite set \t.\nV\nV \tT \tT\t\n1 \t2 \t4 \t1 \t2For any \t, \t,..., \tspan( ) \tand \t, \t,..., \t,r \trT \tV \tc c \tc\t \t \t\tv \tv \tv\n1 \t1 \t2 \t2 \t4... \tspan( ) \t.r \trc \tc \tc \tT \tV\t \t \t \t \t\tv \tv \tv\nBy (first) theorem in today's lecture,\n41 1 2 \t0 2 4\t( , , ),( , , ) \tV\t41 1 2 \t2 0 2 4 \t1 \t3 \t6\tbut ( , , ) \t( , , ) \t( , \t, \t) \t.\tV\t \t \t \t \t\nNo!\nEnd of Lecture 09\nLecture 10:\nSubspaces (cont’d)\nLinear independence\nBases (till Example 3.5.5.1)",
+  "sections": [
+    {
+      "heading": "Lecture 08 recap",
+      "level": 1,
+      "text": "1) Geometric vectors and Euclidean \tspace.\tn \t\n2) Identifying a vector with a matrix.\n3) Subsets of \t. Implicit and explicit representations.n\n4) Linear combination\n5) Linear span (set of all linear combinations).\n6) Determining whether a set spans \t.n"
+    },
+    {
+      "heading": "Lecture 09",
+      "level": 2,
+      "text": "Linear combinations and\nlinear spans (cont’d)\nSubspaces"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t11 \t12 \t1( \t, \t,..., \t)na \ta \ta\t\tu2 \t21 \t22 \t2( \t, \t,..., \t)na \ta \ta\t\tu1 \t2... \t( \t, \t,..., \t)k \tk \tk \tkna \ta \ta\t\tu\n1 \t2For any \t( \t, \t,..., \t) \t, consider the equation:n\nnv v \tv\t \t\tv\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t1 \t21 \t2 \t1\n12 \t1 \t22 \t2 \t2 \t2\n1 \t1 \t2 \t2\n...\n...\n: \t: \t: \t:\n...\nk \tk\nk \tk\nn \tn \tkn \tk \tn\na c \ta c \ta c \tv\na c \ta \tc \ta \tc \tv\na c \ta \tc \ta c \tv\n \t \t \t\t\n  \t \t \t\t\n\n\n \t \t \t \t"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nn\nIf a row-echelon form of\ndoes not have a zero row,\nA\nA\n(*)\n(*) is always consistent\nregardless of \tv\nspan( ) n\nS\t \t"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\n1 \t11 \t12 \t1 \t2 \t21 \t22 \t2 \t1 \t2\n1 \t2\n( \t, \t,..., \t) \t( \t, \t,..., \t) \t... \t( \t, \t,..., \t)\n( \t, \t,..., \t)\nn \tn \tk \tk \tk \tkn\nn\nc a \ta \ta \tc \ta \ta \ta \tc \ta \ta \ta\nv v \tv\n \t \t\n\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nn\nIf a row-echelon form of\nhas at least one zero row,\nA\nA\n(*)\n(*) is not always consistent\nspan( ) n\nS\t \t0 \t0 \t0 \t0\t..."
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "From earlier example:\n3\n1 0 1 1 1 0 0 1 1\tShow that span{( , , ),( , , ),( , , )} .\t\n3\n1 1 1 1 2 0 2 1 3 2 3 1\tShow that span{( , , ),( , , ),( , , ),( , , )} .\t\n1 \t1 \t2 \t2\n1 \t2 \t1 \t3\n1 \t0 \t3 \t1\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2 \t2\n0 \t1 \t1 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nHas zero row\n1 \t1 \t0\n0 \t1 \t1\n1 \t0 \t1\n \t\n \t\n \t\n \t\n \t\nNo zero row\n1 \t1 \t0\n0 \t1 \t1\n0 \t0 \t2\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.\nIf \t, then \tcannot span \t.\nn\nk\nn\nS\nk \tn \tS\n\n\nu u \tu\n1 \t2Suppose \t{ \t, \t,..., \t} \t. We want to determine\nif span( ) \t.\nn\nk\nn\nS\nS\n \t\n\nu u \tu\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t \t\tu \tu \tu \tv\t(*)\n11 \t21 \t1 \t1\n12 \t22 \t2 \t2\n1 \t2\n...\n...\n: \t: \t: \t:\n...\nk\nk\nn \tn \tkn \tn\na \ta \ta \tv\na \ta \ta \tv\na \ta \ta \tv\n \t\n \t\n \t\n \t\n \t\n \t\ncolumns\tk\nrows\nnA\n0 \t0 \t0 \t0\t...\nIf a row-echelon form of\nhas at least one zero row,\nA\n(*) is not always consistent\nIf \t, then a row-echelon form of \thas at\nleast one zero row\nk \tn\t \tA\ncannot span \t.n\nS\t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2\n1) One vector cannot span \t.\n3\n2) One or two vectors cannot span \t."
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "1) \tspan( )\tS\t\t0\n1 \t2 \t1 \t22) For any \t, \t,..., \tspan( ) and \t, \t,..., \t,r \trS \tc c \tc\t \t\tv \tv \tv\n1 \t1 \t2 \t2 ... \tspan( ).r \trc \tc \tc \tS\t \t \t \t\tv \tv \tv\n1 \t2Let \t{ \t, \t,..., \t} \t.n\nkS \t \t\tu u \tu"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "1 \t1 \t2 \t2 \t1 \t2Let \t{ \t, \t,..., \t} and \t{ \t, \t,..., \t} be subsets of \t.n\nk \tmS \tu u \tu \tS \tv v \tv\t \t\nn\tn\n1 \t2Then span( \t) \tspan( \t)\tS \tS\t\nn\neach \tis a linear combination ofiu\t\n1 \t2, \t,..., \t.mv v \tv"
+    },
+    {
+      "heading": "1 \t2 \t3 \t1 \t2Each of \t, \t, \tis a linear combination of \t, \t.\tu u \tu \tv \tv",
+      "level": 2,
+      "text": "Example\n1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2\nIdea: The previous theorem gives us a\nnecessary and sufficient condition for\nspan{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2Each of \t, \t, \tis a linear combination of \t, \t.\tu u \tu \tv \tv\n1 2 3 \t2 \t1 1\t( , , ) \t( , \t, )\ta \tb\t \t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 0 1 \t1 2 3 \t2 \t1 1\t( , , ) \t( , , ) \t( , \t, )\t \t \t\n1 \t2 \t1 \t1 \t1\n2 \t1 \t0 \t1 \t2\n3 \t1 \t1 \t2 \t1\n\t \t\n \t\n \t\n \t\n \t\n3 \t3\t1\n5 \t5 \t5\n2 \t1 \t4\n5 \t5 \t5\n1 \t0\n0 \t1\n0 \t0 \t0 \t0 \t0\n\n \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination\n1 1 2 \t1 2 3 \t2 \t1 1\t( , , ) \t( , , ) \t( , \t, )\t \t \t\n1 2 1 \t1 2 3 \t2 \t1 1\t( \t, , ) \t( , , ) \t( , \t, )\t \t \t \t\n1 \t2 \t3\n1 \t2\nSince each of \t, \t,\nis a linear combination of \t, \t,\nu u \tu\nv \tv\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t2 \t3 \t1 \t2Show that span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), \t( , \t, ).\t \t \t  \t \t\tu \tu \tu \tv \tv\n1 \t2 \t3 \t1 \t2\nCan we show\nspan{ \t, \t, \t} \tspan{ \t, \t}?\t\tu u \tu \tv \tv\n1 \t2 \t1 \t2 \t3Each of \t, \tis a linear combination of \t, \t, \t.\tv \tv \tu u \tu\n1 \t2 \t3 \t1 \t2\nShown:\nspan{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 0 1 \t1 1 2 \t1 2 1\t( , , ) \t( , , ) \t( \t, , )\ta \tb \tc\t \t \t \t"
+    },
+    {
+      "heading": "Example1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), ",
+      "level": 2,
+      "text": "1 \t1 \t1 \t1 \t2\n0 \t1 \t2 \t2 \t1\n1 \t2 \t1 \t3 \t1\n\t \t\n \t\n \t\n \t\n \t\n1 \t0 \t3 \t1 \t3\n0 \t1 \t2 \t2 \t1\n0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination\n1 1 0 1 \t1 1 2 \t1 2 1\t( , , ) \t( , , ) \t( \t, , )\ta \tb \tc\t \t \t \t\tv"
+    },
+    {
+      "heading": "Example1 \t2 \t3 \t1 \t21 0 1 \t1 1 2 \t1 2 1 \t1 2 3 \t2 \t1 1\tLet \t( , , ), \t( , , ), \t( \t, , ), \t( , , ), ",
+      "level": 2,
+      "text": "1 \t2 \t1 \t2 \t3Since each of \t, \tis a linear combination of \t, \t, \t,\tv \tv \tu u \tu\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t2Together with span{ \t, \t, \t} \tspan{ \t, \t}, we have shown\t\tu u \tu \tv \tv\n1 \t2 \t3 \t1 \t2span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tv \tv\n1 \t1 \t1 \t1 \t2\n0 \t1 \t2 \t2 \t1\n1 \t2 \t1 \t3 \t1\n\t \t\n \t\n \t\n \t\n \t\n1 \t0 \t3 \t1 \t3\n0 \t1 \t2 \t2 \t1\n0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\nGauss-Jordan\nElimination"
+    },
+    {
+      "heading": "Example1 \t2 \t3",
+      "level": 2,
+      "text": "1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 \t1 \t1 \t1 \t1 \t0\n1 \t1 \t1 \t1 \t0 \t1\n1 \t1 \t1 \t0 \t0 \t0\n1 \t1 \t1 \t2 \t1 \t1\n \t\t \t\n \t\n \t\n\t \t\n \t \t\nHow did this\nmatrix come\nabout?"
+    },
+    {
+      "heading": "Example1 \t2 \t3",
+      "level": 2,
+      "text": "1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 \t1 \t1 \t1 \t1 \t0\n1 \t1 \t1 \t1 \t0 \t1\n1 \t1 \t1 \t0 \t0 \t0\n1 \t1 \t1 \t2 \t1 \t1\n \t\t \t\n \t\n \t\n\t \t\n \t \t\n1 \t1 \t1 \t1 \t1 \t0\n0 \t2 \t2 \t0 \t1 \t1\n0 \t0 \t2 \t1 \t1 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\t \t\n \t\n \t"
+    },
+    {
+      "heading": "Example1 \t2 \t3",
+      "level": 2,
+      "text": "1 \t2 \t3\n1 1 0 2 \t1 0 0 1 \t0 1 0 1\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , , ), \t( , , , ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t} but\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tu u \tu \tv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3To show span{ \t, \t, \t} \tspan{ \t, \t, \t},\t\tu u \tu \tv \tv \tv\n1 1 1 1 1 \t1 1 0 2 \t1 0 0 1 \t0 1 0 1\t( , , , ) \t( , , , ) \t( , , , ) \t( , , , )\ta \tb \tc\t \t \t \t\tv\nhas no solution.\n1 \t1 \t2 \t3So \tis not a linear combination of \t, \t, \t.\tv \tu u \tu"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t2 \t3\n1 \t2 \t3\n1 0 0 1 \t0 1 \t1 2 \t2 1 \t1 4\n1 1 1 1 \t1 1 \t1 1 \t1 1 1 \t1\nLet \t( , , , ), \t( , , \t, ), \t( , , \t, ),\n( , , , ), \t( \t, , \t, ), \t( \t, , , \t).\n \t \t \t \t\n  \t \t  \t\nu \tu \tu\nv \tv \tv\n1 \t2 \t3 \t1 \t2 \t3Show that span{ \t, \t, \t} \tspan{ \t, \t, \t}.\t\tv \tv \tv \tu u \tu\n1 \t2 \t3We try to write each \tas a linear combination of \t, \t, \t.iv \tu u \tu\n1 \t0 \t2 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n1 \t2 \t4 \t1 \t1 \t1\n \t\t \t\n \t\n \t\n \t \t\t \t\n \t \t\n1 \t0 \t2 \t1 \t1 \t1\n0 \t1 \t1 \t1 \t1 \t1\n0 \t0 \t0 \t2 \t0 \t2\n0 \t0 \t0 \t0 \t0 \t0\n \t\t \t\n \t\n \t\n \t\n \t\n \t\n1 \t2 \t3Which \tis NOT a linear combination of \t, \t, \t?iv \tu u \tu"
+    },
+    {
+      "heading": "Theorem (‘useless vector’)",
+      "level": 2,
+      "text": "1 \t2Suppose \t, \t,..., \tare vectors taken from \t.n\nku u \tu\n1 \t2 \t1If \tis a linear combination of \t, \t,..., \t, thenk \tku \tu u \tu\n1 \t2 \t1 \t1 \t2 \t1span{ \t, \t,..., \t} \tspan{ \t, \t,..., \t, \t}k \tk \tk\t \t\tu u \tu \tu u \tu \tu\nset of ALL linear\ncombinations of\nset of ALL linear\ncombinations of"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t2 \t31 0 0 \t0 \t1 0 \t2 3 0\tLet \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tu \tu\n3 \t1 \t22 \t3\tClearly, \t.\t \t\tu \tu \tu1 \t2 \t3 \t1 \t2So span{ \t, \t, \t} \tspan{ \t, \t}.\t\tu u \tu \tu u\n1 \t2 \t3Can you describe span{ \t, \t, \t} geometrically?\tu u \tu\nx\ny\nz\n0\tz \n1 1 0 0\t( , , )\t\tu\n2 0 \t1 0\t( , \t, )\t \t\tu"
+    },
+    {
+      "heading": "Let \tbe a subset of \t.n",
+      "level": 2,
+      "text": "V\tn\nV\nDefinition (Subspaces)\nV\nthen \tis said to be\na subspace of \t.n\nV\n1 \t2\nRemember: span( ) \tset of all\nlinear combinations of \t, \t,..., \t.k\nS \t\nu u \tu\nIf there exists a set of vectors\n{ \t}\n1 \t2{ \t, \t,..., \t} in n\nkS \t \tu u \tu\nsuch that span( ) \t,\tS \tV\t\nspan( )\tS \tV\t"
+    },
+    {
+      "heading": "Definition (Subspaces)",
+      "level": 2,
+      "text": "Let \tbe a subset of \t.n\nV\tn\nV\nIf there exists a set of vectors\n1 \t2{ \t, \t,..., \t} in n\nkS \t \tu u \tu\n{ \t}\nsuch that span( ) \t,\tS \tV\t\nspan( )\tS \tV\t\nthen \tis said to be\na subspace of \t.n\nV\tMore precisely, we say:\n1) \tis the subspace spanned by \t.\tV \tS\n1 \t22) \tis the subspace spanned by \t, \t,..., \t.kV \tu u \tu\n3) \tspans \t.\tS \tV"
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "{ \tspan{ \tis the zero subspace of \t.n\n0} = \t0}\n(Here, \tis the zero vector of \t.)n\n0\nIt is also called the zero space of \t.n\nIt is also the only subspace of \twith a finite number\n(in this case, one), and thus the least, of vectors.\nn"
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "Consider the vectors in \t:n\n1 1 0 \t0\t( , ,...., )\t\te\n1 \t2 \t1 \t2{( \t, \t,..., \t)| \t, \t,..., \t}n\nn \tnu u \tu \tu u \tu\t \t\n2 0 1 \t0\t( , ,...., )\t\te\t0 0 \t1\t( , ,...., )n \te....\n1 \t1 \t2 \t2 \t1 \t2{ \t... \t| \t, \t,..., \t}n \tn \tnu \tu \tu \tu u \tu\t \t \t \t \t\te \te \te\n1 \t2the set of all linear combinations of \t, \t,..., n \te \te \te\n1 \t2span{ \t, \t,..., \t}n \te \te \te\ta subspace of n\n\nSo \tis a subspace of itself and to some extent, it can be\nthought of as the subspace of \twith the 'largest' number\nof vectors.\nn\nn"
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "In more advance textbooks on linear algebra,\n'subspace' is defined differently. We will discuss this\nbriefly later in today's lecture."
+    },
+    {
+      "heading": "Example (subspaces)",
+      "level": 2,
+      "text": "1 2 \t3\t{( \t, \t)| , \t}.\tV \ta \tb \tb \ta b\t \t \t2\n1 is a subset of \t.\tV\n2\n1Is \ta subspace of \t?\tV\n1Idea: Can you try to write \tas a linear span?\tV\n2\n1So \tis a subspace of \t.\tV\n2\n1Is there a vector in \tthat is not in \t?\tV\n2\n1V\n2\n1Is \t?\tV \t"
+    },
+    {
+      "heading": "Example (subspaces)",
+      "level": 2,
+      "text": "1 2 \t3\t{( \t, \t)| , \t}.\tV \ta \tb \tb \ta b\t \t \t\n2\n1 0 \t2 3\nIdea: Is every vector in \ta linear combination\nof ( , ) and ( \t, )?\t\n2\n1Is \t?\tV \t"
+    },
+    {
+      "heading": "Example (subspaces)",
+      "level": 2,
+      "text": "2 3 \t2 \t0\t{( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t \t3\n2 is a subset of \t.\tV\n3\n2Is \ta subspace of \t?\tV\n2Idea: \tis given in implicit form. Can you find\nits explicit form?\nV\n2Describe \tgeometrically.\tV"
+    },
+    {
+      "heading": "Example (subspaces)",
+      "level": 2,
+      "text": "3 3 \t2 \t1\t{( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t \t3\n3 is a subset of \t.\tV\n3\n3Is \ta subspace of \t?\tV3Describe \tgeometrically.\tV\n30 0 0 \t0 \t3 0 \t2 0 \t1\t( , , ) \tsince \t( ) \t( ) \t.\tV\t \t \t \t\n3\n3\nIf \tis a subspace, then it can be expressed as a\nlinear span, that is, \tspan( ) for some finite set \t.\nV\nV \tS \tS\t\n30 0 0\tBy (first) theorem in today's lecture, ( , , ) \tspan( ) \t.\tS \tV\t \t\n3\n3So \tis not a s\tContradi \tubspace\tction! \tof \t.\tV"
+    },
+    {
+      "heading": "Example (subspaces)",
+      "level": 2,
+      "text": "4 {( , \t, )| \t}.\tV \tx y z \tx \ty \tz\t \t \t3\n4 is a subset of \t.\tV\n3\n4Is \ta subspace of \t?\tV\n4\n4\nIf \tis a subspace, then it can be expressed as a\nlinear span, that is, \tspan( ) for some finite set \t.\nV\nV \tT \tT\t\n1 \t2 \t4 \t1 \t2For any \t, \t,..., \tspan( ) \tand \t, \t,..., \t,r \trT \tV \tc c \tc\t \t \t\tv \tv \tv\n1 \t1 \t2 \t2 \t4... \tspan( ) \t.r \trc \tc \tc \tT \tV\t \t \t \t \t\tv \tv \tv\nBy (first) theorem in today's lecture,\n41 1 2 \t0 2 4\t( , , ),( , , ) \tV\t41 1 2 \t2 0 2 4 \t1 \t3 \t6\tbut ( , , ) \t( , , ) \t( , \t, \t) \t.\tV\t \t \t \t \t\nNo!"
+    },
+    {
+      "heading": "End of Lecture 09",
+      "level": 2,
+      "text": "Lecture 10:\nSubspaces (cont’d)\nLinear independence\nBases (till Example 3.5.5.1)"
+    }
+  ]
+}

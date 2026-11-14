@@ -1,0 +1,326 @@
+{
+  "original_filename": "06_Software Design.pptx",
+  "extracted_text": "July 30, 2020\n502045 - Software Design\n1\n</a:ln></p:spPr><p:txBody><a:bodyPr vert=\"horz\" wrap=\"square\" lIns=\"91440\" tIns=\"45720\" rIns=\"91440\" bIns=\"45720\" numCol=\"1\" anchor=\"ctr\" anchorCtr=\"0\" compatLnSpc=\"1\"><a:prstTxWarp prst=\"textNoShape\"><a:avLst/></a:prstTxWarp><a:normAutofit fontScale=\"97500\" lnSpcReduction=\"10000\"/></a:bodyPr><a:lstStyle><a:lvl1pPr algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"3600\" b=\"0\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mj-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl1pPr><a:lvl2pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl2pPr><a:lvl3pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl3pPr><a:lvl4pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl4pPr><a:lvl5pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl5pPr><a:lvl6pPr marL=\"457200\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl6pPr><a:lvl7pPr marL=\"914400\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl7pPr><a:lvl8pPr marL=\"1371600\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl8pPr><a:lvl9pPr marL=\"1828800\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl9pPr></a:lstStyle><a:p><a:pPr algn=\"ctr\"><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\" sz=\"3300\" dirty=\"0\"><a:solidFill><a:schemeClr val=\"accent1\"/></a:solidFill></a:rPr><a:t>502045\n</a:ln></p:spPr><p:txBody><a:bodyPr vert=\"horz\" wrap=\"square\" lIns=\"91440\" tIns=\"45720\" rIns=\"91440\" bIns=\"45720\" numCol=\"1\" anchor=\"t\" anchorCtr=\"0\" compatLnSpc=\"1\"><a:prstTxWarp prst=\"textNoShape\"><a:avLst/></a:prstTxWarp><a:normAutofit lnSpcReduction=\"10000\"/></a:bodyPr><a:lstStyle><a:lvl1pPr marL=\"342900\" indent=\"-342900\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"3200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl1pPr><a:lvl2pPr marL=\"742950\" indent=\"-285750\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"–\"/><a:defRPr sz=\"2800\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl2pPr><a:lvl3pPr marL=\"1143000\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2400\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl3pPr><a:lvl4pPr marL=\"1600200\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"–\"/><a:defRPr sz=\"2200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl4pPr><a:lvl5pPr marL=\"2057400\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"»\"/><a:defRPr sz=\"2200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl5pPr><a:lvl6pPr marL=\"2514600\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl6pPr><a:lvl7pPr marL=\"2971800\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl7pPr><a:lvl8pPr marL=\"3429000\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl8pPr><a:lvl9pPr marL=\"3886200\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl9pPr></a:lstStyle><a:p><a:pPr marL=\"0\" indent=\"0\" algn=\"ctr\"><a:buNone/><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\" sz=\"3000\" b=\"1\" dirty=\"0\"/><a:t>Software Engineering\nChapter 06\nLesson 06: Software Design\nSoftware design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n2\nWhat is it?\nDesign is a meaningful engineering representation of something.\nIn the software engineering context, design focuses on four major areas of concern: data, architecture, interfaces, and components.\nJuly 30, 2020\n502045 - Software Design\n3\nWho does it?\nSoftware engineers design computer-based systems\nAt the data and architectural level\nAt the interface level\nAt the component level\nJuly 30, 2020\n502045 - Software Design\n4\nWhy is it important?\nYou wouldn’t attempt to build a house without a blueprint, would you?\nComputer software is considerably more complex than a house\nJuly 30, 2020\n502045 - Software Design\n5\nWhat are the steps?\nThe first phase is diversiﬁcation and convergence\nThe second phase is the gradual elimination\nJuly 30, 2020\n502045 - Software Design\n6\nSOFTWARE DESIGN AND SOFTWARE ENGINEERING\nSoftware design sits at the technical kernel of software engineering\nEach of the elements of the analysis model provides information that is necessary to create the four design models\nJuly 30, 2020\n502045 - Software Design\n7\nSOFTWARE DESIGN AND SOFTWARE ENGINEERING\nJuly 30, 2020\n502045 - Software Design\n8\nTHE DESIGN PROCESS\nSoftware design is an iterative process through which requirements are translated into a “blueprint”.\nDesign and Software Quality\nMust implement all of the explicit requirements\nMust be a readable, understandable\nProvide a complete picture of the software\nQuality of a house design ?\nJuly 30, 2020\n502045 - Software Design\n9\nSystem design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n10\nARCHITECTURAL DESIGN\nWhat is it?\nWho does it?\nWhy is it important?\nWhat are the steps?\nJuly 30, 2020\n502045 - Software Design\n11\nSoftware architecture\nThe design process for identifying the sub-systems making up a system and the framework for sub-system control and communication is\narchitectural design\n.\nThe output of this design process is a description of the\nsoftware architecture.\n502045 - Software Design\n12\nJuly 30, 2020\nArchitectural design\nAn early stage of the system design process.\nRepresents the link between specification and design processes.\nOften carried out in parallel with some specification activities.\nIt involves identifying major system components and their communications.\n13\n502045 - Software Design\nJuly 30, 2020\nThe architecture of a packing robot control system\n14\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"6\" name=\"Date Placeholder 5\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020\nArchitectural abstraction\nArchitecture in the small\nis concerned with the architecture of individual programs. At this level, we are concerned with the way that an individual program is decomposed into components.\nArchitecture in the large\nis concerned with the architecture of complex enterprise systems that include other systems, programs, and program components. These enterprise systems are distributed over different computers, which may be owned and managed by different companies.\n15\n502045 - Software Design\nJuly 30, 2020\nAdvantages of explicit architecture\nStakeholder communication\nArchitecture may be used as a focus of discussion by system stakeholders.\nSystem analysis\nMeans that analysis of whether the system can meet its non-functional requirements is possible.\nLarge-scale reuse\nThe architecture may be reusable across a range of systems\nProduct-line architectures may be developed.\n16\n502045 - Software Design\nJuly 30, 2020\nArchitectural representations\nSimple, informal block diagrams showing entities and relationships are the most frequently used method for documenting software architectures.\nBut these have been\ncriticised\nbecause they lack semantics, do not show the types of relationships between entities nor the visible properties of entities in the architecture.\nDepends on the use of architectural\nmodels.The\nrequirements for model semantics depends on how the models are used.\n17\n502045 - Software Design\nJuly 30, 2020\nBox and line diagrams\nVery abstract - they do not show the nature of component relationships nor the externally visible properties of the sub-systems.\nHowever, useful for communication with stakeholders and for project planning.\n18\n502045 - Software Design\nJuly 30, 2020\nUse of architectural models\nAs a way of facilitating discussion about the system design\nA high-level architectural view of a system is useful for communication with system stakeholders and project planning because it is not cluttered with detail. Stakeholders can relate to it and understand an abstract view of the system. They can then discuss the system as a whole without being confused by detail.\nAs a way of documenting an architecture that has been designed\nThe aim here is to produce a complete system model that shows the different components in a system, their interfaces and their connections.\n502045 - Software Design\n19\nJuly 30, 2020\nSystem design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n20\nArchitectural design decisions\nArchitectural design is a creative process so the process differs depending on the type of system being developed.\nHowever, a number of common decisions span all design processes and these decisions affect the non-functional characteristics of the system.\n21\n502045 - Software Design\nJuly 30, 2020\nArchitectural design decisions\nIs there a generic application architecture that can be used?\nHow will the system be distributed?\nWhat architectural styles are appropriate?\nWhat approach will be used to structure the system?\nHow will the system be decomposed into modules?\nWhat control strategy should be used?\nHow will the architectural design be evaluated?\nHow should the architecture be documented?\n22\n502045 - Software Design\nJuly 30, 2020\nArchitecture reuse\nSystems in the same domain often have similar architectures that reflect domain concepts.\nApplication product lines are built around a core architecture with variants that satisfy particular customer requirements.\nThe architecture of a system may be designed around one of more architectural patterns or ‘styles’.\nThese capture the essence of an architecture and can be instantiated in different ways.\nDiscussed later in this lecture.\n23\n502045 - Software Design\nJuly 30, 2020\nArchitecture and system characteristics\nPerformance\nLocalise\ncritical operations and\nminimise\ncommunications. Use large rather than fine-grain components.\nSecurity\nUse a layered architecture with critical assets in the inner layers.\nSafety\nLocalise\nsafety-critical features in a small number of sub-systems.\nAvailability\nInclude redundant components and mechanisms for fault tolerance.\nMaintainability\nUse fine-grain, replaceable components.\n24\n502045 - Software Design\nJuly 30, 2020\nArchitecture and system characteristics\nHow the system should be in the case it requires both performance & maintainability characteristics?\nHow will the architectural design be evaluated?\n25\n502045 - Software Design\nJuly 30, 2020\nSystem design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n26\nArchitectural views\nWhat views or perspectives are useful when designing and documenting a system’s architecture?\nWhat notations should be used for describing architectural models?\nEach architectural model only shows one view or perspective of the system.\nIt might show how a system is decomposed into modules, how the run-time processes interact or the different ways in which system components are distributed across a network. For both design and documentation, you usually need to present multiple views of the software architecture.\n27\n502045 - Software Design\nJuly 30, 2020\n4 + 1 view model of software architecture\nA logical view, which shows the key abstractions in the system as objects or object classes.\nA process view, which shows how, at run-time, the system is composed of interacting processes.\nA development view, which shows how the software is decomposed for development.\nA physical view, which shows the system hardware and how software components are distributed across the processors in the system.\nRelated using use cases or scenarios (+1)\n28\n502045 - Software Design\nJuly 30, 2020\nSystem design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n29\nArchitectural patterns\nPatterns are a means of representing, sharing and reusing knowledge.\nAn architectural pattern is a stylized description of good design practice, which has been tried and tested in different environments.\nPatterns should include information about when they are and when the are not useful.\nPatterns may be represented using tabular and graphical descriptions.\n30\n502045 - Software Design\nJuly 30, 2020\nThe organization of the Model-View-Controller\n</a:ln></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"4\" name=\"Slide Number Placeholder 3\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"sldNum\" sz=\"quarter\" idx=\"12\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:fld id=\"{EC33B370-F672-B743-B3AF-248A63C17270}\" type=\"slidenum\"><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:pPr/><a:t>31\n502045 - Software Design\nJuly 30, 2020\nWeb application architecture using the MVC pattern\n</a:ln></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"4\" name=\"Slide Number Placeholder 3\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"sldNum\" sz=\"quarter\" idx=\"12\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:fld id=\"{EC33B370-F672-B743-B3AF-248A63C17270}\" type=\"slidenum\"><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:pPr/><a:t>32\n502045 - Software Design\nJuly 30, 2020\nLayered architecture\nUsed to model the interfacing of sub-systems.\nOrganises the system into a set of layers (or abstract machines) each of which provide a set of services.\nSupports the incremental development of sub-systems in different layers. When a layer interface changes, only the adjacent layer is affected.\nHowever, often artificial to structure systems in this way.\n33\n502045 - Software Design\nJuly 30, 2020\nA generic layered architecture\n34\n502045 - Software Design\nJuly 30, 2020\nThe architecture of the LIBSYS system\n35\n502045 - Software Design\nJuly 30, 2020\nRepository architecture\nSub-systems must exchange data. This may be done in two ways:\nShared data is held in a central database or repository and may be accessed by all sub-systems;\nEach sub-system maintains its own database and passes data explicitly to other sub-systems.\nWhen large amounts of data are to be shared, the repository model of sharing is most commonly used a this is an efficient data sharing mechanism.\n36\n502045 - Software Design\nJuly 30, 2020\nA repository architecture for an IDE\n37\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"8\" name=\"Date Placeholder 7\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020\nClient-server architecture\nDistributed system model which shows how data and processing is distributed across a range of components.\nCan be implemented on a single computer.\nSet of stand-alone servers which provide specific services such as printing, data management, etc.\nSet of clients which call on these services.\nNetwork which allows clients to access servers.\n38\n502045 - Software Design\nJuly 30, 2020\nA client–server architecture for a film library\n39\n502045 - Software Design\nJuly 30, 2020\nPipe and filter architecture\nFunctional transformations process their inputs to produce outputs.\nMay be referred to as a pipe and filter model (as in UNIX shell).\nVariants of this approach are very common. When transformations are sequential, this is a batch sequential model which is extensively used in data processing systems.\nNot really suitable for interactive systems.\n40\n502045 - Software Design\nJuly 30, 2020\nAn example of the pipe and filter architecture\n41\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"8\" name=\"Date Placeholder 7\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020\nAn example of the pipe and filter architecture\n42\n502045 - Software Design\nJuly 30, 2020\nKey points\nA software architecture is a description of how a software system is organized.\nArchitectural design decisions include decisions on the type of application, the distribution of the system, the architectural styles to be used.\nArchitectures may be documented from several different perspectives or views such as a conceptual view, a logical view, a process view, and a development view.\nArchitectural patterns are a means of reusing knowledge about generic system architectures. They describe the architecture, explain when it may be used and describe its advantages and disadvantages.\n502045 - Software Design\n43\nJuly 30, 2020\nSystem design\nSystem design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectures\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n44\nApplication architectures\nApplication systems are designed to meet an\norganisational\nneed.\nAs businesses have much in common, their application systems also tend to have a common architecture that reflects the application requirements.\nA generic application architecture is an architecture for a type of software system that may be configured and adapted to create a system that meets specific requirements.\n45\n502045 - Software Design\nJuly 30, 2020\nUse of application architectures\nAs a starting point for architectural design.\nAs a design checklist.\nAs a way of\norganising\nthe work of the development team.\nAs a means of assessing components for reuse.\nAs a vocabulary for talking about application types.\n46\n502045 - Software Design\nJuly 30, 2020\nExamples of application types\nData processing applications\nData driven applications that process data in batches without explicit user intervention during the processing.\nTransaction processing applications\nData-centred applications that process user requests and update information in a system database.\nEvent processing systems\nApplications where system actions depend on interpreting events from the system’s environment.\nLanguage processing systems\nApplications where the users’ intentions are specified in a formal language that is processed and interpreted by the system.\n502045 - Software Design\n47\nJuly 30, 2020\nApplication type examples\nFocus here is on transaction processing and language\nprocessing systems.\nTransaction processing systems\nE-commerce systems;\nReservation systems.\nLanguage processing systems\nCompilers;\nCommand interpreters.\n48\n502045 - Software Design\nJuly 30, 2020\nTransaction processing systems\nProcess user requests for information from a database or requests to update the database.\nFrom a user perspective a transaction is:\nAny coherent sequence of operations that satisfies a goal;\nFor example - find the times of flights from London to Paris.\nUsers make asynchronous requests for service which are then processed by a transaction manager.\n49\n502045 - Software Design\nJuly 30, 2020\nThe structure of transaction processing applications\n50\n502045 - Software Design\nJuly 30, 2020\nThe software architecture of an ATM system\n51\n502045 - Software Design\nJuly 30, 2020\nInformation systems architecture\nInformation systems have a generic architecture that can be\norganised\nas a layered architecture.\nThese are transaction-based systems as interaction with these systems generally involves database transactions.\nLayers include:\nThe user interface\nUser communications\nInformation retrieval\nSystem database\n52\n502045 - Software Design\nJuly 30, 2020\nLayered information system architecture\n53\n502045 - Software Design\nJuly 30, 2020\nThe architecture of the MHC-PMS\n54\n502045 - Software Design\nJuly 30, 2020\nWeb-based information systems\nInformation and resource management systems are now usually web-based systems where the user interfaces are implemented using a web browser.\nFor example,\ne\n-commerce systems are Internet-based resource management systems that accept electronic orders for goods or services and then arrange delivery of these goods or services to the customer\n.\nIn an\ne\n-commerce system, the application-specific layer includes additional functionality supporting a ‘shopping cart’ in which users can place a number of items in separate transactions, then pay for them all together in a single transaction.\n502045 - Software Design\n55\nJuly 30, 2020\nServer implementation\nThese systems are often implemented as multi-tier client server/architectures (discussed in Chapter 18)\nThe web server is responsible for all user communications, with the user interface implemented using a web browser;\nThe application server is responsible for implementing application-specific logic as well as information storage and retrieval requests;\nThe database server moves information to and from the database and handles transaction management.\n502045 - Software Design\n56\nJuly 30, 2020\nLanguage processing systems\nAccept a natural or artificial language as input and generate some other representation of that language.\nMay include an interpreter to act on the instructions in the language that is being processed.\n57\n502045 - Software Design\nJuly 30, 2020\nLanguage processing systems\nUsed in situations where the easiest way to solve a problem is to describe an algorithm or describe the system data\nMeta-case tools process tool descriptions, method rules, etc and generate tools.\nJuly 30, 2020\n502045 - Software Design\n58\nThe architecture of a language processing system\n59\n502045 - Software Design\nJuly 30, 2020\nCompiler components\nA lexical analyzer, which takes input language tokens and converts them to an internal form.\nA symbol table, which holds information about the names of entities (variables, class names, object names, etc.) used in the text that is being translated.\nA syntax analyzer, which checks the syntax of the language being translated.\nA syntax tree, which is an internal structure representing the program being compiled.\n502045 - Software Design\n60\nJuly 30, 2020\nCompiler components\nA semantic analyzer that uses information from the syntax tree and the symbol table to check the semantic correctness of the input language text.\nA code generator that ‘walks’ the syntax tree and generates abstract machine code.\n502045 - Software Design\n61\nJuly 30, 2020\nA pipe and filter compiler architecture\n62\n502045 - Software Design\nJuly 30, 2020\nA repository architecture for a language processing system\n63\n502045 - Software Design\nJuly 30, 2020\nKey points\nModels of application systems architectures help us understand and compare applications, validate application system designs and assess large-scale components for reuse.\nTransaction processing systems are interactive systems that allow information in a database to be remotely accessed and modified by a number of users.\nLanguage processing systems are used to translate texts from one language into another and to carry out the instructions specified in the input language. They include a translator and an abstract machine that executes the generated language.\n64\n502045 - Software Design\nJuly 30, 2020",
+  "sections": [
+    {
+      "heading": "July 30, 2020",
+      "level": 1,
+      "text": "502045 - Software Design\n1\n</a:ln></p:spPr><p:txBody><a:bodyPr vert=\"horz\" wrap=\"square\" lIns=\"91440\" tIns=\"45720\" rIns=\"91440\" bIns=\"45720\" numCol=\"1\" anchor=\"ctr\" anchorCtr=\"0\" compatLnSpc=\"1\"><a:prstTxWarp prst=\"textNoShape\"><a:avLst/></a:prstTxWarp><a:normAutofit fontScale=\"97500\" lnSpcReduction=\"10000\"/></a:bodyPr><a:lstStyle><a:lvl1pPr algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"3600\" b=\"0\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mj-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl1pPr><a:lvl2pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl2pPr><a:lvl3pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl3pPr><a:lvl4pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl4pPr><a:lvl5pPr algn=\"ctr\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl5pPr><a:lvl6pPr marL=\"457200\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl6pPr><a:lvl7pPr marL=\"914400\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl7pPr><a:lvl8pPr marL=\"1371600\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl8pPr><a:lvl9pPr marL=\"1828800\" algn=\"ctr\" rtl=\"0\" eaLnBrk=\"1\" fontAlgn=\"base\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"0\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:defRPr sz=\"4400\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Calibri\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl9pPr></a:lstStyle><a:p><a:pPr algn=\"ctr\"><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\" sz=\"3300\" dirty=\"0\"><a:solidFill><a:schemeClr val=\"accent1\"/></a:solidFill></a:rPr><a:t>502045\n</a:ln></p:spPr><p:txBody><a:bodyPr vert=\"horz\" wrap=\"square\" lIns=\"91440\" tIns=\"45720\" rIns=\"91440\" bIns=\"45720\" numCol=\"1\" anchor=\"t\" anchorCtr=\"0\" compatLnSpc=\"1\"><a:prstTxWarp prst=\"textNoShape\"><a:avLst/></a:prstTxWarp><a:normAutofit lnSpcReduction=\"10000\"/></a:bodyPr><a:lstStyle><a:lvl1pPr marL=\"342900\" indent=\"-342900\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"3200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl1pPr><a:lvl2pPr marL=\"742950\" indent=\"-285750\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"–\"/><a:defRPr sz=\"2800\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl2pPr><a:lvl3pPr marL=\"1143000\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2400\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl3pPr><a:lvl4pPr marL=\"1600200\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"–\"/><a:defRPr sz=\"2200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl4pPr><a:lvl5pPr marL=\"2057400\" indent=\"-228600\" algn=\"l\" rtl=\"0\" fontAlgn=\"base\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:spcAft><a:spcPct val=\"0\"/></a:spcAft><a:buFont typeface=\"Arial\" charset=\"0\"/><a:buChar char=\"»\"/><a:defRPr sz=\"2200\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/></a:defRPr></a:lvl5pPr><a:lvl6pPr marL=\"2514600\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl6pPr><a:lvl7pPr marL=\"2971800\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl7pPr><a:lvl8pPr marL=\"3429000\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl8pPr><a:lvl9pPr marL=\"3886200\" indent=\"-228600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buFont typeface=\"Arial\" pitchFamily=\"34\" charset=\"0\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2000\" kern=\"1200\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill><a:latin typeface=\"+mn-lt\"/><a:ea typeface=\"+mn-ea\"/><a:cs typeface=\"+mn-cs\"/></a:defRPr></a:lvl9pPr></a:lstStyle><a:p><a:pPr marL=\"0\" indent=\"0\" algn=\"ctr\"><a:buNone/><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\" sz=\"3000\" b=\"1\" dirty=\"0\"/><a:t>Software Engineering\nChapter 06\nLesson 06: Software Design"
+    },
+    {
+      "heading": "Software design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n2"
+    },
+    {
+      "heading": "What is it?",
+      "level": 2,
+      "text": "Design is a meaningful engineering representation of something.\nIn the software engineering context, design focuses on four major areas of concern: data, architecture, interfaces, and components.\nJuly 30, 2020\n502045 - Software Design\n3"
+    },
+    {
+      "heading": "Who does it?",
+      "level": 2,
+      "text": "Software engineers design computer-based systems\nAt the data and architectural level\nAt the interface level\nAt the component level\nJuly 30, 2020\n502045 - Software Design\n4"
+    },
+    {
+      "heading": "Why is it important?",
+      "level": 2,
+      "text": "You wouldn’t attempt to build a house without a blueprint, would you?\nComputer software is considerably more complex than a house\nJuly 30, 2020\n502045 - Software Design\n5"
+    },
+    {
+      "heading": "What are the steps?",
+      "level": 2,
+      "text": "The first phase is diversiﬁcation and convergence\nThe second phase is the gradual elimination\nJuly 30, 2020\n502045 - Software Design\n6"
+    },
+    {
+      "heading": "SOFTWARE DESIGN AND SOFTWARE ENGINEERING",
+      "level": 2,
+      "text": "Software design sits at the technical kernel of software engineering\nEach of the elements of the analysis model provides information that is necessary to create the four design models\nJuly 30, 2020\n502045 - Software Design\n7"
+    },
+    {
+      "heading": "SOFTWARE DESIGN AND SOFTWARE ENGINEERING",
+      "level": 2,
+      "text": "July 30, 2020\n502045 - Software Design\n8"
+    },
+    {
+      "heading": "THE DESIGN PROCESS",
+      "level": 2,
+      "text": "Software design is an iterative process through which requirements are translated into a “blueprint”.\nDesign and Software Quality\nMust implement all of the explicit requirements\nMust be a readable, understandable\nProvide a complete picture of the software\nQuality of a house design ?\nJuly 30, 2020\n502045 - Software Design\n9"
+    },
+    {
+      "heading": "System design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n10"
+    },
+    {
+      "heading": "ARCHITECTURAL DESIGN",
+      "level": 2,
+      "text": "What is it?\nWho does it?\nWhy is it important?\nWhat are the steps?\nJuly 30, 2020\n502045 - Software Design\n11"
+    },
+    {
+      "heading": "Software architecture",
+      "level": 2,
+      "text": "The design process for identifying the sub-systems making up a system and the framework for sub-system control and communication is\narchitectural design\n.\nThe output of this design process is a description of the\nsoftware architecture.\n502045 - Software Design\n12\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architectural design",
+      "level": 2,
+      "text": "An early stage of the system design process.\nRepresents the link between specification and design processes.\nOften carried out in parallel with some specification activities.\nIt involves identifying major system components and their communications.\n13\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The architecture of a packing robot control system",
+      "level": 2,
+      "text": "14\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"6\" name=\"Date Placeholder 5\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020"
+    },
+    {
+      "heading": "Architectural abstraction",
+      "level": 2,
+      "text": "Architecture in the small\nis concerned with the architecture of individual programs. At this level, we are concerned with the way that an individual program is decomposed into components.\nArchitecture in the large\nis concerned with the architecture of complex enterprise systems that include other systems, programs, and program components. These enterprise systems are distributed over different computers, which may be owned and managed by different companies.\n15\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Advantages of explicit architecture",
+      "level": 2,
+      "text": "Stakeholder communication\nArchitecture may be used as a focus of discussion by system stakeholders.\nSystem analysis\nMeans that analysis of whether the system can meet its non-functional requirements is possible.\nLarge-scale reuse\nThe architecture may be reusable across a range of systems\nProduct-line architectures may be developed.\n16\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architectural representations",
+      "level": 2,
+      "text": "Simple, informal block diagrams showing entities and relationships are the most frequently used method for documenting software architectures.\nBut these have been\ncriticised\nbecause they lack semantics, do not show the types of relationships between entities nor the visible properties of entities in the architecture.\nDepends on the use of architectural\nmodels.The\nrequirements for model semantics depends on how the models are used.\n17\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Box and line diagrams",
+      "level": 2,
+      "text": "Very abstract - they do not show the nature of component relationships nor the externally visible properties of the sub-systems.\nHowever, useful for communication with stakeholders and for project planning.\n18\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Use of architectural models",
+      "level": 2,
+      "text": "As a way of facilitating discussion about the system design\nA high-level architectural view of a system is useful for communication with system stakeholders and project planning because it is not cluttered with detail. Stakeholders can relate to it and understand an abstract view of the system. They can then discuss the system as a whole without being confused by detail.\nAs a way of documenting an architecture that has been designed\nThe aim here is to produce a complete system model that shows the different components in a system, their interfaces and their connections.\n502045 - Software Design\n19\nJuly 30, 2020"
+    },
+    {
+      "heading": "System design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n20"
+    },
+    {
+      "heading": "Architectural design decisions",
+      "level": 2,
+      "text": "Architectural design is a creative process so the process differs depending on the type of system being developed.\nHowever, a number of common decisions span all design processes and these decisions affect the non-functional characteristics of the system.\n21\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architectural design decisions",
+      "level": 2,
+      "text": "Is there a generic application architecture that can be used?\nHow will the system be distributed?\nWhat architectural styles are appropriate?\nWhat approach will be used to structure the system?\nHow will the system be decomposed into modules?\nWhat control strategy should be used?\nHow will the architectural design be evaluated?\nHow should the architecture be documented?\n22\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architecture reuse",
+      "level": 2,
+      "text": "Systems in the same domain often have similar architectures that reflect domain concepts.\nApplication product lines are built around a core architecture with variants that satisfy particular customer requirements.\nThe architecture of a system may be designed around one of more architectural patterns or ‘styles’.\nThese capture the essence of an architecture and can be instantiated in different ways.\nDiscussed later in this lecture.\n23\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architecture and system characteristics",
+      "level": 2,
+      "text": "Performance\nLocalise\ncritical operations and\nminimise\ncommunications. Use large rather than fine-grain components.\nSecurity\nUse a layered architecture with critical assets in the inner layers.\nSafety\nLocalise\nsafety-critical features in a small number of sub-systems.\nAvailability\nInclude redundant components and mechanisms for fault tolerance.\nMaintainability\nUse fine-grain, replaceable components.\n24\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Architecture and system characteristics",
+      "level": 2,
+      "text": "How the system should be in the case it requires both performance & maintainability characteristics?\nHow will the architectural design be evaluated?\n25\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "System design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n26"
+    },
+    {
+      "heading": "Architectural views",
+      "level": 2,
+      "text": "What views or perspectives are useful when designing and documenting a system’s architecture?\nWhat notations should be used for describing architectural models?\nEach architectural model only shows one view or perspective of the system.\nIt might show how a system is decomposed into modules, how the run-time processes interact or the different ways in which system components are distributed across a network. For both design and documentation, you usually need to present multiple views of the software architecture.\n27\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "4 + 1 view model of software architecture",
+      "level": 2,
+      "text": "A logical view, which shows the key abstractions in the system as objects or object classes.\nA process view, which shows how, at run-time, the system is composed of interacting processes.\nA development view, which shows how the software is decomposed for development.\nA physical view, which shows the system hardware and how software components are distributed across the processors in the system.\nRelated using use cases or scenarios (+1)\n28\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "System design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectural\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n29"
+    },
+    {
+      "heading": "Architectural patterns",
+      "level": 2,
+      "text": "Patterns are a means of representing, sharing and reusing knowledge.\nAn architectural pattern is a stylized description of good design practice, which has been tried and tested in different environments.\nPatterns should include information about when they are and when the are not useful.\nPatterns may be represented using tabular and graphical descriptions.\n30\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The organization of the Model-View-Controller",
+      "level": 2,
+      "text": "</a:ln></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"4\" name=\"Slide Number Placeholder 3\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"sldNum\" sz=\"quarter\" idx=\"12\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:fld id=\"{EC33B370-F672-B743-B3AF-248A63C17270}\" type=\"slidenum\"><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:pPr/><a:t>31\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Web application architecture using the MVC pattern",
+      "level": 2,
+      "text": "</a:ln></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"4\" name=\"Slide Number Placeholder 3\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"sldNum\" sz=\"quarter\" idx=\"12\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:fld id=\"{EC33B370-F672-B743-B3AF-248A63C17270}\" type=\"slidenum\"><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:pPr/><a:t>32\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Layered architecture",
+      "level": 2,
+      "text": "Used to model the interfacing of sub-systems.\nOrganises the system into a set of layers (or abstract machines) each of which provide a set of services.\nSupports the incremental development of sub-systems in different layers. When a layer interface changes, only the adjacent layer is affected.\nHowever, often artificial to structure systems in this way.\n33\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "A generic layered architecture",
+      "level": 2,
+      "text": "34\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The architecture of the LIBSYS system",
+      "level": 2,
+      "text": "35\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Repository architecture",
+      "level": 2,
+      "text": "Sub-systems must exchange data. This may be done in two ways:\nShared data is held in a central database or repository and may be accessed by all sub-systems;\nEach sub-system maintains its own database and passes data explicitly to other sub-systems.\nWhen large amounts of data are to be shared, the repository model of sharing is most commonly used a this is an efficient data sharing mechanism.\n36\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "A repository architecture for an IDE",
+      "level": 2,
+      "text": "37\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"8\" name=\"Date Placeholder 7\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020"
+    },
+    {
+      "heading": "Client-server architecture",
+      "level": 2,
+      "text": "Distributed system model which shows how data and processing is distributed across a range of components.\nCan be implemented on a single computer.\nSet of stand-alone servers which provide specific services such as printing, data management, etc.\nSet of clients which call on these services.\nNetwork which allows clients to access servers.\n38\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "A client–server architecture for a film library",
+      "level": 2,
+      "text": "39\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Pipe and filter architecture",
+      "level": 2,
+      "text": "Functional transformations process their inputs to produce outputs.\nMay be referred to as a pipe and filter model (as in UNIX shell).\nVariants of this approach are very common. When transformations are sequential, this is a batch sequential model which is extensively used in data processing systems.\nNot really suitable for interactive systems.\n40\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "An example of the pipe and filter architecture",
+      "level": 2,
+      "text": "41\n502045 - Software Design\n</a:ln><a:effectLst/></p:spPr></p:pic><p:sp><p:nvSpPr><p:cNvPr id=\"8\" name=\"Date Placeholder 7\"/><p:cNvSpPr><a:spLocks noGrp=\"1\"/></p:cNvSpPr><p:nvPr><p:ph type=\"dt\" sz=\"half\" idx=\"10\"/></p:nvPr></p:nvSpPr><p:spPr/><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr/></a:pPr><a:r><a:rPr lang=\"en-US\"/><a:t>July 30, 2020"
+    },
+    {
+      "heading": "An example of the pipe and filter architecture",
+      "level": 2,
+      "text": "42\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Key points",
+      "level": 2,
+      "text": "A software architecture is a description of how a software system is organized.\nArchitectural design decisions include decisions on the type of application, the distribution of the system, the architectural styles to be used.\nArchitectures may be documented from several different perspectives or views such as a conceptual view, a logical view, a process view, and a development view.\nArchitectural patterns are a means of reusing knowledge about generic system architectures. They describe the architecture, explain when it may be used and describe its advantages and disadvantages.\n502045 - Software Design\n43\nJuly 30, 2020"
+    },
+    {
+      "heading": "System design",
+      "level": 2,
+      "text": "System design\nArchitectural design\nArchitectural design decision\nArchitectural views\nArchitectural styles & pattern\nApplication Architectures\nDFD to Architectural design\nJuly 30, 2020\n502045 - Software Design\n44"
+    },
+    {
+      "heading": "Application architectures",
+      "level": 2,
+      "text": "Application systems are designed to meet an\norganisational\nneed.\nAs businesses have much in common, their application systems also tend to have a common architecture that reflects the application requirements.\nA generic application architecture is an architecture for a type of software system that may be configured and adapted to create a system that meets specific requirements.\n45\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Use of application architectures",
+      "level": 2,
+      "text": "As a starting point for architectural design.\nAs a design checklist.\nAs a way of\norganising\nthe work of the development team.\nAs a means of assessing components for reuse.\nAs a vocabulary for talking about application types.\n46\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Examples of application types",
+      "level": 2,
+      "text": "Data processing applications\nData driven applications that process data in batches without explicit user intervention during the processing.\nTransaction processing applications\nData-centred applications that process user requests and update information in a system database.\nEvent processing systems\nApplications where system actions depend on interpreting events from the system’s environment.\nLanguage processing systems\nApplications where the users’ intentions are specified in a formal language that is processed and interpreted by the system.\n502045 - Software Design\n47\nJuly 30, 2020"
+    },
+    {
+      "heading": "Application type examples",
+      "level": 2,
+      "text": "Focus here is on transaction processing and language\nprocessing systems.\nTransaction processing systems\nE-commerce systems;\nReservation systems.\nLanguage processing systems\nCompilers;\nCommand interpreters.\n48\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Transaction processing systems",
+      "level": 2,
+      "text": "Process user requests for information from a database or requests to update the database.\nFrom a user perspective a transaction is:\nAny coherent sequence of operations that satisfies a goal;\nFor example - find the times of flights from London to Paris.\nUsers make asynchronous requests for service which are then processed by a transaction manager.\n49\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The structure of transaction processing applications",
+      "level": 2,
+      "text": "50\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The software architecture of an ATM system",
+      "level": 2,
+      "text": "51\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Information systems architecture",
+      "level": 2,
+      "text": "Information systems have a generic architecture that can be\norganised\nas a layered architecture.\nThese are transaction-based systems as interaction with these systems generally involves database transactions.\nLayers include:\nThe user interface\nUser communications\nInformation retrieval\nSystem database\n52\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Layered information system architecture",
+      "level": 2,
+      "text": "53\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "The architecture of the MHC-PMS",
+      "level": 2,
+      "text": "54\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Web-based information systems",
+      "level": 2,
+      "text": "Information and resource management systems are now usually web-based systems where the user interfaces are implemented using a web browser.\nFor example,\ne\n-commerce systems are Internet-based resource management systems that accept electronic orders for goods or services and then arrange delivery of these goods or services to the customer\n.\nIn an\ne\n-commerce system, the application-specific layer includes additional functionality supporting a ‘shopping cart’ in which users can place a number of items in separate transactions, then pay for them all together in a single transaction.\n502045 - Software Design\n55\nJuly 30, 2020"
+    },
+    {
+      "heading": "Server implementation",
+      "level": 2,
+      "text": "These systems are often implemented as multi-tier client server/architectures (discussed in Chapter 18)\nThe web server is responsible for all user communications, with the user interface implemented using a web browser;\nThe application server is responsible for implementing application-specific logic as well as information storage and retrieval requests;\nThe database server moves information to and from the database and handles transaction management.\n502045 - Software Design\n56\nJuly 30, 2020"
+    },
+    {
+      "heading": "Language processing systems",
+      "level": 2,
+      "text": "Accept a natural or artificial language as input and generate some other representation of that language.\nMay include an interpreter to act on the instructions in the language that is being processed.\n57\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Language processing systems",
+      "level": 2,
+      "text": "Used in situations where the easiest way to solve a problem is to describe an algorithm or describe the system data\nMeta-case tools process tool descriptions, method rules, etc and generate tools.\nJuly 30, 2020\n502045 - Software Design\n58"
+    },
+    {
+      "heading": "The architecture of a language processing system",
+      "level": 2,
+      "text": "59\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Compiler components",
+      "level": 2,
+      "text": "A lexical analyzer, which takes input language tokens and converts them to an internal form.\nA symbol table, which holds information about the names of entities (variables, class names, object names, etc.) used in the text that is being translated.\nA syntax analyzer, which checks the syntax of the language being translated.\nA syntax tree, which is an internal structure representing the program being compiled.\n502045 - Software Design\n60\nJuly 30, 2020"
+    },
+    {
+      "heading": "Compiler components",
+      "level": 2,
+      "text": "A semantic analyzer that uses information from the syntax tree and the symbol table to check the semantic correctness of the input language text.\nA code generator that ‘walks’ the syntax tree and generates abstract machine code.\n502045 - Software Design\n61\nJuly 30, 2020"
+    },
+    {
+      "heading": "A pipe and filter compiler architecture",
+      "level": 2,
+      "text": "62\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "A repository architecture for a language processing system",
+      "level": 2,
+      "text": "63\n502045 - Software Design\nJuly 30, 2020"
+    },
+    {
+      "heading": "Key points",
+      "level": 2,
+      "text": "Models of application systems architectures help us understand and compare applications, validate application system designs and assess large-scale components for reuse.\nTransaction processing systems are interactive systems that allow information in a database to be remotely accessed and modified by a number of users.\nLanguage processing systems are used to translate texts from one language into another and to carry out the instructions specified in the input language. They include a translator and an abstract machine that executes the generated language.\n64\n502045 - Software Design\nJuly 30, 2020"
+    }
+  ]
+}

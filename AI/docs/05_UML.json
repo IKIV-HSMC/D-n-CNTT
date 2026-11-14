@@ -1,0 +1,201 @@
+{
+  "original_filename": "05_UML.pptx",
+  "extracted_text": "1\n502045 - UML\nJuly 30, 2020\n502045\nSoftware Engineering\nChapter 05\nLesson 05: UML\nTopics covered\nUML\nWhat is the UML?\nWays of Using the UML\nCommon Diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n2\n502045 - UML\nJuly 30, 2020\nWhat Is the UML?\nThe Unified Modeling Language (UML) is a\nfamily of graphical notations\nthat help in\ndescribing and designing software systems\n, particularly software systems built using the\nobject-oriented\n(OO) style\nThe UML is a relatively open standard, controlled by the Object Management Group (OMG), an open consortium of companies\nThe UML was born out of the unification\n[\nthống-nhất\n]\nof the many object-oriented graphical modeling languages that thrived\n[\nphát-triển-mạnh\n]\nin the late 1980s and early 1990s (its appearance in 1997)\n3\n502045 - UML\nJuly 30, 2020\nWhat Is the\nUML? (Extra)\nPhân\ntích\nvà\nthiết\nkế\nhệ\nthống\ntheo\nhƣớng\ntruyền\nthống\nSystem development life Cycle (SDLC)\nhoặc\nStructured Systems Analysis and Design (SSAD)\nMô\nhình\nthác\nnước\n, ...\nHai vấn đề chính trong việc phát triển hệ thống thông tin đó là các\nxử\nlý\nvà\ndữ liệu\nđược xây dựng độc lập với phương pháp này.\n(\nQuy\ntrình\n: DFD D\nữ  liệu\n: ERD)\nPhân tích thiết kế hệ thống h\nư\nớng đối t\nư\nợng\n(OOAD)\nDựa\ntrên\n:\nabstraction, encapsulation, modularity, hierarchy\nMột hệ  thống hướng đối tượng sẽ  có một số  đối tượng, mỗi đối tượng này sẽ  kết hợp với các đối tượng  khác để  hoàn\nthành một nhiệm vụ.\n4\n502045 - UML\nJuly 30, 2020\nWays of Using the UML\nAt the heart of the role of the UML in software development are the\ndifferent ways\nin which people want to use it.\nCharacterization of the three modes in which people use\nthe UML:\nsketch\n,\nblueprint\n, and\nprogramming language\n.\nBy far the most common of the three is UML as sketch. In this usage, developers use the UML to help communicate some aspects of a system. As with blueprints, you can use sketches in a forward-engineering or reverse-engineering direction\nJuly 30, 2020\n502045 - UML\n5\nUML\nas Sketches\n(Self study)\n(Forward engineering)\nThe essence of sketching is\nselectivity\n. With forward sketching, you rough out some issues in code you are about to write, usually\ndiscussing them with a group of people on your team\nYour aim is to use the sketches to help communicate ideas and alternatives about what you're about to do . You don't talk about all the code you are going to work on, only important issues that you want to run past your colleagues first or sections of the design that you want to visualize before you begin programming\nSessions like this can be very short\nJuly 30, 2020\n502045 - UML\n6\nUML\nas Blueprint (Self Study)\n(Forward engineering)\nIn contrast, UML as blueprint is about\ncompleteness\nThe\nidea is that blueprints are developed by a designer whose job is to build a detailed design for a programmer to code up .\nThat design should be sufficiently complete in that all design decisions are laid out, and the programmer should be able to follow it as a pretty straightforward activity that requires little thought\nThe designer may be the same person as the programmer, but usually the designer is a more senior developer who designs for a team of programmers\nJuly 30, 2020\n502045 - UML\n7\nUML as Programming Language\nIn this environment, developers draw UML diagrams that are compiled directly to executable code, and the UML becomes the source code.\nObviously, this usage of UML demands particularly sophisticated tooling\nOne of the interesting questions around the UML as programming language is how to model behavioral logic. UML 2 offers three ways of behavioral modeling :\ninteraction diagrams, state diagrams, and activity diagrams.\nJuly 30, 2020\n502045 - UML\n8\nUML Diagrams\nUML defines 13 diagrams that describe 4+1 architectural views\nJuly 30, 2020\n502045 - UML\n9\nUML (Extra)\nCác khối của UML\nThings\nRelationships\nDiagrams\nJuly 30, 2020\n502045 - UML\n10\nUML (Extra)\nThing\nClass\nInterface\nCollaboration\nJuly 30, 2020\n502045 - UML\n11\nUML (Extra)\nThing\nUse case\nActor\nKý hiệu bắt đầu, kết thúc\nComponent\nNode\nJuly 30, 2020\n502045 - UML\n12\nUML (Extra)\nRelationship\nDependency\nAssociation\nGeneralization/Realization\nJuly 30, 2020\n502045 - UML\n13\nTopics covered\nIntroduction\nWhat is the UML?\nWays of using the UML\nCommon diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n14\n502045 - UML\nJuly 30, 2020\nUse Cases\nUse cases are a technique for capturing the\nfunctional requirements\nof a System. Use cases work by describing the typical\ninteractions\nbetween the\nusers\nof a system and the\nsystem\nitself, providing a narrative of how a system is used\nA scenario\n: “\nThe customer browses the catalog and adds desired items to the shopping basket. When the customer wishes to pay, the customer describes the shipping and credit card information and confirms the sale. The system checks the authorization an the credit card and confirms the sale both immediately and with a follow-up e-mail”\nJuly 30, 2020\n502045 - UML\n15\nUse Cases\nThis scenario is one thing that can happen.\nHowever, the credit card authorization might fail, and this would be a separate scenario.\nIn another case, you may have a regular customer for whom you don't need to capture the shipping and credit card information, and this is a third scenario\nIn all these three scenarios, the user has the same goal : to buy a product .The user doesn't always succeed, but the goal remains. This user goal is the key to use cases :\nA use case is a set of scenarios tied together by a common user goal\nJuly 30, 2020\n502045 - UML\n16\nActor\nEach use case has a\nprimary actor\n, which calls on the system to deliver a service.\nThe primary actor is the actor with the goal the use case is trying to satisfy and is usually, but not always, the Initiator of the use case.\nThere may be other actors which the system communicates while carrying out the use case. These are known as\nsecondary actors\nJuly 30, 2020\n502045 - UML\n17\nContent of a Use Case\nThere is\nno standard way to write the content of a use case\n, and different formats work well in different cases\nYou begin by picking one of the scenarios as the main success scenario.\nYou start the body of the use case by writing the main success scenario as a sequence of numbered steps .\nYou then take the other scenarios and write them as extensions.\nJuly 30, 2020\n502045 - UML\n18\nJuly 30, 2020\n502045 - UML\n19\nUse case diagram – Relationship\nActor Relationship:  Generalization\nUsed to define overlapping roles between actors\nActor – Use case relationship\nAssociation\nUse case Relationship\nInclude\nExtend\nGeneralization/Specification\nJuly 30, 2020\n502045 - UML\n20\nUse case diagram – Association Relationship\nAssociation\nRelationship between Actors & use cases\nActor is involved in interaction described by use case\nIf association line has Arrow head:\nIndicate direction of invocation, primary actor\nIndicate control flow (not data flow)\nJuly 30, 2020\n502045 - UML\n21\nUse case diagram – Include Relationship\nInclude\n:\nDirected Relationship between 2 use cases\nJuly 30, 2020\n502045 - UML\n22\nUse case diagram – Extend Relationship\nExtends\nBehavior of extension use case may be inserted in extended use case\nunder some conditions.\nJuly 30, 2020\n502045 - UML\n23\nUse case diagram – Generalization Relationship\nGeneralization/Specialization\nSpecialized use cases have common behaviors, requirements, constraints, assumptions.\nJuly 30, 2020\n502045 - UML\n24\nUse\nCase Diagrams – Other example\nJuly 30, 2020\n502045 - UML\n25\nTopics covered\nIntroduction\nWhat is the UML?\nWays of using the UML\nCommon diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n26\n502045 - UML\nJuly 30, 2020\nSequence Diagrams\nInteraction diagrams describe\nhow groups of objects collaborate in some behavior\n. The UML defines several forms of interaction diagram, of which the most common is the sequence diagram\nTypically, a sequence diagram captures the\nbehavior of a single scenario\n. The diagram shows a number of example objects and the messages that are passed between these objects within the use case\nJuly 30, 2020\n502045 - UML\n27\nSequence Diagrams\n(Case Study)\nWe have an order and are going to invoke a command on it to calculate its price\nTo do that, the order needs to look at all the line items on the order and determine their prices, which are based on the pricing rules of the order line's products. Having done that for all the line items, the order then needs to compute an overall discount, which is based an rules tied to the customer\nJuly 30, 2020\n502045 - UML\n28\nA sequence diagram for centralized control\nJuly 30, 2020\n502045 - UML\n29\nA sequence diagram for centralized control\nSequence diagrams show the interaction by showing each\nparticipant\nwith a\nlifeline\nthat runs vertically down the page and the ordering of messages by reading down the page\nYou can see that an instance of order sends\ngetQuantity\nand\ngetProduct\nmessages to the order line. You can also see how we show the order invoking a method an\nitself\nand how that method sends\ngetDiscountInfo\nto an instance of customer .\nJuly 30, 2020\n502045 - UML\n30\nA sequence diagram for centralized control\nMost of the time, you can think of the participants in an interaction diagram as objects, as indeed they were in UML 1. But in UML 2, their roles\nare much\nmore complicated\nI use the term participants, a word that isn't used formally in the UML spec. In UML 1, participants were objects and so their\nnames were underlined\n, but in UML 2, they should be shown without the underline, as I've done here\nIn these diagrams, I've named the participants using the style\nanOrder\n. This works well most of the time. A fuller Syntax is\nname : Class\n, where both the name and the class are optional\nJuly 30, 2020\n502045 - UML\n31\nA sequence diagram for centralized control\nEach lifeline has an\nactivation bar\nthat shows when the participant is active in the interaction. This corresponds to one of the participant's methods being on the stack. Activation bars are\noptional\nin UML, but I find them extremely valuable in clarifying the behavior\nNaming often is useful to correlate participants an the diagram. The call\ngetProduct\nis shown returning\naProduct\n, which is the same name, and therefore the same participant.\nSome people use returns for all calls, but I prefer to use them only where they add Information\nJuly 30, 2020\n502045 - UML\n32\nA sequence diagram for distributed control\nJuly 30, 2020\n502045 - UML\n33\nCentralized\nvs\ndistributed control\nThe clear difference in styles between the two interactions. Figure 4 .1 is\ncentralized\ncontrol\n, with\none participant pretty much\ndoing all the processing\nand other participants there to supply data. Figure 4 .2 uses\ndistributed control\n, in which the processing is\nsplit\namong\nmany\nparticipants\n, each one doing a little bit of the algorithm\nJuly 30, 2020\n502045 - UML\n34\nCentralized\nvs\ndistributed control\nBoth styles have their strengths and weaknesses .\nMost people, particularly those new to objects, are more used to centralized control. In many ways, it‘s\nsimpler\n, as all the processing is in\none place\nWith distributed control, in contrast, you have the sensation\n[\ncảm-giác\n]\nof chasing\n[\nchạy-theo\n]\naround the objects, trying to find the program\nJuly 30, 2020\n502045 - UML\n35\nCentralized\nvs\ndistributed control\nOne of the main goals of good design is to localize the effects of change.\nData and behavior\nthat accesses that data often\nchange together\n. So putting the\ndata\nand the\nbehavior\nthat uses it together in\none place\nis the first rule of object-oriented design.\nBy distributing control, you create more opportunities for using\npolymorphism\nrather than using conditional logic . If the algorithms for product pricing are different for different types of product, the distributed control mechanism allows us to use subclasses of product to handle these variations\nJuly 30, 2020\n502045 - UML\n36\nSequence Diagrams – Another Example\nB\nài toán hệ thống quản lý đơn đặt hàng\nJuly 30, 2020\n502045 - UML\n37\nWhen to Use Sequence Diagrams\nYou should use sequence diagrams when you want to look at the behavior of several objects within a\nsingle use case\n.\nSequence diagrams are\ngood at showing collaborations among the objects\n; they are not so good at precise definition of the behavior.\nIf you want to look at the behavior of a\nsingle object across many use cases, use a state diagram\nIf you want to look at\nbehavior across many use cases or many threads, consider an activity diagram\nJuly 30, 2020\n502045 - UML\n38\nsequence diagram with conditions\nJuly 30, 2020\n502045 - UML\n39",
+  "sections": [
+    {
+      "heading": "1",
+      "level": 1,
+      "text": "502045 - UML\nJuly 30, 2020\n502045\nSoftware Engineering\nChapter 05\nLesson 05: UML"
+    },
+    {
+      "heading": "Topics covered",
+      "level": 2,
+      "text": "UML\nWhat is the UML?\nWays of Using the UML\nCommon Diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n2\n502045 - UML\nJuly 30, 2020"
+    },
+    {
+      "heading": "What Is the UML?",
+      "level": 2,
+      "text": "The Unified Modeling Language (UML) is a\nfamily of graphical notations\nthat help in\ndescribing and designing software systems\n, particularly software systems built using the\nobject-oriented\n(OO) style\nThe UML is a relatively open standard, controlled by the Object Management Group (OMG), an open consortium of companies\nThe UML was born out of the unification\n[\nthống-nhất\n]\nof the many object-oriented graphical modeling languages that thrived\n[\nphát-triển-mạnh\n]\nin the late 1980s and early 1990s (its appearance in 1997)\n3\n502045 - UML\nJuly 30, 2020"
+    },
+    {
+      "heading": "What Is the",
+      "level": 2,
+      "text": "UML? (Extra)\nPhân\ntích\nvà\nthiết\nkế\nhệ\nthống\ntheo\nhƣớng\ntruyền\nthống\nSystem development life Cycle (SDLC)\nhoặc\nStructured Systems Analysis and Design (SSAD)\nMô\nhình\nthác\nnước\n, ...\nHai vấn đề chính trong việc phát triển hệ thống thông tin đó là các\nxử\nlý\nvà\ndữ liệu\nđược xây dựng độc lập với phương pháp này.\n(\nQuy\ntrình\n: DFD D\nữ  liệu\n: ERD)\nPhân tích thiết kế hệ thống h\nư\nớng đối t\nư\nợng\n(OOAD)\nDựa\ntrên\n:\nabstraction, encapsulation, modularity, hierarchy\nMột hệ  thống hướng đối tượng sẽ  có một số  đối tượng, mỗi đối tượng này sẽ  kết hợp với các đối tượng  khác để  hoàn\nthành một nhiệm vụ.\n4\n502045 - UML\nJuly 30, 2020"
+    },
+    {
+      "heading": "Ways of Using the UML",
+      "level": 2,
+      "text": "At the heart of the role of the UML in software development are the\ndifferent ways\nin which people want to use it.\nCharacterization of the three modes in which people use\nthe UML:\nsketch\n,\nblueprint\n, and\nprogramming language\n.\nBy far the most common of the three is UML as sketch. In this usage, developers use the UML to help communicate some aspects of a system. As with blueprints, you can use sketches in a forward-engineering or reverse-engineering direction\nJuly 30, 2020\n502045 - UML\n5"
+    },
+    {
+      "heading": "UML",
+      "level": 2,
+      "text": "as Sketches\n(Self study)\n(Forward engineering)\nThe essence of sketching is\nselectivity\n. With forward sketching, you rough out some issues in code you are about to write, usually\ndiscussing them with a group of people on your team\nYour aim is to use the sketches to help communicate ideas and alternatives about what you're about to do . You don't talk about all the code you are going to work on, only important issues that you want to run past your colleagues first or sections of the design that you want to visualize before you begin programming\nSessions like this can be very short\nJuly 30, 2020\n502045 - UML\n6"
+    },
+    {
+      "heading": "UML",
+      "level": 2,
+      "text": "as Blueprint (Self Study)\n(Forward engineering)\nIn contrast, UML as blueprint is about\ncompleteness\nThe\nidea is that blueprints are developed by a designer whose job is to build a detailed design for a programmer to code up .\nThat design should be sufficiently complete in that all design decisions are laid out, and the programmer should be able to follow it as a pretty straightforward activity that requires little thought\nThe designer may be the same person as the programmer, but usually the designer is a more senior developer who designs for a team of programmers\nJuly 30, 2020\n502045 - UML\n7"
+    },
+    {
+      "heading": "UML as Programming Language",
+      "level": 2,
+      "text": "In this environment, developers draw UML diagrams that are compiled directly to executable code, and the UML becomes the source code.\nObviously, this usage of UML demands particularly sophisticated tooling\nOne of the interesting questions around the UML as programming language is how to model behavioral logic. UML 2 offers three ways of behavioral modeling :\ninteraction diagrams, state diagrams, and activity diagrams.\nJuly 30, 2020\n502045 - UML\n8"
+    },
+    {
+      "heading": "UML Diagrams",
+      "level": 2,
+      "text": "UML defines 13 diagrams that describe 4+1 architectural views\nJuly 30, 2020\n502045 - UML\n9"
+    },
+    {
+      "heading": "UML (Extra)",
+      "level": 2,
+      "text": "Các khối của UML\nThings\nRelationships\nDiagrams\nJuly 30, 2020\n502045 - UML\n10"
+    },
+    {
+      "heading": "UML (Extra)",
+      "level": 2,
+      "text": "Thing\nClass\nInterface\nCollaboration\nJuly 30, 2020\n502045 - UML\n11"
+    },
+    {
+      "heading": "UML (Extra)",
+      "level": 2,
+      "text": "Thing\nUse case\nActor\nKý hiệu bắt đầu, kết thúc\nComponent\nNode\nJuly 30, 2020\n502045 - UML\n12"
+    },
+    {
+      "heading": "UML (Extra)",
+      "level": 2,
+      "text": "Relationship\nDependency\nAssociation\nGeneralization/Realization\nJuly 30, 2020\n502045 - UML\n13"
+    },
+    {
+      "heading": "Topics covered",
+      "level": 2,
+      "text": "Introduction\nWhat is the UML?\nWays of using the UML\nCommon diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n14\n502045 - UML\nJuly 30, 2020"
+    },
+    {
+      "heading": "Use Cases",
+      "level": 2,
+      "text": "Use cases are a technique for capturing the\nfunctional requirements\nof a System. Use cases work by describing the typical\ninteractions\nbetween the\nusers\nof a system and the\nsystem\nitself, providing a narrative of how a system is used\nA scenario\n: “\nThe customer browses the catalog and adds desired items to the shopping basket. When the customer wishes to pay, the customer describes the shipping and credit card information and confirms the sale. The system checks the authorization an the credit card and confirms the sale both immediately and with a follow-up e-mail”\nJuly 30, 2020\n502045 - UML\n15"
+    },
+    {
+      "heading": "Use Cases",
+      "level": 2,
+      "text": "This scenario is one thing that can happen.\nHowever, the credit card authorization might fail, and this would be a separate scenario.\nIn another case, you may have a regular customer for whom you don't need to capture the shipping and credit card information, and this is a third scenario\nIn all these three scenarios, the user has the same goal : to buy a product .The user doesn't always succeed, but the goal remains. This user goal is the key to use cases :\nA use case is a set of scenarios tied together by a common user goal\nJuly 30, 2020\n502045 - UML\n16"
+    },
+    {
+      "heading": "Actor",
+      "level": 2,
+      "text": "Each use case has a\nprimary actor\n, which calls on the system to deliver a service.\nThe primary actor is the actor with the goal the use case is trying to satisfy and is usually, but not always, the Initiator of the use case.\nThere may be other actors which the system communicates while carrying out the use case. These are known as\nsecondary actors\nJuly 30, 2020\n502045 - UML\n17"
+    },
+    {
+      "heading": "Content of a Use Case",
+      "level": 2,
+      "text": "There is\nno standard way to write the content of a use case\n, and different formats work well in different cases\nYou begin by picking one of the scenarios as the main success scenario.\nYou start the body of the use case by writing the main success scenario as a sequence of numbered steps .\nYou then take the other scenarios and write them as extensions.\nJuly 30, 2020\n502045 - UML\n18"
+    },
+    {
+      "heading": "July 30, 2020",
+      "level": 2,
+      "text": "502045 - UML\n19"
+    },
+    {
+      "heading": "Use case diagram – Relationship",
+      "level": 2,
+      "text": "Actor Relationship:  Generalization\nUsed to define overlapping roles between actors\nActor – Use case relationship\nAssociation\nUse case Relationship\nInclude\nExtend\nGeneralization/Specification\nJuly 30, 2020\n502045 - UML\n20"
+    },
+    {
+      "heading": "Use case diagram – Association Relationship",
+      "level": 2,
+      "text": "Association\nRelationship between Actors & use cases\nActor is involved in interaction described by use case\nIf association line has Arrow head:\nIndicate direction of invocation, primary actor\nIndicate control flow (not data flow)\nJuly 30, 2020\n502045 - UML\n21"
+    },
+    {
+      "heading": "Use case diagram – Include Relationship",
+      "level": 2,
+      "text": "Include\n:\nDirected Relationship between 2 use cases\nJuly 30, 2020\n502045 - UML\n22"
+    },
+    {
+      "heading": "Use case diagram – Extend Relationship",
+      "level": 2,
+      "text": "Extends\nBehavior of extension use case may be inserted in extended use case\nunder some conditions.\nJuly 30, 2020\n502045 - UML\n23"
+    },
+    {
+      "heading": "Use case diagram – Generalization Relationship",
+      "level": 2,
+      "text": "Generalization/Specialization\nSpecialized use cases have common behaviors, requirements, constraints, assumptions.\nJuly 30, 2020\n502045 - UML\n24"
+    },
+    {
+      "heading": "Use",
+      "level": 2,
+      "text": "Case Diagrams – Other example\nJuly 30, 2020\n502045 - UML\n25"
+    },
+    {
+      "heading": "Topics covered",
+      "level": 2,
+      "text": "Introduction\nWhat is the UML?\nWays of using the UML\nCommon diagrams\nUse case diagram\nSequence diagram\nActivity diagram\nClass diagram\nOther diagrams\n26\n502045 - UML\nJuly 30, 2020"
+    },
+    {
+      "heading": "Sequence Diagrams",
+      "level": 2,
+      "text": "Interaction diagrams describe\nhow groups of objects collaborate in some behavior\n. The UML defines several forms of interaction diagram, of which the most common is the sequence diagram\nTypically, a sequence diagram captures the\nbehavior of a single scenario\n. The diagram shows a number of example objects and the messages that are passed between these objects within the use case\nJuly 30, 2020\n502045 - UML\n27"
+    },
+    {
+      "heading": "Sequence Diagrams",
+      "level": 2,
+      "text": "(Case Study)\nWe have an order and are going to invoke a command on it to calculate its price\nTo do that, the order needs to look at all the line items on the order and determine their prices, which are based on the pricing rules of the order line's products. Having done that for all the line items, the order then needs to compute an overall discount, which is based an rules tied to the customer\nJuly 30, 2020\n502045 - UML\n28"
+    },
+    {
+      "heading": "A sequence diagram for centralized control",
+      "level": 2,
+      "text": "July 30, 2020\n502045 - UML\n29"
+    },
+    {
+      "heading": "A sequence diagram for centralized control",
+      "level": 2,
+      "text": "Sequence diagrams show the interaction by showing each\nparticipant\nwith a\nlifeline\nthat runs vertically down the page and the ordering of messages by reading down the page\nYou can see that an instance of order sends\ngetQuantity\nand\ngetProduct\nmessages to the order line. You can also see how we show the order invoking a method an\nitself\nand how that method sends\ngetDiscountInfo\nto an instance of customer .\nJuly 30, 2020\n502045 - UML\n30"
+    },
+    {
+      "heading": "A sequence diagram for centralized control",
+      "level": 2,
+      "text": "Most of the time, you can think of the participants in an interaction diagram as objects, as indeed they were in UML 1. But in UML 2, their roles\nare much\nmore complicated\nI use the term participants, a word that isn't used formally in the UML spec. In UML 1, participants were objects and so their\nnames were underlined\n, but in UML 2, they should be shown without the underline, as I've done here\nIn these diagrams, I've named the participants using the style\nanOrder\n. This works well most of the time. A fuller Syntax is\nname : Class\n, where both the name and the class are optional\nJuly 30, 2020\n502045 - UML\n31"
+    },
+    {
+      "heading": "A sequence diagram for centralized control",
+      "level": 2,
+      "text": "Each lifeline has an\nactivation bar\nthat shows when the participant is active in the interaction. This corresponds to one of the participant's methods being on the stack. Activation bars are\noptional\nin UML, but I find them extremely valuable in clarifying the behavior\nNaming often is useful to correlate participants an the diagram. The call\ngetProduct\nis shown returning\naProduct\n, which is the same name, and therefore the same participant.\nSome people use returns for all calls, but I prefer to use them only where they add Information\nJuly 30, 2020\n502045 - UML\n32"
+    },
+    {
+      "heading": "A sequence diagram for distributed control",
+      "level": 2,
+      "text": "July 30, 2020\n502045 - UML\n33"
+    },
+    {
+      "heading": "Centralized",
+      "level": 2,
+      "text": "vs\ndistributed control\nThe clear difference in styles between the two interactions. Figure 4 .1 is\ncentralized\ncontrol\n, with\none participant pretty much\ndoing all the processing\nand other participants there to supply data. Figure 4 .2 uses\ndistributed control\n, in which the processing is\nsplit\namong\nmany\nparticipants\n, each one doing a little bit of the algorithm\nJuly 30, 2020\n502045 - UML\n34"
+    },
+    {
+      "heading": "Centralized",
+      "level": 2,
+      "text": "vs\ndistributed control\nBoth styles have their strengths and weaknesses .\nMost people, particularly those new to objects, are more used to centralized control. In many ways, it‘s\nsimpler\n, as all the processing is in\none place\nWith distributed control, in contrast, you have the sensation\n[\ncảm-giác\n]\nof chasing\n[\nchạy-theo\n]\naround the objects, trying to find the program\nJuly 30, 2020\n502045 - UML\n35"
+    },
+    {
+      "heading": "Centralized",
+      "level": 2,
+      "text": "vs\ndistributed control\nOne of the main goals of good design is to localize the effects of change.\nData and behavior\nthat accesses that data often\nchange together\n. So putting the\ndata\nand the\nbehavior\nthat uses it together in\none place\nis the first rule of object-oriented design.\nBy distributing control, you create more opportunities for using\npolymorphism\nrather than using conditional logic . If the algorithms for product pricing are different for different types of product, the distributed control mechanism allows us to use subclasses of product to handle these variations\nJuly 30, 2020\n502045 - UML\n36"
+    },
+    {
+      "heading": "Sequence Diagrams – Another Example",
+      "level": 2,
+      "text": "B\nài toán hệ thống quản lý đơn đặt hàng\nJuly 30, 2020\n502045 - UML\n37"
+    },
+    {
+      "heading": "When to Use Sequence Diagrams",
+      "level": 2,
+      "text": "You should use sequence diagrams when you want to look at the behavior of several objects within a\nsingle use case\n.\nSequence diagrams are\ngood at showing collaborations among the objects\n; they are not so good at precise definition of the behavior.\nIf you want to look at the behavior of a\nsingle object across many use cases, use a state diagram\nIf you want to look at\nbehavior across many use cases or many threads, consider an activity diagram\nJuly 30, 2020\n502045 - UML\n38"
+    },
+    {
+      "heading": "sequence diagram with conditions",
+      "level": 2,
+      "text": "July 30, 2020\n502045 - UML\n39"
+    }
+  ]
+}

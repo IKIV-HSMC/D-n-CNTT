@@ -1,0 +1,251 @@
+{
+  "original_filename": "Chapter6 - Identity as a Service - IDaaS.pdf",
+  "extracted_text": "WELCOME TO\nCLOUD COMPUTING\nIdentity as a Service - IDaaS\nPART 06\nIDaaS\nINTRODUCTION\nDifferentiating Cloud Systems\t1. Single Sign-On\nDifferentiating Cloud Systems\t3. Provision of accounts\nDifferentiating Cloud Systems\t4. OpenID\nDifferentiating Cloud Systems\t6. Chapter summary\nDifferentiating Cloud Systems2. Manage federated\nidentities Differentiating Cloud Systems5. Mobile ID\nmanagement\nPart 6: Identity as a Service - IDaaS\n✓ Describe the difficulties associated with\nID management\n✓ Discuss single sign-on (SSO) solutions\n✓ Present the advantages of IDaaS solutions\n✓ Discusses IDaaS solutions offered by\nseveral companies\n❖ Objectives of this chapter\nPart 6: Identity as a Service - IDaaS\n❖ Basics of IDaaS - Definition of IDaaS\n✓ IDaaS is a service model that provides\nidentity and access management solutions\nthrough the cloud.\n✓ Helps organizations manage users and\naccess rights efficiently, securely and\ncost-effectively.\nPart 6: Identity as a Service - IDaaS\n❖ Basics of IDaaS - Main functions of IDaaS\n✓ Authentication\n✓ Authorization\n✓ Account Management\nPart 6: Identity as a Service - IDaaS\n❖ Benefits of IDaaS\n✓ 1. Cost savings: Reduce infrastructure investment costs,\nReduce maintenance and management costs\n✓ 2. Scalability: Increased flexibility, Suitable for\norganizations with variable scale\n✓ 3. Enhanced security: High security, Reduce the\nrisk of attacks\nPart 6: Identity as a Service - IDaaS\n❖ Benefits of IDaaS\n✓ 4. Effective access management: Centralized\nmanagement, Monitoring and reporting\n✓ 5. Improve user experience: Single sign-on\n(SSO), Simplify the login process\n✓ 6. Compliance with regulations and standards:\nCompliance support, Constantly updated\nPart 6: Identity as a Service - IDaaS\n❖ Challenges of IDaaS\n✓ 1. Challenges of IDaaS: Data security risks,\n✓ 2. Availability and dependency on supplier:\nSupplier reliability, Risk of service interruption\n✓ 3. Integration with existing systems:\nCompatibility, Transition\nPart 6: Identity as a Service - IDaaS\n❖ Challenges of IDaaS\n✓ 4. Compliance with regulations and policies:\nRegulations on data security, Management and\nprotection of personal information\n✓ 5. Cost: Deployment and maintenance costs,\nTraining and support costs\nPart 6: Identity as a Service - IDaaS\n❖ Federated Identity Management (FIDM)\n✓ FIDM is an identity management system that\nallows users to use the same identity to access\nmany different systems.\n✓ Goal: Increase convenience and security for users\nwhen accessing many services and applications.\nPart 6: Identity as a Service - IDaaS\n❖ Federated Identity Management (FIDM)\n➢ Main components of FIDM ✓ Identity Provider (IdP): The authority is\nresponsible for authenticating the user's identity\nand issuing authentication tokens (tokens).\n✓ Service Provider (SP): Services or applications\naccept and trust authentication tokens from IdPs to\ngrant access to users.\n✓ Token: A certificate is issued by the IdP to verify\nthe user's identity with the SP.\nPart 6: Identity as a Service - IDaaS\n❖ Federated Identity Management (FIDM)\n➢ FIDM operation process\n✓ Step 1: Authenticate the user at the IdP\n✓ Step 2: Issue authentication card\n✓ Step 3: Access the service at SP\n✓ Step 4: Verify authentication card at SP\nPart 6: Identity as a Service - IDaaS\n❖ Single Sign-On (SSO)\n✓ SSO is an authentication method that\nallows users to log in once and access\nmultiple applications and systems without\nhaving to log in again.\n✓ Goal: Simplify the login process and\nenhance user experience.\nPart 6: Identity as a Service - IDaaS\n❖ Single Sign-On (SSO) - SSO authentication process steps\n✓ Step 1: Log in to the authentication server (IdP): The user\nenters credentials into the IdP.\n✓ Step 2: Authenticate the user at the IdP: The IdP\nauthenticates the login information and issues a token.\n✓ Step 3: Access the service application (SP): The user sends\nan authentication card (token) to the SP to request access.\n✓ Step 4: Verify authentication card at SP: The SP checks\nand authenticates the authentication token from the IdP.\nPart 6: Identity as a Service - IDaaS\n❖ Single Sign-On (SSO) - Benefits of SSO\n✓ Simplify password management\n✓ Improve user experience\n✓ Enhanced security\n✓ Centralized management\nPart 6: Identity as a Service - IDaaS\n❖ Single Sign-On (SSO) - SSO Challenges\n✓ Security: If an SSO account is compromised, an\nattacker can gain access to multiple systems.\n✓ Compatibility: Compatibility between different\nsystems and applications can be an issue.\n✓ Complexity:Deploying and managing SSO can be\ncomplex and highly technical.\nPart 6: Identity as a Service - IDaaS\n❖ Provisioning of accounts\n✓ Account provisioning is the process of creating,\nmanaging, and maintaining user accounts in the\nsystem.\n✓ Target: Ensure that users have the right access to\nthe resources and services they need.\nPart 6: Identity as a Service - IDaaS\n❖ Provisioning of accounts\n✓ Step 1: Create account: Create a new user account with\nnecessary information such as name, email, and role.\n✓ Step 2: Grant access: Assign appropriate access rights\nand roles to the newly created account.\n✓ Step 3: Account management: Update information, adjust\naccess rights, and maintain your account over time.\n✓ Step 4: Disable or delete accounts: Disable or delete\naccounts when users leave the organization.\nPart 6: Identity as a Service - IDaaS\n❖ OpenID\n✓ OpenID is an open protocol that allows users to use a\nsingle account to log in to many different websites and\nservices.\n✓ Target: Simplify the login process and increase user\nsecurity.\nPart 6: Identity as a Service - IDaaS\n❖ OpenID\n✓ Step 1: User chooses OpenID provider (OpenID\nProvider - OP)\n✓ Step 2: OP authenticates user\n✓ Step 3: OP issues a token\n✓ Step 4: User uses token to log in to the service\n(Relying Party - RP)\n✓ Step 5: RP allows access\nPart 6: Identity as a Service - IDaaS\n❖ IDaaS example - Ping Identity\n➢ About Ping Identity\n✓ Ping Identity is an IDaaS solution provider,\nproviding tools for identity and access management\nfor organizations.\n✓ Target: Providing secure, flexible and easy-to-\ndeploy solutions for businesses.\nPart 6: Identity as a Service - IDaaS\n✓ Single Sign-On (SSO):\n✓ Multi-Factor Authentication (MFA)\n✓ Mobile Identity Management\n✓ Integration with applications and services\n❖ IDaaS example - Ping Identity\n➢ Ping Identity key features\nPart 6: Identity as a Service - IDaaS\n✓ Password-based authentication\n✓ Multi-Factor Authentication (MFA)\n✓ Authentication based on biometrics\n✓ Device-based authentication\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Ping Identity authentication methods\nPart 6: Identity as a Service - IDaaS\nStep 1: User enters login information\nStep 2: Ping Identity authenticates information:\nStep 3: Enable multi-factor authentication (if available)\nStep 4: Successful authentication and granting access\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Ping Identity authentication process\nPart 6: Identity as a Service - IDaaS\n✓ Strong Security\n✓ Improve user experience\n✓ Enhance access management\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Benefits of authenticating with Ping Identity\nPart 6: Identity as a Service - IDaaS\n✓ Role-Based Access Control (RBAC)\n✓ Attribute-Based Access Control (ABAC)\n✓ Dynamic Authorization\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Ping Identity authorization methods\nPart 6: Identity as a Service - IDaaS\nStep 1: User authentication\nStep 2: Determine access rights\nStep 3: Check authorization policy\nStep 4: Grant access\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Ping Identity authorization process\nPart 6: Identity as a Service - IDaaS\n✓ Detailed access control\n✓ Flexible management\n✓ Regulatory compliance\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Benefits of authorization using Ping Identity\nPart 6: Identity as a Service - IDaaS\n✓ Automatic account creation and deletion\n✓ Account lifecycle management\n✓ Account synchronization\n✓ Recover account\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Key features of Ping Identity in account management\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Create an account\n✓ Step 2: Grant access\n✓ Step 3: Maintain and update your account\n✓ Step 4: Delete or disable account\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Ping Identity's account management process\nPart 6: Identity as a Service - IDaaS\n✓ Enhanced security\n✓ Save time and costs\n✓ Centralized management\n✓ control and monitor\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Benefits of account management with Ping Identity\nPart 6: Identity as a Service - IDaaS\n✓ Record access activities\n✓ Analysis and reporting\n✓ Real-time alerts\n✓ Compliance and testing\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Key features of Ping Identity in testing and monitoring\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Record access activities\n✓ Step 2: Store and secure data\n✓ Step 3: Analyze and evaluate\n✓ Step 4: Reporting and warnings\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Ping Identity's testing and monitoring process\nPart 6: Identity as a Service - IDaaS\n✓ Enhanced security\n✓ Regulatory compliance\n✓ Detect and handle problems quickly\n✓ Improved management and decision making\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Benefits of testing and monitoring with Ping Identity\nPart 6: Identity as a Service - IDaaS\n✓ SinglePoint is an IDaaS platform that provides\nidentity and access management solutions, helping\norganizations effectively protect and manage user\nidentities.\n✓ Target: Simplify identity and access management,\nincreasing security and regulatory compliance.\n❖ SinglePoint - IDaaS solution\n➢ About SinglePoint\nPart 6: Identity as a Service - IDaaS\n✓ Centralized identity management\n✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Audit and Monitoring\n❖ SinglePoint - IDaaS solution\n➢ SinglePoint main features\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Survey and analysis\n✓ Step 2: Installation and configuration\n✓ Step 3: Integrate with existing system\n✓ Step 4: Training and support\n✓ Step 5: Track and optimize\n❖ SinglePoint - IDaaS solution\n➢ SinglePoint deployment process\nPart 6: Identity as a Service - IDaaS\n✓ Symplified is an IDaaS platform that\nprovides identity and access management\nsolutions, helping organizations effectively\nprotect and manage user identities.\n✓ Target: Simplify identity and access\nmanagement, increasing security and\nregulatory compliance.\n❖ Symplified - IDaaS solution\n➢ About Symplified\nPart 6: Identity as a Service - IDaaS\n✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Federated Identity Management (FIDM)\n✓ Audit and Monitoring\n❖ Symplified - IDaaS solution\n➢ Main features of Symplified\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Survey and analysis\n✓ Step 2: Installation and configuration\n✓ Step 3: Integrate with existing system\n✓ Step 4: Training and support\n✓ Step 5: Track and optimize\n❖ Symplified - IDaaS solution\n➢ Symplified deployment process\nPart 6: Identity as a Service - IDaaS\n✓ OpenSaaS is an open source software model\ndelivered as a service, allowing organizations to\ncustomize and deploy software solutions on\ndemand.\n✓ Target: Provides flexible, customizable, and scalable\nIDaaS solutions based on open source code, giving\norganizations greater control and cost savings.\n❖ OpenSaaS in IDaaS\n➢ About OpenSaaS\nPart 6: Identity as a Service - IDaaS\n✓ Open source code\n✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Easy integration\n❖ OpenSaaS in IDaaS\n➢ Key features of OpenSaaS in IDaa\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Choose an open source solution\n✓ Step 2: Customize and configure\n✓ Step 3: Deploy and integrate\n✓ Step 4: Training and support\n✓ Step 5: Maintenance and updates\n❖ OpenSaaS in IDaaS\n➢ OpenSaaS deployment process in IDaaS\nPart 6: Identity as a Service - IDaaS\n✓ Mobile ID management is the process of\nmanaging user identities and access from mobile\ndevices such as smartphones and tablets.\n✓ Target: Protect your organization's information\nand resources when accessed from mobile\ndevices.\n❖ Mobile ID management\n➢ Concept of mobile ID management\nPart 6: Identity as a Service - IDaaS\n✓ Multi-Factor Authentication (MFA)\n✓ Mobile Device Management (MDM)\n✓ Mobile Application Management (MAM)\n✓ Contextual access control\n❖ Mobile ID management\n➢ Features of mobile ID management\nPart 6: Identity as a Service - IDaaS\n✓ Step 1: Register and authenticate the device:\n✓ Step 2: Configure and manage devices:\n✓ Step 3: Manage mobile applications:\n✓ Step 4: Track and monitor:\n❖ Mobile ID management\n➢ Mobile ID management process\nPart 6: Identity as a Service - IDaaS\n•Câu hỏi 1: Lợi ích chính của việc sử dụng IDaaS (Identity as a Service) là gì? Bạn có thể chia sẻ ví\ndụ thực tế về việc áp dụng IDaaS trong tổ chức của bạn không?\n•Câu hỏi 2: Những thách thức nào mà tổ chức có thể gặp phải khi triển khai một hệ thống SSO\n(Single Sign-On)? Bạn có đề xuất giải pháp nào để vượt qua những thách thức này không?\n•Câu hỏi 3: Xác thực đa yếu tố (Multi-Factor Authentication - MFA) được triển khai như thế nào\ntrong tổ chức của bạn? Những yếu tố xác thực nào được sử dụng phổ biến nhất?\n•Câu hỏi 4: Quản lý ID di động (Mobile Identity Management) có vai trò quan trọng như thế nào\ntrong bảo mật của tổ chức bạn? Bạn có gặp khó khăn gì khi quản lý danh tính từ các thiết bị di động\nkhông?\n•Câu hỏi 5: Làm thế nào để tổ chức bạn đảm bảo tuân thủ các quy định và tiêu chuẩn bảo mật thông\ntin quốc tế khi sử dụng các giải pháp IDaaS?\n❖ Các câu hỏi để thảo luận\nTHANKS\nQ & A",
+  "sections": [
+    {
+      "heading": "WELCOME TO",
+      "level": 1,
+      "text": "CLOUD COMPUTING"
+    },
+    {
+      "heading": "Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "PART 06"
+    },
+    {
+      "heading": "IDaaS",
+      "level": 2,
+      "text": "INTRODUCTION\nDifferentiating Cloud Systems\t1. Single Sign-On\nDifferentiating Cloud Systems\t3. Provision of accounts\nDifferentiating Cloud Systems\t4. OpenID\nDifferentiating Cloud Systems\t6. Chapter summary\nDifferentiating Cloud Systems2. Manage federated\nidentities Differentiating Cloud Systems5. Mobile ID\nmanagement"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Describe the difficulties associated with\nID management\n✓ Discuss single sign-on (SSO) solutions\n✓ Present the advantages of IDaaS solutions\n✓ Discusses IDaaS solutions offered by\nseveral companies\n❖ Objectives of this chapter"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Basics of IDaaS - Definition of IDaaS\n✓ IDaaS is a service model that provides\nidentity and access management solutions\nthrough the cloud.\n✓ Helps organizations manage users and\naccess rights efficiently, securely and\ncost-effectively."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Basics of IDaaS - Main functions of IDaaS\n✓ Authentication\n✓ Authorization\n✓ Account Management"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Benefits of IDaaS\n✓ 1. Cost savings: Reduce infrastructure investment costs,\nReduce maintenance and management costs\n✓ 2. Scalability: Increased flexibility, Suitable for\norganizations with variable scale\n✓ 3. Enhanced security: High security, Reduce the\nrisk of attacks"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Benefits of IDaaS\n✓ 4. Effective access management: Centralized\nmanagement, Monitoring and reporting\n✓ 5. Improve user experience: Single sign-on\n(SSO), Simplify the login process\n✓ 6. Compliance with regulations and standards:\nCompliance support, Constantly updated"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Challenges of IDaaS\n✓ 1. Challenges of IDaaS: Data security risks,\n✓ 2. Availability and dependency on supplier:\nSupplier reliability, Risk of service interruption\n✓ 3. Integration with existing systems:\nCompatibility, Transition"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Challenges of IDaaS\n✓ 4. Compliance with regulations and policies:\nRegulations on data security, Management and\nprotection of personal information\n✓ 5. Cost: Deployment and maintenance costs,\nTraining and support costs"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Federated Identity Management (FIDM)\n✓ FIDM is an identity management system that\nallows users to use the same identity to access\nmany different systems.\n✓ Goal: Increase convenience and security for users\nwhen accessing many services and applications."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Federated Identity Management (FIDM)\n➢ Main components of FIDM ✓ Identity Provider (IdP): The authority is\nresponsible for authenticating the user's identity\nand issuing authentication tokens (tokens).\n✓ Service Provider (SP): Services or applications\naccept and trust authentication tokens from IdPs to\ngrant access to users.\n✓ Token: A certificate is issued by the IdP to verify\nthe user's identity with the SP."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Federated Identity Management (FIDM)\n➢ FIDM operation process\n✓ Step 1: Authenticate the user at the IdP\n✓ Step 2: Issue authentication card\n✓ Step 3: Access the service at SP\n✓ Step 4: Verify authentication card at SP"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Single Sign-On (SSO)\n✓ SSO is an authentication method that\nallows users to log in once and access\nmultiple applications and systems without\nhaving to log in again.\n✓ Goal: Simplify the login process and\nenhance user experience."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Single Sign-On (SSO) - SSO authentication process steps\n✓ Step 1: Log in to the authentication server (IdP): The user\nenters credentials into the IdP.\n✓ Step 2: Authenticate the user at the IdP: The IdP\nauthenticates the login information and issues a token.\n✓ Step 3: Access the service application (SP): The user sends\nan authentication card (token) to the SP to request access.\n✓ Step 4: Verify authentication card at SP: The SP checks\nand authenticates the authentication token from the IdP."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Single Sign-On (SSO) - Benefits of SSO\n✓ Simplify password management\n✓ Improve user experience\n✓ Enhanced security\n✓ Centralized management"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Single Sign-On (SSO) - SSO Challenges\n✓ Security: If an SSO account is compromised, an\nattacker can gain access to multiple systems.\n✓ Compatibility: Compatibility between different\nsystems and applications can be an issue.\n✓ Complexity:Deploying and managing SSO can be\ncomplex and highly technical."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Provisioning of accounts\n✓ Account provisioning is the process of creating,\nmanaging, and maintaining user accounts in the\nsystem.\n✓ Target: Ensure that users have the right access to\nthe resources and services they need."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ Provisioning of accounts\n✓ Step 1: Create account: Create a new user account with\nnecessary information such as name, email, and role.\n✓ Step 2: Grant access: Assign appropriate access rights\nand roles to the newly created account.\n✓ Step 3: Account management: Update information, adjust\naccess rights, and maintain your account over time.\n✓ Step 4: Disable or delete accounts: Disable or delete\naccounts when users leave the organization."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ OpenID\n✓ OpenID is an open protocol that allows users to use a\nsingle account to log in to many different websites and\nservices.\n✓ Target: Simplify the login process and increase user\nsecurity."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ OpenID\n✓ Step 1: User chooses OpenID provider (OpenID\nProvider - OP)\n✓ Step 2: OP authenticates user\n✓ Step 3: OP issues a token\n✓ Step 4: User uses token to log in to the service\n(Relying Party - RP)\n✓ Step 5: RP allows access"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "❖ IDaaS example - Ping Identity\n➢ About Ping Identity\n✓ Ping Identity is an IDaaS solution provider,\nproviding tools for identity and access management\nfor organizations.\n✓ Target: Providing secure, flexible and easy-to-\ndeploy solutions for businesses."
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Single Sign-On (SSO):\n✓ Multi-Factor Authentication (MFA)\n✓ Mobile Identity Management\n✓ Integration with applications and services\n❖ IDaaS example - Ping Identity\n➢ Ping Identity key features"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Password-based authentication\n✓ Multi-Factor Authentication (MFA)\n✓ Authentication based on biometrics\n✓ Device-based authentication\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Ping Identity authentication methods"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "Step 1: User enters login information\nStep 2: Ping Identity authenticates information:\nStep 3: Enable multi-factor authentication (if available)\nStep 4: Successful authentication and granting access\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Ping Identity authentication process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Strong Security\n✓ Improve user experience\n✓ Enhance access management\n❖ IDaaS example - Ping Identity\n➢ Ping Identity – Authentication\n▪ Benefits of authenticating with Ping Identity"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Role-Based Access Control (RBAC)\n✓ Attribute-Based Access Control (ABAC)\n✓ Dynamic Authorization\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Ping Identity authorization methods"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "Step 1: User authentication\nStep 2: Determine access rights\nStep 3: Check authorization policy\nStep 4: Grant access\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Ping Identity authorization process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Detailed access control\n✓ Flexible management\n✓ Regulatory compliance\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Authorization\n▪ Benefits of authorization using Ping Identity"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Automatic account creation and deletion\n✓ Account lifecycle management\n✓ Account synchronization\n✓ Recover account\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Key features of Ping Identity in account management"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Create an account\n✓ Step 2: Grant access\n✓ Step 3: Maintain and update your account\n✓ Step 4: Delete or disable account\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Ping Identity's account management process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Enhanced security\n✓ Save time and costs\n✓ Centralized management\n✓ control and monitor\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Account Management\n▪ Benefits of account management with Ping Identity"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Record access activities\n✓ Analysis and reporting\n✓ Real-time alerts\n✓ Compliance and testing\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Key features of Ping Identity in testing and monitoring"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Record access activities\n✓ Step 2: Store and secure data\n✓ Step 3: Analyze and evaluate\n✓ Step 4: Reporting and warnings\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Ping Identity's testing and monitoring process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Enhanced security\n✓ Regulatory compliance\n✓ Detect and handle problems quickly\n✓ Improved management and decision making\n❖ IDaaS example - Ping Identity\n➢ Ping Identity - Audit\n▪ Benefits of testing and monitoring with Ping Identity"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ SinglePoint is an IDaaS platform that provides\nidentity and access management solutions, helping\norganizations effectively protect and manage user\nidentities.\n✓ Target: Simplify identity and access management,\nincreasing security and regulatory compliance.\n❖ SinglePoint - IDaaS solution\n➢ About SinglePoint"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Centralized identity management\n✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Audit and Monitoring\n❖ SinglePoint - IDaaS solution\n➢ SinglePoint main features"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Survey and analysis\n✓ Step 2: Installation and configuration\n✓ Step 3: Integrate with existing system\n✓ Step 4: Training and support\n✓ Step 5: Track and optimize\n❖ SinglePoint - IDaaS solution\n➢ SinglePoint deployment process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Symplified is an IDaaS platform that\nprovides identity and access management\nsolutions, helping organizations effectively\nprotect and manage user identities.\n✓ Target: Simplify identity and access\nmanagement, increasing security and\nregulatory compliance.\n❖ Symplified - IDaaS solution\n➢ About Symplified"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Federated Identity Management (FIDM)\n✓ Audit and Monitoring\n❖ Symplified - IDaaS solution\n➢ Main features of Symplified"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Survey and analysis\n✓ Step 2: Installation and configuration\n✓ Step 3: Integrate with existing system\n✓ Step 4: Training and support\n✓ Step 5: Track and optimize\n❖ Symplified - IDaaS solution\n➢ Symplified deployment process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ OpenSaaS is an open source software model\ndelivered as a service, allowing organizations to\ncustomize and deploy software solutions on\ndemand.\n✓ Target: Provides flexible, customizable, and scalable\nIDaaS solutions based on open source code, giving\norganizations greater control and cost savings.\n❖ OpenSaaS in IDaaS\n➢ About OpenSaaS"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Open source code\n✓ Single Sign-On (SSO)\n✓ Multi-Factor Authentication (MFA)\n✓ Access Management\n✓ Easy integration\n❖ OpenSaaS in IDaaS\n➢ Key features of OpenSaaS in IDaa"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Choose an open source solution\n✓ Step 2: Customize and configure\n✓ Step 3: Deploy and integrate\n✓ Step 4: Training and support\n✓ Step 5: Maintenance and updates\n❖ OpenSaaS in IDaaS\n➢ OpenSaaS deployment process in IDaaS"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Mobile ID management is the process of\nmanaging user identities and access from mobile\ndevices such as smartphones and tablets.\n✓ Target: Protect your organization's information\nand resources when accessed from mobile\ndevices.\n❖ Mobile ID management\n➢ Concept of mobile ID management"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Multi-Factor Authentication (MFA)\n✓ Mobile Device Management (MDM)\n✓ Mobile Application Management (MAM)\n✓ Contextual access control\n❖ Mobile ID management\n➢ Features of mobile ID management"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "✓ Step 1: Register and authenticate the device:\n✓ Step 2: Configure and manage devices:\n✓ Step 3: Manage mobile applications:\n✓ Step 4: Track and monitor:\n❖ Mobile ID management\n➢ Mobile ID management process"
+    },
+    {
+      "heading": "Part 6: Identity as a Service - IDaaS",
+      "level": 2,
+      "text": "•Câu hỏi 1: Lợi ích chính của việc sử dụng IDaaS (Identity as a Service) là gì? Bạn có thể chia sẻ ví\ndụ thực tế về việc áp dụng IDaaS trong tổ chức của bạn không?\n•Câu hỏi 2: Những thách thức nào mà tổ chức có thể gặp phải khi triển khai một hệ thống SSO\n(Single Sign-On)? Bạn có đề xuất giải pháp nào để vượt qua những thách thức này không?\n•Câu hỏi 3: Xác thực đa yếu tố (Multi-Factor Authentication - MFA) được triển khai như thế nào\ntrong tổ chức của bạn? Những yếu tố xác thực nào được sử dụng phổ biến nhất?\n•Câu hỏi 4: Quản lý ID di động (Mobile Identity Management) có vai trò quan trọng như thế nào\ntrong bảo mật của tổ chức bạn? Bạn có gặp khó khăn gì khi quản lý danh tính từ các thiết bị di động\nkhông?\n•Câu hỏi 5: Làm thế nào để tổ chức bạn đảm bảo tuân thủ các quy định và tiêu chuẩn bảo mật thông\ntin quốc tế khi sử dụng các giải pháp IDaaS?\n❖ Các câu hỏi để thảo luận"
+    },
+    {
+      "heading": "THANKS",
+      "level": 2,
+      "text": "Q & A"
+    }
+  ]
+}

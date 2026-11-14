@@ -1,0 +1,261 @@
+{
+  "original_filename": "Lecture 17.pdf",
+  "extracted_text": "Lecture 16 recap\n1) Definition of a diagonalizable matrix.\n2) A necessary and sufficient condition for a matrix to\nbe diagonalizable.\n3) An algorithm to determine if a matrix can be diagonalized,\nand if so, to find a matrix that diagonalizes it.\n4) Several remarks.\n5) A sufficient condition for diagonalizability.\n6) An example on Fibonacci numbers and two ways to\nsolve it.\nLECTURE 17\nInner products in Rn\nOrthogonal and Orthonormal Bases\nWhat is the length of a vector?\n2\n1 2If ( , ) is a vector in , the length of is\ndefined to be\nu u\t\tu u\n2 2\n1 2u u\t \tu\nx\ny\n1 2( , )\tu u\t\tu\n1u\n2u\n3\n1 2 3If ( , , ) is a vector in , the length of is\ndefined to be\nu u u\t\tu u\nWhat is the length of a vector?\n2 2 2\n1 2 3u u u\t  \tu\nz\ny\nx\n1u\n2u\n3u\nHow do you think we\nshould define the length\nof a vector in ?n\nu\n1 2If ( , ,..., ) is a vector in , the length of is\ndefined to be\nn\nnu u u\t\tu u\nThe length of a vector in Rn\n2 2 2\n1 2 ... nu u u\t   \tu\n2 3\nIf and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\nThe definition is similar when , are vectors\nin .n\nu v\n2 3\nIf and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors in R2 or R3\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\n1 2 1 2\n2\nIf ( , ) and ( , )\nare vectors in ,\nu u v v\t \tu v\n2 2\n1 1 2 2( , ) ( ) ( )\td u v u v\t     \tu v u v\n2 3\nIf and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors in R2 or R3\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nare vectors in ,\nu u u v v v\t \tu v\n2 2 2\n1 1 2 2 3 3( , ) ( ) ( ) ( )\td u v u v u v\t       \tu v u v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n\nBy cosine rule,\n2 2 2 2 cos\n\t   \tu v u v u v\n2 2 2\n2\ncos\n   \n  u v u v\nu v\n2 2 2\n1\n2\ncos\n   \t  \n   \n \nu v u v\nu v\n2 2 2\n1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n1 2 1 2\n2\nIf ( , ) and ( , )\nbelong to ,\nu u v v\t \tu v\n2 2 2 2 2 2\n1 1 2 1 2 1 1 2 2\n2\n( ) ( )\ncos u u v v u v u v   \t      \n  \n u v\n1 1 1 2 2\ncos u v u v\t  \t\n  \n u v\n2 2 2\n1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nbelong to ,\nu u u v v v\t \tu v\n2 2 2 2 2 2 2 2 2\n1 1 2 3 1 2 3 1 1 2 2 3 3\n2\n( ) ( ) ( )\ncos u u u v v v u v u v u v   \t          \n  \n u v\n1 1 1 2 2 3 3\ncos u v u v u v\t  \t \n  \n u v\n2 2 2\n1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nbelong to ,\nu u u v v v\t \tu v1 2 1 2\n2\nIf ( , ) and ( , )\nbelong to ,\nu u v v\t \tu v\n1 1 1 2 2\ncos u v u v   \t\n  \n u v\n1 1 1 2 2 3 3\ncos u v u v u v\n   \t \n  \n u v\n1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors\nin .\nn n\nn\nu u u v v v\t \tu v\nDefinitions (dot product, norm, distance,\nangle)\n1) The dot product (or inner product) of and is the value\tu v\n1 1 2 2 ... n nu v u v u v\t    \tu v\n2) The norm (or length) of is\tu\n2 2 2\n1 2 ... nu u u\t   \tu\n1\tVectors of norm are\ncalled unit vectors.\n1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors\nin .\nn n\nn\nu u u v v v\t \tu v\nDefinitions (dot product, norm, distance,\nangle)\n2 2 2\n1 1 2 2( , ) ( ) ( ) ... ( )n nd u v u v u v\t        \tu v u v\n3) The distance between and is\tu v\n4) The angle between and is\tu v\n1\ncos  \t\n \n \nu v\nu v\n1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors\nin (here and are written as row vectors).\nn n\nn\nu u u v v v\t \tu v\nu v\nDot product and matrix product\n1 1 2 2 ... n nu v u v u v\t    \tu v\n \t\n1\n2\n1 2 ... n\nn\nv\nv\nu u u\nv\n \n \n   \n \n \nT\n uvdot product\nmatrix product\n1 1\n2 2\nLet and be two vectors in\n(here and are written as column vectors).\nn\nn n\nu v\nu v\nu v\n   \n   \n    \n   \n   \n   \nu v\nu v\nDot product and matrix product\n1 1 2 2 ... n nu v u v u v\t    \tu v\n \t\n1\n2\n1 2 ... n\nn\nv\nv\nu u u\nv\n \n \n   \n \n \nT\n u v\ndot product\nmatrix product\n1 2 2 1 1 0 2 0\tLet ( , , , ), ( , , , ).\nCompute the following:\n, , , ( , ), angle between and .\td\n   \n\nu v\nu v u v u v u v\nExample (dot product, norm, distance,\nangle)\n \tu v\t\tu\t\tv\n( , )\td \tu v\nangle between and \tu v\nThe dot product of any vector with itself is non-negative\nand the only vector whose dot product with itself is\nzero is the zero vector.\nLet be a scalar and , , be vectors in .n\nc u v w\nTheorem (some results about dot\nproducts)\n \t \t\t1) \tu v \tv u\n2) ( )\n( )\n     \n     \nu v w u w v w\nw u v w u w v\n3) ( ) ( ) ( )\tc c c\t    \tu v u v u v\n4) c c\t\tu u\n0 0\t5) and if and only if .\t    \tu u u u u 0\nSomething we use\nalmost everyday...\ninternet search engine\nis one such example.\nDo you know that there\nare applications of linear\nalgebra everywhere?\nAn application of dot products\nNot that I am\naware of...can you\ngive me an example?\nProblem: Suppose there are six documents that we\nwould like to search through and determine which\none of the documents is 'closest' to my search criteria,\nwhich is defined in terms of a few keywords.\nInformation retrieval (search)\n1D2D3D4D5D6D\n1 2 3 4 5\nFive keywords we may want to look for in our documents:\n, , , , .\tk k k k k\n5\nApproach: We represent each document by a vector\n(because there are 5 keywords we are interested in).\nj\nj\nD\n\td\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n1 2 3 4 5\nFive keywords we\nmay want to look\nfor: , , , , .\tk k k k k\n1\n1 2 4 5 3\nDocument contains\n, , , but not\nD\nk k k k k1\n1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd\n1\n1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd\n5\nApproach: We represent each document by a vector\n(because there are 5 keywords we are interested in).\nj\nj\nD\n\td\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n2\n1\n1\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n1\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n1\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n1\n1\n1\n \n \n \n  \n \n \n \n \nd\n207842147823\n12462247621\nWhat if we have documents and\nkeywords?\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n2\n1\n1\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n1\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n1\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n1\n1\n1\n \n \n \n  \n \n \n \n \nd\nNOT EASY (by inspection)!\n1\n1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd\n1 1 0 0 1 0\n1 1 1 1 0 0\n0 0 1 0 0 1\n1 0 0 0 1 1\n1 0 0 1 1 1\n \n \n \n  \n \n \n \n \nQ\n5 6 1 2 6\tLet be a matrix where , , ,..., is the th column\nof the matrix .\nj j j\t \tQ d\nQ\nInformation retrieval (search)\n2d1d3d4d5d6d\t1 4 5\nSince we are interested in keywords\n, and , let the search vector\tk k k\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx\nNote that is the number of 'matches' there are\nin document .\nj\njD\n\td x\nInformation retrieval (search)\n2d1d3d4d5d6d\n1 3\t \td x\n6 2\t \td x\nHow do we put these\ninformation together\nsystematically?1 1 0 0 1 0\n1 1 1 1 0 0\n0 0 1 0 0 1\n1 0 0 0 1 1\n1 0 0 1 1 1\n \n \n \n  \n \n \n \n \nQ\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx\nLet .T\n\ty Q x\nInformation retrieval (search)\n1 5\nConclusion:\nand matches\nour search.\nD D\n1d\n1 5\nQuestion:\nHow can we\ndistinguish between\nand ?\tD D\nFirst, we need more information.\n1 1 0 1 1 1\n1 1 0 0 0 0\n0 1 1 0 0 0\n0 1 0 0 1 1\n1 0 0 1 1 1\n0 0 1 1 1\nT\n       \n        \n  \n \nQ x\n3\n1\n0\n1\n3\n2\n \n \n \n \n  \n \n \n \n \ny\nInformation retrieval (search)\nSuppose the entries in each tells us how many times each\nkeyword actually appears in document :\nj\njD\nd\n1\n2\n1\n0\n2\n1\n \n \n \n  \n \n \n \n \nd\n1D\t2D3D4D5D\t6D\n2\n1\n3\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n5\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n2\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n3\n0\n0\n5\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n6\n1\n4\n \n \n \n  \n \n \n \n \nd\n3 5 6\t1 2 4\n1 2 3 4 5 6\n'\n \n \n   \n \n \nd d d\td d d\nQ d d d d d d\nNote that if the angle between and the search vector\nis , then\nj\nj\n\nd\nx\nInformation retrieval (search)\ncos j\nj\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\nIdea: Let's divide each\nand by their respective\nlengths.\njd\nx\n'  x\nx x\n \n \n \n \n \n \nx\nx\n1\n1\n:\t' '\n:\n:\nT\n \n \n \n  \n \n \n \n \nd\nd\nQ x\nNote that if the angle between and the search vector\nis , then\nj\nj\n\nd\nx\nInformation retrieval (search)\ncos j\nj\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\nLet ' ' 'T\n\ty Q x\n1\n1\n:\n:\n:\n  \n \n  \n \n \n \n \nd x\nd x1cos\n:\n:\n:\n\t \n \n   \n \n \n1\ncosine of angle\nbetween and\td x\n1\n1\n:\t' '\n:\n:\nT\n \n \n \n  \n \n \n \n \nd\nd\nQ x\nInformation retrieval (search)\ncos j\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\n \n \n \n \n \n \nx\nx\n1\n1\n:\n:\n:\n  \n \n  \n \n \n \n \nd x\nd x1cos\n:\n:\n:\n\t \n \n   \n \n \n1\ncosine of angle\nbetween and\td x\n1 0\tcos angle between the two vectors is\n  \n1\twe look for such that cos is as close to as possible.jj\n\t\nInformation retrieval (search)\n0 9130\n0 1826\n0\n0 2582\n0 8784\n0 6868\n.\n.\n' ' ' .\n.\n.\nT\n \n \n \n \n   \n \n \n \n \ny Q x\nFor our example:1\n5\nSo the conclusion is is 'closer'\nto compared to .\nd\nx d\n1\n2\n1\n0\n2\n1\n \n \n \n  \n \n \n \n \nd5\n3\n0\n0\n5\n1\n \n \n \n  \n \n \n \n \nd\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx\nDo you know why?\nDefinition (orthogonal, orthonormal)\n0\t1) Two vectors , are said to be orthogonal if .\t \tu v u v\n{ , , , }\tS  u v w x\t0 0 0\t, ,\t     \tu v u w u x\n0 0 0\t, ,\t     \tv w v x w x\n2) A set of vectors in is said to be orthogonal if\nevery pair of distinct vectors in are orthogonal.\nn\nS\nS\n3) A set of vectors in is said to be orthonormal if\nis orthogonal and every vector in is a unit vector.\nn\nS\nS S\nThe concept of orthogonality\n0\t1) Two vectors , are said to be orthogonal if .\t \tu v u v\n1 1\n0 0 2\ncos cos ( ) .\n\t  \t\n     \n \nu v\nu v u v\n2 3\nThus the concept of orthogonality is a generalization\nof perpendicularity that we are familiar in and .\nExample (orthogonal and orthonormal)\n1 2 3Let { , , } where\tS  u u u\n1 2 0 0\t( , , );\t\tu2 0 1 1\t( , , );\t\tu3 0 1 1\t( , , ).\t \tu\nx\ny\nz\n1 2 0\t \tu u\n1u\n2u\n3u\n1 3 0\t \tu u\n2 3 0\t \tu u\nis an orthogonal set\tS\nExample (orthogonal and orthonormal)\nConverting an orthogonal set to an orthonormal set:\n1 2 0 0\t( , , );\t\tu2 0 1 1\t( , , );\t\tu3 0 1 1\t( , , ).\t \tu\nx\ny\nz\t1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n1u\n2u\n3u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u\nExample (orthogonal and orthonormal)\nConverting an orthogonal set to an orthonormal set:\nx\ny\nz\n1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n1u\n2u\n3u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u\nx\ny\nz\n1v\n2v\n3v\nExample (orthogonal and orthonormal)\nConverting an orthogonal set to an orthonormal set:\n1 2 3' { , , } is an orthonormal set.\tS  v v v\n1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u\nx\ny\nz\n1v\n2v\n3v\nThis process of converting an\northogonal set to an orthonormal\nset by dividing each vector in the\nset by its length is called\nnormalizing.\nExample (an orthonormal set)\n1 2The standard basis for , { , ,..., } is an orthonormal set.n\nne e e\n1 21 0 0 0 1 0 0 0 1\t( , ,..., ), ( , ,..., ),..., ( , ,..., )n  \te e e\n0\t1) orthogonal: if ;i j i j\t  \te e\n2 2 2\n0 1 0 1\t2) unit vectors: ... ... .i      \te\nTheorem\nLet be an orthogonal set of non zero vectors in\na vector space. Then is a linearly independent set.\nS\nS\nDefinition (orthogonal and orthonormal\nbases)\n1) A basis for a vector space is an orthogonal basis\nif is an orthogonal set.\nS\nS\n2) A basis for a vector space is an orthonormal basis\nif is an orthonormal set.\nS\nS\nAn easy way to check orthogonal basis\nIf we know that a vector space has dimension and\tV k\n1) is an orthogonal set of non zero vectors in\n(all vectors in belong to );\nS V\nS V\nLet be an orthogonal set of non zero vectors in\na vector space. Then is a linearly independent set.\nS\nS\n2) ;\tS k\t\nThen we can conclude that is an orthogonal basis for .\tS V\n3 0 1 1\t( , , ).\t \tu2 0 1 1\t( , , );\t\tu1 2 0 0\t( , , );\t\tu\nExample (orthogonal and orthonormal\nbases)\n1 2 3Let { , , } where\tS  u u u\n3 3\tdim( ) 3\nis an orthogonal basis for .\tS\n1 2 3Let ' { , , } where\tS  v v v\n1\n1\n1\n;\t u\nv u\n2\n2\n2\n;\t u\nv u\n3\n3\n3\n.\t u\nv u3\n' is an orthonormal\nbasis for .\nS\n3\n3\tis an orthogonal set of non zero vectors in .\tS\nWhat’s the big deal?\nWe already know that\nany vector space has\nmany different bases...\northogonal and\northonormal bases\nare 'special'...\nwhat so special?Let me show\nyou!\nHow would you answer this question?\n1 2 3Assume that you already know that { , , } where\tS  u u u\n1 2 31 2 2 1 1 1 1 1 1 1 1 1\t( , , , ), ( , , , ), ( , , , )\t       \tu u u\n4\nis a basis for a subspace of .\tV\n1 2 3 4\n1 2 3\nGive a vector ( , , , ) , how do we write as\na linear combination of , , ?\nw w w w V\t \tw w\nu u u\n1 2 3a b c\t  \tu u u w\n1 2 3 41 2 2 1 1 1 1 1 1 1 1 1\t( , , , ) ( , , , ) ( , , , ) ( , , , )\ta b c w w w w\t        \nHow would you answer this question?\n1\n2\n3\n4\n2\n2\na b c w\na b c w\na b c w\na b c w\n  \t\n   \t\n    \n   \nWe now solve this linear system for , , .\ta b c\n1 2 3 41 2 2 1 1 1 1 1 1 1 1 1\t( , , , ) ( , , , ) ( , , , ) ( , , , )\ta b c w w w w\t        \nHow would you answer this question?\n1 2 3Assume that you already know that { , , } where\tS  u u u\n1 2 31 2 2 1 1 1 1 1 1 1 1 1\t( , , , ), ( , , , ), ( , , , )\t       \tu u u\n4\nis a basis for a subspace of .\tV\n1 2 3 4\n1 2 3\nGive a vector ( , , , ) , how do we write as\na linear combination of , , ?\nw w w w V\t \tw w\nu u u\nWhat if we know further that is an orthogonal basis?\n(is it?)\nS\n1 21) If { , ,..., } is an orthogonal basis for a vector\nspace , then for any vector ,\nkS\nV V\n\n\nu u u\nw\nTheorem\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\nNo need to solve a linear system\nfor these coefficients!\nWOW!\n1 21) If { , ,..., } is an orthogonal basis for a vector\nspace , then for any vector ,\nkS\nV V\n\n\nu u u\nw\nTheorem\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\n1 2\n2 2 2\n1 2\nSo ( ) , ,..., (coordinate vector of\nwith respect to basis ).\nk\nS\nk\nS\n \t\t \n  \n \nw u\tw u w u\nw u u u\nw\n1 22) If { , ,..., } is an orthonormal basis for a vector\nspace , then for any vector ,\nkT\nV V\n\n\nv v v\nw\nTheorem\n1 1 2 2( ) ( ) ... ( )k k      \tw w v v w v v w v v\n1 2So ( ) ( , ,... )T k   \tw w v w v w v\n3 0 1 1\t( , , ).\t \tu2 0 1 1\t( , , );\t\tu1 2 0 0\t( , , );\t\tu\nExample (using orthogonal basis)\n1 2 3Let { , , } where\tS  u u u\n3\nis an orthogonal basis for .\tS\n1 2 31 2 3\tExpress ( , , ) as a linear combination of , , .\t\tw u u u\n1 2 3\n1 5 1\n2 2 2\nThus .\t  \tw u u u\n1\n2\n1\n2 1\n4 2\n  \nw u\nu\n2\n2\n2\n5\n2\n \nw u\nu\n3\n2\n3\n1\n2\n \n\nw u\nu\n5\t1 \t1\n2 \t2 \t2( \t) \t( , , \t)S  \t\tw\nEND OF LECTURE 17\nLecture 18\nOrthogonal and Orthonormal Bases (cont’d)\nBest Approximations (till Example 5.3.9)",
+  "sections": [
+    {
+      "heading": "Lecture 16 recap",
+      "level": 1,
+      "text": "1) Definition of a diagonalizable matrix.\n2) A necessary and sufficient condition for a matrix to\nbe diagonalizable.\n3) An algorithm to determine if a matrix can be diagonalized,\nand if so, to find a matrix that diagonalizes it.\n4) Several remarks.\n5) A sufficient condition for diagonalizability.\n6) An example on Fibonacci numbers and two ways to\nsolve it."
+    },
+    {
+      "heading": "LECTURE 17",
+      "level": 2,
+      "text": "Inner products in Rn\nOrthogonal and Orthonormal Bases"
+    },
+    {
+      "heading": "What is the length of a vector?",
+      "level": 2,
+      "text": "2\n1 2If ( , ) is a vector in , the length of is\ndefined to be\nu u\t\tu u\n2 2\n1 2u u\t \tu\nx\ny\n1 2( , )\tu u\t\tu\n1u\n2u"
+    },
+    {
+      "heading": "3",
+      "level": 2,
+      "text": "1 2 3If ( , , ) is a vector in , the length of is\ndefined to be\nu u u\t\tu u\nWhat is the length of a vector?\n2 2 2\n1 2 3u u u\t  \tu\nz\ny\nx\n1u\n2u\n3u\nHow do you think we\nshould define the length\nof a vector in ?n\nu"
+    },
+    {
+      "heading": "1 2If ( , ,..., ) is a vector in , the length of is",
+      "level": 2,
+      "text": "defined to be\nn\nnu u u\t\tu u\nThe length of a vector in Rn\n2 2 2\n1 2 ... nu u u\t   \tu"
+    },
+    {
+      "heading": "2 3",
+      "level": 2,
+      "text": "If and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\nThe definition is similar when , are vectors\nin .n\nu v"
+    },
+    {
+      "heading": "2 3",
+      "level": 2,
+      "text": "If and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors in R2 or R3\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\n1 2 1 2\n2\nIf ( , ) and ( , )\nare vectors in ,\nu u v v\t \tu v\n2 2\n1 1 2 2( , ) ( ) ( )\td u v u v\t     \tu v u v"
+    },
+    {
+      "heading": "2 3",
+      "level": 2,
+      "text": "If and are two vectors in or , the distance\nbetween and is defined to be the length of\nthe vector .\t\nu v\nu v\nu v\nThe distance between 2 vectors in R2 or R3\nv\nu\tu v\ndistance between and\n( , )\td\t  \nu v\nu v u v\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nare vectors in ,\nu u u v v v\t \tu v\n2 2 2\n1 1 2 2 3 3( , ) ( ) ( ) ( )\td u v u v u v\t       \tu v u v"
+    },
+    {
+      "heading": "2 3",
+      "level": 2,
+      "text": "If and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n\nBy cosine rule,\n2 2 2 2 cos\n\t   \tu v u v u v\n2 2 2\n2\ncos\n   \n  u v u v\nu v\n2 2 2\n1\n2\ncos\n   \t  \n   \n \nu v u v\nu v"
+    },
+    {
+      "heading": "2 2 2",
+      "level": 2,
+      "text": "1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n1 2 1 2\n2\nIf ( , ) and ( , )\nbelong to ,\nu u v v\t \tu v\n2 2 2 2 2 2\n1 1 2 1 2 1 1 2 2\n2\n( ) ( )\ncos u u v v u v u v   \t      \n  \n u v\n1 1 1 2 2\ncos u v u v\t  \t\n  \n u v"
+    },
+    {
+      "heading": "2 2 2",
+      "level": 2,
+      "text": "1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\nv\nu\tu v\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nbelong to ,\nu u u v v v\t \tu v\n2 2 2 2 2 2 2 2 2\n1 1 2 3 1 2 3 1 1 2 2 3 3\n2\n( ) ( ) ( )\ncos u u u v v v u v u v u v   \t          \n  \n u v\n1 1 1 2 2 3 3\ncos u v u v u v\t  \t \n  \n u v"
+    },
+    {
+      "heading": "2 2 2",
+      "level": 2,
+      "text": "1\n2\ncos\n   \t  \n  \n \nu v u v\nu v\n2 3\nIf and are two vectors in or , let the angle\nbetween and be .\n\nu v\nu v\nAngle between 2 vectors in R2 or R3\n1 2 3 1 2 3\n3\nIf ( , , ) and ( , , )\nbelong to ,\nu u u v v v\t \tu v1 2 1 2\n2\nIf ( , ) and ( , )\nbelong to ,\nu u v v\t \tu v\n1 1 1 2 2\ncos u v u v   \t\n  \n u v\n1 1 1 2 2 3 3\ncos u v u v u v\n   \t \n  \n u v"
+    },
+    {
+      "heading": "1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors",
+      "level": 2,
+      "text": "in .\nn n\nn\nu u u v v v\t \tu v\nDefinitions (dot product, norm, distance,\nangle)\n1) The dot product (or inner product) of and is the value\tu v\n1 1 2 2 ... n nu v u v u v\t    \tu v\n2) The norm (or length) of is\tu\n2 2 2\n1 2 ... nu u u\t   \tu\n1\tVectors of norm are\ncalled unit vectors."
+    },
+    {
+      "heading": "1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors",
+      "level": 2,
+      "text": "in .\nn n\nn\nu u u v v v\t \tu v\nDefinitions (dot product, norm, distance,\nangle)\n2 2 2\n1 1 2 2( , ) ( ) ( ) ... ( )n nd u v u v u v\t        \tu v u v\n3) The distance between and is\tu v\n4) The angle between and is\tu v\n1\ncos  \t\n \n \nu v\nu v"
+    },
+    {
+      "heading": "1 2 1 2Let ( , ,..., ) and ( , ,..., ) be two vectors",
+      "level": 2,
+      "text": "in (here and are written as row vectors).\nn n\nn\nu u u v v v\t \tu v\nu v\nDot product and matrix product\n1 1 2 2 ... n nu v u v u v\t    \tu v\n \t\n1\n2\n1 2 ... n\nn\nv\nv\nu u u\nv\n \n \n   \n \n \nT\n uvdot product\nmatrix product"
+    },
+    {
+      "heading": "1 1",
+      "level": 2,
+      "text": "2 2\nLet and be two vectors in\n(here and are written as column vectors).\nn\nn n\nu v\nu v\nu v\n   \n   \n    \n   \n   \n   \nu v\nu v\nDot product and matrix product\n1 1 2 2 ... n nu v u v u v\t    \tu v\n \t\n1\n2\n1 2 ... n\nn\nv\nv\nu u u\nv\n \n \n   \n \n \nT\n u v\ndot product\nmatrix product"
+    },
+    {
+      "heading": "1 2 2 1 1 0 2 0\tLet ( , , , ), ( , , , ).",
+      "level": 2,
+      "text": "Compute the following:\n, , , ( , ), angle between and .\td\n   \n\nu v\nu v u v u v u v\nExample (dot product, norm, distance,\nangle)\n \tu v\t\tu\t\tv\n( , )\td \tu v\nangle between and \tu v"
+    },
+    {
+      "heading": "The dot product of any vector with itself is non-negative",
+      "level": 2,
+      "text": "and the only vector whose dot product with itself is\nzero is the zero vector.\nLet be a scalar and , , be vectors in .n\nc u v w\nTheorem (some results about dot\nproducts)\n \t \t\t1) \tu v \tv u\n2) ( )\n( )\n     \n     \nu v w u w v w\nw u v w u w v\n3) ( ) ( ) ( )\tc c c\t    \tu v u v u v\n4) c c\t\tu u\n0 0\t5) and if and only if .\t    \tu u u u u 0"
+    },
+    {
+      "heading": "Something we use",
+      "level": 2,
+      "text": "almost everyday...\ninternet search engine\nis one such example.\nDo you know that there\nare applications of linear\nalgebra everywhere?\nAn application of dot products\nNot that I am\naware of...can you\ngive me an example?"
+    },
+    {
+      "heading": "Problem: Suppose there are six documents that we",
+      "level": 2,
+      "text": "would like to search through and determine which\none of the documents is 'closest' to my search criteria,\nwhich is defined in terms of a few keywords.\nInformation retrieval (search)\n1D2D3D4D5D6D\n1 2 3 4 5\nFive keywords we may want to look for in our documents:\n, , , , .\tk k k k k"
+    },
+    {
+      "heading": "5",
+      "level": 2,
+      "text": "Approach: We represent each document by a vector\n(because there are 5 keywords we are interested in).\nj\nj\nD\n\td\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n1 2 3 4 5\nFive keywords we\nmay want to look\nfor: , , , , .\tk k k k k\n1\n1 2 4 5 3\nDocument contains\n, , , but not\nD\nk k k k k1\n1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd\n5\nApproach: We represent each document by a vector\n(because there are 5 keywords we are interested in).\nj\nj\nD\n\td\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n2\n1\n1\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n1\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n1\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n1\n1\n1\n \n \n \n  \n \n \n \n \nd"
+    },
+    {
+      "heading": "207842147823",
+      "level": 2,
+      "text": "12462247621\nWhat if we have documents and\nkeywords?\nInformation retrieval (search)\n1D\t2D3D4D5D\t6D\n2\n1\n1\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n1\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n1\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n1\n1\n1\n \n \n \n  \n \n \n \n \nd\nNOT EASY (by inspection)!\n1\n1\n1\n0\n1\n1\n \n \n \n  \n \n \n \n \nd"
+    },
+    {
+      "heading": "1 1 0 0 1 0",
+      "level": 2,
+      "text": "1 1 1 1 0 0\n0 0 1 0 0 1\n1 0 0 0 1 1\n1 0 0 1 1 1\n \n \n \n  \n \n \n \n \nQ\n5 6 1 2 6\tLet be a matrix where , , ,..., is the th column\nof the matrix .\nj j j\t \tQ d\nQ\nInformation retrieval (search)\n2d1d3d4d5d6d\t1 4 5\nSince we are interested in keywords\n, and , let the search vector\tk k k\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx"
+    },
+    {
+      "heading": "Note that is the number of 'matches' there are",
+      "level": 2,
+      "text": "in document .\nj\njD\n\td x\nInformation retrieval (search)\n2d1d3d4d5d6d\n1 3\t \td x\n6 2\t \td x\nHow do we put these\ninformation together\nsystematically?1 1 0 0 1 0\n1 1 1 1 0 0\n0 0 1 0 0 1\n1 0 0 0 1 1\n1 0 0 1 1 1\n \n \n \n  \n \n \n \n \nQ\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx"
+    },
+    {
+      "heading": "Let .T",
+      "level": 2,
+      "text": "\ty Q x\nInformation retrieval (search)\n1 5\nConclusion:\nand matches\nour search.\nD D\n1d\n1 5\nQuestion:\nHow can we\ndistinguish between\nand ?\tD D\nFirst, we need more information.\n1 1 0 1 1 1\n1 1 0 0 0 0\n0 1 1 0 0 0\n0 1 0 0 1 1\n1 0 0 1 1 1\n0 0 1 1 1\nT\n       \n        \n  \n \nQ x\n3\n1\n0\n1\n3\n2\n \n \n \n \n  \n \n \n \n \ny"
+    },
+    {
+      "heading": "Information retrieval (search)",
+      "level": 2,
+      "text": "Suppose the entries in each tells us how many times each\nkeyword actually appears in document :\nj\njD\nd\n1\n2\n1\n0\n2\n1\n \n \n \n  \n \n \n \n \nd\n1D\t2D3D4D5D\t6D\n2\n1\n3\n0\n0\n0\n \n \n \n  \n \n \n \n \nd3\n0\n1\n5\n0\n0\n \n \n \n  \n \n \n \n \nd4\n0\n2\n0\n0\n1\n \n \n \n  \n \n \n \n \nd5\n3\n0\n0\n5\n1\n \n \n \n  \n \n \n \n \nd6\n0\n0\n6\n1\n4\n \n \n \n  \n \n \n \n \nd"
+    },
+    {
+      "heading": "3 5 6\t1 2 4",
+      "level": 2,
+      "text": "1 2 3 4 5 6\n'\n \n \n   \n \n \nd d d\td d d\nQ d d d d d d\nNote that if the angle between and the search vector\nis , then\nj\nj\n\nd\nx\nInformation retrieval (search)\ncos j\nj\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\nIdea: Let's divide each\nand by their respective\nlengths.\njd\nx\n'  x\nx x"
+    },
+    {
+      "heading": " ",
+      "level": 2,
+      "text": " \n \n \n \n \nx\nx\n1\n1\n:\t' '\n:\n:\nT\n \n \n \n  \n \n \n \n \nd\nd\nQ x\nNote that if the angle between and the search vector\nis , then\nj\nj\n\nd\nx\nInformation retrieval (search)\ncos j\nj\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\nLet ' ' 'T\n\ty Q x\n1\n1\n:\n:\n:\n  \n \n  \n \n \n \n \nd x\nd x1cos\n:\n:\n:\n\t \n \n   \n \n \n1\ncosine of angle\nbetween and\td x"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1\n:\t' '\n:\n:\nT\n \n \n \n  \n \n \n \n \nd\nd\nQ x\nInformation retrieval (search)\ncos j\nj\n \n d x\nd x\nj\nj\n \nd x\nx\td\n \n \n \n \n \n \nx\nx\n1\n1\n:\n:\n:\n  \n \n  \n \n \n \n \nd x\nd x1cos\n:\n:\n:\n\t \n \n   \n \n \n1\ncosine of angle\nbetween and\td x\n1 0\tcos angle between the two vectors is\n  \n1\twe look for such that cos is as close to as possible.jj\n\t"
+    },
+    {
+      "heading": "Information retrieval (search)",
+      "level": 2,
+      "text": "0 9130\n0 1826\n0\n0 2582\n0 8784\n0 6868\n.\n.\n' ' ' .\n.\n.\nT\n \n \n \n \n   \n \n \n \n \ny Q x\nFor our example:1\n5\nSo the conclusion is is 'closer'\nto compared to .\nd\nx d\n1\n2\n1\n0\n2\n1\n \n \n \n  \n \n \n \n \nd5\n3\n0\n0\n5\n1\n \n \n \n  \n \n \n \n \nd\n1\n0\n0\n1\n1\n \n \n \n  \n \n \n \n \nx\nDo you know why?"
+    },
+    {
+      "heading": "Definition (orthogonal, orthonormal)",
+      "level": 2,
+      "text": "0\t1) Two vectors , are said to be orthogonal if .\t \tu v u v\n{ , , , }\tS  u v w x\t0 0 0\t, ,\t     \tu v u w u x\n0 0 0\t, ,\t     \tv w v x w x\n2) A set of vectors in is said to be orthogonal if\nevery pair of distinct vectors in are orthogonal.\nn\nS\nS\n3) A set of vectors in is said to be orthonormal if\nis orthogonal and every vector in is a unit vector.\nn\nS\nS S"
+    },
+    {
+      "heading": "The concept of orthogonality",
+      "level": 2,
+      "text": "0\t1) Two vectors , are said to be orthogonal if .\t \tu v u v\n1 1\n0 0 2\ncos cos ( ) .\n\t  \t\n     \n \nu v\nu v u v\n2 3\nThus the concept of orthogonality is a generalization\nof perpendicularity that we are familiar in and ."
+    },
+    {
+      "heading": "Example (orthogonal and orthonormal)",
+      "level": 2,
+      "text": "1 2 3Let { , , } where\tS  u u u\n1 2 0 0\t( , , );\t\tu2 0 1 1\t( , , );\t\tu3 0 1 1\t( , , ).\t \tu\nx\ny\nz\n1 2 0\t \tu u\n1u\n2u\n3u\n1 3 0\t \tu u\n2 3 0\t \tu u\nis an orthogonal set\tS"
+    },
+    {
+      "heading": "Example (orthogonal and orthonormal)",
+      "level": 2,
+      "text": "Converting an orthogonal set to an orthonormal set:\n1 2 0 0\t( , , );\t\tu2 0 1 1\t( , , );\t\tu3 0 1 1\t( , , ).\t \tu\nx\ny\nz\t1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n1u\n2u\n3u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u"
+    },
+    {
+      "heading": "Example (orthogonal and orthonormal)",
+      "level": 2,
+      "text": "Converting an orthogonal set to an orthonormal set:\nx\ny\nz\n1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n1u\n2u\n3u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u\nx\ny\nz\n1v\n2v\n3v"
+    },
+    {
+      "heading": "Example (orthogonal and orthonormal)",
+      "level": 2,
+      "text": "Converting an orthogonal set to an orthonormal set:\n1 2 3' { , , } is an orthonormal set.\tS  v v v\n1\n1\n1\n1 0 0\t( , , )\t \nu\nv u\n2\n2\n2\n1 0 1 1\n2 ( , , )\t \nu\nv u\n3\n3\n3\n1 0 1 1\n2 ( , , )\t  \nu\nv u\nx\ny\nz\n1v\n2v\n3v\nThis process of converting an\northogonal set to an orthonormal\nset by dividing each vector in the\nset by its length is called\nnormalizing."
+    },
+    {
+      "heading": "Example (an orthonormal set)",
+      "level": 2,
+      "text": "1 2The standard basis for , { , ,..., } is an orthonormal set.n\nne e e\n1 21 0 0 0 1 0 0 0 1\t( , ,..., ), ( , ,..., ),..., ( , ,..., )n  \te e e\n0\t1) orthogonal: if ;i j i j\t  \te e\n2 2 2\n0 1 0 1\t2) unit vectors: ... ... .i      \te"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "Let be an orthogonal set of non zero vectors in\na vector space. Then is a linearly independent set.\nS\nS"
+    },
+    {
+      "heading": "Definition (orthogonal and orthonormal",
+      "level": 2,
+      "text": "bases)\n1) A basis for a vector space is an orthogonal basis\nif is an orthogonal set.\nS\nS\n2) A basis for a vector space is an orthonormal basis\nif is an orthonormal set.\nS\nS"
+    },
+    {
+      "heading": "An easy way to check orthogonal basis",
+      "level": 2,
+      "text": "If we know that a vector space has dimension and\tV k\n1) is an orthogonal set of non zero vectors in\n(all vectors in belong to );\nS V\nS V\nLet be an orthogonal set of non zero vectors in\na vector space. Then is a linearly independent set.\nS\nS\n2) ;\tS k\t\nThen we can conclude that is an orthogonal basis for .\tS V"
+    },
+    {
+      "heading": "3 0 1 1\t( , , ).\t \tu2 0 1 1\t( , , );\t\tu1 2 0 0\t( , , );\t\tu",
+      "level": 2,
+      "text": "Example (orthogonal and orthonormal\nbases)\n1 2 3Let { , , } where\tS  u u u\n3 3\tdim( ) 3\nis an orthogonal basis for .\tS\n1 2 3Let ' { , , } where\tS  v v v\n1\n1\n1\n;\t u\nv u\n2\n2\n2\n;\t u\nv u\n3\n3\n3\n.\t u\nv u3\n' is an orthonormal\nbasis for .\nS\n3\n3\tis an orthogonal set of non zero vectors in .\tS"
+    },
+    {
+      "heading": "What’s the big deal?",
+      "level": 2,
+      "text": "We already know that\nany vector space has\nmany different bases...\northogonal and\northonormal bases\nare 'special'...\nwhat so special?Let me show\nyou!"
+    },
+    {
+      "heading": "How would you answer this question?",
+      "level": 2,
+      "text": "1 2 3Assume that you already know that { , , } where\tS  u u u\n1 2 31 2 2 1 1 1 1 1 1 1 1 1\t( , , , ), ( , , , ), ( , , , )\t       \tu u u\n4\nis a basis for a subspace of .\tV\n1 2 3 4\n1 2 3\nGive a vector ( , , , ) , how do we write as\na linear combination of , , ?\nw w w w V\t \tw w\nu u u\n1 2 3a b c\t  \tu u u w\n1 2 3 41 2 2 1 1 1 1 1 1 1 1 1\t( , , , ) ( , , , ) ( , , , ) ( , , , )\ta b c w w w w\t        "
+    },
+    {
+      "heading": "How would you answer this question?",
+      "level": 2,
+      "text": "1\n2\n3\n4\n2\n2\na b c w\na b c w\na b c w\na b c w\n  \t\n   \t\n    \n   \nWe now solve this linear system for , , .\ta b c\n1 2 3 41 2 2 1 1 1 1 1 1 1 1 1\t( , , , ) ( , , , ) ( , , , ) ( , , , )\ta b c w w w w\t        "
+    },
+    {
+      "heading": "How would you answer this question?",
+      "level": 2,
+      "text": "1 2 3Assume that you already know that { , , } where\tS  u u u\n1 2 31 2 2 1 1 1 1 1 1 1 1 1\t( , , , ), ( , , , ), ( , , , )\t       \tu u u\n4\nis a basis for a subspace of .\tV\n1 2 3 4\n1 2 3\nGive a vector ( , , , ) , how do we write as\na linear combination of , , ?\nw w w w V\t \tw w\nu u u\nWhat if we know further that is an orthogonal basis?\n(is it?)\nS"
+    },
+    {
+      "heading": "1 21) If { , ,..., } is an orthogonal basis for a vector",
+      "level": 2,
+      "text": "space , then for any vector ,\nkS\nV V\n\n\nu u u\nw\nTheorem\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\nNo need to solve a linear system\nfor these coefficients!\nWOW!"
+    },
+    {
+      "heading": "1 21) If { , ,..., } is an orthogonal basis for a vector",
+      "level": 2,
+      "text": "space , then for any vector ,\nkS\nV V\n\n\nu u u\nw\nTheorem\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\n1 2\n2 2 2\n1 2\nSo ( ) , ,..., (coordinate vector of\nwith respect to basis ).\nk\nS\nk\nS\n \t\t \n  \n \nw u\tw u w u\nw u u u\nw"
+    },
+    {
+      "heading": "1 22) If { , ,..., } is an orthonormal basis for a vector",
+      "level": 2,
+      "text": "space , then for any vector ,\nkT\nV V\n\n\nv v v\nw\nTheorem\n1 1 2 2( ) ( ) ... ( )k k      \tw w v v w v v w v v\n1 2So ( ) ( , ,... )T k   \tw w v w v w v"
+    },
+    {
+      "heading": "3 0 1 1\t( , , ).\t \tu2 0 1 1\t( , , );\t\tu1 2 0 0\t( , , );\t\tu",
+      "level": 2,
+      "text": "Example (using orthogonal basis)\n1 2 3Let { , , } where\tS  u u u\n3\nis an orthogonal basis for .\tS\n1 2 31 2 3\tExpress ( , , ) as a linear combination of , , .\t\tw u u u\n1 2 3\n1 5 1\n2 2 2\nThus .\t  \tw u u u\n1\n2\n1\n2 1\n4 2\n  \nw u\nu\n2\n2\n2\n5\n2\n \nw u\nu\n3\n2\n3\n1\n2\n \n\nw u\nu\n5\t1 \t1\n2 \t2 \t2( \t) \t( , , \t)S  \t\tw"
+    },
+    {
+      "heading": "END OF LECTURE 17",
+      "level": 2,
+      "text": "Lecture 18\nOrthogonal and Orthonormal Bases (cont’d)\nBest Approximations (till Example 5.3.9)"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "original_filename": "02_Software Process.pptx",
+  "extracted_text": "1\n502045 - Software Processes\nJuly 30, 2020\n502045\nSoftware Engineering\nChapter 02\nLesson 02: Software Processes\nTopics covered\nSoftware process models\nProcess activities\nCoping with change\n2\n502045 - Software Processes\nJuly 30, 2020\nThe software process\nA structured set of activities required to develop a\nsoftware system.\nMany different software processes but all involve:\nSpecification – defining what the system should do;\nDesign and implementation – defining the organization of the system and implementing the system;\nValidation – checking that it does what the customer wants;\nEvolution – changing the system in response to changing customer needs.\n3\n502045 - Software Processes\nJuly 30, 2020\nSoftware process descriptions\nWhen we describe and discuss processes, we usually talk about the activities in these processes such as specifying a\ndata model\n,\ndesigning a user interface\n, etc. and the\nordering of these activities.\nProcess descriptions may also include:\nProducts\n, which are the outcomes of a process activity;\nRoles\n, which reflect the responsibilities of the people involved in the process;\nPre- and post-conditions, which are\nstatements\nthat are true before and after a process activity has been enacted or a product produced.\n4\n502045 - Software Processes\nJuly 30, 2020\nPlan-driven and agile processes\nPlan-driven processes are processes where all of the process activities are\nplanned in advance and progress is measured against this plan.\nIn agile processes, planning is incremental and it is easier to change the process to reflect changing customer requirements.\nIn practice, most practical processes include elements of both plan-driven and agile approaches.\nThere are no right or wrong software processes.\n5\n502045 - Software Processes\nJuly 30, 2020\nSoftware process models\nThe waterfall model\nPlan-driven model. Separate and distinct phases of specification and development.\nIncremental development\nSpecification, development and validation are interleaved\n[\nxen-kẽ\n]\n. May be plan-driven or agile.\nReuse-oriented software engineering\nThe system is assembled\n[\nlắp-ráp\n]\nfrom existing components. May be plan-driven or agile.\nIn practice, most large systems are developed using a process that\nincorporates elements from all of these models.\n6\n502045 - Software Processes\nJuly 30, 2020\nThe waterfall model\n7\n502045 - Software Processes\nJuly 30, 2020\nWaterfall model phases\nThere are separate identified phases in the waterfall model:\nRequirements analysis and definition\nSystem and software design\nImplementation and unit testing\nIntegration and system testing\nOperation and maintenance\nThe main drawback of the waterfall model is the\ndifficulty of accommodating\nchange after the process is underway. In principle, a phase has to be complete before moving onto the next phase.\n8\n502045 - Software Processes\nJuly 30, 2020\nWaterfall model problems\nInflexible partitioning of the project into distinct stages makes it difficult to respond to changing customer requirements.\nTherefore, this model is only appropriate when the requirements are\nwell-understood\nand changes will be fairly limited during the design process.\nFew business systems have stable requirements.\nThe waterfall model is mostly used for large\nsystems engineering projects\nwhere a system is developed at several sites.\nIn those circumstances, the plan-driven nature of the waterfall model helps coordinate the work.\n9\n502045 - Software Processes\nJuly 30, 2020\nDiscussion (10’)\nDescribe water model’s phases for a specific software product.\n10\n502045 - Software Processes\nJuly 30, 2020\nIncremental development\n11\n502045 - Software Processes\nJuly 30, 2020\nIncremental development benefits\nThe cost of accommodating changing customer requirements is reduced.\nThe amount of analysis and documentation that has to be redone is much less than is required with the waterfall model.\nIt is easier to get customer feedback on the development work that has been done.\nCustomers can comment on demonstrations of the software and see how much has been implemented.\nMore rapid delivery\nand deployment of useful software to the customer is possible.\nCustomers are able to use and gain value from the software earlier than is possible with a waterfall process.\n12\n502045 - Software Processes\nJuly 30, 2020\nIncremental development problems\nSystem structure tends to degrade as new increments are added\n.\nUnless time and money is spent on refactoring to improve the software, regular change tends to\ncorrupt its structure.\nIncorporating further software changes becomes increasingly difficult and costly.\n13\n502045 - Software Processes\nJuly 30, 2020\nReuse-oriented software engineering\nBased on systematic reuse where systems are integrated from existing components or COTS (Commercial-off-the-shelf) systems.\nProcess stages\nComponent analysis;\nRequirements modification;\nSystem design with reuse;\nDevelopment and integration.\nReuse is now the standard approach for building many types of business system\n14\n502045 - Software Processes\nJuly 30, 2020\nReuse-oriented software engineering\n15\n502045 - Software Processes\nJuly 30, 2020\nTypes of software component\nWeb services that are developed according to service standards and which are available for remote invocation\n[call]\n.\nCollections of objects that are developed as a package to be\nintegrated with a component framework\nsuch as .NET or J2EE.\nStand-alone software systems (COTS) that are configured for use in a particular environment.\n16\n502045 - Software Processes\nJuly 30, 2020\nOthers\n(self study)\nV Software model\nRapid application development: RAD\n17\n502045 - Software Processes\nJuly 30, 2020\nV Software model\n18\n502045 - Software Processes\nJuly 30, 2020\nRAD model\n19\n502045 - Software Processes\nJuly 30, 2020\nProcess activities\n(self study)\nReal software processes are\ninter-leaved\n(\nđan\nxen) sequences of technical, collaborative and managerial activities with the overall goal of specifying, designing, implementing and testing a software system.\nThe four basic process activities of\nspecification\n,\ndevelopment, validation and evolution\nare organized differently in different development processes. In the waterfall model, they are organized\nin sequence\n, whereas in incremental development they are\ninter-leaved.\n20\n502045 - Software Processes\nJuly 30, 2020\nSoftware specification\nThe process of establishing what\nservices are required and the constraints\non the system’s operation and development.\nRequirements engineering process\nFeasibility study\nIs it technically and financially feasible to build the system?\nRequirements elicitation and analysis\nWhat do the system stakeholders require or expect from the system?\nRequirements specification\nDefining the requirements in detail\nRequirements validation\nChecking the validity of the requirements\n21\n502045 - Software Processes\nJuly 30, 2020\nThe requirements engineering process\n22\n502045 - Software Processes\nJuly 30, 2020\nSoftware design and implementation\nThe process of converting the\nsystem specification into an executable system.\nSoftware design\nDesign a\nsoftware structure\nthat realises the specification;\nImplementation\nTranslate this structure into an executable program;\nThe activities of design and implementation are closely related and may be\ninter-leaved.\n23\n502045 - Software Processes\nJuly 30, 2020\nA general model of the design process\n24\n502045 - Software Processes\nJuly 30, 2020\nDesign activities\nArchitectural design\n,\nwhere you identify the\noverall structure of the system\n, the principal components (sometimes called sub-systems or modules), their relationships and how they are distributed.\nInterface design\n,\nwhere you define the\ninterfaces between system components.\nComponent design\n,\nwhere you take each system\ncomponent and design how it will operate\nDatabase design\n,\nwhere you design the system data structures and how these are to be represented in a database.\n25\n502045 - Software Processes\nJuly 30, 2020\nSoftware validation\nVerification and validation (V & V) is intended to show that a system conforms to its specification and meets the requirements of the system customer.\nInvolves\nchecking and review processes and system testing.\nSystem testing involves executing the system with test cases that are derived from the specification of the real data to be processed by the system.\nTesting is the most commonly used V & V activity.\n26\n502045 - Software Processes\nJuly 30, 2020\nStages of testing\n27\n502045 - Software Processes\nJuly 30, 2020\nTesting stages\nDevelopment or component testing\nIndividual components are tested independently;\nComponents may be\nfunctions\nor\nobjects\nor\ncoherent\ngroupings of these entities.\nSystem testing\nTesting of the system as a whole. Testing of emergent properties is particularly important.\nAcceptance testing\nTesting with customer data to check that the\nsystem meets the customer’s needs.\n28\n502045 - Software Processes\nJuly 30, 2020\nTesting phases in a plan-driven software process\n29\n502045 - Software Processes\nJuly 30, 2020\nSoftware evolution\nSoftware\nis inherently\n[nature]\nflexible and can change.\nAs requirements change through changing business circumstances\n[\ntrường-hợp\n]\n, the software that supports the business must also evolve\n[\nphát-triển\n]\nand change.\n30\n502045 - Software Processes\nJuly 30, 2020\nSystem evolution\n31\n502045 - Software Processes\nJuly 30, 2020\nKey points\nSoftware processes are the activities involved in producing a software system.\nSoftware process models are abstract representations of these processes.\nGeneral process models\ndescribe the organization of software processes.\nExamples of these general models include the ‘waterfall’ model,  incremental development, and reuse-oriented development.\n32\n502045 - Software Processes\nJuly 30, 2020\nKey points\nRequirements\nengineering is the process of developing a software\nspecification\n.\nDesign\nand\nimplementation\nprocesses are concerned with\ntransforming\na requirements\nspecification\ninto an\nexecutable\nsoftware\nsystem.\nSoftware\nvalidation\nis the process of\nchecking\nthat the system conforms to its specification and that it meets the real\nneeds\nof the\nusers\nof the system.\nSoftware\nevolution\ntakes place when you\nchange\nexisting software systems to meet new requirements. The software must evolve to remain useful.\n33\n502045 - Software Processes\nJuly 30, 2020\nTopics covered\nSoftware process models\nProcess activities\nCoping with change\n34\n502045 - Software Processes\nJuly 30, 2020\nCoping with change\n[self study]\nChange is inevitable in all large software projects.\nBusiness changes\nlead to new and changed system requirements\nNew technologies\nopen up new possibilities for improving implementations\nChanging platforms\nrequire application changes\nChange leads to rework so the\ncosts\nof change include both\nrework\n(e.g. re-\nanalysing\nrequirements) as well as the costs of\nimplementing new functionality\n35\n502045 - Software Processes\nJuly 30, 2020\nReducing the costs of rework\nChange avoidance, where the software process includes activities that can\nanticipate possible changes\nbefore significant rework is required.\nFor example, a prototype system may be developed to show some key features of the system to customers.\nChange tolerance, where the process is designed so that changes can be accommodated at relatively low cost.\nThis normally involves some form of incremental development. Proposed changes may be implemented in increments that have not yet been developed. If this is impossible, then only a\nsingle increment\n(a small part of the system) may have be altered to incorporate the change.\n36\n502045 - Software Processes\nJuly 30, 2020\nSoftware prototyping\nA prototype is an\ninitial version\nof a system used to demonstrate concepts and try out design options.\nA prototype can be used in:\nThe requirements engineering process to help with requirements elicitation and validation;\nIn design processes to explore options and develop a UI design;\nIn the testing process to run back-to-back tests.\n37\n502045 - Software Processes\nJuly 30, 2020\nBenefits of prototyping\nImproved system usability.\nA closer match to users’ real needs.\nImproved design quality.\nImproved maintainability.\nReduced development effort.\n38\n502045 - Software Processes\nJuly 30, 2020\nThe process of prototype development\n39\n502045 - Software Processes\nJuly 30, 2020\nPrototype development\nMay be\nbased\non\nrapid prototyping languages or tools\nMay involve leaving out[exclude] functionality\nPrototype should focus on areas of the product that are not well-understood;\nError checking and recovery may not be included in the prototype;\nFocus on\nfunctional\nrather than\nnon-functional\nrequirements such as reliability and security\n502045 - Software Processes\n40\nJuly 30, 2020\nThrow-away prototypes\nPrototypes should be discarded\nafter development as they are not a good basis for a production system:\nIt may be impossible to tune the system to meet non-functional requirements;\nPrototypes are normally undocumented;\nThe prototype structure is usually degraded through rapid change;\nThe prototype probably will not meet normal\norganisational\nquality standards.\n41\n502045 - Software Processes\nJuly 30, 2020\nIncremental delivery\nRather than deliver the system as a single delivery, the development and delivery is\nbroken down into increments\nwith each increment delivering\npart of the required functionality.\nUser requirements are prioritised[\nuutien\n] and the highest priority requirements are included in early increments.\nOnce the development of an increment is started, the\nrequirements\nare\nfrozen\nthough\nrequirements for later\nincrements can\ncontinue\nto\nevolve\n.\n42\n502045 - Software Processes\nJuly 30, 2020\nIncremental development and delivery\nIncremental development\nDevelop\nthe system in increments and\nevaluate\neach\nincrement\nbefore\nproceeding to the\ndevelopment\nof the\nnext increment\n;\nNormal approach\nused\nin\nagile methods\n;\nEvaluation\ndone by\nuser/customer\nproxy.\nIncremental delivery\nDeploy\nan\nincrement\nfor use by\nend-users\n;\nMore realistic evaluation\nabout practical use of software;\nDifficult to implement for replacement systems as increments have less functionality than the system being replaced.\n502045 - Software Processes\n43\nJuly 30, 2020\nIncremental delivery\n44\n502045 - Software Processes\nJuly 30, 2020\nIncremental delivery advantages\nCustomer\nvalue can be delivered with each increment so system functionality is\navailable earlier\n.\nEarly increments\nact as a prototype to help\nelicit\nrequirements for\nlater\nincrements.\nLower risk\nof\noverall\nproject\nfailure\n.\nThe\nhighest priority system\nservices tend to receive the\nmost testing\n.\n45\n502045 - Software Processes\nJuly 30, 2020\nIncremental delivery problems\nMost\nsystems\nrequire a set of\nbasic facilities\nthat are used by\ndifferent parts\nof the system.\nAs requirements are not defined in detail until an increment is to be implemented, it can be\nhard\nto\nidentify common facilities\nthat are needed by all increments.\nThe essence of iterative processes is that the specification is developed in conjunction with the software.\nHowever, this conflicts with the procurement model of many organizations, where the\ncomplete system specification is part of the system development contract.\n46\n502045 - Software Processes\nJuly 30, 2020\nBoehm’s spiral model\nProcess is represented as a\nspiral\nrather\nthan\nas a\nsequence\nof activities with backtracking.\nEach\nloop\nin the spiral represents a\nphase\nin the process.\nNo fixed phases\nsuch as specification or design - loops in the spiral are chosen depending on what is required.\nRisks\nare explicitly\nassessed\nand\nresolved throughout\nthe\nprocess\n.\n47\n502045 - Software Processes\nJuly 30, 2020\nBoehm’s spiral model of the software process\n48\n502045 - Software Processes\nJuly 30, 2020\nSpiral model sectors\nObjective setting\nSpecific objectives for the phase are identified.\nRisk assessment and reduction\nRisks are assessed and activities put in place to reduce the key risks.\nDevelopment and validation\nA development model for the system is chosen  which can be any of the generic models.\nPlanning\nThe project is reviewed and the next phase of the spiral is planned.\n49\n502045 - Software Processes\nJuly 30, 2020\nSpiral model usage\nSpiral model has been very influential in helping people think about iteration in software processes and introducing the\nrisk-driven approach to development\n.\nIn practice, however, the model is\nrarely used\nas published for practical software development.\n502045 - Software Processes\n50\nJuly 30, 2020\nKey points\nProcesses\nshould include activities to\ncope\nwith\nchange\n. This may involve a\nprototyping phase\nthat helps\navoid poor decisions\non requirements and design.\nProcesses\nmay be\nstructured\nfor\niterative development\nand\ndelivery\nso that\nchanges\nmay be\nmade without disrupting\nthe system as a whole.\n51\n502045 - Software Processes\nJuly 30, 2020",
+  "sections": [
+    {
+      "heading": "1",
+      "level": 1,
+      "text": "502045 - Software Processes\nJuly 30, 2020\n502045\nSoftware Engineering\nChapter 02\nLesson 02: Software Processes"
+    },
+    {
+      "heading": "Topics covered",
+      "level": 2,
+      "text": "Software process models\nProcess activities\nCoping with change\n2\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "The software process",
+      "level": 2,
+      "text": "A structured set of activities required to develop a\nsoftware system.\nMany different software processes but all involve:\nSpecification – defining what the system should do;\nDesign and implementation – defining the organization of the system and implementing the system;\nValidation – checking that it does what the customer wants;\nEvolution – changing the system in response to changing customer needs.\n3\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software process descriptions",
+      "level": 2,
+      "text": "When we describe and discuss processes, we usually talk about the activities in these processes such as specifying a\ndata model\n,\ndesigning a user interface\n, etc. and the\nordering of these activities.\nProcess descriptions may also include:\nProducts\n, which are the outcomes of a process activity;\nRoles\n, which reflect the responsibilities of the people involved in the process;\nPre- and post-conditions, which are\nstatements\nthat are true before and after a process activity has been enacted or a product produced.\n4\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Plan-driven and agile processes",
+      "level": 2,
+      "text": "Plan-driven processes are processes where all of the process activities are\nplanned in advance and progress is measured against this plan.\nIn agile processes, planning is incremental and it is easier to change the process to reflect changing customer requirements.\nIn practice, most practical processes include elements of both plan-driven and agile approaches.\nThere are no right or wrong software processes.\n5\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software process models",
+      "level": 2,
+      "text": "The waterfall model\nPlan-driven model. Separate and distinct phases of specification and development.\nIncremental development\nSpecification, development and validation are interleaved\n[\nxen-kẽ\n]\n. May be plan-driven or agile.\nReuse-oriented software engineering\nThe system is assembled\n[\nlắp-ráp\n]\nfrom existing components. May be plan-driven or agile.\nIn practice, most large systems are developed using a process that\nincorporates elements from all of these models.\n6\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "The waterfall model",
+      "level": 2,
+      "text": "7\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Waterfall model phases",
+      "level": 2,
+      "text": "There are separate identified phases in the waterfall model:\nRequirements analysis and definition\nSystem and software design\nImplementation and unit testing\nIntegration and system testing\nOperation and maintenance\nThe main drawback of the waterfall model is the\ndifficulty of accommodating\nchange after the process is underway. In principle, a phase has to be complete before moving onto the next phase.\n8\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Waterfall model problems",
+      "level": 2,
+      "text": "Inflexible partitioning of the project into distinct stages makes it difficult to respond to changing customer requirements.\nTherefore, this model is only appropriate when the requirements are\nwell-understood\nand changes will be fairly limited during the design process.\nFew business systems have stable requirements.\nThe waterfall model is mostly used for large\nsystems engineering projects\nwhere a system is developed at several sites.\nIn those circumstances, the plan-driven nature of the waterfall model helps coordinate the work.\n9\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Discussion (10’)",
+      "level": 2,
+      "text": "Describe water model’s phases for a specific software product.\n10\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental development",
+      "level": 2,
+      "text": "11\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental development benefits",
+      "level": 2,
+      "text": "The cost of accommodating changing customer requirements is reduced.\nThe amount of analysis and documentation that has to be redone is much less than is required with the waterfall model.\nIt is easier to get customer feedback on the development work that has been done.\nCustomers can comment on demonstrations of the software and see how much has been implemented.\nMore rapid delivery\nand deployment of useful software to the customer is possible.\nCustomers are able to use and gain value from the software earlier than is possible with a waterfall process.\n12\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental development problems",
+      "level": 2,
+      "text": "System structure tends to degrade as new increments are added\n.\nUnless time and money is spent on refactoring to improve the software, regular change tends to\ncorrupt its structure.\nIncorporating further software changes becomes increasingly difficult and costly.\n13\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Reuse-oriented software engineering",
+      "level": 2,
+      "text": "Based on systematic reuse where systems are integrated from existing components or COTS (Commercial-off-the-shelf) systems.\nProcess stages\nComponent analysis;\nRequirements modification;\nSystem design with reuse;\nDevelopment and integration.\nReuse is now the standard approach for building many types of business system\n14\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Reuse-oriented software engineering",
+      "level": 2,
+      "text": "15\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Types of software component",
+      "level": 2,
+      "text": "Web services that are developed according to service standards and which are available for remote invocation\n[call]\n.\nCollections of objects that are developed as a package to be\nintegrated with a component framework\nsuch as .NET or J2EE.\nStand-alone software systems (COTS) that are configured for use in a particular environment.\n16\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Others",
+      "level": 2,
+      "text": "(self study)\nV Software model\nRapid application development: RAD\n17\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "V Software model",
+      "level": 2,
+      "text": "18\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "RAD model",
+      "level": 2,
+      "text": "19\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Process activities",
+      "level": 2,
+      "text": "(self study)\nReal software processes are\ninter-leaved\n(\nđan\nxen) sequences of technical, collaborative and managerial activities with the overall goal of specifying, designing, implementing and testing a software system.\nThe four basic process activities of\nspecification\n,\ndevelopment, validation and evolution\nare organized differently in different development processes. In the waterfall model, they are organized\nin sequence\n, whereas in incremental development they are\ninter-leaved.\n20\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software specification",
+      "level": 2,
+      "text": "The process of establishing what\nservices are required and the constraints\non the system’s operation and development.\nRequirements engineering process\nFeasibility study\nIs it technically and financially feasible to build the system?\nRequirements elicitation and analysis\nWhat do the system stakeholders require or expect from the system?\nRequirements specification\nDefining the requirements in detail\nRequirements validation\nChecking the validity of the requirements\n21\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "The requirements engineering process",
+      "level": 2,
+      "text": "22\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software design and implementation",
+      "level": 2,
+      "text": "The process of converting the\nsystem specification into an executable system.\nSoftware design\nDesign a\nsoftware structure\nthat realises the specification;\nImplementation\nTranslate this structure into an executable program;\nThe activities of design and implementation are closely related and may be\ninter-leaved.\n23\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "A general model of the design process",
+      "level": 2,
+      "text": "24\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Design activities",
+      "level": 2,
+      "text": "Architectural design\n,\nwhere you identify the\noverall structure of the system\n, the principal components (sometimes called sub-systems or modules), their relationships and how they are distributed.\nInterface design\n,\nwhere you define the\ninterfaces between system components.\nComponent design\n,\nwhere you take each system\ncomponent and design how it will operate\nDatabase design\n,\nwhere you design the system data structures and how these are to be represented in a database.\n25\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software validation",
+      "level": 2,
+      "text": "Verification and validation (V & V) is intended to show that a system conforms to its specification and meets the requirements of the system customer.\nInvolves\nchecking and review processes and system testing.\nSystem testing involves executing the system with test cases that are derived from the specification of the real data to be processed by the system.\nTesting is the most commonly used V & V activity.\n26\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Stages of testing",
+      "level": 2,
+      "text": "27\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Testing stages",
+      "level": 2,
+      "text": "Development or component testing\nIndividual components are tested independently;\nComponents may be\nfunctions\nor\nobjects\nor\ncoherent\ngroupings of these entities.\nSystem testing\nTesting of the system as a whole. Testing of emergent properties is particularly important.\nAcceptance testing\nTesting with customer data to check that the\nsystem meets the customer’s needs.\n28\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Testing phases in a plan-driven software process",
+      "level": 2,
+      "text": "29\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software evolution",
+      "level": 2,
+      "text": "Software\nis inherently\n[nature]\nflexible and can change.\nAs requirements change through changing business circumstances\n[\ntrường-hợp\n]\n, the software that supports the business must also evolve\n[\nphát-triển\n]\nand change.\n30\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "System evolution",
+      "level": 2,
+      "text": "31\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Key points",
+      "level": 2,
+      "text": "Software processes are the activities involved in producing a software system.\nSoftware process models are abstract representations of these processes.\nGeneral process models\ndescribe the organization of software processes.\nExamples of these general models include the ‘waterfall’ model,  incremental development, and reuse-oriented development.\n32\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Key points",
+      "level": 2,
+      "text": "Requirements\nengineering is the process of developing a software\nspecification\n.\nDesign\nand\nimplementation\nprocesses are concerned with\ntransforming\na requirements\nspecification\ninto an\nexecutable\nsoftware\nsystem.\nSoftware\nvalidation\nis the process of\nchecking\nthat the system conforms to its specification and that it meets the real\nneeds\nof the\nusers\nof the system.\nSoftware\nevolution\ntakes place when you\nchange\nexisting software systems to meet new requirements. The software must evolve to remain useful.\n33\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Topics covered",
+      "level": 2,
+      "text": "Software process models\nProcess activities\nCoping with change\n34\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Coping with change",
+      "level": 2,
+      "text": "[self study]\nChange is inevitable in all large software projects.\nBusiness changes\nlead to new and changed system requirements\nNew technologies\nopen up new possibilities for improving implementations\nChanging platforms\nrequire application changes\nChange leads to rework so the\ncosts\nof change include both\nrework\n(e.g. re-\nanalysing\nrequirements) as well as the costs of\nimplementing new functionality\n35\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Reducing the costs of rework",
+      "level": 2,
+      "text": "Change avoidance, where the software process includes activities that can\nanticipate possible changes\nbefore significant rework is required.\nFor example, a prototype system may be developed to show some key features of the system to customers.\nChange tolerance, where the process is designed so that changes can be accommodated at relatively low cost.\nThis normally involves some form of incremental development. Proposed changes may be implemented in increments that have not yet been developed. If this is impossible, then only a\nsingle increment\n(a small part of the system) may have be altered to incorporate the change.\n36\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Software prototyping",
+      "level": 2,
+      "text": "A prototype is an\ninitial version\nof a system used to demonstrate concepts and try out design options.\nA prototype can be used in:\nThe requirements engineering process to help with requirements elicitation and validation;\nIn design processes to explore options and develop a UI design;\nIn the testing process to run back-to-back tests.\n37\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Benefits of prototyping",
+      "level": 2,
+      "text": "Improved system usability.\nA closer match to users’ real needs.\nImproved design quality.\nImproved maintainability.\nReduced development effort.\n38\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "The process of prototype development",
+      "level": 2,
+      "text": "39\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Prototype development",
+      "level": 2,
+      "text": "May be\nbased\non\nrapid prototyping languages or tools\nMay involve leaving out[exclude] functionality\nPrototype should focus on areas of the product that are not well-understood;\nError checking and recovery may not be included in the prototype;\nFocus on\nfunctional\nrather than\nnon-functional\nrequirements such as reliability and security\n502045 - Software Processes\n40\nJuly 30, 2020"
+    },
+    {
+      "heading": "Throw-away prototypes",
+      "level": 2,
+      "text": "Prototypes should be discarded\nafter development as they are not a good basis for a production system:\nIt may be impossible to tune the system to meet non-functional requirements;\nPrototypes are normally undocumented;\nThe prototype structure is usually degraded through rapid change;\nThe prototype probably will not meet normal\norganisational\nquality standards.\n41\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental delivery",
+      "level": 2,
+      "text": "Rather than deliver the system as a single delivery, the development and delivery is\nbroken down into increments\nwith each increment delivering\npart of the required functionality.\nUser requirements are prioritised[\nuutien\n] and the highest priority requirements are included in early increments.\nOnce the development of an increment is started, the\nrequirements\nare\nfrozen\nthough\nrequirements for later\nincrements can\ncontinue\nto\nevolve\n.\n42\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental development and delivery",
+      "level": 2,
+      "text": "Incremental development\nDevelop\nthe system in increments and\nevaluate\neach\nincrement\nbefore\nproceeding to the\ndevelopment\nof the\nnext increment\n;\nNormal approach\nused\nin\nagile methods\n;\nEvaluation\ndone by\nuser/customer\nproxy.\nIncremental delivery\nDeploy\nan\nincrement\nfor use by\nend-users\n;\nMore realistic evaluation\nabout practical use of software;\nDifficult to implement for replacement systems as increments have less functionality than the system being replaced.\n502045 - Software Processes\n43\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental delivery",
+      "level": 2,
+      "text": "44\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental delivery advantages",
+      "level": 2,
+      "text": "Customer\nvalue can be delivered with each increment so system functionality is\navailable earlier\n.\nEarly increments\nact as a prototype to help\nelicit\nrequirements for\nlater\nincrements.\nLower risk\nof\noverall\nproject\nfailure\n.\nThe\nhighest priority system\nservices tend to receive the\nmost testing\n.\n45\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Incremental delivery problems",
+      "level": 2,
+      "text": "Most\nsystems\nrequire a set of\nbasic facilities\nthat are used by\ndifferent parts\nof the system.\nAs requirements are not defined in detail until an increment is to be implemented, it can be\nhard\nto\nidentify common facilities\nthat are needed by all increments.\nThe essence of iterative processes is that the specification is developed in conjunction with the software.\nHowever, this conflicts with the procurement model of many organizations, where the\ncomplete system specification is part of the system development contract.\n46\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Boehm’s spiral model",
+      "level": 2,
+      "text": "Process is represented as a\nspiral\nrather\nthan\nas a\nsequence\nof activities with backtracking.\nEach\nloop\nin the spiral represents a\nphase\nin the process.\nNo fixed phases\nsuch as specification or design - loops in the spiral are chosen depending on what is required.\nRisks\nare explicitly\nassessed\nand\nresolved throughout\nthe\nprocess\n.\n47\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Boehm’s spiral model of the software process",
+      "level": 2,
+      "text": "48\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Spiral model sectors",
+      "level": 2,
+      "text": "Objective setting\nSpecific objectives for the phase are identified.\nRisk assessment and reduction\nRisks are assessed and activities put in place to reduce the key risks.\nDevelopment and validation\nA development model for the system is chosen  which can be any of the generic models.\nPlanning\nThe project is reviewed and the next phase of the spiral is planned.\n49\n502045 - Software Processes\nJuly 30, 2020"
+    },
+    {
+      "heading": "Spiral model usage",
+      "level": 2,
+      "text": "Spiral model has been very influential in helping people think about iteration in software processes and introducing the\nrisk-driven approach to development\n.\nIn practice, however, the model is\nrarely used\nas published for practical software development.\n502045 - Software Processes\n50\nJuly 30, 2020"
+    },
+    {
+      "heading": "Key points",
+      "level": 2,
+      "text": "Processes\nshould include activities to\ncope\nwith\nchange\n. This may involve a\nprototyping phase\nthat helps\navoid poor decisions\non requirements and design.\nProcesses\nmay be\nstructured\nfor\niterative development\nand\ndelivery\nso that\nchanges\nmay be\nmade without disrupting\nthe system as a whole.\n51\n502045 - Software Processes\nJuly 30, 2020"
+    }
+  ]
+}

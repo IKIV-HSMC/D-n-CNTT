@@ -1,0 +1,256 @@
+{
+  "original_filename": "Lecture 18.pdf",
+  "extracted_text": "Lecture 17 recap\n1) Definition of length of a vector, distance, angle, dot product\nbetween two vectors.\n2) Dot product and matrix product.\n3) Some results on dot products.\n4) An example on information retrieval.\n5) Orthogonality (orthonormality). Orthogonal and\northonormal sets (bases).\n6) Usefulness of orthogonal and orthonormal bases.\nLECTURE 18\nOrthogonal and Orthonormal Bases (cont’d)\nBest Approximation\nDefinition (vector orthogonal to a space)\nLet be a subspace of . A vector is orthogonal\n(or perpendicular) to if is orthogonal to all vectors\nin .\nn\nV\nV\nV\nu\nu\nV\nu\nExample (vector orthogonal to a space)\n3\n3\n2 3 0\t{( , , )| } is a subspace of\n(it is a plane in containing the origin).\nV x y z x y z\t   \nV\n2 3 0\t( , , )\tx y z V x y z\t    \n2 3 1 0\t( , , ) ( , , )\tx y z\t   \tu\n2 3 1\t( , , ) is\northogonal to\nall vectors in .\tV\n\n2 3 1\t( , , )\t\n2 3 1\tSo ( , , ) is orthogonal to .\tV\t\nExample (vector orthogonal to a space)\n3\n3\n0\t{( , , )| } is a subspace of\n(it is a plane in containing the origin).\nV x y z ax by cz\t   \nV\nu\n0\t( , , )\tx y z V ax by cz\t    \n0\t( , , ) ( , , )\ta b c x y z\t  \n( , , ) is\northogonal to\nall vectors in .\na b c\nV\n( , , )\ta b c\nSo ( , , ) is orthogonal to .\ta b c V\nExample (vector orthogonal to a space)\n3\n0\t{( , , )| } is a subspace of\tV x y z ax by cz\t   \nLet ( , , ).\ta b c\t\tn\n3 0\t{ | }\t   \tu n u\n0\t{( , , )| }\tV x y z ax by cz\t   \nis orthogonal to . We say that is a normal vector of .\tV V\tn n\n0\nQuestion: If is orthogonal to , is orthogonal\nto for every ?\nV c\nV c \nn n\nYES!\nExample (vector orthogonal to a space)\n4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV\nRemember:\n( , , , ) is orthogonal to\tw x y z V\t\tv\n( , , , ) is orthogonal to every vector in .\tw x y z V\n\n\tv\nWow! Isn't this very\ndifficult to check??\nExample (vector orthogonal to a space)\n4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV\n1 2\n1 2 0 1\nIn general, if span{ , ,..., }, then\nis orthogonal to if and only if is orthogonal to\n, ,..., , that is, for all ,..., .\nk\nk i\nV\nV\ni k\n\n  \nu u u\nv v\nu u u v u\nThis is much easier!\nExample (vector orthogonal to a space)\n4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV\nis called the\n(orthogonal) projection\nof onto .\tV\np\nu\nDefinition (orthogonal projection)\nLet be a subspace of .n\nV\nEvery vector n\n\tu\nV\nu\ncan be uniquely written as\nn\nwhere is orthogonal to V\tn\np\nand belongs to .\tV\tp\n \tu n p\nWait a minute…\nLet be a subspace of .n\nV\nEvery vector n\n\tu\nV\ncan be uniquely written as\n \tu n p\nwhere is orthogonal to V\tn\nand belongs to .\tV\tp\nuWhat happens if\nbelongs to ?\tV\tu\n p\n \tu u\t0\n\tn 0\nProjection in R2 and R3\n2\nLet be a subspace of .\tV\n0\t{( , )| } ( is the -axis)\tV y y V y\t \nV\n( , )\tx y\t\tu\t0\t( , )\tx\t\nn\nn0\t( , )\ty\t\np\np\n0\nThe projection of ( , )\nonto is ( , ).\nx y\nV y\nx\ny\nProjection in R2 and R3\n3\nLet be a subspace of .\tV\n0\t{( , , )| , } ( is the -plane)\tV x y x y V xy\t \nx\ny\nz\nV\n( , , )\tx y z\t\tu\np\n0\t( , , )\tx y\t\np\nn\n0 0\t( , , )\tz\t\nn\n0\nThe projection of ( , , )\nonto is ( , , ).\nx y z\nV x y\nWait a(nother) minute…\n2\nLet be a subspace of .\tV\n0\t{( , )| } ( is the -axis)\tV y y V y\t \n3\nLet be a subspace of .\tV\n0\t{( , , )| , } ( is the -plane)\tV x y x y V xy\t \n:\nWhat if the subspaces are not so 'trivial'?\nHow can we compute orthgonal projections in general?\nWhat is required?\nQuestions\nTheorem (orthogonal projection)\nLet be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\n1 2If { , ,..., } is an orthonormal basis for , then the\nprojection of onto is\nk V\nV\nv v v\nw\n1 1 2 2( ) ( ) ... ( )k k     \tw v v w v v w v v\nLooks\nfamiliar?\nAn expression we have seen before\n1 2If { , ,..., } is an orthogonal basis for a vector\nspace , then for any vector ,\nkS\nV V\n\n\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\nFrom\nLect. 17\nLet be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\nWhy does\nthis make\nsense?\nAn expression we have seen before\n1 2{ , ,..., } is an orthogonal basis for (subspace of )n\nk V\tu u u\nV\n...and a vector in .n\nw\nw\nV\n...then for any vector ,\tV\t\tw\nw\n1\n1\t2 2\n1\n... k\nk\nk\n \t  \t    \t \n   \nw u\tw u u u\nu u\nis the projection of onto .\tV\tw\np\nn\n \tw p n\n1\n1\t2 2\n1\n... k\nk\nk\n \t  \t    \t \n   \nw u\tw u u u\nu u\n w\n \tw w 0\nTheorem (orthogonal projection)\nLet be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\n1 2If { , ,..., } is an orthonormal basis for , then the\nprojection of onto is\nk V\nV\nv v v\nw\n1 1 2 2( ) ( ) ... ( )k k     \tw v v w v v w v v\nExample (orthogonal projection)\n3\n1 0 1 1 0 1\tLet span{( , , ),( , , )} be a subspace of ( is a plane).\tV V\t \n1 0 1 1 0 1 1 0 1 0\t( , , ) ( , , )\t     \n1 0 1 1 0 1\t{( , , ),( , , )} is an orthogonal basis for .\tV\t \nV\n1 1 0\tWhat is the projection of ( , , ) onto ?\tV\t\tw\n2\n2\n1 1 0 1 0 1 1 0 1\n1 0 1\n1 1 0 1 0 1 1 0 1\n1 0 1\n( , , ) ( , , )( , , )\n( , , )\n( , , ) ( , , )( , , )\n( , , )\n\n \n \n\n1 0 0\t( , , )\t1 0 0\t( , , )\nExample (orthogonal projection)\n3\n1 1 1 1 3 1\tLet span{( , , ),( , , )} be a subspace of ( is a plane).\tV V\t \n1 1 1 1 3 1 3 0\t( , , ) ( , , )\t   \n1 1 1 1 3 1\t{( , , ),( , , )} is a basis, but not an orthogonal\nbasis for .\tV\n \nV\n3 1 3\tWhat is the projection of ( , , ) onto ?\tV\t \tw\nFinding orthogonal bases\nWe can only use the orthogonal\nprojection theorem if we have\nan orthogonal basis for a vector space...\nyes, so what if we\ndon't have one?\nWe find one!\nFinding orthogonal bases\nLet be a subspace of .n\nV\n1 11) is one-dimensional, that is, span{ }, .\tV V  \tu u 0\n1u\nV\n1Trivially, { } is an\northogonal basis for .\tV\nu\nFinding orthogonal bases\nLet be a subspace of .n\nV\n1 2 1 22) is two-dimensional, that is, span{ , }, and are\nlinearly independent vectors.\nV V  u u u u\n1u\n2uV\nFinding orthogonal bases\n1 \t1\n1\nV\tspan{ \t} is a subspace of \tand { \t} is an orthogonal basis\nfor span{ \t}.\nu \tu\nu\n1u\nV\n2u\n1span{ }\tu\n2 1\n1\t2\n1\n2 1\nBy orthogonal projection theorem, is the projection\nof onto span{ }\n\tu u u\nu\nu u\n2 1\n2 1\t2\n1\n1is orthogonal to\n\n u u\nu u\nu\nu\nFinding orthogonal bases\n1u\nV\n1 2 1 22) is two-dimensional, that is, span{ , }, and are\nlinearly independent vectors.\nV V  u u u u\n2 1\n1 2 1\t2\n1\n{ , } is an orthogonal basis for .\tV\n\n u u\nu u u\nu\n2 1\n2 1\t2\n1\n\n u u\nu u\nu\nFinding orthogonal bases\nLet be a subspace of .n\nV\n1 2 3 1 2 33) is three-dimensional, that is, span{ , , }, , ,\nare linearly independent vectors.\nV V  u u u u u u\n1u\n1 2\n1 2\nLet ' span{ , }, then ' is\na two-dimensional subspace of\nand { , } is a basis for '.\nV V\nV\nV\n u u\nu u\n'\tV\t2u\n3u\n1 1Let .\t\tv u1 v\nFinding orthogonal bases\nLet be a subspace of .n\nV\n3u\n2 1\n1 2 1\t2\n1\nBy previous discussion, { , } is an orthogonal\nbasis for '.\tV\n\n u v\nv u v\nv\n1v\n2v\n2v\n'\tV\n3 \t1 \t3 \t2\n1 \t2\t2 \t2\n1 \t2\n3 V\n \t\n\nBy orthogonal projection theorem,\nis the projection\nof \tonto \t'.\nu \tv \tu \tv\nv \tv\nv \tv\nu\nFinding orthogonal bases\n1v\n2v\n3u\n'\tV\n3 1 3 2\n3 1 2 1 2\t2 2\n1 2\n( ) is orthogonal to and\n \n \nu v u v\nu v v v v\nv v\n3 1 3 2\n1 2\t2 2\n1 2\n3\nBy orthogonal projection theorem,\nis the projection\nof onto '.\tV\n \n\nu v u v\nv v\nv v\nu\n3v\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n3\nLet ( ).\nThen is orthogonal to '.\tV\n \n  \nu v u v\nv u v v\nv v\nv\nFinding orthogonal bases\n1 2 3{ , , } is an orthogonal basis for .\tV\tv v v\n1v\n1 1\tv u\n1u\n2u\n3u\n1 2 3{ , , } is a\nbasis for .\tV\nu u u\n2v\n2 1\n2 2 1\t2\n1\n\n  u v\nv u v\nv\n2\n1\nprojection of\nonto span{ }\nu\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( )\n \n  \nu v u v\nv u v v\nv v\n3v\n3\n1 2\nprojection of\nonto span{ , }\nu\nv v\nTheorem (Gram-Schmidt Process)\n1 2Let { , ,..., } be a basis for a vector space .k V\tu u u\n1 1Let ;\t\tv u\n2 1\n2 2 1\t2\n1\n;\n\n  u v\nv u v\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( );\n \n  \nu v u v\nv u v v\nv v\n1 2 1\n1 2 1\t2 2 2\n1 2 1\n( ... );k k k k\nk k k\nk\n\n\n\n  \n    \nu v u v u v\nv u v v v\nv v v\n1 2Then { , ,..., } is an orthogonal basis for .k V\tv v v\nTheorem (Gram-Schmidt Process)\n1 1Let ;\t\tv u\n2 1\n2 2 1\t2\n1\n;\n\n  u v\nv u v\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( );\n \n  \nu v u v\nv u v v\nv v\n1 2 1\n1 2 1\t2 2 2\n1 2 1\n( ... );k k k k\nk k k\nk\n\n\n\n  \n    \nu v u v u v\nv u v v v\nv v v\n1 2Then { , ,..., } is an orthogonal basis for .k V\tv v v\n1 2\n1 2\n1 1 1\n{ , ,..., } is an orthonormal basis for .k\nk\nV\tv v v\nv v v\nExample (Gram-Schmidt Process)\nApply Gram-Schmidt Process to transform\n1 0 1 0 1 2 2 1 0\t{( , , ),( , , ),( , , )}\n3\ninto an orthogonal basis for .\nRemark: You may choose\n1 2 31 0 1 0 1 2 2 1 0\t( , , ), ( , , ), ( , , ).\t  \tu u u\nThe concept of approximations\nThere are many computations where exact answers\nare not possible (or not necessary). This gives rise to the\nneed for approximation.\nThe concept of orthogonality is central in the study of\napproximations.\nAlthough the setting used here is the Euclidean space,\nthe following discussions on approximations can be\nextended to general (abstract) vector spaces (e.g. functions).\nA simple question\nFind a point on the line that is 'closest' to the given point.\nSubspace V\nProjection of onto V\tu\nu\nreference point\n(origin)\nA simple question\nFind a point on the plane that is 'closest' to the given point.\nu\nProjection of onto V\tu\nSubspace V\nExample\n3\n1 0 1 \t1 1 1\tspan{( , , ),( , , )} (a plane in \tcontaining origin).\tV \t\n1 2 3\tFind the (shortest) distance from \t( , , ) to \t.\tV\t\tu\nu\nProjection of onto V\tu\nSubspace V\nNeed to first find an\northogonal basis for \t.\tV\nExample\n3\n1 0 1 \t1 1 1\tspan{( , , ),( , , )} (a plane in \tcontaining origin).\tV \t\n1 2 3\tFind the (shortest) distance from \t( , , ) to \t.\tV\t\tu\n1 0 1 \t0 1 0\tBy Gram-Schmidt Process, ( , , ) and ( , , )\nforms an orthogonal basis for \t.\tV\nu\n1 2 3 \t1 0 1 \t1 2 3 \t0 1 0\n1 0 1 \t0 1 0\n1 0 1 \t1 0 1 \t0 1 0 \t0 1 0\n( , , ) ( , , ) \t( , , ) ( , , )\n( , , ) \t( , , )\n( , , ) ( , , ) \t( , , ) ( , , )\n \t\n \t\n \t\np\nDistance \t \t\tu \tp\n2 2 2\t( , , )\t\np\n1 0 1 \t2\t( \t, , )\t \t \t\nTheorem\nLet be a subspace in .n\nV\nV\nu\np\nIf and is the projection of onto , thenn V\t\tu p u\nv\n( , ) ( , ) for all .\td d V\t \tu p u v v\nthat is, is the\nbest approximation\nof in .\tV\np\nu\nProof: Omitted.\nAn example on experiments\nYou believe that physical quantities , and are related\naccording to the equation\nr s t\n2\nt cr ds e\t  \nwhere constants , , are to be determined.\tc d e\nA series of experiments were conducted to measure given\ndifferent values of and .\nt\nr s\nA total of six 'data points' are collected.\nAn example on experiments\n1 2 3 4 5 6\n0 0 1 1 2 2\n0 1 2 0 1 2\n0.5 1.6 2.8 0.8 5.1 5.9\ni\nir\nis\nit\nCan we find , , such that\tc d e\n2 1 6\tfor each ,..., ?i i it cr ds e i\t   \nOf course not!\nA total of six 'data points' are collected.\n2\nt cr ds e\t  \nAn example on experiments\nCan you draw a straight line that passes through\nall the points?\nHow do you draw\nthe 'best' line?\nAn example on experiments\n6\nIf there were no experimental errors, , , would\nsatisfy (solve) the following equations:\nc d e\n2\n1 1 1\n2\n2 2 2\n2\n6 6 6\nt cr ds e\nt cr ds e\nt cr ds e\n   \n   \t\n\n\n   \n2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t    \n \t    \n    \n \t \n \tAx b\n2\n1 1\n2\n2 2\n2\n6 6\n1\n1\n1\nr s\nr s\nr s\n \n \n   \n \n \nA\nc\nd\ne\n \n   \n \n \nx\n1\n2\n6\nt\nt\nt\n \n \n   \n \n \nb\nAn example on experiments\nSince there are no exact solutions for , , , the linear\nsystem is inconsistent.\nc d e\n\tAx b2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t   \n \t    \n    \n \t \n \tAx b\n\n...\t \nobservedpredicted\n6 2 2\n1\n1\n[ ( )]i i\ni\nt cr ds e\n\n   \n2\n( )\nis minimized\n \tb Ax\nSum of\nsquares\nof errors\n2 2\n6 6 6[ ( )]\tt cr ds e\t  \n2 2\n2 2 2[ ( )]\tt cr ds e\t  \n2 2\n1 1 1[ ( )]\tt cr ds e\t  \nWe now seek to find , ,\nsuch that\nc d e\nAn example on experiments\nSummary of problem:\nA linear system is inconsistent.\t\tAx b\n2\nWe wish to find such that ( ) (or equivalently)\n( ) is minimized.\n\n\nx b Ax\nb Ax\n0\nRemark: If is consistent, then we simply choose\nto be a solution so that which means\n( ) , the smallest possible value.\n\n \n \nAx b x\nb Ax\nb Ax\n0\nDefinition (Least squares solution)\nLet be a linear system where is a matrix.\tm n\t \tAx b A\nA vector \tis called a least squares solution to the\nlinear system if \tfor all \t.\nn\nn\n\n \t \t \t\nu\nb \tAu \tb \tAv \tv\nWhen is a linear system consistent?\nRecall that is consisent if and only if belongs to\nthe column space of .\n\tAx b b\nA\nb\ncolumn space of A\nis consistent.\nLeast squares solution\nExact solution.\n\n\nAx b\nb\ncolumn space of A\nis inconsistent.\nLeast squares solution ?\n\n\nAx b\nWhen is a linear system consistent?\nRecall that is consisent if and only if belongs to\nthe column space of .\n\tAx b b\nA\nb\ncolumn space of A\n1Ax\n2Ax\n3Ax4Ax\nWhich \twill be\nsuch that \tis 'closest' to \t?\nu\nAu \tb\nAnswer: An \tsuch that\nwhere \tis the projection\nof \tonto the column\nspace of \t.\n\tu \tAu \tp\np\nb\nA\n\tAu \tp\n( \t) \t( \t) for all n\n \t \t \t\tb \tAu \tb \tAv \tvTo find least squares\nsolution \t, we solve \t.\t\tu \tAx \tp\nTheorem\nLet \tbe a linear system, where \tis an \tmatrix,\nand let \tbe the projection of \tonto the column space\nof \t. Then\nm \tn\t \t\tAx \tb \tA\np \tb\nA\nb\ncolumn space of A\n1Ax\n2Ax\n3Ax4Ax\n\tAu \tp\n( \t) \t( \t) for all n\n \t \t \t\tb \tp \tb \tAv \tv\n( , \t) \t( , \t)\td \td\t \t \t \t \t\tb \tp \tb p \tb w \tb \tw\nfor all \t(column space of \t)\tV\t\tw \tA\n( \t) \t( \t) for all n\n \t \t \t\tb \tp \tb \tAv \tv\nSince \t{ \t}n\nV \t \t\tAv v\nExample\n1 \t1 \t1 \t1 \t1\n0 \t1 \t2 \t0 \t1\n1 \t1 \t3 \t1 \t1\n, \tand \tspan \t,\tV\n \t\t \t \t \t \t \t  \n \t\t \t \t \t \t \t   \t \t \t \t \t \t \t \t \t  \n \t \t \t \t \t  \t \t\n \t \t \t \t \t  \t \t\nA \tb\n(column space of \t)\tA2\n2\n2\nBy earlier example, projection of \tonto \tis \t.\tV\n \t\n \t  \t\n \t\n \t\nb \tp\nis a least squares solution if and only if\nx\ny\n \t\n \t\n \t2 0\n2 2\n2\n.\nx \tx\ny \ty\n \t\n \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t\t \t\n \t\nA\nEND OF LECTURE 18\nLecture 19\nBest approximation (cont’d)\nOrthogonal matrices (till end of Chapter 5)\nOrthogonal diagonalization (Section 6.3)",
+  "sections": [
+    {
+      "heading": "Lecture 17 recap",
+      "level": 1,
+      "text": "1) Definition of length of a vector, distance, angle, dot product\nbetween two vectors.\n2) Dot product and matrix product.\n3) Some results on dot products.\n4) An example on information retrieval.\n5) Orthogonality (orthonormality). Orthogonal and\northonormal sets (bases).\n6) Usefulness of orthogonal and orthonormal bases."
+    },
+    {
+      "heading": "LECTURE 18",
+      "level": 2,
+      "text": "Orthogonal and Orthonormal Bases (cont’d)\nBest Approximation"
+    },
+    {
+      "heading": "Definition (vector orthogonal to a space)",
+      "level": 2,
+      "text": "Let be a subspace of . A vector is orthogonal\n(or perpendicular) to if is orthogonal to all vectors\nin .\nn\nV\nV\nV\nu\nu\nV\nu"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "3\n3\n2 3 0\t{( , , )| } is a subspace of\n(it is a plane in containing the origin).\nV x y z x y z\t   \nV\n2 3 0\t( , , )\tx y z V x y z\t    \n2 3 1 0\t( , , ) ( , , )\tx y z\t   \tu\n2 3 1\t( , , ) is\northogonal to\nall vectors in .\tV\n\n2 3 1\t( , , )\t\n2 3 1\tSo ( , , ) is orthogonal to .\tV\t"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "3\n3\n0\t{( , , )| } is a subspace of\n(it is a plane in containing the origin).\nV x y z ax by cz\t   \nV\nu\n0\t( , , )\tx y z V ax by cz\t    \n0\t( , , ) ( , , )\ta b c x y z\t  \n( , , ) is\northogonal to\nall vectors in .\na b c\nV\n( , , )\ta b c\nSo ( , , ) is orthogonal to .\ta b c V"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "3\n0\t{( , , )| } is a subspace of\tV x y z ax by cz\t   \nLet ( , , ).\ta b c\t\tn\n3 0\t{ | }\t   \tu n u\n0\t{( , , )| }\tV x y z ax by cz\t   \nis orthogonal to . We say that is a normal vector of .\tV V\tn n\n0\nQuestion: If is orthogonal to , is orthogonal\nto for every ?\nV c\nV c \nn n\nYES!"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV\nRemember:\n( , , , ) is orthogonal to\tw x y z V\t\tv\n( , , , ) is orthogonal to every vector in .\tw x y z V\n\n\tv\nWow! Isn't this very\ndifficult to check??"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV\n1 2\n1 2 0 1\nIn general, if span{ , ,..., }, then\nis orthogonal to if and only if is orthogonal to\n, ,..., , that is, for all ,..., .\nk\nk i\nV\nV\ni k\n\n  \nu u u\nv v\nu u u v u\nThis is much easier!"
+    },
+    {
+      "heading": "Example (vector orthogonal to a space)",
+      "level": 2,
+      "text": "4\n1 1 1 0 0 1 1 1\tspan{( , , , ),( , , , )} is a subspace of .\tV   \nQuestion: Find all vectors orthogonal to .\tV"
+    },
+    {
+      "heading": "is called the",
+      "level": 2,
+      "text": "(orthogonal) projection\nof onto .\tV\np\nu\nDefinition (orthogonal projection)\nLet be a subspace of .n\nV\nEvery vector n\n\tu\nV\nu\ncan be uniquely written as\nn\nwhere is orthogonal to V\tn\np\nand belongs to .\tV\tp\n \tu n p"
+    },
+    {
+      "heading": "Wait a minute…",
+      "level": 2,
+      "text": "Let be a subspace of .n\nV\nEvery vector n\n\tu\nV\ncan be uniquely written as\n \tu n p\nwhere is orthogonal to V\tn\nand belongs to .\tV\tp\nuWhat happens if\nbelongs to ?\tV\tu\n p\n \tu u\t0\n\tn 0"
+    },
+    {
+      "heading": "Projection in R2 and R3",
+      "level": 2,
+      "text": "2\nLet be a subspace of .\tV\n0\t{( , )| } ( is the -axis)\tV y y V y\t \nV\n( , )\tx y\t\tu\t0\t( , )\tx\t\nn\nn0\t( , )\ty\t\np\np\n0\nThe projection of ( , )\nonto is ( , ).\nx y\nV y\nx\ny"
+    },
+    {
+      "heading": "Projection in R2 and R3",
+      "level": 2,
+      "text": "3\nLet be a subspace of .\tV\n0\t{( , , )| , } ( is the -plane)\tV x y x y V xy\t \nx\ny\nz\nV\n( , , )\tx y z\t\tu\np\n0\t( , , )\tx y\t\np\nn\n0 0\t( , , )\tz\t\nn\n0\nThe projection of ( , , )\nonto is ( , , ).\nx y z\nV x y"
+    },
+    {
+      "heading": "Wait a(nother) minute…",
+      "level": 2,
+      "text": "2\nLet be a subspace of .\tV\n0\t{( , )| } ( is the -axis)\tV y y V y\t \n3\nLet be a subspace of .\tV\n0\t{( , , )| , } ( is the -plane)\tV x y x y V xy\t \n:\nWhat if the subspaces are not so 'trivial'?\nHow can we compute orthgonal projections in general?\nWhat is required?\nQuestions"
+    },
+    {
+      "heading": "Theorem (orthogonal projection)",
+      "level": 2,
+      "text": "Let be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\n1 2If { , ,..., } is an orthonormal basis for , then the\nprojection of onto is\nk V\nV\nv v v\nw\n1 1 2 2( ) ( ) ... ( )k k     \tw v v w v v w v v\nLooks\nfamiliar?"
+    },
+    {
+      "heading": "An expression we have seen before",
+      "level": 2,
+      "text": "1 2If { , ,..., } is an orthogonal basis for a vector\nspace , then for any vector ,\nkS\nV V\n\n\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n     \t   \n     \nw u\tw u w u\nw u u u\nu u u\nFrom\nLect. 17\nLet be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\nWhy does\nthis make\nsense?"
+    },
+    {
+      "heading": "An expression we have seen before",
+      "level": 2,
+      "text": "1 2{ , ,..., } is an orthogonal basis for (subspace of )n\nk V\tu u u\nV\n...and a vector in .n\nw\nw\nV\n...then for any vector ,\tV\t\tw\nw\n1\n1\t2 2\n1\n... k\nk\nk\n \t  \t    \t \n   \nw u\tw u u u\nu u\nis the projection of onto .\tV\tw\np\nn\n \tw p n\n1\n1\t2 2\n1\n... k\nk\nk\n \t  \t    \t \n   \nw u\tw u u u\nu u\n w\n \tw w 0"
+    },
+    {
+      "heading": "Theorem (orthogonal projection)",
+      "level": 2,
+      "text": "Let be a subspace of and a vector in .n n\nV w\n1 2If { , ,..., } is an orthogonal basis for , then the\nprojection of onto is\nk V\nV\nu u u\nw\n1 2\n1 2\t2 2 2\n1 2\n... k\nk\nk\n \t    \t \n    \t   \n     \nw u\tw u w u\nu u u\nu u u\n1 2If { , ,..., } is an orthonormal basis for , then the\nprojection of onto is\nk V\nV\nv v v\nw\n1 1 2 2( ) ( ) ... ( )k k     \tw v v w v v w v v"
+    },
+    {
+      "heading": "Example (orthogonal projection)",
+      "level": 2,
+      "text": "3\n1 0 1 1 0 1\tLet span{( , , ),( , , )} be a subspace of ( is a plane).\tV V\t \n1 0 1 1 0 1 1 0 1 0\t( , , ) ( , , )\t     \n1 0 1 1 0 1\t{( , , ),( , , )} is an orthogonal basis for .\tV\t \nV\n1 1 0\tWhat is the projection of ( , , ) onto ?\tV\t\tw\n2\n2\n1 1 0 1 0 1 1 0 1\n1 0 1\n1 1 0 1 0 1 1 0 1\n1 0 1\n( , , ) ( , , )( , , )\n( , , )\n( , , ) ( , , )( , , )\n( , , )\n\n \n \n\n1 0 0\t( , , )\t1 0 0\t( , , )"
+    },
+    {
+      "heading": "Example (orthogonal projection)",
+      "level": 2,
+      "text": "3\n1 1 1 1 3 1\tLet span{( , , ),( , , )} be a subspace of ( is a plane).\tV V\t \n1 1 1 1 3 1 3 0\t( , , ) ( , , )\t   \n1 1 1 1 3 1\t{( , , ),( , , )} is a basis, but not an orthogonal\nbasis for .\tV\n \nV\n3 1 3\tWhat is the projection of ( , , ) onto ?\tV\t \tw"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "We can only use the orthogonal\nprojection theorem if we have\nan orthogonal basis for a vector space...\nyes, so what if we\ndon't have one?\nWe find one!"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "Let be a subspace of .n\nV\n1 11) is one-dimensional, that is, span{ }, .\tV V  \tu u 0\n1u\nV\n1Trivially, { } is an\northogonal basis for .\tV\nu"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "Let be a subspace of .n\nV\n1 2 1 22) is two-dimensional, that is, span{ , }, and are\nlinearly independent vectors.\nV V  u u u u\n1u\n2uV"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "1 \t1\n1\nV\tspan{ \t} is a subspace of \tand { \t} is an orthogonal basis\nfor span{ \t}.\nu \tu\nu\n1u\nV\n2u\n1span{ }\tu\n2 1\n1\t2\n1\n2 1\nBy orthogonal projection theorem, is the projection\nof onto span{ }\n\tu u u\nu\nu u\n2 1\n2 1\t2\n1\n1is orthogonal to\n\n u u\nu u\nu\nu"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "1u\nV\n1 2 1 22) is two-dimensional, that is, span{ , }, and are\nlinearly independent vectors.\nV V  u u u u\n2 1\n1 2 1\t2\n1\n{ , } is an orthogonal basis for .\tV\n\n u u\nu u u\nu\n2 1\n2 1\t2\n1\n\n u u\nu u\nu"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "Let be a subspace of .n\nV\n1 2 3 1 2 33) is three-dimensional, that is, span{ , , }, , ,\nare linearly independent vectors.\nV V  u u u u u u\n1u\n1 2\n1 2\nLet ' span{ , }, then ' is\na two-dimensional subspace of\nand { , } is a basis for '.\nV V\nV\nV\n u u\nu u\n'\tV\t2u\n3u\n1 1Let .\t\tv u1 v"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "Let be a subspace of .n\nV\n3u\n2 1\n1 2 1\t2\n1\nBy previous discussion, { , } is an orthogonal\nbasis for '.\tV\n\n u v\nv u v\nv\n1v\n2v\n2v\n'\tV\n3 \t1 \t3 \t2\n1 \t2\t2 \t2\n1 \t2\n3 V\n \t\n\nBy orthogonal projection theorem,\nis the projection\nof \tonto \t'.\nu \tv \tu \tv\nv \tv\nv \tv\nu"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "1v\n2v\n3u\n'\tV\n3 1 3 2\n3 1 2 1 2\t2 2\n1 2\n( ) is orthogonal to and\n \n \nu v u v\nu v v v v\nv v\n3 1 3 2\n1 2\t2 2\n1 2\n3\nBy orthogonal projection theorem,\nis the projection\nof onto '.\tV\n \n\nu v u v\nv v\nv v\nu\n3v\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n3\nLet ( ).\nThen is orthogonal to '.\tV\n \n  \nu v u v\nv u v v\nv v\nv"
+    },
+    {
+      "heading": "Finding orthogonal bases",
+      "level": 2,
+      "text": "1 2 3{ , , } is an orthogonal basis for .\tV\tv v v\n1v\n1 1\tv u\n1u\n2u\n3u\n1 2 3{ , , } is a\nbasis for .\tV\nu u u\n2v\n2 1\n2 2 1\t2\n1\n\n  u v\nv u v\nv\n2\n1\nprojection of\nonto span{ }\nu\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( )\n \n  \nu v u v\nv u v v\nv v\n3v\n3\n1 2\nprojection of\nonto span{ , }\nu\nv v"
+    },
+    {
+      "heading": "Theorem (Gram-Schmidt Process)",
+      "level": 2,
+      "text": "1 2Let { , ,..., } be a basis for a vector space .k V\tu u u\n1 1Let ;\t\tv u\n2 1\n2 2 1\t2\n1\n;\n\n  u v\nv u v\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( );\n \n  \nu v u v\nv u v v\nv v\n1 2 1\n1 2 1\t2 2 2\n1 2 1\n( ... );k k k k\nk k k\nk\n\n\n\n  \n    \nu v u v u v\nv u v v v\nv v v\n1 2Then { , ,..., } is an orthogonal basis for .k V\tv v v"
+    },
+    {
+      "heading": "Theorem (Gram-Schmidt Process)",
+      "level": 2,
+      "text": "1 1Let ;\t\tv u\n2 1\n2 2 1\t2\n1\n;\n\n  u v\nv u v\nv\n3 1 3 2\n3 3 1 2\t2 2\n1 2\n( );\n \n  \nu v u v\nv u v v\nv v\n1 2 1\n1 2 1\t2 2 2\n1 2 1\n( ... );k k k k\nk k k\nk\n\n\n\n  \n    \nu v u v u v\nv u v v v\nv v v\n1 2Then { , ,..., } is an orthogonal basis for .k V\tv v v\n1 2\n1 2\n1 1 1\n{ , ,..., } is an orthonormal basis for .k\nk\nV\tv v v\nv v v"
+    },
+    {
+      "heading": "Example (Gram-Schmidt Process)",
+      "level": 2,
+      "text": "Apply Gram-Schmidt Process to transform\n1 0 1 0 1 2 2 1 0\t{( , , ),( , , ),( , , )}\n3\ninto an orthogonal basis for .\nRemark: You may choose\n1 2 31 0 1 0 1 2 2 1 0\t( , , ), ( , , ), ( , , ).\t  \tu u u"
+    },
+    {
+      "heading": "The concept of approximations",
+      "level": 2,
+      "text": "There are many computations where exact answers\nare not possible (or not necessary). This gives rise to the\nneed for approximation.\nThe concept of orthogonality is central in the study of\napproximations.\nAlthough the setting used here is the Euclidean space,\nthe following discussions on approximations can be\nextended to general (abstract) vector spaces (e.g. functions)."
+    },
+    {
+      "heading": "A simple question",
+      "level": 2,
+      "text": "Find a point on the line that is 'closest' to the given point.\nSubspace V\nProjection of onto V\tu\nu\nreference point\n(origin)"
+    },
+    {
+      "heading": "A simple question",
+      "level": 2,
+      "text": "Find a point on the plane that is 'closest' to the given point.\nu\nProjection of onto V\tu\nSubspace V"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "3\n1 0 1 \t1 1 1\tspan{( , , ),( , , )} (a plane in \tcontaining origin).\tV \t\n1 2 3\tFind the (shortest) distance from \t( , , ) to \t.\tV\t\tu\nu\nProjection of onto V\tu\nSubspace V\nNeed to first find an\northogonal basis for \t.\tV"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "3\n1 0 1 \t1 1 1\tspan{( , , ),( , , )} (a plane in \tcontaining origin).\tV \t\n1 2 3\tFind the (shortest) distance from \t( , , ) to \t.\tV\t\tu\n1 0 1 \t0 1 0\tBy Gram-Schmidt Process, ( , , ) and ( , , )\nforms an orthogonal basis for \t.\tV\nu\n1 2 3 \t1 0 1 \t1 2 3 \t0 1 0\n1 0 1 \t0 1 0\n1 0 1 \t1 0 1 \t0 1 0 \t0 1 0\n( , , ) ( , , ) \t( , , ) ( , , )\n( , , ) \t( , , )\n( , , ) ( , , ) \t( , , ) ( , , )\n \t\n \t\n \t\np\nDistance \t \t\tu \tp\n2 2 2\t( , , )\t\np\n1 0 1 \t2\t( \t, , )\t \t \t"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "Let be a subspace in .n\nV\nV\nu\np\nIf and is the projection of onto , thenn V\t\tu p u\nv\n( , ) ( , ) for all .\td d V\t \tu p u v v\nthat is, is the\nbest approximation\nof in .\tV\np\nu\nProof: Omitted."
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "You believe that physical quantities , and are related\naccording to the equation\nr s t\n2\nt cr ds e\t  \nwhere constants , , are to be determined.\tc d e\nA series of experiments were conducted to measure given\ndifferent values of and .\nt\nr s\nA total of six 'data points' are collected."
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "1 2 3 4 5 6\n0 0 1 1 2 2\n0 1 2 0 1 2\n0.5 1.6 2.8 0.8 5.1 5.9\ni\nir\nis\nit\nCan we find , , such that\tc d e\n2 1 6\tfor each ,..., ?i i it cr ds e i\t   \nOf course not!\nA total of six 'data points' are collected.\n2\nt cr ds e\t  "
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "Can you draw a straight line that passes through\nall the points?\nHow do you draw\nthe 'best' line?"
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "6\nIf there were no experimental errors, , , would\nsatisfy (solve) the following equations:\nc d e\n2\n1 1 1\n2\n2 2 2\n2\n6 6 6\nt cr ds e\nt cr ds e\nt cr ds e\n   \n   \t\n\n\n   \n2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t    \n \t    \n    \n \t \n \tAx b\n2\n1 1\n2\n2 2\n2\n6 6\n1\n1\n1\nr s\nr s\nr s\n \n \n   \n \n \nA\nc\nd\ne\n \n   \n \n \nx\n1\n2\n6\nt\nt\nt\n \n \n   \n \n \nb"
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "Since there are no exact solutions for , , , the linear\nsystem is inconsistent.\nc d e\n\tAx b2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t   \n \t    \n    \n \t \n \tAx b\n\n...\t \nobservedpredicted\n6 2 2\n1\n1\n[ ( )]i i\ni\nt cr ds e\n\n   \n2\n( )\nis minimized\n \tb Ax\nSum of\nsquares\nof errors\n2 2\n6 6 6[ ( )]\tt cr ds e\t  \n2 2\n2 2 2[ ( )]\tt cr ds e\t  \n2 2\n1 1 1[ ( )]\tt cr ds e\t  \nWe now seek to find , ,\nsuch that\nc d e"
+    },
+    {
+      "heading": "An example on experiments",
+      "level": 2,
+      "text": "Summary of problem:\nA linear system is inconsistent.\t\tAx b\n2\nWe wish to find such that ( ) (or equivalently)\n( ) is minimized.\n\n\nx b Ax\nb Ax\n0\nRemark: If is consistent, then we simply choose\nto be a solution so that which means\n( ) , the smallest possible value.\n\n \n \nAx b x\nb Ax\nb Ax\n0"
+    },
+    {
+      "heading": "Definition (Least squares solution)",
+      "level": 2,
+      "text": "Let be a linear system where is a matrix.\tm n\t \tAx b A\nA vector \tis called a least squares solution to the\nlinear system if \tfor all \t.\nn\nn\n\n \t \t \t\nu\nb \tAu \tb \tAv \tv"
+    },
+    {
+      "heading": "When is a linear system consistent?",
+      "level": 2,
+      "text": "Recall that is consisent if and only if belongs to\nthe column space of .\n\tAx b b\nA\nb\ncolumn space of A\nis consistent.\nLeast squares solution\nExact solution.\n\n\nAx b\nb\ncolumn space of A\nis inconsistent.\nLeast squares solution ?\n\n\nAx b"
+    },
+    {
+      "heading": "When is a linear system consistent?",
+      "level": 2,
+      "text": "Recall that is consisent if and only if belongs to\nthe column space of .\n\tAx b b\nA\nb\ncolumn space of A\n1Ax\n2Ax\n3Ax4Ax\nWhich \twill be\nsuch that \tis 'closest' to \t?\nu\nAu \tb\nAnswer: An \tsuch that\nwhere \tis the projection\nof \tonto the column\nspace of \t.\n\tu \tAu \tp\np\nb\nA\n\tAu \tp\n( \t) \t( \t) for all n\n \t \t \t\tb \tAu \tb \tAv \tvTo find least squares\nsolution \t, we solve \t.\t\tu \tAx \tp"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "Let \tbe a linear system, where \tis an \tmatrix,\nand let \tbe the projection of \tonto the column space\nof \t. Then\nm \tn\t \t\tAx \tb \tA\np \tb\nA\nb\ncolumn space of A\n1Ax\n2Ax\n3Ax4Ax\n\tAu \tp\n( \t) \t( \t) for all n\n \t \t \t\tb \tp \tb \tAv \tv\n( , \t) \t( , \t)\td \td\t \t \t \t \t\tb \tp \tb p \tb w \tb \tw\nfor all \t(column space of \t)\tV\t\tw \tA\n( \t) \t( \t) for all n\n \t \t \t\tb \tp \tb \tAv \tv\nSince \t{ \t}n\nV \t \t\tAv v"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t1 \t1 \t1 \t1\n0 \t1 \t2 \t0 \t1\n1 \t1 \t3 \t1 \t1\n, \tand \tspan \t,\tV\n \t\t \t \t \t \t \t  \n \t\t \t \t \t \t \t   \t \t \t \t \t \t \t \t \t  \n \t \t \t \t \t  \t \t\n \t \t \t \t \t  \t \t\nA \tb\n(column space of \t)\tA2\n2\n2\nBy earlier example, projection of \tonto \tis \t.\tV\n \t\n \t  \t\n \t\n \t\nb \tp\nis a least squares solution if and only if\nx\ny\n \t\n \t\n \t2 0\n2 2\n2\n.\nx \tx\ny \ty\n \t\n \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t\t \t\n \t\nA"
+    },
+    {
+      "heading": "END OF LECTURE 18",
+      "level": 2,
+      "text": "Lecture 19\nBest approximation (cont’d)\nOrthogonal matrices (till end of Chapter 5)\nOrthogonal diagonalization (Section 6.3)"
+    }
+  ]
+}

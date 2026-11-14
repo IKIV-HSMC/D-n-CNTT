@@ -1,0 +1,211 @@
+{
+  "original_filename": "Lecture 08.pdf",
+  "extracted_text": "Lecture 07 recap1) How elementary row operations changes the\ndeterminant of a matrix.\n2) Using elementary row operations to find the\ndeterminant of a matrix.\n0\t3) \tis invertible if and only if det( \t) \t.\t\tA \tA\n1\n4) det( \t), det( \t) and det( \t).\tc \nA \tAB \tA\n5) Definition of adjoint of a matrix. Inverse in terms\nof adjoint.\n6) Cramer's rule.\nLecture 08\nEuclidean n-spaces\nLinear combinations and\nlinear spans\nHow do we represent vectorsGeometrically, a vector is represented by a directed\nline segment (or arrow).\ndirection of the arrow\nlength of the arrow (magnitude)\nTwo vectors \tand \tare said to be equal if they\nhave the same length and direction.\nu \tv\nu\tv\nVector operations\n1) Addition: \tu \tv\t\nu\nv\n\tu \tv\tvu\n\tv \tu\n\tu + v \tv + u\n2) Negative of \t: \t\tu \tu\nu\tuchange in direction,\nno change in magnitude\nVector operations\n3) Difference: \t(same as \t( \t))\t \t \tu \tv \tu \tv\nu\nv\tu \tv\nv\n4) Scalar multiple: \t( \t)\tk \tk \t\tu\nu1\n2 u2u1 2\t( \t. )\t \tu\nCoordinate systems (2-space)\n0 0\tPosition \twith its initial point at ( , )\tu\nu\n0 0\t( , )\tx\ny\nplane\txy \t\n1u\n2u1 \t2( \t, \t)\tu u1 \t2( \t, \t)\tu u\t\tu\ncomponents of \tu\nCoordinate systems (3-space)\n0 0 0\tPosition \twith its initial point at ( , , )\tu\nu\n0 0 0\t( , , )\ty\nz\nspace\txyz \t\tx\n1 \t2 \t3( \t, \t, \t)\tu u \tu\n1u\n2u\n3u1 \t2 \t3( \t, \t, \t)\tu u \tu\t\tu\ncomponents of \tu\nAddition and scalar multiplication\n1) Addition: add component-wise.\n1 \t2 \t1 \t2 \t1 \t1 \t2 \t2( \t, \t) \t( \t, \t) \t( \t, \t)\tu u \tv v \tu \tv u \tv\t \t \t \t\n1 \t2 \t3 \t1 \t2 \t3 \t1 \t1 \t2 \t2 \t3 \t3( \t, \t, \t) \t( \t, \t, \t) \t( \t, \t, \t)\tu u \tu \tv v \tv \tu \tv u \tv \tu \tv\t \t \t \t \t\n2) Scalar multiplication: multiply to each component.\n1 \t2( \t, \t)\tk \tku \tku\t\tu1 \t2( \t, \t),\tu u \tk\t \t\tu\n1 \t2 \t3( \t, \t, \t)\tk \tku \tku \tku\t\tu1 \t2 \t3( \t, \t, \t),\tu u \tu \tk\t \t\tu\nDefinitions (n-vectors and operations)\n1 \t2-vector: ( \t, \t,..., \t,..., \t)i \tnn \tu u \tu \tu\n1 \t2, \t,..., \tare real numbers.nu u \tu\n1 : 1st component (or 1st coordinate) of the vector\tu\n: \tth component (or th coordinate) of the vectoriu \ti \ti\nEquality: \tif and only if\t\tu \tv\n1 2\tfor all \t, ,..., .i \tiu \tv \ti \tn\t \t\n1 \t2 \t1 \t2( \t, \t,..., \t) \t( \t, \t,..., \t)n \tnu u \tu \tv v \tv\t \t\tu \tv\nDefinitions (n-vectors and operations)\n1 \t1 \t2 \t2Addition: \t( \t, \t,..., \t)n \tnu \tv u \tv \tu \tv\t \t \t \t \t\tu \tv\n1 \t2 \t1 \t2( \t, \t,..., \t) \t( \t, \t,..., \t)n \tnu u \tu \tv v \tv\t \t\tu \tv\n1 \t2Scalar multiplication: \t, \t( \t, \t,..., \t)nc \tc \tcu \tcu \tcu\t \t\tu\n1 \t2Negative: \t( \t, \t,..., \t)nu \tu \tu\t \t  \t \t\tu\n1 \t1 \t2 \t2Subtraction: \t( \t, \t,..., \t)n \tnu \tv u \tv \tu \tv\t \t \t \t \t\tu \tv\n0 0 \t0\tZero vector: \t( , ,..., )\t\t0\nExample (vector operations)\n3 4 5 1 \t1 0 1 2\t( , , , ) \t( \t, , , )\t \t \tu \tv\n2\t \t\tu \tv\n2 \t3\t \t\tu \tv\n0 0 0 0 0 \t2\tIf \t( , , , , ), what is \t?\t \t\tw \tu \tw\nVectors and matrices\n1 \t2Identifying an \t-vector ( \t, \t,..., \t) with:nn \tu u \tu\n \t1 \t21 \tmatrix \t... \t(row vector)nn \tu \tu \tu\t\nor\n1\n2\n1 \tmatrix \t(column vector)\n:\nn\nu\nu\nn\nu\n \t\n \t\n \t  \t\n \t\n \t\nProperties of vector operations\n1) \t \t \t\tu \tv \tv \tu\nLet \t, , \tbe \t-vectors and \t, \tbe real numbers.\tn \ta b\tu v w\n2) \t( \t) \t( \t)\t \t \t \t \t\tu \tv \tw \tu \tv \tw\n3) \t \t \t\tu \tu \tu\t0 \t0 +\n4) \t( \t)\t  \t\tu \tu \t0\n5) \t( \t) \t( \t)\ta b \tab\t\tu \tu\n6) \t( \t)\ta \ta \ta\t \t \t\tu \tv \tu \tv\n7) ( \t)\ta \tb \ta \tb\t \t \t\tu \tu \tu\n1\t8) \t\tu \tu\nProof: Not discussed here.\nDefinition (Euclidean n-space)\n1 \t2 1\nEuclidean \t-space, denoted by \t, is the set of all\n-vectors ( \t, \t,..., \t) where \t, \t,..., , is a real number.\nn\nn \ti\nn\nn \tu u \tu \tu \ti \tn\t\n1 \t2 \t1( \t, \t,..., \t) \tif and only if \t,..., \t.n\nn \tnu u \tu \tu \tu\t \t \t\tu\nNote:\n1) For any positive integer \t, \tis a set.n\nn\n2) How many vectors does \tcontain?nInfinitely many!\n2 \t3\n3) Do \tand \thave any vector in common?\tNo!\n2 \t3\t( , \t)\t\t1 5 3 \t0\t( \t. , \t, )\n\t\nExample (Subsets of Rn)\n1 \t2 \t30 \tand\tu \tu \tu\t \t \n3\nis a subset of\tS\t0 1 \t1\t( , , \t) \tS\t \t\t0 0 0\t( , , ) \tS\t\t1 0 0\t( , , ) \tS\t\nWe can also write \tas\tS\n0\t{( , \t, \t)| \t}\tS \ta \ta \ta\t \t \t\n1 \t2 \t3 \t1 \t2 \t30\t{( \t, \t, \t)| \tand \t}\tS \tu u \tu \tu \tu \tu\t \t \t \n3\n1 \t2 \t3contains vectors ( \t, \t, \t) from \tsuch that\tS \tu u \tu\nExample (Subsets of Rn)\n0 2 \t2 \t1\t{( \t, , \t, )| \t, \t}\tS \tw x y z \tw \tx \ty \tz \tw \tx \ty \tz\t \t \t \t \t \t \t \t \t\n4\ncontains vectors ( \t, , \t, ) from \tsuch that \t, , \t,\nsatisfies\nS \tw x y z \tw x y z\n0\n2 \t2 \t1\nw \tx \ty \tz\nw \tx \ty \tz\n \t \t \t\t\n  \t \t \t\nis the solution set of the above linear system.\tS\nNote that the solution set of a linear system involving\nvariables will be a subset of \t.n\nn\n4\nis a subset of \t.\tS\nExample (Subsets of Rn)\n0 2 \t2 \t1\t{( \t, , \t, )| \t, \t}\tS \tw x y z \tw \tx \ty \tz \tw \tx \ty \tz\t \t \t \t \t \t \t \t \t\nSolving the linear system, we have a general solution\n1\n3\n1\n3\n,\nw \tt\nx \ts\ny \ts\nz \tt \ts t\n \t\t\n  \t\t\n \n \t \t\n(Implicit)\nWe are now able to rewrite\nthe set \tin another way:\tS\n1 \t1\n3 \t3{( \t, \t, , )| , \t}\tS \tt \ts s t \ts t\t \t \t \t\t(Explicit)\nExample (Subsets of Rn)2\nLines in\n2\nRecall that the equation \tin two variables \t,\nrepresents a line in \t.\nax \tby \tc \tx y\t \t\n{( , \t)| \t}, \t, \tnot both zero.\tx y \tax \tby \tc \ta b\t \t \t\n(Implicit) representation:\n0\t{( , \t)| \t}, if \t.\nc \tat\nt \tt \tb\nb\n  \t\n(Explicit) representation:\n0\t{( \t, )| \t}, if \t;\nc \tbt t \tt \ta\na\n  \t\nSolving\nExample (Subsets of Rn)3\nPlanes in\n3\nRecall that the equation \tin three variables\n, \t, \trepresents a plane in \t.\nax \tby \tcz \td\nx y z\n \t \t\n{( , \t, )| \t}, \t, , \tnot all zero.\tx y z \tax \tby \tcz \td \ta b c\t \t \t \t\nWhat about explicit representation?\n(Implicit) representation:\n3\tSolving \t. One equation, \tunknowns.\tax \tby \tcz \td\t \t \t\nExample (Subsets of Rn)3\nPlanes in\n3\nRecall that the equation \tin three variables\n, \t, \trepresents a plane in \t.\nax \tby \tcz \td\nx y z\n \t \t\nExplicit representations:0\t{( \t, , )| , \t}, if \t;\nd \tbs \tct s t \ts t \ta\na\n \t  \t\n0\t{( , \t, )| , \t}, if \t;\nd \tas \tct\ns \tt \ts t \tb\nb\n \t  \t\n0\t{( , , \t)| , \t}, if \t;\nd \tas \tbt\ns t \ts t \tc\nc\n \t  \t\nExample (Subsets of Rn)\n3\nHow do we represent lines in \t?\n3\nA line in \tis usually represented explicitly.\nSo what do\nwe need?\nA point and a\ndirection...or\ntwo points.\n0 \t0 \t0( \t, \t, \t)\ta \tb \tc\t(point on the line)\nExample (Subsets of Rn)3\nA line in \tis represented by the set\n0 \t0 \t0( \t, \t, \t)\ta \tb \tc\norigin\n( , , )\tt a b c\t\t|t \t\n( , , )\ta b c\t(direction of the line)\n0 \t0 \t0( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n0 \t0 \t0 2\t( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n0 \t0 \t0( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n{ \t}\nExample (Subsets of Rn)\n3\nA line in \tis represented by the set\n0 \t0 \t0{( \t, \t, \t) \t( , , )| \t}\ta \tb \tc \tt a b c \tt\t \t0 \t0 \t0{( \t, \t, \t)| \t}\ta \tta b \ttb c \ttc \tt\t \t \t \t \t\nRemember:\n3\n2\nA line in \tcannot be represented by a\nsingle linear equation like in \t.\nNotation\nis a finite set. We use \tto denoted the number\nof elements in \t.\nS \tS\nS\n1 \t2 \t31 2 3 \t1 2 3 \t1 2 3 \t2 3 4\t{ , , }, \t{( , , )}, \t{( , , ),( , , )}\tS \tS \tS\t \t \t\n1 \t2 \t33 \t1 \t2\t, \t,\tS \tS \tS\t \t \t\nDefinition (Linear Combination)\n1 2 \t1 \t0 2 5\tConsider \t( , , \t), \t( , , ).\t \t \t\tu \tv\n2 \t3 \t2 10 13\t( , \t, \t)\t \t\tu \tv\t2 \t1 \t2 \t11\t( , \t, \t)\t \t \t \t\tu \tv\n2 10 13 \t1 \t2 \t11\t( , \t, \t) and ( , \t, \t) are both linear combinations\nof \tand \t.\n \t\nu \tv\n1 \t2Let \t, \t,..., \tbe vectors in \t.n\nku u \tu\n1 \t2For any real numbers \t, \t,..., \t, the vectorkc c \tc\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t\tu \tu \tu\n1 \t2is a linear combination of \t, \t,..., \t.ku u \tu\nExample (Linear Combination)\n1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\n2 \t3\tQuestion: Compute the linear combination \t \t\tu \tv \tw\nAnswer: This is simple.\n2 \t3\t \t \t\tu \tv \tw\nExample (Linear Combination)\n1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\n0 4 8\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\nAnswer: We need to check whether there are real numbers\n, , \tsuch that\ta b c\n0 4 8\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n1 2 \t1 \t0 2 5 \t1 0 \t2 \t0 4 8\t( , , \t) \t( , , ) \t( , , \t) \t( , , )\ta \tb \tc\t \t \t \t \t\nHow to check?\nExample (Linear Combination)\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2 \t3 \t3\n3\n3 \t2 \t5 \t4\na \tb \tc\na \tb\na \tb \tc\n \t \t\t\n  \t\t\n  \t \t\n2 \t1 \t3 \t3\n1 \t1 \t0 \t3\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\nExample (Linear Combination)\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\nGaussian\nElimination\nIs the linear system consistent?\tAre the solutions unique?\n2 \t1 \t3 \t3\n1 \t1 \t0 \t3\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\n3 \t3 \t3\n2 \t2 \t2\n2 \t1 \t3 \t3\n0\n0 \t0 \t0 \t0\n \t\n \t \t\n \t\n \t\n \t\nExample (Linear Combination)\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2\n1\na \tt\nb \tt\nc \tt \tt\n \t\t\n  \t \t\n  \t\n2 \t1 0\t( , , ) \t( , \t, )\ta b c \t \t\n2 2 1 3 \t1 \t1 2 \t0 3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\t \t \t \t\n1 \t2 1\t( , , ) \t( , \t, )\ta b c \t \t\n2 1 3 \t2 1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\t \t \t \t\nExample (Linear Combination)\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n1 2 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n2 1 3 \t1 \t1 2 \t3 0 5 \t1 2 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2 \t3 \t1\n2\n3 \t2 \t5 \t4\na \tb \tc\na \tb\na \tb \tc\n \t \t\t\n  \t\t\n  \t \t\n2 \t1 \t3 \t1\n1 \t1 \t0 \t2\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\nExample (Linear Combination)\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n1 2 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t1 2 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\nGaussian\nElimination\nIs the linear system consistent?\nNo!\n2 \t1 \t3 \t1\n1 \t1 \t0 \t2\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\n3 \t3 \t3\n2 \t2 \t2\n2 \t1 \t3 \t1\n0\n0 \t0 \t0 \t3\n \t\n \t \t\n \t\n \t\n \t\nExample (Linear Combination)\n1 \t2 \t3 \t41 0 0 0 \t0 1 0 0 \t0 0 1 0 \t0 0 0 1\tConsider \t( , , , ), \t( , , , ), \t( , , , ), \t( , , , )\t \t \t \t\te \te \te \te\n1 2 3 4\t( , , , ) \t\n1\n33 \t0 2\t( \t, , , )\t \t\n4\nAny ( \t, , \t, ) in \t:\tw x y z\n4\n1 \t2 \t3 \t4\nEvery vector \t( \t, , \t, ) in \tis a linear combination\nof \t, \t, \t, \t.\nw x y z\t\tu\ne \te \te \te\n3\nQuestion: Is every vector in \ta linear combination of \t, , \t?\tu v w\nExample (Linear Combination)\n1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\nDiscussion (Linear Combination)\n1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\nHow many different linear\ncombinations of \t, \tand\nare there?\nu v \twQuite a bit...\nWhat if I put ALL different\nlinear combinations of\n, \tand \tinto a set?\tu v \tw\nOMG...\nDefinition (Linear Span)\n1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.n\nkS \t \tu u \tu\n1 \t2is called the linear span of \t(or linear span of \t, \t,..., \t).kS \tu u \tu\n1 \t1 \t2 \t2 \t1 \t2{ \t... \t| \t, \t,..., \t}k \tk \tkc \tc \tc \tc c \tc\t \t \t \t\tu \tu \tu\n1 \t2The set of all linear combinations of \t, \t..., \t,ku u \tu\n1 \t2This set is denoted by span( ) or span{ \t, \t,..., \t}.kS \tu u \tu\nExample\n2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\tYes!\n3 3 4\tSo ( , , ) \tspan{ \t, , \t}\t \tu v w\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\tNo!\n1 2 4\tSo ( , , ) \tspan{ \t, , \t}\t \tu v w\nExample\n1 1 0 \t2 \t1 1\t{( , , ),( , \t, )}.\tS \t \t\n1 1 0 2 1 1\tspan( ) set of all linear combinations of ( , , ) and ( , , )\tS  \nEvery vector in span( ) is of the form\tS\n1 1 0 \t2 \t1 1\t( , , ) \t( , \t, ) where \t, \tare any real numbers.\ta \tb \ta b\t \t\n1 1 0 \t2 \t1 1\tSo span( ) \t{ ( , , ) \t( , \t, )| , \t}\tS \ta \tb \ta b\t \t \t \t\nExample\n2 \t3\t{( \t, \t, \t)| , \t}\tV \ta \tb a \tb \ta \ta b\t \t \t \t\n3\nis a subset of \t.\tV\tCan \tbe written as a linear span?\tV\n2 \t3\t( \t, \t, \t)\ta \tb a \tb \ta\t \t\n2 1 \t1 \t1 0 3\t( , , \t) \t( , , )\ta \tb\t \t \t\n2 1 \t1 \t1 0 3\tSo \t{ ( , , \t) \t( , , )| , \t}\tV \ta \tb \ta b\t \t \t \t\n2 1 \t1 \t1 0 3\tspan{( , , \t),( , , )}\t \t\nExample\n3\n1 0 1 \t1 1 0 \t0 1 1\tShow that span{( , , ),( , , ),( , , )} \t.\t\n3\n1 0 1 \t1 1 0 \t0 1 1\nWe need to show that every vector in \tcan be\nwritten as a linear combination of ( , , ),( , , ),( , , ).\n3\n1 1 1 \t1 2 0 \t2 1 3 \t2 3 1\tShow that span{( , , ),( , , ),( , , ),( , , )} \t.\t\n3\n1 1 1 \t1 2 0 \t2 1 3 \t2 3 1\nWe need to show that there is some vector in\nthat cannot be written as a linear combination of\n( , , ),( , , ),( , , ),( , , ).\nEnd of Lecture 08\nLecture 09:\nLinear combinations and linear spans (cont’d)\nSubspaces (till end of Section 3.3)",
+  "sections": [
+    {
+      "heading": "Lecture 07 recap1) How elementary row operations changes the",
+      "level": 1,
+      "text": "determinant of a matrix.\n2) Using elementary row operations to find the\ndeterminant of a matrix.\n0\t3) \tis invertible if and only if det( \t) \t.\t\tA \tA\n1\n4) det( \t), det( \t) and det( \t).\tc \nA \tAB \tA\n5) Definition of adjoint of a matrix. Inverse in terms\nof adjoint.\n6) Cramer's rule."
+    },
+    {
+      "heading": "Lecture 08",
+      "level": 2,
+      "text": "Euclidean n-spaces\nLinear combinations and\nlinear spans"
+    },
+    {
+      "heading": "How do we represent vectorsGeometrically, a vector is represented by a directed",
+      "level": 2,
+      "text": "line segment (or arrow).\ndirection of the arrow\nlength of the arrow (magnitude)\nTwo vectors \tand \tare said to be equal if they\nhave the same length and direction.\nu \tv\nu\tv"
+    },
+    {
+      "heading": "Vector operations",
+      "level": 2,
+      "text": "1) Addition: \tu \tv\t\nu\nv\n\tu \tv\tvu\n\tv \tu\n\tu + v \tv + u\n2) Negative of \t: \t\tu \tu\nu\tuchange in direction,\nno change in magnitude"
+    },
+    {
+      "heading": "Vector operations",
+      "level": 2,
+      "text": "3) Difference: \t(same as \t( \t))\t \t \tu \tv \tu \tv\nu\nv\tu \tv\nv\n4) Scalar multiple: \t( \t)\tk \tk \t\tu\nu1\n2 u2u1 2\t( \t. )\t \tu"
+    },
+    {
+      "heading": "Coordinate systems (2-space)",
+      "level": 2,
+      "text": "0 0\tPosition \twith its initial point at ( , )\tu\nu\n0 0\t( , )\tx\ny\nplane\txy \t\n1u\n2u1 \t2( \t, \t)\tu u1 \t2( \t, \t)\tu u\t\tu\ncomponents of \tu"
+    },
+    {
+      "heading": "Coordinate systems (3-space)",
+      "level": 2,
+      "text": "0 0 0\tPosition \twith its initial point at ( , , )\tu\nu\n0 0 0\t( , , )\ty\nz\nspace\txyz \t\tx\n1 \t2 \t3( \t, \t, \t)\tu u \tu\n1u\n2u\n3u1 \t2 \t3( \t, \t, \t)\tu u \tu\t\tu\ncomponents of \tu"
+    },
+    {
+      "heading": "Addition and scalar multiplication",
+      "level": 2,
+      "text": "1) Addition: add component-wise.\n1 \t2 \t1 \t2 \t1 \t1 \t2 \t2( \t, \t) \t( \t, \t) \t( \t, \t)\tu u \tv v \tu \tv u \tv\t \t \t \t\n1 \t2 \t3 \t1 \t2 \t3 \t1 \t1 \t2 \t2 \t3 \t3( \t, \t, \t) \t( \t, \t, \t) \t( \t, \t, \t)\tu u \tu \tv v \tv \tu \tv u \tv \tu \tv\t \t \t \t \t\n2) Scalar multiplication: multiply to each component.\n1 \t2( \t, \t)\tk \tku \tku\t\tu1 \t2( \t, \t),\tu u \tk\t \t\tu\n1 \t2 \t3( \t, \t, \t)\tk \tku \tku \tku\t\tu1 \t2 \t3( \t, \t, \t),\tu u \tu \tk\t \t\tu"
+    },
+    {
+      "heading": "Definitions (n-vectors and operations)",
+      "level": 2,
+      "text": "1 \t2-vector: ( \t, \t,..., \t,..., \t)i \tnn \tu u \tu \tu\n1 \t2, \t,..., \tare real numbers.nu u \tu\n1 : 1st component (or 1st coordinate) of the vector\tu\n: \tth component (or th coordinate) of the vectoriu \ti \ti\nEquality: \tif and only if\t\tu \tv\n1 2\tfor all \t, ,..., .i \tiu \tv \ti \tn\t \t\n1 \t2 \t1 \t2( \t, \t,..., \t) \t( \t, \t,..., \t)n \tnu u \tu \tv v \tv\t \t\tu \tv"
+    },
+    {
+      "heading": "Definitions (n-vectors and operations)",
+      "level": 2,
+      "text": "1 \t1 \t2 \t2Addition: \t( \t, \t,..., \t)n \tnu \tv u \tv \tu \tv\t \t \t \t \t\tu \tv\n1 \t2 \t1 \t2( \t, \t,..., \t) \t( \t, \t,..., \t)n \tnu u \tu \tv v \tv\t \t\tu \tv\n1 \t2Scalar multiplication: \t, \t( \t, \t,..., \t)nc \tc \tcu \tcu \tcu\t \t\tu\n1 \t2Negative: \t( \t, \t,..., \t)nu \tu \tu\t \t  \t \t\tu\n1 \t1 \t2 \t2Subtraction: \t( \t, \t,..., \t)n \tnu \tv u \tv \tu \tv\t \t \t \t \t\tu \tv\n0 0 \t0\tZero vector: \t( , ,..., )\t\t0"
+    },
+    {
+      "heading": "Example (vector operations)",
+      "level": 2,
+      "text": "3 4 5 1 \t1 0 1 2\t( , , , ) \t( \t, , , )\t \t \tu \tv\n2\t \t\tu \tv\n2 \t3\t \t\tu \tv\n0 0 0 0 0 \t2\tIf \t( , , , , ), what is \t?\t \t\tw \tu \tw"
+    },
+    {
+      "heading": "Vectors and matrices",
+      "level": 2,
+      "text": "1 \t2Identifying an \t-vector ( \t, \t,..., \t) with:nn \tu u \tu\n \t1 \t21 \tmatrix \t... \t(row vector)nn \tu \tu \tu\t\nor\n1\n2\n1 \tmatrix \t(column vector)\n:\nn\nu\nu\nn\nu\n \t\n \t\n \t  \t\n \t\n \t"
+    },
+    {
+      "heading": "Properties of vector operations",
+      "level": 2,
+      "text": "1) \t \t \t\tu \tv \tv \tu\nLet \t, , \tbe \t-vectors and \t, \tbe real numbers.\tn \ta b\tu v w\n2) \t( \t) \t( \t)\t \t \t \t \t\tu \tv \tw \tu \tv \tw\n3) \t \t \t\tu \tu \tu\t0 \t0 +\n4) \t( \t)\t  \t\tu \tu \t0\n5) \t( \t) \t( \t)\ta b \tab\t\tu \tu\n6) \t( \t)\ta \ta \ta\t \t \t\tu \tv \tu \tv\n7) ( \t)\ta \tb \ta \tb\t \t \t\tu \tu \tu\n1\t8) \t\tu \tu\nProof: Not discussed here."
+    },
+    {
+      "heading": "Definition (Euclidean n-space)",
+      "level": 2,
+      "text": "1 \t2 1\nEuclidean \t-space, denoted by \t, is the set of all\n-vectors ( \t, \t,..., \t) where \t, \t,..., , is a real number.\nn\nn \ti\nn\nn \tu u \tu \tu \ti \tn\t\n1 \t2 \t1( \t, \t,..., \t) \tif and only if \t,..., \t.n\nn \tnu u \tu \tu \tu\t \t \t\tu\nNote:\n1) For any positive integer \t, \tis a set.n\nn\n2) How many vectors does \tcontain?nInfinitely many!\n2 \t3\n3) Do \tand \thave any vector in common?\tNo!\n2 \t3\t( , \t)\t\t1 5 3 \t0\t( \t. , \t, )\n\t"
+    },
+    {
+      "heading": "Example (Subsets of Rn)",
+      "level": 2,
+      "text": "1 \t2 \t30 \tand\tu \tu \tu\t \t \n3\nis a subset of\tS\t0 1 \t1\t( , , \t) \tS\t \t\t0 0 0\t( , , ) \tS\t\t1 0 0\t( , , ) \tS\t\nWe can also write \tas\tS\n0\t{( , \t, \t)| \t}\tS \ta \ta \ta\t \t \t\n1 \t2 \t3 \t1 \t2 \t30\t{( \t, \t, \t)| \tand \t}\tS \tu u \tu \tu \tu \tu\t \t \t \n3\n1 \t2 \t3contains vectors ( \t, \t, \t) from \tsuch that\tS \tu u \tu"
+    },
+    {
+      "heading": "Example (Subsets of Rn)",
+      "level": 2,
+      "text": "0 2 \t2 \t1\t{( \t, , \t, )| \t, \t}\tS \tw x y z \tw \tx \ty \tz \tw \tx \ty \tz\t \t \t \t \t \t \t \t \t\n4\ncontains vectors ( \t, , \t, ) from \tsuch that \t, , \t,\nsatisfies\nS \tw x y z \tw x y z\n0\n2 \t2 \t1\nw \tx \ty \tz\nw \tx \ty \tz\n \t \t \t\t\n  \t \t \t\nis the solution set of the above linear system.\tS\nNote that the solution set of a linear system involving\nvariables will be a subset of \t.n\nn\n4\nis a subset of \t.\tS"
+    },
+    {
+      "heading": "Example (Subsets of Rn)",
+      "level": 2,
+      "text": "0 2 \t2 \t1\t{( \t, , \t, )| \t, \t}\tS \tw x y z \tw \tx \ty \tz \tw \tx \ty \tz\t \t \t \t \t \t \t \t \t\nSolving the linear system, we have a general solution\n1\n3\n1\n3\n,\nw \tt\nx \ts\ny \ts\nz \tt \ts t\n \t\t\n  \t\t\n \n \t \t\n(Implicit)\nWe are now able to rewrite\nthe set \tin another way:\tS\n1 \t1\n3 \t3{( \t, \t, , )| , \t}\tS \tt \ts s t \ts t\t \t \t \t\t(Explicit)"
+    },
+    {
+      "heading": "Example (Subsets of Rn)2",
+      "level": 2,
+      "text": "Lines in\n2\nRecall that the equation \tin two variables \t,\nrepresents a line in \t.\nax \tby \tc \tx y\t \t\n{( , \t)| \t}, \t, \tnot both zero.\tx y \tax \tby \tc \ta b\t \t \t\n(Implicit) representation:\n0\t{( , \t)| \t}, if \t.\nc \tat\nt \tt \tb\nb\n  \t\n(Explicit) representation:\n0\t{( \t, )| \t}, if \t;\nc \tbt t \tt \ta\na\n  \t\nSolving"
+    },
+    {
+      "heading": "Example (Subsets of Rn)3",
+      "level": 2,
+      "text": "Planes in\n3\nRecall that the equation \tin three variables\n, \t, \trepresents a plane in \t.\nax \tby \tcz \td\nx y z\n \t \t\n{( , \t, )| \t}, \t, , \tnot all zero.\tx y z \tax \tby \tcz \td \ta b c\t \t \t \t\nWhat about explicit representation?\n(Implicit) representation:\n3\tSolving \t. One equation, \tunknowns.\tax \tby \tcz \td\t \t \t"
+    },
+    {
+      "heading": "Example (Subsets of Rn)3",
+      "level": 2,
+      "text": "Planes in\n3\nRecall that the equation \tin three variables\n, \t, \trepresents a plane in \t.\nax \tby \tcz \td\nx y z\n \t \t\nExplicit representations:0\t{( \t, , )| , \t}, if \t;\nd \tbs \tct s t \ts t \ta\na\n \t  \t\n0\t{( , \t, )| , \t}, if \t;\nd \tas \tct\ns \tt \ts t \tb\nb\n \t  \t\n0\t{( , , \t)| , \t}, if \t;\nd \tas \tbt\ns t \ts t \tc\nc\n \t  \t"
+    },
+    {
+      "heading": "Example (Subsets of Rn)",
+      "level": 2,
+      "text": "3\nHow do we represent lines in \t?\n3\nA line in \tis usually represented explicitly.\nSo what do\nwe need?\nA point and a\ndirection...or\ntwo points."
+    },
+    {
+      "heading": "0 \t0 \t0( \t, \t, \t)\ta \tb \tc\t(point on the line)",
+      "level": 2,
+      "text": "Example (Subsets of Rn)3\nA line in \tis represented by the set\n0 \t0 \t0( \t, \t, \t)\ta \tb \tc\norigin\n( , , )\tt a b c\t\t|t \t\n( , , )\ta b c\t(direction of the line)\n0 \t0 \t0( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n0 \t0 \t0 2\t( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n0 \t0 \t0( \t, \t, \t) \t( , , )\ta \tb \tc \ta b c\t\n{ \t}"
+    },
+    {
+      "heading": "Example (Subsets of Rn)",
+      "level": 2,
+      "text": "3\nA line in \tis represented by the set\n0 \t0 \t0{( \t, \t, \t) \t( , , )| \t}\ta \tb \tc \tt a b c \tt\t \t0 \t0 \t0{( \t, \t, \t)| \t}\ta \tta b \ttb c \ttc \tt\t \t \t \t \t\nRemember:\n3\n2\nA line in \tcannot be represented by a\nsingle linear equation like in \t."
+    },
+    {
+      "heading": "Notation",
+      "level": 2,
+      "text": "is a finite set. We use \tto denoted the number\nof elements in \t.\nS \tS\nS\n1 \t2 \t31 2 3 \t1 2 3 \t1 2 3 \t2 3 4\t{ , , }, \t{( , , )}, \t{( , , ),( , , )}\tS \tS \tS\t \t \t\n1 \t2 \t33 \t1 \t2\t, \t,\tS \tS \tS\t \t \t"
+    },
+    {
+      "heading": "Definition (Linear Combination)",
+      "level": 2,
+      "text": "1 2 \t1 \t0 2 5\tConsider \t( , , \t), \t( , , ).\t \t \t\tu \tv\n2 \t3 \t2 10 13\t( , \t, \t)\t \t\tu \tv\t2 \t1 \t2 \t11\t( , \t, \t)\t \t \t \t\tu \tv\n2 10 13 \t1 \t2 \t11\t( , \t, \t) and ( , \t, \t) are both linear combinations\nof \tand \t.\n \t\nu \tv\n1 \t2Let \t, \t,..., \tbe vectors in \t.n\nku u \tu\n1 \t2For any real numbers \t, \t,..., \t, the vectorkc c \tc\n1 \t1 \t2 \t2 ... k \tkc \tc \tc\t \t \t\tu \tu \tu\n1 \t2is a linear combination of \t, \t,..., \t.ku u \tu"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\n2 \t3\tQuestion: Compute the linear combination \t \t\tu \tv \tw\nAnswer: This is simple.\n2 \t3\t \t \t\tu \tv \tw"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\n0 4 8\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\nAnswer: We need to check whether there are real numbers\n, , \tsuch that\ta b c\n0 4 8\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n1 2 \t1 \t0 2 5 \t1 0 \t2 \t0 4 8\t( , , \t) \t( , , ) \t( , , \t) \t( , , )\ta \tb \tc\t \t \t \t \t\nHow to check?"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2 \t3 \t3\n3\n3 \t2 \t5 \t4\na \tb \tc\na \tb\na \tb \tc\n \t \t\t\n  \t\t\n  \t \t\n2 \t1 \t3 \t3\n1 \t1 \t0 \t3\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\nGaussian\nElimination\nIs the linear system consistent?\tAre the solutions unique?\n2 \t1 \t3 \t3\n1 \t1 \t0 \t3\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\n3 \t3 \t3\n2 \t2 \t2\n2 \t1 \t3 \t3\n0\n0 \t0 \t0 \t0\n \t\n \t \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n3 3 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2\n1\na \tt\nb \tt\nc \tt \tt\n \t\t\n  \t \t\n  \t\n2 \t1 0\t( , , ) \t( , \t, )\ta b c \t \t\n2 2 1 3 \t1 \t1 2 \t0 3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\t \t \t \t\n1 \t2 1\t( , , ) \t( , \t, )\ta b c \t \t\n2 1 3 \t2 1 \t1 2 \t3 0 5 \t3 3 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\t \t \t \t"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n1 2 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\n2 1 3 \t1 \t1 2 \t3 0 5 \t1 2 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\n2 \t3 \t1\n2\n3 \t2 \t5 \t4\na \tb \tc\na \tb\na \tb \tc\n \t \t\t\n  \t\t\n  \t \t\n2 \t1 \t3 \t1\n1 \t1 \t0 \t2\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\n1 2 4\t( , , )\ta \tb \tc\t \t \t\tu \tv \tw\t2 1 3 \t1 \t1 2 \t3 0 5 \t1 2 4\t( , , ) \t( , \t, ) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t\nGaussian\nElimination\nIs the linear system consistent?\nNo!\n2 \t1 \t3 \t1\n1 \t1 \t0 \t2\n3 \t2 \t5 \t4\n \t\n \t\n \t\n \t\n \t\n3 \t3 \t3\n2 \t2 \t2\n2 \t1 \t3 \t1\n0\n0 \t0 \t0 \t3\n \t\n \t \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example (Linear Combination)",
+      "level": 2,
+      "text": "1 \t2 \t3 \t41 0 0 0 \t0 1 0 0 \t0 0 1 0 \t0 0 0 1\tConsider \t( , , , ), \t( , , , ), \t( , , , ), \t( , , , )\t \t \t \t\te \te \te \te\n1 2 3 4\t( , , , ) \t\n1\n33 \t0 2\t( \t, , , )\t \t\n4\nAny ( \t, , \t, ) in \t:\tw x y z\n4\n1 \t2 \t3 \t4\nEvery vector \t( \t, , \t, ) in \tis a linear combination\nof \t, \t, \t, \t.\nw x y z\t\tu\ne \te \te \te"
+    },
+    {
+      "heading": "3",
+      "level": 2,
+      "text": "Question: Is every vector in \ta linear combination of \t, , \t?\tu v w\nExample (Linear Combination)\n1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw"
+    },
+    {
+      "heading": "Discussion (Linear Combination)",
+      "level": 2,
+      "text": "1 2 \t1 \t0 2 5 \t1 0 \t2\tConsider \t( , , \t), \t( , , ), \t( , , \t).\t \t \t \t \t\tu \tv \tw\nHow many different linear\ncombinations of \t, \tand\nare there?\nu v \twQuite a bit...\nWhat if I put ALL different\nlinear combinations of\n, \tand \tinto a set?\tu v \tw\nOMG..."
+    },
+    {
+      "heading": "Definition (Linear Span)",
+      "level": 2,
+      "text": "1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.n\nkS \t \tu u \tu\n1 \t2is called the linear span of \t(or linear span of \t, \t,..., \t).kS \tu u \tu\n1 \t1 \t2 \t2 \t1 \t2{ \t... \t| \t, \t,..., \t}k \tk \tkc \tc \tc \tc c \tc\t \t \t \t\tu \tu \tu\n1 \t2The set of all linear combinations of \t, \t..., \t,ku u \tu\n1 \t2This set is denoted by span( ) or span{ \t, \t,..., \t}.kS \tu u \tu"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 1 3 \t1 \t1 2 \t3 0 5\tConsider \t( , , ), \t( , \t, ), \t( , , ).\t \t \t \t\tu \tv \tw\n3 3 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\tYes!\n3 3 4\tSo ( , , ) \tspan{ \t, , \t}\t \tu v w\n1 2 4\tQuestion: Is ( , , ) a linear combination of \t, , \t?\tu v w\tNo!\n1 2 4\tSo ( , , ) \tspan{ \t, , \t}\t \tu v w"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 1 0 \t2 \t1 1\t{( , , ),( , \t, )}.\tS \t \t\n1 1 0 2 1 1\tspan( ) set of all linear combinations of ( , , ) and ( , , )\tS  \nEvery vector in span( ) is of the form\tS\n1 1 0 \t2 \t1 1\t( , , ) \t( , \t, ) where \t, \tare any real numbers.\ta \tb \ta b\t \t\n1 1 0 \t2 \t1 1\tSo span( ) \t{ ( , , ) \t( , \t, )| , \t}\tS \ta \tb \ta b\t \t \t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t3\t{( \t, \t, \t)| , \t}\tV \ta \tb a \tb \ta \ta b\t \t \t \t\n3\nis a subset of \t.\tV\tCan \tbe written as a linear span?\tV\n2 \t3\t( \t, \t, \t)\ta \tb a \tb \ta\t \t\n2 1 \t1 \t1 0 3\t( , , \t) \t( , , )\ta \tb\t \t \t\n2 1 \t1 \t1 0 3\tSo \t{ ( , , \t) \t( , , )| , \t}\tV \ta \tb \ta b\t \t \t \t\n2 1 \t1 \t1 0 3\tspan{( , , \t),( , , )}\t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "3\n1 0 1 \t1 1 0 \t0 1 1\tShow that span{( , , ),( , , ),( , , )} \t.\t\n3\n1 0 1 \t1 1 0 \t0 1 1\nWe need to show that every vector in \tcan be\nwritten as a linear combination of ( , , ),( , , ),( , , ).\n3\n1 1 1 \t1 2 0 \t2 1 3 \t2 3 1\tShow that span{( , , ),( , , ),( , , ),( , , )} \t.\t\n3\n1 1 1 \t1 2 0 \t2 1 3 \t2 3 1\nWe need to show that there is some vector in\nthat cannot be written as a linear combination of\n( , , ),( , , ),( , , ),( , , )."
+    },
+    {
+      "heading": "End of Lecture 08",
+      "level": 2,
+      "text": "Lecture 09:\nLinear combinations and linear spans (cont’d)\nSubspaces (till end of Section 3.3)"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# Env
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+model_env/
+model_libs/
+
+# Node
+node_modules/
+.next/
+.nuxt/
+
+# AI model (quá lớn, không commit)
+AI/mindmap-model/*.safetensors
+AI/mindmap-model/mindmap-model/
+AI/mindmap-model.zip
+AI/mindmap-train-dataset.zip
+AI/mindmap_ai.zip
+AI/raw/
+
+# Storage uploads
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

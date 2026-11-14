@@ -1,0 +1,381 @@
+"""
+mindmap.py – Endpoint sinh Mindmap + Flashcards từ tài liệu đã upload.
+
+POST  /api/mindmap/{document_id}         → sinh mới (Ollama model)
+GET   /api/mindmap/{document_id}         → lấy kết quả đã lưu
+GET   /api/mindmap/{document_id}/reactflow → lấy định dạng ReactFlow
+GET   /api/mindmap/health                → kiểm tra Ollama
+
+Flow:
+  1. Lấy document từ DB (phải ở status=extracted)
+  2. Gọi Ollama service → JSON {mindmap, flashcards}
+  3. Chuyển sang định dạng ReactFlow
+  4. Lưu kết quả vào DB (trường mindmap_data) và trả về
+"""
+
+from __future__ import annotations
+
+import json
+import logging
+import sys
+import uuid
+from pathlib import Path
+from typing import Any, Optional
+
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
+from sqlalchemy import select, update
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.core.config import settings
+from app.core.database import get_db
+from app.models.document import Document, DocumentStatus
+from app.schemas.document import ErrorResponse
+from app.services.mindmap_engine import generate as engine_generate
+from app.services.ollama_service import (
+    OllamaServiceError,
+    check_ollama_health,
+    generate_mindmap_from_text,
+)
+
+logger = logging.getLogger(__name__)
+
+router = APIRouter(prefix="/api/mindmap", tags=["mindmap"])
+
+
+# ── Health ────────────────────────────────────────────────────────────────────
+
+@router.get("/health", summary="Kiểm tra Ollama service")
+async def mindmap_health() -> dict[str, Any]:
+    """Kiểm tra Ollama đang chạy và model mindmap-model đã sẵn sàng."""
+    return await check_ollama_health()
+
+
+# ── POST /{id} – Sinh mindmap mới ────────────────────────────────────────────
+
+@router.post(
+    "/{document_id}",
+    summary="Sinh Mindmap + Flashcards từ tài liệu",
+    responses={
+        400: {"model": ErrorResponse},
+        404: {"model": ErrorResponse},
+        503: {"model": ErrorResponse, "description": "Ollama chưa sẵn sàng"},
+    },
+)
+async def generate_mindmap(
+    document_id: uuid.UUID,
+    mode: str = Query("engine", description="Chế độ: 'engine' (bóc tách cấu trúc theo Heading/Mục lục) hoặc 'ai' (dùng Ollama LLM)"),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """
+    Sinh Mindmap + Flashcards từ tài liệu đã được trích xuất thành công.
+
+    - Tài liệu phải có status = **extracted**.
+    - Chế độ `engine`: Bóc tách cấu trúc tài liệu theo các cấp Heading (H1, H2, H3), định nghĩa và danh sách. Siêu nhanh và bám sát cấu trúc bài học.
+    - Chế độ `ai`: Gọi mô hình AI Ollama để tóm tắt.
+    - Kết quả được lưu vào cột `mindmap_data` trong DB.
+    """
+    doc = await _get_or_404(db, document_id)
+
+    if doc.status != DocumentStatus.extracted:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={
+                "code": "NOT_EXTRACTED",
+                "message": (
+                    f"Tài liệu chưa được trích xuất (status hiện tại: {doc.status.value}). "
+                    "Upload và chờ trích xuất hoàn tất trước."
+                ),
+            },
+        )
+
+    if not doc.extracted_text:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "EMPTY_TEXT", "message": "Tài liệu không có nội dung văn bản."},
+        )
+
+    if mode == "ai":
+        # Gọi Ollama LLM
+        try:
+            result = await generate_mindmap_from_text(doc.extracted_text)
+        except OllamaServiceError as exc:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail={"code": "OLLAMA_ERROR", "message": str(exc)},
+            ) from exc
+    else:
+        # Bóc tách cấu trúc tự nhiên bằng Engine theo Heading / Bullet points
+        title = Path(doc.original_filename).stem
+        result = engine_generate(
+            {"extracted_text": doc.extracted_text, "original_filename": doc.original_filename},
+            title=title,
+        )
+        result["backend"] = "structure_engine"
+        result["model"] = "Bóc tách cấu trúc mục lục (Heading & Bullet points)"
+
+    # Chuyển đổi sang định dạng ReactFlow
+    if result.get("mindmap"):
+        try:
+            result["reactflow"] = _mindmap_to_reactflow(result["mindmap"])
+        except Exception:
+            result["reactflow"] = None
+
+    # Lưu vào DB nếu cột mindmap_data tồn tại
+    try:
+        await db.execute(
+            update(Document)
+            .where(Document.id == document_id)
+            .values(mindmap_data=json.dumps(result, ensure_ascii=False))
+        )
+        await db.commit()
+    except Exception:
+        # Cột chưa migrate OK – không crash endpoint
+        await db.rollback()
+        logger.warning("Không lưu được mindmap_data vào DB (migration chưa chạy?).")
+
+    result["document_id"] = str(document_id)
+    return result
+
+
+# ── GET /{id} – Lấy kết quả đã lưu ──────────────────────────────────────────
+
+@router.get(
+    "/{document_id}",
+    summary="Lấy kết quả Mindmap đã sinh",
+    responses={
+        404: {"model": ErrorResponse},
+        400: {"model": ErrorResponse},
+    },
+)
+async def get_mindmap(
+    document_id: uuid.UUID,
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """Lấy kết quả Mindmap đã được sinh trước đó (từ cột mindmap_data trong DB)."""
+    doc = await _get_or_404(db, document_id)
+
+    mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
+    if not mindmap_data:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={
+                "code": "NO_MINDMAP",
+                "message": "Chưa có mindmap cho tài liệu này. Hãy POST /api/mindmap/{id} trước.",
+            },
+        )
+
+    data = json.loads(mindmap_data)
+    data["document_id"] = str(document_id)
+    return data
+
+
+# ── GET /{id}/reactflow ───────────────────────────────────────────────────────
+
+@router.get(
+    "/{document_id}/reactflow",
+    summary="Lấy dữ liệu ReactFlow của Mindmap",
+    responses={404: {"model": ErrorResponse}, 400: {"model": ErrorResponse}},
+)
+async def get_reactflow(
+    document_id: uuid.UUID,
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """Trả về nodes + edges ở định dạng ReactFlow để frontend render ngay."""
+    doc = await _get_or_404(db, document_id)
+    mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
+
+    if not mindmap_data:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "NO_MINDMAP", "message": "Chưa có mindmap. POST trước."},
+        )
+
+    data = json.loads(mindmap_data)
+    reactflow = data.get("reactflow") or _mindmap_to_reactflow(data.get("mindmap", {}))
+    return {"document_id": str(document_id), "reactflow": reactflow}
+
+
+# ── GET /{id}/export/svg ──────────────────────────────────────────────────────
+
+@router.get(
+    "/{document_id}/export/svg",
+    summary="Xuất Mindmap thành file vector SVG",
+    responses={404: {"model": ErrorResponse}, 400: {"model": ErrorResponse}},
+)
+async def export_mindmap_svg(
+    document_id: uuid.UUID,
+    db: AsyncSession = Depends(get_db),
+) -> Response:
+    """Tải sơ đồ Mindmap dưới dạng file vector SVG chất lượng cao (không vỡ nét)."""
+    doc = await _get_or_404(db, document_id)
+    mindmap_data: Optional[str] = getattr(doc, "mindmap_data", None)
+
+    if not mindmap_data:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "NO_MINDMAP", "message": "Chưa có mindmap để xuất. Hãy sinh mindmap trước."},
+        )
+
+    data = json.loads(mindmap_data)
+    mindmap = data.get("mindmap", {})
+    svg_content = _generate_svg_from_mindmap(mindmap)
+
+    stem = Path(doc.original_filename).stem
+    filename = f"{stem}_mindmap.svg"
+
+    return Response(
+        content=svg_content,
+        media_type="image/svg+xml",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+async def _get_or_404(db: AsyncSession, document_id: uuid.UUID) -> Document:
+    result = await db.execute(select(Document).where(Document.id == document_id))
+    doc = result.scalar_one_or_none()
+    if doc is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "NOT_FOUND", "message": "Không tìm thấy tài liệu."},
+        )
+    return doc
+
+
+def _mindmap_to_reactflow(mindmap: dict[str, Any], dx: int = 280, dy: int = 70) -> dict[str, Any]:
+    """Chuyển đổi mindmap sang định dạng ReactFlow nodes + edges với vị trí tự động sắp xếp theo cây."""
+    nodes = mindmap.get("nodes", [])
+    if not nodes:
+        return {"nodes": [], "edges": []}
+
+    kids: dict[Optional[str], list[dict]] = {}
+    for n in nodes:
+        pid = n.get("parent_id")
+        if pid in (None, "null", ""):
+            pid = None
+        else:
+            pid = str(pid)
+        kids.setdefault(pid, []).append(n)
+
+    pos: dict[str, dict[str, int]] = {}
+    row = [0]
+
+    def walk(n: dict, depth: int) -> float:
+        nid = str(n["id"])
+        ch = kids.get(nid, [])
+        if not ch:
+            y = row[0] * dy
+            row[0] += 1
+        else:
+            ys = [walk(c, depth + 1) for c in ch]
+            y = sum(ys) / len(ys)
+        pos[nid] = {"x": depth * dx, "y": int(y)}
+        return y
+
+    for r in kids.get(None, []):
+        walk(r, 0)
+
+    # Đảm bảo các node rời rạc cũng có vị trí
+    for n in nodes:
+        nid = str(n["id"])
+        if nid not in pos:
+            pos[nid] = {"x": 0, "y": row[0] * dy}
+            row[0] += 1
+
+    return {
+        "nodes": [
+            {
+                "id": str(n["id"]),
+                "data": {"label": n.get("label", "")},
+                "position": pos.get(str(n["id"]), {"x": 0, "y": 0}),
+            }
+            for n in nodes
+        ],
+        "edges": [
+            {
+                "id": f"e-{n['parent_id']}-{n['id']}",
+                "source": str(n["parent_id"]),
+                "target": str(n["id"]),
+            }
+            for n in nodes
+            if n.get("parent_id") not in (None, "null", "")
+        ],
+    }
+
+
+def _generate_svg_from_mindmap(mindmap: dict[str, Any]) -> str:
+    """Sinh chuỗi XML SVG hoàn chỉnh từ dữ liệu mindmap."""
+    rf = _mindmap_to_reactflow(mindmap, dx=260, dy=65)
+    nodes = rf.get("nodes", [])
+    edges = rf.get("edges", [])
+
+    if not nodes:
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"><text x="20" y="100" fill="#fff">Không có dữ liệu</text></svg>'
+
+    colors = ["#5a6cf0", "#a855f7", "#06b6d4", "#10b981", "#f59e0b", "#ec4899"]
+    node_map = {str(n["id"]): n for n in nodes}
+
+    max_x = max((n["position"]["x"] + len(n["data"]["label"]) * 9 + 50 for n in nodes), default=600)
+    max_y = max((n["position"]["y"] + 60 for n in nodes), default=400)
+    width = max(max_x + 80, 700)
+    height = max(max_y + 80, 400)
+
+    svg_parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" style="background-color:#0f0f1a; font-family:sans-serif;">',
+        '<defs>',
+        '  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">',
+        '    <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.06)" />',
+        '  </pattern>',
+        '  <linearGradient id="root" x1="0%" y1="0%" x2="100%" y2="100%">',
+        '    <stop offset="0%" stop-color="#4f46e5" />',
+        '    <stop offset="100%" stop-color="#7c3aed" />',
+        '  </linearGradient>',
+        '</defs>',
+        f'<rect width="{width}" height="{height}" fill="#0f0f1a" />',
+        f'<rect width="{width}" height="{height}" fill="url(#grid)" />',
+        '<g class="edges">',
+    ]
+
+    # Vẽ edges
+    for idx, e in enumerate(edges):
+        src = node_map.get(str(e["source"]))
+        tgt = node_map.get(str(e["target"]))
+        if not src or not tgt:
+            continue
+        src_w = max(130, min(240, len(src["data"]["label"]) * 9 + 30))
+        x1 = src["position"]["x"] + src_w + 30
+        y1 = src["position"]["y"] + 45
+        x2 = tgt["position"]["x"] + 30
+        y2 = tgt["position"]["y"] + 45
+        cx = (x1 + x2) / 2
+        color = colors[idx % len(colors)]
+        svg_parts.append(
+            f'  <path d="M {x1} {y1} C {cx} {y1}, {cx} {y2}, {x2} {y2}" fill="none" stroke="{color}" stroke-width="2.2" stroke-opacity="0.8" />'
+        )
+
+    svg_parts.append('</g><g class="nodes">')
+
+    # Vẽ nodes
+    for idx, n in enumerate(nodes):
+        label = n["data"]["label"]
+        x = n["position"]["x"] + 30
+        y = n["position"]["y"] + 25
+        w = max(130, min(240, len(label) * 9 + 30))
+        h = 40
+        is_root = n["position"]["x"] == 0
+        fill = 'url(#root)' if is_root else '#1e1e35'
+        stroke = 'rgba(255,255,255,0.4)' if is_root else colors[idx % len(colors)]
+        text_color = '#ffffff' if is_root else '#e2e8f0'
+
+        svg_parts.append(f'  <g transform="translate({x},{y})">')
+        svg_parts.append(f'    <rect width="{w}" height="{h}" rx="10" fill="{fill}" stroke="{stroke}" stroke-width="1.5" />')
+        if not is_root:
+            svg_parts.append(f'    <rect x="0" y="4" width="4" height="{h-8}" rx="2" fill="{stroke}" />')
+        text_x = w / 2 if is_root else 14
+        anchor = 'middle' if is_root else 'start'
+        svg_parts.append(f'    <text x="{text_x}" y="{h/2 + 4}" fill="{text_color}" font-size="12" font-weight="500" text-anchor="{anchor}">{label}</text>')
+        svg_parts.append('  </g>')
+
+    svg_parts.append('</g></svg>')
+    return "\n".join(svg_parts)

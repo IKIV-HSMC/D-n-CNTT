@@ -1,0 +1,1709 @@
+{
+  "title": "UNILEARN – ỨNG DỤNG HỖ TRỢ HỌC TẬP CHO SINH VIÊN ĐẠI HỌC",
+  "mindmap": {
+    "nodes": [
+      {
+        "id": "n0",
+        "label": "UNILEARN – ỨNG DỤNG HỖ TRỢ HỌC TẬP CHO SINH VIÊN ĐẠI HỌC",
+        "parent_id": null
+      },
+      {
+        "id": "n1",
+        "label": "PHÁT BIỂU BÀI TOÁN",
+        "parent_id": "n0"
+      },
+      {
+        "id": "n2",
+        "label": "Mục tiêu hệ thống",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n3",
+        "label": "Thông tin học tập phân tán",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n4",
+        "label": "Bỏ lỡ hạn nộp bài và lịch thi",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n5",
+        "label": "Khó theo dõi tiến độ",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n6",
+        "label": "Tìm tài liệu tốn thời gian",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n7",
+        "label": "Trao đổi học tập chưa tập trung",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n8",
+        "label": "Bài toán thiết kế",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n9",
+        "label": "Quản lý học tập (Manage)",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n10",
+        "label": "Hỗ trợ học tập (Learn)",
+        "parent_id": "n2"
+      },
+      {
+        "id": "n11",
+        "label": "Tiêu chí đánh giá mức độ thành công",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n12",
+        "label": "đo lường",
+        "parent_id": "n11"
+      },
+      {
+        "id": "n13",
+        "label": "Chỉ số hiệu quả tác vụ",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n14",
+        "label": "Tốc độ truy xuất thông tin",
+        "parent_id": "n13"
+      },
+      {
+        "id": "n15",
+        "label": "Chi phí thao tác tối thiểu",
+        "parent_id": "n13"
+      },
+      {
+        "id": "n16",
+        "label": "Chỉ số khả dụng và dễ học",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n17",
+        "label": "Hiển thị tiến độ tức thì",
+        "parent_id": "n16"
+      },
+      {
+        "id": "n18",
+        "label": "Cơ chế nhắc nhở chủ động",
+        "parent_id": "n16"
+      },
+      {
+        "id": "n19",
+        "label": "Không cần đào tạo",
+        "parent_id": "n16"
+      },
+      {
+        "id": "n20",
+        "label": "Chỉ số mức độ hài lòng",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n21",
+        "label": "Điểm hài lòng tổng thể",
+        "parent_id": "n20"
+      },
+      {
+        "id": "n22",
+        "label": "Các chức năng cốt lõi hỗ trợ mục tiêu",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n23",
+        "label": "Trung tâm quản lý học tập (Manage)",
+        "parent_id": "n22"
+      },
+      {
+        "id": "n24",
+        "label": "Nội dung và đánh giá học tập (Learn)",
+        "parent_id": "n22"
+      },
+      {
+        "id": "n25",
+        "label": "Phân tích tiến độ và kết quả (Track)",
+        "parent_id": "n22"
+      },
+      {
+        "id": "n26",
+        "label": "Không gian cộng tác học tập (Connect)",
+        "parent_id": "n22"
+      },
+      {
+        "id": "n27",
+        "label": "Nhóm khách hàng mục tiêu",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n28",
+        "label": "Khách hàng chính 01",
+        "parent_id": "n27"
+      },
+      {
+        "id": "n29",
+        "label": "Hồ sơ và bối cảnh học tập",
+        "parent_id": "n27"
+      },
+      {
+        "id": "n30",
+        "label": "Nỗi đau",
+        "parent_id": "n27"
+      },
+      {
+        "id": "n31",
+        "label": "Giá trị mang lại",
+        "parent_id": "n27"
+      },
+      {
+        "id": "n32",
+        "label": "Khách hàng chính 02: Giảng viên",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n33",
+        "label": "Hồ sơ và bối cảnh giảng dạy",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n34",
+        "label": "Nỗi đau",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n35",
+        "label": "Giá trị mang lại",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n36",
+        "label": "Khách hàng tiềm năng",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n37",
+        "label": "Hồ sơ và hoạt động",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n38",
+        "label": "Nỗi đau",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n39",
+        "label": "Giá trị mang lại",
+        "parent_id": "n32"
+      },
+      {
+        "id": "n40",
+        "label": "Brainstorm chức năng",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n41",
+        "label": "Cấp 1: Các nhóm chức năng cốt lõi",
+        "parent_id": "n40"
+      },
+      {
+        "id": "n42",
+        "label": "Nhóm 1",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n43",
+        "label": "Nhóm 2",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n44",
+        "label": "Nhóm 3",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n45",
+        "label": "Nhóm 4",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n46",
+        "label": "Nhóm 5",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n47",
+        "label": "Nhóm 6",
+        "parent_id": "n41"
+      },
+      {
+        "id": "n48",
+        "label": "Cấp 2: Phân rã chức năng chi tiết",
+        "parent_id": "n40"
+      },
+      {
+        "id": "n49",
+        "label": "năng brainstorm",
+        "parent_id": "n48"
+      },
+      {
+        "id": "n50",
+        "label": "Danh sách chức năng hệ thống",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n51",
+        "label": "Đăng nhập",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n52",
+        "label": "Đăng xuất",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n53",
+        "label": "Quản lý hồ sơ",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n54",
+        "label": "Xem môn học",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n55",
+        "label": "Chi tiết môn",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n56",
+        "label": "Tài liệu",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n57",
+        "label": "Tìm kiếm",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n58",
+        "label": "Tải tài liệu",
+        "parent_id": "n50"
+      },
+      {
+        "id": "n59",
+        "label": "Phân tích đối thủ cạnh tranh",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n60",
+        "label": "Kết luận rút ra cho yêu cầu hệ thống",
+        "parent_id": "n59"
+      },
+      {
+        "id": "n61",
+        "label": "Phân tích SWOT",
+        "parent_id": "n1"
+      },
+      {
+        "id": "n62",
+        "label": "tư cách",
+        "parent_id": "n61"
+      },
+      {
+        "id": "n63",
+        "label": "PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG",
+        "parent_id": "n0"
+      },
+      {
+        "id": "n64",
+        "label": "Chân dung người dùng",
+        "parent_id": "n63"
+      },
+      {
+        "id": "n65",
+        "label": "PERSONA 01: SINH VIÊN NĂM NHẤT – Nguyễn Minh Anh",
+        "parent_id": "n64"
+      },
+      {
+        "id": "n66",
+        "label": "Câu nói đại diện",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n67",
+        "label": "Mục tiêu & động lực",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n68",
+        "label": "Nắm lịch trong tuần ngay lập tức",
+        "parent_id": "n67"
+      },
+      {
+        "id": "n69",
+        "label": "Nhắc deadline tự động",
+        "parent_id": "n67"
+      },
+      {
+        "id": "n70",
+        "label": "Tải nhanh slide bài giảng",
+        "parent_id": "n67"
+      },
+      {
+        "id": "n71",
+        "label": "Nỗi đau & khó khăn",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n72",
+        "label": "Thông báo bị phân tán",
+        "parent_id": "n71"
+      },
+      {
+        "id": "n73",
+        "label": "Trải nghiệm LMS di động kém",
+        "parent_id": "n71"
+      },
+      {
+        "id": "n74",
+        "label": "Hành vi số & kỳ vọng hệ thống",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n75",
+        "label": "Mức độ sử dụng công nghệ",
+        "parent_id": "n74"
+      },
+      {
+        "id": "n76",
+        "label": "Hoạt động trực tuyến & ngoại tuyến",
+        "parent_id": "n74"
+      },
+      {
+        "id": "n77",
+        "label": "Tương tác chức năng",
+        "parent_id": "n74"
+      },
+      {
+        "id": "n78",
+        "label": "Kỳ vọng trải nghiệm",
+        "parent_id": "n74"
+      },
+      {
+        "id": "n79",
+        "label": "Tình huống điển hình & giá trị mang lại",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n80",
+        "label": "Điểm kích hoạt (Key Trigger Point)",
+        "parent_id": "n79"
+      },
+      {
+        "id": "n81",
+        "label": "Câu hỏi của người dùng",
+        "parent_id": "n79"
+      },
+      {
+        "id": "n82",
+        "label": "Tình huống điển hình",
+        "parent_id": "n79"
+      },
+      {
+        "id": "n83",
+        "label": "Giá trị mang lại",
+        "parent_id": "n79"
+      },
+      {
+        "id": "n84",
+        "label": "Empathy Map – Nguyễn Minh Anh",
+        "parent_id": "n65"
+      },
+      {
+        "id": "n85",
+        "label": "Says – Nói gì",
+        "parent_id": "n84"
+      },
+      {
+        "id": "n86",
+        "label": "Thinks – Nghĩ gì",
+        "parent_id": "n84"
+      },
+      {
+        "id": "n87",
+        "label": "Does – Làm gì",
+        "parent_id": "n84"
+      },
+      {
+        "id": "n88",
+        "label": "Feels – Cảm thấy",
+        "parent_id": "n84"
+      },
+      {
+        "id": "n89",
+        "label": "Insight -> Yêu cầu thiết kế",
+        "parent_id": "n84"
+      },
+      {
+        "id": "n90",
+        "label": "PERSONA 02: SINH VIÊN NĂM BA – Trần Quốc Huy",
+        "parent_id": "n64"
+      },
+      {
+        "id": "n91",
+        "label": "Câu nói đại diện",
+        "parent_id": "n90"
+      },
+      {
+        "id": "n92",
+        "label": "Mục tiêu & động lực",
+        "parent_id": "n90"
+      },
+      {
+        "id": "n93",
+        "label": "Phân loại mức ưu tiên deadline",
+        "parent_id": "n92"
+      },
+      {
+        "id": "n94",
+        "label": "Nộp bài nhanh, có xác nhận",
+        "parent_id": "n92"
+      },
+      {
+        "id": "n95",
+        "label": "Thảo luận đúng ngữ cảnh",
+        "parent_id": "n92"
+      },
+      {
+        "id": "n96",
+        "label": "Nỗi đau & khó khăn",
+        "parent_id": "n90"
+      },
+      {
+        "id": "n97",
+        "label": "Tốn công kiểm tra lại",
+        "parent_id": "n96"
+      },
+      {
+        "id": "n98",
+        "label": "Giao diện nộp bài rườm rà",
+        "parent_id": "n96"
+      },
+      {
+        "id": "n99",
+        "label": "Sao chép deadline thủ công",
+        "parent_id": "n96"
+      },
+      {
+        "id": "n100",
+        "label": "Hành vi số & kỳ vọng hệ thống",
+        "parent_id": "n90"
+      },
+      {
+        "id": "n101",
+        "label": "Mức độ sử dụng công nghệ",
+        "parent_id": "n100"
+      },
+      {
+        "id": "n102",
+        "label": "Hoạt động trực tuyến & ngoại tuyến",
+        "parent_id": "n100"
+      },
+      {
+        "id": "n103",
+        "label": "Tương tác chức năng",
+        "parent_id": "n100"
+      },
+      {
+        "id": "n104",
+        "label": "Kỳ vọng trải nghiệm",
+        "parent_id": "n100"
+      },
+      {
+        "id": "n105",
+        "label": "Tình huống điển hình & giá trị mang lại",
+        "parent_id": "n90"
+      },
+      {
+        "id": "n106",
+        "label": "Điểm kích hoạt (Key Trigger Point)",
+        "parent_id": "n105"
+      },
+      {
+        "id": "n107",
+        "label": "Câu hỏi của người dùng",
+        "parent_id": "n105"
+      },
+      {
+        "id": "n108",
+        "label": "Tình huống điển hình",
+        "parent_id": "n105"
+      },
+      {
+        "id": "n109",
+        "label": "Giá trị mang lại",
+        "parent_id": "n105"
+      },
+      {
+        "id": "n110",
+        "label": "PERSONA 03: SINH VIÊN NĂM CUỐI – Lê Ngọc Mai",
+        "parent_id": "n64"
+      },
+      {
+        "id": "n111",
+        "label": "Câu nói đại diện",
+        "parent_id": "n110"
+      },
+      {
+        "id": "n112",
+        "label": "Mục tiêu & động lực",
+        "parent_id": "n110"
+      },
+      {
+        "id": "n113",
+        "label": "Theo dõi tiến độ trực quan",
+        "parent_id": "n112"
+      },
+      {
+        "id": "n114",
+        "label": "Tra cứu tài liệu chính xác",
+        "parent_id": "n112"
+      },
+      {
+        "id": "n115",
+        "label": "Dự báo GPA",
+        "parent_id": "n112"
+      },
+      {
+        "id": "n116",
+        "label": "Nỗi đau & khó khăn",
+        "parent_id": "n110"
+      },
+      {
+        "id": "n117",
+        "label": "Dữ liệu học tập bị chia cắt",
+        "parent_id": "n116"
+      },
+      {
+        "id": "n118",
+        "label": "Khó tìm lại tài liệu cũ",
+        "parent_id": "n116"
+      },
+      {
+        "id": "n119",
+        "label": "Hành vi số & kỳ vọng hệ thống",
+        "parent_id": "n110"
+      },
+      {
+        "id": "n120",
+        "label": "Mức độ sử dụng công nghệ",
+        "parent_id": "n119"
+      },
+      {
+        "id": "n121",
+        "label": "Hoạt động trực tuyến & ngoại tuyến",
+        "parent_id": "n119"
+      },
+      {
+        "id": "n122",
+        "label": "Tương tác chức năng",
+        "parent_id": "n119"
+      },
+      {
+        "id": "n123",
+        "label": "Kỳ vọng trải nghiệm",
+        "parent_id": "n119"
+      },
+      {
+        "id": "n124",
+        "label": "Tình huống điển hình & giá trị mang lại",
+        "parent_id": "n110"
+      },
+      {
+        "id": "n125",
+        "label": "Điểm kích hoạt (Key Trigger Point)",
+        "parent_id": "n124"
+      },
+      {
+        "id": "n126",
+        "label": "Câu hỏi của người dùng",
+        "parent_id": "n124"
+      },
+      {
+        "id": "n127",
+        "label": "Tình huống điển hình",
+        "parent_id": "n124"
+      },
+      {
+        "id": "n128",
+        "label": "Giá trị mang lại",
+        "parent_id": "n124"
+      },
+      {
+        "id": "n129",
+        "label": "PERSONA 04: GIẢNG VIÊN – ThS. Nguyễn Hoàng Nam",
+        "parent_id": "n64"
+      },
+      {
+        "id": "n130",
+        "label": "Câu nói đại diện",
+        "parent_id": "n129"
+      },
+      {
+        "id": "n131",
+        "label": "Mục tiêu & động lực",
+        "parent_id": "n129"
+      },
+      {
+        "id": "n132",
+        "label": "Giao bài nhanh chóng",
+        "parent_id": "n131"
+      },
+      {
+        "id": "n133",
+        "label": "Quản lý bài nộp tập trung",
+        "parent_id": "n131"
+      },
+      {
+        "id": "n134",
+        "label": "Trả lời một lần cho cả lớp",
+        "parent_id": "n131"
+      },
+      {
+        "id": "n135",
+        "label": "Nỗi đau & khó khăn",
+        "parent_id": "n129"
+      },
+      {
+        "id": "n136",
+        "label": "Bài nộp phân tán",
+        "parent_id": "n135"
+      },
+      {
+        "id": "n137",
+        "label": "Thông báo không kiểm chứng được",
+        "parent_id": "n135"
+      },
+      {
+        "id": "n138",
+        "label": "Hành vi số & kỳ vọng hệ thống",
+        "parent_id": "n129"
+      },
+      {
+        "id": "n139",
+        "label": "Mức độ sử dụng công nghệ",
+        "parent_id": "n138"
+      },
+      {
+        "id": "n140",
+        "label": "Hoạt động trực tuyến & ngoại tuyến",
+        "parent_id": "n138"
+      },
+      {
+        "id": "n141",
+        "label": "Tương tác chức năng",
+        "parent_id": "n138"
+      },
+      {
+        "id": "n142",
+        "label": "Kỳ vọng trải nghiệm",
+        "parent_id": "n138"
+      },
+      {
+        "id": "n143",
+        "label": "Tình huống điển hình & giá trị mang lại",
+        "parent_id": "n129"
+      },
+      {
+        "id": "n144",
+        "label": "Điểm kích hoạt (Key Trigger Point)",
+        "parent_id": "n143"
+      },
+      {
+        "id": "n145",
+        "label": "Câu hỏi của người dùng",
+        "parent_id": "n143"
+      },
+      {
+        "id": "n146",
+        "label": "Tình huống điển hình",
+        "parent_id": "n143"
+      },
+      {
+        "id": "n147",
+        "label": "Giá trị mang lại",
+        "parent_id": "n143"
+      },
+      {
+        "id": "n148",
+        "label": "Kịch bản người dùng và Storyboard",
+        "parent_id": "n63"
+      },
+      {
+        "id": "n149",
+        "label": "Storyboard 01: Quản lý và xử lý deadline kịp thời",
+        "parent_id": "n148"
+      },
+      {
+        "id": "n150",
+        "label": "Bối cảnh",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n151",
+        "label": "Bước 1 - Khởi động ứng dụng",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n152",
+        "label": "Bước 2 - Nắm bắt thông tin tại Dashboard",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n153",
+        "label": "Bước 3 - Truy cập chi tiết bài tập",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n154",
+        "label": "Bước 4 - Tải đề và thực hiện",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n155",
+        "label": "Bước 5 - Nộp bài và nhận xác nhận",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n156",
+        "label": "Kết quả mong đợi",
+        "parent_id": "n149"
+      },
+      {
+        "id": "n157",
+        "label": "Storyboard 02: Tìm kiếm và tải tài liệu môn học thần tốc",
+        "parent_id": "n148"
+      },
+      {
+        "id": "n158",
+        "label": "Bối cảnh",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n159",
+        "label": "Bước 1 - Truy cập môn học",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n160",
+        "label": "Bước 2 - Chuyển sang phân hệ Tài liệu",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n161",
+        "label": "Bước 3 - Tìm kiếm và lọc thông minh",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n162",
+        "label": "Bước 4 - Xem trước tài liệu",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n163",
+        "label": "Bước 5 - Tải tài liệu ngoại tuyến",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n164",
+        "label": "Kết quả mong đợi",
+        "parent_id": "n157"
+      },
+      {
+        "id": "n165",
+        "label": "Storyboard 03: Theo dõi tiến độ môn học và chuẩn bị ôn…",
+        "parent_id": "n148"
+      },
+      {
+        "id": "n166",
+        "label": "Bối cảnh",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n167",
+        "label": "Bước 1 - Mở màn hình chính",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n168",
+        "label": "Bước 2 - Điều hướng đến mục Tiến độ",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n169",
+        "label": "Bước 3 - Chọn môn học cần kiểm tra",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n170",
+        "label": "Bước 4 - Phân tích dữ liệu học tập",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n171",
+        "label": "Bước 5 - Nhận diện phần còn thiếu",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n172",
+        "label": "Kết quả mong đợi",
+        "parent_id": "n165"
+      },
+      {
+        "id": "n173",
+        "label": "Storyboard 04: Giảng viên khởi tạo bài tập và phát hành…",
+        "parent_id": "n148"
+      },
+      {
+        "id": "n174",
+        "label": "Bối cảnh",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n175",
+        "label": "Bước 1 - Đăng nhập tài khoản giảng viên",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n176",
+        "label": "Bước 2 - Chọn lớp học phần",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n177",
+        "label": "Bước 3 - Khởi tạo bài tập mới",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n178",
+        "label": "Bước 4 - Thiết lập thông tin và hạn nộp",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n179",
+        "label": "Bước 5 - Đăng bài và phát thông báo",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n180",
+        "label": "Kết quả mong đợi",
+        "parent_id": "n173"
+      },
+      {
+        "id": "n181",
+        "label": "Danh sách ưu tiên chức năng theo mô hình MoSCoW",
+        "parent_id": "n63"
+      },
+      {
+        "id": "n182",
+        "label": "• Nhóm MUST HAVE (Từ mục 1 đến 10)",
+        "parent_id": "n181"
+      },
+      {
+        "id": "n183",
+        "label": "• Nhóm SHOULD HAVE (Từ mục 11 đến 16)",
+        "parent_id": "n181"
+      },
+      {
+        "id": "n184",
+        "label": "• Nhóm COULD HAVE (Từ mục 17 đến 21)",
+        "parent_id": "n181"
+      },
+      {
+        "id": "n185",
+        "label": "FLOW SCREEN",
+        "parent_id": "n0"
+      },
+      {
+        "id": "n186",
+        "label": "Tổng quan flow screen",
+        "parent_id": "n185"
+      },
+      {
+        "id": "n187",
+        "label": "liệt kê",
+        "parent_id": "n186"
+      },
+      {
+        "id": "n188",
+        "label": "Danh sách sáu flow chính",
+        "parent_id": "n185"
+      },
+      {
+        "id": "n189",
+        "label": "Flow 1 – Đăng nhập",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n190",
+        "label": "Bắt đầu",
+        "parent_id": "n189"
+      },
+      {
+        "id": "n191",
+        "label": "Flow 2 – Xem môn học và tài liệu",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n192",
+        "label": "Bắt đầu",
+        "parent_id": "n191"
+      },
+      {
+        "id": "n193",
+        "label": "Flow 3 – Nộp bài",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n194",
+        "label": "Bắt đầu",
+        "parent_id": "n193"
+      },
+      {
+        "id": "n195",
+        "label": "Flow 4 – Làm Quiz",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n196",
+        "label": "Bắt đầu",
+        "parent_id": "n195"
+      },
+      {
+        "id": "n197",
+        "label": "Flow 5 – Theo dõi tiến độ",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n198",
+        "label": "Bắt đầu",
+        "parent_id": "n197"
+      },
+      {
+        "id": "n199",
+        "label": "Flow 6 – Tìm tài liệu",
+        "parent_id": "n188"
+      },
+      {
+        "id": "n200",
+        "label": "Bắt đầu",
+        "parent_id": "n199"
+      },
+      {
+        "id": "n201",
+        "label": "Các flow bổ sung",
+        "parent_id": "n199"
+      },
+      {
+        "id": "n202",
+        "label": "Flow Hỏi đáp trên Forum",
+        "parent_id": "n185"
+      },
+      {
+        "id": "n203",
+        "label": "biểu mẫu",
+        "parent_id": "n202"
+      },
+      {
+        "id": "n204",
+        "label": "Flow phía giảng viên",
+        "parent_id": "n185"
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Thông tin học tập phân tán” là gì / nói về điều gì?",
+      "back": "Lịch học, tài liệu và deadline nằm ở nhiều nơi rời rạc, không có một nguồn thông tin thống nhất.",
+      "node_id": "n3"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Bỏ lỡ hạn nộp bài và lịch thi” là gì / nói về điều gì?",
+      "back": "Sinh viên dễ quên hạn nộp bài hoặc lịch thi do thông báo bị trôi trong các nhóm chat có lưu lượng tin nhắn lớn.",
+      "node_id": "n4"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Khó theo dõi tiến độ” là gì / nói về điều gì?",
+      "back": "Không có góc nhìn tổng hợp về mức độ hoàn thành từng môn, điểm số tích lũy và tiến độ học tập chung.",
+      "node_id": "n5"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Tìm tài liệu tốn thời gian” là gì / nói về điều gì?",
+      "back": "Việc tìm lại một slide bài giảng hoặc tài liệu tham khảo đòi hỏi phải kéo lại lịch sử tin nhắn hoặc thao tác trên cổng thông tin chậm, khó tìm kiếm.",
+      "node_id": "n6"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Trao đổi học tập chưa tập trung” là gì / nói về điều gì?",
+      "back": "Các câu hỏi và thảo luận về môn học rải rác ở nhiều nhóm không chính thức, gây trùng lặp câu hỏi và thất lạc câu trả lời.",
+      "node_id": "n7"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Bài toán thiết kế” là gì / nói về điều gì?",
+      "back": "Sinh viên cần một nền tảng duy nhất để quản lý, theo dõi và hỗ trợ toàn bộ quá trình học tập. Từ đó, UniLearn được xây dựng xoay quanh bốn nhu cầu cốt lõi – Quản lý, Học tập, Theo dõi và Kết nối – tương ứng với bốn mục tiêu thiết kế chính của hệ thống:",
+      "node_id": "n8"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Quản lý học tập (Manage)” là gì / nói về điều gì?",
+      "back": "Tập trung môn học, lịch học, bài tập và deadline vào một không gian làm việc thống nhất, giúp mọi nghĩa vụ học tập đều hiển thị trên một màn hình Dashboard.",
+      "node_id": "n9"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Hỗ trợ học tập (Learn)” là gì / nói về điều gì?",
+      "back": "Cung cấp quyền truy cập có cấu trúc đến tài liệu, bài giảng, bài kiểm tra trực tuyến (quiz) và chức năng nộp bài trực tuyến ngay trong từng môn học.",
+      "node_id": "n10"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Theo dõi kết quả (Track)” là gì / nói về điều gì?",
+      "back": "Trực quan hóa tiến độ, điểm số và kết quả học tập theo thời gian thực, giúp sinh viên chủ động nhận diện điểm yếu và lên kế hoạch cải thiện.",
+      "node_id": "n2"
+    },
+    {
+      "front": "Trong “Mục tiêu hệ thống”, “Kết nối học tập (Connect)” là gì / nói về điều gì?",
+      "back": "Xây dựng diễn đàn (forum), khu vực hỏi đáp (Q&A) và kênh trao đổi theo từng môn học, thay thế các nhóm chat rời rạc bằng những cuộc thảo luận có tổ chức và dễ tra cứu.",
+      "node_id": "n2"
+    },
+    {
+      "front": "Điền vào chỗ trống: Để đánh giá mức độ thành công của UniLearn theo hướng thiết kế lấy người dùng làm trung tâm, nhóm xác lập bảy tiêu chí nghiệm thu có thể _____.",
+      "back": "đo lường",
+      "node_id": "n12"
+    },
+    {
+      "front": "Trong “Chỉ số hiệu quả tác vụ”, “Tốc độ truy xuất thông tin” là gì / nói về điều gì?",
+      "back": "Deadline phải được tìm thấy trong vòng 10 giây và tài liệu trong vòng 30 giây, loại bỏ nhu cầu kiểm tra chéo nhiều kênh.",
+      "node_id": "n14"
+    },
+    {
+      "front": "Trong “Chỉ số hiệu quả tác vụ”, “Chi phí thao tác tối thiểu” là gì / nói về điều gì?",
+      "back": "Mọi tác vụ chính (xem deadline, mở tài liệu, nộp bài) phải hoàn thành trong tối đa ba bước thao tác.",
+      "node_id": "n15"
+    },
+    {
+      "front": "Trong “Chỉ số khả dụng và dễ học”, “Hiển thị tiến độ tức thì” là gì / nói về điều gì?",
+      "back": "Phần trăm hoàn thành từng môn và tóm tắt điểm số phải hiển thị ngay trên Dashboard.",
+      "node_id": "n17"
+    },
+    {
+      "front": "Trong “Chỉ số khả dụng và dễ học”, “Cơ chế nhắc nhở chủ động” là gì / nói về điều gì?",
+      "back": "Thông báo tự động được gửi trước mỗi hạn nộp, giảm sự phụ thuộc vào trí nhớ hoặc lịch sử tin nhắn của sinh viên.",
+      "node_id": "n18"
+    },
+    {
+      "front": "Trong “Chỉ số khả dụng và dễ học”, “Không cần đào tạo” là gì / nói về điều gì?",
+      "back": "Người dùng lần đầu có thể tự thao tác các chức năng cốt lõi, qua đó kiểm chứng tính trực quan của kiến trúc thông tin.",
+      "node_id": "n19"
+    },
+    {
+      "front": "Trong “Chỉ số mức độ hài lòng”, “Điểm hài lòng tổng thể” là gì / nói về điều gì?",
+      "back": "Nền tảng hướng đến điểm hài lòng trung bình tối thiểu 4/5 từ nhóm sinh viên và giảng viên tham gia kiểm thử.",
+      "node_id": "n21"
+    },
+    {
+      "front": "Trong “Các chức năng cốt lõi hỗ trợ mục tiêu”, “Trung tâm quản lý học tập (Manage)” là gì / nói về điều gì?",
+      "back": "Danh sách và chi tiết môn học; lịch học và lịch thi hợp nhất; danh sách deadline tập trung kèm đồng hồ đếm ngược; trung tâm thông báo tổng hợp từ tất cả các môn.",
+      "node_id": "n23"
+    },
+    {
+      "front": "Trong “Các chức năng cốt lõi hỗ trợ mục tiêu”, “Nội dung và đánh giá học tập (Learn)” là gì / nói về điều gì?",
+      "back": "Kho tài liệu theo môn với chức năng tải lên, tìm kiếm theo từ khóa, lọc, xem trước và tải xuống; trình xem bài giảng; trang chi tiết bài tập nêu rõ yêu cầu và định dạng file; quiz trực tuyến có kết quả tức thì; nộp bài trực tuyến kèm biên nhận xác nhận.",
+      "node_id": "n24"
+    },
+    {
+      "front": "Trong “Các chức năng cốt lõi hỗ trợ mục tiêu”, “Phân tích tiến độ và kết quả (Track)” là gì / nói về điều gì?",
+      "back": "Thanh tiến độ theo từng môn (phần trăm khối lượng đã hoàn thành), bảng điểm, theo dõi tín chỉ tích lũy, GPA dự kiến và lịch sử học tập theo thời gian.",
+      "node_id": "n25"
+    },
+    {
+      "front": "Trong “Các chức năng cốt lõi hỗ trợ mục tiêu”, “Không gian cộng tác học tập (Connect)” là gì / nói về điều gì?",
+      "back": "Diễn đàn theo môn học với bài viết và bình luận, khu vực hỏi đáp cho phép giảng viên trả lời một lần cho cả lớp, cùng chức năng chat thời gian thực cho nhóm học tập.",
+      "node_id": "n26"
+    },
+    {
+      "front": "Trong “Nhóm khách hàng mục tiêu”, “Khách hàng chính 01” là gì / nói về điều gì?",
+      "back": "Sinh viên đại học",
+      "node_id": "n28"
+    },
+    {
+      "front": "Trong “Nhóm khách hàng mục tiêu”, “Hồ sơ và bối cảnh học tập” là gì / nói về điều gì?",
+      "back": "Sinh viên từ năm nhất đến năm cuối thuộc mọi ngành học, đăng ký nhiều học phần tín chỉ mỗi học kỳ; nhiều bạn vừa học vừa làm thêm hoặc thực tập. Đây là thế hệ sinh ra trong thời đại số, chủ yếu tiếp cận thông tin qua điện thoại thông minh.",
+      "node_id": "n29"
+    },
+    {
+      "front": "Trong “Nhóm khách hàng mục tiêu”, “Nỗi đau” là gì / nói về điều gì?",
+      "back": "Thông tin phân tán giữa cổng LMS, Google Classroom, nhóm Zalo và e-mail; bỏ lỡ deadline do thông báo bị trôi; giao diện LMS trên di động chậm, khó thao tác; không có góc nhìn tổng hợp về tiến độ và điểm số.",
+      "node_id": "n30"
+    },
+    {
+      "front": "Trong “Nhóm khách hàng mục tiêu”, “Giá trị mang lại” là gì / nói về điều gì?",
+      "back": "Một không gian làm việc duy nhất, ưu tiên thiết bị di động (mobile-first), giúp quản lý môn học, xem tài liệu, làm bài tập và quiz, theo dõi deadline với nhắc nhở tự động, cũng như theo dõi điểm số và tiến độ theo thời gian thực.",
+      "node_id": "n31"
+    },
+    {
+      "front": "Trong “Khách hàng chính 02: Giảng viên”, “Hồ sơ và bối cảnh giảng dạy” là gì / nói về điều gì?",
+      "back": "Giảng viên đại học phụ trách nhiều lớp học phần mỗi học kỳ, thường với tổng số hàng trăm sinh viên, phải phân phối tài liệu, thiết kế bài đánh giá và chấm bài.",
+      "node_id": "n33"
+    },
+    {
+      "front": "Trong “Khách hàng chính 02: Giảng viên”, “Nỗi đau” là gì / nói về điều gì?",
+      "back": "Mất nhiều thời gian tổng hợp bài nộp từ nhiều kênh khác nhau; phải trả lời lặp đi lặp lại cùng một câu hỏi; sinh viên viện lý do “không nhận được thông báo” để nộp trễ.",
+      "node_id": "n34"
+    },
+    {
+      "front": "Trong “Khách hàng chính 02: Giảng viên”, “Giá trị mang lại” là gì / nói về điều gì?",
+      "back": "Quản lý lớp học tập trung: đăng tài liệu, tạo bài tập và quiz kèm deadline chỉ trong vài bước, xem danh sách đã nộp/chưa nộp, chấm điểm trên một giao diện và gửi thông báo đến toàn bộ sinh viên.",
+      "node_id": "n35"
+    },
+    {
+      "front": "Trong “Khách hàng chính 02: Giảng viên”, “Khách hàng tiềm năng” là gì / nói về điều gì?",
+      "back": "Nhà trường và Phòng Đào tạo",
+      "node_id": "n36"
+    },
+    {
+      "front": "Trong “Khách hàng chính 02: Giảng viên”, “Hồ sơ và hoạt động” là gì / nói về điều gì?",
+      "back": "Phòng Đào tạo và ban quản lý các khoa có nhu cầu hiện đại hóa hạ tầng LMS cũ và số hóa quy trình đào tạo.",
+      "node_id": "n37"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 1” là gì / nói về điều gì?",
+      "back": "Quản lý học tập: Tổ chức không gian học tập thông qua danh sách môn học, chi tiết môn, tài liệu, bài tập, quiz, điểm số và tiến độ.",
+      "node_id": "n42"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 2” là gì / nói về điều gì?",
+      "back": "Quản lý thời gian: Hợp nhất lịch học, lịch thi, deadline, nhắc nhở (reminder) và giao diện lịch (calendar).",
+      "node_id": "n43"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 3” là gì / nói về điều gì?",
+      "back": "Tài liệu: Xử lý việc tải lên, tìm kiếm, lọc, xem trước và tải xuống tài liệu.",
+      "node_id": "n44"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 4” là gì / nói về điều gì?",
+      "back": "Bài tập: Bao gồm danh sách bài tập, chi tiết bài tập, tải file, nộp bài và xác nhận nộp bài.",
+      "node_id": "n45"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 5” là gì / nói về điều gì?",
+      "back": "Tương tác: Hỗ trợ diễn đàn, bài viết, bình luận, hỏi đáp và chat giữa sinh viên với giảng viên.",
+      "node_id": "n46"
+    },
+    {
+      "front": "Trong “Cấp 1: Các nhóm chức năng cốt lõi”, “Nhóm 6” là gì / nói về điều gì?",
+      "back": "Thông báo: Gửi thông báo về deadline, lịch học, bài tập mới và thông báo từ giảng viên.",
+      "node_id": "n47"
+    },
+    {
+      "front": "Điền vào chỗ trống: _____ từ vấn đề trung tâm – giúp sinh viên học tập hiệu quả hơn – nhóm xác định sáu nhóm chức năng nền tảng:",
+      "back": "Xuất phát",
+      "node_id": "n41"
+    },
+    {
+      "front": "Điền vào chỗ trống: Sáu nhóm chức _____ được hợp nhất thành sáu phân hệ (Tài khoản, Học tập, Bài tập, Quản lý, Theo dõi và Tương tác), tạo thành 24 chức năng chi tiết ở Cấp 2:",
+      "back": "năng brainstorm",
+      "node_id": "n49"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Đăng nhập” là gì / nói về điều gì?",
+      "back": "Xác thực an toàn, điều hướng theo vai trò sinh viên và giảng viên.",
+      "node_id": "n51"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Đăng xuất” là gì / nói về điều gì?",
+      "back": "Kết thúc phiên làm việc an toàn.",
+      "node_id": "n52"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Quản lý hồ sơ” là gì / nói về điều gì?",
+      "back": "Thông tin cá nhân, ảnh đại diện và tùy chọn nhận thông báo.",
+      "node_id": "n53"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Xem môn học” là gì / nói về điều gì?",
+      "back": "Thẻ môn học trong học kỳ kèm chỉ số tiến độ theo thời gian thực.",
+      "node_id": "n54"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Chi tiết môn” là gì / nói về điều gì?",
+      "back": "Tổng quan môn, đề cương, thông tin giảng viên và lối tắt đến tài nguyên môn học.",
+      "node_id": "n55"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Tài liệu” là gì / nói về điều gì?",
+      "back": "Kho tài liệu tập trung theo từng môn do giảng viên quản lý.",
+      "node_id": "n56"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Tìm kiếm” là gì / nói về điều gì?",
+      "back": "Tìm theo từ khóa kết hợp bộ lọc môn học, loại file và tuần học.",
+      "node_id": "n57"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Tải tài liệu” là gì / nói về điều gì?",
+      "back": "Xem trước và tải xuống bằng một chạm để học ngoại tuyến.",
+      "node_id": "n58"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Bài giảng” là gì / nói về điều gì?",
+      "back": "Nội dung bài giảng và bản ghi buổi học theo tuần.",
+      "node_id": "n50"
+    },
+    {
+      "front": "Trong “Danh sách chức năng hệ thống”, “Xem bài tập” là gì / nói về điều gì?",
+      "back": "Danh sách bài tập kèm yêu cầu, định dạng file, giới hạn dung lượng và hạn nộp.",
+      "node_id": "n50"
+    },
+    {
+      "front": "Trong “Phân tích đối thủ cạnh tranh”, “Kết luận rút ra cho yêu cầu hệ thống” là gì / nói về điều gì?",
+      "back": "Các giải pháp hiện tại đều bị phân mảnh. Moodle quá cồng kềnh trên di động, nhóm Zalo làm trôi thông tin quan trọng, còn Google Classroom thiếu khả năng quản lý tiến độ tổng thể. Do đó, UniLearn được định vị là nền tảng “all-in-one” gom toàn bộ hoạt động học tập về một nơi.",
+      "node_id": "n60"
+    },
+    {
+      "front": "Điền vào chỗ trống: Phân tích SWOT đánh giá năng lực nội tại và các yếu tố thị trường bên ngoài, qua đó xác định tính khả thi của UniLearn với _____ một sản phẩm mới:",
+      "back": "tư cách",
+      "node_id": "n62"
+    },
+    {
+      "front": "Trong “PERSONA 01: SINH VIÊN NĂM NHẤT – Nguyễn Minh Anh”, “Câu nói đại diện” là gì / nói về điều gì?",
+      "back": "“Lên đại học không có giáo viên chủ nhiệm nhắc bài như cấp 3, nhiều môn quá em rất sợ trôi deadline mà không hay biết!”",
+      "node_id": "n66"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Nắm lịch trong tuần ngay lập tức” là gì / nói về điều gì?",
+      "back": "Xem trọn lịch học, lịch kiểm tra trong tuần ngay khi mở ứng dụng.",
+      "node_id": "n68"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Nhắc deadline tự động” là gì / nói về điều gì?",
+      "back": "Nhận nhắc nhở tự động trước hạn nộp bài 1 ngày và 3 giờ.",
+      "node_id": "n69"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Tải nhanh slide bài giảng” là gì / nói về điều gì?",
+      "back": "Tải slide bài giảng từng tuần mà không phải lội lại tin nhắn.",
+      "node_id": "n70"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Thông báo bị phân tán” là gì / nói về điều gì?",
+      "back": "Bỏ lỡ deadline quan trọng vì thông báo nằm rải rác ở nhiều kênh.",
+      "node_id": "n72"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Trải nghiệm LMS di động kém” là gì / nói về điều gì?",
+      "back": "Giao diện LMS hiện tại của trường trên điện thoại giật lag, khó thao tác.",
+      "node_id": "n73"
+    },
+    {
+      "front": "Trong “Hành vi số & kỳ vọng hệ thống”, “Mức độ sử dụng công nghệ” là gì / nói về điều gì?",
+      "back": "Rất thạo mạng xã hội trên di động nhưng lúng túng với hệ thống LMS web phức tạp.",
+      "node_id": "n75"
+    },
+    {
+      "front": "Trong “Hành vi số & kỳ vọng hệ thống”, “Hoạt động trực tuyến & ngoại tuyến” là gì / nói về điều gì?",
+      "back": "Lướt TikTok, nhắn tin Zalo, tham gia CLB sinh viên tình nguyện, tự học tại thư viện trường.",
+      "node_id": "n76"
+    },
+    {
+      "front": "Trong “Hành vi số & kỳ vọng hệ thống”, “Tương tác chức năng” là gì / nói về điều gì?",
+      "back": "Sử dụng chủ yếu mục “Hôm nay” trên Dashboard, danh sách Deadline, trung tâm Thông báo và màn hình Tài liệu của môn học.",
+      "node_id": "n77"
+    },
+    {
+      "front": "Trong “Hành vi số & kỳ vọng hệ thống”, “Kỳ vọng trải nghiệm” là gì / nói về điều gì?",
+      "back": "Giao diện mobile-first, deadline gần nhất và nơi nộp bài hiển thị trong vòng 10 giây kể từ khi mở ứng dụng.",
+      "node_id": "n78"
+    },
+    {
+      "front": "Trong “Tình huống điển hình & giá trị mang lại”, “Điểm kích hoạt (Key Trigger Point)” là gì / nói về điều gì?",
+      "back": "Bị 0 điểm một bài kiểm tra quá trình chỉ vì thông báo bài tập bị trôi trong nhóm Zalo lớp 100 người.",
+      "node_id": "n80"
+    },
+    {
+      "front": "Trong “Tình huống điển hình & giá trị mang lại”, “Câu hỏi của người dùng” là gì / nói về điều gì?",
+      "back": "“Hôm nay mình có môn gì? Deadline gần nhất là mấy giờ và nộp ở đâu?”",
+      "node_id": "n81"
+    },
+    {
+      "front": "Trong “Tình huống điển hình & giá trị mang lại”, “Tình huống điển hình” là gì / nói về điều gì?",
+      "back": "Minh Anh mở UniLearn -> Dashboard hiển thị lịch học hôm nay và đếm ngược deadline gần nhất -> Trước hạn 1 ngày, em nhận được nhắc nhở tự động -> Chạm vào thông báo và chuyển đến màn hình Chi tiết bài tập với yêu cầu và định dạng file -> Tải file lên và nộp bài -> Nhận xác nhận nộp bài thành công.",
+      "node_id": "n82"
+    },
+    {
+      "front": "Trong “Tình huống điển hình & giá trị mang lại”, “Giá trị mang lại” là gì / nói về điều gì?",
+      "back": "Một nguồn thông tin duy nhất, đáng tin cậy về lịch học và deadline, giúp loại bỏ nỗi lo bỏ sót nhiệm vụ trong giai đoạn chuyển tiếp lên đại học.",
+      "node_id": "n83"
+    },
+    {
+      "front": "Trong “Empathy Map – Nguyễn Minh Anh”, “Says – Nói gì” là gì / nói về điều gì?",
+      "back": "“Lên đại học không ai nhắc bài như cấp 3, em sợ trôi deadline lắm!”; “Hôm nay mình có môn gì? Deadline gần nhất là mấy giờ?”; “Bài này nộp qua Classroom, Zalo hay e-mail vậy?”",
+      "node_id": "n85"
+    },
+    {
+      "front": "Trong “Empathy Map – Nguyễn Minh Anh”, “Thinks – Nghĩ gì” là gì / nói về điều gì?",
+      "back": "Sợ bỏ lỡ bài tập mà không hề hay biết; cho rằng LMS của trường trên điện thoại khó dùng, chậm; ước gì có một nơi gom hết lịch học, bài tập và tài liệu.",
+      "node_id": "n86"
+    },
+    {
+      "front": "Trong “Empathy Map – Nguyễn Minh Anh”, “Does – Làm gì” là gì / nói về điều gì?",
+      "back": "Mỗi ngày lần lượt mở Google Classroom, nhóm Zalo và e-mail; kéo lại tin nhắn nhóm lớp 100 người để tìm đề bài và hạn nộp; hỏi bạn cùng lớp; tự học tại thư viện bằng điện thoại.",
+      "node_id": "n87"
+    },
+    {
+      "front": "Trong “Empathy Map – Nguyễn Minh Anh”, “Feels – Cảm thấy” là gì / nói về điều gì?",
+      "back": "Hoang mang, bỡ ngỡ với môi trường đào tạo tín chỉ; lo lắng, căng thẳng mỗi khi gần hạn nộp bài; thất vọng, ấm ức khi bị 0 điểm vì trôi tin nhắn.",
+      "node_id": "n88"
+    },
+    {
+      "front": "Trong “Empathy Map – Nguyễn Minh Anh”, “Insight -> Yêu cầu thiết kế” là gì / nói về điều gì?",
+      "back": "Minh Anh cần một màn hình “Hôm nay” gom lịch học, deadline gần nhất và nơi nộp bài, kèm nhắc nhở tự động trước 1 ngày và 3 giờ, được tối ưu cho điện thoại.",
+      "node_id": "n89"
+    },
+    {
+      "front": "Nguyễn Minh Anh được chọn là gì?",
+      "back": "Nguyễn Minh Anh được chọn là persona đại diện nhất – sinh viên năm nhất bỡ ngỡ với học chế tín chỉ.",
+      "node_id": "n84"
+    },
+    {
+      "front": "Trong “PERSONA 02: SINH VIÊN NĂM BA – Trần Quốc Huy”, “Câu nói đại diện” là gì / nói về điều gì?",
+      "back": "“Một tuần gánh 4 bài tập lớn từ các môn khác nhau, mình cần biết môn nào ưu tiên gấp để phân bổ thời gian.”",
+      "node_id": "n91"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Phân loại mức ưu tiên deadline” là gì / nói về điều gì?",
+      "back": "Dashboard hiển thị deadline theo mức độ gấp: trong 24 giờ, trong 3 ngày và trong tuần này.",
+      "node_id": "n93"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Nộp bài nhanh, có xác nhận” là gì / nói về điều gì?",
+      "back": "Nộp file nén/PDF trong tối đa 3 thao tác, kèm biên nhận nộp bài thành công rõ ràng.",
+      "node_id": "n94"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Thảo luận đúng ngữ cảnh” là gì / nói về điều gì?",
+      "back": "Trao đổi bài tập với bạn học ngay dưới luồng bài viết của môn học.",
+      "node_id": "n95"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Tốn công kiểm tra lại” là gì / nói về điều gì?",
+      "back": "Mất nhiều thời gian kiểm tra chéo xem bài nộp đã lên hệ thống chính xác chưa.",
+      "node_id": "n97"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Giao diện nộp bài rườm rà” là gì / nói về điều gì?",
+      "back": "Quy trình nộp bài phức tạp, giới hạn dung lượng file nhưng không báo lỗi cụ thể.",
+      "node_id": "n98"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Sao chép deadline thủ công” là gì / nói về điều gì?",
+      "back": "Phải tự chép deadline từ từng môn sang lịch cá nhân bằng tay.",
+      "node_id": "n99"
+    },
+    {
+      "front": "Trong “PERSONA 03: SINH VIÊN NĂM CUỐI – Lê Ngọc Mai”, “Câu nói đại diện” là gì / nói về điều gì?",
+      "back": "“Mình cần một nơi gom toàn bộ tiến độ tín chỉ và điểm GPA tích lũy để yên tâm làm khóa luận, ra trường đúng hạn.”",
+      "node_id": "n111"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Theo dõi tiến độ trực quan” là gì / nói về điều gì?",
+      "back": "Theo dõi tiến độ học tập qua thanh tiến độ (progress bar): tín chỉ đã đạt / tín chỉ cần đạt.",
+      "node_id": "n113"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Tra cứu tài liệu chính xác” là gì / nói về điều gì?",
+      "back": "Tìm kiếm tài liệu khóa luận và bài giảng các năm trước nhờ bộ lọc chuẩn xác.",
+      "node_id": "n114"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Dự báo GPA” là gì / nói về điều gì?",
+      "back": "Xem GPA dự kiến để lên kế hoạch cải thiện điểm các môn học cuối cùng.",
+      "node_id": "n115"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Dữ liệu học tập bị chia cắt” là gì / nói về điều gì?",
+      "back": "Dữ liệu điểm số và tín chỉ nằm ở các phân hệ web khác nhau của trường.",
+      "node_id": "n117"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Khó tìm lại tài liệu cũ” là gì / nói về điều gì?",
+      "back": "Khó tìm lại tài liệu học tập của các học kỳ trước để làm đồ án tốt nghiệp.",
+      "node_id": "n118"
+    },
+    {
+      "front": "Trong “PERSONA 04: GIẢNG VIÊN – ThS. Nguyễn Hoàng Nam”, “Câu nói đại diện” là gì / nói về điều gì?",
+      "back": "“Tôi mất quá nhiều thời gian chỉ để trả lời những câu hỏi lặp đi lặp lại và lọc từng bài nộp sinh viên gửi qua e-mail.”",
+      "node_id": "n130"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Giao bài nhanh chóng” là gì / nói về điều gì?",
+      "back": "Tạo và công bố bài tập/deadline cho toàn bộ lớp chỉ trong vài bước.",
+      "node_id": "n132"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Quản lý bài nộp tập trung” là gì / nói về điều gì?",
+      "back": "Xem danh sách đã nộp/chưa nộp và chấm điểm tập trung trên một giao diện.",
+      "node_id": "n133"
+    },
+    {
+      "front": "Trong “Mục tiêu & động lực”, “Trả lời một lần cho cả lớp” là gì / nói về điều gì?",
+      "back": "Sử dụng diễn đàn Q&A tập trung để trả lời một lần cho các câu hỏi chung.",
+      "node_id": "n134"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Bài nộp phân tán” là gì / nói về điều gì?",
+      "back": "Mất thời gian tổng hợp danh sách nộp bài từ nhiều nguồn khác nhau.",
+      "node_id": "n136"
+    },
+    {
+      "front": "Trong “Nỗi đau & khó khăn”, “Thông báo không kiểm chứng được” là gì / nói về điều gì?",
+      "back": "Sinh viên viện cớ “không nhận được thông báo” để nộp trễ hạn.",
+      "node_id": "n137"
+    },
+    {
+      "front": "Storyboard (Kịch bản phân cảnh) là gì?",
+      "back": "Storyboard (Kịch bản phân cảnh) là phương pháp trực quan hóa hành trình trải nghiệm người dùng trong bối cảnh thực tế đời sống.",
+      "node_id": "n148"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bối cảnh” là gì / nói về điều gì?",
+      "back": "Tối Chủ nhật lúc 21:00, sinh viên sực nhớ trong tuần có bài tập cần nộp nhưng không nhớ chính xác môn nào và hạn chót là mấy giờ.",
+      "node_id": "n150"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bước 1 - Khởi động ứng dụng” là gì / nói về điều gì?",
+      "back": "Sinh viên mở ứng dụng UniLearn trên điện thoại -> Hệ thống xác thực phiên làm việc tức thì và tải dữ liệu trang chủ.",
+      "node_id": "n151"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bước 2 - Nắm bắt thông tin tại Dashboard” là gì / nói về điều gì?",
+      "back": "Dashboard hiển thị ngay widget Deadline khẩn cấp với cảnh báo màu đỏ: 'Bài tập Thiết kế UI/UX còn đúng 1 ngày (23h59 Thứ Hai)' -> Sinh viên giải tỏa nỗi lo âu.",
+      "node_id": "n152"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bước 3 - Truy cập chi tiết bài tập” là gì / nói về điều gì?",
+      "back": "Sinh viên chạm trực tiếp vào thẻ bài tập UI/UX trên Dashboard -> Hệ thống mở trang chi tiết bài tập chứa đề bài, thang điểm rubric và định dạng nộp yêu cầu.",
+      "node_id": "n153"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bước 4 - Tải đề và thực hiện” là gì / nói về điều gì?",
+      "back": "Sinh viên nhấn nút 'Tải đề bài' về laptop cá nhân -> Bắt tay làm bài tập hoàn chỉnh theo đúng các tiêu chí yêu cầu.",
+      "node_id": "n154"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Bước 5 - Nộp bài và nhận xác nhận” là gì / nói về điều gì?",
+      "back": "Sinh viên tải file bài nộp lên hệ thống lúc 23:00 -> Hệ thống kiểm tra hợp lệ, ghi nhận thời gian nộp đúng hạn và phát hành biên nhận nộp bài thành công.",
+      "node_id": "n155"
+    },
+    {
+      "front": "Trong “Storyboard 01: Quản lý và xử lý deadline kịp…”, “Kết quả mong đợi” là gì / nói về điều gì?",
+      "back": "Sinh viên hoàn thành nộp bài đúng hạn, xóa bỏ hoàn toàn tình trạng trôi tin nhắn hay quên bài tập.",
+      "node_id": "n156"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bối cảnh” là gì / nói về điều gì?",
+      "back": "Tại thư viện trường, sinh viên chuẩn bị bước vào buổi học thực hành nhưng cần tìm gấp file slide wireframe mẫu mà không nhớ giảng viên đã gửi qua Zalo, Drive hay Classroom.",
+      "node_id": "n158"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bước 1 - Truy cập môn học” là gì / nói về điều gì?",
+      "back": "Sinh viên mở ứng dụng UniLearn -> Chọn môn 'Thiết kế Giao diện Người dùng (UI/UX)' từ danh sách môn học.",
+      "node_id": "n159"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bước 2 - Chuyển sang phân hệ Tài liệu” là gì / nói về điều gì?",
+      "back": "Chạm vào tab 'Tài liệu' của môn học -> Toàn bộ học liệu, slide bài giảng và tài liệu đọc thêm được phân loại khoa học theo từng chương/tuần.",
+      "node_id": "n160"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bước 3 - Tìm kiếm và lọc thông minh” là gì / nói về điều gì?",
+      "back": "Nhập từ khóa 'wireframe' vào thanh tìm kiếm và chọn bộ lọc định dạng file 'PDF' -> Kết quả hiển thị tức thì chỉ sau 2 giây.",
+      "node_id": "n161"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bước 4 - Xem trước tài liệu” là gì / nói về điều gì?",
+      "back": "Chạm vào tài liệu để mở trình xem trước (Preview) trực tiếp trong app -> Kiểm tra nhanh nội dung để chắc chắn đúng tài liệu cần tìm.",
+      "node_id": "n162"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Bước 5 - Tải tài liệu ngoại tuyến” là gì / nói về điều gì?",
+      "back": "Nhấn nút 'Tải về' để lưu trữ ngoại tuyến -> Sinh viên tự tin bước vào giờ học thực hành với đầy đủ học liệu trong tay.",
+      "node_id": "n163"
+    },
+    {
+      "front": "Trong “Storyboard 02: Tìm kiếm và tải tài liệu môn học…”, “Kết quả mong đợi” là gì / nói về điều gì?",
+      "back": "Thời gian tìm kiếm tài liệu chuẩn xác chưa đầy 30 giây, loại bỏ hoàn toàn việc hỏi han xin tài liệu.",
+      "node_id": "n164"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bối cảnh” là gì / nói về điều gì?",
+      "back": "Khi học kỳ bước vào giai đoạn nước rút, sinh viên cảm thấy hoang mang về khối lượng kiến thức cần ôn tập trước thềm kỳ thi cuối kỳ.",
+      "node_id": "n166"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bước 1 - Mở màn hình chính” là gì / nói về điều gì?",
+      "back": "Sinh viên mở UniLearn -> Quan sát widget lịch thi sắp tới và nhận thấy môn UI/UX chỉ còn 2 tuần nữa là thi.",
+      "node_id": "n167"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bước 2 - Điều hướng đến mục Tiến độ” là gì / nói về điều gì?",
+      "back": "Chạm vào biểu tượng 'Tiến độ' trên thanh điều hướng chính (Bottom Navigation) -> Hệ thống tổng hợp bức tranh học vụ toàn diện.",
+      "node_id": "n168"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bước 3 - Chọn môn học cần kiểm tra” là gì / nói về điều gì?",
+      "back": "Chạm vào thẻ môn học 'Thiết kế UI/UX' -> Xem chi tiết phân tích từng đầu điểm và khối lượng công việc đã hoàn thành.",
+      "node_id": "n169"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bước 4 - Phân tích dữ liệu học tập” là gì / nói về điều gì?",
+      "back": "Hệ thống hiển thị thanh tiến độ đạt 72% khối lượng học phần, đi kèm điểm số quá trình hiện tại đạt 8.5/10.",
+      "node_id": "n170"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Bước 5 - Nhận diện phần còn thiếu” là gì / nói về điều gì?",
+      "back": "Mục 'Cần hoàn thành' chỉ rõ còn thiếu 2 bài Quiz ôn tập chương 4 và chương 5 -> Sinh viên ghi chú ngay vào kế hoạch học tập.",
+      "node_id": "n171"
+    },
+    {
+      "front": "Trong “Storyboard 03: Theo dõi tiến độ môn học và…”, “Kết quả mong đợi” là gì / nói về điều gì?",
+      "back": "Sinh viên nắm rõ lỗ hổng kiến thức và chủ động xây dựng kế hoạch ôn thi đạt điểm cao.",
+      "node_id": "n172"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bối cảnh” là gì / nói về điều gì?",
+      "back": "Kết thúc buổi giảng trên lớp, giảng viên cần giao bài tập lớn mới và mong muốn đảm bảo 100% sinh viên đều nắm rõ đề bài và hạn chót nộp bài.",
+      "node_id": "n174"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bước 1 - Đăng nhập tài khoản giảng viên” là gì / nói về điều gì?",
+      "back": "Giảng viên đăng nhập vào UniLearn trên máy tính tại văn phòng bộ môn -> Hệ thống hiển thị giao diện phân quyền giảng dạy.",
+      "node_id": "n175"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bước 2 - Chọn lớp học phần” là gì / nói về điều gì?",
+      "back": "Chọn lớp học phần 'Thiết kế Giao diện Người dùng - Lớp Chiều Thứ 2' từ danh sách phụ trách.",
+      "node_id": "n176"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bước 3 - Khởi tạo bài tập mới” là gì / nói về điều gì?",
+      "back": "Truy cập tab 'Bài tập' và nhấn nút '+ Tạo bài tập mới' -> Mở form nhập liệu được chuẩn hóa.",
+      "node_id": "n177"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bước 4 - Thiết lập thông tin và hạn nộp” là gì / nói về điều gì?",
+      "back": "Nhập tiêu đề, mô tả yêu cầu, đính kèm file rubric và cài đặt hạn nộp là 23:59 ngày 30/10.",
+      "node_id": "n178"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Bước 5 - Đăng bài và phát thông báo” là gì / nói về điều gì?",
+      "back": "Nhấn nút 'Đăng bài tập' -> Hệ thống tự động kích hoạt thông báo đẩy (Push Notification) đến điện thoại của toàn bộ sinh viên trong lớp.",
+      "node_id": "n179"
+    },
+    {
+      "front": "Trong “Storyboard 04: Giảng viên khởi tạo bài tập và…”, “Kết quả mong đợi” là gì / nói về điều gì?",
+      "back": "Toàn bộ sinh viên tiếp nhận thông tin ngay lập tức, chấm dứt việc khiếu nại 'không nhận được thông báo'.",
+      "node_id": "n180"
+    },
+    {
+      "front": "Trong “Danh sách ưu tiên chức năng theo mô hình MoSCoW”, “• Nhóm MUST HAVE (Từ mục 1 đến 10)” là gì / nói về điều gì?",
+      "back": "Bao gồm 10 chức năng cốt lõi bắt buộc phải hoàn thành trong phiên bản tối thiểu (MVP) giữa kỳ nhằm giải quyết dứt điểm các bài toán cấp bách nhất của người dùng.",
+      "node_id": "n182"
+    },
+    {
+      "front": "Trong “Danh sách ưu tiên chức năng theo mô hình MoSCoW”, “• Nhóm SHOULD HAVE (Từ mục 11 đến 16)” là gì / nói về điều gì?",
+      "back": "Bao gồm 6 chức năng quan trọng cần được triển khai ngay sau khi MVP vận hành ổn định để hoàn thiện trải nghiệm học vụ.",
+      "node_id": "n183"
+    },
+    {
+      "front": "Trong “Danh sách ưu tiên chức năng theo mô hình MoSCoW”, “• Nhóm COULD HAVE (Từ mục 17 đến 21)” là gì / nói về điều gì?",
+      "back": "Bao gồm 5 chức năng giá trị gia tăng hiện đại sẽ được bổ sung khi có đủ nguồn lực mở rộng trong tương lai.",
+      "node_id": "n184"
+    },
+    {
+      "front": "Điền vào chỗ trống: Trong quá trình phát triển _____, việc phân bổ nguồn lực kỹ thuật hợp lý là yếu tố quyết định thành bại của dự án.",
+      "back": "sản phẩm",
+      "node_id": "n181"
+    },
+    {
+      "front": "Điền vào chỗ trống: Bảng dưới đây _____ các nhóm này cùng đường dẫn và màn hình con của từng nhóm.",
+      "back": "liệt kê",
+      "node_id": "n187"
+    },
+    {
+      "front": "Trong “Flow 1 – Đăng nhập”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Màn hình Đăng nhập. Kết thúc: Dashboard sinh viên. Người dùng: Sinh viên. Đây là điểm vào của toàn hệ thống. Trước khi hiển thị biểu mẫu, hệ thống kiểm tra phiên đăng nhập hiện có: nếu người dùng truy cập một màn hình cần đăng nhập khi chưa có phiên thì được chuyển về /login.",
+      "node_id": "n190"
+    },
+    {
+      "front": "Trong “Flow 2 – Xem môn học và tài liệu”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Dashboard. Kết thúc: Chi tiết tài liệu. Người dùng: Sinh viên. Tab Tài liệu nằm trong màn Chi tiết môn học nên bước thứ ba và bước thứ tư dùng chung ngữ cảnh môn học.",
+      "node_id": "n192"
+    },
+    {
+      "front": "Trong “Flow 3 – Nộp bài”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Dashboard. Kết thúc: Xác nhận nộp bài. Người dùng: Sinh viên. Flow đi từ khối Sắp đến hạn trên Dashboard đến màn hình biên nhận sau khi nộp. Liên kết ở bước cuối mở màn xác nhận của một bài đã nộp có sẵn trong dữ liệu demo.",
+      "node_id": "n194"
+    },
+    {
+      "front": "Nhánh lỗi mạng hoặc lỗi máy chủ khi gửi bài là gì?",
+      "back": "Nhánh lỗi mạng hoặc lỗi máy chủ khi gửi bài là giả định của nhóm.",
+      "node_id": "n193"
+    },
+    {
+      "front": "Điền vào chỗ trống: _____ mạng hoặc lỗi máy chủ khi gửi bài là giả định của nhóm.",
+      "back": "Nhánh lỗi",
+      "node_id": "n193"
+    },
+    {
+      "front": "Trong “Flow 4 – Làm Quiz”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Chi tiết môn học. Kết thúc: Kết quả quiz. Người dùng: Sinh viên. Bước Nộp là một hành động trên màn Câu hỏi chứ không phải một màn hình riêng. Môn học không có quiz (ví dụ Cơ sở dữ liệu) không hiển thị lối vào quiz.",
+      "node_id": "n196"
+    },
+    {
+      "front": "Trong “Flow 5 – Theo dõi tiến độ”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Dashboard. Kết thúc: Chi tiết tiến độ một môn. Người dùng: Sinh viên. Ngoài lối vào từ Dashboard, sinh viên có thể vào thẳng màn Chi tiết tiến độ bằng nút Xem tiến độ trên mỗi thẻ môn ở màn Danh sách môn học. Bước Kế hoạch cải thiện là tùy chọn.",
+      "node_id": "n198"
+    },
+    {
+      "front": "Trong “Flow 6 – Tìm tài liệu”, “Bắt đầu” là gì / nói về điều gì?",
+      "back": "Dashboard. Kết thúc: Mở/Tải tài liệu. Người dùng: Sinh viên. Bước 4 và bước 5 dùng cùng một màn hình; bước cuối là hành động Mở hoặc Tải xuống trên màn Chi tiết tài liệu.",
+      "node_id": "n200"
+    },
+    {
+      "front": "Trong “Flow 6 – Tìm tài liệu”, “Các flow bổ sung” là gì / nói về điều gì?",
+      "back": "Forum Hỏi đáp và phía giảng viên",
+      "node_id": "n201"
+    },
+    {
+      "front": "Điền vào chỗ trống: Hai nhóm này được trình bày _____ dưới đây; nhánh lỗi chi tiết của chúng chưa nằm trong phạm vi sáu flow chính.",
+      "back": "ngắn gọn",
+      "node_id": "n199"
+    },
+    {
+      "front": "Điền vào chỗ trống: Sinh viên đi từ Dashboard đến Forum Hỏi đáp (/forum), mở _____ Tạo câu hỏi mới ở dạng modal, gửi câu hỏi, sau đó xem Chi tiết câu hỏi và viết câu trả lời.",
+      "back": "biểu mẫu",
+      "node_id": "n203"
+    }
+  ],
+  "stats": {
+    "sections": 55,
+    "nodes": 205,
+    "flashcards": 134
+  }
+}

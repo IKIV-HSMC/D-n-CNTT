@@ -1,0 +1,236 @@
+{
+  "original_filename": "Lecture 03.pdf",
+  "extracted_text": "Lecture 02 Recap\nA strategy to solve linear systems using\nelementary row operations.\nDefinition of row-echelon form and reduced\nrow-echelon form of a matrix.\nGaussian Elimination and Gauss-Jordan Elimination.\nLecture 03\nGaussian Elimination (continued)\nHomogeneous Linear Systems\nWhat can row-echelon form tell us?\nRemember that any linear system has either\n(i) no solution (that is, inconsistent); or\n(ii) exactly one solution (that is, an unique solution); or\n(iii) infinitely many solutions.\n \n \n \n \n \n \n \n \n \n \nGaussian\nElimination\nBy looking at a row-echelon form of the augmented\nmatrix of the linear system, we can determine which\nof the above holds for the linear system.\nIn other words, there is a row\nwhere every entry is zero except\nthe last entry, which is non zero.\n \n \n \n \n \n \n\n\n\n\n: leading entry\nlast column\n0 0 0\t...\nHow can we tell? (consistent vs. inconsistent)\nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is a pivot column,\nthen the linear system is inconsistent.\nHow can we tell? (consistent vs. inconsistent)\n \n \n \n \n \n \nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is a pivot column,\nthen the linear system is inconsistent.\nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is NOT\na pivot column, then the linear system is consistent.\n\n\n\n0 0 0 0\t...\nYes you are right,\nrow-echelon forms can\nalso tell us how many\nsolutions a linear system\nhave!\nBut a consistent linear\nsystem could still\nbehave in two different\nways right?\nCan we say more?\nIf the augmented matrix of a consistent linear system\nhas a row-echelon form where every column\n(except the last) is a pivot column, then the linear\nsystem has a unique (that is, exactly one) solution.\nHow can we tell? (unique vs. infinitely many\nsolutions)\n \n \n \n \n \n \n \n \n\n\n\n0 0 0 0 0\t...\n\nEvery column here\nis a pivot column\nHow can we tell? (unique vs. infinitely many\nsolutions)\nIf the augmented matrix of a consistent linear system\nhas a row-echelon form where some column\n(other than the last) is NOT a pivot column, then\nthe linear system has infinitely many solutions.\n \n \n \n \n \n \n \n \n\n\n0 0 0 0 0\t...\n\nSome column here\nis NOT a pivot column\n*\n*0\n0\n1 0 2 0\n0 1 3 0\n0 0 1 0\n0 0 0 1\n \n \n \n \n  \nSome examples\nLinear system is inconsistent\n(last column is a pivot column)\n1 0 1 4 0\n0 1 1 3 1\n0 0 0 2 1\n0 0 0 0 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nLinear system is consistent\nand has infinitely many\nsolutions\n(some column other than the\nlast is a non pivot column)\n1 0 1 4 0\n0 1 1 3 1\n0 0 3 2 1\n0 0 0 1 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nSome examples\n1 0 1 4 0\n0 1 1 3 1\n0 0 0 2 1\n0 0 0 0 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nLinear system is consistent\nand has infinitely many\nsolutions\n(some column other than the\nlast is a non pivot column)\nLinear system is consistent\nand has a unique solution\n(every column other than the\nlast is a pivot column)\nNotations to use\nTo ensure that we (your examiners) understand what\nyou are doing, please use the following notations when\nperforming elementary row operations:\n1) When you want to multiply row by a non zero\nconstant , write .i\ni\nc cR\n1\n2\n1 0 1 2\n0 2 0 1\n0 0 0\n\t \n \n \n \n \n1\n2\t2 R\t\n32R\n1\n2\n1 0 1 2\n0 1 0\n0 0 1 0\n\t \n \n \n \n \nNotations to use\n2) When you want interchange rows and ,\nwrite .i j\ni j\nR R\t\n1\n2\n0 0 1 2\n1 2 0 1\n0 0 0\n\t \n \n \n \n \n1 2R R\t\n1\n2\n1 2 0 1\n0 0 1 2\n0 0 0\n\t \n \n \n \n \nNotations to use\n3) When you want add \ttimes of row \tto row ,\nwrite \t.j \ti\nk \ti \tj\nR \tkR\t\n1\n2\n1 1 1 2\n1 2 0 1\n2 0 0\n\t \n \n \n  \n2 1R R\t\n3\n2\n1 1 1 2\n0 3 1 1\n0 2 4\n\t \n  \n \n  3 12\tR R\t\nRemember that in this case,\nrow \tchanges but row \tdoes not.\tj \ti\nCan I ‘combine’ operations ‘under\none arrow’?\nAnswer: Only if there is no confusion or ambiguity.\n2 1R R\t\n3 12\tR R\t\n \n \n \n \n \nNo ambiguity\n2 1R R\t\n3 22\tR R\t\n \n \n \n \n \n2 1 3 22\tfirst then\tR R R R\t \nOR\n3 2 2 12 first then\tR R R R\t \nCan I ‘combine’ operations ‘under\none arrow’?\n2 1R R\t\n3 22\tR R\t\n \n \n \n \n \n2 1 3 22\tfirst then\tR R R R\t \n \n \n \n \n \n \n \n \n \n \nExample\nWhat condition(s) must be satisfied by , , such\nthat the linear system\nhas at least one solution?\na b c\n2 3\n2 6 11\n2 7\nx y z a\nx y z b\nx y z c\n  \t\n   \t\n   \nExample\nFor what values of will the following linear system\nhave no solution? Exactly one solution?\nInfinitely many solutions?\na\n2\n2 3 4\n3 5 2\n4 14 2\t( )\nx y z\nx y z\nx y a z a\n  \t\n   \t\n     \nExample\nFor what values of and will the following linear\nsystem\nhave no solution? Exactly one solution?\nInfinitely many solutions?\na b\n1\nax y a\nx y z\ny az b\n \t\n   \t\n  \nExample (quadric surface)\nFind a formula for the quadric surface\n2 2 2\nax by cz d\t  \n1 1 1 1 3 3\n2 0 2\nthat passes through the points ( , , ), ( , , )\nand ( , , ).\n\n\nSolution (quadric surface)\nSince the quadric surface\n2 2 2 (*)\tax by cz d\t  \n1 1 1 1 3 3 2 0 2\tpasses through ( , , ), ( , , ) and ( , , ),\t \n1 1 1\n1 3 3\n2 0 2\n, , ,\n, , and\n, ,\nx y z\nx y z\nx y z\n   \n  \n   \nmust satisfy equation (*).\nSolution (quadric surface)\n2 2 2 (*)\tax by cz d\t  \n1 1 1\n1 3 3\n2 0 2\n, , ,\n, , and\n, ,\nx y z\nx y z\nx y z\n   \n  \n   \n9 9\n4 4\na b c d\na b c d\na c d\n  \t\n   \t\n  \n0\n9 9 0\n4 4 0\na b c d\na b c d\na c d\n   \t\n    \t\n   \n\nSolution (quadric surface)\n0\n9 9 0\n4 4 0\na b c d\na b c d\na c d\n   \t\n    \t\n   \n1 1 1 1 0\n1 9 9 1 0\n4 0 4 1 0\n\t \n \n \n  \n2 1R R\t\n3 14\tR R\t\n1 1 1 1 0\n0 8 8 0 0\n0 4 0 3 0\n\t \n \n \n  \n1\n3 2\t2R R\t1 1 1 1 0\n0 8 8 0 0\n0 0 4 3 0\n\t \n \n \n \n \nSolution (quadric surface)\n1\n2\t8 R1 1 1 1 0\n0 8 8 0 0\n0 0 4 3 0\n\t \n \n \n \n 1\n3\t4 R\t3\n4\n1 1 1 1 0\n0 1 1 0 0\n0 0 1 0\n\t \n \n \n \n \n1 3R R\t\n2 3R R\t\n7\n4\n3\n4\n3\n4\n1 1 0 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n \n1 2R R\t3\n4\n3\n4\n1 0 0 1 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n \nSolution (quadric surface)\n3\n4\n3\n4\n1 0 0 1 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n \n2 2 2\nax by cz d\t  \n3\n4\n3\n4\n, .\na t\nb t\nc t\nd t t\n\t\n \t\n  \n  \n4 4 3 3 4\tLet , then , , , is a solution.\td a b c d\t     \nAn equation of the quadric surface is\n2 \t2 \t2\n4 \t3 \t3 \t4.\tx \ty \tz\t \t \t\nThink for a while…2 2 2\nax by cz d\t  \n4 4 3 3 4\tLet , then , , , is a solution.\td a b c d\t     \nAn equation of the quadric surface is\n2 2 2\n4 3 3 4.\tx y z\t  \nIf I choose another value for , does that mean\nI get another equation of another quadric surface?\nd\n8 8 6 6 8\tLet , then , , , is a solution.\td a b c d\t     \n2 2 2\n8 6 6 8\tx y z\t  \t2 2 2\n4 3 3 4.\tx y z\t  \nDiscussion\n \t\n \t  \t\n \t\n \t\nR\nat most 3 leading entries\n \t\n \t\n \t\n \t\n \t\ninconsistent\nrow-echelon form\n1) if 3 non zero rows (that is, 3\nleading entries)\nunique solution\t\nsolution set is a point\t\nSuppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z\nDiscussion\nSuppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z\ninfinitely many solutions\t\ngeneral solution has one parameter\t\nsolution set is a line\t\n \t\n \t  \t\n \t\n \t\nR\n \t\n \t\n \t\n \t\n \t\n2) if 2 non zero rows (that is, 2\nleading entries)\n \t\n \t\n \t\n \t\n \t\nDiscussion\nSuppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z\ninfinitely many solutions\t\ngeneral solution has two parameters\t\nsolution set is a plane\t\n \t\n \t  \t\n \t\n \t\nR\n \t\n \t\n \t\n \t\n \t\n3) if 1 non zero row (that is, 1\nleading entry)\n \t\n \t\n \t\n \t\n \t\nExample\n2 \t1\n0\n2\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\t\n  \t \t\nThree planes in \tspace\txyz \t\n2 \t1\n3 \t31\t, \t, \tis the unique solution\tx \ty \tz\t \t \t \n1 \t1 \t2 \t1\n1 \t1 \t1 \t0\n1 \t1 \t1 \t2\n \t\n \t \t\n \t\n \t \t\n2\n3\n1\n3\n1 \t0 \t0\n0 \t1 \t0 \t1\n0 \t0 \t1\n \t\n \t\n \t\n \t \t\n3 leading entries\nExample\n2 \t1\n0\n2 \t1\n3 \t1\nx \ty \tz\nx \ty \tz\nx \tz\nx \ty\n \t \t\t\n  \t \t\t\n  \t\n \t \t\nFour planes in \tspace\txyz \t\n1 \t1\n2 \t2\n3 \t1\n2 \t2\n1 \t0\n0 \t1\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2 \t1\n1 \t1 \t1 \t0\n2 \t0 \t1 \t1\n3 \t1 \t0 \t1\n \t\n \t \t\n \t\n \t\n \t \t2 leading entries\n1 \t1\n2 \t2\n3\t1\n2 \t2\nx \tt\ny \tt\nz \tt \tt\n \t\t\n  \t\t\n  \t\nSolution is a straight line consisting of points:\n3\t1 \t1 \t1\n2 \t2 \t2 \t2( \t, \t, ) for all\tt \tt t \tt\t \t \t\nExample\n2 \t1\n3 \t3 \t6 \t3\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\nTwo planes in \tspace\txyz \t\n1 \t1 \t2 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t\n1 \t1 \t2 \t1\n3 \t3 \t6 \t3\n \t\n \t\n \t\n1 leading entry\n1 \t2\n,\nx \ts \tt\ny \ts\nz \tt \ts t\n \t \t\t\n \t\n  \t\nSolution is a plane consisting of points:\n1 \t2\t( \t, , ) for all \t,\ts \tt s t \ts t\t \t \t\n2 \t1\tx \ty \tz\t \t \t\nDefinition (Homogeneous Linear Systems)\n11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \n11 \t12, \t,..., \tare real constants.mna \ta \ta\nA linear system is said to be homogeneous if it\nhas the following form:\nSomething special\nRecall that any linear system behaves in exactly one of\nthe following three ways:\nLinear system\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)\nSomething special\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)\n11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \n1 20 0 0\tWhat if we let , ,..., ?nx x x\t  \nSomething special\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)\n11 12 1\n21 22 2\n1 2\n0 0 0 0\n0 0 0 0\n0 0 0 0\n...\n...\n: : : :\n...\nn\nn\nm m mn\na a a\na a a\na a a\n   \t\n    \t\n\n\n    \n1 20 0 0\t, ,..., is ALWAYS a solution!nx x x\t  \nDefinition (Trivial and non-trivial solution)\nA homogeneous linear system is always consistent.\n1 20 0 0\t, ,..., is called the trivial solution\nof the homogeneous linear system.\nnx x x\t  \nAny other solution (if there exists) is called a\nnon-trivial solution.\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\nonly trivial\nsolution\ntrivial + non-trivial\nsolutions\nExample\nHow many solutions does the following homogeneous\nlinear system have?\n2 3 0\n2 3 0\n4 0\nx y z\nx y z\nx y z\n  \t\n   \t\n   \n0 0 0\nNote that the above linear system represents 3 planes\nin the three dimensional space, each plane contains\nthe origin (that is, contains the point , , ).\tx y z\t  \nExample (2 variables)\n1 2and are two lines in the plane\npassing through the origin.\nl l xy\n1 1 1\n2 2 2\n0\n0\n( )\n( )\na x b y l\na x b y l\n \t\n  \nx\ny\nx\ny\nExample (2 variables)\n1 1 1\n2 2 2\n0\n0\n( )\n( )\na x b y l\na x b y l\n \t\n  \nThe linear system has only the trivial solution if\nand only if the two lines are not the same.\nThe linear system has non-trivial solutions if\nand only if the two lines are identical.\n3 variables\n1 \t1 \t1\n2 \t2 \t2\n0 \t1\n0 \t2\n( \t)\n( \t)\na x \tb y \tc z \tp\na x \tb y \tc z \tp\n \t \t\t\n  \t \t\norigin\nInfinitely many solutions\n(trivial + non-trivial)\n3 variables and 3 planes\n1 2 3\n0 0 0\n, and are three planes in the three dimensional\nspace, each containing the origin ( , , ).\np p p\nx y z\t  \n1 1 1 1\n2 2 2 2\n3 3 3 3\n0\n0\n0\n( )\n( )\n( )\na x b y c z p\na x b y c z p\na x b y c z p\n  \t\n   \t\n   \nDiscuss the relative positions of the planes such that\nthe linear system has (i) only the trivial solution;\n(ii) non-trivial solutions.\nWhat similarities can you find?\n2 0\n2 3 9 0\nx y z\nx y z\n  \t\n   \n1 2 3 4\n1 2 3 5\n1 2 3 4 5\n2 4 0\n2 3 5 0\n3 2 3 0\nx x x x\nx x x x\nx x x x x\n   \t\n    \t\n     \n1 1 2 0\n2 3 9 0\n\t \n  \n1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   \nWhat similarities can you find?\n1 1 2 0\n2 3 9 0\n\t \n  \n1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   \nWhat is the maximum number of leading entries in\na row-echelon form of each of the following\naugmented matrices?\n \n \n \n \n \n \n \n \nWhat similarities can you find?\n1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   \n \n \n \n \n \nIf a homogeneous linear system has more unknowns\nthan equations...\n... there will ALWAYS be non-pivot columns in a\nrow-echelon form of the augmented matrix\n(other than the last column).\ninfinitely many solutions\t\tnon-trivial solutions\t\nWhat similarities can you find?\nHomogeneous linear systems with more unknowns\nthan equations always has infinitely many solutions.\n2 0\n2 3 9 0\nx y z\nx y z\n  \t\n   \n1 2 3 4\n1 2 3 5\n1 2 3 4 5\n2 4 0\n2 3 5 0\n3 2 3 0\nx x x x\nx x x x\nx x x x x\n   \t\n    \t\n     \nEnd of Lecture 03\nLecture 04\nIntroduction to matrices\nMatrix operations (till Theorem 2.2.22)",
+  "sections": [
+    {
+      "heading": "Lecture 02 Recap",
+      "level": 1,
+      "text": "A strategy to solve linear systems using\nelementary row operations.\nDefinition of row-echelon form and reduced\nrow-echelon form of a matrix.\nGaussian Elimination and Gauss-Jordan Elimination."
+    },
+    {
+      "heading": "Lecture 03",
+      "level": 2,
+      "text": "Gaussian Elimination (continued)\nHomogeneous Linear Systems"
+    },
+    {
+      "heading": "What can row-echelon form tell us?",
+      "level": 2,
+      "text": "Remember that any linear system has either\n(i) no solution (that is, inconsistent); or\n(ii) exactly one solution (that is, an unique solution); or\n(iii) infinitely many solutions.\n \n \n \n \n \n \n \n \n \n \nGaussian\nElimination\nBy looking at a row-echelon form of the augmented\nmatrix of the linear system, we can determine which\nof the above holds for the linear system."
+    },
+    {
+      "heading": "In other words, there is a row",
+      "level": 2,
+      "text": "where every entry is zero except\nthe last entry, which is non zero.\n \n \n \n \n \n \n\n\n\n\n: leading entry\nlast column\n0 0 0\t...\nHow can we tell? (consistent vs. inconsistent)\nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is a pivot column,\nthen the linear system is inconsistent."
+    },
+    {
+      "heading": "How can we tell? (consistent vs. inconsistent)",
+      "level": 2,
+      "text": " \n \n \n \n \n \nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is a pivot column,\nthen the linear system is inconsistent.\nIf the augmented matrix of a linear system has a\nrow-echelon form whose last column is NOT\na pivot column, then the linear system is consistent.\n\n\n\n0 0 0 0\t..."
+    },
+    {
+      "heading": "Yes you are right,",
+      "level": 2,
+      "text": "row-echelon forms can\nalso tell us how many\nsolutions a linear system\nhave!\nBut a consistent linear\nsystem could still\nbehave in two different\nways right?\nCan we say more?"
+    },
+    {
+      "heading": "If the augmented matrix of a consistent linear system",
+      "level": 2,
+      "text": "has a row-echelon form where every column\n(except the last) is a pivot column, then the linear\nsystem has a unique (that is, exactly one) solution.\nHow can we tell? (unique vs. infinitely many\nsolutions)\n \n \n \n \n \n \n \n \n\n\n\n0 0 0 0 0\t...\n\nEvery column here\nis a pivot column"
+    },
+    {
+      "heading": "How can we tell? (unique vs. infinitely many",
+      "level": 2,
+      "text": "solutions)\nIf the augmented matrix of a consistent linear system\nhas a row-echelon form where some column\n(other than the last) is NOT a pivot column, then\nthe linear system has infinitely many solutions.\n \n \n \n \n \n \n \n \n\n\n0 0 0 0 0\t...\n\nSome column here\nis NOT a pivot column\n*\n*0\n0"
+    },
+    {
+      "heading": "1 0 2 0",
+      "level": 2,
+      "text": "0 1 3 0\n0 0 1 0\n0 0 0 1\n \n \n \n \n  \nSome examples\nLinear system is inconsistent\n(last column is a pivot column)\n1 0 1 4 0\n0 1 1 3 1\n0 0 0 2 1\n0 0 0 0 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nLinear system is consistent\nand has infinitely many\nsolutions\n(some column other than the\nlast is a non pivot column)"
+    },
+    {
+      "heading": "1 0 1 4 0",
+      "level": 2,
+      "text": "0 1 1 3 1\n0 0 3 2 1\n0 0 0 1 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nSome examples\n1 0 1 4 0\n0 1 1 3 1\n0 0 0 2 1\n0 0 0 0 0\n0 0 0 0 0\n\t \n \n \n\t \n \n \n \n \nLinear system is consistent\nand has infinitely many\nsolutions\n(some column other than the\nlast is a non pivot column)\nLinear system is consistent\nand has a unique solution\n(every column other than the\nlast is a pivot column)"
+    },
+    {
+      "heading": "Notations to use",
+      "level": 2,
+      "text": "To ensure that we (your examiners) understand what\nyou are doing, please use the following notations when\nperforming elementary row operations:\n1) When you want to multiply row by a non zero\nconstant , write .i\ni\nc cR\n1\n2\n1 0 1 2\n0 2 0 1\n0 0 0\n\t \n \n \n \n \n1\n2\t2 R\t\n32R\n1\n2\n1 0 1 2\n0 1 0\n0 0 1 0\n\t \n \n \n \n "
+    },
+    {
+      "heading": "Notations to use",
+      "level": 2,
+      "text": "2) When you want interchange rows and ,\nwrite .i j\ni j\nR R\t\n1\n2\n0 0 1 2\n1 2 0 1\n0 0 0\n\t \n \n \n \n \n1 2R R\t\n1\n2\n1 2 0 1\n0 0 1 2\n0 0 0\n\t \n \n \n \n "
+    },
+    {
+      "heading": "Notations to use",
+      "level": 2,
+      "text": "3) When you want add \ttimes of row \tto row ,\nwrite \t.j \ti\nk \ti \tj\nR \tkR\t\n1\n2\n1 1 1 2\n1 2 0 1\n2 0 0\n\t \n \n \n  \n2 1R R\t\n3\n2\n1 1 1 2\n0 3 1 1\n0 2 4\n\t \n  \n \n  3 12\tR R\t\nRemember that in this case,\nrow \tchanges but row \tdoes not.\tj \ti"
+    },
+    {
+      "heading": "Can I ‘combine’ operations ‘under",
+      "level": 2,
+      "text": "one arrow’?\nAnswer: Only if there is no confusion or ambiguity.\n2 1R R\t\n3 12\tR R\t\n \n \n \n \n \nNo ambiguity\n2 1R R\t\n3 22\tR R\t\n \n \n \n \n \n2 1 3 22\tfirst then\tR R R R\t \nOR\n3 2 2 12 first then\tR R R R\t "
+    },
+    {
+      "heading": "Can I ‘combine’ operations ‘under",
+      "level": 2,
+      "text": "one arrow’?\n2 1R R\t\n3 22\tR R\t\n \n \n \n \n \n2 1 3 22\tfirst then\tR R R R\t \n \n \n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "What condition(s) must be satisfied by , , such\nthat the linear system\nhas at least one solution?\na b c\n2 3\n2 6 11\n2 7\nx y z a\nx y z b\nx y z c\n  \t\n   \t\n   "
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "For what values of will the following linear system\nhave no solution? Exactly one solution?\nInfinitely many solutions?\na\n2\n2 3 4\n3 5 2\n4 14 2\t( )\nx y z\nx y z\nx y a z a\n  \t\n   \t\n     "
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "For what values of and will the following linear\nsystem\nhave no solution? Exactly one solution?\nInfinitely many solutions?\na b\n1\nax y a\nx y z\ny az b\n \t\n   \t\n  "
+    },
+    {
+      "heading": "Example (quadric surface)",
+      "level": 2,
+      "text": "Find a formula for the quadric surface\n2 2 2\nax by cz d\t  \n1 1 1 1 3 3\n2 0 2\nthat passes through the points ( , , ), ( , , )\nand ( , , ).\n\n"
+    },
+    {
+      "heading": "Solution (quadric surface)",
+      "level": 2,
+      "text": "Since the quadric surface\n2 2 2 (*)\tax by cz d\t  \n1 1 1 1 3 3 2 0 2\tpasses through ( , , ), ( , , ) and ( , , ),\t \n1 1 1\n1 3 3\n2 0 2\n, , ,\n, , and\n, ,\nx y z\nx y z\nx y z\n   \n  \n   \nmust satisfy equation (*)."
+    },
+    {
+      "heading": "Solution (quadric surface)",
+      "level": 2,
+      "text": "2 2 2 (*)\tax by cz d\t  \n1 1 1\n1 3 3\n2 0 2\n, , ,\n, , and\n, ,\nx y z\nx y z\nx y z\n   \n  \n   \n9 9\n4 4\na b c d\na b c d\na c d\n  \t\n   \t\n  \n0\n9 9 0\n4 4 0\na b c d\na b c d\na c d\n   \t\n    \t\n   \n"
+    },
+    {
+      "heading": "Solution (quadric surface)",
+      "level": 2,
+      "text": "0\n9 9 0\n4 4 0\na b c d\na b c d\na c d\n   \t\n    \t\n   \n1 1 1 1 0\n1 9 9 1 0\n4 0 4 1 0\n\t \n \n \n  \n2 1R R\t\n3 14\tR R\t\n1 1 1 1 0\n0 8 8 0 0\n0 4 0 3 0\n\t \n \n \n  \n1\n3 2\t2R R\t1 1 1 1 0\n0 8 8 0 0\n0 0 4 3 0\n\t \n \n \n \n "
+    },
+    {
+      "heading": "Solution (quadric surface)",
+      "level": 2,
+      "text": "1\n2\t8 R1 1 1 1 0\n0 8 8 0 0\n0 0 4 3 0\n\t \n \n \n \n 1\n3\t4 R\t3\n4\n1 1 1 1 0\n0 1 1 0 0\n0 0 1 0\n\t \n \n \n \n \n1 3R R\t\n2 3R R\t\n7\n4\n3\n4\n3\n4\n1 1 0 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n \n1 2R R\t3\n4\n3\n4\n1 0 0 1 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n "
+    },
+    {
+      "heading": "Solution (quadric surface)",
+      "level": 2,
+      "text": "3\n4\n3\n4\n1 0 0 1 0\n0 1 0 0\n0 0 1 0\n\t \n \n \n \n \n2 2 2\nax by cz d\t  \n3\n4\n3\n4\n, .\na t\nb t\nc t\nd t t\n\t\n \t\n  \n  \n4 4 3 3 4\tLet , then , , , is a solution.\td a b c d\t     \nAn equation of the quadric surface is\n2 \t2 \t2\n4 \t3 \t3 \t4.\tx \ty \tz\t \t \t"
+    },
+    {
+      "heading": "Think for a while…2 2 2",
+      "level": 2,
+      "text": "ax by cz d\t  \n4 4 3 3 4\tLet , then , , , is a solution.\td a b c d\t     \nAn equation of the quadric surface is\n2 2 2\n4 3 3 4.\tx y z\t  \nIf I choose another value for , does that mean\nI get another equation of another quadric surface?\nd\n8 8 6 6 8\tLet , then , , , is a solution.\td a b c d\t     \n2 2 2\n8 6 6 8\tx y z\t  \t2 2 2\n4 3 3 4.\tx y z\t  "
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": " \t\n \t  \t\n \t\n \t\nR\nat most 3 leading entries\n \t\n \t\n \t\n \t\n \t\ninconsistent\nrow-echelon form\n1) if 3 non zero rows (that is, 3\nleading entries)\nunique solution\t\nsolution set is a point\t\nSuppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "Suppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z\ninfinitely many solutions\t\ngeneral solution has one parameter\t\nsolution set is a line\t\n \t\n \t  \t\n \t\n \t\nR\n \t\n \t\n \t\n \t\n \t\n2) if 2 non zero rows (that is, 2\nleading entries)\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "Suppose we have a consistent linear system involving\nthree unknowns \t, \t,\tx y z\ninfinitely many solutions\t\ngeneral solution has two parameters\t\nsolution set is a plane\t\n \t\n \t  \t\n \t\n \t\nR\n \t\n \t\n \t\n \t\n \t\n3) if 1 non zero row (that is, 1\nleading entry)\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t1\n0\n2\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\t\n  \t \t\nThree planes in \tspace\txyz \t\n2 \t1\n3 \t31\t, \t, \tis the unique solution\tx \ty \tz\t \t \t \n1 \t1 \t2 \t1\n1 \t1 \t1 \t0\n1 \t1 \t1 \t2\n \t\n \t \t\n \t\n \t \t\n2\n3\n1\n3\n1 \t0 \t0\n0 \t1 \t0 \t1\n0 \t0 \t1\n \t\n \t\n \t\n \t \t\n3 leading entries"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t1\n0\n2 \t1\n3 \t1\nx \ty \tz\nx \ty \tz\nx \tz\nx \ty\n \t \t\t\n  \t \t\t\n  \t\n \t \t\nFour planes in \tspace\txyz \t\n1 \t1\n2 \t2\n3 \t1\n2 \t2\n1 \t0\n0 \t1\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n1 \t1 \t2 \t1\n1 \t1 \t1 \t0\n2 \t0 \t1 \t1\n3 \t1 \t0 \t1\n \t\n \t \t\n \t\n \t\n \t \t2 leading entries\n1 \t1\n2 \t2\n3\t1\n2 \t2\nx \tt\ny \tt\nz \tt \tt\n \t\t\n  \t\t\n  \t\nSolution is a straight line consisting of points:\n3\t1 \t1 \t1\n2 \t2 \t2 \t2( \t, \t, ) for all\tt \tt t \tt\t \t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t1\n3 \t3 \t6 \t3\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\nTwo planes in \tspace\txyz \t\n1 \t1 \t2 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t\n1 \t1 \t2 \t1\n3 \t3 \t6 \t3\n \t\n \t\n \t\n1 leading entry\n1 \t2\n,\nx \ts \tt\ny \ts\nz \tt \ts t\n \t \t\t\n \t\n  \t\nSolution is a plane consisting of points:\n1 \t2\t( \t, , ) for all \t,\ts \tt s t \ts t\t \t \t\n2 \t1\tx \ty \tz\t \t \t"
+    },
+    {
+      "heading": "Definition (Homogeneous Linear Systems)",
+      "level": 2,
+      "text": "11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \n11 \t12, \t,..., \tare real constants.mna \ta \ta\nA linear system is said to be homogeneous if it\nhas the following form:"
+    },
+    {
+      "heading": "Something special",
+      "level": 2,
+      "text": "Recall that any linear system behaves in exactly one of\nthe following three ways:\nLinear system\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)"
+    },
+    {
+      "heading": "Something special",
+      "level": 2,
+      "text": "no solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)\n11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \n1 20 0 0\tWhat if we let , ,..., ?nx x x\t  "
+    },
+    {
+      "heading": "Something special",
+      "level": 2,
+      "text": "no solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\n(consistent)\n11 12 1\n21 22 2\n1 2\n0 0 0 0\n0 0 0 0\n0 0 0 0\n...\n...\n: : : :\n...\nn\nn\nm m mn\na a a\na a a\na a a\n   \t\n    \t\n\n\n    \n1 20 0 0\t, ,..., is ALWAYS a solution!nx x x\t  "
+    },
+    {
+      "heading": "Definition (Trivial and non-trivial solution)",
+      "level": 2,
+      "text": "A homogeneous linear system is always consistent.\n1 20 0 0\t, ,..., is called the trivial solution\nof the homogeneous linear system.\nnx x x\t  \nAny other solution (if there exists) is called a\nnon-trivial solution.\nno solutions\n(inconsistent)\nexactly one\nsolution\ninfinitely many\nsolutions\nonly trivial\nsolution\ntrivial + non-trivial\nsolutions"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "How many solutions does the following homogeneous\nlinear system have?\n2 3 0\n2 3 0\n4 0\nx y z\nx y z\nx y z\n  \t\n   \t\n   \n0 0 0\nNote that the above linear system represents 3 planes\nin the three dimensional space, each plane contains\nthe origin (that is, contains the point , , ).\tx y z\t  "
+    },
+    {
+      "heading": "Example (2 variables)",
+      "level": 2,
+      "text": "1 2and are two lines in the plane\npassing through the origin.\nl l xy\n1 1 1\n2 2 2\n0\n0\n( )\n( )\na x b y l\na x b y l\n \t\n  \nx\ny\nx\ny"
+    },
+    {
+      "heading": "Example (2 variables)",
+      "level": 2,
+      "text": "1 1 1\n2 2 2\n0\n0\n( )\n( )\na x b y l\na x b y l\n \t\n  \nThe linear system has only the trivial solution if\nand only if the two lines are not the same.\nThe linear system has non-trivial solutions if\nand only if the two lines are identical."
+    },
+    {
+      "heading": "3 variables",
+      "level": 2,
+      "text": "1 \t1 \t1\n2 \t2 \t2\n0 \t1\n0 \t2\n( \t)\n( \t)\na x \tb y \tc z \tp\na x \tb y \tc z \tp\n \t \t\t\n  \t \t\norigin\nInfinitely many solutions\n(trivial + non-trivial)"
+    },
+    {
+      "heading": "3 variables and 3 planes",
+      "level": 2,
+      "text": "1 2 3\n0 0 0\n, and are three planes in the three dimensional\nspace, each containing the origin ( , , ).\np p p\nx y z\t  \n1 1 1 1\n2 2 2 2\n3 3 3 3\n0\n0\n0\n( )\n( )\n( )\na x b y c z p\na x b y c z p\na x b y c z p\n  \t\n   \t\n   \nDiscuss the relative positions of the planes such that\nthe linear system has (i) only the trivial solution;\n(ii) non-trivial solutions."
+    },
+    {
+      "heading": "What similarities can you find?",
+      "level": 2,
+      "text": "2 0\n2 3 9 0\nx y z\nx y z\n  \t\n   \n1 2 3 4\n1 2 3 5\n1 2 3 4 5\n2 4 0\n2 3 5 0\n3 2 3 0\nx x x x\nx x x x\nx x x x x\n   \t\n    \t\n     \n1 1 2 0\n2 3 9 0\n\t \n  \n1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   "
+    },
+    {
+      "heading": "What similarities can you find?",
+      "level": 2,
+      "text": "1 1 2 0\n2 3 9 0\n\t \n  \n1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   \nWhat is the maximum number of leading entries in\na row-echelon form of each of the following\naugmented matrices?\n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "What similarities can you find?",
+      "level": 2,
+      "text": "1 1 2 4 0 0\n2 1 3 0 5 0\n3 2 1 3 1 0\n \t \n \n \n   \n \n \n \n \n \nIf a homogeneous linear system has more unknowns\nthan equations...\n... there will ALWAYS be non-pivot columns in a\nrow-echelon form of the augmented matrix\n(other than the last column).\ninfinitely many solutions\t\tnon-trivial solutions\t"
+    },
+    {
+      "heading": "What similarities can you find?",
+      "level": 2,
+      "text": "Homogeneous linear systems with more unknowns\nthan equations always has infinitely many solutions.\n2 0\n2 3 9 0\nx y z\nx y z\n  \t\n   \n1 2 3 4\n1 2 3 5\n1 2 3 4 5\n2 4 0\n2 3 5 0\n3 2 3 0\nx x x x\nx x x x\nx x x x x\n   \t\n    \t\n     "
+    },
+    {
+      "heading": "End of Lecture 03",
+      "level": 2,
+      "text": "Lecture 04\nIntroduction to matrices\nMatrix operations (till Theorem 2.2.22)"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "original_filename": "Lecture 10.pdf",
+  "extracted_text": "Lecture 9 recap\n1) Two properties that a linear span must have.\n2) Linear span inside linear span theorem.\n3) 'Useless' vector\n4) Definition of subspace.\n5) How to show a subset is not a subspace using 1).\n6) How to show a subset is a subspace by writing as\nlinear span.\nLecture 10\nSubspaces (cont’d)\nLinear independence\nGeometrical examples2 \t3\nLet \tbe a nonzero vector in \tor \t.\tu\nu\norigin\n1 5\t. \tu\n2\t \tu\nspan{ } is the set of all linear combinations (or scalar\nmultiples) of \t.\nu\nu\nGeometrically, span{ } is a straight line passing through\nthe origin.\nu\nGeometrical examples2 \t3\nLet \tbe a nonzero vector in \tor \t.\tu\nu\norigin\n2\n1 \t2 \t1 \t2(In \t) \t( \t, \t), span{ } \t{( \t, \t)| \t}\tu u \tcu cu \tc\t \t \t\tu \tu\n(explicit representation)\n1 \t2( \t, \t)\tu u\n(implicit representation i.e. equation of line?)\nGeometrical examples\nu\norigin\n1 \t2 \t3( \t, \t, \t)\tu u \tu\n3\nRemember that a line in\ncannot be represented by a\nsingle linear equation.\n2 \t3\nLet \tbe a nonzero vector in \tor \t.\tu\n2\n1 \t2 \t1 \t2(In \t) \t( \t, \t), span{ } \t{( \t, \t)| \t}\tu u \tcu cu \tc\t \t \t\tu \tu\n(explicit representation)\n(implicit representation i.e. equation of line?)\nGeometrical examples\n2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nuorigin\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nIf \tand \tare not parallel,\tu \tv\nv0\t, \t,\ts \tt \ts t\t \t\tu \tv\n0 \t0\t, \t,\ts \tt \ts \tt\t \t \t\tu \tv\n0 \t0\t, \t,\ts \tt \ts \tt\t \t \t\tu \tv\n0\t, \t,\ts \tt \ts t\t \t\tu \tv\nGeometrical examples\n2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nu\norigin\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nIf \tand \tare not parallel,\tu \tv\nv\nspan{ , } is a plane containing\nthe origin.\nu v\nGeometrical examples\n2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nWhat if \tand \tare parallel?\tu \tv\nspan{ \t, } \tspan{ }\t\tu v \tu\nstraight line passing\nthrough the origin.\n\nGeometrical examples\nu\norigin\nIf \tand \tare not parallel,\tu \tv\nv\n2\n(In \t)2\nspan{ , } \t.\t\tu v\n3\n(In \t)\tspan{ , } \t{ \t| , \t}\ts \tt \ts t\t \t \t\tu v \tu \tv\t(explicit representation)\n(implicit representation, i.e. equation of the plane?)\n1 \t2 \t3 \t1 \t2 \t3( \t, \t, \t), \t( \t, \t, \t)\tu u \tu \tv v \tv\t \t\tu \tv\nRemark (All subspaces of R2)\n2\nThe following are all the subspaces of \t:\nRemark (All subspaces of R3)3\nThe following are all the subspaces of \t:\nTheorem (Solution set of homogeneous\nsystems)\n11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \nThe solution set of a homogeneous system of linear\nequations in \tvariables is a subspace of \t.n\nn\nExample\n2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t6 \t9 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n \t \t \t\t\n  \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t6 \t9 \t0\n\t \t\n \t \t\n \t\n \t \t\nGaussian\nElimination\n1 \t2 \t3 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\nExample\n3\nGeometrically, the solution set is a plane in \tcontaining\nthe origin.\n1 \t2 \t3 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\nExample\n2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t7 \t8 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n \t \t \t\t\n \t \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t7 \t8 \t0\n\t \t\n \t \t\n \t\n \t \t \t\nGaussian\nElimination\n1 \t0 \t5 \t0\n0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\nExample1 \t0 \t5 \t0\n0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\n3\nGeometrically, the solution set is a line in \tpassing\nthrough the origin.\nExample\n2 \t3 \t0\n4 \t2 \t0\n3 \t7 \t8 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\t\n \t \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n4 \t1 \t2 \t0\n3 \t7 \t8 \t0\n\t \t\n \t\n \t\n \t \t \t\nGaussian\nElimination\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n \t\n \t\n \t\n \t\n \t\nThe solution set is\nthe zero space { }.\t0\nAbstract definition of subspace\nLet \tbe a non-empty subset of \t.n\nV\nV\nn\nfor all \t, \tand \t, \t,\tV \tc d\t \t\tu v\t.\tc \td \tV\t \t\tu \tv\nThen \tis a subspace of \tif and only ifn\nV\nDiscussion on redundancy\nIf uk is a linear combination of u1 ,u2 ,...,uk−1 , then\nspan{u1 ,u2 ,...,uk−1} = span{u1,u2 ,...,uk−1 ,uk }\n1 \t2 \t1We say that \tis redundant in the span of { \t, \t,..., \t, \t}.k \tk \tk\tu \tu u \tu \tu\nku\nI am redundant\nHaving me around does\nnot 'add value'\nDefinition (linear independence)\n1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n1 \t20 \t0 \t0\t1) Clearly, \t, \t,..., \tis a solution. This is called\nthe trivial solution to (*).\nkc \tc \tc\t \t \t\n1 \t2\n2) \tis called a linearly independent set if (*) has only\nthe trivial solution. In this case, we say that \t, \t,...,\nare linearly independent vectors.\nk\nS\nu u \tu\nDefinition (linear independence)\n1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n1 \t2\n2) \tis called a linearly independent set if (*) has only\nthe trivial solution. In this case, we say that \t, \t,...,\nare linearly independent vectors.\nk\nS\nu u \tu\n1 \t2\n3) \tis called a linearly dependent set if (*) has\nnon-trivial solutions. In this case, we say that \t, \t,...,\nare linearly dependent vectors.\nk\nS\nu u \tu\nDefinition (linear independence)\n1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n(Only) trivial\nsolution to (*)??\nWhat does it mean?\nIt's all\nabout linear\ncombinations...\nExample (linear independence)\n3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nVector equation:\nLinear system:\nExample (linear independence)\n3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nSolving linear system:\n1 \t5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t1 \t1 \t0\n \t\n \t\n \t\n \t \t\n1 \t5 \t3 \t0\n0 \t16 \t8 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\n5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t0\na \tb \tc\na \tb \tc\na \tb \tc\n \t \t\t\n \t \t \t\n  \t \t\nHow many solutions\ndoes the linear\nsystem have?\nExample (linear independence)\n3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nSolving linear system:\n1 \t5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t1 \t1 \t0\n \t\n \t\n \t\n \t \t\n1 \t5 \t3 \t0\n0 \t16 \t8 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\n1 \t2 3 \t5 6 \t1 \t3 2 1 \t0 0 0\t( , \t, ) \t( , , \t) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t \t\nHow many solutions\ndoes the equation\nhave?\nThe vectors are\nlinearly dependent.\nExample (linear independence)\n4\n1 0 0 1 \t0 2 1 0 \t1 \t1 1 1\tDetermine whether ( , , , ),( , , , ),( , \t, , ) are linearly\nindependent vectors in \t.\n\nVector equation:\nLinear system:\nLinear independence: 1 or 2 vectors\n{ }. When is \ta linearly independent set?\tS \tS\t \tu\n0\nWhen does the equation \thave only the\ntrivial solution \t?\nc\nc\n\n\nu \t0\n{ } is a linearly independent set if and only if\tS \t\n\nu\nu \t0.\nLinear independence: 1 or 2 vectors\n{ \t, }. When is \ta linearly independent set?\tS \tS\t \tu v\n1 \t2\n1 \t2\nWhen does the equation \thave non trivial\nsolutions for \tand \t?\nc \tc\nc \tc\n \t\tu \tv \t0\n{ \t, } is a linearly dependent set if and only if\nand \tare scalar multiples of each other.\nS \t \tu v\nu \tv\nWhat if a set contains the zero vector?\nLet \tbe a finite set of vectors from \t. Prove that if\n, then \tis a linearly dependent set.\nn\nS\nS \tS\t\t0\nProof:\nTheorem (another way to look at\nlinear independence)\nRecall the discussion on redundancy.\n1 \t2 2\tLet \t{ \t, \t,..., \t} be a set of vectors in \t, where \t.n\nkS \tk\t \t\tu u \tu\n1) \tis linearly dependent if and only if at least one\ncan be written as a linear combination of the other\nvectors in \t, that is,\niS \tS\nS\n\tu\n1 \t1 \t2 \t2 \t1 \t1 \t1 \t1... \t...i \ti \ti \ti \ti \tk \tka \ta \ta \ta \ta \t \t \t \t \t \t \t \t \t\tu \tu \tu \tu \tu \tu\n1 \t1 \t1for some \t,..., \t, \t,..., \t.i \ti \tka \ta \ta \ta \t \nTheorem (another way to look at\nlinear independence)\nRecall the discussion on redundancy.\n1 \t2 2\tLet \t{ \t, \t,..., \t} be a set of vectors in \t, where \t.n\nkS \tk\t \t\tu u \tu\n2) \tis linearly independent if and only if no vector in\ncan be written as a linear combination of the other\nvectors in \t.\nS \tS\nS\nRemark\nSo a set a vectors is linearly dependent implies that\nthere exists at least one 'redundant' vector in the set.\nA set a vectors is linearly independent implies that\nthere is no 'redundant' vector in the set.\nExample\n2 4 \t1 0 \t0 3\t{( , ),( , ),( , )}. Is \ta linearly independent set?\tS \tS\t\n1 0 0 \t0 2 0 \t0 0 \t5\t{( , , ),( , , ),( , , \t)}. Is \ta linearly independent set?\tS \tS\t \t\nTheorem (guaranteed dependence)\n1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.n\nkS \t \tu u \tu\nIf \t, then \tis linearly dependent.\tk \tn \tS\t\nExample (guaranteed dependence)\n2\n1) A set of three or more vectors in \tis always linearly\ndependent.\n3\n2) A set of four or more vectors in \tis always linearly\ndependent.\n{ \t, } is a linearly dependent set if and only if\nand \tare scalar multiples of each other (they lie on\nthe same line).\nS \t \tu v\nu \tv\nLinear independence (geometrical)2 \t3\nFor two vectors in \tor \t, recall the following:\nu\nv\nLinearly\ndependent\nu\nv\nLinearly\ndependent\nuv\nLinearly\nindependent\nLinear independence (geometrical)3\nFor three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\nu\nv\n{ \t, } is a linearly\ndependent set\nu v\t{ \t, , \t} is a linearly\ndependent set\nu v w\nw\n, , \tlie on the\nsame line\nu v w\norigin\nLinear independence (geometrical)3\nFor three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\norigin\nu\nv\n{ \t, } is a linearly\ndependent set\nu v\t{ \t, , \t} is a linearly\ndependent set\nu v w\nw\n, , \tlie on the\nsame plane\nu v w\nLinear independence (geometrical)3\nFor three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\nu\nv\n{ \t, } is a linearly\nindependent set\nu v\norigin\nspan{ \t, }\tu vu\nvorigin\nwspan{ , }\tu v\n{ \t, , \t} is a linearly\ndependent set\nu v w\nw\nLinear independence (geometrical)3\nFor three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\t{ \t, , \t} is a linearly\nindependent set\nu v w\nu\nvorigin\nspan{ , }\tu vu\nv\n{ \t, } is a linearly\nindependent set\nu v\norigin\nspan{ , }\tu v\nw\tspan{ \t, }\t \tu v\nEnd of Lecture 10\nLecture 11:\nLinear independence (cont’d)\nBases\nDimensions (till Example 3.6.6)",
+  "sections": [
+    {
+      "heading": "Lecture 9 recap",
+      "level": 1,
+      "text": "1) Two properties that a linear span must have.\n2) Linear span inside linear span theorem.\n3) 'Useless' vector\n4) Definition of subspace.\n5) How to show a subset is not a subspace using 1).\n6) How to show a subset is a subspace by writing as\nlinear span."
+    },
+    {
+      "heading": "Lecture 10",
+      "level": 2,
+      "text": "Subspaces (cont’d)\nLinear independence"
+    },
+    {
+      "heading": "Geometrical examples2 \t3",
+      "level": 2,
+      "text": "Let \tbe a nonzero vector in \tor \t.\tu\nu\norigin\n1 5\t. \tu\n2\t \tu\nspan{ } is the set of all linear combinations (or scalar\nmultiples) of \t.\nu\nu\nGeometrically, span{ } is a straight line passing through\nthe origin.\nu"
+    },
+    {
+      "heading": "Geometrical examples2 \t3",
+      "level": 2,
+      "text": "Let \tbe a nonzero vector in \tor \t.\tu\nu\norigin\n2\n1 \t2 \t1 \t2(In \t) \t( \t, \t), span{ } \t{( \t, \t)| \t}\tu u \tcu cu \tc\t \t \t\tu \tu\n(explicit representation)\n1 \t2( \t, \t)\tu u\n(implicit representation i.e. equation of line?)"
+    },
+    {
+      "heading": "Geometrical examples",
+      "level": 2,
+      "text": "u\norigin\n1 \t2 \t3( \t, \t, \t)\tu u \tu\n3\nRemember that a line in\ncannot be represented by a\nsingle linear equation.\n2 \t3\nLet \tbe a nonzero vector in \tor \t.\tu\n2\n1 \t2 \t1 \t2(In \t) \t( \t, \t), span{ } \t{( \t, \t)| \t}\tu u \tcu cu \tc\t \t \t\tu \tu\n(explicit representation)\n(implicit representation i.e. equation of line?)"
+    },
+    {
+      "heading": "Geometrical examples",
+      "level": 2,
+      "text": "2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nuorigin\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nIf \tand \tare not parallel,\tu \tv\nv0\t, \t,\ts \tt \ts t\t \t\tu \tv\n0 \t0\t, \t,\ts \tt \ts \tt\t \t \t\tu \tv\n0 \t0\t, \t,\ts \tt \ts \tt\t \t \t\tu \tv\n0\t, \t,\ts \tt \ts t\t \t\tu \tv"
+    },
+    {
+      "heading": "Geometrical examples",
+      "level": 2,
+      "text": "2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nu\norigin\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nIf \tand \tare not parallel,\tu \tv\nv\nspan{ , } is a plane containing\nthe origin.\nu v"
+    },
+    {
+      "heading": "Geometrical examples",
+      "level": 2,
+      "text": "2 \t3\nLet \t, \tbe two nonzero vectors in \tor \t.\tu v\nspan{ , } is the set of all linear combinations of \tand \t.\tu v \tu \tv\n{ \t| , \t}\ts \tt \ts t\t \t \t\tu \tv\nWhat if \tand \tare parallel?\tu \tv\nspan{ \t, } \tspan{ }\t\tu v \tu\nstraight line passing\nthrough the origin.\n"
+    },
+    {
+      "heading": "Geometrical examples",
+      "level": 2,
+      "text": "u\norigin\nIf \tand \tare not parallel,\tu \tv\nv\n2\n(In \t)2\nspan{ , } \t.\t\tu v\n3\n(In \t)\tspan{ , } \t{ \t| , \t}\ts \tt \ts t\t \t \t\tu v \tu \tv\t(explicit representation)\n(implicit representation, i.e. equation of the plane?)\n1 \t2 \t3 \t1 \t2 \t3( \t, \t, \t), \t( \t, \t, \t)\tu u \tu \tv v \tv\t \t\tu \tv"
+    },
+    {
+      "heading": "Remark (All subspaces of R2)",
+      "level": 2,
+      "text": "2\nThe following are all the subspaces of \t:"
+    },
+    {
+      "heading": "Remark (All subspaces of R3)3",
+      "level": 2,
+      "text": "The following are all the subspaces of \t:"
+    },
+    {
+      "heading": "Theorem (Solution set of homogeneous",
+      "level": 2,
+      "text": "systems)\n11 1 12 2 1\n21 1 22 2 2\n1 1 2 2\n0\n0\n0\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n\na x a x a x\na x a x a x\na x a x a x\n   \t\n    \t\n\n\n    \nThe solution set of a homogeneous system of linear\nequations in \tvariables is a subspace of \t.n\nn"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t6 \t9 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n \t \t \t\t\n  \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t6 \t9 \t0\n\t \t\n \t \t\n \t\n \t \t\nGaussian\nElimination\n1 \t2 \t3 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "3\nGeometrically, the solution set is a plane in \tcontaining\nthe origin.\n1 \t2 \t3 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t7 \t8 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n \t \t \t\t\n \t \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n2 \t4 \t6 \t0\n3 \t7 \t8 \t0\n\t \t\n \t \t\n \t\n \t \t \t\nGaussian\nElimination\n1 \t0 \t5 \t0\n0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example1 \t0 \t5 \t0",
+      "level": 2,
+      "text": "0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\n3\nGeometrically, the solution set is a line in \tpassing\nthrough the origin."
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t3 \t0\n4 \t2 \t0\n3 \t7 \t8 \t0\nx \ty \tz\nx \ty \tz\nx \ty \tz\n \t \t\t\n  \t \t\t\n \t \t \t\nInvestigate the solution set of the following homogeneous\nlinear system:\n1 \t2 \t3 \t0\n4 \t1 \t2 \t0\n3 \t7 \t8 \t0\n\t \t\n \t\n \t\n \t \t \t\nGaussian\nElimination\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n \t\n \t\n \t\n \t\n \t\nThe solution set is\nthe zero space { }.\t0"
+    },
+    {
+      "heading": "Abstract definition of subspace",
+      "level": 2,
+      "text": "Let \tbe a non-empty subset of \t.n\nV\nV\nn\nfor all \t, \tand \t, \t,\tV \tc d\t \t\tu v\t.\tc \td \tV\t \t\tu \tv\nThen \tis a subspace of \tif and only ifn\nV"
+    },
+    {
+      "heading": "Discussion on redundancy",
+      "level": 2,
+      "text": "If uk is a linear combination of u1 ,u2 ,...,uk−1 , then\nspan{u1 ,u2 ,...,uk−1} = span{u1,u2 ,...,uk−1 ,uk }\n1 \t2 \t1We say that \tis redundant in the span of { \t, \t,..., \t, \t}.k \tk \tk\tu \tu u \tu \tu\nku\nI am redundant\nHaving me around does\nnot 'add value'"
+    },
+    {
+      "heading": "Definition (linear independence)",
+      "level": 2,
+      "text": "1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n1 \t20 \t0 \t0\t1) Clearly, \t, \t,..., \tis a solution. This is called\nthe trivial solution to (*).\nkc \tc \tc\t \t \t\n1 \t2\n2) \tis called a linearly independent set if (*) has only\nthe trivial solution. In this case, we say that \t, \t,...,\nare linearly independent vectors.\nk\nS\nu u \tu"
+    },
+    {
+      "heading": "Definition (linear independence)",
+      "level": 2,
+      "text": "1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n1 \t2\n2) \tis called a linearly independent set if (*) has only\nthe trivial solution. In this case, we say that \t, \t,...,\nare linearly independent vectors.\nk\nS\nu u \tu\n1 \t2\n3) \tis called a linearly dependent set if (*) has\nnon-trivial solutions. In this case, we say that \t, \t,...,\nare linearly dependent vectors.\nk\nS\nu u \tu"
+    },
+    {
+      "heading": "Definition (linear independence)",
+      "level": 2,
+      "text": "1 \t2\n1 \t2\nLet \t{ \t, \t,..., \t} \t. Consider the solutions to the\nfollowing equation (values of \t, \t,..., \t)\nn\nk\nk\nS\nc c \tc\n \t\tu u \tu\n1 \t1 \t2 \t2 ... \t(*)k \tkc \tc \tc\t \t \t \t\tu \tu \tu \t0\n(Only) trivial\nsolution to (*)??\nWhat does it mean?\nIt's all\nabout linear\ncombinations..."
+    },
+    {
+      "heading": "Example (linear independence)",
+      "level": 2,
+      "text": "3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nVector equation:\nLinear system:"
+    },
+    {
+      "heading": "Example (linear independence)",
+      "level": 2,
+      "text": "3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nSolving linear system:\n1 \t5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t1 \t1 \t0\n \t\n \t\n \t\n \t \t\n1 \t5 \t3 \t0\n0 \t16 \t8 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\n5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t0\na \tb \tc\na \tb \tc\na \tb \tc\n \t \t\t\n \t \t \t\n  \t \t\nHow many solutions\ndoes the linear\nsystem have?"
+    },
+    {
+      "heading": "Example (linear independence)",
+      "level": 2,
+      "text": "3\n1 \t2 3 \t5 6 \t1 \t3 2 1\tDetermine whether ( , \t, ),( , , \t),( , , ) are linearly\nindependent vectors in \t.\n \t\nSolving linear system:\n1 \t5 \t3 \t0\n2 \t6 \t2 \t0\n3 \t1 \t1 \t0\n \t\n \t\n \t\n \t \t\n1 \t5 \t3 \t0\n0 \t16 \t8 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\n1 \t2 3 \t5 6 \t1 \t3 2 1 \t0 0 0\t( , \t, ) \t( , , \t) \t( , , ) \t( , , )\ta \tb \tc\t \t \t \t \t\nHow many solutions\ndoes the equation\nhave?\nThe vectors are\nlinearly dependent."
+    },
+    {
+      "heading": "Example (linear independence)",
+      "level": 2,
+      "text": "4\n1 0 0 1 \t0 2 1 0 \t1 \t1 1 1\tDetermine whether ( , , , ),( , , , ),( , \t, , ) are linearly\nindependent vectors in \t.\n\nVector equation:\nLinear system:"
+    },
+    {
+      "heading": "Linear independence: 1 or 2 vectors",
+      "level": 2,
+      "text": "{ }. When is \ta linearly independent set?\tS \tS\t \tu\n0\nWhen does the equation \thave only the\ntrivial solution \t?\nc\nc\n\n\nu \t0\n{ } is a linearly independent set if and only if\tS \t\n\nu\nu \t0."
+    },
+    {
+      "heading": "Linear independence: 1 or 2 vectors",
+      "level": 2,
+      "text": "{ \t, }. When is \ta linearly independent set?\tS \tS\t \tu v\n1 \t2\n1 \t2\nWhen does the equation \thave non trivial\nsolutions for \tand \t?\nc \tc\nc \tc\n \t\tu \tv \t0\n{ \t, } is a linearly dependent set if and only if\nand \tare scalar multiples of each other.\nS \t \tu v\nu \tv"
+    },
+    {
+      "heading": "What if a set contains the zero vector?",
+      "level": 2,
+      "text": "Let \tbe a finite set of vectors from \t. Prove that if\n, then \tis a linearly dependent set.\nn\nS\nS \tS\t\t0\nProof:"
+    },
+    {
+      "heading": "Theorem (another way to look at",
+      "level": 2,
+      "text": "linear independence)\nRecall the discussion on redundancy.\n1 \t2 2\tLet \t{ \t, \t,..., \t} be a set of vectors in \t, where \t.n\nkS \tk\t \t\tu u \tu\n1) \tis linearly dependent if and only if at least one\ncan be written as a linear combination of the other\nvectors in \t, that is,\niS \tS\nS\n\tu\n1 \t1 \t2 \t2 \t1 \t1 \t1 \t1... \t...i \ti \ti \ti \ti \tk \tka \ta \ta \ta \ta \t \t \t \t \t \t \t \t \t\tu \tu \tu \tu \tu \tu\n1 \t1 \t1for some \t,..., \t, \t,..., \t.i \ti \tka \ta \ta \ta \t "
+    },
+    {
+      "heading": "Theorem (another way to look at",
+      "level": 2,
+      "text": "linear independence)\nRecall the discussion on redundancy.\n1 \t2 2\tLet \t{ \t, \t,..., \t} be a set of vectors in \t, where \t.n\nkS \tk\t \t\tu u \tu\n2) \tis linearly independent if and only if no vector in\ncan be written as a linear combination of the other\nvectors in \t.\nS \tS\nS"
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "So a set a vectors is linearly dependent implies that\nthere exists at least one 'redundant' vector in the set.\nA set a vectors is linearly independent implies that\nthere is no 'redundant' vector in the set."
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 4 \t1 0 \t0 3\t{( , ),( , ),( , )}. Is \ta linearly independent set?\tS \tS\t\n1 0 0 \t0 2 0 \t0 0 \t5\t{( , , ),( , , ),( , , \t)}. Is \ta linearly independent set?\tS \tS\t \t"
+    },
+    {
+      "heading": "Theorem (guaranteed dependence)",
+      "level": 2,
+      "text": "1 \t2Let \t{ \t, \t,..., \t} be a set of vectors in \t.n\nkS \t \tu u \tu\nIf \t, then \tis linearly dependent.\tk \tn \tS\t"
+    },
+    {
+      "heading": "Example (guaranteed dependence)",
+      "level": 2,
+      "text": "2\n1) A set of three or more vectors in \tis always linearly\ndependent.\n3\n2) A set of four or more vectors in \tis always linearly\ndependent."
+    },
+    {
+      "heading": "{ \t, } is a linearly dependent set if and only if",
+      "level": 2,
+      "text": "and \tare scalar multiples of each other (they lie on\nthe same line).\nS \t \tu v\nu \tv\nLinear independence (geometrical)2 \t3\nFor two vectors in \tor \t, recall the following:\nu\nv\nLinearly\ndependent\nu\nv\nLinearly\ndependent\nuv\nLinearly\nindependent"
+    },
+    {
+      "heading": "Linear independence (geometrical)3",
+      "level": 2,
+      "text": "For three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\nu\nv\n{ \t, } is a linearly\ndependent set\nu v\t{ \t, , \t} is a linearly\ndependent set\nu v w\nw\n, , \tlie on the\nsame line\nu v w\norigin"
+    },
+    {
+      "heading": "Linear independence (geometrical)3",
+      "level": 2,
+      "text": "For three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\norigin\nu\nv\n{ \t, } is a linearly\ndependent set\nu v\t{ \t, , \t} is a linearly\ndependent set\nu v w\nw\n, , \tlie on the\nsame plane\nu v w"
+    },
+    {
+      "heading": "Linear independence (geometrical)3",
+      "level": 2,
+      "text": "For three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\nu\nv\n{ \t, } is a linearly\nindependent set\nu v\norigin\nspan{ \t, }\tu vu\nvorigin\nwspan{ , }\tu v\n{ \t, , \t} is a linearly\ndependent set\nu v w\nw"
+    },
+    {
+      "heading": "Linear independence (geometrical)3",
+      "level": 2,
+      "text": "For three vectors in \t:\n{ \t, , \t} is a linearly dependent set if and only if\nthey lie on the same line or the same plane (when their\ninitial points are placed at the origin).\nS \t \tu v w\nu\norigin\n{ } is a linearly\nindependent set\nu\t{ \t, , \t} is a linearly\nindependent set\nu v w\nu\nvorigin\nspan{ , }\tu vu\nv\n{ \t, } is a linearly\nindependent set\nu v\norigin\nspan{ , }\tu v\nw\tspan{ \t, }\t \tu v"
+    },
+    {
+      "heading": "End of Lecture 10",
+      "level": 2,
+      "text": "Lecture 11:\nLinear independence (cont’d)\nBases\nDimensions (till Example 3.6.6)"
+    }
+  ]
+}

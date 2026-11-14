@@ -1,0 +1,181 @@
+{
+  "original_filename": "Lecture 21.pdf",
+  "extracted_text": "Announcements\n1. Tutorial classes on Tuesday next week.\n2. Lab quiz duration: 50 minutes\n3. Please bring along your student (matriculation)\ncard.\n4. Please be reminded to check your group and\narrive on time.\n5. Open ‘everything’ quiz.\nMA1101R Lab Quiz\n• Once you are inside the lab, find a workstation and get seated.\n• If this is NOT your official lab timeslot, you are NOT allowed to\ntake the quiz (unless you have obtained permission).\n• Once at your seat, you may take out your belongings and log in to\nthe PC using your NUSNET ID and password.\n• Take out your student card and place it on your desk.\n• Read the instructions on the cover page of your question paper.\n• Once your PC is ready, you may start MATLAB. Remember to\nchange the directory using the command cd c:/ma1101r\n• You may flip over (after reading the instructions) and read the\nquestion but you cannot start writing until you are told to do so.\n• This is an open book quiz, but no communication (e.g. email,\nMSN) is allowed.\n• Read the question and enter the matrices CAREFULLY!\nLecture 20 Recap1) Definition of a linear transformation.2) The standard matrix and formula for a linear\ntransformation.\n3) Abstract definition of a linear transformation.\n4) Two properties that linear transformations have.\n5) What do we need to know to completely determine\na linear transformation \t: \t.n \tm\nT \t\n6) Composition of linear transformations.\nLecture 21\nRanges and Kernels\nm\n\nDefinitionLet \t: \tbe a linear transformation.n \tm\nT \t\nn\tm\nT\nThe range, denoted by \t( ) of \tis the set of images of \t.\tR T \tT \tT\n( ) \t{ \t( )| \t}n\nR T \tT\t \t\tu \tu\n( ) \t{ \t}\tR T \t'set of all\nimages'\nExampleLet \t: \tbe the transformation defined byn \tn\nI \t\n( ) \t, n\nI \t \t \t\tu \tu \tu'what you put into \t,\nyou get back the same thing'\nI\nn\tn\n( ) n\nR I \t\nExample\n( \t) \t{ } m\nR O \t \t\t0\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0'whatever you put into \t,\nyou get back the zero vector'\nO\n(in \t)m\nn\n0\nm\nExample2 \t3\nLet \t: \tbe the transformation defined by\tT \t\n2.\nx \ty\nx \tx\nT \ty\ny \ty\nx\n\t \t\n \t\t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t\t \t \t \t\n \t\n'all the images are\nof the form\nfor some real numbers \t, \t'\nx \ty\ny\nx\nx y\n\t \t\n \t\n \t\n \t\n \t\n( ) \t,\nx \ty\nR T \ty \tx y\nx\n\t \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\nExample\n( ) \t,\nx \ty\nR T \ty \tx y\nx\n\t \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1 \t1\n0 \t1\n1 \t0\n,\tx \ty \tx y\n \t\t \t \t \t\n \t\t \t \t \t \t \t\t \t \t \t \t\n \t \t \t\t \t\n \t \t \t\t \t\n1 \t1\n0 \t1\n1 \t0\nspan \t,\n \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n2\n(a plane in \t)\nEquation of the plane?\n0\tax \tby \tcz\t \t \t\n0\tx \ty \tz\t \t \t\nv\n( )\tT \tv1 \t2\nFor any \t, we have already\nobserved that \t( ) is some\nlinear combination of\n( \t), \t( \t),..., \t( \t).\nn\nn\nT\nT \tT \tT\n\tv\nv\nu \tu \tu\nDiscussion\n1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1( \t)\tT \tu2( \t)\tT \tu\t( \t)nT \tu\nSo \t( ) \t{ \t( )| \t}n\nR T \tT\t \t\tv \tv\n1 \t2\nEach \t( ) is a linear\ncombination\nof \t( \t), \t( \t),..., \t( \t).n\nT\nT \tT \tT\nv\nu \tu \tu1span{ \t( \t),..., \t( \t)}nT \tT\t \tu \tu\nDiscussion\n1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1 \t2span{ \t( \t), \t( \t)..., \t( \t)}nT \tT \tT\t\tw \tu \tu \tu\nSo \t( ) \t{ \t( )| \t}n\nR T \tT\t \t\tv \tv1 \t2span{ \t( \t), \t( \t),..., \t( \t)} \t( )nT \tT \tT \tR T\t \t\tu \tu \tu\n1span{ \t( \t),..., \t( \t)}nT \tT\t \tu \tu\nConversely,\n1 \t1 \t2 \t2( \t), \t( \t) \t... \t( \t)n \tna T \ta T \ta T\t \t \t \t \t\tw \tu \tu \tu\n1 \t1 \t2 \t2( \t... \t)n \tnT a \ta \ta\t \t \t \t\tu \tu \tu\t( ) for some n\nT\t \t\tv \tv\n1 \t2since \t, \t,...,\nis a basis for\nn\nn\nu u \tu\n( )\tR T\t \t\tw\n1 \t2\n( )\nspan{ \t( \t), \t( \t),..., \t( \t)}n\nR T\nT \tT \tT\t \tu \tu \tu\nWhat does this mean?\n1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1) \t( ) is always a subspace.\tR T\n1 \t2\n( )\nspan{ \t( \t), \t( \t),..., \t( \t)}n\nR T\nT \tT \tT\t \tu \tu \tu\n1 \t22) \t( ) \tspan{ \t( \t), \t( \t)..., \t( \t)}nR T \tT \tT \tT\t \te \te \te\n1 \t2{ \t, \t,..., \t}\nstandard basis for\nn\nn\n\ne \te \te\n \t1 \t2\nRemember\n( \t) \t( \t) \t( \t)nT \tT \tT\t\tA \te \te \te\ncolumn space of\t \tA\nstandard matrix for \tT \t\nTheorem\nLet \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.m\n( ) \tcolumn space of\tR T \t \tA\nDefinition\nLet \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.m\n( ) \tcolumn space of\tR T \t \tA\ndim( \t( )) is called the rank of \tand is denoted\nby rank( ).\nR T \tT\nT\nBy theorem above, rank( \t) \trank( \t) where \tis the\nstandard matrix for \t.\nT\nT\n\tA \tA\nExample4 \t4\nLet \t: \tbe a linear transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nFind a basis for \t( ) and determine rank( \t).\tR T \tT\nIf \tis the standard matrix for \t...\tT\tA\nFind a basis for the column space of \tand\ndetermine rank( \t).\nA\nA\nWe will find a basis\nfor the column space\nof and rank of\nExample4 \t4\nLet \t: \tbe a linear transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\n0 \t1 \t2 \t1\n0 \t1 \t3 \t0\n0 \t1 \t4 \t1\n0 \t0 \t1 \t1\nw\nx\ny\nz\n \t \t\n \t \t\n \t \t \t \t \t\n \t \t \t \t\nExample\nGaussian\nElimination\n1 \t2\n1 \t3\n1 \t4\n0 \t1\nSo a basis for \t( ) is \t,\tR T\n \t\t \t  \t\n \t\t \t  \t\n \t \t  \t \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n2\tand rank( \t) \t.\tT \t\n0 \t1 \t2 \t1\n0 \t1 \t3 \t0\n0 \t1 \t4 \t1\n0 \t0 \t1 \t1\n \t\n \t\n \t\n\t \t\n \t \t\n0 \t1 \t2 \t1\n0 \t0 \t1 \t1\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\nn\n\n{ \t}\nDefinitionLet \t: \tbe a linear transformation.n \tm\nT \t\nn\tm\nT\nThe kernel, denoted by Ker( ) of \tis the set of vectors\nin \twhose image is the zero vector in \t.n \tm\nT \tT\n0\nKer( ) \t{ \t| \t( ) \t}n\nT \tT\t \t \t\tu \tu \t0\nExampleLet \t: \tbe the transformation defined byn \tn\nI \t\n( ) \t, n\nI \t \t \t\tu \tu \tu'what you put into \t,\nyou get back the same thing'\nI\nn\tn\nKer( ) \t?\tI \t\nExample\nn\nKer( \t) \t?\tO \t\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0'whatever you put into \t,\nyou get back the zero vector'\nO\n(in \t)m\n0\nm\nExample2 \t3\nLet \t: \tbe the transformation defined by\tT \t\n2.\nx \ty\nx \tx\nT \ty\ny \ty\nx\n\t \t\n \t\t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t\t \t \t \t\n \t\nKer( ) \t?\tT \t\nExample3 \t4\nLet \t: \tbe the transformation defined by\tT \t\n3\n2\n3\n5 .\nx \ty\nx \tx\nx \ty \tz\nT \ty \ty\nx \ty\nz \tz\nx \tz\n\t \t\n \t\t \t \t \t \t \t \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t\t \t \t \t \t\t \t\n \t \t \t\t \t \t \t \t\nTo find Ker( ), we need to\nfind all vectors \tsuch that\nT\nx\ny\nz\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\n0\nx\nT \ty\nz\n \t\n \t\t \t  \t\n \t\t \t  \t\n \t\t \t  \t \t\t \t\n \t\t \t \t \t\n \t\nSolve!\nExample\n2 \t0\n3 \t0\n5 \t0\n0\nx \ty\nx \ty \tz\nx \ty\nx \tz\n \t\t\n  \t \t\t\n \t \t\n \t \t\n2 \t1 \t0 \t0\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t \t\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n0 \t0 \t0\t, \t,\tx \ty \tz\t \t \t \t\nSo Ker( ) contains only the zero vector,\nthat is, Ker( ) \t{ }.\nT\nT \t \t0\nExample3 \t3\nLet \t: \tbe the transformation defined by\tT \t\n3\n0 \t.\nx \tx \tz \tx\nT \ty \ty\nz \ty \tz\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\nTo find Ker( ), we need to\nfind all vectors \tsuch that\nT\nx\ny\nz\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\nx\nT \ty\nz\n \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t\n \t \t \t\t \t\n \t \t \t\t \t\nExample3 \t3\nLet \t: \tbe the transformation defined by\tT \t\n3\n0 \t.\nx \tx \tz \tx\nT \ty \ty\nz \ty \tz\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n0\n0 \t0\n0\nx \tx \tz\nT \ty\nz \ty\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n0\n0\nx \tz\ny\n \t\t\n  0\nx \tz\ny\n\t\n  \n0\tKer( )\nx\nT \tx\nx\n \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nx \tx\n \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nspan\n \t\t \t\n \t\t \t\n \t \t\n \t\t \t\n \t\t \t\nTheorem\nLet \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.n\nKer( ) \tnullspace of\tT \t \tA\nnullspace of \tAthe following theorem is obvious.\nSince Ker( ) is simply the solution space of \t(where\nis the standard matrix for \t),\nT\nT\n\tAx\nA\n0\nDefinitionLet \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.n\nKer( ) \tnullspace of\tT \t \tA\ndim(Ker( )) is called the nullity of \tand is denoted\nby nullity( ).\nT \tT\nT\nBy theorem above, nullity( \t) \tnullity( \t) where \tis the\nstandard matrix for \t.\nT\nT\n\tA \tA\nExample\nLet \t: \tbe the transformation defined byn \tn\nI \t\n( ) \t, n\nI \t \t \t\tu \tu \tu\t0\tnullity( )\tI\t \t\tKer( ) \t{ }\tI \t \t0\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0\tKer( \t) n\nO \t\tnullity( \t)\tO \tn\t \t\nExample3 3\nLet : be the transformation defined by\tT \n3\n0 .\nx x z x\nT y y\nz y z\n\t \t     \n \t       \n \t     \n     \t \n     \t \n0\tKer( )\nx\nT x\nx\n \t \n \t    \n \t \n \t \n1\n0\n1\nspan\n \t\t \t\n \t\t \t \t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nis a basis\nfor Ker( ) and\tT\n \t\t \t\n \t\t \t\n \t \t\n \t\t \t\n \t\t \t\n1\tnullity( )\tT \t\nExample4 \t4\nLet \t: \tbe the transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nFind a basis for Ker( ) and determine its dimension.\tT\nExample\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nThe standard matrix for \tis\tT \t\tA\nLet's find a basis for (and determine the dimension of)\nthe nullspace of \t.\tA\nExampleSolving \t:\t\tAx \t00 \t1 \t2 \t1 \t0\n0 \t1 \t3 \t0 \t0\n0 \t1 \t4 \t1 \t0\n0 \t0 \t1 \t1 \t0\n \t\n \t\n \t\n\t \t\n \t \t\n3\n, \t, \t.\nw \ts\nx \tt\ny \tt\nz \tt \ts t\n\t\n  \t\n \n \t \t\n0 \t1 \t0 \t3 \t0\n0 \t0 \t1 \t1 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\nSo Ker( )\tT \t3 ,\ns\nt s t\nt\nt\n \t\t \t\n \t\t \t \t \t  \t\n \t \t\n \t \t \t\t \t\nExample\nSo Ker( )\tT \t3 ,\ns\nt s t\nt\nt\n \t\t \t\n \t\t \t \t \t  \t\n \t \t\n \t \t \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\n,\ts \tt \ts t\n \t\t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t \t \t \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\nspan \t,\n \t\t \t  \t\n \t\t \t  \t \t \t  \t  \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\n, \tis a basis for Ker( )\tT\n \t\t \t  \t\n \t\t \t  \t \t \t  \t \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n2\tand dim(Ker( )) \tnullity( ) \t.\tT \tT\t \t\nTheorem\nIf \t: \tis a linear transformation thenn \tm\nT \t\nProof:\nrank( ) \tnullity( ) \t.\tT \tT \tn\t \t\nLet \tbe the standard matrix for \t. So \tis a \tmatrix.\tT \tm \tn\t\tA \tA\nBy dimension theorem for matrices:\nrank( \t) \tnullity( \t) \tn\t \t\tA \tA\nrank( ) \tnullity( )\tT \tT \tn\t \t \t\nby earlier\nobservation\nEnd of Lecture 21\nLecture 22:\nRevision",
+  "sections": [
+    {
+      "heading": "Announcements",
+      "level": 1,
+      "text": "1. Tutorial classes on Tuesday next week.\n2. Lab quiz duration: 50 minutes\n3. Please bring along your student (matriculation)\ncard.\n4. Please be reminded to check your group and\narrive on time.\n5. Open ‘everything’ quiz."
+    },
+    {
+      "heading": "MA1101R Lab Quiz",
+      "level": 2,
+      "text": "• Once you are inside the lab, find a workstation and get seated.\n• If this is NOT your official lab timeslot, you are NOT allowed to\ntake the quiz (unless you have obtained permission).\n• Once at your seat, you may take out your belongings and log in to\nthe PC using your NUSNET ID and password.\n• Take out your student card and place it on your desk.\n• Read the instructions on the cover page of your question paper.\n• Once your PC is ready, you may start MATLAB. Remember to\nchange the directory using the command cd c:/ma1101r\n• You may flip over (after reading the instructions) and read the\nquestion but you cannot start writing until you are told to do so.\n• This is an open book quiz, but no communication (e.g. email,\nMSN) is allowed.\n• Read the question and enter the matrices CAREFULLY!"
+    },
+    {
+      "heading": "Lecture 20 Recap1) Definition of a linear transformation.2) The standard matrix and formula for a li",
+      "level": 2,
+      "text": "transformation.\n3) Abstract definition of a linear transformation.\n4) Two properties that linear transformations have.\n5) What do we need to know to completely determine\na linear transformation \t: \t.n \tm\nT \t\n6) Composition of linear transformations."
+    },
+    {
+      "heading": "Lecture 21",
+      "level": 2,
+      "text": "Ranges and Kernels"
+    },
+    {
+      "heading": "m",
+      "level": 2,
+      "text": "\nDefinitionLet \t: \tbe a linear transformation.n \tm\nT \t\nn\tm\nT\nThe range, denoted by \t( ) of \tis the set of images of \t.\tR T \tT \tT\n( ) \t{ \t( )| \t}n\nR T \tT\t \t\tu \tu\n( ) \t{ \t}\tR T \t'set of all\nimages'"
+    },
+    {
+      "heading": "ExampleLet \t: \tbe the transformation defined byn \tn",
+      "level": 2,
+      "text": "I \t\n( ) \t, n\nI \t \t \t\tu \tu \tu'what you put into \t,\nyou get back the same thing'\nI\nn\tn\n( ) n\nR I \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "( \t) \t{ } m\nR O \t \t\t0\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0'whatever you put into \t,\nyou get back the zero vector'\nO\n(in \t)m\nn\n0\nm"
+    },
+    {
+      "heading": "Example2 \t3",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n2.\nx \ty\nx \tx\nT \ty\ny \ty\nx\n\t \t\n \t\t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t\t \t \t \t\n \t\n'all the images are\nof the form\nfor some real numbers \t, \t'\nx \ty\ny\nx\nx y\n\t \t\n \t\n \t\n \t\n \t\n( ) \t,\nx \ty\nR T \ty \tx y\nx\n\t \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "( ) \t,\nx \ty\nR T \ty \tx y\nx\n\t \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1 \t1\n0 \t1\n1 \t0\n,\tx \ty \tx y\n \t\t \t \t \t\n \t\t \t \t \t \t \t\t \t \t \t \t\n \t \t \t\t \t\n \t \t \t\t \t\n1 \t1\n0 \t1\n1 \t0\nspan \t,\n \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n2\n(a plane in \t)\nEquation of the plane?\n0\tax \tby \tcz\t \t \t\n0\tx \ty \tz\t \t \t"
+    },
+    {
+      "heading": "v",
+      "level": 2,
+      "text": "( )\tT \tv1 \t2\nFor any \t, we have already\nobserved that \t( ) is some\nlinear combination of\n( \t), \t( \t),..., \t( \t).\nn\nn\nT\nT \tT \tT\n\tv\nv\nu \tu \tu\nDiscussion\n1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1( \t)\tT \tu2( \t)\tT \tu\t( \t)nT \tu\nSo \t( ) \t{ \t( )| \t}n\nR T \tT\t \t\tv \tv\n1 \t2\nEach \t( ) is a linear\ncombination\nof \t( \t), \t( \t),..., \t( \t).n\nT\nT \tT \tT\nv\nu \tu \tu1span{ \t( \t),..., \t( \t)}nT \tT\t \tu \tu"
+    },
+    {
+      "heading": "Discussion",
+      "level": 2,
+      "text": "1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1 \t2span{ \t( \t), \t( \t)..., \t( \t)}nT \tT \tT\t\tw \tu \tu \tu\nSo \t( ) \t{ \t( )| \t}n\nR T \tT\t \t\tv \tv1 \t2span{ \t( \t), \t( \t),..., \t( \t)} \t( )nT \tT \tT \tR T\t \t\tu \tu \tu\n1span{ \t( \t),..., \t( \t)}nT \tT\t \tu \tu\nConversely,\n1 \t1 \t2 \t2( \t), \t( \t) \t... \t( \t)n \tna T \ta T \ta T\t \t \t \t \t\tw \tu \tu \tu\n1 \t1 \t2 \t2( \t... \t)n \tnT a \ta \ta\t \t \t \t\tu \tu \tu\t( ) for some n\nT\t \t\tv \tv\n1 \t2since \t, \t,...,\nis a basis for\nn\nn\nu u \tu\n( )\tR T\t \t\tw\n1 \t2\n( )\nspan{ \t( \t), \t( \t),..., \t( \t)}n\nR T\nT \tT \tT\t \tu \tu \tu"
+    },
+    {
+      "heading": "What does this mean?",
+      "level": 2,
+      "text": "1 \t2\nLet \t: \tbe a linear transformation and\n{ \t, \t,..., \t} be a basis for \t.\nn \tm\nn\nn\nT \t\nu u \tu\n1) \t( ) is always a subspace.\tR T\n1 \t2\n( )\nspan{ \t( \t), \t( \t),..., \t( \t)}n\nR T\nT \tT \tT\t \tu \tu \tu\n1 \t22) \t( ) \tspan{ \t( \t), \t( \t)..., \t( \t)}nR T \tT \tT \tT\t \te \te \te\n1 \t2{ \t, \t,..., \t}\nstandard basis for\nn\nn\n\ne \te \te\n \t1 \t2\nRemember\n( \t) \t( \t) \t( \t)nT \tT \tT\t\tA \te \te \te\ncolumn space of\t \tA\nstandard matrix for \tT \t"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "Let \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.m\n( ) \tcolumn space of\tR T \t \tA"
+    },
+    {
+      "heading": "Definition",
+      "level": 2,
+      "text": "Let \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.m\n( ) \tcolumn space of\tR T \t \tA\ndim( \t( )) is called the rank of \tand is denoted\nby rank( ).\nR T \tT\nT\nBy theorem above, rank( \t) \trank( \t) where \tis the\nstandard matrix for \t.\nT\nT\n\tA \tA"
+    },
+    {
+      "heading": "Example4 \t4",
+      "level": 2,
+      "text": "Let \t: \tbe a linear transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nFind a basis for \t( ) and determine rank( \t).\tR T \tT\nIf \tis the standard matrix for \t...\tT\tA\nFind a basis for the column space of \tand\ndetermine rank( \t).\nA\nA"
+    },
+    {
+      "heading": "We will find a basis",
+      "level": 2,
+      "text": "for the column space\nof and rank of\nExample4 \t4\nLet \t: \tbe a linear transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\n0 \t1 \t2 \t1\n0 \t1 \t3 \t0\n0 \t1 \t4 \t1\n0 \t0 \t1 \t1\nw\nx\ny\nz\n \t \t\n \t \t\n \t \t \t \t \t\n \t \t \t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "Gaussian\nElimination\n1 \t2\n1 \t3\n1 \t4\n0 \t1\nSo a basis for \t( ) is \t,\tR T\n \t\t \t  \t\n \t\t \t  \t\n \t \t  \t \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n2\tand rank( \t) \t.\tT \t\n0 \t1 \t2 \t1\n0 \t1 \t3 \t0\n0 \t1 \t4 \t1\n0 \t0 \t1 \t1\n \t\n \t\n \t\n\t \t\n \t \t\n0 \t1 \t2 \t1\n0 \t0 \t1 \t1\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "n",
+      "level": 2,
+      "text": "\n{ \t}\nDefinitionLet \t: \tbe a linear transformation.n \tm\nT \t\nn\tm\nT\nThe kernel, denoted by Ker( ) of \tis the set of vectors\nin \twhose image is the zero vector in \t.n \tm\nT \tT\n0\nKer( ) \t{ \t| \t( ) \t}n\nT \tT\t \t \t\tu \tu \t0"
+    },
+    {
+      "heading": "ExampleLet \t: \tbe the transformation defined byn \tn",
+      "level": 2,
+      "text": "I \t\n( ) \t, n\nI \t \t \t\tu \tu \tu'what you put into \t,\nyou get back the same thing'\nI\nn\tn\nKer( ) \t?\tI \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "n\nKer( \t) \t?\tO \t\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0'whatever you put into \t,\nyou get back the zero vector'\nO\n(in \t)m\n0\nm"
+    },
+    {
+      "heading": "Example2 \t3",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n2.\nx \ty\nx \tx\nT \ty\ny \ty\nx\n\t \t\n \t\t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t\t \t \t \t\n \t\nKer( ) \t?\tT \t"
+    },
+    {
+      "heading": "Example3 \t4",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n3\n2\n3\n5 .\nx \ty\nx \tx\nx \ty \tz\nT \ty \ty\nx \ty\nz \tz\nx \tz\n\t \t\n \t\t \t \t \t \t \t \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t\t \t \t \t \t\t \t\n \t \t \t\t \t \t \t \t\nTo find Ker( ), we need to\nfind all vectors \tsuch that\nT\nx\ny\nz\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\n0\nx\nT \ty\nz\n \t\n \t\t \t  \t\n \t\t \t  \t\n \t\t \t  \t \t\t \t\n \t\t \t \t \t\n \t\nSolve!"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "2 \t0\n3 \t0\n5 \t0\n0\nx \ty\nx \ty \tz\nx \ty\nx \tz\n \t\t\n  \t \t\t\n \t \t\n \t \t\n2 \t1 \t0 \t0\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t \t\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n0 \t0 \t0\t, \t,\tx \ty \tz\t \t \t \t\nSo Ker( ) contains only the zero vector,\nthat is, Ker( ) \t{ }.\nT\nT \t \t0"
+    },
+    {
+      "heading": "Example3 \t3",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n3\n0 \t.\nx \tx \tz \tx\nT \ty \ty\nz \ty \tz\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\nTo find Ker( ), we need to\nfind all vectors \tsuch that\nT\nx\ny\nz\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\nx\nT \ty\nz\n \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t\n \t \t \t\t \t\n \t \t \t\t \t"
+    },
+    {
+      "heading": "Example3 \t3",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n3\n0 \t.\nx \tx \tz \tx\nT \ty \ty\nz \ty \tz\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n0\n0 \t0\n0\nx \tx \tz\nT \ty\nz \ty\n\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n0\n0\nx \tz\ny\n \t\t\n  0\nx \tz\ny\n\t\n  \n0\tKer( )\nx\nT \tx\nx\n \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nx \tx\n \t\t \t\n \t\t \t \t\t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nspan\n \t\t \t\n \t\t \t\n \t \t\n \t\t \t\n \t\t \t"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "Let \t: \tbe a linear transformation and \tthe\nstandard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.n\nKer( ) \tnullspace of\tT \t \tA\nnullspace of \tAthe following theorem is obvious.\nSince Ker( ) is simply the solution space of \t(where\nis the standard matrix for \t),\nT\nT\n\tAx\nA\n0"
+    },
+    {
+      "heading": "DefinitionLet \t: \tbe a linear transformation and \tthe",
+      "level": 2,
+      "text": "standard matrix for \t. Then\nn \tm\nT\nT\n \tA\nand is a subspace of \t.n\nKer( ) \tnullspace of\tT \t \tA\ndim(Ker( )) is called the nullity of \tand is denoted\nby nullity( ).\nT \tT\nT\nBy theorem above, nullity( \t) \tnullity( \t) where \tis the\nstandard matrix for \t.\nT\nT\n\tA \tA"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined byn \tn\nI \t\n( ) \t, n\nI \t \t \t\tu \tu \tu\t0\tnullity( )\tI\t \t\tKer( ) \t{ }\tI \t \t0\nLet \t: \tbe the transformation defined byn \tm\nO \t\n( ) \t, n\nO \t \t \t\tu \tu\t0\tKer( \t) n\nO \t\tnullity( \t)\tO \tn\t \t"
+    },
+    {
+      "heading": "Example3 3",
+      "level": 2,
+      "text": "Let : be the transformation defined by\tT \n3\n0 .\nx x z x\nT y y\nz y z\n\t \t     \n \t       \n \t     \n     \t \n     \t \n0\tKer( )\nx\nT x\nx\n \t \n \t    \n \t \n \t \n1\n0\n1\nspan\n \t\t \t\n \t\t \t \t \t \t\n \t\t \t\n \t\t \t\n1\n0\n1\nis a basis\nfor Ker( ) and\tT\n \t\t \t\n \t\t \t\n \t \t\n \t\t \t\n \t\t \t\n1\tnullity( )\tT \t"
+    },
+    {
+      "heading": "Example4 \t4",
+      "level": 2,
+      "text": "Let \t: \tbe the transformation defined by\tT \t\n4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nFind a basis for Ker( ) and determine its dimension.\tT"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "4\n2\n3\n4 .\nw \tx \ty \tz \tw\nx \tx \ty \tx\nT y \tx \ty \tz \ty\nz \ty \tz \tz\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\t \t\nThe standard matrix for \tis\tT \t\tA\nLet's find a basis for (and determine the dimension of)\nthe nullspace of \t.\tA"
+    },
+    {
+      "heading": "ExampleSolving \t:\t\tAx \t00 \t1 \t2 \t1 \t0",
+      "level": 2,
+      "text": "0 \t1 \t3 \t0 \t0\n0 \t1 \t4 \t1 \t0\n0 \t0 \t1 \t1 \t0\n \t\n \t\n \t\n\t \t\n \t \t\n3\n, \t, \t.\nw \ts\nx \tt\ny \tt\nz \tt \ts t\n\t\n  \t\n \n \t \t\n0 \t1 \t0 \t3 \t0\n0 \t0 \t1 \t1 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\nSo Ker( )\tT \t3 ,\ns\nt s t\nt\nt\n \t\t \t\n \t\t \t \t \t  \t\n \t \t\n \t \t \t\t \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "So Ker( )\tT \t3 ,\ns\nt s t\nt\nt\n \t\t \t\n \t\t \t \t \t  \t\n \t \t\n \t \t \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\n,\ts \tt \ts t\n \t\t \t \t \t\n \t\t \t \t \t \t \t \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t \t \t \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\nspan \t,\n \t\t \t  \t\n \t\t \t  \t \t \t  \t  \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n1 \t0\n0 \t3\n0 \t1\n0 \t1\n, \tis a basis for Ker( )\tT\n \t\t \t  \t\n \t\t \t  \t \t \t  \t \t\n \t  \t \t\n \t  \t \t \t  \t\t \t\n2\tand dim(Ker( )) \tnullity( ) \t.\tT \tT\t \t"
+    },
+    {
+      "heading": "Theorem",
+      "level": 2,
+      "text": "If \t: \tis a linear transformation thenn \tm\nT \t\nProof:\nrank( ) \tnullity( ) \t.\tT \tT \tn\t \t\nLet \tbe the standard matrix for \t. So \tis a \tmatrix.\tT \tm \tn\t\tA \tA\nBy dimension theorem for matrices:\nrank( \t) \tnullity( \t) \tn\t \t\tA \tA\nrank( ) \tnullity( )\tT \tT \tn\t \t \t\nby earlier\nobservation"
+    },
+    {
+      "heading": "End of Lecture 21",
+      "level": 2,
+      "text": "Lecture 22:\nRevision"
+    }
+  ]
+}

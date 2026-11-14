@@ -1,0 +1,211 @@
+{
+  "original_filename": "Lecture 15.pdf",
+  "extracted_text": "LECTURE 14 RECAP\n1) A theorem leading to the definition of the rank\nof a matrix.\n2) What is a full rank matrix? The rank of a matrix and\nits transpose. (Invertibility and full rank).\n3) Consistency of \tand its relation to rank.\t\tAx \tb\n4) The nullspace and nullity of a matrix (dimension Theorem).\n5) The solution set of \tin terms of the nullspace\nof \tand a particular solution.\n\tAx \tb\nA\nEigenvalues and eigenvectors\nLECTURE 15\nA REAL LIFE EXAMPLE\nMovement of people between rural and urban district:\nrural\turban\n4%\n1%\nTotal population is a co\tAssume \tnst\t: \tant.\nWhat is going to happen in the\tQuestio \tlong\tn: \trun?\nA REAL LIFE EXAMPLE\nMovement of people between rural and urban district:\nrural\turban\n4%\n1%\nLet \tbe the urban\npopulation after \tyears.\nna\nn\nLet \tbe the rural\npopulation after \tyears.\nnb\nn\n0 \t0\nMeaning of\nand\ta \tb\nA REAL LIFE EXAMPLE\nrural ( \t)nb\turban ( \t)na\n4%\n1%\n1 \t1\tn \tn \tna \ta \tb \t \t\n1 \t1\tn \tn \tnb \ta \tb \t \t\n0 96 \t0 01\t. \t.\n0 04 \t0 99\t. \t.\nLet n\nn\nn\na\nb\n \t\n  \t\n \t\nxPopulation\ndistribution\nafter \tyears\tn\t1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx1\t( \t)\tn \t\nA REAL LIFE EXAMPLE\n1 \t1\tn \tn \tna \ta \tb \t \t\n1 \t1\tn \tn \tnb \ta \tb \t \t\n0 96 \t0 01\t. \t.\n0 04 \t0 99\t. \t.\nLet n\nn\nn\na\nb\n \t\n  \t\n \t\nx\n1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\n1Then n \tn\tx \tAx\n1 \t2\tn \tn\t \t\tx \tAx\n2\n2\tn \tA x\n2 \t3\tn \tn\t \t\tx \tAx\n3\n3\tn \tA x\nPopulation\ndistribution\nafter \tyears\tn\n0\nn\nn \tx \tA x\nInitial population\ndistribution\nA REAL LIFE EXAMPLE\nLet n\nn\nn\na\nb\n \t\n  \t\n \t\nxPopulation\ndistribution\nafter \tyears\tn\t1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\n1000\nWhat happens\nafter \tyears?\n0\nn\nn \tx \tA x\nInitial population\ndistribution\n1000\nFirst I have\nto compute\n!\tA\nA REAL LIFE EXAMPLE\n1\n( \t)n \tn\t\n\tA \tPDP\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\nSuppose somebody tells you that\n0\nn\nn \tx \tA x\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\t\n \tPDP( \tis invertible,\nis diagonal)\nP\nD\n1 \t1 \t1\n( \t)( \t)...( \t) \t \t\n \tPDP \tPDP \tPDP\n1 \t1 \t1\n( \t... \t) \t \t\n \tPDP \tPDP \tPDP\n1\n( \t... \t)\n \tPDD \tDP\n1\n( \t)n \t\n \tPD P1000\nWhat is \t?\tD\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 95 \t4 \t1\t.\n\n \t \t \t\n  \t \t \t \t \t \t \t\n20% will stay in urban\n80% will stay in rural\nA REAL LIFE EXAMPLE\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA0\nn\nn \tx \tA x\n1\n1 \t0\n0 \t0\nSo lim n\nn\n\n\n \t\n  \t\n \t\nA \tP \tP\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 \t4 \t1\n\n \t \t \t\n  \t \t \t \t \t \t \t\n0 2 \t0 2\n0 8 \t0 8\n. \t.\n. \t.\n \t\n  \t\n \t\n0lim \tlim \tlimn \tn\nn\nn \tn \tn\nn\na\nb\t \t \t\n \t  \t \t\n \t x \tA x\n0\n0\n0 2 \t0 2\n0 8 \t0 8\n. \t.\n. \t.\na\nb\n \t\t \t\n  \t\t \t\n \t \t\n0 \t00 2\t. ( \t)na \ta \tb\t \t\n0 \t00 8\t. ( \t)nb \ta \tb\t \t\nWhich was\nthe crucial\nstep?\nA REAL LIFE EXAMPLE\n1\n( \t)n \tn\t\n\tA \tPDP\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\nSuppose somebody tells you that\n0\nn\nn \tx \tA x\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 95 \t4 \t1\t.\n\n \t \t \t\n  \t \t \t \t \t \t \t\n1\t\n \tPDP( \tis invertible,\nis diagonal)\nP\nD\n1 \t1 \t1\n( \t)( \t)...( \t) \t \t\n \tPDP \tPDP \tPDP\n1 \t1 \t1\n( \t... \t) \t \t\n \tPDP \tPDP \tPDP\n1\n( \t... \t)\n \tPDD \tDP\n1\n( \t)n \t\n \tPD P1000\nWhat is \t?\tD\nDEFINITION\nLet \tbe a square matrix of order \t.\tn\tA\nA nonzero column vector \tis called an eigenvector of\nif\nn\n\tu \tA\nfor some scalar \t.\n\n\t\tAu \tu'multiplying \tto\nresults in some scalar\nmultiple of \t.'\nA \tu\nu\nThe scalar \tis called an eigenvalue of\n \tA\nand \tis said to be an eigenvector of \tassociated with\nthe eigenvalue \t.\n\nu \tA\nA QUESTION BEFORE WE PROCEED\nIf \tis an eigenvector of \tassociated with the\neigenvalue \t,\n\nu \tA\n2 \t1 5 \t300\twhat about vectors like \t, ( \t. ) , \t?\t\tu \tu \tu\nEXAMPLES\n(EIGENVALUES/EIGENVECTORS)\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA1\n4\n \t\n  \t\n \t\nx1\n1\n \t\n  \t \t\ny\n\tAx\n1\n1\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nA\nx \tA\n\tAy\n0 95\n0 95\n. \tis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t. \t.\nA\ny \tA\nEXAMPLES\n(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1\n1\n1\n \n   \n \n \nx\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz\n1 \t1 \t1 \t1\n1 \t1 \t1 \t1\n1 \t1 \t1 \t1\n \t \n \t   \t \n \t \n \t \nBx\n3\n3 \t3\n3\n \t\n \t \t\n \t\n \t\n \t\nx\n3\n3\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nB\nx \tB\nEXAMPLES\n(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1\n1\n1\n \n   \n \n \nx\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz\n1 \t1 \t1 \t1\n1 \t1 \t1 \t0\n1 \t1 \t1 \t1\n \t \t\n \t \t  \t \t\n \t \t \t \t\nBy\n0\n0 \t0\n0\n \t\n \t \t\n \t\n \t\n \t\ny\n0\n0\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nB\ny \tB\n1 \t1 \t1 \t1\n1 \t1 \t1 \t2\n1 \t1 \t1 \t1\n \t \t\n \t \t \t\n \t \t\n \t \t\n \t \t\nBz\n0\n0 \t0\n0\n \t\n \t \t\n \t\n \t\n \t\nz0\nis an eigenvector of\nassociated with eigenvalue \t.\nz \tB\nEXAMPLES\n(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1 \t1\n1 \t0 \t2\n1 \t1 \t1\n \t\n \t\n \t\n \t \t\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t\n \t\n \t\n \t\n1\n1 \t1 \t1\n1 \t0 \t2\n1 \t1 \t1\n\n \t\n \t\n \t\n \t \t\nObserve that\n1\n1\n1\n \n   \n \n \nx\n3\nassociated with\neigenvalue \t.\n3 \t0 \t0\n0 \t0 \t0\n0 \t0 \t0\n \t\n \t  \t\n \t\n \t\n0\nassociated with\neigenvalue \t.\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz\nHOW TO FIND ALL EIGENVALUES OF A\nMATRIX\nLet \tbe a square matrix of order \t.\tn\tA\nis an eigenvalue of\n \tA\nfor some non zero column vector \t( \t)n\n\t \t \t\tAu \tu \tu\nfor some non zero column vector \t( \t)n\n\t \t \t \t\tu \tAu \tu\t0\n( \t) \tfor some non zero column vector \t( \t)n\n\t \t \t \t\tI \tA u \tu\t0\n( \t) \thas non trivial solutions\n\t \t \t\tI \tA x \t0\n0\tdet( \t) \t(that is, \tis singular)\n\n\t \t \t \t\tI \tA \tI \tA\nHOW TO FIND ALL EIGENVALUES OF A\nMATRIX\nLet \tbe a square matrix of order \t.\tn\tA\nSo the eigenvalues of \tare all the numbers \tthat makes\nthe matrix ( \t) singular.\n\n \t\nA\nI \tA\nis an eigenvalue of\n A\n0\tdet( \t) \t(that is, \tis singular)\n\n\t \t \t \t\tI \tA \tI \tA\nNote that if expanded (by cofactor expansion), det( \t)\nis a polynomial in \tof degree \t.\tn\n\n\n\tI \tA\n1\n1 \t1 \t0det( \t) \t...n \tn\nn \tnc \tc \tc \tc\n\n \t\n\n \t \t \t \t \t\tI \tA\nDEFINITION\nLet \tbe a square matrix of order \t.\tn\tA\nThe polynomial det( \t) is called the\ncharacteristic polynomial of \t; and\n \t\tI \tA\nA\n1\n1 \t1 \t0det( \t) \t...n \tn\nn \tnc \tc \tc \tc\n\n \t\n\n \t \t \t \t \t\tI \tAcharacteristic\npolynomial\n0\tthe equation det( \t) \tis called the\ncharacteristic equation of \t.\n \t \t\tI \tA\nA\n1\n1 \t1 \t0 0\t...n \tn\nn \tnc \tc \tc \tc\n \t\n\n \t \t \t \tcharacteristic\nequation\nEXAMPLE\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA0 \t0 96 \t0 01\n0 \t0 04 \t0 99\n. \t.\n. \t.\n\n \n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n\n\n \t\t \t\n  \t \t \t\n0 96 \t0 99 \t0 01 \t0 04\tdet( \t) \t( \t. \t)( \t. \t) \t( \t. \t)( \t. \t)\n\n \t\t \t \t \t \t  \t\tI \tA\n2 1 95 \t0 95\t. \t.\n \t\t \t \t\n1 \t0 95\t( \t)( \t. \t)\n \t\t \t \t\n0 \t1 \t0 95\tdet( \t) \tor \t= . \t.\n\n \t\t \t \t \t\tI \tA\n1 \t0 95\nThe eigenvalues of\nare \tand \t. \t.\nA\nEXAMPLE\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n\n\n\n\n \t \t\t \t\n \t \t \t \t \t\n \t\n \t \t \t \t\nI \tB\n3 \t2\n3\tdet( \t)\n\n \t\t \t \t\tI \tB\t(some hardwork required!)\n0 \t0 \t3\tdet( \t) \tor \t= .\n\n \t\t \t \t \t\tI \tB\n0 \t3\nThe eigenvalues of\nare \tand \t.\nB\n2 3\t( \t)\n \t\t \t\nEXAMPLE\n0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1 \t0\n0 \t2\n1 \t1 \t1\n\n\n\n\n \t\n \t \t \t\n \t\n \t \t \t \t\nI \tC\n3 \t2 2 \t2\tdet( \t)\n\n \t \t\t \t \t \t \t\tI \tC\t(some hardwork required!)\nWhat are the\nroots?\n2 \t1 0 1 2\tTry \t, \t, , ,\n   \t\n3 \t2\n1 \t1 \t1 \t2 1 \t2\t: \t( )\n  \t \t \t\t0\t\n1\tSo \tis a root of the characteristic equation\n \nEXAMPLE\n0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1 \t0\n0 \t2\n1 \t1 \t1\n\n\n\n\n \t\n \t \t \t\n \t\n \t \t \t \t\nI \tC\n3 \t2 2 \t2\tdet( \t)\n\n \t \t\t \t \t \t \t\tI \tC\t(some hardwork required!)\nobtained from long division\n1 \t2 \t2\t( \t)( \t)( \t)\n \t \t\t \t \t \t\n0 \t1 \t2 \t2\tdet( \t) \t, \tor \t.\n\n\t \t \t \t \t\tI \tC1 \t2 \t2\nThe eigenvalues of\nare \t, \tand \t.\t\nC\n2\n1 \t2\t( \t)( \t)\n \t\t \t \t\nTHEOREM\nLet \tbe an \tmatrix. The following statements\nare equivalent.\nn \tn\t\tA\n1) \tis invertible\tA\n2) \thas only trivial solution\t\tAx \t0\n3) RREF of \tis\tA \tI\n4) \tcan be written as produce of elementary matrices\tA\n0\t5) det( \t) \t\tA\n6) Rows of \tforms a basis for n\nA\n7) Columns of \tforms a basis for n\nA\n8) rank( \t) \tn\t\tA\n0\t9) \tis not an eigenvalue of \tA\nTHEOREM (EIGENVALUES OF TRIANGULAR\nMATRICES)\nIf \tis a triangular matrix, the eigenvalues of \tare the\ndiagonal entries of \t.\nA \tA\nA\nSuppose \tis a triangular m\tProof: \tatrix.\tA\nThen ( \t) is also a triangular matrix.\n \t\tI \tA\nTHEOREM (EIGENVALUES OF TRIANGULAR\nMATRICES)\nIf \tis a triangular matrix, the eigenvalues of \tare the\ndiagonal entries of \t.\nA \tA\nA\nSuppose \tis a triangular m\tProof: \tatrix.\tA\nThen ( \t) is also a triangular matrix.\n \t\tI \tA\n11 \t22det( \t) \t( \t)( \t)...( \t)nna \ta \ta\n\n \t\n\t \t \t \t \t\tI \tA\nSo the eigenvalues of \tare:\tA\n11 \t22, \t,..., nna \ta \ta\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\t\n\t\n\n\n\n\n\n\n\n\n\n\n\n\n\nnn\nn\nn\nnn\nn\nn\na\na\ta\na\ta\ta\na\na\ta\na\ta\ta\n\n\n\n\n0\t0\n2\t22\n1\t12\t11\n2\t22\n1\t12\t11\n\t\n\n\n\t\n\n\nA\tI\tA\nWHAT MANY OF YOU WILL ASK\nSince eigenvalues of\ncan be obtained easily\nif \tis triangular...\nA\nA\nSo?\nCan I perform\nE.R.O. on \t...\tA\nI know what\nyou are thinking...\nCan?\nDon't even THINK\nabout it!\nEXAMPLE\n1 \t0 \t1\n0 \t2 \t0\n0 \t0 \t3\n \t\n \t \t\n \t\n \t\n \t\nA\tThe eigenvalues of \tare:\tA\n2 \t0 \t0 \t0\n4 \t0 \t0 \t0\n3 \t1 \t2 \t0\n0 \t3 \t0 \t6\n \t\n \t\n \t  \t\n \t \t\nB\tThe eigenvalues of \tare:\tB\nDEFINITION\nLet \tbe a square matrix of order \tand \tan eigenvalue\nof \t.\nn\n\tA\nA\n( \t) \t: homogeneous linear system with\ncoefficient matrix ( \t)\n\n\n \t\n\nI \tA x\nI \tA\n0\nNote that ( \t) is singular and thus this homogeneous\nlinear system has infinitely many solutions.\n \t\tI \tA\nThe solution space of ( \t) \tis called the eigenspace\nof \tassociated with \tand is denoted by \t.\tE\n\n\n\n \t\tI \tA x\nA\n0\nREMARK\nThe solution space of ( \t) \tis called the eigenspace\nof \tassociated with \tand is denoted by \t.\tE\n\n\n\n \t\tI \tA x\nA\n0\nNote that a non zero vector \tbelongs to \tE\nv\n( \t)\n\t \t \t\tI \tA v \t0\t\t \t \t\tIv \tAv \t0\n\t \t\tAv \tv\nSo \tcontains ALL the eigenvectors of \tassociated with \t.\tE\n\tA\nEXAMPLE\n0 96 \t0 01 1 \t0 95\n0 04 \t0 99\n. \t.\nThe eigenvalues of \tare \tand \t. \t.\n. \t.\n\n\n \t\n \t \t \t\n \t\nA\n11\tFor \t, we investigate \t:\tE\n \n1 \t0 \t0 96 \t0 01\n1 0 \t1 \t0 04 \t0 99\n. \t.\n. \t.\n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA0 04 \t0 01\n0 04 \t0 01\n. \t.\n. \t.\n\t \t\n  \t \t\n1\tSolving ( \t) \t,\t \t\tI \tA x \t0\n0 04 \t0 01 \t0\n0 04 \t0 01 \t0\n. \t.\n. \t.\n\t \t\n \t \t\n1\n41 \t0\n0 \t0 \t0\n\n \t\n \t\n \t1\n1 \t2\t4 0\tx \tx\t \t\n4\nt\nt\n \t\n  \t\n \t\nx\n1\n4\n1 ,\tt \tt\n \t\n \t \t\n \t\n1\n4\n1 1\nspan\tE  \t\t \t\n \t \t\t \t\n \t\t \t\n1 1\tdim( \t)\tE \t\nEXAMPLE\n0 96 0 01 1 0 95\n0 04 0 99\n. .\nThe eigenvalues of are and . .\n. .\n\n\n \n   \n \nA\n0 950 95 .For \t. \t, we investigate \t:\tE\n \n0 95 \t0 \t0 96 \t0 01\n0 95 0 \t0 95 \t0 04 \t0 99\n. \t. \t.\n. . \t. \t.\n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA0 01 \t0 01\n0 04 \t0 04\n. \t.\n. \t.\n \t\t \t\n  \t \t \t\n0 95\tSolving ( . \t) \t,\t \t\tI \tA x \t0\n0 01 \t0 01 \t0\n0 04 \t0 04 \t0\n. \t.\n. \t.\n \t\t \t\n \t \t \t\n1 \t1 \t0\n0 \t0 \t0\n \t\n \t\n \t\t1 \t2 0\tx \tx\t \t\nt\nt\n\t \t\n  \t\n \t\nx1\n1 ,\tt \tt\n\t \t\n \t \t\n \t\n0 95\n1\n1. span\tE \t \t\t \t\n \t \t\t \t\n \t\t \t\n0 95 1.dim( \t)\tE \t\nEXAMPLE\n1 \t1 \t1\n1 \t1 \t1 \t3 \t0\n1 \t1 \t1\nThe eigenvalues of \tare \tand \t.\n\n\n \t\n \t \t \t\n \t\n \t\n \t\nB\n33\tFor \t, we investigate \t:\tE\n \n2 \t1 \t1\n3 \t1 \t2 \t1\n1 \t1 \t2\n \t\t \t\n \t \t \t \t\n \t\n \t \t \t\nI \tB\n3\tSolving ( \t)\t \t\tI \tB x \t02 \t1 \t1 \t0\n1 \t2 \t1 \t0\n1 \t1 \t2 \t0\n \t\t \t\n \t \t\n \t\n \t \t \t\n1 \t0 \t1 \t0\n0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\nt\nt\nt\n \n   \n \n \nx\n1\n1\n1\n,\tt \tt\n \n  \t\n \n \n 3 1\tdim( \t)\tE \t\n3\n1\n1\n1\nspan\tE\n \t\t \n \t\t  \t \t \n \t \t\n \t \t\nEXAMPLE\n1 \t1 \t1\n1 \t1 \t1 \t3 \t0\n1 \t1 \t1\nThe eigenvalues of \tare \tand \t.\n\n\n \t\n \t \t \t\n \t\n \t\n \t\nB\n00\tFor \t, we investigate \t:\tE\n \n1 \t1 \t1\n0 \t1 \t1 \t1\n1 \t1 \t1\n \t \t\t \t\n \t \t \t \t \t\n \t\n \t \t \t \t\nI \tB\n0\tSolving ( \t)\t \t\tI \tB x \t01 \t1 \t1 \t0\n1 \t1 \t1 \t0\n1 \t1 \t1 \t0\n \t \t\t \t\n \t \t \t\n \t\n \t \t \t \t\n1 \t1 \t1 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\nEXAMPLE\n00\tFor \t, we investigate \t:\tE\n \n0\tSolving ( \t)\t \t\tI \tB x \t01 \t1 \t1 \t0\n1 \t1 \t1 \t0\n1 \t1 \t1 \t0\n \t \t\t \t\n \t \t \t\n \t\n \t \t \t \t\n1 \t1 \t1 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n1 \t2 \t3 0\tx \tx \tx\t \t \t\n1\n2\n3 , \t,\nx \ts \tt\nx \ts\nx \tt \ts t\n \t \t\t\n \t\n  \t\n1 \t1\n1 \t0\n0 \t1\n,\ns \tt\ns \ts \tt \ts t\nt\n \t \t \t\t \t \t \t\t \t \t \t \t \t\n \t \t \t\t \t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t \t\n \t \t \t \t \t\t \t \t \t\n \t \t \t \t \t\t \t \t \t\nx\n0\n1 \t1\n1 \t0\n0 \t1\nspan \t,\tE\n \t\t \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n0 2\tdim( \t)\tE \t\nEXAMPLE\n0 \t1 \t0\n0 \t0 \t2 \t1 \t2 \t2\n1 \t1 \t1\nThe eigenvalues of \tare \t, \tand \t.\n\n\t \t\n \t \t \t\n \t\n \t\n \t\nC\nFollowing similar method as before, we have:\n1\n2\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t \t \t \t\n \t\t \t\n \t\t \t\n2\n1\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t\n \t \t\t \t\n \t\t \t\n \t\t \t\n2\n1\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t\n \t\t \t\t \t\n \t\t \t\n \t\t \t\nEXAMPLE\n2 \t0\n1 \t2\nLet \t.\n \t\n  \t\n \t\nM\t2 \tis the only eigenvalue of \t.\tM\n2\tSolving ( \t) \t:\t \t\tI \tM x \t0\n1\n2\n2 \t2 \t0 \t0 \t0\n0 \t1 \t2 \t2 \t0\nx\nx\n \t\t \t \t \t \t\n \t \t \t \t \t \t \t \t \t\n1\n2\n0 \t0 \t0\n1 \t0 \t0\nx\nx\n \t \t \t \t\n \t \t \t \t \t \t \t \t \t\n1\n2\n0 ,\nx s\nx \ts\n \t \t \t\n \t \t \t \t \t \t\n \t \t \t\nx2 \t2\n0 1\n1\nSo \tspan \tand dim( \t) \t.\tE \tE\n \t\t \t\n \t\t \t\t \t\n \t\t \t\nREMEMBER HOW IT ALL STARTED?\nGiven a square matrix \t, we wanted to know if it is possible\nto find an invertible matrix \tsuch that\nA\nP\n1 (a diagonal matrix) \tP \tAP \tD\nLet's look at a summary of the examples we have seen\npreviously:\nWHAT CAN YOU DEDUCE?\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\n4\n1 1\nspan\tE  \t \n  \t \n \t \n0 95\n1\n1. span\tE \t \t \n  \t \n \t \n1 1\tdim( \t)\tE \t\n0 95 1.dim( \t)\tE \t\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n3\n1\n1\n1\nspan\tE\n \t \n \t    \n \t \n \t \n0\n1 1\n1 0\n0 1\nspan ,\tE\n \t \t   \n \t        \n   \t \n   \t \n3 1\tdim( \t)\tE \t\n0 2\tdim( \t)\tE \t\n0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1\n2\n2\n1\nspan\tE\n\t \t \n \t    \n \t \n \t \n2\n1\n2\n1\nspan\tE\n\t \t \n \t \n  \t \n \t \n \t \n2\n1\n2\n1\nspan\tE\n\t \t \n \t \n \t \t \n \t \n \t \n1 1\tdim( \t)\tE \t\n2 1\tdim( \t)\tE \t\n2 1\tdim( \t)\tE \nWHAT CAN YOU DEDUCE?\n2 \t0\n1 \t2\n \t\n  \t\n \t\nM2\n0\n1\nspan\tE  \t\t \t\n \t \t\t \t\n \t\t \t2 1\tdim( \t)\tE \t\nLecture 16:\nDiagonalization (till end of Section 6.2)\nEND OF LECTURE 15",
+  "sections": [
+    {
+      "heading": "LECTURE 14 RECAP",
+      "level": 1,
+      "text": "1) A theorem leading to the definition of the rank\nof a matrix.\n2) What is a full rank matrix? The rank of a matrix and\nits transpose. (Invertibility and full rank).\n3) Consistency of \tand its relation to rank.\t\tAx \tb\n4) The nullspace and nullity of a matrix (dimension Theorem).\n5) The solution set of \tin terms of the nullspace\nof \tand a particular solution.\n\tAx \tb\nA"
+    },
+    {
+      "heading": "Eigenvalues and eigenvectors",
+      "level": 2,
+      "text": "LECTURE 15"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "Movement of people between rural and urban district:\nrural\turban\n4%\n1%\nTotal population is a co\tAssume \tnst\t: \tant.\nWhat is going to happen in the\tQuestio \tlong\tn: \trun?"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "Movement of people between rural and urban district:\nrural\turban\n4%\n1%\nLet \tbe the urban\npopulation after \tyears.\nna\nn\nLet \tbe the rural\npopulation after \tyears.\nnb\nn\n0 \t0\nMeaning of\nand\ta \tb"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "rural ( \t)nb\turban ( \t)na\n4%\n1%\n1 \t1\tn \tn \tna \ta \tb \t \t\n1 \t1\tn \tn \tnb \ta \tb \t \t\n0 96 \t0 01\t. \t.\n0 04 \t0 99\t. \t.\nLet n\nn\nn\na\nb\n \t\n  \t\n \t\nxPopulation\ndistribution\nafter \tyears\tn\t1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx1\t( \t)\tn \t"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "1 \t1\tn \tn \tna \ta \tb \t \t\n1 \t1\tn \tn \tnb \ta \tb \t \t\n0 96 \t0 01\t. \t.\n0 04 \t0 99\t. \t.\nLet n\nn\nn\na\nb\n \t\n  \t\n \t\nx\n1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\n1Then n \tn\tx \tAx\n1 \t2\tn \tn\t \t\tx \tAx\n2\n2\tn \tA x\n2 \t3\tn \tn\t \t\tx \tAx\n3\n3\tn \tA x\nPopulation\ndistribution\nafter \tyears\tn\n0\nn\nn \tx \tA x\nInitial population\ndistribution"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "Let n\nn\nn\na\nb\n \t\n  \t\n \t\nxPopulation\ndistribution\nafter \tyears\tn\t1\n1\n1\nn\nn\nn\na\nb\n\n\n\n \t\n  \t\n \t\nx\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\n1000\nWhat happens\nafter \tyears?\n0\nn\nn \tx \tA x\nInitial population\ndistribution\n1000\nFirst I have\nto compute\n!\tA"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "1\n( \t)n \tn\t\n\tA \tPDP\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\nSuppose somebody tells you that\n0\nn\nn \tx \tA x\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\t\n \tPDP( \tis invertible,\nis diagonal)\nP\nD\n1 \t1 \t1\n( \t)( \t)...( \t) \t \t\n \tPDP \tPDP \tPDP\n1 \t1 \t1\n( \t... \t) \t \t\n \tPDP \tPDP \tPDP\n1\n( \t... \t)\n \tPDD \tDP\n1\n( \t)n \t\n \tPD P1000\nWhat is \t?\tD\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 95 \t4 \t1\t.\n\n \t \t \t\n  \t \t \t \t \t \t \t"
+    },
+    {
+      "heading": "20% will stay in urban",
+      "level": 2,
+      "text": "80% will stay in rural\nA REAL LIFE EXAMPLE\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA0\nn\nn \tx \tA x\n1\n1 \t0\n0 \t0\nSo lim n\nn\n\n\n \t\n  \t\n \t\nA \tP \tP\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 \t4 \t1\n\n \t \t \t\n  \t \t \t \t \t \t \t\n0 2 \t0 2\n0 8 \t0 8\n. \t.\n. \t.\n \t\n  \t\n \t\n0lim \tlim \tlimn \tn\nn\nn \tn \tn\nn\na\nb\t \t \t\n \t  \t \t\n \t x \tA x\n0\n0\n0 2 \t0 2\n0 8 \t0 8\n. \t.\n. \t.\na\nb\n \t\t \t\n  \t\t \t\n \t \t\n0 \t00 2\t. ( \t)na \ta \tb\t \t\n0 \t00 8\t. ( \t)nb \ta \tb\t \t\nWhich was\nthe crucial\nstep?"
+    },
+    {
+      "heading": "A REAL LIFE EXAMPLE",
+      "level": 2,
+      "text": "1\n( \t)n \tn\t\n\tA \tPDP\n0 96 \t0 01\n0 04 \t0 99\n. \t.\nLet . \t.\n \t\n  \t\n \t\nA\nSuppose somebody tells you that\n0\nn\nn \tx \tA x\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\n1 \t1 \t1 \t0 \t1 \t1\n4 \t1 \t0 \t0 95 \t4 \t1\t.\n\n \t \t \t\n  \t \t \t \t \t \t \t\n1\t\n \tPDP( \tis invertible,\nis diagonal)\nP\nD\n1 \t1 \t1\n( \t)( \t)...( \t) \t \t\n \tPDP \tPDP \tPDP\n1 \t1 \t1\n( \t... \t) \t \t\n \tPDP \tPDP \tPDP\n1\n( \t... \t)\n \tPDD \tDP\n1\n( \t)n \t\n \tPD P1000\nWhat is \t?\tD"
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "Let \tbe a square matrix of order \t.\tn\tA\nA nonzero column vector \tis called an eigenvector of\nif\nn\n\tu \tA\nfor some scalar \t.\n\n\t\tAu \tu'multiplying \tto\nresults in some scalar\nmultiple of \t.'\nA \tu\nu\nThe scalar \tis called an eigenvalue of\n \tA\nand \tis said to be an eigenvector of \tassociated with\nthe eigenvalue \t.\n\nu \tA"
+    },
+    {
+      "heading": "A QUESTION BEFORE WE PROCEED",
+      "level": 2,
+      "text": "If \tis an eigenvector of \tassociated with the\neigenvalue \t,\n\nu \tA\n2 \t1 5 \t300\twhat about vectors like \t, ( \t. ) , \t?\t\tu \tu \tu"
+    },
+    {
+      "heading": "EXAMPLES",
+      "level": 2,
+      "text": "(EIGENVALUES/EIGENVECTORS)\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA1\n4\n \t\n  \t\n \t\nx1\n1\n \t\n  \t \t\ny\n\tAx\n1\n1\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nA\nx \tA\n\tAy\n0 95\n0 95\n. \tis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t. \t.\nA\ny \tA"
+    },
+    {
+      "heading": "EXAMPLES",
+      "level": 2,
+      "text": "(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1\n1\n1\n \n   \n \n \nx\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz\n1 \t1 \t1 \t1\n1 \t1 \t1 \t1\n1 \t1 \t1 \t1\n \t \n \t   \t \n \t \n \t \nBx\n3\n3 \t3\n3\n \t\n \t \t\n \t\n \t\n \t\nx\n3\n3\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nB\nx \tB"
+    },
+    {
+      "heading": "EXAMPLES",
+      "level": 2,
+      "text": "(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1\n1\n1\n \n   \n \n \nx\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz\n1 \t1 \t1 \t1\n1 \t1 \t1 \t0\n1 \t1 \t1 \t1\n \t \t\n \t \t  \t \t\n \t \t \t \t\nBy\n0\n0 \t0\n0\n \t\n \t \t\n \t\n \t\n \t\ny\n0\n0\nis an eigenvalue of \tand\nis an eigenvector of\nassociated with eigenvalue \t.\nB\ny \tB\n1 \t1 \t1 \t1\n1 \t1 \t1 \t2\n1 \t1 \t1 \t1\n \t \t\n \t \t \t\n \t \t\n \t \t\n \t \t\nBz\n0\n0 \t0\n0\n \t\n \t \t\n \t\n \t\n \t\nz0\nis an eigenvector of\nassociated with eigenvalue \t.\nz \tB"
+    },
+    {
+      "heading": "EXAMPLES",
+      "level": 2,
+      "text": "(EIGENVALUES/EIGENVECTORS)\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1 \t1\n1 \t0 \t2\n1 \t1 \t1\n \t\n \t\n \t\n \t \t\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t\n \t\n \t\n \t\n1\n1 \t1 \t1\n1 \t0 \t2\n1 \t1 \t1\n\n \t\n \t\n \t\n \t \t\nObserve that\n1\n1\n1\n \n   \n \n \nx\n3\nassociated with\neigenvalue \t.\n3 \t0 \t0\n0 \t0 \t0\n0 \t0 \t0\n \t\n \t  \t\n \t\n \t\n0\nassociated with\neigenvalue \t.\n1\n0\n1\n \t\n \t  \t\n \t \t\ny\n1\n2\n1\n \t\n \t \t\n \t\n \t\n \t\nz"
+    },
+    {
+      "heading": "HOW TO FIND ALL EIGENVALUES OF A",
+      "level": 2,
+      "text": "MATRIX\nLet \tbe a square matrix of order \t.\tn\tA\nis an eigenvalue of\n \tA\nfor some non zero column vector \t( \t)n\n\t \t \t\tAu \tu \tu\nfor some non zero column vector \t( \t)n\n\t \t \t \t\tu \tAu \tu\t0\n( \t) \tfor some non zero column vector \t( \t)n\n\t \t \t \t\tI \tA u \tu\t0\n( \t) \thas non trivial solutions\n\t \t \t\tI \tA x \t0\n0\tdet( \t) \t(that is, \tis singular)\n\n\t \t \t \t\tI \tA \tI \tA"
+    },
+    {
+      "heading": "HOW TO FIND ALL EIGENVALUES OF A",
+      "level": 2,
+      "text": "MATRIX\nLet \tbe a square matrix of order \t.\tn\tA\nSo the eigenvalues of \tare all the numbers \tthat makes\nthe matrix ( \t) singular.\n\n \t\nA\nI \tA\nis an eigenvalue of\n A\n0\tdet( \t) \t(that is, \tis singular)\n\n\t \t \t \t\tI \tA \tI \tA\nNote that if expanded (by cofactor expansion), det( \t)\nis a polynomial in \tof degree \t.\tn\n\n\n\tI \tA\n1\n1 \t1 \t0det( \t) \t...n \tn\nn \tnc \tc \tc \tc\n\n \t\n\n \t \t \t \t \t\tI \tA"
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "Let \tbe a square matrix of order \t.\tn\tA\nThe polynomial det( \t) is called the\ncharacteristic polynomial of \t; and\n \t\tI \tA\nA\n1\n1 \t1 \t0det( \t) \t...n \tn\nn \tnc \tc \tc \tc\n\n \t\n\n \t \t \t \t \t\tI \tAcharacteristic\npolynomial\n0\tthe equation det( \t) \tis called the\ncharacteristic equation of \t.\n \t \t\tI \tA\nA\n1\n1 \t1 \t0 0\t...n \tn\nn \tnc \tc \tc \tc\n \t\n\n \t \t \t \tcharacteristic\nequation"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA0 \t0 96 \t0 01\n0 \t0 04 \t0 99\n. \t.\n. \t.\n\n \n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA\n0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n\n\n \t\t \t\n  \t \t \t\n0 96 \t0 99 \t0 01 \t0 04\tdet( \t) \t( \t. \t)( \t. \t) \t( \t. \t)( \t. \t)\n\n \t\t \t \t \t \t  \t\tI \tA\n2 1 95 \t0 95\t. \t.\n \t\t \t \t\n1 \t0 95\t( \t)( \t. \t)\n \t\t \t \t\n0 \t1 \t0 95\tdet( \t) \tor \t= . \t.\n\n \t\t \t \t \t\tI \tA\n1 \t0 95\nThe eigenvalues of\nare \tand \t. \t.\nA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n\n\n\n\n \t \t\t \t\n \t \t \t \t \t\n \t\n \t \t \t \t\nI \tB\n3 \t2\n3\tdet( \t)\n\n \t\t \t \t\tI \tB\t(some hardwork required!)\n0 \t0 \t3\tdet( \t) \tor \t= .\n\n \t\t \t \t \t\tI \tB\n0 \t3\nThe eigenvalues of\nare \tand \t.\nB\n2 3\t( \t)\n \t\t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1 \t0\n0 \t2\n1 \t1 \t1\n\n\n\n\n \t\n \t \t \t\n \t\n \t \t \t \t\nI \tC\n3 \t2 2 \t2\tdet( \t)\n\n \t \t\t \t \t \t \t\tI \tC\t(some hardwork required!)\nWhat are the\nroots?\n2 \t1 0 1 2\tTry \t, \t, , ,\n   \t\n3 \t2\n1 \t1 \t1 \t2 1 \t2\t: \t( )\n  \t \t \t\t0\t\n1\tSo \tis a root of the characteristic equation\n "
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1 \t0\n0 \t2\n1 \t1 \t1\n\n\n\n\n \t\n \t \t \t\n \t\n \t \t \t \t\nI \tC\n3 \t2 2 \t2\tdet( \t)\n\n \t \t\t \t \t \t \t\tI \tC\t(some hardwork required!)\nobtained from long division\n1 \t2 \t2\t( \t)( \t)( \t)\n \t \t\t \t \t \t\n0 \t1 \t2 \t2\tdet( \t) \t, \tor \t.\n\n\t \t \t \t \t\tI \tC1 \t2 \t2\nThe eigenvalues of\nare \t, \tand \t.\t\nC\n2\n1 \t2\t( \t)( \t)\n \t\t \t \t"
+    },
+    {
+      "heading": "THEOREM",
+      "level": 2,
+      "text": "Let \tbe an \tmatrix. The following statements\nare equivalent.\nn \tn\t\tA\n1) \tis invertible\tA\n2) \thas only trivial solution\t\tAx \t0\n3) RREF of \tis\tA \tI\n4) \tcan be written as produce of elementary matrices\tA\n0\t5) det( \t) \t\tA\n6) Rows of \tforms a basis for n\nA\n7) Columns of \tforms a basis for n\nA\n8) rank( \t) \tn\t\tA\n0\t9) \tis not an eigenvalue of \tA"
+    },
+    {
+      "heading": "THEOREM (EIGENVALUES OF TRIANGULAR",
+      "level": 2,
+      "text": "MATRICES)\nIf \tis a triangular matrix, the eigenvalues of \tare the\ndiagonal entries of \t.\nA \tA\nA\nSuppose \tis a triangular m\tProof: \tatrix.\tA\nThen ( \t) is also a triangular matrix.\n \t\tI \tA"
+    },
+    {
+      "heading": "THEOREM (EIGENVALUES OF TRIANGULAR",
+      "level": 2,
+      "text": "MATRICES)\nIf \tis a triangular matrix, the eigenvalues of \tare the\ndiagonal entries of \t.\nA \tA\nA\nSuppose \tis a triangular m\tProof: \tatrix.\tA\nThen ( \t) is also a triangular matrix.\n \t\tI \tA\n11 \t22det( \t) \t( \t)( \t)...( \t)nna \ta \ta\n\n \t\n\t \t \t \t \t\tI \tA\nSo the eigenvalues of \tare:\tA\n11 \t22, \t,..., nna \ta \ta\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\t\n\t\n\n\n\n\n\n\n\n\n\n\n\n\n\nnn\nn\nn\nnn\nn\nn\na\na\ta\na\ta\ta\na\na\ta\na\ta\ta\n\n\n\n\n0\t0\n2\t22\n1\t12\t11\n2\t22\n1\t12\t11\n\t\n\n\n\t\n\n\nA\tI\tA"
+    },
+    {
+      "heading": "WHAT MANY OF YOU WILL ASK",
+      "level": 2,
+      "text": "Since eigenvalues of\ncan be obtained easily\nif \tis triangular...\nA\nA\nSo?\nCan I perform\nE.R.O. on \t...\tA\nI know what\nyou are thinking...\nCan?\nDon't even THINK\nabout it!"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "1 \t0 \t1\n0 \t2 \t0\n0 \t0 \t3\n \t\n \t \t\n \t\n \t\n \t\nA\tThe eigenvalues of \tare:\tA\n2 \t0 \t0 \t0\n4 \t0 \t0 \t0\n3 \t1 \t2 \t0\n0 \t3 \t0 \t6\n \t\n \t\n \t  \t\n \t \t\nB\tThe eigenvalues of \tare:\tB"
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "Let \tbe a square matrix of order \tand \tan eigenvalue\nof \t.\nn\n\tA\nA\n( \t) \t: homogeneous linear system with\ncoefficient matrix ( \t)\n\n\n \t\n\nI \tA x\nI \tA\n0\nNote that ( \t) is singular and thus this homogeneous\nlinear system has infinitely many solutions.\n \t\tI \tA\nThe solution space of ( \t) \tis called the eigenspace\nof \tassociated with \tand is denoted by \t.\tE\n\n\n\n \t\tI \tA x\nA\n0"
+    },
+    {
+      "heading": "REMARK",
+      "level": 2,
+      "text": "The solution space of ( \t) \tis called the eigenspace\nof \tassociated with \tand is denoted by \t.\tE\n\n\n\n \t\tI \tA x\nA\n0\nNote that a non zero vector \tbelongs to \tE\nv\n( \t)\n\t \t \t\tI \tA v \t0\t\t \t \t\tIv \tAv \t0\n\t \t\tAv \tv\nSo \tcontains ALL the eigenvectors of \tassociated with \t.\tE\n\tA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 96 \t0 01 1 \t0 95\n0 04 \t0 99\n. \t.\nThe eigenvalues of \tare \tand \t. \t.\n. \t.\n\n\n \t\n \t \t \t\n \t\nA\n11\tFor \t, we investigate \t:\tE\n \n1 \t0 \t0 96 \t0 01\n1 0 \t1 \t0 04 \t0 99\n. \t.\n. \t.\n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA0 04 \t0 01\n0 04 \t0 01\n. \t.\n. \t.\n\t \t\n  \t \t\n1\tSolving ( \t) \t,\t \t\tI \tA x \t0\n0 04 \t0 01 \t0\n0 04 \t0 01 \t0\n. \t.\n. \t.\n\t \t\n \t \t\n1\n41 \t0\n0 \t0 \t0\n\n \t\n \t\n \t1\n1 \t2\t4 0\tx \tx\t \t\n4\nt\nt\n \t\n  \t\n \t\nx\n1\n4\n1 ,\tt \tt\n \t\n \t \t\n \t\n1\n4\n1 1\nspan\tE  \t\t \t\n \t \t\t \t\n \t\t \t\n1 1\tdim( \t)\tE \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 96 0 01 1 0 95\n0 04 0 99\n. .\nThe eigenvalues of are and . .\n. .\n\n\n \n   \n \nA\n0 950 95 .For \t. \t, we investigate \t:\tE\n \n0 95 \t0 \t0 96 \t0 01\n0 95 0 \t0 95 \t0 04 \t0 99\n. \t. \t.\n. . \t. \t.\n \t \t \t\n \t \t \t \t \t\n \t \t \t\nI \tA0 01 \t0 01\n0 04 \t0 04\n. \t.\n. \t.\n \t\t \t\n  \t \t \t\n0 95\tSolving ( . \t) \t,\t \t\tI \tA x \t0\n0 01 \t0 01 \t0\n0 04 \t0 04 \t0\n. \t.\n. \t.\n \t\t \t\n \t \t \t\n1 \t1 \t0\n0 \t0 \t0\n \t\n \t\n \t\t1 \t2 0\tx \tx\t \t\nt\nt\n\t \t\n  \t\n \t\nx1\n1 ,\tt \tt\n\t \t\n \t \t\n \t\n0 95\n1\n1. span\tE \t \t\t \t\n \t \t\t \t\n \t\t \t\n0 95 1.dim( \t)\tE \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "1 \t1 \t1\n1 \t1 \t1 \t3 \t0\n1 \t1 \t1\nThe eigenvalues of \tare \tand \t.\n\n\n \t\n \t \t \t\n \t\n \t\n \t\nB\n33\tFor \t, we investigate \t:\tE\n \n2 \t1 \t1\n3 \t1 \t2 \t1\n1 \t1 \t2\n \t\t \t\n \t \t \t \t\n \t\n \t \t \t\nI \tB\n3\tSolving ( \t)\t \t\tI \tB x \t02 \t1 \t1 \t0\n1 \t2 \t1 \t0\n1 \t1 \t2 \t0\n \t\t \t\n \t \t\n \t\n \t \t \t\n1 \t0 \t1 \t0\n0 \t1 \t1 \t0\n0 \t0 \t0 \t0\n\t \t\n \t\n \t\n \t\n \t\nt\nt\nt\n \n   \n \n \nx\n1\n1\n1\n,\tt \tt\n \n  \t\n \n \n 3 1\tdim( \t)\tE \t\n3\n1\n1\n1\nspan\tE\n \t\t \n \t\t  \t \t \n \t \t\n \t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "1 \t1 \t1\n1 \t1 \t1 \t3 \t0\n1 \t1 \t1\nThe eigenvalues of \tare \tand \t.\n\n\n \t\n \t \t \t\n \t\n \t\n \t\nB\n00\tFor \t, we investigate \t:\tE\n \n1 \t1 \t1\n0 \t1 \t1 \t1\n1 \t1 \t1\n \t \t\t \t\n \t \t \t \t \t\n \t\n \t \t \t \t\nI \tB\n0\tSolving ( \t)\t \t\tI \tB x \t01 \t1 \t1 \t0\n1 \t1 \t1 \t0\n1 \t1 \t1 \t0\n \t \t\t \t\n \t \t \t\n \t\n \t \t \t \t\n1 \t1 \t1 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "00\tFor \t, we investigate \t:\tE\n \n0\tSolving ( \t)\t \t\tI \tB x \t01 \t1 \t1 \t0\n1 \t1 \t1 \t0\n1 \t1 \t1 \t0\n \t \t\t \t\n \t \t \t\n \t\n \t \t \t \t\n1 \t1 \t1 \t0\n0 \t0 \t0 \t0\n0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n1 \t2 \t3 0\tx \tx \tx\t \t \t\n1\n2\n3 , \t,\nx \ts \tt\nx \ts\nx \tt \ts t\n \t \t\t\n \t\n  \t\n1 \t1\n1 \t0\n0 \t1\n,\ns \tt\ns \ts \tt \ts t\nt\n \t \t \t\t \t \t \t\t \t \t \t \t \t\n \t \t \t\t \t \t \t \t \t \t \t \t\t \t \t \t \t \t \t \t \t\n \t \t \t \t \t\t \t \t \t\n \t \t \t \t \t\t \t \t \t\nx\n0\n1 \t1\n1 \t0\n0 \t1\nspan \t,\tE\n \t\t \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n0 2\tdim( \t)\tE \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "0 \t1 \t0\n0 \t0 \t2 \t1 \t2 \t2\n1 \t1 \t1\nThe eigenvalues of \tare \t, \tand \t.\n\n\t \t\n \t \t \t\n \t\n \t\n \t\nC\nFollowing similar method as before, we have:\n1\n2\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t \t \t \t\n \t\t \t\n \t\t \t\n2\n1\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t\n \t \t\t \t\n \t\t \t\n \t\t \t\n2\n1\n2\n1\nspan\tE\n\t \t\t \t\n \t\t \t\n \t\t \t\t \t\n \t\t \t\n \t\t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "2 \t0\n1 \t2\nLet \t.\n \t\n  \t\n \t\nM\t2 \tis the only eigenvalue of \t.\tM\n2\tSolving ( \t) \t:\t \t\tI \tM x \t0\n1\n2\n2 \t2 \t0 \t0 \t0\n0 \t1 \t2 \t2 \t0\nx\nx\n \t\t \t \t \t \t\n \t \t \t \t \t \t \t \t \t\n1\n2\n0 \t0 \t0\n1 \t0 \t0\nx\nx\n \t \t \t \t\n \t \t \t \t \t \t \t \t \t\n1\n2\n0 ,\nx s\nx \ts\n \t \t \t\n \t \t \t \t \t \t\n \t \t \t\nx2 \t2\n0 1\n1\nSo \tspan \tand dim( \t) \t.\tE \tE\n \t\t \t\n \t\t \t\t \t\n \t\t \t"
+    },
+    {
+      "heading": "REMEMBER HOW IT ALL STARTED?",
+      "level": 2,
+      "text": "Given a square matrix \t, we wanted to know if it is possible\nto find an invertible matrix \tsuch that\nA\nP\n1 (a diagonal matrix) \tP \tAP \tD\nLet's look at a summary of the examples we have seen\npreviously:"
+    },
+    {
+      "heading": "WHAT CAN YOU DEDUCE?",
+      "level": 2,
+      "text": "0 96 \t0 01\n0 04 \t0 99\n. \t.\n. \t.\n \t\n  \t\n \t\nA\n1\n4\n1 1\nspan\tE  \t \n  \t \n \t \n0 95\n1\n1. span\tE \t \t \n  \t \n \t \n1 1\tdim( \t)\tE \t\n0 95 1.dim( \t)\tE \t\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n3\n1\n1\n1\nspan\tE\n \t \n \t    \n \t \n \t \n0\n1 1\n1 0\n0 1\nspan ,\tE\n \t \t   \n \t        \n   \t \n   \t \n3 1\tdim( \t)\tE \t\n0 2\tdim( \t)\tE \t\n0 \t1 \t0\n0 \t0 \t2\n1 \t1 \t1\n\t \t\n \t  \t\n \t\n \t\nC\n1\n2\n2\n1\nspan\tE\n\t \t \n \t    \n \t \n \t \n2\n1\n2\n1\nspan\tE\n\t \t \n \t \n  \t \n \t \n \t \n2\n1\n2\n1\nspan\tE\n\t \t \n \t \n \t \t \n \t \n \t \n1 1\tdim( \t)\tE \t\n2 1\tdim( \t)\tE \t\n2 1\tdim( \t)\tE "
+    },
+    {
+      "heading": "WHAT CAN YOU DEDUCE?",
+      "level": 2,
+      "text": "2 \t0\n1 \t2\n \t\n  \t\n \t\nM2\n0\n1\nspan\tE  \t\t \t\n \t \t\t \t\n \t\t \t2 1\tdim( \t)\tE \t"
+    },
+    {
+      "heading": "Lecture 16:",
+      "level": 2,
+      "text": "Diagonalization (till end of Section 6.2)\nEND OF LECTURE 15"
+    }
+  ]
+}

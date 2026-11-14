@@ -1,0 +1,206 @@
+{
+  "original_filename": "Lecture 14.pdf",
+  "extracted_text": "LECTURE 13 RECAP\n1) Definition of the row space and column space of\na \tmatrix.\tm \tn\t\n2) How to find bases for the row space or column space\nof a matrix systematically.\n3) Row equivalent matrices have the same row space\n(generally they do not have the same column space).\n4) How to obtain a basis for the row (or column) space of\nby using information from \t, a row-echelon form of \t.\nA\nR \tA\n5) Column space and linear systems.\nR A N K S\nN U L L S P A C E S A N D N U L L I T I E S\nLECTURE 14\nA COMMON QUESTION\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0\n... \t... \t...\n... \t... \t...\n... \t... \t...\n \t\n \t\n \t\n \t\n \t\n \t\nA\tR\nA basis for the row space\nof \tcan be obtained by\ntaking the non zero rows of \t.\nA\nR\nCan I take the\ncorresponding\nrows from\ninstead?\tA\nA COMMON QUESTION\nA basis for the row space\nof \tcan be obtained by\ntaking the non zero rows of \t.\nA\nR\nCan I take the\ncorresponding\nrows from\ninstead?\tANO!\n1 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t0 \t1 \t1\n \t\n \t\n \t  \t\n \t\n \t\nA\n1 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t0 \t1 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t \n \t\n \t\n \t\nR\nG.E.\nTHEOREM\nThe row space and the column space of a matrix have the\nsame dimension.\nthe column space of\nis a subspace of \t.m\nA\nNote that the row space of\nis a subspace of \twhilen\nA\tn\nm\nThese two subspaces may have nothing to do with each\nother (if \t) but the theorem states that they have the\nsame dimension.\nm \tn\t\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t  \t\n \t\n \t\nA\nPROOF\nWe will use what we learnt in the previous\nsection to find bases for both su\nS\nb\ntrate\nspa\ngy:\nces.\nLet \tbe a row echelon form of \t.\tR \tA\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\nPROOF\nWhat is a basis for the row spa\tQuestion \tce o\t: \tf \t?\tA\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nAR\nThe non-zero rows\tAnsw \to\ter: \tf \t.\tR\nWhat is a dimension of the row spa\tQuestion \tce o\t: \tf \t?\tA\nThe number of non-zero rows\tAnswer: \tof \t.\tR\nnumber of leading entries in \t.\t \tR\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0\nPROOF\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\nWhat is a basis for the column spa\tQuestion \tce o\t: \tf \t?\tA\nThe columns of \tcorresponding to the pivot\ncolumn\nAns\ns o\nw r:\n.\ne\nf\nA\nR\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nPROOF\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\nThe number of columns\tAnswer: \there.\nThe number of pivot columns in \t.\t \tR\nThe number of leading entries in \t.\t \tR\nPROOF\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\nThe number of leading entries\tAnswer: \tin \t.\tR\nWhat is a dimension of the row spa\tQuestion \tce o\t: \tf \t?\tA\nThe number of leading entries\tAnswer: \tin \t.\tR\nEXAMPLE\n2 \t0 \t3 \t1 \t8\n2 \t1 \t1 \t2 \t5\n4 \t3 \t0 \t5 \t7\n\t \t\n \t \t\n \t\n \t \t \t \t\nC\n2 \t0 \t3 \t1 \t8\n0 \t1 \t2 \t1 \t3\n0 \t0 \t0 \t0 \t0\n\t \t\n \t \t \t\n \t\n \t\n \t\nGaussian\nElimination\nA basis for the row space of \tis:\tC\n2 0 3 \t1 8 \t0 1 \t2 \t1 \t3\t{( , , , \t, ),( , , \t, \t, \t)}\t \t \t \t\nA basis for the column space of \tis:\tC\n2 \t0\n2 \t1\n4 \t3\n{ \t, \t}\n \t  \t\n \t  \t\n \t  \t\n \t  \t \t \t  \t2\nThe dimension of\nboth the row space\nand column space\nof \tis \t.\tC\nDEFINITION\nThe rank of a matrix is the dimension of its row space\n(or column space).\nThe rank of \tis denoted by rank( \t).\tA \tA\nBy our earlier discussion,\nrank( \t) \t\tA\tnumber of non zero rows in a row echelon\nform of \tA\nnumber of pivot columns in a row echelon\nform of\n\nA\nEXAMPLES (RANK)\n0\t1) rank( ) \t\t0\n2) rank( \t)n n\t\tI\n2\t3) rank( \t) \t\tC\n2 \t0 \t3 \t1 \t8\n2 \t1 \t1 \t2 \t5\n4 \t3 \t0 \t5 \t7\n\t \t\n \t \t\n \t\n \t \t \t \t\nC\n2 \t0 \t3 \t1 \t8\n0 \t1 \t2 \t1 \t3\n0 \t0 \t0 \t0 \t0\n\t \t\n \t \t \t\n \t\n \t\n \t\nGaussian\nElimination\nEXAMPLES (RANK)\n... \t... \t... \t...\n... \t... \t... \t...\n... \t... \t.. \t...\n \t\n \t  \t\n \t\n \t\nA\tn\nWhat is the largest possible\nvalue for rank( \t)?\tA\nm\nm \tn\t\nn\n... \t... \t...\n... \t... \t...\n... \t... \t...\n \t\n \t\n \t\n \t\n  \t\n \t\n \t\n \t\n \t\nA\tn\nm\nn \tm\t\nWhat is the largest possible\nvalue for rank( \t)?\tAm\nREMARKS\n1) For a \tmatrix \t, rank( \t) \tmin{ \t, }.\tm \tn \tm n\t \t\tA \tA\n2) For a \tmatrix \t, if rank( \t) \tmin{ \t, },\tm \tn \tm n\t \t\tA \tA\nwe say that \tis of full rank.\tA\n3) rank( \t) \tdimension of row space of\t\tA \tA\ndimension of column space of T\n \tA\nrank( \t)T\n \tA\n0\t4) A square matrix \tis of full rank if and only if det( \t) \t.\t\tA \tA\nEXAMPLE\nConsider the following linear system\n2 \t1\n3 \t0\n5 \t0\n0\nx \ty\nx \ty \tz\nx \ty\nx \tz\n \t\t\n  \t \t\t\n \t \t\n \t \t\nRewritting as \twhere\t\tAx \tb\n2 \t1 \t0\n1 \t1 \t3\n5 \t1 \t0\n1 \t0 \t1\n\t \t\n \t\n \t \t \t\n \t\n \t\nA\nx\ny\nz\n \t\n \t  \t\n \t\n \t\nx\n1\n0\n0\n0\n \t\n \t\n \t  \t\n \t\n \t\nb\nEXAMPLE\nSolving \tusing Gaussian Elimination,\t\tAx \tb\n2 \t1 \t0 \t1\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t\n \t\nThe linear system is inconsistent since the last column\nof a row echelon form of ( \t) is a pivot column.\tA b\n3\tis a row echelon form of \t, so rank( \t) \t.\t\tA \tA\n1 \t0 \t1 \t0\n0 \t1 \t5 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n \t\n \t\n \t\n \t\n \t\n \t\nEXAMPLE\nSolving \tusing Gaussian Elimination,\t\tAx \tb\n2 \t1 \t0 \t1\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t\n \t\n1 \t0 \t1 \t0\n0 \t1 \t5 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n \t\n \t\n \t\n \t\n \t\n \t\nThe linear system is inconsistent since the last column\nof a row echelon form of ( \t) is a pivot column.\tA b\nSince the last column is a pivot column, rank( \t)\tA b\n1 \t4\trank( \t)\t \t \t\tA\nREMARK\nA linear system \tis consistent if and only if\nand the augmented matrix ( \t) have the same rank.\n\tAx \tb \tA\nA \tb\nTHEOREM\nLet \tand \tbe \tand \tmatrices respectively.\nThen\nm \tn \tn \tp\t \t\tA \tB\nrank( \t) \tmin{rank( \t),rank( \t)}\t\tAB \tA \tB\nANOTHER SUBSPACE\nWe have learnt the\nrow space and column\nspace of a matrix \t.\tA\nAre there\nany other?\nYes, there is. But\nit is not something\nnew...\nDEFINITION\nLet \tbe a \tmatrix.\tm \tn\t\tA\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t  \t\n \t\n \t\nA\nis a homogeneous linear system with \tvariables.\tn\t\tAx \t0\n1\n2\nn\nx\nx\nx\n \t\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\n \t\n \t\n \t  \t\n \t\n \t\nThe solution set of \tis a subspace of n\n\tAx \t0\nand is also called the solution space of \t\tAx \t0.\nThis is also called the nullspace of the matrix \t.\tA\nDEFINITION\nLet \tbe a \tmatrix.\tm \tn\t\tA\nSince the nullspace of \tis a subspace of \t,n\nA\nis a homogeneous linear system with \tvariables.\tn\t\tAx \t0\nThe solution set of \tis a subspace of n\n\tAx \t0\nand is also called the solution space of \t\tAx \t0.\nThis is also called the nullspace of the matrix \t.\tA\nits dimension is \t.\tn\t\nThe dimension of the nullspace of \tis called the nullity of\nand denoted by nullity( \t).\nA \tA\nA\nEXAMPLE\nFind a basis for the nullspace and determine the nullity\nof the following matrix:\n1 \t2 \t0 \t4\n0 \t1 \t5 \t0\n1 \t3 \t2 \t4\n2 \t1 \t0 \t8\n3 \t1 \t1 \t12\n \t\n \t\n \t\n \t \t\t \t\n \t\n \t\n \t \t\nA\nEXAMPLE\nThe reduced row echelon form of the augmented matrix\n( \t) is\tA \t01 \t0 \t0 \t4 \t0\n0 \t1 \t0 \t0 \t0\n0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution for \tis\t\tAx \t0\t1\n2\n3\n4\n4\n0\n0\n,\nx \ts\nx\nx\nx \ts \ts\n \t\t\n \t\n \n \t \t\n1\n2\n3\n4\n4\n0\n0\nx \ts\nx\nx\nx \ts\n\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n4\n0\n0\n1\n, \t.\ts \ts\n\t \t\n \t\n \t \t\n \t\n \t\n \t\n1 \tnon pivot\ncolumn3 \tpivot\ncolumns\nEXAMPLE\nThe reduced row echelon form of the augmented matrix\n( \t) is\tA \t01 \t0 \t0 \t4 \t0\n0 \t1 \t0 \t0 \t0\n0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n4\n0\n0\n1\n\t \t\t \t\n \t\t \t\n \t \t \t\n \t \t\n \t \t \t\t \t\n1\n2\n3\n4\n4\n0\n0\nx \ts\nx\nx\nx \ts\n\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n4\n0\n0\n1\n, \t.\ts \ts\n\t \t\n \t\n \t \t\n \t\n \t\n \t\n1\tnullity( \t) \t\tA\tSo a basis for the nullspace of \tis\tA\nWhat is the rank of \t?\tA\n3\trank( \t) \t\tA\nEXAMPLE\nFind a basis for the nullspace and determine the nullity\nof the following matrix:\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nB\nEXAMPLE\nThe reduced row echelon form of the augmented matrix\n( \t) is\tB \t01 \t1 \t0 \t0 \t1 \t0\n0 \t0 \t1 \t0 \t1 \t0\n0 \t0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution for \tis\t\tBx \t0\n1\n2\n3\n4\n5\n0\n, \t,\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt \ts t\n \t \t\t\n \n  \t\n \n  \t\t\t\n1\n2\n3\n4\n5\n0\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t  \t\t \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\ns \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\nEXAMPLE\nThe reduced row echelon form of the augmented matrix\n( \t) is\tB \t0So a basis for the\nnullspace of \tis\tB\n1\n2\n3\n4\n5\n0\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t  \t\t \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\ns \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n2\tnullity( \t) \t\tB\nWhat is the\nrank of \t?\tB\n3\trank( \t) \t\tB\n2 \tnon pivot\ncolumns\n3 \tpivot\ncolumns\n1 \t1 \t0 \t0 \t1 \t0\n0 \t0 \t1 \t0 \t1 \t0\n0 \t0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\n \t\t \t\t \t  \t\n \t\t \t  \t\n \t\t \t  \t \t\n\t \t  \t\t \t\n \t  \t\t \t\n \t  \t\t \t \t  \t\n \t\t \t  \t\t \t\nTHEOREM\n(Dimension Theorem for matrices)\nLet \tbe a matrix with \tcolumns. Then\tn\tA\nrank( \t) \tnullity( \t) \tn\t \t\tA \tA\nPROBLEM\nIn each of the following cases, find rank( \t), nullity( \t) and\nnullity( \t).T\nA \tA\nA\n1 \t3 \t4\n3\n) \tis a \tmatrix\nand rank( \t) \t.\n\n\nA\nA\n2 \t7 \t5\n3\n) \tis a \tmatrix\nand nullity( \t) \t.\n\n\nA\nA\n3 \t3 \t2\n3\n) \tis a \tmatrix\nand nullity( \t) \t.T\n\n\nA\nA\nANOTHER RELATION\nWe have already seen how the consistency of a linear\nsystem \tis related to the column space of \t.\t\tAx \tb \tA\nIt turns out that the entire solution set for\ncan be obtained if we have the nullspace of \tand a\n'particular' solution to \t.\n\n\nAx \tb\nA\nAx \tb\nNullspace of\n(solution set/space for \t)\t\nA\nAx \t0\nA particular solution (say \t)\nto \t\nv\nAx \tb\nSolution set for\n\tAx \tb\nTHEOREM\nSuppose the system of linear equations \thas a\nsolution \t. Then the solution set of the system is given by\n\tAx \tb\nv\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nThat is, \thas a general solution\t\tAx \tb\n(a general solution for \t)\t \t\tx \tAx \t0\n(a particular solution to \t)\t \t\tAx \tb\nPROOF\nSince \tis a solution to \t, we have \t.\t \t\tv \tAx \tb \tAv \tb\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nLet \tbe the solution set of \t.\tT \t\tAx \tb\tWe will show\nand \t.\nT \tM\nM \tT\n\n\nLet \t. So \tis a solution to\nand thus \t.\nT\t \t\n\nw \tw \tAx \tb\nAw \tb\nTo show \t:\tT \tM\t\nDefine \t(so that \t)\t \t \t \t\tu \tw \tv \tw \tu \tv\n( \t)\t \t\tAu \tA w \tv\t \t\tAw \tAv\t \t\tb \tb \t0\nDone!\nWe want to show\nthat \tcan be written\nin the form\nfor some \tbelonging\nto the nullspace of \t.\n \t\nw\nw \tu \tv\nu\nASo \tnullspace of \t.\t\tu \tA\nPROOF\nSince \tis a solution to \t, we have \t.\t \t\tv \tAx \tb \tAv \tb\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nLet \tbe the solution set of \t.\tT \t\tAx \tb\tWe will show\nand \t.\nT \tM\nM \tT\n\n\nLet \t. So \tcan be expressed as\nthe \tfor some \tin the\nnullspace of \t(and so \t).\nM\t\n \t\n\nw \tw\nw \tu \tv \tu\nA \tAu \t0\nTo show \t:\tM \tT\t\n( \t)\t \t\tAw \tA u \tv\t \t\tAu \tAv\t \t \tb\t0\t \tb\nSo \tis a solution to \t.\t\tw \tAx \tb\nWe want to show\nthat \t, that is,\nis a solution to\n, that is \t.\nT\t\n \t\nw\nw\nAx \tb \tAw \tb\nDone!\nEXAMPLE\nConsider the linear system \twhere\t\tAx \tb\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n0\n0\n3\n3\n \t\n \t\n \t  \t\n \t \t\nb\tand\nFrom an earlier example today,\nwe found that the nullspace\nof \tis\tA\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t \t\n \t \t\t \t \t \t\t \t\n \t \t \t\t \t\n \t \t \t\t \t \t \t \t\n \t\t \t \t \t\t \t\nEXAMPLE\nCheck that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\nSo \tis a particular solution\nto \t.\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\nSo the solution set of\ncan be written as:\n\tAx \tb\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t \t\n \t \t\t \t \t \t\t \t\n \t \t \t\t \t\n \t \t \t\t \t \t \t \t\n \t\t \t \t \t\t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nEXAMPLE\nCheck that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nSo \tis a particular solution\nto \t.\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\nSo the solution set of\ncan be written as:\n\tAx \tb\n1 \t1 \t1\n1 \t1 \t0\n1 \t0 \t1\n1 \t0 \t0\n1 \t0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t\n \t \t \t\t \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\t \t\nEXAMPLE\nCheck that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution\nto \tis\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\n1 \t1 \t1\n1 \t1 \t0\n1 \t0 \t1\n1 \t0 \t0\n1 \t0 \t1\n,\ts \tt \ts t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\t \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\nx\nL E C T U R E 1 5 : E I G E N V A L U E S A N D\nE I G E N V E C T O R S ( T I L L E N D O F S E C T I O N 6 . 1 )\nEND OF LECTURE 14",
+  "sections": [
+    {
+      "heading": "LECTURE 13 RECAP",
+      "level": 1,
+      "text": "1) Definition of the row space and column space of\na \tmatrix.\tm \tn\t\n2) How to find bases for the row space or column space\nof a matrix systematically.\n3) Row equivalent matrices have the same row space\n(generally they do not have the same column space).\n4) How to obtain a basis for the row (or column) space of\nby using information from \t, a row-echelon form of \t.\nA\nR \tA\n5) Column space and linear systems."
+    },
+    {
+      "heading": "R A N K S",
+      "level": 2,
+      "text": "N U L L S P A C E S A N D N U L L I T I E S\nLECTURE 14"
+    },
+    {
+      "heading": "A COMMON QUESTION",
+      "level": 2,
+      "text": "0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0\n... \t... \t...\n... \t... \t...\n... \t... \t...\n \t\n \t\n \t\n \t\n \t\n \t\nA\tR\nA basis for the row space\nof \tcan be obtained by\ntaking the non zero rows of \t.\nA\nR\nCan I take the\ncorresponding\nrows from\ninstead?\tA"
+    },
+    {
+      "heading": "A COMMON QUESTION",
+      "level": 2,
+      "text": "A basis for the row space\nof \tcan be obtained by\ntaking the non zero rows of \t.\nA\nR\nCan I take the\ncorresponding\nrows from\ninstead?\tANO!\n1 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t0 \t1 \t1\n \t\n \t\n \t  \t\n \t\n \t\nA\n1 \t1 \t1 \t1\n0 \t1 \t1 \t1\n0 \t0 \t1 \t1\n0 \t0 \t0 \t0\n \t\n \t\n \t \n \t\n \t\n \t\nR\nG.E."
+    },
+    {
+      "heading": "THEOREM",
+      "level": 2,
+      "text": "The row space and the column space of a matrix have the\nsame dimension.\nthe column space of\nis a subspace of \t.m\nA\nNote that the row space of\nis a subspace of \twhilen\nA\tn\nm\nThese two subspaces may have nothing to do with each\nother (if \t) but the theorem states that they have the\nsame dimension.\nm \tn\t\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t  \t\n \t\n \t\nA"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "We will use what we learnt in the previous\nsection to find bases for both su\nS\nb\ntrate\nspa\ngy:\nces.\nLet \tbe a row echelon form of \t.\tR \tA\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "What is a basis for the row spa\tQuestion \tce o\t: \tf \t?\tA\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nAR\nThe non-zero rows\tAnsw \to\ter: \tf \t.\tR\nWhat is a dimension of the row spa\tQuestion \tce o\t: \tf \t?\tA\nThe number of non-zero rows\tAnswer: \tof \t.\tR\nnumber of leading entries in \t.\t \tR\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n0"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\nWhat is a basis for the column spa\tQuestion \tce o\t: \tf \t?\tA\nThe columns of \tcorresponding to the pivot\ncolumn\nAns\ns o\nw r:\n.\ne\nf\nA\nR\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\nThe number of columns\tAnswer: \there.\nThe number of pivot columns in \t.\t \tR\nThe number of leading entries in \t.\t \tR"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t\n \t\n \t\n \t\nGaussian\nElimination\nA\tR\n0\n0 \t0 0\n* \t*\n* \t*\n*\n* \t*\n... \t... \t...\n\t \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nWhat is a dimension of the column spa\tQuestion: \tce of \t?\tA\nThe number of leading entries\tAnswer: \tin \t.\tR\nWhat is a dimension of the row spa\tQuestion \tce o\t: \tf \t?\tA\nThe number of leading entries\tAnswer: \tin \t.\tR"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "2 \t0 \t3 \t1 \t8\n2 \t1 \t1 \t2 \t5\n4 \t3 \t0 \t5 \t7\n\t \t\n \t \t\n \t\n \t \t \t \t\nC\n2 \t0 \t3 \t1 \t8\n0 \t1 \t2 \t1 \t3\n0 \t0 \t0 \t0 \t0\n\t \t\n \t \t \t\n \t\n \t\n \t\nGaussian\nElimination\nA basis for the row space of \tis:\tC\n2 0 3 \t1 8 \t0 1 \t2 \t1 \t3\t{( , , , \t, ),( , , \t, \t, \t)}\t \t \t \t\nA basis for the column space of \tis:\tC\n2 \t0\n2 \t1\n4 \t3\n{ \t, \t}\n \t  \t\n \t  \t\n \t  \t\n \t  \t \t \t  \t2\nThe dimension of\nboth the row space\nand column space\nof \tis \t.\tC"
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "The rank of a matrix is the dimension of its row space\n(or column space).\nThe rank of \tis denoted by rank( \t).\tA \tA\nBy our earlier discussion,\nrank( \t) \t\tA\tnumber of non zero rows in a row echelon\nform of \tA\nnumber of pivot columns in a row echelon\nform of\n\nA"
+    },
+    {
+      "heading": "EXAMPLES (RANK)",
+      "level": 2,
+      "text": "0\t1) rank( ) \t\t0\n2) rank( \t)n n\t\tI\n2\t3) rank( \t) \t\tC\n2 \t0 \t3 \t1 \t8\n2 \t1 \t1 \t2 \t5\n4 \t3 \t0 \t5 \t7\n\t \t\n \t \t\n \t\n \t \t \t \t\nC\n2 \t0 \t3 \t1 \t8\n0 \t1 \t2 \t1 \t3\n0 \t0 \t0 \t0 \t0\n\t \t\n \t \t \t\n \t\n \t\n \t\nGaussian\nElimination"
+    },
+    {
+      "heading": "EXAMPLES (RANK)",
+      "level": 2,
+      "text": "... \t... \t... \t...\n... \t... \t... \t...\n... \t... \t.. \t...\n \t\n \t  \t\n \t\n \t\nA\tn\nWhat is the largest possible\nvalue for rank( \t)?\tA\nm\nm \tn\t\nn\n... \t... \t...\n... \t... \t...\n... \t... \t...\n \t\n \t\n \t\n \t\n  \t\n \t\n \t\n \t\n \t\nA\tn\nm\nn \tm\t\nWhat is the largest possible\nvalue for rank( \t)?\tAm"
+    },
+    {
+      "heading": "REMARKS",
+      "level": 2,
+      "text": "1) For a \tmatrix \t, rank( \t) \tmin{ \t, }.\tm \tn \tm n\t \t\tA \tA\n2) For a \tmatrix \t, if rank( \t) \tmin{ \t, },\tm \tn \tm n\t \t\tA \tA\nwe say that \tis of full rank.\tA\n3) rank( \t) \tdimension of row space of\t\tA \tA\ndimension of column space of T\n \tA\nrank( \t)T\n \tA\n0\t4) A square matrix \tis of full rank if and only if det( \t) \t.\t\tA \tA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Consider the following linear system\n2 \t1\n3 \t0\n5 \t0\n0\nx \ty\nx \ty \tz\nx \ty\nx \tz\n \t\t\n  \t \t\t\n \t \t\n \t \t\nRewritting as \twhere\t\tAx \tb\n2 \t1 \t0\n1 \t1 \t3\n5 \t1 \t0\n1 \t0 \t1\n\t \t\n \t\n \t \t \t\n \t\n \t\nA\nx\ny\nz\n \t\n \t  \t\n \t\n \t\nx\n1\n0\n0\n0\n \t\n \t\n \t  \t\n \t\n \t\nb"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Solving \tusing Gaussian Elimination,\t\tAx \tb\n2 \t1 \t0 \t1\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t\n \t\nThe linear system is inconsistent since the last column\nof a row echelon form of ( \t) is a pivot column.\tA b\n3\tis a row echelon form of \t, so rank( \t) \t.\t\tA \tA\n1 \t0 \t1 \t0\n0 \t1 \t5 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n \t\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Solving \tusing Gaussian Elimination,\t\tAx \tb\n2 \t1 \t0 \t1\n1 \t1 \t3 \t0\n5 \t1 \t0 \t0\n1 \t0 \t1 \t0\n\t \t\n \t\n \t\n\t \t\n \t\n \t\n1 \t0 \t1 \t0\n0 \t1 \t5 \t0\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n \t\n \t\n \t\n \t\n \t\n \t\nThe linear system is inconsistent since the last column\nof a row echelon form of ( \t) is a pivot column.\tA b\nSince the last column is a pivot column, rank( \t)\tA b\n1 \t4\trank( \t)\t \t \t\tA"
+    },
+    {
+      "heading": "REMARK",
+      "level": 2,
+      "text": "A linear system \tis consistent if and only if\nand the augmented matrix ( \t) have the same rank.\n\tAx \tb \tA\nA \tb"
+    },
+    {
+      "heading": "THEOREM",
+      "level": 2,
+      "text": "Let \tand \tbe \tand \tmatrices respectively.\nThen\nm \tn \tn \tp\t \t\tA \tB\nrank( \t) \tmin{rank( \t),rank( \t)}\t\tAB \tA \tB"
+    },
+    {
+      "heading": "ANOTHER SUBSPACE",
+      "level": 2,
+      "text": "We have learnt the\nrow space and column\nspace of a matrix \t.\tA\nAre there\nany other?\nYes, there is. But\nit is not something\nnew..."
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "Let \tbe a \tmatrix.\tm \tn\t\tA\n11 \t12 \t1\n21 \t22 \t2\n1 \t2\nn\nn\nm \tm \tmn\na \ta \ta\na \ta \ta\na \ta \ta\n \t\n \t\n \t  \t\n \t\n \t\nA\nis a homogeneous linear system with \tvariables.\tn\t\tAx \t0\n1\n2\nn\nx\nx\nx\n \t\n \t\n \t\n \t\n \t\n \t\n0\n0\n0\n \t\n \t\n \t  \t\n \t\n \t\nThe solution set of \tis a subspace of n\n\tAx \t0\nand is also called the solution space of \t\tAx \t0.\nThis is also called the nullspace of the matrix \t.\tA"
+    },
+    {
+      "heading": "DEFINITION",
+      "level": 2,
+      "text": "Let \tbe a \tmatrix.\tm \tn\t\tA\nSince the nullspace of \tis a subspace of \t,n\nA\nis a homogeneous linear system with \tvariables.\tn\t\tAx \t0\nThe solution set of \tis a subspace of n\n\tAx \t0\nand is also called the solution space of \t\tAx \t0.\nThis is also called the nullspace of the matrix \t.\tA\nits dimension is \t.\tn\t\nThe dimension of the nullspace of \tis called the nullity of\nand denoted by nullity( \t).\nA \tA\nA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Find a basis for the nullspace and determine the nullity\nof the following matrix:\n1 \t2 \t0 \t4\n0 \t1 \t5 \t0\n1 \t3 \t2 \t4\n2 \t1 \t0 \t8\n3 \t1 \t1 \t12\n \t\n \t\n \t\n \t \t\t \t\n \t\n \t\n \t \t\nA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "The reduced row echelon form of the augmented matrix\n( \t) is\tA \t01 \t0 \t0 \t4 \t0\n0 \t1 \t0 \t0 \t0\n0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution for \tis\t\tAx \t0\t1\n2\n3\n4\n4\n0\n0\n,\nx \ts\nx\nx\nx \ts \ts\n \t\t\n \t\n \n \t \t\n1\n2\n3\n4\n4\n0\n0\nx \ts\nx\nx\nx \ts\n\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n4\n0\n0\n1\n, \t.\ts \ts\n\t \t\n \t\n \t \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "1 \tnon pivot",
+      "level": 2,
+      "text": "column3 \tpivot\ncolumns\nEXAMPLE\nThe reduced row echelon form of the augmented matrix\n( \t) is\tA \t01 \t0 \t0 \t4 \t0\n0 \t1 \t0 \t0 \t0\n0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0\n0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n4\n0\n0\n1\n\t \t\t \t\n \t\t \t\n \t \t \t\n \t \t\n \t \t \t\t \t\n1\n2\n3\n4\n4\n0\n0\nx \ts\nx\nx\nx \ts\n\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n4\n0\n0\n1\n, \t.\ts \ts\n\t \t\n \t\n \t \t\n \t\n \t\n \t\n1\tnullity( \t) \t\tA\tSo a basis for the nullspace of \tis\tA\nWhat is the rank of \t?\tA\n3\trank( \t) \t\tA"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Find a basis for the nullspace and determine the nullity\nof the following matrix:\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nB"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "The reduced row echelon form of the augmented matrix\n( \t) is\tB \t01 \t1 \t0 \t0 \t1 \t0\n0 \t0 \t1 \t0 \t1 \t0\n0 \t0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution for \tis\t\tBx \t0\n1\n2\n3\n4\n5\n0\n, \t,\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt \ts t\n \t \t\t\n \n  \t\n \n  \t\t\t\n1\n2\n3\n4\n5\n0\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t  \t\t \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\ns \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "The reduced row echelon form of the augmented matrix\n( \t) is\tB \t0So a basis for the\nnullspace of \tis\tB\n1\n2\n3\n4\n5\n0\nx \ts \tt\nx \ts\nx \tt\nx\nx \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t\t \t  \t\t \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\ns \tt\n \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t\t \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n \t \t \t\n2\tnullity( \t) \t\tB\nWhat is the\nrank of \t?\tB\n3\trank( \t) \t\tB\n2 \tnon pivot\ncolumns\n3 \tpivot\ncolumns\n1 \t1 \t0 \t0 \t1 \t0\n0 \t0 \t1 \t0 \t1 \t0\n0 \t0 \t0 \t1 \t0 \t0\n0 \t0 \t0 \t0 \t0 \t0\n \t\n \t\n \t\n \t\n \t\n \t\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\n \t\t \t\t \t  \t\n \t\t \t  \t\n \t\t \t  \t \t\n\t \t  \t\t \t\n \t  \t\t \t\n \t  \t\t \t \t  \t\n \t\t \t  \t\t \t"
+    },
+    {
+      "heading": "THEOREM",
+      "level": 2,
+      "text": "(Dimension Theorem for matrices)\nLet \tbe a matrix with \tcolumns. Then\tn\tA\nrank( \t) \tnullity( \t) \tn\t \t\tA \tA"
+    },
+    {
+      "heading": "PROBLEM",
+      "level": 2,
+      "text": "In each of the following cases, find rank( \t), nullity( \t) and\nnullity( \t).T\nA \tA\nA\n1 \t3 \t4\n3\n) \tis a \tmatrix\nand rank( \t) \t.\n\n\nA\nA\n2 \t7 \t5\n3\n) \tis a \tmatrix\nand nullity( \t) \t.\n\n\nA\nA\n3 \t3 \t2\n3\n) \tis a \tmatrix\nand nullity( \t) \t.T\n\n\nA\nA"
+    },
+    {
+      "heading": "ANOTHER RELATION",
+      "level": 2,
+      "text": "We have already seen how the consistency of a linear\nsystem \tis related to the column space of \t.\t\tAx \tb \tA\nIt turns out that the entire solution set for\ncan be obtained if we have the nullspace of \tand a\n'particular' solution to \t.\n\n\nAx \tb\nA\nAx \tb\nNullspace of\n(solution set/space for \t)\t\nA\nAx \t0\nA particular solution (say \t)\nto \t\nv\nAx \tb\nSolution set for\n\tAx \tb"
+    },
+    {
+      "heading": "THEOREM",
+      "level": 2,
+      "text": "Suppose the system of linear equations \thas a\nsolution \t. Then the solution set of the system is given by\n\tAx \tb\nv\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nThat is, \thas a general solution\t\tAx \tb\n(a general solution for \t)\t \t\tx \tAx \t0\n(a particular solution to \t)\t \t\tAx \tb"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "Since \tis a solution to \t, we have \t.\t \t\tv \tAx \tb \tAv \tb\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nLet \tbe the solution set of \t.\tT \t\tAx \tb\tWe will show\nand \t.\nT \tM\nM \tT\n\n\nLet \t. So \tis a solution to\nand thus \t.\nT\t \t\n\nw \tw \tAx \tb\nAw \tb\nTo show \t:\tT \tM\t\nDefine \t(so that \t)\t \t \t \t\tu \tw \tv \tw \tu \tv\n( \t)\t \t\tAu \tA w \tv\t \t\tAw \tAv\t \t\tb \tb \t0\nDone!\nWe want to show\nthat \tcan be written\nin the form\nfor some \tbelonging\nto the nullspace of \t.\n \t\nw\nw \tu \tv\nu\nASo \tnullspace of \t.\t\tu \tA"
+    },
+    {
+      "heading": "PROOF",
+      "level": 2,
+      "text": "Since \tis a solution to \t, we have \t.\t \t\tv \tAx \tb \tAv \tb\n{ \t| \tis an element of the nullspace of \t}\tM \t \t\tu \tv \tu \tA\nLet \tbe the solution set of \t.\tT \t\tAx \tb\tWe will show\nand \t.\nT \tM\nM \tT\n\n\nLet \t. So \tcan be expressed as\nthe \tfor some \tin the\nnullspace of \t(and so \t).\nM\t\n \t\n\nw \tw\nw \tu \tv \tu\nA \tAu \t0\nTo show \t:\tM \tT\t\n( \t)\t \t\tAw \tA u \tv\t \t\tAu \tAv\t \t \tb\t0\t \tb\nSo \tis a solution to \t.\t\tw \tAx \tb\nWe want to show\nthat \t, that is,\nis a solution to\n, that is \t.\nT\t\n \t\nw\nw\nAx \tb \tAw \tb\nDone!"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Consider the linear system \twhere\t\tAx \tb\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n0\n0\n3\n3\n \t\n \t\n \t  \t\n \t \t\nb\tand\nFrom an earlier example today,\nwe found that the nullspace\nof \tis\tA\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t \t\n \t \t\t \t \t \t\t \t\n \t \t \t\t \t\n \t \t \t\t \t \t \t \t\n \t\t \t \t \t\t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Check that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\nSo \tis a particular solution\nto \t.\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\nSo the solution set of\ncan be written as:\n\tAx \tb\n1 \t1\n1 \t0\n0 \t1\n0 \t0\n0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t\n \t\t \t \t \t\n \t\t \t \t \t \t\n \t \t\t \t \t \t\t \t\n \t \t \t\t \t\n \t \t \t\t \t \t \t \t\n \t\t \t \t \t\t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Check that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nSo \tis a particular solution\nto \t.\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\nSo the solution set of\ncan be written as:\n\tAx \tb\n1 \t1 \t1\n1 \t1 \t0\n1 \t0 \t1\n1 \t0 \t0\n1 \t0 \t1\n,\ts \tt \ts t\n \t\t \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t\n \t\t \t \t \t \t \t \t\n \t \t \t\t \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t\n \t \t \t \t \t\t \t \t \t \t \t \t\n \t\t \t \t \t \t \t\t \t"
+    },
+    {
+      "heading": "EXAMPLE",
+      "level": 2,
+      "text": "Check that\n2 \t2 \t1 \t0 \t1\n1 \t1 \t2 \t3 \t1\n0 \t0 \t1 \t1 \t1\n1 \t1 \t2 \t0 \t1\n\t \t\n \t \t \t\n \t  \t\n \t \t \t\nA\n2 \t2 \t1 \t1\n1 \t1 \t2 \t3 \t1\n1 \t1 \t1\n1 \t1 \t2 \t1\n \t \t\t \t\n \t  \t \t \t\n \t  \t\t \t\n \t \t \t \t\n1\n1\n1\n1\n1\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nA general solution\nto \tis\t\tAx \tb\n0\n0\n3\n3\n \t\n \t\n \t \t\n \t\n \t \t\nb\n1 \t1 \t1\n1 \t1 \t0\n1 \t0 \t1\n1 \t0 \t0\n1 \t0 \t1\n,\ts \tt \ts t\n \t\t \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\t \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t \t\nx"
+    },
+    {
+      "heading": "L E C T U R E 1 5 : E I G E N V A L U E S A N D",
+      "level": 2,
+      "text": "E I G E N V E C T O R S ( T I L L E N D O F S E C T I O N 6 . 1 )\nEND OF LECTURE 14"
+    }
+  ]
+}

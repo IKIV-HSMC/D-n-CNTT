@@ -1,0 +1,251 @@
+{
+  "original_filename": "Lecture 02.pdf",
+  "extracted_text": "Lecture 01 Recap\nLinear equations (systems), their solutions, solution sets\nand general solutions.\nGeometrical interpretation of linear equations (systems)\nand their solutions.\nConsistent and inconsistent linear systems. Three\npossibilities for the solution set of a linear system.\nAugmented matrix and elementary row operations.\nRow equivalent augmented matrices and Theorem 1.2.7.\nLecture 02\nRow-echelon forms\nGaussian Elimination\nWhich is easier to solve?\n3 0\n2 2 2 4\n3 9 3\n(1)\n(2)\n(3)\nx y z\nx y z\nx y\n  \t\n   \t\n  \n1 1 3 0\n2 2 2 4\n3 9 0 3\n \n \n \n \n \n3 0\n4 4 4\n15 9\n(1)\n(4)\n(6)\nx y z\ny z\nz\n  \t\n   \t\n  \n1 1 3 0\n0 4 4 4\n0 0 15 9\n \n  \n \n  \nOur strategy\nSince row equivalent augmented matrices corresponds\nto linear systems having the same solution set...\n... our strategy is to perform elementary row operations\non the (starting) augemented matrix until it changes\ninto a 'nice' form.\nGiven linear system\nwe want to solve\n... ... ... ...\n... ... ... ...\n... ... ... ...\n \n \n \n \n \nelementary row\noperations\n... ... ... ...\n... ... ... ...\n... ... ... ...\n \n \n \n \n \naugmented matrix\nin 'nice' form\nDefinition (Row-echelon form)\nAn augmented matrix is said to be in row-echelon form\nif it has the following two properties.\n1) If there are any rows consisting entirely of zeros,\nthen they are grouped at the bottom of the matrix.\n0 0 0 0\n0 0 0 0\n* * * ... *\n: : : :\n* * * ... *\n...\n...\n \n \n \n \n \n \n \n \n \nnon zero rows\nzero rows\n(if any)\nDefinition (Row-echelon form)\nThe first non zero number in every row is called the\nleading entry of that row.\t: leading entry\t\n2) In any two successive rows that are not entirely zeros,\nthe first non zero number in the lower row occurs further\nto the right than the first non zero number in the\nhigher row.\nnon zero\nrows\ntwo successive\nrows\n0 0\n0 0 0 0\n* ... ... *\n* *\n \n \n \n\t \n \n \nDefinition (Pivot column, pivot\npoint)\nA leading entry is also called a pivot point.\nA column containing a leading entry / pivot point is\ncalled a pivot column.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nnon zero\nrows\nzero rows\n(if any)\nRemark\nThe concept of row-echelon forms can be applied\nto matrices in general, not just for augmented matrices.\nSome observations\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nIf an augmented matrix is in row-echelon form,\n0\n1) all entries (in the same column) below each leading\nentry must be .\nSome observations\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nIf an augmented matrix is in row-echelon form,\n0\n2) entries (in the same column) above each leading\nentry do not have to be \t.\nSome observations\n0\nIf an augmented matrix is in row-echelon form,\n3) every non zero row has one and exactly one leading\nentry.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \nSome observations\n0\nIf an augmented matrix is in row-echelon form,\n4) every pivot column has one and exactly one pivot point;\na column without a pivot point is a non-pivot column.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \nDefinition (Reduced row-echelon\nform)An augmented matrix is said to be in reduced\nrow-echelon form if it is in row-echelon form and has\nthe following two additional properties.\n3) all leading entries must be 1.\n1\n1\n1\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n \n \n \n \n \n \n \n \n \n0\nnon zero\nrows\nzero rows\n(if any)\nDefinition (Reduced row-echelon\nform)\n4) in each pivot column, other than the pivot point, all\nother entries are zero.\n0\n1 0 0\n1 0\n0\n1\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n \n \n \n \n \n \n \n \n \nExamples (row-echelon form)\n0 0 0\n0 0 0\n0 0 0\n \n \n \n \n \n \t\t1 2 3\n2 0 1 0\n0 0 1 0\n0 0 0 3\n0 0 0 0\n \n \n \n \n \n \n0 1 0 2\n0 0 2 0\n0 0 0 4\n \n \n \n \n \nExamples (reduced row-echelon\nform)\n0 0 0\n0 0 0\n0 0 0\n \n \n \n \n \n \t\t1 2 3\n0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \n0 1 0 2\n0 0 2 0\n0 0 0 4\n \n \n \n \n \nreduced\nrow-echelon form?\n2 0 1 0\n0 0 1 0\n0 0 0 3\n0 0 0 0\n \n \n \n \n \n \nHow easy is it?\n1 0 0 2\n0 1 0 0\n0 0 1 4\n \n \n \n \n \n3 variables: , ,\tx y z\nreduced row-echelon form?\nWriting out the linear system:\n2\n0\n4\nx\ny\nz\n\t\n \t\n \nLinear system has\na unique solution.\nYes\nHow easy is it?\n0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n \n1 2 3 4 55 variables: , , , ,\tx x x x x\nreduced row-echelon form?\nWriting out the linear system:\nNo. Row-echelon form.\n2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \n1What happened to ?\tx\nHow easy is it?\n2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \nFor any 'variable' column (left side of vertical line) that\nis a non pivot column, we will assign an arbitrary\nparameter to that variable.\n1x5x1\n1\nIn this case, since does not\nappear in any of the equations,\nnone of the variables will\n'depend' on the value of .\nx\nx\n0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n \nHow easy is it?\n2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \n1 5Let , , where , .\tx s x t s t\t  \nStarting from the last equation:\n4 4 43 3 6 3 6 3 2 .\tx t x t x t\t       \nSubstitute into next 'higher' equation:\n3 32 3 1\t( ) .\tx t t x\t     \nSubstitute into next 'higher' equation:\n2 24 1 0 4\t( ) .\tx t x t\t      \nHow easy is it?\n1 5Let , , where , .\tx s x t s t\t  \n4 4 43 3 6 3 6 3 2 .\tx t x t x t\t       \n3 32 3 1\t( ) .\tx t t x\t     \n2 24 1 0 4\t( ) .\tx t x t\t      \nA general solution is:1\n2\n3\n4\n5\n4\n1\n2\n, , .\nx s\nx t\nx\nx t\nx t s t\n\t\n  \n \t\n  \n  \t\t\nLinear system has\ninfinitely many\nsolutions.\nBack\nsubstitution\nHow easy is it?\n5 variables: , , , ,\tv w x y z\nreduced row-echelon form?\n0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \nWriting out the linear system:\nYes\nLet , , , .\tw s y t s t\t  \nw\ty\n1 1 0 0 0 0\n0 0 1 1 0 2\n0 0 0 0 1 4\n \n \n \n \n \nHow easy is it?\n0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \nLet , , , .\tw s y t s t\t  \nStarting from the last equation:\n4.\tz \nNext equation:\n2 2 .\tx t x t\t      \nNext equation:\n0 .\tv s v s\t    \nA general\nsolution is:2\n4, , .\nv s\nw s\nx t\ny t\nz s t\n \t\n \n   \t\n \n  \t\t\nNo back\nsubstitution!\nHow easy is it?\n1 1 0 2\n0 1 0 0\n0 0 0 2\n\t \n \n \n \n \n3 variables: , ,\tx y z\nreduced row-echelon form?\nNo. Row-echelon form.\nWriting out the linear system:\n2\n0\n0 0 0 2\nx y\ny\nx y z\n \t\n \t\n   Inconsistent!\nHow useful are row-echelon forms?\nLinear system has a unique solution.\t1 0 0 2\n0 1 0 0\n0 0 1 4\n \n \n \n \n \nRecall that any linear system either has (i) no solution;\n(ii) a unique solution; (iii) infinitely many solutions.\n0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n \nLinear system has infinitely many solutions.\n1 1 0 2\n0 1 0 0\n0 0 0 2\n\t \n \n \n \n \nLinear system\nis inconsistent.\nSo how to get them?\n1) Row-echelon forms allows us to determine how\nmany (if any) solutions a linear system has.\n(Trust me...you will learn this later).\n2) Row-echelon forms helps us to write down a\ngeneral solution for a linear system that is consistent.\n3) We now need to develop a systematic way of\nfinding an augmented matrix in row-echelon form\nthat is row equivalent to the augmented matrix of\nthe original linear system.\nDefinition\n \t\n \t\n \t\n \t\n \t\n \t\n \n \n \n \n \n \nA\tRElementary row\noperations\nSuppose \tand \tare row equivalent augmented matrices.\tA \tR\nIf \tis in (reduced) row-echelon form, we say\tR\n1) \tis a (reduced) row-echelon form of\tR \tA\n2) \thas a (reduced) row-echelon form\tA \tR\nGaussian Elimination\nGaussian Elimination is an algorithm (systematic way\nof doing things) to reduce an augmented matrix to a\nrow-echelon form using elementary row operations.\nAgain, this is not restricted to augmented matrices.\nStep 1\nLocate the leftmost column that is not entirely zero.\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \nStep 2\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \nLook at the topmost entry in the column identified in\nStep 1.\n(i) if the entry is non zero, do nothing. This entry is your\nleading entry.\nLook at the topmost entry in the column identified in\nStep 1.\n(ii) if the entry is zero, interchange the top row with\nanother row to bring a non zero entry to the top.\nStep 2\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 2\ninterchange\nrows 1 and 2\n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \n(ii) if the entry is zero, interchange the top row with\nanother row to bring a non zero entry to the top.\nWait a minute…\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 2\n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \nCan we interchange rows 1 and 3 instead?\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 3\n2 3\n1 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \nAt the end of Step 2, you would have identified a\npivot column and a leading entry in that column.\nRemember…\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \nFor each row below the row with the leading entry, add\na suitable multiple of the row with the leading entry so\nthat all the entries below the leading entry (in the same\ncolumn) becomes zero.\nStep 3\n2\n2 1\n    \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \n2\n2 0\nAdd times of row 1 to row 3\nso that becomes .\n\nFor each row below the row with the leading entry, add\na suitable multiple of the row with the leading entry so\nthat all the entries below the leading entry (in the same\ncolumn) becomes zero.\nStep 3\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \t1\n2\n1\n0\nAdd times of\nrow 1 to row 2\nso that ( )\nbecomes .\n\n1 1\n2 2\n\t   \n \n3\n2\n3\n0\nAdd times of\nrow 1 to row 3\nso that\nbecomes .\n\n3 3\n2 2\n    \n \nStep 4\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n2\n1\n0\nAdd times of\nrow 1 to row 2\nso that ( )\nbecomes .\n\n3\n2\n3\n0\nAdd times of\nrow 1 to row 3\nso that\nbecomes .\n\n3\n2\n1\n2\n2 1\n0\n0\n... ...\n... ...\n... ...\n \n \n \n \n \nCover the row containing the leading entry and apply\nStep 1 again to the remaining submatrix.\nremaining submatrix\nContinue this way until the\nentire matrix is in\nrow-echelon form.\nExample (Gaussian Elimination)\nUsing Gaussian Elimination, find a row-echelon form\nof the following augmented matrix.\n1 1 1 1\n1 1 2 2\n1 2 1 1\n5 9 1 6\n \n \n \n\t \n \n \nGauss-Jordan Elimination\nGauss-Jordan Elimination is an algorithm to reduce\nan augmented matrix to the reduced row-echelon form\nusing elementary row operations.\nAgain, this is not restricted to augmented matrices.\nStep 5\nFirst, apply Gaussian Elimination to obtain a row-echelon\nform for the augmented matrix.\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n \nrow-echelon\nforms\n1\nMultiply each (non zero) row by a suitable constant\nso that each leading entry becomes .\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n21\n0 1\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n2\n2\n3\nMultiply row 1 by\nMultiply row 2 by\nStep 5\nFirst, apply Gaussian Elimination to obtain a row-echelon\nform for the augmented matrix.\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n \nrow-echelon\nforms\n1\nMultiply each (non zero) row by a suitable constant\nso that each leading entry becomes .\n3\n11Multiply row 2 by 0 1 1\n0 0 1\n0 0 0\n...\n...\n...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n \nStep 6\n0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n2\n2 0\nAdd ( ) times row to\nthis row so that becomes .\n\n2\n2 1\n( )\t  \n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n \nStep 6\n0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n \n3\n3 0\nAdd ( ) times row to\nthis row so that becomes .\n\n3\n3 1\n( )\t  \nStep 6\n0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n \n4\n4 0\nAdd ( ) times row to this\nrow so that becomes .\t\n4\n4 1\n( )\n\n \n1 2 0\n1 0\n1 0\n1\n... ... ...\n... ... ...\n...\n...\n\t \n \n \n \n \n \n \n \nStep 6\nRepeat the same procedure with the 'next lowest'\nleading entry.\nContinue this way until reduced row-echelon form\nis attained.\nExample (Gauss-Jordan Elimination)\nUsing Gauss-Jordan Elimination, find the reduced\nrow-echelon form of the following augmented matrix.\n1 1 1 1\n1 1 2 2\n1 2 1 1\n5 9 1 6\n \n \n \n\t \n \n \nRemark\nEvery matrix has a unique reduced row-echelon form\nbut can have many different row-echelon forms.\nWow, that was\nsome discussion!\nDon't forget why we\ngo through these is so\nthat we can solve linear\nsystems...I can't wait\nto try it out!\nExample (solving linear systems)\nSolve the following linear system using Gaussian\nElimination.\n3 4 5\n1 2 3 4 5\n1 2 3 4 5\n2 4 2 8\n2 4 5 3 9\n2 4 5 4 3 6\nx x x\nx x x x x\nx x x x x\n  \t\n      \t\n     \nExercise (solving linear systems)\nSolve the following linear system using Gauss-Jordan\nElimination.\n3 4 5\n1 2 3 4 5\n1 2 3 4 5\n2 4 2 8\n2 4 5 3 9\n2 4 5 4 3 6\nx x x\nx x x x x\nx x x x x\n  \t\n      \t\n     \nEnd of Lecture 02\nLecture 03:\nGaussian Elimination (cont’d)\nHomogeneous linear systems (end of Chapter 1)",
+  "sections": [
+    {
+      "heading": "Lecture 01 Recap",
+      "level": 1,
+      "text": "Linear equations (systems), their solutions, solution sets\nand general solutions.\nGeometrical interpretation of linear equations (systems)\nand their solutions.\nConsistent and inconsistent linear systems. Three\npossibilities for the solution set of a linear system.\nAugmented matrix and elementary row operations.\nRow equivalent augmented matrices and Theorem 1.2.7."
+    },
+    {
+      "heading": "Lecture 02",
+      "level": 2,
+      "text": "Row-echelon forms\nGaussian Elimination"
+    },
+    {
+      "heading": "Which is easier to solve?",
+      "level": 2,
+      "text": "3 0\n2 2 2 4\n3 9 3\n(1)\n(2)\n(3)\nx y z\nx y z\nx y\n  \t\n   \t\n  \n1 1 3 0\n2 2 2 4\n3 9 0 3\n \n \n \n \n \n3 0\n4 4 4\n15 9\n(1)\n(4)\n(6)\nx y z\ny z\nz\n  \t\n   \t\n  \n1 1 3 0\n0 4 4 4\n0 0 15 9\n \n  \n \n  "
+    },
+    {
+      "heading": "Our strategy",
+      "level": 2,
+      "text": "Since row equivalent augmented matrices corresponds\nto linear systems having the same solution set...\n... our strategy is to perform elementary row operations\non the (starting) augemented matrix until it changes\ninto a 'nice' form.\nGiven linear system\nwe want to solve\n... ... ... ...\n... ... ... ...\n... ... ... ...\n \n \n \n \n \nelementary row\noperations\n... ... ... ...\n... ... ... ...\n... ... ... ...\n \n \n \n \n \naugmented matrix\nin 'nice' form"
+    },
+    {
+      "heading": "Definition (Row-echelon form)",
+      "level": 2,
+      "text": "An augmented matrix is said to be in row-echelon form\nif it has the following two properties.\n1) If there are any rows consisting entirely of zeros,\nthen they are grouped at the bottom of the matrix.\n0 0 0 0\n0 0 0 0\n* * * ... *\n: : : :\n* * * ... *\n...\n...\n \n \n \n \n \n \n \n \n \nnon zero rows\nzero rows\n(if any)"
+    },
+    {
+      "heading": "Definition (Row-echelon form)",
+      "level": 2,
+      "text": "The first non zero number in every row is called the\nleading entry of that row.\t: leading entry\t\n2) In any two successive rows that are not entirely zeros,\nthe first non zero number in the lower row occurs further\nto the right than the first non zero number in the\nhigher row.\nnon zero\nrows\ntwo successive\nrows\n0 0\n0 0 0 0\n* ... ... *\n* *\n \n \n \n\t \n \n "
+    },
+    {
+      "heading": "Definition (Pivot column, pivot",
+      "level": 2,
+      "text": "point)\nA leading entry is also called a pivot point.\nA column containing a leading entry / pivot point is\ncalled a pivot column.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nnon zero\nrows\nzero rows\n(if any)"
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "The concept of row-echelon forms can be applied\nto matrices in general, not just for augmented matrices."
+    },
+    {
+      "heading": "Some observations",
+      "level": 2,
+      "text": "0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nIf an augmented matrix is in row-echelon form,\n0\n1) all entries (in the same column) below each leading\nentry must be ."
+    },
+    {
+      "heading": "Some observations",
+      "level": 2,
+      "text": "0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n \n0\nIf an augmented matrix is in row-echelon form,\n0\n2) entries (in the same column) above each leading\nentry do not have to be \t."
+    },
+    {
+      "heading": "Some observations",
+      "level": 2,
+      "text": "0\nIf an augmented matrix is in row-echelon form,\n3) every non zero row has one and exactly one leading\nentry.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "Some observations",
+      "level": 2,
+      "text": "0\nIf an augmented matrix is in row-echelon form,\n4) every pivot column has one and exactly one pivot point;\na column without a pivot point is a non-pivot column.\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n\t \n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "Definition (Reduced row-echelon",
+      "level": 2,
+      "text": "form)An augmented matrix is said to be in reduced\nrow-echelon form if it is in row-echelon form and has\nthe following two additional properties.\n3) all leading entries must be 1.\n1\n1\n1\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n \n \n \n \n \n \n \n \n \n0\nnon zero\nrows\nzero rows\n(if any)"
+    },
+    {
+      "heading": "Definition (Reduced row-echelon",
+      "level": 2,
+      "text": "form)\n4) in each pivot column, other than the pivot point, all\nother entries are zero.\n0\n1 0 0\n1 0\n0\n1\n0 0 0\n* *\n* *\n*\n* *\n... ... ...\n \n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "Examples (row-echelon form)",
+      "level": 2,
+      "text": "0 0 0\n0 0 0\n0 0 0\n \n \n \n \n \n \t\t1 2 3\n2 0 1 0\n0 0 1 0\n0 0 0 3\n0 0 0 0\n \n \n \n \n \n \n0 1 0 2\n0 0 2 0\n0 0 0 4\n \n \n \n \n "
+    },
+    {
+      "heading": "Examples (reduced row-echelon",
+      "level": 2,
+      "text": "form)\n0 0 0\n0 0 0\n0 0 0\n \n \n \n \n \n \t\t1 2 3\n0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \n0 1 0 2\n0 0 2 0\n0 0 0 4\n \n \n \n \n \nreduced\nrow-echelon form?\n2 0 1 0\n0 0 1 0\n0 0 0 3\n0 0 0 0\n \n \n \n \n \n "
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "1 0 0 2\n0 1 0 0\n0 0 1 4\n \n \n \n \n \n3 variables: , ,\tx y z\nreduced row-echelon form?\nWriting out the linear system:\n2\n0\n4\nx\ny\nz\n\t\n \t\n \nLinear system has\na unique solution.\nYes"
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n \n1 2 3 4 55 variables: , , , ,\tx x x x x\nreduced row-echelon form?\nWriting out the linear system:\nNo. Row-echelon form.\n2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \n1What happened to ?\tx"
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \nFor any 'variable' column (left side of vertical line) that\nis a non pivot column, we will assign an arbitrary\nparameter to that variable.\n1x5x1\n1\nIn this case, since does not\nappear in any of the equations,\nnone of the variables will\n'depend' on the value of .\nx\nx\n0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n "
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "2 3 5\n3 4 5\n4 5\n4 0\n3\n3 3 6\nx x x\nx x x\nx x\n   \t\n   \t\n  \n1 5Let , , where , .\tx s x t s t\t  \nStarting from the last equation:\n4 4 43 3 6 3 6 3 2 .\tx t x t x t\t       \nSubstitute into next 'higher' equation:\n3 32 3 1\t( ) .\tx t t x\t     \nSubstitute into next 'higher' equation:\n2 24 1 0 4\t( ) .\tx t x t\t      "
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "1 5Let , , where , .\tx s x t s t\t  \n4 4 43 3 6 3 6 3 2 .\tx t x t x t\t       \n3 32 3 1\t( ) .\tx t t x\t     \n2 24 1 0 4\t( ) .\tx t x t\t      \nA general solution is:1\n2\n3\n4\n5\n4\n1\n2\n, , .\nx s\nx t\nx\nx t\nx t s t\n\t\n  \n \t\n  \n  \t\t\nLinear system has\ninfinitely many\nsolutions.\nBack\nsubstitution"
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "5 variables: , , , ,\tv w x y z\nreduced row-echelon form?\n0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \nWriting out the linear system:\nYes\nLet , , , .\tw s y t s t\t  \nw\ty\n1 1 0 0 0 0\n0 0 1 1 0 2\n0 0 0 0 1 4\n \n \n \n \n "
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "0\n2\n4\nv w\nx y\nz\n \t\n   \t\n \nLet , , , .\tw s y t s t\t  \nStarting from the last equation:\n4.\tz \nNext equation:\n2 2 .\tx t x t\t      \nNext equation:\n0 .\tv s v s\t    \nA general\nsolution is:2\n4, , .\nv s\nw s\nx t\ny t\nz s t\n \t\n \n   \t\n \n  \t\t\nNo back\nsubstitution!"
+    },
+    {
+      "heading": "How easy is it?",
+      "level": 2,
+      "text": "1 1 0 2\n0 1 0 0\n0 0 0 2\n\t \n \n \n \n \n3 variables: , ,\tx y z\nreduced row-echelon form?\nNo. Row-echelon form.\nWriting out the linear system:\n2\n0\n0 0 0 2\nx y\ny\nx y z\n \t\n \t\n   Inconsistent!"
+    },
+    {
+      "heading": "How useful are row-echelon forms?",
+      "level": 2,
+      "text": "Linear system has a unique solution.\t1 0 0 2\n0 1 0 0\n0 0 1 4\n \n \n \n \n \nRecall that any linear system either has (i) no solution;\n(ii) a unique solution; (iii) infinitely many solutions.\n0 1 4 0 1 0\n0 0 1 1 1 3\n0 0 0 3 3 6\n \t \n \n \n \n \nLinear system has infinitely many solutions.\n1 1 0 2\n0 1 0 0\n0 0 0 2\n\t \n \n \n \n \nLinear system\nis inconsistent."
+    },
+    {
+      "heading": "So how to get them?",
+      "level": 2,
+      "text": "1) Row-echelon forms allows us to determine how\nmany (if any) solutions a linear system has.\n(Trust me...you will learn this later).\n2) Row-echelon forms helps us to write down a\ngeneral solution for a linear system that is consistent.\n3) We now need to develop a systematic way of\nfinding an augmented matrix in row-echelon form\nthat is row equivalent to the augmented matrix of\nthe original linear system."
+    },
+    {
+      "heading": "Definition",
+      "level": 2,
+      "text": " \t\n \t\n \t\n \t\n \t\n \t\n \n \n \n \n \n \nA\tRElementary row\noperations\nSuppose \tand \tare row equivalent augmented matrices.\tA \tR\nIf \tis in (reduced) row-echelon form, we say\tR\n1) \tis a (reduced) row-echelon form of\tR \tA\n2) \thas a (reduced) row-echelon form\tA \tR"
+    },
+    {
+      "heading": "Gaussian Elimination",
+      "level": 2,
+      "text": "Gaussian Elimination is an algorithm (systematic way\nof doing things) to reduce an augmented matrix to a\nrow-echelon form using elementary row operations.\nAgain, this is not restricted to augmented matrices."
+    },
+    {
+      "heading": "Step 1",
+      "level": 2,
+      "text": "Locate the leftmost column that is not entirely zero.\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n "
+    },
+    {
+      "heading": "Step 2",
+      "level": 2,
+      "text": "0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \nLook at the topmost entry in the column identified in\nStep 1.\n(i) if the entry is non zero, do nothing. This entry is your\nleading entry."
+    },
+    {
+      "heading": "Look at the topmost entry in the column identified in",
+      "level": 2,
+      "text": "Step 1.\n(ii) if the entry is zero, interchange the top row with\nanother row to bring a non zero entry to the top.\nStep 2\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0\n0 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 2\ninterchange\nrows 1 and 2\n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n "
+    },
+    {
+      "heading": "(ii) if the entry is zero, interchange the top row with",
+      "level": 2,
+      "text": "another row to bring a non zero entry to the top.\nWait a minute…\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 2\n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \nCan we interchange rows 1 and 3 instead?\n0 2\n1 1\n2 3\n... ...\n... ...\n... ...\n \n \n \n \n \ninterchange\nrows 1 and 3\n2 3\n1 1\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n "
+    },
+    {
+      "heading": "At the end of Step 2, you would have identified a",
+      "level": 2,
+      "text": "pivot column and a leading entry in that column.\nRemember…\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n0 0 1\n0 0 2\n0 0 1\n...\n...\n...\n \n \n \n  \n1 1\n0 2\n2 3\n... ...\n... ...\n... ...\n\t \n \n \n \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n "
+    },
+    {
+      "heading": "For each row below the row with the leading entry, add",
+      "level": 2,
+      "text": "a suitable multiple of the row with the leading entry so\nthat all the entries below the leading entry (in the same\ncolumn) becomes zero.\nStep 3\n2\n2 1\n    \n \n0 1\n0 0\n0 2\n... ...\n... ...\n... ...\n \n \n \n \n \n2\n2 0\nAdd times of row 1 to row 3\nso that becomes .\n"
+    },
+    {
+      "heading": "For each row below the row with the leading entry, add",
+      "level": 2,
+      "text": "a suitable multiple of the row with the leading entry so\nthat all the entries below the leading entry (in the same\ncolumn) becomes zero.\nStep 3\n2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \t1\n2\n1\n0\nAdd times of\nrow 1 to row 2\nso that ( )\nbecomes .\n\n1 1\n2 2\n\t   \n \n3\n2\n3\n0\nAdd times of\nrow 1 to row 3\nso that\nbecomes .\n\n3 3\n2 2\n    \n "
+    },
+    {
+      "heading": "Step 4",
+      "level": 2,
+      "text": "2 1\n1 1\n3 2\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n2\n1\n0\nAdd times of\nrow 1 to row 2\nso that ( )\nbecomes .\n\n3\n2\n3\n0\nAdd times of\nrow 1 to row 3\nso that\nbecomes .\n\n3\n2\n1\n2\n2 1\n0\n0\n... ...\n... ...\n... ...\n \n \n \n \n \nCover the row containing the leading entry and apply\nStep 1 again to the remaining submatrix.\nremaining submatrix\nContinue this way until the\nentire matrix is in\nrow-echelon form."
+    },
+    {
+      "heading": "Example (Gaussian Elimination)",
+      "level": 2,
+      "text": "Using Gaussian Elimination, find a row-echelon form\nof the following augmented matrix.\n1 1 1 1\n1 1 2 2\n1 2 1 1\n5 9 1 6\n \n \n \n\t \n \n "
+    },
+    {
+      "heading": "Gauss-Jordan Elimination",
+      "level": 2,
+      "text": "Gauss-Jordan Elimination is an algorithm to reduce\nan augmented matrix to the reduced row-echelon form\nusing elementary row operations.\nAgain, this is not restricted to augmented matrices."
+    },
+    {
+      "heading": "Step 5",
+      "level": 2,
+      "text": "First, apply Gaussian Elimination to obtain a row-echelon\nform for the augmented matrix.\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n \nrow-echelon\nforms\n1\nMultiply each (non zero) row by a suitable constant\nso that each leading entry becomes .\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n21\n0 1\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n1\n2\n2\n3\nMultiply row 1 by\nMultiply row 2 by"
+    },
+    {
+      "heading": "Step 5",
+      "level": 2,
+      "text": "First, apply Gaussian Elimination to obtain a row-echelon\nform for the augmented matrix.\n3\n2\n2 1\n0\n0 0\n... ...\n... ...\n... ...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n \nrow-echelon\nforms\n1\nMultiply each (non zero) row by a suitable constant\nso that each leading entry becomes .\n3\n11Multiply row 2 by 0 1 1\n0 0 1\n0 0 0\n...\n...\n...\n \n \n \n \n \n11\n3\n0 1 1\n0 0\n0 0 0\n...\n...\n...\n \n \n \n \n "
+    },
+    {
+      "heading": "Step 6",
+      "level": 2,
+      "text": "0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n2\n2 0\nAdd ( ) times row to\nthis row so that becomes .\n\n2\n2 1\n( )\t  \n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "Step 6",
+      "level": 2,
+      "text": "0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n \n3\n3 0\nAdd ( ) times row to\nthis row so that becomes .\n\n3\n3 1\n( )\t  "
+    },
+    {
+      "heading": "Step 6",
+      "level": 2,
+      "text": "0\nStarting with the leading entry in the 'lowest' row,\nadd suitable multiples of this row to rows above so\nthat entries (in the same column) above the leading\nentry becomes .\n1 2 4\n1 3\n1 2\n1\n... ... ...\n... ... ...\n...\n...\n \t \n \n \n \n \n \n \n \n4\n4 0\nAdd ( ) times row to this\nrow so that becomes .\t\n4\n4 1\n( )\n\n "
+    },
+    {
+      "heading": "1 2 0",
+      "level": 2,
+      "text": "1 0\n1 0\n1\n... ... ...\n... ... ...\n...\n...\n\t \n \n \n \n \n \n \n \nStep 6\nRepeat the same procedure with the 'next lowest'\nleading entry.\nContinue this way until reduced row-echelon form\nis attained."
+    },
+    {
+      "heading": "Example (Gauss-Jordan Elimination)",
+      "level": 2,
+      "text": "Using Gauss-Jordan Elimination, find the reduced\nrow-echelon form of the following augmented matrix.\n1 1 1 1\n1 1 2 2\n1 2 1 1\n5 9 1 6\n \n \n \n\t \n \n "
+    },
+    {
+      "heading": "Remark",
+      "level": 2,
+      "text": "Every matrix has a unique reduced row-echelon form\nbut can have many different row-echelon forms.\nWow, that was\nsome discussion!\nDon't forget why we\ngo through these is so\nthat we can solve linear\nsystems...I can't wait\nto try it out!"
+    },
+    {
+      "heading": "Example (solving linear systems)",
+      "level": 2,
+      "text": "Solve the following linear system using Gaussian\nElimination.\n3 4 5\n1 2 3 4 5\n1 2 3 4 5\n2 4 2 8\n2 4 5 3 9\n2 4 5 4 3 6\nx x x\nx x x x x\nx x x x x\n  \t\n      \t\n     "
+    },
+    {
+      "heading": "Exercise (solving linear systems)",
+      "level": 2,
+      "text": "Solve the following linear system using Gauss-Jordan\nElimination.\n3 4 5\n1 2 3 4 5\n1 2 3 4 5\n2 4 2 8\n2 4 5 3 9\n2 4 5 4 3 6\nx x x\nx x x x x\nx x x x x\n  \t\n      \t\n     "
+    },
+    {
+      "heading": "End of Lecture 02",
+      "level": 2,
+      "text": "Lecture 03:\nGaussian Elimination (cont’d)\nHomogeneous linear systems (end of Chapter 1)"
+    }
+  ]
+}

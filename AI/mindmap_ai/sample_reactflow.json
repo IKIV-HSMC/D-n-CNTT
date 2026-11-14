@@ -1,0 +1,3076 @@
+{
+  "nodes": [
+    {
+      "id": "n0",
+      "data": {
+        "label": "UNILEARN – ỨNG DỤNG HỖ TRỢ HỌC TẬP CHO SINH VIÊN ĐẠI HỌC"
+      },
+      "position": {
+        "x": 0,
+        "y": 5993.274074074074
+      }
+    },
+    {
+      "id": "n1",
+      "data": {
+        "label": "PHÁT BIỂU BÀI TOÁN"
+      },
+      "position": {
+        "x": 280,
+        "y": 1470.6666666666667
+      }
+    },
+    {
+      "id": "n2",
+      "data": {
+        "label": "Mục tiêu hệ thống"
+      },
+      "position": {
+        "x": 560,
+        "y": 224.0
+      }
+    },
+    {
+      "id": "n3",
+      "data": {
+        "label": "Thông tin học tập phân tán"
+      },
+      "position": {
+        "x": 840,
+        "y": 0
+      }
+    },
+    {
+      "id": "n4",
+      "data": {
+        "label": "Bỏ lỡ hạn nộp bài và lịch thi"
+      },
+      "position": {
+        "x": 840,
+        "y": 64
+      }
+    },
+    {
+      "id": "n5",
+      "data": {
+        "label": "Khó theo dõi tiến độ"
+      },
+      "position": {
+        "x": 840,
+        "y": 128
+      }
+    },
+    {
+      "id": "n6",
+      "data": {
+        "label": "Tìm tài liệu tốn thời gian"
+      },
+      "position": {
+        "x": 840,
+        "y": 192
+      }
+    },
+    {
+      "id": "n7",
+      "data": {
+        "label": "Trao đổi học tập chưa tập trung"
+      },
+      "position": {
+        "x": 840,
+        "y": 256
+      }
+    },
+    {
+      "id": "n8",
+      "data": {
+        "label": "Bài toán thiết kế"
+      },
+      "position": {
+        "x": 840,
+        "y": 320
+      }
+    },
+    {
+      "id": "n9",
+      "data": {
+        "label": "Quản lý học tập (Manage)"
+      },
+      "position": {
+        "x": 840,
+        "y": 384
+      }
+    },
+    {
+      "id": "n10",
+      "data": {
+        "label": "Hỗ trợ học tập (Learn)"
+      },
+      "position": {
+        "x": 840,
+        "y": 448
+      }
+    },
+    {
+      "id": "n11",
+      "data": {
+        "label": "Tiêu chí đánh giá mức độ thành công"
+      },
+      "position": {
+        "x": 560,
+        "y": 512.0
+      }
+    },
+    {
+      "id": "n12",
+      "data": {
+        "label": "đo lường"
+      },
+      "position": {
+        "x": 840,
+        "y": 512
+      }
+    },
+    {
+      "id": "n13",
+      "data": {
+        "label": "Chỉ số hiệu quả tác vụ"
+      },
+      "position": {
+        "x": 560,
+        "y": 608.0
+      }
+    },
+    {
+      "id": "n14",
+      "data": {
+        "label": "Tốc độ truy xuất thông tin"
+      },
+      "position": {
+        "x": 840,
+        "y": 576
+      }
+    },
+    {
+      "id": "n15",
+      "data": {
+        "label": "Chi phí thao tác tối thiểu"
+      },
+      "position": {
+        "x": 840,
+        "y": 640
+      }
+    },
+    {
+      "id": "n16",
+      "data": {
+        "label": "Chỉ số khả dụng và dễ học"
+      },
+      "position": {
+        "x": 560,
+        "y": 768.0
+      }
+    },
+    {
+      "id": "n17",
+      "data": {
+        "label": "Hiển thị tiến độ tức thì"
+      },
+      "position": {
+        "x": 840,
+        "y": 704
+      }
+    },
+    {
+      "id": "n18",
+      "data": {
+        "label": "Cơ chế nhắc nhở chủ động"
+      },
+      "position": {
+        "x": 840,
+        "y": 768
+      }
+    },
+    {
+      "id": "n19",
+      "data": {
+        "label": "Không cần đào tạo"
+      },
+      "position": {
+        "x": 840,
+        "y": 832
+      }
+    },
+    {
+      "id": "n20",
+      "data": {
+        "label": "Chỉ số mức độ hài lòng"
+      },
+      "position": {
+        "x": 560,
+        "y": 896.0
+      }
+    },
+    {
+      "id": "n21",
+      "data": {
+        "label": "Điểm hài lòng tổng thể"
+      },
+      "position": {
+        "x": 840,
+        "y": 896
+      }
+    },
+    {
+      "id": "n22",
+      "data": {
+        "label": "Các chức năng cốt lõi hỗ trợ mục tiêu"
+      },
+      "position": {
+        "x": 560,
+        "y": 1056.0
+      }
+    },
+    {
+      "id": "n23",
+      "data": {
+        "label": "Trung tâm quản lý học tập (Manage)"
+      },
+      "position": {
+        "x": 840,
+        "y": 960
+      }
+    },
+    {
+      "id": "n24",
+      "data": {
+        "label": "Nội dung và đánh giá học tập (Learn)"
+      },
+      "position": {
+        "x": 840,
+        "y": 1024
+      }
+    },
+    {
+      "id": "n25",
+      "data": {
+        "label": "Phân tích tiến độ và kết quả (Track)"
+      },
+      "position": {
+        "x": 840,
+        "y": 1088
+      }
+    },
+    {
+      "id": "n26",
+      "data": {
+        "label": "Không gian cộng tác học tập (Connect)"
+      },
+      "position": {
+        "x": 840,
+        "y": 1152
+      }
+    },
+    {
+      "id": "n27",
+      "data": {
+        "label": "Nhóm khách hàng mục tiêu"
+      },
+      "position": {
+        "x": 560,
+        "y": 1312.0
+      }
+    },
+    {
+      "id": "n28",
+      "data": {
+        "label": "Khách hàng chính 01"
+      },
+      "position": {
+        "x": 840,
+        "y": 1216
+      }
+    },
+    {
+      "id": "n29",
+      "data": {
+        "label": "Hồ sơ và bối cảnh học tập"
+      },
+      "position": {
+        "x": 840,
+        "y": 1280
+      }
+    },
+    {
+      "id": "n30",
+      "data": {
+        "label": "Nỗi đau"
+      },
+      "position": {
+        "x": 840,
+        "y": 1344
+      }
+    },
+    {
+      "id": "n31",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 840,
+        "y": 1408
+      }
+    },
+    {
+      "id": "n32",
+      "data": {
+        "label": "Khách hàng chính 02: Giảng viên"
+      },
+      "position": {
+        "x": 560,
+        "y": 1664.0
+      }
+    },
+    {
+      "id": "n33",
+      "data": {
+        "label": "Hồ sơ và bối cảnh giảng dạy"
+      },
+      "position": {
+        "x": 840,
+        "y": 1472
+      }
+    },
+    {
+      "id": "n34",
+      "data": {
+        "label": "Nỗi đau"
+      },
+      "position": {
+        "x": 840,
+        "y": 1536
+      }
+    },
+    {
+      "id": "n35",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 840,
+        "y": 1600
+      }
+    },
+    {
+      "id": "n36",
+      "data": {
+        "label": "Khách hàng tiềm năng"
+      },
+      "position": {
+        "x": 840,
+        "y": 1664
+      }
+    },
+    {
+      "id": "n37",
+      "data": {
+        "label": "Hồ sơ và hoạt động"
+      },
+      "position": {
+        "x": 840,
+        "y": 1728
+      }
+    },
+    {
+      "id": "n38",
+      "data": {
+        "label": "Nỗi đau"
+      },
+      "position": {
+        "x": 840,
+        "y": 1792
+      }
+    },
+    {
+      "id": "n39",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 840,
+        "y": 1856
+      }
+    },
+    {
+      "id": "n40",
+      "data": {
+        "label": "Brainstorm chức năng"
+      },
+      "position": {
+        "x": 560,
+        "y": 2192.0
+      }
+    },
+    {
+      "id": "n41",
+      "data": {
+        "label": "Cấp 1: Các nhóm chức năng cốt lõi"
+      },
+      "position": {
+        "x": 840,
+        "y": 2080.0
+      }
+    },
+    {
+      "id": "n42",
+      "data": {
+        "label": "Nhóm 1"
+      },
+      "position": {
+        "x": 1120,
+        "y": 1920
+      }
+    },
+    {
+      "id": "n43",
+      "data": {
+        "label": "Nhóm 2"
+      },
+      "position": {
+        "x": 1120,
+        "y": 1984
+      }
+    },
+    {
+      "id": "n44",
+      "data": {
+        "label": "Nhóm 3"
+      },
+      "position": {
+        "x": 1120,
+        "y": 2048
+      }
+    },
+    {
+      "id": "n45",
+      "data": {
+        "label": "Nhóm 4"
+      },
+      "position": {
+        "x": 1120,
+        "y": 2112
+      }
+    },
+    {
+      "id": "n46",
+      "data": {
+        "label": "Nhóm 5"
+      },
+      "position": {
+        "x": 1120,
+        "y": 2176
+      }
+    },
+    {
+      "id": "n47",
+      "data": {
+        "label": "Nhóm 6"
+      },
+      "position": {
+        "x": 1120,
+        "y": 2240
+      }
+    },
+    {
+      "id": "n48",
+      "data": {
+        "label": "Cấp 2: Phân rã chức năng chi tiết"
+      },
+      "position": {
+        "x": 840,
+        "y": 2304.0
+      }
+    },
+    {
+      "id": "n49",
+      "data": {
+        "label": "năng brainstorm"
+      },
+      "position": {
+        "x": 1120,
+        "y": 2304
+      }
+    },
+    {
+      "id": "n50",
+      "data": {
+        "label": "Danh sách chức năng hệ thống"
+      },
+      "position": {
+        "x": 560,
+        "y": 2592.0
+      }
+    },
+    {
+      "id": "n51",
+      "data": {
+        "label": "Đăng nhập"
+      },
+      "position": {
+        "x": 840,
+        "y": 2368
+      }
+    },
+    {
+      "id": "n52",
+      "data": {
+        "label": "Đăng xuất"
+      },
+      "position": {
+        "x": 840,
+        "y": 2432
+      }
+    },
+    {
+      "id": "n53",
+      "data": {
+        "label": "Quản lý hồ sơ"
+      },
+      "position": {
+        "x": 840,
+        "y": 2496
+      }
+    },
+    {
+      "id": "n54",
+      "data": {
+        "label": "Xem môn học"
+      },
+      "position": {
+        "x": 840,
+        "y": 2560
+      }
+    },
+    {
+      "id": "n55",
+      "data": {
+        "label": "Chi tiết môn"
+      },
+      "position": {
+        "x": 840,
+        "y": 2624
+      }
+    },
+    {
+      "id": "n56",
+      "data": {
+        "label": "Tài liệu"
+      },
+      "position": {
+        "x": 840,
+        "y": 2688
+      }
+    },
+    {
+      "id": "n57",
+      "data": {
+        "label": "Tìm kiếm"
+      },
+      "position": {
+        "x": 840,
+        "y": 2752
+      }
+    },
+    {
+      "id": "n58",
+      "data": {
+        "label": "Tải tài liệu"
+      },
+      "position": {
+        "x": 840,
+        "y": 2816
+      }
+    },
+    {
+      "id": "n59",
+      "data": {
+        "label": "Phân tích đối thủ cạnh tranh"
+      },
+      "position": {
+        "x": 560,
+        "y": 2880.0
+      }
+    },
+    {
+      "id": "n60",
+      "data": {
+        "label": "Kết luận rút ra cho yêu cầu hệ thống"
+      },
+      "position": {
+        "x": 840,
+        "y": 2880
+      }
+    },
+    {
+      "id": "n61",
+      "data": {
+        "label": "Phân tích SWOT"
+      },
+      "position": {
+        "x": 560,
+        "y": 2944.0
+      }
+    },
+    {
+      "id": "n62",
+      "data": {
+        "label": "tư cách"
+      },
+      "position": {
+        "x": 840,
+        "y": 2944
+      }
+    },
+    {
+      "id": "n63",
+      "data": {
+        "label": "PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG"
+      },
+      "position": {
+        "x": 280,
+        "y": 7219.822222222222
+      }
+    },
+    {
+      "id": "n64",
+      "data": {
+        "label": "Chân dung người dùng"
+      },
+      "position": {
+        "x": 560,
+        "y": 4987.466666666666
+      }
+    },
+    {
+      "id": "n65",
+      "data": {
+        "label": "PERSONA 01: SINH VIÊN NĂM NHẤT – Nguyễn Minh Anh"
+      },
+      "position": {
+        "x": 840,
+        "y": 3450.6666666666665
+      }
+    },
+    {
+      "id": "n66",
+      "data": {
+        "label": "Câu nói đại diện"
+      },
+      "position": {
+        "x": 1120,
+        "y": 3008
+      }
+    },
+    {
+      "id": "n67",
+      "data": {
+        "label": "Mục tiêu & động lực"
+      },
+      "position": {
+        "x": 1120,
+        "y": 3136.0
+      }
+    },
+    {
+      "id": "n68",
+      "data": {
+        "label": "Nắm lịch trong tuần ngay lập tức"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3072
+      }
+    },
+    {
+      "id": "n69",
+      "data": {
+        "label": "Nhắc deadline tự động"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3136
+      }
+    },
+    {
+      "id": "n70",
+      "data": {
+        "label": "Tải nhanh slide bài giảng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3200
+      }
+    },
+    {
+      "id": "n71",
+      "data": {
+        "label": "Nỗi đau & khó khăn"
+      },
+      "position": {
+        "x": 1120,
+        "y": 3296.0
+      }
+    },
+    {
+      "id": "n72",
+      "data": {
+        "label": "Thông báo bị phân tán"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3264
+      }
+    },
+    {
+      "id": "n73",
+      "data": {
+        "label": "Trải nghiệm LMS di động kém"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3328
+      }
+    },
+    {
+      "id": "n74",
+      "data": {
+        "label": "Hành vi số & kỳ vọng hệ thống"
+      },
+      "position": {
+        "x": 1120,
+        "y": 3488.0
+      }
+    },
+    {
+      "id": "n75",
+      "data": {
+        "label": "Mức độ sử dụng công nghệ"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3392
+      }
+    },
+    {
+      "id": "n76",
+      "data": {
+        "label": "Hoạt động trực tuyến & ngoại tuyến"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3456
+      }
+    },
+    {
+      "id": "n77",
+      "data": {
+        "label": "Tương tác chức năng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3520
+      }
+    },
+    {
+      "id": "n78",
+      "data": {
+        "label": "Kỳ vọng trải nghiệm"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3584
+      }
+    },
+    {
+      "id": "n79",
+      "data": {
+        "label": "Tình huống điển hình & giá trị mang lại"
+      },
+      "position": {
+        "x": 1120,
+        "y": 3744.0
+      }
+    },
+    {
+      "id": "n80",
+      "data": {
+        "label": "Điểm kích hoạt (Key Trigger Point)"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3648
+      }
+    },
+    {
+      "id": "n81",
+      "data": {
+        "label": "Câu hỏi của người dùng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3712
+      }
+    },
+    {
+      "id": "n82",
+      "data": {
+        "label": "Tình huống điển hình"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3776
+      }
+    },
+    {
+      "id": "n83",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3840
+      }
+    },
+    {
+      "id": "n84",
+      "data": {
+        "label": "Empathy Map – Nguyễn Minh Anh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 4032.0
+      }
+    },
+    {
+      "id": "n85",
+      "data": {
+        "label": "Says – Nói gì"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3904
+      }
+    },
+    {
+      "id": "n86",
+      "data": {
+        "label": "Thinks – Nghĩ gì"
+      },
+      "position": {
+        "x": 1400,
+        "y": 3968
+      }
+    },
+    {
+      "id": "n87",
+      "data": {
+        "label": "Does – Làm gì"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4032
+      }
+    },
+    {
+      "id": "n88",
+      "data": {
+        "label": "Feels – Cảm thấy"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4096
+      }
+    },
+    {
+      "id": "n89",
+      "data": {
+        "label": "Insight -> Yêu cầu thiết kế"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4160
+      }
+    },
+    {
+      "id": "n90",
+      "data": {
+        "label": "PERSONA 02: SINH VIÊN NĂM BA – Trần Quốc Huy"
+      },
+      "position": {
+        "x": 840,
+        "y": 4582.4
+      }
+    },
+    {
+      "id": "n91",
+      "data": {
+        "label": "Câu nói đại diện"
+      },
+      "position": {
+        "x": 1120,
+        "y": 4224
+      }
+    },
+    {
+      "id": "n92",
+      "data": {
+        "label": "Mục tiêu & động lực"
+      },
+      "position": {
+        "x": 1120,
+        "y": 4352.0
+      }
+    },
+    {
+      "id": "n93",
+      "data": {
+        "label": "Phân loại mức ưu tiên deadline"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4288
+      }
+    },
+    {
+      "id": "n94",
+      "data": {
+        "label": "Nộp bài nhanh, có xác nhận"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4352
+      }
+    },
+    {
+      "id": "n95",
+      "data": {
+        "label": "Thảo luận đúng ngữ cảnh"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4416
+      }
+    },
+    {
+      "id": "n96",
+      "data": {
+        "label": "Nỗi đau & khó khăn"
+      },
+      "position": {
+        "x": 1120,
+        "y": 4544.0
+      }
+    },
+    {
+      "id": "n97",
+      "data": {
+        "label": "Tốn công kiểm tra lại"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4480
+      }
+    },
+    {
+      "id": "n98",
+      "data": {
+        "label": "Giao diện nộp bài rườm rà"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4544
+      }
+    },
+    {
+      "id": "n99",
+      "data": {
+        "label": "Sao chép deadline thủ công"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4608
+      }
+    },
+    {
+      "id": "n100",
+      "data": {
+        "label": "Hành vi số & kỳ vọng hệ thống"
+      },
+      "position": {
+        "x": 1120,
+        "y": 4768.0
+      }
+    },
+    {
+      "id": "n101",
+      "data": {
+        "label": "Mức độ sử dụng công nghệ"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4672
+      }
+    },
+    {
+      "id": "n102",
+      "data": {
+        "label": "Hoạt động trực tuyến & ngoại tuyến"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4736
+      }
+    },
+    {
+      "id": "n103",
+      "data": {
+        "label": "Tương tác chức năng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4800
+      }
+    },
+    {
+      "id": "n104",
+      "data": {
+        "label": "Kỳ vọng trải nghiệm"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4864
+      }
+    },
+    {
+      "id": "n105",
+      "data": {
+        "label": "Tình huống điển hình & giá trị mang lại"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5024.0
+      }
+    },
+    {
+      "id": "n106",
+      "data": {
+        "label": "Điểm kích hoạt (Key Trigger Point)"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4928
+      }
+    },
+    {
+      "id": "n107",
+      "data": {
+        "label": "Câu hỏi của người dùng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 4992
+      }
+    },
+    {
+      "id": "n108",
+      "data": {
+        "label": "Tình huống điển hình"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5056
+      }
+    },
+    {
+      "id": "n109",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5120
+      }
+    },
+    {
+      "id": "n110",
+      "data": {
+        "label": "PERSONA 03: SINH VIÊN NĂM CUỐI – Lê Ngọc Mai"
+      },
+      "position": {
+        "x": 840,
+        "y": 5510.4
+      }
+    },
+    {
+      "id": "n111",
+      "data": {
+        "label": "Câu nói đại diện"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5184
+      }
+    },
+    {
+      "id": "n112",
+      "data": {
+        "label": "Mục tiêu & động lực"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5312.0
+      }
+    },
+    {
+      "id": "n113",
+      "data": {
+        "label": "Theo dõi tiến độ trực quan"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5248
+      }
+    },
+    {
+      "id": "n114",
+      "data": {
+        "label": "Tra cứu tài liệu chính xác"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5312
+      }
+    },
+    {
+      "id": "n115",
+      "data": {
+        "label": "Dự báo GPA"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5376
+      }
+    },
+    {
+      "id": "n116",
+      "data": {
+        "label": "Nỗi đau & khó khăn"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5472.0
+      }
+    },
+    {
+      "id": "n117",
+      "data": {
+        "label": "Dữ liệu học tập bị chia cắt"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5440
+      }
+    },
+    {
+      "id": "n118",
+      "data": {
+        "label": "Khó tìm lại tài liệu cũ"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5504
+      }
+    },
+    {
+      "id": "n119",
+      "data": {
+        "label": "Hành vi số & kỳ vọng hệ thống"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5664.0
+      }
+    },
+    {
+      "id": "n120",
+      "data": {
+        "label": "Mức độ sử dụng công nghệ"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5568
+      }
+    },
+    {
+      "id": "n121",
+      "data": {
+        "label": "Hoạt động trực tuyến & ngoại tuyến"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5632
+      }
+    },
+    {
+      "id": "n122",
+      "data": {
+        "label": "Tương tác chức năng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5696
+      }
+    },
+    {
+      "id": "n123",
+      "data": {
+        "label": "Kỳ vọng trải nghiệm"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5760
+      }
+    },
+    {
+      "id": "n124",
+      "data": {
+        "label": "Tình huống điển hình & giá trị mang lại"
+      },
+      "position": {
+        "x": 1120,
+        "y": 5920.0
+      }
+    },
+    {
+      "id": "n125",
+      "data": {
+        "label": "Điểm kích hoạt (Key Trigger Point)"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5824
+      }
+    },
+    {
+      "id": "n126",
+      "data": {
+        "label": "Câu hỏi của người dùng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5888
+      }
+    },
+    {
+      "id": "n127",
+      "data": {
+        "label": "Tình huống điển hình"
+      },
+      "position": {
+        "x": 1400,
+        "y": 5952
+      }
+    },
+    {
+      "id": "n128",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6016
+      }
+    },
+    {
+      "id": "n129",
+      "data": {
+        "label": "PERSONA 04: GIẢNG VIÊN – ThS. Nguyễn Hoàng Nam"
+      },
+      "position": {
+        "x": 840,
+        "y": 6406.4
+      }
+    },
+    {
+      "id": "n130",
+      "data": {
+        "label": "Câu nói đại diện"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6080
+      }
+    },
+    {
+      "id": "n131",
+      "data": {
+        "label": "Mục tiêu & động lực"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6208.0
+      }
+    },
+    {
+      "id": "n132",
+      "data": {
+        "label": "Giao bài nhanh chóng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6144
+      }
+    },
+    {
+      "id": "n133",
+      "data": {
+        "label": "Quản lý bài nộp tập trung"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6208
+      }
+    },
+    {
+      "id": "n134",
+      "data": {
+        "label": "Trả lời một lần cho cả lớp"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6272
+      }
+    },
+    {
+      "id": "n135",
+      "data": {
+        "label": "Nỗi đau & khó khăn"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6368.0
+      }
+    },
+    {
+      "id": "n136",
+      "data": {
+        "label": "Bài nộp phân tán"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6336
+      }
+    },
+    {
+      "id": "n137",
+      "data": {
+        "label": "Thông báo không kiểm chứng được"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6400
+      }
+    },
+    {
+      "id": "n138",
+      "data": {
+        "label": "Hành vi số & kỳ vọng hệ thống"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6560.0
+      }
+    },
+    {
+      "id": "n139",
+      "data": {
+        "label": "Mức độ sử dụng công nghệ"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6464
+      }
+    },
+    {
+      "id": "n140",
+      "data": {
+        "label": "Hoạt động trực tuyến & ngoại tuyến"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6528
+      }
+    },
+    {
+      "id": "n141",
+      "data": {
+        "label": "Tương tác chức năng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6592
+      }
+    },
+    {
+      "id": "n142",
+      "data": {
+        "label": "Kỳ vọng trải nghiệm"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6656
+      }
+    },
+    {
+      "id": "n143",
+      "data": {
+        "label": "Tình huống điển hình & giá trị mang lại"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6816.0
+      }
+    },
+    {
+      "id": "n144",
+      "data": {
+        "label": "Điểm kích hoạt (Key Trigger Point)"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6720
+      }
+    },
+    {
+      "id": "n145",
+      "data": {
+        "label": "Câu hỏi của người dùng"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6784
+      }
+    },
+    {
+      "id": "n146",
+      "data": {
+        "label": "Tình huống điển hình"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6848
+      }
+    },
+    {
+      "id": "n147",
+      "data": {
+        "label": "Giá trị mang lại"
+      },
+      "position": {
+        "x": 1400,
+        "y": 6912
+      }
+    },
+    {
+      "id": "n148",
+      "data": {
+        "label": "Kịch bản người dùng và Storyboard"
+      },
+      "position": {
+        "x": 560,
+        "y": 7840.0
+      }
+    },
+    {
+      "id": "n149",
+      "data": {
+        "label": "Storyboard 01: Quản lý và xử lý deadline kịp thời"
+      },
+      "position": {
+        "x": 840,
+        "y": 7168.0
+      }
+    },
+    {
+      "id": "n150",
+      "data": {
+        "label": "Bối cảnh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 6976
+      }
+    },
+    {
+      "id": "n151",
+      "data": {
+        "label": "Bước 1 - Khởi động ứng dụng"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7040
+      }
+    },
+    {
+      "id": "n152",
+      "data": {
+        "label": "Bước 2 - Nắm bắt thông tin tại Dashboard"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7104
+      }
+    },
+    {
+      "id": "n153",
+      "data": {
+        "label": "Bước 3 - Truy cập chi tiết bài tập"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7168
+      }
+    },
+    {
+      "id": "n154",
+      "data": {
+        "label": "Bước 4 - Tải đề và thực hiện"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7232
+      }
+    },
+    {
+      "id": "n155",
+      "data": {
+        "label": "Bước 5 - Nộp bài và nhận xác nhận"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7296
+      }
+    },
+    {
+      "id": "n156",
+      "data": {
+        "label": "Kết quả mong đợi"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7360
+      }
+    },
+    {
+      "id": "n157",
+      "data": {
+        "label": "Storyboard 02: Tìm kiếm và tải tài liệu môn học thần tốc"
+      },
+      "position": {
+        "x": 840,
+        "y": 7616.0
+      }
+    },
+    {
+      "id": "n158",
+      "data": {
+        "label": "Bối cảnh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7424
+      }
+    },
+    {
+      "id": "n159",
+      "data": {
+        "label": "Bước 1 - Truy cập môn học"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7488
+      }
+    },
+    {
+      "id": "n160",
+      "data": {
+        "label": "Bước 2 - Chuyển sang phân hệ Tài liệu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7552
+      }
+    },
+    {
+      "id": "n161",
+      "data": {
+        "label": "Bước 3 - Tìm kiếm và lọc thông minh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7616
+      }
+    },
+    {
+      "id": "n162",
+      "data": {
+        "label": "Bước 4 - Xem trước tài liệu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7680
+      }
+    },
+    {
+      "id": "n163",
+      "data": {
+        "label": "Bước 5 - Tải tài liệu ngoại tuyến"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7744
+      }
+    },
+    {
+      "id": "n164",
+      "data": {
+        "label": "Kết quả mong đợi"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7808
+      }
+    },
+    {
+      "id": "n165",
+      "data": {
+        "label": "Storyboard 03: Theo dõi tiến độ môn học và chuẩn bị ôn…"
+      },
+      "position": {
+        "x": 840,
+        "y": 8064.0
+      }
+    },
+    {
+      "id": "n166",
+      "data": {
+        "label": "Bối cảnh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7872
+      }
+    },
+    {
+      "id": "n167",
+      "data": {
+        "label": "Bước 1 - Mở màn hình chính"
+      },
+      "position": {
+        "x": 1120,
+        "y": 7936
+      }
+    },
+    {
+      "id": "n168",
+      "data": {
+        "label": "Bước 2 - Điều hướng đến mục Tiến độ"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8000
+      }
+    },
+    {
+      "id": "n169",
+      "data": {
+        "label": "Bước 3 - Chọn môn học cần kiểm tra"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8064
+      }
+    },
+    {
+      "id": "n170",
+      "data": {
+        "label": "Bước 4 - Phân tích dữ liệu học tập"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8128
+      }
+    },
+    {
+      "id": "n171",
+      "data": {
+        "label": "Bước 5 - Nhận diện phần còn thiếu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8192
+      }
+    },
+    {
+      "id": "n172",
+      "data": {
+        "label": "Kết quả mong đợi"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8256
+      }
+    },
+    {
+      "id": "n173",
+      "data": {
+        "label": "Storyboard 04: Giảng viên khởi tạo bài tập và phát hành…"
+      },
+      "position": {
+        "x": 840,
+        "y": 8512.0
+      }
+    },
+    {
+      "id": "n174",
+      "data": {
+        "label": "Bối cảnh"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8320
+      }
+    },
+    {
+      "id": "n175",
+      "data": {
+        "label": "Bước 1 - Đăng nhập tài khoản giảng viên"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8384
+      }
+    },
+    {
+      "id": "n176",
+      "data": {
+        "label": "Bước 2 - Chọn lớp học phần"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8448
+      }
+    },
+    {
+      "id": "n177",
+      "data": {
+        "label": "Bước 3 - Khởi tạo bài tập mới"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8512
+      }
+    },
+    {
+      "id": "n178",
+      "data": {
+        "label": "Bước 4 - Thiết lập thông tin và hạn nộp"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8576
+      }
+    },
+    {
+      "id": "n179",
+      "data": {
+        "label": "Bước 5 - Đăng bài và phát thông báo"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8640
+      }
+    },
+    {
+      "id": "n180",
+      "data": {
+        "label": "Kết quả mong đợi"
+      },
+      "position": {
+        "x": 1120,
+        "y": 8704
+      }
+    },
+    {
+      "id": "n181",
+      "data": {
+        "label": "Danh sách ưu tiên chức năng theo mô hình MoSCoW"
+      },
+      "position": {
+        "x": 560,
+        "y": 8832.0
+      }
+    },
+    {
+      "id": "n182",
+      "data": {
+        "label": "• Nhóm MUST HAVE (Từ mục 1 đến 10)"
+      },
+      "position": {
+        "x": 840,
+        "y": 8768
+      }
+    },
+    {
+      "id": "n183",
+      "data": {
+        "label": "• Nhóm SHOULD HAVE (Từ mục 11 đến 16)"
+      },
+      "position": {
+        "x": 840,
+        "y": 8832
+      }
+    },
+    {
+      "id": "n184",
+      "data": {
+        "label": "• Nhóm COULD HAVE (Từ mục 17 đến 21)"
+      },
+      "position": {
+        "x": 840,
+        "y": 8896
+      }
+    },
+    {
+      "id": "n185",
+      "data": {
+        "label": "FLOW SCREEN"
+      },
+      "position": {
+        "x": 280,
+        "y": 9289.333333333334
+      }
+    },
+    {
+      "id": "n186",
+      "data": {
+        "label": "Tổng quan flow screen"
+      },
+      "position": {
+        "x": 560,
+        "y": 8960.0
+      }
+    },
+    {
+      "id": "n187",
+      "data": {
+        "label": "liệt kê"
+      },
+      "position": {
+        "x": 840,
+        "y": 8960
+      }
+    },
+    {
+      "id": "n188",
+      "data": {
+        "label": "Danh sách sáu flow chính"
+      },
+      "position": {
+        "x": 560,
+        "y": 9189.333333333334
+      }
+    },
+    {
+      "id": "n189",
+      "data": {
+        "label": "Flow 1 – Đăng nhập"
+      },
+      "position": {
+        "x": 840,
+        "y": 9024.0
+      }
+    },
+    {
+      "id": "n190",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9024
+      }
+    },
+    {
+      "id": "n191",
+      "data": {
+        "label": "Flow 2 – Xem môn học và tài liệu"
+      },
+      "position": {
+        "x": 840,
+        "y": 9088.0
+      }
+    },
+    {
+      "id": "n192",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9088
+      }
+    },
+    {
+      "id": "n193",
+      "data": {
+        "label": "Flow 3 – Nộp bài"
+      },
+      "position": {
+        "x": 840,
+        "y": 9152.0
+      }
+    },
+    {
+      "id": "n194",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9152
+      }
+    },
+    {
+      "id": "n195",
+      "data": {
+        "label": "Flow 4 – Làm Quiz"
+      },
+      "position": {
+        "x": 840,
+        "y": 9216.0
+      }
+    },
+    {
+      "id": "n196",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9216
+      }
+    },
+    {
+      "id": "n197",
+      "data": {
+        "label": "Flow 5 – Theo dõi tiến độ"
+      },
+      "position": {
+        "x": 840,
+        "y": 9280.0
+      }
+    },
+    {
+      "id": "n198",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9280
+      }
+    },
+    {
+      "id": "n199",
+      "data": {
+        "label": "Flow 6 – Tìm tài liệu"
+      },
+      "position": {
+        "x": 840,
+        "y": 9376.0
+      }
+    },
+    {
+      "id": "n200",
+      "data": {
+        "label": "Bắt đầu"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9344
+      }
+    },
+    {
+      "id": "n201",
+      "data": {
+        "label": "Các flow bổ sung"
+      },
+      "position": {
+        "x": 1120,
+        "y": 9408
+      }
+    },
+    {
+      "id": "n202",
+      "data": {
+        "label": "Flow Hỏi đáp trên Forum"
+      },
+      "position": {
+        "x": 560,
+        "y": 9472.0
+      }
+    },
+    {
+      "id": "n203",
+      "data": {
+        "label": "biểu mẫu"
+      },
+      "position": {
+        "x": 840,
+        "y": 9472
+      }
+    },
+    {
+      "id": "n204",
+      "data": {
+        "label": "Flow phía giảng viên"
+      },
+      "position": {
+        "x": 560,
+        "y": 9536
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-n0-n1",
+      "source": "n0",
+      "target": "n1"
+    },
+    {
+      "id": "e-n1-n2",
+      "source": "n1",
+      "target": "n2"
+    },
+    {
+      "id": "e-n2-n3",
+      "source": "n2",
+      "target": "n3"
+    },
+    {
+      "id": "e-n2-n4",
+      "source": "n2",
+      "target": "n4"
+    },
+    {
+      "id": "e-n2-n5",
+      "source": "n2",
+      "target": "n5"
+    },
+    {
+      "id": "e-n2-n6",
+      "source": "n2",
+      "target": "n6"
+    },
+    {
+      "id": "e-n2-n7",
+      "source": "n2",
+      "target": "n7"
+    },
+    {
+      "id": "e-n2-n8",
+      "source": "n2",
+      "target": "n8"
+    },
+    {
+      "id": "e-n2-n9",
+      "source": "n2",
+      "target": "n9"
+    },
+    {
+      "id": "e-n2-n10",
+      "source": "n2",
+      "target": "n10"
+    },
+    {
+      "id": "e-n1-n11",
+      "source": "n1",
+      "target": "n11"
+    },
+    {
+      "id": "e-n11-n12",
+      "source": "n11",
+      "target": "n12"
+    },
+    {
+      "id": "e-n1-n13",
+      "source": "n1",
+      "target": "n13"
+    },
+    {
+      "id": "e-n13-n14",
+      "source": "n13",
+      "target": "n14"
+    },
+    {
+      "id": "e-n13-n15",
+      "source": "n13",
+      "target": "n15"
+    },
+    {
+      "id": "e-n1-n16",
+      "source": "n1",
+      "target": "n16"
+    },
+    {
+      "id": "e-n16-n17",
+      "source": "n16",
+      "target": "n17"
+    },
+    {
+      "id": "e-n16-n18",
+      "source": "n16",
+      "target": "n18"
+    },
+    {
+      "id": "e-n16-n19",
+      "source": "n16",
+      "target": "n19"
+    },
+    {
+      "id": "e-n1-n20",
+      "source": "n1",
+      "target": "n20"
+    },
+    {
+      "id": "e-n20-n21",
+      "source": "n20",
+      "target": "n21"
+    },
+    {
+      "id": "e-n1-n22",
+      "source": "n1",
+      "target": "n22"
+    },
+    {
+      "id": "e-n22-n23",
+      "source": "n22",
+      "target": "n23"
+    },
+    {
+      "id": "e-n22-n24",
+      "source": "n22",
+      "target": "n24"
+    },
+    {
+      "id": "e-n22-n25",
+      "source": "n22",
+      "target": "n25"
+    },
+    {
+      "id": "e-n22-n26",
+      "source": "n22",
+      "target": "n26"
+    },
+    {
+      "id": "e-n1-n27",
+      "source": "n1",
+      "target": "n27"
+    },
+    {
+      "id": "e-n27-n28",
+      "source": "n27",
+      "target": "n28"
+    },
+    {
+      "id": "e-n27-n29",
+      "source": "n27",
+      "target": "n29"
+    },
+    {
+      "id": "e-n27-n30",
+      "source": "n27",
+      "target": "n30"
+    },
+    {
+      "id": "e-n27-n31",
+      "source": "n27",
+      "target": "n31"
+    },
+    {
+      "id": "e-n1-n32",
+      "source": "n1",
+      "target": "n32"
+    },
+    {
+      "id": "e-n32-n33",
+      "source": "n32",
+      "target": "n33"
+    },
+    {
+      "id": "e-n32-n34",
+      "source": "n32",
+      "target": "n34"
+    },
+    {
+      "id": "e-n32-n35",
+      "source": "n32",
+      "target": "n35"
+    },
+    {
+      "id": "e-n32-n36",
+      "source": "n32",
+      "target": "n36"
+    },
+    {
+      "id": "e-n32-n37",
+      "source": "n32",
+      "target": "n37"
+    },
+    {
+      "id": "e-n32-n38",
+      "source": "n32",
+      "target": "n38"
+    },
+    {
+      "id": "e-n32-n39",
+      "source": "n32",
+      "target": "n39"
+    },
+    {
+      "id": "e-n1-n40",
+      "source": "n1",
+      "target": "n40"
+    },
+    {
+      "id": "e-n40-n41",
+      "source": "n40",
+      "target": "n41"
+    },
+    {
+      "id": "e-n41-n42",
+      "source": "n41",
+      "target": "n42"
+    },
+    {
+      "id": "e-n41-n43",
+      "source": "n41",
+      "target": "n43"
+    },
+    {
+      "id": "e-n41-n44",
+      "source": "n41",
+      "target": "n44"
+    },
+    {
+      "id": "e-n41-n45",
+      "source": "n41",
+      "target": "n45"
+    },
+    {
+      "id": "e-n41-n46",
+      "source": "n41",
+      "target": "n46"
+    },
+    {
+      "id": "e-n41-n47",
+      "source": "n41",
+      "target": "n47"
+    },
+    {
+      "id": "e-n40-n48",
+      "source": "n40",
+      "target": "n48"
+    },
+    {
+      "id": "e-n48-n49",
+      "source": "n48",
+      "target": "n49"
+    },
+    {
+      "id": "e-n1-n50",
+      "source": "n1",
+      "target": "n50"
+    },
+    {
+      "id": "e-n50-n51",
+      "source": "n50",
+      "target": "n51"
+    },
+    {
+      "id": "e-n50-n52",
+      "source": "n50",
+      "target": "n52"
+    },
+    {
+      "id": "e-n50-n53",
+      "source": "n50",
+      "target": "n53"
+    },
+    {
+      "id": "e-n50-n54",
+      "source": "n50",
+      "target": "n54"
+    },
+    {
+      "id": "e-n50-n55",
+      "source": "n50",
+      "target": "n55"
+    },
+    {
+      "id": "e-n50-n56",
+      "source": "n50",
+      "target": "n56"
+    },
+    {
+      "id": "e-n50-n57",
+      "source": "n50",
+      "target": "n57"
+    },
+    {
+      "id": "e-n50-n58",
+      "source": "n50",
+      "target": "n58"
+    },
+    {
+      "id": "e-n1-n59",
+      "source": "n1",
+      "target": "n59"
+    },
+    {
+      "id": "e-n59-n60",
+      "source": "n59",
+      "target": "n60"
+    },
+    {
+      "id": "e-n1-n61",
+      "source": "n1",
+      "target": "n61"
+    },
+    {
+      "id": "e-n61-n62",
+      "source": "n61",
+      "target": "n62"
+    },
+    {
+      "id": "e-n0-n63",
+      "source": "n0",
+      "target": "n63"
+    },
+    {
+      "id": "e-n63-n64",
+      "source": "n63",
+      "target": "n64"
+    },
+    {
+      "id": "e-n64-n65",
+      "source": "n64",
+      "target": "n65"
+    },
+    {
+      "id": "e-n65-n66",
+      "source": "n65",
+      "target": "n66"
+    },
+    {
+      "id": "e-n65-n67",
+      "source": "n65",
+      "target": "n67"
+    },
+    {
+      "id": "e-n67-n68",
+      "source": "n67",
+      "target": "n68"
+    },
+    {
+      "id": "e-n67-n69",
+      "source": "n67",
+      "target": "n69"
+    },
+    {
+      "id": "e-n67-n70",
+      "source": "n67",
+      "target": "n70"
+    },
+    {
+      "id": "e-n65-n71",
+      "source": "n65",
+      "target": "n71"
+    },
+    {
+      "id": "e-n71-n72",
+      "source": "n71",
+      "target": "n72"
+    },
+    {
+      "id": "e-n71-n73",
+      "source": "n71",
+      "target": "n73"
+    },
+    {
+      "id": "e-n65-n74",
+      "source": "n65",
+      "target": "n74"
+    },
+    {
+      "id": "e-n74-n75",
+      "source": "n74",
+      "target": "n75"
+    },
+    {
+      "id": "e-n74-n76",
+      "source": "n74",
+      "target": "n76"
+    },
+    {
+      "id": "e-n74-n77",
+      "source": "n74",
+      "target": "n77"
+    },
+    {
+      "id": "e-n74-n78",
+      "source": "n74",
+      "target": "n78"
+    },
+    {
+      "id": "e-n65-n79",
+      "source": "n65",
+      "target": "n79"
+    },
+    {
+      "id": "e-n79-n80",
+      "source": "n79",
+      "target": "n80"
+    },
+    {
+      "id": "e-n79-n81",
+      "source": "n79",
+      "target": "n81"
+    },
+    {
+      "id": "e-n79-n82",
+      "source": "n79",
+      "target": "n82"
+    },
+    {
+      "id": "e-n79-n83",
+      "source": "n79",
+      "target": "n83"
+    },
+    {
+      "id": "e-n65-n84",
+      "source": "n65",
+      "target": "n84"
+    },
+    {
+      "id": "e-n84-n85",
+      "source": "n84",
+      "target": "n85"
+    },
+    {
+      "id": "e-n84-n86",
+      "source": "n84",
+      "target": "n86"
+    },
+    {
+      "id": "e-n84-n87",
+      "source": "n84",
+      "target": "n87"
+    },
+    {
+      "id": "e-n84-n88",
+      "source": "n84",
+      "target": "n88"
+    },
+    {
+      "id": "e-n84-n89",
+      "source": "n84",
+      "target": "n89"
+    },
+    {
+      "id": "e-n64-n90",
+      "source": "n64",
+      "target": "n90"
+    },
+    {
+      "id": "e-n90-n91",
+      "source": "n90",
+      "target": "n91"
+    },
+    {
+      "id": "e-n90-n92",
+      "source": "n90",
+      "target": "n92"
+    },
+    {
+      "id": "e-n92-n93",
+      "source": "n92",
+      "target": "n93"
+    },
+    {
+      "id": "e-n92-n94",
+      "source": "n92",
+      "target": "n94"
+    },
+    {
+      "id": "e-n92-n95",
+      "source": "n92",
+      "target": "n95"
+    },
+    {
+      "id": "e-n90-n96",
+      "source": "n90",
+      "target": "n96"
+    },
+    {
+      "id": "e-n96-n97",
+      "source": "n96",
+      "target": "n97"
+    },
+    {
+      "id": "e-n96-n98",
+      "source": "n96",
+      "target": "n98"
+    },
+    {
+      "id": "e-n96-n99",
+      "source": "n96",
+      "target": "n99"
+    },
+    {
+      "id": "e-n90-n100",
+      "source": "n90",
+      "target": "n100"
+    },
+    {
+      "id": "e-n100-n101",
+      "source": "n100",
+      "target": "n101"
+    },
+    {
+      "id": "e-n100-n102",
+      "source": "n100",
+      "target": "n102"
+    },
+    {
+      "id": "e-n100-n103",
+      "source": "n100",
+      "target": "n103"
+    },
+    {
+      "id": "e-n100-n104",
+      "source": "n100",
+      "target": "n104"
+    },
+    {
+      "id": "e-n90-n105",
+      "source": "n90",
+      "target": "n105"
+    },
+    {
+      "id": "e-n105-n106",
+      "source": "n105",
+      "target": "n106"
+    },
+    {
+      "id": "e-n105-n107",
+      "source": "n105",
+      "target": "n107"
+    },
+    {
+      "id": "e-n105-n108",
+      "source": "n105",
+      "target": "n108"
+    },
+    {
+      "id": "e-n105-n109",
+      "source": "n105",
+      "target": "n109"
+    },
+    {
+      "id": "e-n64-n110",
+      "source": "n64",
+      "target": "n110"
+    },
+    {
+      "id": "e-n110-n111",
+      "source": "n110",
+      "target": "n111"
+    },
+    {
+      "id": "e-n110-n112",
+      "source": "n110",
+      "target": "n112"
+    },
+    {
+      "id": "e-n112-n113",
+      "source": "n112",
+      "target": "n113"
+    },
+    {
+      "id": "e-n112-n114",
+      "source": "n112",
+      "target": "n114"
+    },
+    {
+      "id": "e-n112-n115",
+      "source": "n112",
+      "target": "n115"
+    },
+    {
+      "id": "e-n110-n116",
+      "source": "n110",
+      "target": "n116"
+    },
+    {
+      "id": "e-n116-n117",
+      "source": "n116",
+      "target": "n117"
+    },
+    {
+      "id": "e-n116-n118",
+      "source": "n116",
+      "target": "n118"
+    },
+    {
+      "id": "e-n110-n119",
+      "source": "n110",
+      "target": "n119"
+    },
+    {
+      "id": "e-n119-n120",
+      "source": "n119",
+      "target": "n120"
+    },
+    {
+      "id": "e-n119-n121",
+      "source": "n119",
+      "target": "n121"
+    },
+    {
+      "id": "e-n119-n122",
+      "source": "n119",
+      "target": "n122"
+    },
+    {
+      "id": "e-n119-n123",
+      "source": "n119",
+      "target": "n123"
+    },
+    {
+      "id": "e-n110-n124",
+      "source": "n110",
+      "target": "n124"
+    },
+    {
+      "id": "e-n124-n125",
+      "source": "n124",
+      "target": "n125"
+    },
+    {
+      "id": "e-n124-n126",
+      "source": "n124",
+      "target": "n126"
+    },
+    {
+      "id": "e-n124-n127",
+      "source": "n124",
+      "target": "n127"
+    },
+    {
+      "id": "e-n124-n128",
+      "source": "n124",
+      "target": "n128"
+    },
+    {
+      "id": "e-n64-n129",
+      "source": "n64",
+      "target": "n129"
+    },
+    {
+      "id": "e-n129-n130",
+      "source": "n129",
+      "target": "n130"
+    },
+    {
+      "id": "e-n129-n131",
+      "source": "n129",
+      "target": "n131"
+    },
+    {
+      "id": "e-n131-n132",
+      "source": "n131",
+      "target": "n132"
+    },
+    {
+      "id": "e-n131-n133",
+      "source": "n131",
+      "target": "n133"
+    },
+    {
+      "id": "e-n131-n134",
+      "source": "n131",
+      "target": "n134"
+    },
+    {
+      "id": "e-n129-n135",
+      "source": "n129",
+      "target": "n135"
+    },
+    {
+      "id": "e-n135-n136",
+      "source": "n135",
+      "target": "n136"
+    },
+    {
+      "id": "e-n135-n137",
+      "source": "n135",
+      "target": "n137"
+    },
+    {
+      "id": "e-n129-n138",
+      "source": "n129",
+      "target": "n138"
+    },
+    {
+      "id": "e-n138-n139",
+      "source": "n138",
+      "target": "n139"
+    },
+    {
+      "id": "e-n138-n140",
+      "source": "n138",
+      "target": "n140"
+    },
+    {
+      "id": "e-n138-n141",
+      "source": "n138",
+      "target": "n141"
+    },
+    {
+      "id": "e-n138-n142",
+      "source": "n138",
+      "target": "n142"
+    },
+    {
+      "id": "e-n129-n143",
+      "source": "n129",
+      "target": "n143"
+    },
+    {
+      "id": "e-n143-n144",
+      "source": "n143",
+      "target": "n144"
+    },
+    {
+      "id": "e-n143-n145",
+      "source": "n143",
+      "target": "n145"
+    },
+    {
+      "id": "e-n143-n146",
+      "source": "n143",
+      "target": "n146"
+    },
+    {
+      "id": "e-n143-n147",
+      "source": "n143",
+      "target": "n147"
+    },
+    {
+      "id": "e-n63-n148",
+      "source": "n63",
+      "target": "n148"
+    },
+    {
+      "id": "e-n148-n149",
+      "source": "n148",
+      "target": "n149"
+    },
+    {
+      "id": "e-n149-n150",
+      "source": "n149",
+      "target": "n150"
+    },
+    {
+      "id": "e-n149-n151",
+      "source": "n149",
+      "target": "n151"
+    },
+    {
+      "id": "e-n149-n152",
+      "source": "n149",
+      "target": "n152"
+    },
+    {
+      "id": "e-n149-n153",
+      "source": "n149",
+      "target": "n153"
+    },
+    {
+      "id": "e-n149-n154",
+      "source": "n149",
+      "target": "n154"
+    },
+    {
+      "id": "e-n149-n155",
+      "source": "n149",
+      "target": "n155"
+    },
+    {
+      "id": "e-n149-n156",
+      "source": "n149",
+      "target": "n156"
+    },
+    {
+      "id": "e-n148-n157",
+      "source": "n148",
+      "target": "n157"
+    },
+    {
+      "id": "e-n157-n158",
+      "source": "n157",
+      "target": "n158"
+    },
+    {
+      "id": "e-n157-n159",
+      "source": "n157",
+      "target": "n159"
+    },
+    {
+      "id": "e-n157-n160",
+      "source": "n157",
+      "target": "n160"
+    },
+    {
+      "id": "e-n157-n161",
+      "source": "n157",
+      "target": "n161"
+    },
+    {
+      "id": "e-n157-n162",
+      "source": "n157",
+      "target": "n162"
+    },
+    {
+      "id": "e-n157-n163",
+      "source": "n157",
+      "target": "n163"
+    },
+    {
+      "id": "e-n157-n164",
+      "source": "n157",
+      "target": "n164"
+    },
+    {
+      "id": "e-n148-n165",
+      "source": "n148",
+      "target": "n165"
+    },
+    {
+      "id": "e-n165-n166",
+      "source": "n165",
+      "target": "n166"
+    },
+    {
+      "id": "e-n165-n167",
+      "source": "n165",
+      "target": "n167"
+    },
+    {
+      "id": "e-n165-n168",
+      "source": "n165",
+      "target": "n168"
+    },
+    {
+      "id": "e-n165-n169",
+      "source": "n165",
+      "target": "n169"
+    },
+    {
+      "id": "e-n165-n170",
+      "source": "n165",
+      "target": "n170"
+    },
+    {
+      "id": "e-n165-n171",
+      "source": "n165",
+      "target": "n171"
+    },
+    {
+      "id": "e-n165-n172",
+      "source": "n165",
+      "target": "n172"
+    },
+    {
+      "id": "e-n148-n173",
+      "source": "n148",
+      "target": "n173"
+    },
+    {
+      "id": "e-n173-n174",
+      "source": "n173",
+      "target": "n174"
+    },
+    {
+      "id": "e-n173-n175",
+      "source": "n173",
+      "target": "n175"
+    },
+    {
+      "id": "e-n173-n176",
+      "source": "n173",
+      "target": "n176"
+    },
+    {
+      "id": "e-n173-n177",
+      "source": "n173",
+      "target": "n177"
+    },
+    {
+      "id": "e-n173-n178",
+      "source": "n173",
+      "target": "n178"
+    },
+    {
+      "id": "e-n173-n179",
+      "source": "n173",
+      "target": "n179"
+    },
+    {
+      "id": "e-n173-n180",
+      "source": "n173",
+      "target": "n180"
+    },
+    {
+      "id": "e-n63-n181",
+      "source": "n63",
+      "target": "n181"
+    },
+    {
+      "id": "e-n181-n182",
+      "source": "n181",
+      "target": "n182"
+    },
+    {
+      "id": "e-n181-n183",
+      "source": "n181",
+      "target": "n183"
+    },
+    {
+      "id": "e-n181-n184",
+      "source": "n181",
+      "target": "n184"
+    },
+    {
+      "id": "e-n0-n185",
+      "source": "n0",
+      "target": "n185"
+    },
+    {
+      "id": "e-n185-n186",
+      "source": "n185",
+      "target": "n186"
+    },
+    {
+      "id": "e-n186-n187",
+      "source": "n186",
+      "target": "n187"
+    },
+    {
+      "id": "e-n185-n188",
+      "source": "n185",
+      "target": "n188"
+    },
+    {
+      "id": "e-n188-n189",
+      "source": "n188",
+      "target": "n189"
+    },
+    {
+      "id": "e-n189-n190",
+      "source": "n189",
+      "target": "n190"
+    },
+    {
+      "id": "e-n188-n191",
+      "source": "n188",
+      "target": "n191"
+    },
+    {
+      "id": "e-n191-n192",
+      "source": "n191",
+      "target": "n192"
+    },
+    {
+      "id": "e-n188-n193",
+      "source": "n188",
+      "target": "n193"
+    },
+    {
+      "id": "e-n193-n194",
+      "source": "n193",
+      "target": "n194"
+    },
+    {
+      "id": "e-n188-n195",
+      "source": "n188",
+      "target": "n195"
+    },
+    {
+      "id": "e-n195-n196",
+      "source": "n195",
+      "target": "n196"
+    },
+    {
+      "id": "e-n188-n197",
+      "source": "n188",
+      "target": "n197"
+    },
+    {
+      "id": "e-n197-n198",
+      "source": "n197",
+      "target": "n198"
+    },
+    {
+      "id": "e-n188-n199",
+      "source": "n188",
+      "target": "n199"
+    },
+    {
+      "id": "e-n199-n200",
+      "source": "n199",
+      "target": "n200"
+    },
+    {
+      "id": "e-n199-n201",
+      "source": "n199",
+      "target": "n201"
+    },
+    {
+      "id": "e-n185-n202",
+      "source": "n185",
+      "target": "n202"
+    },
+    {
+      "id": "e-n202-n203",
+      "source": "n202",
+      "target": "n203"
+    },
+    {
+      "id": "e-n185-n204",
+      "source": "n185",
+      "target": "n204"
+    }
+  ]
+}

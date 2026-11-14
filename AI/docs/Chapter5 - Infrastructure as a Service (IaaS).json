@@ -1,0 +1,326 @@
+{
+  "original_filename": "Chapter5 - Infrastructure as a Service (IaaS).pdf",
+  "extracted_text": "WELCOME TO\nCLOUD COMPUTING\nInfrastructure as a Service (IaaS)\nPART 05\nPart 5: Infrastructure as a Service (IaaS)\n➢ Basic understanding of IaaS.\n✓ Definition and components of IaaS.\n✓ Distinguish IaaS from other cloud service models.\n➢ Improved system performance and redundancy.\n✓ Load balancing and redundancy methods.\n✓ Benefits of these methods in maintaining performance and protecting data.\n➢ Adopt cloud-based NAS device.\n✓ Benefits and uses of NAS in the cloud.\n➢ Evaluate the pros and cons of IaaS.\n✓ Compare server types.\n✓ Choose the right IaaS solution for each type of business.\n❖ Objectives of this chapter\nPart 5: Infrastructure as a Service (IaaS)\n❖ Definition of IaaS\nInfrastructure as a Service (IaaS): A cloud service\nmodel that provides infrastructure resources such as\nservers, storage, and networks over the Internet.\nWith IaaS, users can rent hardware resources\ninstead of having to invest and manage physical\ninfrastructure.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Basic components of IaaS\n➢ Servers: Virtual or physical servers.\n➢ Storage: Store data on virtual drives\n➢ Networking: Firewall, load balancer, network\nmanagement\n➢ Virtualization system: Create virtual servers,\noptimize resources\n➢ Management and Automation: Management and\nautomation tools\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Types of servers in IaaS solutions\nPhysical Servers (Máy chủ vật lý)\nDedicated Virtual Servers (Máy chủ ảo\nchuyên dụng)\nShared Virtual Servers (Máy chủ ảo dùng\nchung)\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Physical Server\n✓ Are actual hardware devices, providing\nresources such as CPU, RAM, hard drive and\nnetwork connection.\n✓ Located in data centers and managed by\nbusinesses or cloud service providers.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Physical Server\n➢ Hardware\n✓ Processor (CPU): Handles computations and processing tasks.\n✓ Memory (RAM): Temporary data storage for active processes.\n✓ Storage: Hard disk drives (HDD) or solid-state drives (SSD) for storing\ndata permanently.\n✓ Motherboard: Connects all hardware components.\n✓ Power Supply: Provides power to the server.\n➢ Operating System\n✓ A physical server typically runs an operating system (OS) like\nLinux or Windows Server. This OS directly interfaces with the\nhardware.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Physical Servers\n➢ High performance\n➢ Comprehensive customization\n➢ High load capacity\n➢ Characteristics of physical server\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Physical Servers\n✓ Advantages of physical servers\n▪ High and stable performance\n▪ Comprehensive control\n✓ Disadvantages of physical servers\n▪ High initial investment costs\n▪ Difficulty in expansion\n▪ Complex management and maintenance\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Physical Servers\n➢ Applications suitable for physical servers\n✓ Applications suitable for physical servers\n▪ High and stable performance\n▪ Comprehensive control\n✓ Big Data Analytics\n▪ High initial investment costs\n✓ Critical Enterprise Applications\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Definitions and basic concepts\n❖ These are virtual servers that provide separate\nresources, not shared with other servers on the\nsame physical server.\n❖ Provides the same high performance and stability\nas physical servers, but with less flexibility and\ncost.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Characteristics of dedicated virtual servers\n✓ Stable performance: Provides stable and\nreliable performance.\n✓ Highly customizable: Customize resource\nconfiguration according to specific needs.\n✓ Flexible scalability: Easily expand or reduce\nresources.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Characteristics of dedicated virtual servers\n✓ High performance: Separate resources, not\naffected by the load of other servers.\n✓ Good security: Enhance security, reduce the risk\nof attack.\n✓ Easy management and customization:\nComprehensive control, simple management tools.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Disadvantages of dedicated virtual servers\n✓ Higher cost compared to shared virtual\nserver: Higher cost, need to consider.\n✓ Management and maintenance requirements:\nRequires management and maintenance skills.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Applications suitable for dedicated virtual servers\n✓ Applications requiring high security:\nFinancial and medical applications.\n✓ Large enterprise applications: ERP, CRM\nsystems.\n✓ Web applications and online services: E-\ncommerce websites, cloud services.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Definitions and basic concepts\n❖ These are virtual servers that share resources\nwith other virtual servers on the same physical\nserver.\n❖ Resources such as CPU, RAM, and storage are\ndivided and shared among multiple users.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Characteristics of shared virtual servers\n✓ Resource sharing: Use part of the physical\nserver's resources together with other virtual\nservers.\n✓ Low cost: Suitable for small businesses,\npersonal websites or projects with limited\nbudgets.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Advantages of shared virtual servers\n✓ Cost savings: Cost is much lower than physical\nservers and dedicated virtual servers.\n✓ Easy to manage and deploy: Simple\nmanagement, easy to deploy and manage\napplications.\n✓ Flexibility: Easily expand or contract resources\naccording to needs.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Disadvantages of shared virtual servers:\n✓ Unstable performance:\n✓ Lower security\n✓ Limited customization:\nPart 5: Infrastructure as a Service (IaaS)\n❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Applications suitable for shared virtual servers\n✓ Personal websites and blogs: Personal websites,\nblogs and small projects.\n✓ Small and medium enterprises: Small and\nmedium enterprises with limited budgets.\n✓ Test and development projects: Test and\ndevelopment projects need flexible and low-cost\nenvironments.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Storage\nObject Storage: Stores data in the form of\nobjects.\nBlock Storage: Provides blocks of data that can be\nattached to the server.\nFile Storage: A shared file system accessed by\nmultiple servers.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Networking\nVirtual Network: Connects servers and\nservices in the cloud\nFirewall: Control traffic and protect security.\nLoad Balancer: Distributes traffic evenly\nbetween servers.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Virtualization system\nHypervisor: Creates virtual servers from\nhardware resources.\nContainerization: Virtualization at the\noperating system level, packaging applications\nin containers.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Components of IaaS - Management and Automation\nManagement Tools: Resource management\ninterface and dashboard.\nAutomation: Tools to automate resource\ndeployment, management and expansion.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Definition of load balancing\nLoad Balancing: Is the process of distributing\ntraffic and processing work evenly between servers\nor system resources to ensure that no resource is\noverloaded and the system operates smoothly\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Main components of load balancing\nLoad Balancer: Device or software that\ndistributes traffic\nBackend Servers: Servers handle requests\nfrom users\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ How load balancing works\nTraffic distribution: Traffic distribution:\nLoad balancer distributes requests to backend\nservers.\nHealth monitoring: Check the status and\nperformance of backend servers.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Popular load balancing algorithms\nRound Robin: Distribute requests in\nsequential order\nLeast Connections: Distribute requests to the\nserver with the fewest connections.\nIP Hash: Uses the client's IP address to\nidentify the server.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Benefits of load balancing - Increase load capacity and system performance\nWorkload distribution: Prevent overload at a\nspecific server.\nEnhanced processing capabilities: Improve\napplication responsiveness.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Benefits of load balancing - High availability and reliability\nRedundancy and fault tolerance: Redirect\ntraffic when a server fails\nAuto-scaling: Add or remove resources based\non traffic.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Benefits of load balancing - Improve user experience\nReduced response time: Distributes\nworkload evenly for faster response time.\nIncreased application performance:\nApplications run smoother, minimizing\ninterruptions.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Benefits of load balancing - Enhanced security\nProtection against DDoS attacks: Distribution\nof malicious traffic and sudden offloads.\nAdditional security solutions: Prevent\nadditional security threats.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Improve performance through load balancing\n➢ Benefits of load balancing - Reduce operating costs\nOptimize resource usage: Make the most of each\nserver's performance, reducing excess resources.\nEasier management: Simplify system management\nand monitoring.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\nRedundancy is the creation of copies or the\nestablishment of alternative mechanisms to ensure\nthat systems and data can continue to operate\nnormally when a failure occurs.\nTarget: Ensure high availability and reliability for\nthe system. Minimize downtime and data loss.\n➢ Redundancy concept and target\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Types of redundancy\nHardware Redundancy: Server, hard drive,\npower source, network connection.\nSoftware Redundancy: Backup copies of\nsoftware or services.\nNetwork Redundancy: Redundant network\nconnection.\nData Redundancy: Back up data in many\ndifferent locations.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Data Redundancy methods\nBackup: Full, incremental, differential backup.\nDisaster Recovery: Recovery plan and process.\nData Replication: Copy data to many different\nlocations\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Benefits of redundancy - Ensuring service availability and continuity:\nHigh Availability: The service is always available.\nBusiness Continuity: Minimize downtime, maintain\nbusiness operations.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Benefits of redundancy - Data protection\nData Loss Prevention: Back up and clone\ndata to protect it\nDisaster Recovery: The process of recovering\nsystems and data after major incidents.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Benefits of redundancy - Increase system reliability and performance\nDowntime Minimization: System inactivity\nis minimized.\nPerformance Enhancement: Balances work\nload, increases overall performance.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Benefits of redundancy - Enhanced security\nProtection Against Cyber Attacks: Protects\ndata and systems from cyber attacks.\nAccess Management and Control: Only\nauthorized people can access.\nPart 5: Infrastructure as a Service (IaaS)\n❖ System redundancy and data storage\n➢ Benefits of redundancy - Optimize operating costs\nReduced Incident Response Costs: Reduce\ncosts associated with troubleshooting and\nsystem recovery.\nResource Optimization: Distributes workload\nevenly, reducing unused resources.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Using cloud-based NAS(Network Attached Storage) devices\n- NAS is a data storage device connected to a\nnetwork, allowing users to access and share data\nfrom any device with a network connection.\n- NAS acts as a centralized storage server,\nproviding storage space and data management\nservices to many users and devices.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Using cloud-based NAS devices\n➢ Benefits of cloud-based NAS\nAccess data anytime, anywhere: Access from\nanywhere with an Internet connection.\nFlexible scalability: Easily expand storage\ncapacity.\nHigh security: Data encryption, access control,\nsecurity monitoring.\nEasy management: Intuitive management interface,\nintegrated management and automation tools.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Using cloud-based NAS devices\n➢ Examples of cloud NAS providers:\nNirvanix CloudNAS: Object storage, flexible\nscalability, easy integration.\nAmazon FSx for NetApp ONTAP: High\nperformance, security, standards compliance.\nGoogle Cloud Filestore:\nPart 5: Infrastructure as a Service (IaaS)\n❖ Using cloud-based NAS devices\n➢ Cloud-based NAS applications\nStore and share data: Store documents, images,\nvideos, share between users and workgroups.\nBackup and restore data: Back up important\ndata, restore when necessary.\nStorage for cloud applications: Storage for\ndatabases, data analytics, web services.\nPart 5: Infrastructure as a Service (IaaS)\n➢ Advantages of IaaS solutions\n✓ Reduce initial investment costs:\n▪ Save hardware and infrastructure costs.\n▪ Pay according to your needs, optimize your budget.\n✓ Flexibility and scalability:\n▪ Easily expand or contract resources.\n▪ Customize resource configuration according to needs.\n✓ Save operating and maintenance costs:\n▪ Reduce maintenance and management costs.\n▪ Automate and manage easily.\nPart 5: Infrastructure as a Service (IaaS)\n➢ Advantages of IaaS solutions\n✓ Enhance security and regulatory compliance:\n▪ Multi-layer security: Data encryption, access control,\nsecurity monitoring.\n▪ Comply with international standards and regulations:\nISO 27001, GDPR, HIPAA.\n✓ Enhance availability and reliability:\n▪ Backup system and disaster recovery.\n▪ Global data center network.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Common IaaS Use Cases\n➢ Data Storage and Backup\n✓ Use IaaS to store and back up data, ensuring\nsafety and quick recovery.\n✓ For example: Use Amazon S3 for daily data\nstorage and backup..\nPart 5: Infrastructure as a Service (IaaS)\n❖ Common IaaS Use Cases\n➢ Development and Testing\n✓ Set up development and testing environments on\nIaaS, easily create and delete environments.\n✓ Example: Using Microsoft Azure to develop and\ntest software applications.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Common IaaS Use Cases\n➢ Website and Application Hosting\n✓ Host websites and applications on IaaS,\nensuring high availability and performance.\n✓ Example: Use Google Cloud Platform to host an\ne-commerce website.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Common IaaS Use Cases\n➢ Disaster Recovery\n✓ Set up a disaster recovery solution, backing up\ndata and automated systems.\n✓ Example: Use IaaS to back up a financial\ninstitution's systems and data.\nPart 5: Infrastructure as a Service (IaaS)\n❖ Common IaaS Use Cases\n➢ Running High-Performance Applications\n✓ Run applications that require high\ncomputational resources such as big data\nanalysis and artificial intelligence.\n✓ Example: Use Amazon EC2 to run complex\nmachine learning models.\nPart 5: Infrastructure as a Service (IaaS)\n❖ The role of IaaS in business\n✓ Digital conversion support:\n▪ IaaS provides flexible and efficient infrastructure,\nsupporting businesses in their digital transformation.\n✓ Cost optimization:\n▪ Reduce initial investment costs and operating costs.\n▪ Pay as you go, optimize your budget.\nPart 5: Infrastructure as a Service (IaaS)\n❖ The role of IaaS in business\n✓ Increased flexibility and scalability:\n▪ Expand or contract resources according to business needs.\n▪ Adapt to market fluctuations.\n✓ Enhance security and regulatory compliance:\n▪ Advanced security measures and compliance with\ninternational security standards.\n▪ Protect data and applications from threats.\nPart 5: Infrastructure as a Service (IaaS)\n❖ The role of IaaS in business ✓ Enhanced performance and availability:\n▪ Provide hardware and network resources with high\nperformance.\n▪ Backup and disaster recovery solutions, ensuring\nhigh availability.\n✓ Support for application development and\ndeployment:\n▪ Provides flexible development and testing\nenvironments.\n▪ Deploy applications quickly and effectively.\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon EC2 (Elastic Compute Cloud)\n✓ Amazon EC2 provides virtual servers (instances)\nwith the ability to customize resource\nconfigurations such as CPU, RAM, and storage.\n✓ Users can easily create, manage, and shut down\ninstances as needed.\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon S3 (Simple Storage Service)\n✓ Amazon S3 is an object storage service that allows\ndata to be stored and retrieved at any time from\nanywhere.\n✓ Supports unlimited data storage and ensures high\nsustainability.\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon VPC (Virtual Private Cloud)\n✓ Amazon VPC enables the creation of virtual private\nnetworks, providing an isolated and secure network\nenvironment in the AWS cloud.\n✓ Users can control entire network configuration such\nas IP addresses, subnets, and security settings.\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - AWS IAM (Identity and Access Management)\n✓ AWS IAM enables access management and control\nof user and service permissions on AWS.\n✓ Provides features such as multi-factor\nauthentication (MFA), role-based access control\n(RBAC).\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Benefits of using AWS IaaS\n✓ Flexibility and scalability\n✓ High performance and reliability\n✓ Security and compliance\n✓ Cost optimization\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Microsoft Azure IaaS\n➢ Microsoft Azure's main IaaS services\n✓ Azure Virtual Machines\n✓ Azure Blob Storage\n✓ Azure Virtual Network\n✓ Azure Active Directory\n✓ Azure Site Recovery\n✓ Azure Monitor\n✓ Azure Backup\n✓ Azure Load Balancer\nPart 5: Infrastructure as a Service (IaaS)\n❖ IaaS Providers - Google Compute Engine\n➢ Main IaaS services of Google Compute Engine\n✓ Google Compute Engine\n✓ Google Cloud Storage\n✓ Google VPC (Virtual Private Cloud)\n✓ Google Cloud IAM (Identity and Access\nManagement)\nTHANKS\nQ & A",
+  "sections": [
+    {
+      "heading": "WELCOME TO",
+      "level": 1,
+      "text": "CLOUD COMPUTING"
+    },
+    {
+      "heading": "Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "PART 05"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "➢ Basic understanding of IaaS.\n✓ Definition and components of IaaS.\n✓ Distinguish IaaS from other cloud service models.\n➢ Improved system performance and redundancy.\n✓ Load balancing and redundancy methods.\n✓ Benefits of these methods in maintaining performance and protecting data.\n➢ Adopt cloud-based NAS device.\n✓ Benefits and uses of NAS in the cloud.\n➢ Evaluate the pros and cons of IaaS.\n✓ Compare server types.\n✓ Choose the right IaaS solution for each type of business.\n❖ Objectives of this chapter"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Definition of IaaS\nInfrastructure as a Service (IaaS): A cloud service\nmodel that provides infrastructure resources such as\nservers, storage, and networks over the Internet.\nWith IaaS, users can rent hardware resources\ninstead of having to invest and manage physical\ninfrastructure."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Basic components of IaaS\n➢ Servers: Virtual or physical servers.\n➢ Storage: Store data on virtual drives\n➢ Networking: Firewall, load balancer, network\nmanagement\n➢ Virtualization system: Create virtual servers,\noptimize resources\n➢ Management and Automation: Management and\nautomation tools"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Types of servers in IaaS solutions\nPhysical Servers (Máy chủ vật lý)\nDedicated Virtual Servers (Máy chủ ảo\nchuyên dụng)\nShared Virtual Servers (Máy chủ ảo dùng\nchung)"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Physical Server\n✓ Are actual hardware devices, providing\nresources such as CPU, RAM, hard drive and\nnetwork connection.\n✓ Located in data centers and managed by\nbusinesses or cloud service providers."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Physical Server\n➢ Hardware\n✓ Processor (CPU): Handles computations and processing tasks.\n✓ Memory (RAM): Temporary data storage for active processes.\n✓ Storage: Hard disk drives (HDD) or solid-state drives (SSD) for storing\ndata permanently.\n✓ Motherboard: Connects all hardware components.\n✓ Power Supply: Provides power to the server.\n➢ Operating System\n✓ A physical server typically runs an operating system (OS) like\nLinux or Windows Server. This OS directly interfaces with the\nhardware."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Physical Servers\n➢ High performance\n➢ Comprehensive customization\n➢ High load capacity\n➢ Characteristics of physical server"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Physical Servers\n✓ Advantages of physical servers\n▪ High and stable performance\n▪ Comprehensive control\n✓ Disadvantages of physical servers\n▪ High initial investment costs\n▪ Difficulty in expansion\n▪ Complex management and maintenance"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Physical Servers\n➢ Applications suitable for physical servers\n✓ Applications suitable for physical servers\n▪ High and stable performance\n▪ Comprehensive control\n✓ Big Data Analytics\n▪ High initial investment costs\n✓ Critical Enterprise Applications"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Definitions and basic concepts\n❖ These are virtual servers that provide separate\nresources, not shared with other servers on the\nsame physical server.\n❖ Provides the same high performance and stability\nas physical servers, but with less flexibility and\ncost."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Characteristics of dedicated virtual servers\n✓ Stable performance: Provides stable and\nreliable performance.\n✓ Highly customizable: Customize resource\nconfiguration according to specific needs.\n✓ Flexible scalability: Easily expand or reduce\nresources."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Characteristics of dedicated virtual servers\n✓ High performance: Separate resources, not\naffected by the load of other servers.\n✓ Good security: Enhance security, reduce the risk\nof attack.\n✓ Easy management and customization:\nComprehensive control, simple management tools."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Disadvantages of dedicated virtual servers\n✓ Higher cost compared to shared virtual\nserver: Higher cost, need to consider.\n✓ Management and maintenance requirements:\nRequires management and maintenance skills."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Dedicated virtual server\n➢ Applications suitable for dedicated virtual servers\n✓ Applications requiring high security:\nFinancial and medical applications.\n✓ Large enterprise applications: ERP, CRM\nsystems.\n✓ Web applications and online services: E-\ncommerce websites, cloud services."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Definitions and basic concepts\n❖ These are virtual servers that share resources\nwith other virtual servers on the same physical\nserver.\n❖ Resources such as CPU, RAM, and storage are\ndivided and shared among multiple users."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Characteristics of shared virtual servers\n✓ Resource sharing: Use part of the physical\nserver's resources together with other virtual\nservers.\n✓ Low cost: Suitable for small businesses,\npersonal websites or projects with limited\nbudgets."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Advantages of shared virtual servers\n✓ Cost savings: Cost is much lower than physical\nservers and dedicated virtual servers.\n✓ Easy to manage and deploy: Simple\nmanagement, easy to deploy and manage\napplications.\n✓ Flexibility: Easily expand or contract resources\naccording to needs."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Disadvantages of shared virtual servers:\n✓ Unstable performance:\n✓ Lower security\n✓ Limited customization:"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Types of servers in IaaS solutions -Shared virtual server\n➢ Applications suitable for shared virtual servers\n✓ Personal websites and blogs: Personal websites,\nblogs and small projects.\n✓ Small and medium enterprises: Small and\nmedium enterprises with limited budgets.\n✓ Test and development projects: Test and\ndevelopment projects need flexible and low-cost\nenvironments."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Storage\nObject Storage: Stores data in the form of\nobjects.\nBlock Storage: Provides blocks of data that can be\nattached to the server.\nFile Storage: A shared file system accessed by\nmultiple servers."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Networking\nVirtual Network: Connects servers and\nservices in the cloud\nFirewall: Control traffic and protect security.\nLoad Balancer: Distributes traffic evenly\nbetween servers."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Virtualization system\nHypervisor: Creates virtual servers from\nhardware resources.\nContainerization: Virtualization at the\noperating system level, packaging applications\nin containers."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Components of IaaS - Management and Automation\nManagement Tools: Resource management\ninterface and dashboard.\nAutomation: Tools to automate resource\ndeployment, management and expansion."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Definition of load balancing\nLoad Balancing: Is the process of distributing\ntraffic and processing work evenly between servers\nor system resources to ensure that no resource is\noverloaded and the system operates smoothly"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Main components of load balancing\nLoad Balancer: Device or software that\ndistributes traffic\nBackend Servers: Servers handle requests\nfrom users"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ How load balancing works\nTraffic distribution: Traffic distribution:\nLoad balancer distributes requests to backend\nservers.\nHealth monitoring: Check the status and\nperformance of backend servers."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Popular load balancing algorithms\nRound Robin: Distribute requests in\nsequential order\nLeast Connections: Distribute requests to the\nserver with the fewest connections.\nIP Hash: Uses the client's IP address to\nidentify the server."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Benefits of load balancing - Increase load capacity and system performance\nWorkload distribution: Prevent overload at a\nspecific server.\nEnhanced processing capabilities: Improve\napplication responsiveness."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Benefits of load balancing - High availability and reliability\nRedundancy and fault tolerance: Redirect\ntraffic when a server fails\nAuto-scaling: Add or remove resources based\non traffic."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Benefits of load balancing - Improve user experience\nReduced response time: Distributes\nworkload evenly for faster response time.\nIncreased application performance:\nApplications run smoother, minimizing\ninterruptions."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Benefits of load balancing - Enhanced security\nProtection against DDoS attacks: Distribution\nof malicious traffic and sudden offloads.\nAdditional security solutions: Prevent\nadditional security threats."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Improve performance through load balancing\n➢ Benefits of load balancing - Reduce operating costs\nOptimize resource usage: Make the most of each\nserver's performance, reducing excess resources.\nEasier management: Simplify system management\nand monitoring."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\nRedundancy is the creation of copies or the\nestablishment of alternative mechanisms to ensure\nthat systems and data can continue to operate\nnormally when a failure occurs.\nTarget: Ensure high availability and reliability for\nthe system. Minimize downtime and data loss.\n➢ Redundancy concept and target"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Types of redundancy\nHardware Redundancy: Server, hard drive,\npower source, network connection.\nSoftware Redundancy: Backup copies of\nsoftware or services.\nNetwork Redundancy: Redundant network\nconnection.\nData Redundancy: Back up data in many\ndifferent locations."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Data Redundancy methods\nBackup: Full, incremental, differential backup.\nDisaster Recovery: Recovery plan and process.\nData Replication: Copy data to many different\nlocations"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Benefits of redundancy - Ensuring service availability and continuity:\nHigh Availability: The service is always available.\nBusiness Continuity: Minimize downtime, maintain\nbusiness operations."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Benefits of redundancy - Data protection\nData Loss Prevention: Back up and clone\ndata to protect it\nDisaster Recovery: The process of recovering\nsystems and data after major incidents."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Benefits of redundancy - Increase system reliability and performance\nDowntime Minimization: System inactivity\nis minimized.\nPerformance Enhancement: Balances work\nload, increases overall performance."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Benefits of redundancy - Enhanced security\nProtection Against Cyber Attacks: Protects\ndata and systems from cyber attacks.\nAccess Management and Control: Only\nauthorized people can access."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ System redundancy and data storage\n➢ Benefits of redundancy - Optimize operating costs\nReduced Incident Response Costs: Reduce\ncosts associated with troubleshooting and\nsystem recovery.\nResource Optimization: Distributes workload\nevenly, reducing unused resources."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Using cloud-based NAS(Network Attached Storage) devices\n- NAS is a data storage device connected to a\nnetwork, allowing users to access and share data\nfrom any device with a network connection.\n- NAS acts as a centralized storage server,\nproviding storage space and data management\nservices to many users and devices."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Using cloud-based NAS devices\n➢ Benefits of cloud-based NAS\nAccess data anytime, anywhere: Access from\nanywhere with an Internet connection.\nFlexible scalability: Easily expand storage\ncapacity.\nHigh security: Data encryption, access control,\nsecurity monitoring.\nEasy management: Intuitive management interface,\nintegrated management and automation tools."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Using cloud-based NAS devices\n➢ Examples of cloud NAS providers:\nNirvanix CloudNAS: Object storage, flexible\nscalability, easy integration.\nAmazon FSx for NetApp ONTAP: High\nperformance, security, standards compliance.\nGoogle Cloud Filestore:"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Using cloud-based NAS devices\n➢ Cloud-based NAS applications\nStore and share data: Store documents, images,\nvideos, share between users and workgroups.\nBackup and restore data: Back up important\ndata, restore when necessary.\nStorage for cloud applications: Storage for\ndatabases, data analytics, web services."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "➢ Advantages of IaaS solutions\n✓ Reduce initial investment costs:\n▪ Save hardware and infrastructure costs.\n▪ Pay according to your needs, optimize your budget.\n✓ Flexibility and scalability:\n▪ Easily expand or contract resources.\n▪ Customize resource configuration according to needs.\n✓ Save operating and maintenance costs:\n▪ Reduce maintenance and management costs.\n▪ Automate and manage easily."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "➢ Advantages of IaaS solutions\n✓ Enhance security and regulatory compliance:\n▪ Multi-layer security: Data encryption, access control,\nsecurity monitoring.\n▪ Comply with international standards and regulations:\nISO 27001, GDPR, HIPAA.\n✓ Enhance availability and reliability:\n▪ Backup system and disaster recovery.\n▪ Global data center network."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Common IaaS Use Cases\n➢ Data Storage and Backup\n✓ Use IaaS to store and back up data, ensuring\nsafety and quick recovery.\n✓ For example: Use Amazon S3 for daily data\nstorage and backup.."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Common IaaS Use Cases\n➢ Development and Testing\n✓ Set up development and testing environments on\nIaaS, easily create and delete environments.\n✓ Example: Using Microsoft Azure to develop and\ntest software applications."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Common IaaS Use Cases\n➢ Website and Application Hosting\n✓ Host websites and applications on IaaS,\nensuring high availability and performance.\n✓ Example: Use Google Cloud Platform to host an\ne-commerce website."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Common IaaS Use Cases\n➢ Disaster Recovery\n✓ Set up a disaster recovery solution, backing up\ndata and automated systems.\n✓ Example: Use IaaS to back up a financial\ninstitution's systems and data."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ Common IaaS Use Cases\n➢ Running High-Performance Applications\n✓ Run applications that require high\ncomputational resources such as big data\nanalysis and artificial intelligence.\n✓ Example: Use Amazon EC2 to run complex\nmachine learning models."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ The role of IaaS in business\n✓ Digital conversion support:\n▪ IaaS provides flexible and efficient infrastructure,\nsupporting businesses in their digital transformation.\n✓ Cost optimization:\n▪ Reduce initial investment costs and operating costs.\n▪ Pay as you go, optimize your budget."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ The role of IaaS in business\n✓ Increased flexibility and scalability:\n▪ Expand or contract resources according to business needs.\n▪ Adapt to market fluctuations.\n✓ Enhance security and regulatory compliance:\n▪ Advanced security measures and compliance with\ninternational security standards.\n▪ Protect data and applications from threats."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ The role of IaaS in business ✓ Enhanced performance and availability:\n▪ Provide hardware and network resources with high\nperformance.\n▪ Backup and disaster recovery solutions, ensuring\nhigh availability.\n✓ Support for application development and\ndeployment:\n▪ Provides flexible development and testing\nenvironments.\n▪ Deploy applications quickly and effectively."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon EC2 (Elastic Compute Cloud)\n✓ Amazon EC2 provides virtual servers (instances)\nwith the ability to customize resource\nconfigurations such as CPU, RAM, and storage.\n✓ Users can easily create, manage, and shut down\ninstances as needed."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon S3 (Simple Storage Service)\n✓ Amazon S3 is an object storage service that allows\ndata to be stored and retrieved at any time from\nanywhere.\n✓ Supports unlimited data storage and ensures high\nsustainability."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - Amazon VPC (Virtual Private Cloud)\n✓ Amazon VPC enables the creation of virtual private\nnetworks, providing an isolated and secure network\nenvironment in the AWS cloud.\n✓ Users can control entire network configuration such\nas IP addresses, subnets, and security settings."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Main IaaS services of AWS - AWS IAM (Identity and Access Management)\n✓ AWS IAM enables access management and control\nof user and service permissions on AWS.\n✓ Provides features such as multi-factor\nauthentication (MFA), role-based access control\n(RBAC)."
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Amazon Web Services (AWS)\n➢ Benefits of using AWS IaaS\n✓ Flexibility and scalability\n✓ High performance and reliability\n✓ Security and compliance\n✓ Cost optimization"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Microsoft Azure IaaS\n➢ Microsoft Azure's main IaaS services\n✓ Azure Virtual Machines\n✓ Azure Blob Storage\n✓ Azure Virtual Network\n✓ Azure Active Directory\n✓ Azure Site Recovery\n✓ Azure Monitor\n✓ Azure Backup\n✓ Azure Load Balancer"
+    },
+    {
+      "heading": "Part 5: Infrastructure as a Service (IaaS)",
+      "level": 2,
+      "text": "❖ IaaS Providers - Google Compute Engine\n➢ Main IaaS services of Google Compute Engine\n✓ Google Compute Engine\n✓ Google Cloud Storage\n✓ Google VPC (Virtual Private Cloud)\n✓ Google Cloud IAM (Identity and Access\nManagement)"
+    },
+    {
+      "heading": "THANKS",
+      "level": 2,
+      "text": "Q & A"
+    }
+  ]
+}

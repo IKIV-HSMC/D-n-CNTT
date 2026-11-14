@@ -1,0 +1,286 @@
+{
+  "original_filename": "Chapter3 -Software as a Service -  SaaS.pdf",
+  "extracted_text": "WELCOME TO\nCLOUD COMPUTING\nSoftware as a Service - SaaS\nPART 03\n3\nSaaS\nINTRODUCTION\nDifferentiating Cloud Systems\t1. Definition SaaS\nDifferentiating Cloud Systems2. Advantages and\ndisadvantages of a SaaS\nDifferentiating Cloud Systems\n3. Single-tasking and\nmulti-tasking SaaS\nDifferentiating Cloud Systems\t4. OpenSaaS solution\nDifferentiating Cloud Systems6. SOA service-oriented\narchitecture …\nDifferentiating Cloud Systems5. Integration issues\n(Mashups)\nPart 2: SaaS in Cloud\nSoftware as a Service (SaaS) is a software\ndistribution model in which a third-party\nprovider hosts applications and makes them\navailable to customers over the Internet.\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Main characteristics of SaaS\nAccess via the Internet\nNo need to install local software\nUpdates, Management and maintenance are\nperformed by the service provider\nPay according to use\nPart 2: Software as a Service - SaaS\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Benefits of SaaS\nCost savings\nAbility of extension\nUpdate automatically\nFlexibility and convenience\nPart 2: Software as a Service - SaaS\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of SaaS\nDepends on Internet connection\nSecurity and privacy\nCustomization restrictions\nPart 2: Software as a Service - SaaS\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Single and multi-tenant SaaS\nPart 2: Software as a Service - SaaS\n✓ Suitable for: Large businesses or\norganizations with high security\nrequirements that need to customize\nthe software according to their own\nneeds.\n✓ Suitable for: Small and mediumsized\nbusinesses, organizations that do not\nrequire high customization, looking\nfor cost-effective and easy-to-manage\nsolutions.\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Single-Tenant SaaS (SaaS đơn nhiệm)\nPart 2: Software as a Service - SaaS\n✓ Each customer has its own unique database and\nsoftware version. Each customer's data and\napplications are completely isolated, with no\nresources shared with any other customer.\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Advantages of Single-Tenant SaaS\nPart 2: Software as a Service - SaaS\nHigh security\nEasy customization\nStable performance\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of Single-Tenant SaaS\nPart 2: Software as a Service - SaaS\nHigh costs\nDifficulty in management\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\n✓ Multiple customers share the same database\nand software version. Each customer uses a\nportion of the same system's resources.\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Advantages of Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\nCost savings\nEasy management\nScalability\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\nSecurity and privacy\nCustomization restrictions\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\nOpenSaaS is a Software as a Service (SaaS) model\ndeveloped based on open-source programming\nlanguages. It is a solution designed to run on open-\nsource operating systems and database management\nsystems\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• Features of OpenSaaS\nOpen source programming languages\nOpen operating system\nOpen source database\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• Disadvantages of OpenSaaS\nSecurity and privacy\nLimited technical support\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\nWordPress.com is a web-based blogging platform\nand content management system (CMS) that allows\nusers to create and manage websites and blogs easily\nwithout the need for deep programming or design\nknowledge.\nTham khảo: https://www.youtube.com/watch?v=uWQw68qb7I8\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\nMagento is a popular open source e-commerce\nplatform, designed to help businesses create and\nmanage online stores.\nMagento2: https://www.youtube.com/watch?v=trCJsv5oMjo&list=PLlahAO-\nuyDzJ0Bjvxr2Sbqwnw8teD6ATh&index=1\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\n✓ Moodle is an open source Learning Management\nSystem (LMS), designed to provide an online\nlearning platform for educational institutions and\nbusinesses\nTham khảo: https://www.youtube.com/watch?v=l5D9bC4G3sU&list=PLRzk_YyndRBV58-\nEl1BQVvtdCmWbtK1rz\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\nMashups are the process of integrating multiple\nservices or data from different sources to create a\nnew application or service. In the context of cloud\nservices, mashups are often used to combine\nservices from many different SaaS providers to\nprovide a comprehensive solution for businesses.\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups) - Mashup Example\nPart 2: Software as a Service - SaaS\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n✓ Method: The user's browser, through a language such\nas JavaScript, combines various content sources to\ndisplay a consistent result.\n✓ Advantages: No need to install additional software on\nthe user's device, easy to deploy and use.\n✓ Disadvantages: Performance may be affected by the\nuser's browser and Internet connection speed.\n• Web-based\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n✓ Method: An application program running on the server\nperforms the combination of data from different\nsources.\n✓ Advantages: Better data management and control,\nhigher performance because it does not depend on the\nuser's browser.\n✓ Disadvantages: Requires investment in server\ninfrastructure and software to handle integration.\n• Server Based\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Benefits of Mashups\nFlexible integration\nEnhanced features\nCost savings\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Challenge of Mashups\nSecurity and privacy\nCompatibility\nEfficiency\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Tools and supporting technology\nEnterprise Mashup Markup Language\n(EMML)\nOpen Markup Language (OpenMashup)\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\nGoogle Apps (now known as Google Workspace) is\na suite of online office applications from Google,\nincluding Gmail, Google Drive, Google Docs,\nGoogle Sheets, Google Slides, Google Calendar,\nand Google Meet.\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n• Benefits of Google Apps Cost savings\nEasy to manage\nStrengthen cooperation\nHigh security\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n• Practical application\nBusinesses\nEducation\nPersonal\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n✓ Salesforce is a cloud-based customer relationship\nmanagement (CRM) platform that provides customer\nmanagement, sales, service, and marketing solutions.\n✓ SaaS Pioneer: Salesforce is one of the first\ncompanies to fully exploit the power of cloud\ncomputing, introducing the SaaS model in the CRM\nindustry\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\nSales Cloud\nService Cloud\nMarketing Cloud\nCommerce Cloud\nSalesforce Chatter\n• Salesforce services\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n• Salesforce Benefits\nIncrease sales efficiency\nImprove customer service\nMarketing Optimization\nEnhance internal collaboration\nLink Tham khảo\nLink T ham khảo\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nSOA (Service-Oriented Architecture) is an\napplication development method in which\napplication functions are designed as reusable\nservices that interact with each other over the\nnetwork.\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nModularity\nNetwork communication\nIntegration capabilities\n• Characteristics of SOA\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nService reuse\nFlexible and scalable\nEasy integration\n• Benefits of SOA\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Disadvantages of SOA\nComplexity\nHigh cost\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Components of SOA\nService Provider\nService Consumer\nService Broker\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Illustrative example\nPart 2: Software as a Service - SaaS\n✓ Security is one of the most important factors when\nimplementing SaaS services, as business data is stored\nand processed in the cloud.\n✓ Security risks: If security is not guaranteed, data can be\naccessed illegally, lost or attacked.\n❖ Security in SaaS\nPart 2: Software as a Service - SaaS\n❖ Security measures in SaaS\nData encrypt\nMulti-factor authentication (MFA)\nAccess management and authorization\nBackup and restore data\nPart 2: Software as a Service - SaaS\n❖ Security challenges in SaaS\nCloud data management\nAccess control\nPart 2: Software as a Service - SaaS\n❖ Illustrative example of security in SaaS\nPart 2: Software as a Service - SaaS\n❖ The future of SaaS\n• SaaS development trend\nContinuous growth\nDiverse markets\nPart 2: Software as a Service - SaaS\n❖ The future of SaaS\n• Integrate new technology\nArtificial intelligence (AI)\nInternet of Things (IoT)\nPart 2: Software as a Service - SaaS\n❖ The future of SaaS\n• Integrate new technology\nSecurity and privacy\nCustomization capabilities\nPart 2: Software as a Service - SaaS\n❖ The future of SaaS\n• Long-term benefits of SaaS\nCost effective\nAbility of extension\nPart 2: Software as a Service - SaaS\n❖ The future of SaaS\n• Long-term benefits of SaaS\nFinance industry\nEducation industry\nHealthcare industry\nPart 2: Software as a Service - SaaS\n❖ Combining SaaS and Blockchain\n✓ Blockchain is a distributed ledger technology that\nprovides transparency, security, and tamper\nresistance.\n✓ Combined with SaaS, Blockchain can significantly\nimprove the security, transparency, and reliability\nof SaaS applications.\nPart 2: Software as a Service - SaaS\n❖ Combining SaaS and Blockchain\n• Benefits of combining SaaS and Blockchain\nEnhanced security\nIdentity and access management\nSmart Contract\nPart 2: Software as a Service - SaaS\n❖ Combining SaaS and Blockchain\n• Practical applications of Blockchain in SaaS\nSupply chain management\nDocument management system\nHealthcare\nPart 2: Software as a Service - SaaS\n❖ SaaS and Big Data\n✓ Big Data: Is a large, complex set of data that\ntraditional tools cannot process effectively.\n✓ Combined with SaaS: Big Data and SaaS combine\nto create powerful solutions to manage, analyze\nand use big data effectively.\nPart 2: Software as a Service - SaaS\n❖ SaaS and Big Data\n• Benefits of combining SaaS and Big Data\nIn-depth data analysis\nData-driven business decisions\nRetail industry\nFinancial sector\nHealth industry\nPart 2: Software as a Service - SaaS\n❖ Summary of Chapter 2\nTHANKS\nThanks for watching\nSoftware as a Service - SaaS",
+  "sections": [
+    {
+      "heading": "WELCOME TO",
+      "level": 1,
+      "text": "CLOUD COMPUTING"
+    },
+    {
+      "heading": "Software as a Service - SaaS",
+      "level": 2,
+      "text": "PART 03\n3"
+    },
+    {
+      "heading": "SaaS",
+      "level": 2,
+      "text": "INTRODUCTION\nDifferentiating Cloud Systems\t1. Definition SaaS\nDifferentiating Cloud Systems2. Advantages and\ndisadvantages of a SaaS\nDifferentiating Cloud Systems\n3. Single-tasking and\nmulti-tasking SaaS\nDifferentiating Cloud Systems\t4. OpenSaaS solution\nDifferentiating Cloud Systems6. SOA service-oriented\narchitecture …\nDifferentiating Cloud Systems5. Integration issues\n(Mashups)"
+    },
+    {
+      "heading": "Part 2: SaaS in Cloud",
+      "level": 2,
+      "text": "Software as a Service (SaaS) is a software\ndistribution model in which a third-party\nprovider hosts applications and makes them\navailable to customers over the Internet."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Main characteristics of SaaS\nAccess via the Internet\nNo need to install local software\nUpdates, Management and maintenance are\nperformed by the service provider\nPay according to use\nPart 2: Software as a Service - SaaS"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Benefits of SaaS\nCost savings\nAbility of extension\nUpdate automatically\nFlexibility and convenience\nPart 2: Software as a Service - SaaS"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of SaaS\nDepends on Internet connection\nSecurity and privacy\nCustomization restrictions\nPart 2: Software as a Service - SaaS"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Single and multi-tenant SaaS\nPart 2: Software as a Service - SaaS\n✓ Suitable for: Large businesses or\norganizations with high security\nrequirements that need to customize\nthe software according to their own\nneeds.\n✓ Suitable for: Small and mediumsized\nbusinesses, organizations that do not\nrequire high customization, looking\nfor cost-effective and easy-to-manage\nsolutions."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Single-Tenant SaaS (SaaS đơn nhiệm)\nPart 2: Software as a Service - SaaS\n✓ Each customer has its own unique database and\nsoftware version. Each customer's data and\napplications are completely isolated, with no\nresources shared with any other customer."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Advantages of Single-Tenant SaaS\nPart 2: Software as a Service - SaaS\nHigh security\nEasy customization\nStable performance"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of Single-Tenant SaaS\nPart 2: Software as a Service - SaaS\nHigh costs\nDifficulty in management"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\n✓ Multiple customers share the same database\nand software version. Each customer uses a\nportion of the same system's resources."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Advantages of Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\nCost savings\nEasy management\nScalability"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Disadvantages of Multi-Tenant SaaS (SaaS đa nhiệm)\nPart 2: Software as a Service - SaaS\nSecurity and privacy\nCustomization restrictions"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\nOpenSaaS is a Software as a Service (SaaS) model\ndeveloped based on open-source programming\nlanguages. It is a solution designed to run on open-\nsource operating systems and database management\nsystems"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• Features of OpenSaaS\nOpen source programming languages\nOpen operating system\nOpen source database"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• Disadvantages of OpenSaaS\nSecurity and privacy\nLimited technical support"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\nWordPress.com is a web-based blogging platform\nand content management system (CMS) that allows\nusers to create and manage websites and blogs easily\nwithout the need for deep programming or design\nknowledge.\nTham khảo: https://www.youtube.com/watch?v=uWQw68qb7I8"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\nMagento is a popular open source e-commerce\nplatform, designed to help businesses create and\nmanage online stores.\nMagento2: https://www.youtube.com/watch?v=trCJsv5oMjo&list=PLlahAO-\nuyDzJ0Bjvxr2Sbqwnw8teD6ATh&index=1"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ OpenSaaS solution\nPart 2: Software as a Service - SaaS\n• OpenSaaS examples\n✓ Moodle is an open source Learning Management\nSystem (LMS), designed to provide an online\nlearning platform for educational institutions and\nbusinesses\nTham khảo: https://www.youtube.com/watch?v=l5D9bC4G3sU&list=PLRzk_YyndRBV58-\nEl1BQVvtdCmWbtK1rz"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\nMashups are the process of integrating multiple\nservices or data from different sources to create a\nnew application or service. In the context of cloud\nservices, mashups are often used to combine\nservices from many different SaaS providers to\nprovide a comprehensive solution for businesses."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups) - Mashup Example\nPart 2: Software as a Service - SaaS"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n✓ Method: The user's browser, through a language such\nas JavaScript, combines various content sources to\ndisplay a consistent result.\n✓ Advantages: No need to install additional software on\nthe user's device, easy to deploy and use.\n✓ Disadvantages: Performance may be affected by the\nuser's browser and Internet connection speed.\n• Web-based"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n✓ Method: An application program running on the server\nperforms the combination of data from different\nsources.\n✓ Advantages: Better data management and control,\nhigher performance because it does not depend on the\nuser's browser.\n✓ Disadvantages: Requires investment in server\ninfrastructure and software to handle integration.\n• Server Based"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Benefits of Mashups\nFlexible integration\nEnhanced features\nCost savings"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\nAdd content here Add content this time Add\ncontent here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Challenge of Mashups\nSecurity and privacy\nCompatibility\nEfficiency"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Integration Issues (Mashups)\nPart 2: Software as a Service - SaaS\n• Tools and supporting technology\nEnterprise Mashup Markup Language\n(EMML)\nOpen Markup Language (OpenMashup)"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\nGoogle Apps (now known as Google Workspace) is\na suite of online office applications from Google,\nincluding Gmail, Google Drive, Google Docs,\nGoogle Sheets, Google Slides, Google Calendar,\nand Google Meet."
+    },
+    {
+      "heading": "❖ SaaS in Reality",
+      "level": 2,
+      "text": "Part 2: Software as a Service - SaaS\n• Benefits of Google Apps Cost savings\nEasy to manage\nStrengthen cooperation\nHigh security"
+    },
+    {
+      "heading": "❖ SaaS in Reality",
+      "level": 2,
+      "text": "Part 2: Software as a Service - SaaS\n• Practical application\nBusinesses\nEducation\nPersonal"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n✓ Salesforce is a cloud-based customer relationship\nmanagement (CRM) platform that provides customer\nmanagement, sales, service, and marketing solutions.\n✓ SaaS Pioneer: Salesforce is one of the first\ncompanies to fully exploit the power of cloud\ncomputing, introducing the SaaS model in the CRM\nindustry"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\nSales Cloud\nService Cloud\nMarketing Cloud\nCommerce Cloud\nSalesforce Chatter\n• Salesforce services"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ SaaS in Reality\nPart 2: Software as a Service - SaaS\n• Salesforce Benefits\nIncrease sales efficiency\nImprove customer service\nMarketing Optimization\nEnhance internal collaboration\nLink Tham khảo\nLink T ham khảo"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nSOA (Service-Oriented Architecture) is an\napplication development method in which\napplication functions are designed as reusable\nservices that interact with each other over the\nnetwork."
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nModularity\nNetwork communication\nIntegration capabilities\n• Characteristics of SOA"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\nService reuse\nFlexible and scalable\nEasy integration\n• Benefits of SOA"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Disadvantages of SOA\nComplexity\nHigh cost"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Components of SOA\nService Provider\nService Consumer\nService Broker"
+    },
+    {
+      "heading": "Add content here Add content this time Add",
+      "level": 2,
+      "text": "content here Add content this time\n❖ Service-Oriented Architecture(SOA)\nPart 2: Software as a Service - SaaS\n• Illustrative example"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "✓ Security is one of the most important factors when\nimplementing SaaS services, as business data is stored\nand processed in the cloud.\n✓ Security risks: If security is not guaranteed, data can be\naccessed illegally, lost or attacked.\n❖ Security in SaaS"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Security measures in SaaS\nData encrypt\nMulti-factor authentication (MFA)\nAccess management and authorization\nBackup and restore data"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Security challenges in SaaS\nCloud data management\nAccess control"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Illustrative example of security in SaaS"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ The future of SaaS\n• SaaS development trend\nContinuous growth\nDiverse markets"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ The future of SaaS\n• Integrate new technology\nArtificial intelligence (AI)\nInternet of Things (IoT)"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ The future of SaaS\n• Integrate new technology\nSecurity and privacy\nCustomization capabilities"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ The future of SaaS\n• Long-term benefits of SaaS\nCost effective\nAbility of extension"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ The future of SaaS\n• Long-term benefits of SaaS\nFinance industry\nEducation industry\nHealthcare industry"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Combining SaaS and Blockchain\n✓ Blockchain is a distributed ledger technology that\nprovides transparency, security, and tamper\nresistance.\n✓ Combined with SaaS, Blockchain can significantly\nimprove the security, transparency, and reliability\nof SaaS applications."
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Combining SaaS and Blockchain\n• Benefits of combining SaaS and Blockchain\nEnhanced security\nIdentity and access management\nSmart Contract"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Combining SaaS and Blockchain\n• Practical applications of Blockchain in SaaS\nSupply chain management\nDocument management system\nHealthcare"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ SaaS and Big Data\n✓ Big Data: Is a large, complex set of data that\ntraditional tools cannot process effectively.\n✓ Combined with SaaS: Big Data and SaaS combine\nto create powerful solutions to manage, analyze\nand use big data effectively."
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ SaaS and Big Data\n• Benefits of combining SaaS and Big Data\nIn-depth data analysis\nData-driven business decisions\nRetail industry\nFinancial sector\nHealth industry"
+    },
+    {
+      "heading": "Part 2: Software as a Service - SaaS",
+      "level": 2,
+      "text": "❖ Summary of Chapter 2"
+    },
+    {
+      "heading": "THANKS",
+      "level": 2,
+      "text": "Thanks for watching\nSoftware as a Service - SaaS"
+    }
+  ]
+}

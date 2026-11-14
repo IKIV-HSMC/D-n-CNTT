@@ -1,0 +1,261 @@
+{
+  "original_filename": "Lecture 19.pdf",
+  "extracted_text": "Lecture 18 recap\n1) Definition of a vector orthogonal to a space. How to find\n'all' vectors orthogonal to a space.\n2) Definition (and uniqueness) of orthogonal projection.\n3) Orthogonal projection theorem. The requirement for\northogonal (orthonormal) bases.\n4) Using orthogonal projections to find orthogonal\nbases - Gram-Schmidt Process.\n5) Orthogonal projections and best approximations.\n6) What is a least squares solution to a linear system.\nLECTURE 19\nBest approximation (cont’d)\nOrthogonal matrices\nOrthogonal diagonalization (Section 6.3)\nTheorem (Least squares solution)\nLet be a linear system. Then is a least squares\nsolution to if and only if is a solution to\n\n\nAx b x\nAx b x\nT T\n\tA Ax A b\nProof:\t \t1 2Let n\tA u u u\tth column ofi i\t\tu A\nis a solution to\t \tx Ax p\nis a least squares solution\tx\n( is the projection of onto )\tV\tp b\nis the projection of onto V\t Ax b\n1Let span{ ,..., } column space of .nV  \tu u A\nTheorem (Least squares solution)\nProof:\t \t1 2Let n\tA u u u\tth column ofi i\t\tu A\nis a solution to\t \tx Ax p\nis a least squares solution\tx\n( is the projection of onto )\tV\tp b\nis the projection of onto V\t Ax b\nis orthogonal to V\t \tb Ax\n0 1\t( ) for all ,..., .i i n\t    \tu b Ax\n\tb Ax\n1u\t0\t\n2u0\t\nnu0\t( )T\n  \tA b Ax 0T T\n \tA Ax A b\n1Let span{ ,..., } column space of .nV  \tu u A\nBack to our experiments!\n1 2 3 4 5 6\n0 0 1 1 2 2\n0 1 2 0 1 2\n0.5 1.6 2.8 0.8 5.1 5.9\ni\nir\nis\nit\n2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t   \n \t    \n    \n \t \n \tAx b\n0 0 1\n0 1 1\n1 2 1\n1 0 1\n4 1 1\n4 2 1\n \n \n \n \n  \n \n \n \n \nA\n0 5\n1 6\n2 8\n0 8\n5 1\n5 9\n.\n.\n.\n.\n.\n.\n \n \n \n \n  \n \n \n \n \nb\nBack to our experiments!\n34 14 10\n14 10 6\n10 6 6\nT\n \n   \n \n \nA A\n47 6\n24 1\n16 7\n.\n.\n.\nT\n \n   \n \n \nA b\nSolving34 14 10 47 6\n14 10 6 24 1\n10 6 6 16 7\n.\n.\n.\nc\nd\ne\n    \n    \n    \n    \n    \n0 9275 0 9225 0 3150\twe have . , . , . .\tc d e\t  \nExample\n1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\n1 \t1 \t2 \t1\n1 \t2 \t1 \t1\n1 \t0 \t1 \t1\n1 \t1 \t0 \t1\nLet \tand \t.\n \t \t \n \t \t \n \t \t  \t\n \t \t \n \t \t  \t \t \nA \tbNote that \tis the\ncolumn space of \t.\nV\nA\nWe first obtain a least squares solution of \t.\t\tAx \tb\nExample\n1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\nWe first obtain a least squares solution of \t.\t\tAx \tb\nSolving \t:T \tT\n\tA Ax \tA b\n4 \t2 \t2 \t0\n2 \t6 \t4 \t4\n2 \t4 \t6 \t4\nx\ny\nz\n\t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t\n \t \t \t \t\n2\n5\n4\n5 ,\nx \tt\ny \tt \tt\nz \tt\n \t \t \t \t\n \t \t \t \t  \t\n \t \t \t\n \t \t \t\n \t \t \t\nsolving...\nInfinitely many\nleast squares solutions\n2\n5\n4\n5\n0\nchoose one:\n \t\n \t\n \t\n \t\n \t\nExample\n1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\n6\n5\t2\n5 \t6\n5\t4\n5 \t2\n5\n2\n5\n1 1 1 1\n0\nis the projection of ( , , , ) onto \t.\tV\n \t\n \t  \t\n \t  \t\n \t  \t \t\n \t \t \t\n \t\nA\n2\n5\n4\n5\n0\nchoose one:\n \t\n \t\n \t\n \t\n \t\nOrthonormal bases\nCoordinate systems built on orthonormal bases are\nconvenient and has advantages.\northonormal basis\tnot orthonormal basis\nOrthonormal bases\nAt the same time, it is often\nnecessary to shift between\nbases when we study\nvector spaces.\nWe will now study the\ntransition matrix arising\nbetween two orthonormal bases.\nOrthonormal bases\n1 2\n1 2\nRecall that if { , ,..., }\nand { , ,..., } are two\northonormal bases for a vector\nspace , then the transition\nmatrix from to is\nk\nk\nS\nT\nV\nS T\n\n\nu u u\nv v v\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u\n1\n(column) coordinate vector\nof (from ) relative to\tS T\tu\nOrthonormal bases\nThen for all vectors ,\tV\t\tw\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u\n1\n(column) coordinate vector\nof (from ) relative to\tS T\tu\n  \t S T\n\tP w ww\nExample (transition matrix between\ntwo orthonormal bases)\n3\n1 \t2 \t3\n1 \t2 \t3\nLet \t{ \t, \t, \t} be the standard basis for \tand\n{ \t, \t, \t} where\nE\nS\n\n\ne \te \te\nu u \tu1 1 0 0\t( , , )\t\te\n2 0 1 0\t( , , )\t\te\n3 0 0 1\t( , , )\t\te1\n1 1 1 1\n3( , , )\t\tu2\n1 1 0 1\n2 ( , , )\t \tu3\n1 1 2 1\n6 ( , , )\t \tu\n3\nis an orthonormal basis for \t.\tE\n0 for alli j i j\t  \tu u\t1 1 2 3\tfor all , , .i i\t \tu\n3\nis also an orthonormal basis for \t.\tS\nWhat is the transition matrix from \tto \t?\tS \tE\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nS\nE\nExample (transition matrix between\ntwo orthonormal bases)\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n \n \n \nis the transition matrix from \tto \t.\tS \tE\n1 1 2 3\n1 1 1 1 1 1 1\n1 1 1\n3 3 3 3 3 3 3\n( , , ) , ,\n \n     \n \nu e e e\n2 1 2 3\n1 1 1 1 1\n1 0 1 0 0\n2 2 2 2 2\n( , , ) ( , , )\n\n     \tu e e e\n3 1 2 3\n1 1 2 1 1 2 1\n1 2 1\n6 6 6 6 6 6 6\n( , , ) ( , , )\n\n     \tu e e e\n3 3\te u3 2\te u3 1\te u3 1 2 3( ) ( ) ( )\t  \te u u u\nExample (transition matrix between\ntwo orthonormal bases)\nWhat about the transition matrix from \tto \t?\tE \tS\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nE\nS\n1 1 2 3( ) ( ) ( )\t  \te u u u\t?\t?\t?\n2 3\te u2 2\te u2 1\te u2 1 2 3( ) ( ) ( )\t  \te u u u\n1 2 3Since { , , } is an orthonormal basis,\ncomputing the coefficients is easy.\nu u u\n1 1\te u1 2\te u1 3\te u\n3 1 2 3( ) ( ) ( )\t  \te u u u\nExample (transition matrix between\ntwo orthonormal bases)\nWhat about the transition matrix from \tto \t?\tE \tS\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nE\nS\n1 1 2 3( ) ( ) ( )\t  \te u u u1\n3\n1\n2\n1\n6\n2 1 2 3( ) ( ) ( )\t  \te u u u1\n302\n6\n\n1\n3\n1\n2\n\t1\n6\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n \n \n \nis the transition matrix from \tto \t.\tE \tS\nExample (transition matrix between\ntwo orthonormal bases)\nTransition matrix from \tto\tS \tE\tTransition matrix from \tto\tE \tS\n1\nObserve that\n) T\n\tQ P1\n2\nBut we also know that\n) (from Chapter 3)\n\tQ P\n1\nSo for this example. Is this a coincidence?T \n\tP P\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n  \n \n \nP\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n  \n \n \nQ\nDefinition (orthogonal matrix)\nA square matrix is said to be orthogonal if\tA\n1 T\t \tA A(orthogonal matrices\nmust be invertible)\n'orthogonal' can be used to describe\nbetween two\nvectors ,\tu v\n0\t \tu v\na set S\tbetween a\nvector and\na space V\nu\n0 V\t   \tu v v\na matrix A\nHow to check if a matrix is orthogonal?\nA square matrix is said to be orthogonal if\tA\n1 T\t \tA A(orthogonal matrices\nmust be invertible)\nBy 'half-price' theorem, it suffices to check\norT T\n \tAA I A A I\nExample (orthogonal matrices)\nThe following are example of orthogonal matrices.\n1 0 0\n0 1 0\n0 0 1\n \n \n \n \n \n1 2\n3 6\n1 1 1\n3 6 2\n1 1 1\n3 6 2\n0\n\n \n \n \n \n \nOrthogonal are ‘special’ invertible\nmatrices\n1\nRemember that orthogonal matrices are 'special'\ninvertible matrices where .T\t \tA A\nRecall also that we have the following:\nis an invertible square\nmatrix of order n\nA\nthe rows of forms a\nbasis for n\n A\nthe columns of forms a\nbasis for n\n A\nWhat about...\nis an orthogonal square\nmatrix of order n\nA\n??\t\nIf is 'special' will the rows\nor columns of be special?\nA\nA\nTheorem (equivalent statements)\nLet be a square matrix of order . The following\nstatements are equivalent.\nn\tA\n1) is orthogonal\tA\n2) The rows of forms an orthonormal basis for .n\nA\n3) The columns of forms an orthonormal basis for .n\nA\nWe will now prove that this is not a\ncoincidence…\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n  \n \n \nQ\nTransition matrix from \tto\tS \tE\tTransition matrix from \tto\tE \tS\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n  \n \n \nP\n1\nSo for this example (that is, is orthogonal).T \n\tP P P\nIf is the transition matrix between a pair of orthonormal\nbases for some vector space , will always be an\northogonal matrix?\nV\nP\nP\nTheorem (transition matrix between\northonormal bases)\nProof:\n1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nSince is an orthonormal basis,\tT\n1 1 1 1 1 2 2 1( ) ( ) ... ( )k k      \tu u v v u v v u v v\n1\nLet and be two orthonormal bases for a vector space and\nlet be the transition matrix from to . Then is an\northogonal matrix (that is, is the transition matrix\nfrom to ).\nT\nS T\nS T\nT S\n \nP P\nP P\nTheorem (transition matrix between\northonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n1 1 1 1 1 2 2 1( ) ( ) ... ( )k k      \tu u v v u v v u v v\nSince is an orthonormal basis,\tT\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v2 2 1 1 2 2 2 2( ) ( ) ... ( )k k      \tu u v v u v v u v v\n \t\n2 1\n2 2\n2\n2\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nTransition matrix from to\tS T\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u\nTheorem (transition matrix between\northonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\n \t\n2 1\n2 2\n2\n2\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nTransition matrix from to\tS T\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nu v u v u v\nu v u v u v\nP\nu v u v u v\nTheorem (transition matrix between\northonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\nTransition matrix from to\tS TSimilarly, we can find the\ntransition matrix from to\nto be\nT S\nSo .T\n\tQ P\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nu v u v u v\nu v u v u v\nP\nu v u v u v\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nv u v u v u\nv u v u v u\nQ\nv u v u v uNote that i j j i  \tu v v u\nTheorem (transition matrix between\northonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\nTransition matrix from to\tS T\n P\nTransition matrix from to\tT S\n Q\nSo .T\n\tQ P\n1\nBut we also know that , so we conclude that\n\tQ P\n1 , that is, is an orthogonal matrix.T \n\tP P P\nExample (rotation of xy-coordinates)\n2\n1 0 0 1\tConsider the standard basis {( , ),( , )} of .\n1e2e\n1 2Note that and are in the directions of the axis\nand axis respectively.\nx\ny\n\n\ne e\ny\nx1e\n2e\ny\nx1e\n2e\nSuppose we\nrotate the\ncoordinates\txy \n\nExample (rotation of xy-coordinates)\nWe now have a new ' ' coordinate system.\tx y \n1 \t2\n2\nThen \t{ \t, \t} is also\nan orthonormal basis for \t.\nS \t \tu u\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n1 2Let and be unit vectors along the new axes '\nand ' respectively.\nx\ny\nu u\n2u1uorthogonal\tunit vectors\n1 \t2 \t1 \t2\n2\n{ \t, \t} and \t{ \t, \t}\nare two orthonormal bases\nfor \t.\nE \tS\t \t\te \te \tu u\nExample (rotation of xy-coordinates)\nLet us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n1 \t2 \t1 \t2{ \t, \t} and \t{ \t, \t}\tE \tS\t \t\te \te \tu u1u\n\n1\tlength\ncos\n\nsin\n\n1 1 2(cos ) (sin )\n\n\t \tu e e\nExample (rotation of xy-coordinates)\nLet us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n1 \t2 \t1 \t2{ \t, \t} and \t{ \t, \t}\tE \tS\t \t\te \te \tu u\n2u\n1\tlengthcos\n\nsin\n\n2 1 2( sin ) (cos )\n\n\t  \tu e e\nExample (rotation of xy-coordinates)\nLet us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n2 1 2( sin ) (cos )\n\n\t  \tu e e1 1 2(cos ) (sin )\n\n\t \tu e e\nTransition matrix from \tto\ncos \tsin\nsin \tcos\nS \tE\n \t\n \t\n\t \t\n \t  \t\n \t\nP\nis orthogonal and\nthe transition matrix\nfrom \tto \tis\ncos \tsin .\nsin \tcos\nT\nE \tS\n \t\n \t\n \t\n  \t \t\nP\nP\nExample (rotation of xy-coordinates)\n 2\nLet \t( , \t) be a vector in \t, so \t('measured'\nusing the \tcoordinates).\nE\nx\nx y y\nxy\n \t\n \t  \t\n \t\n\nv \tv\ny\n'\ty\n'\tx\nx\n \tWhat is \t('measured'\nusing the \t' \t' \tcoordinates)?\nS\nx y \t\nv\n  \t T\nS \tE\n\tv \tP \tv\ntransition matrix\nfrom \tto\tE \tS\nv\nExample (rotation of xy-coordinates)\n 2\nLet \t( , \t) be a vector in \t, so \t('measured'\nusing the \tcoordinates).\nE\nx\nx y y\nxy\n \t\n \t  \t\n \t\n\nv \tv\ny\nx\n \tWhat is \t('measured'\nusing the \t' \t' \tcoordinates)?\nS\nx y \t\nv\n  \t T\nS \tE\n\tv \tP \tv\ncos sin\nsin cos\nx\ny\n \n \n  \n     \ncos sin\nsin cos\nx y\nx y\n \n \n\t \n    \n'\ty\n'\tx\n' cos sin\n' sin cos\nx x y\ny x y\n \n \n \n  \nRecall diagonalization\n1\nA square matrix is said to be diagonalizable if there\nexists an invertible matrix such that is a diagonal\nmatrix.\n\nA\nP P AP\n0\n0\nEigenvalues of A\nTo check whether is diagonalizable we need to determine\nif we have the required number (equal to the order of ) of\nlinearly independent eigenvectors.\nA\nA\n1\n2\t1\nk\n\n\n\n\n \n \n   \n \n \nP AP\nRecall diagonalization example\n1 \t1 \t1\n3 \t2 \t6\n1 \t1 \t1\n3 \t2 \t6\n1 \t2\n3 \t6\n0\nLet \t.\n \t\t \t\n \t\n \t \t\n \t\n \t\nR\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1\n3 \t0 \t0\n0 \t0 \t0\n0 \t0 \t0\nThat is, \t. Thus \t.T \tT\t \t\n \t\n \t \t \t  \t\n \t\n \t\nR \tR \tR BR \tR \tBR\n3\n1\n1\n1\nspan\tE\n \t \n \t    \n \t \n \t \n0\n1 \t1\n1 \t0\n0 \t1\nspan \t,\tE\n \t\t \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n3 \t0\tRecall that \tand \tare the eigenvalues of \tand\tB\nNote that \tis an orthogonal matrix.\tR\n1 \t1\n1 \t1\n0 \t2\nspan \t,\n \t\t \t\t \t  \t\n \t\t \t  \t \t\t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n(G-S Process)\nDefinition (orthogonal diagonalization)\n0\n0\nEigenvalues of A\n1\nA square matrix is said to be diagonalizable if there\nexists an invertible matrix such that is a diagonal\nmatrix.\n\nA\nP P AP\nA square matrix is said to be orthogonally diagonalizable\nif there exists an orthogonal matrix such that\nis a diagonal matrix.\nT\nA\nP P AP\n1\n2\t1\nk\n\n\n\n\n \n \n   \n \n \nP APT \tP AP\nDefinition (orthogonal diagonalization)\n1\n2\tT\nk\n\n\n\n \n \n   \n \n \nP AP0\n0\nEigenvalues of A\nA square matrix is said to be orthogonally diagonalizable\nif there exists an orthogonal matrix such that\nis a diagonal matrix.\nT\nA\nP P AP\nis said to orthogonally diagonalize .\tP A\nTheorem (characterization)\nTo check whether is diagonalizable we need to determine\nif we have the required number (equal to the order of ) of\nlinearly independent eigenvectors.\nA\nA\nHow do we know whether a matrix is orthogonally\ndiagonalizable?\nA square matrix is orthogonally diagonalizable if and only if\nit is symmetric.\nProof: Omitted.\nAlgorithm (orthogonal diagonalization)\nGiven a symmetric matrix , we wish to find an orthogonal\nmatrix such that is a diagonal matrix.T\nA\nP P AP\nStep 1:\tSolve the characteristic equation\n0\tdet( )\n  \tI A\n1 2to find all the distinct eigenvalues , ,..., .k\n  \nStep 2:\tFor each eigenvalue ,i\n\n(a) Find a basis for the eigenspace ,i i\nS E\n\n\nas before\nas before\nAlgorithm (orthogonal diagonalization)\nStep 2:\tFor each eigenvalue ,i\n\n(a) Find a basis for the eigenspace ,i i\nS E\n\n\n(b) Apply Gram-Schmidt Process to transform\ninto an orthonormal basis .\ni\ni\nS\nT\n\n\nNEW!\nStep 3:1 2 1 2Let ... , say { , ,..., },k nT T T T T\n \n     v v v\n \t1 2Then is an orthogonal matrix\nthat will orthogonally diagonalize .\nn\tP v v v\nA\nput as columns\nas before\nWill this always work?\nStep 3:1 2 1 2Let ... , say { , ,..., },k nT T T T T\n \n     v v v\n \t1 2Then is an orthogonal matrix\nthat will orthogonally diagonalize .\nn\tP v v v\nA\nput as columns\nas before\nWill I always have\nvectors in the set ?\tn TI promise you...\nSome remarks\n1) All the eignevalues are real numbers, that is,\nthe eigenvalues of symmetric matrices are all real.\ni\n\n2) From previous discussion, we know that if we factorise\n1 2\n1 2det( ) ( ) ( ) ...( ) k\tr\tr r\nk\n\n     \t    \tI A\n1\tthen for each ,..., ,\ti k\t\nno. of vectors in basis dim( )i i iS E r\n\n \n1 2 ... kr r r n\t   \nBut for a symmetric matrix ,\tA\nno. of vectors in basis dim( ) for all .i i iS E r i\n\n \nSome remarks\n2) From previous discussion, we know that if we factorise\n1 2\n1 2det( ) ( ) ( ) ...( ) k\tr\tr r\nk\n\n     \t    \tI A\n1 2 ... kr r r n\t   But for a symmetric matrix ,\tA\nno. of vectors in basis dim( ) for all .i i iT E r i\n\n  \n1 2\nSo the number of vectors in ( ... )k\nT T T T\n \n   \n1 2\nwill always be\nequal to ... .kr r r n\t   \ntold you...??\nno. of vectors in basis dim( ) for all .i i iS E r i\n\n \nSome remarks\n3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\nNote that each is an orthonormal set (since we\nperformed Gram-Schmidt Process to transform to ).\ni\ni i\nT\nS T\n\n\n\n{ } { } ... { }\t  1\nT\n\t2\nT\n\tk\nT\n\nall unit\nvectors\nSome remarks\n3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\nNote that each is an orthonormal set (since we\nperformed Gram-Schmidt Process to transform to ).\ni\ni i\nT\nS T\n\n\n\n{ } { } ... { }\t  1\nT\n\t2\nT\n\tk\nT\n\n0 (due to Gram-Schmidt Process)\t \t0?\t \n(See Question 6.26)\nSome remarks\n3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\n \t1 2\n4) Since is always an orthonormal set with vectors,\nthe matrix is always an\northogonal matrix.\nn\nT n\n\tP v v v\nExample\nFind an orthogonal matrix that orthogonally diagonalizes\nthe following symmetric matrix.\nP\n0 2 1\n2 3 2\n1 2 0\n\t \n  \n \n  \nEND OF LECTURE 19\nLecture 20\nLinear transformations from Rn to Rm\n(till end of Section 7.1)",
+  "sections": [
+    {
+      "heading": "Lecture 18 recap",
+      "level": 1,
+      "text": "1) Definition of a vector orthogonal to a space. How to find\n'all' vectors orthogonal to a space.\n2) Definition (and uniqueness) of orthogonal projection.\n3) Orthogonal projection theorem. The requirement for\northogonal (orthonormal) bases.\n4) Using orthogonal projections to find orthogonal\nbases - Gram-Schmidt Process.\n5) Orthogonal projections and best approximations.\n6) What is a least squares solution to a linear system."
+    },
+    {
+      "heading": "LECTURE 19",
+      "level": 2,
+      "text": "Best approximation (cont’d)\nOrthogonal matrices\nOrthogonal diagonalization (Section 6.3)"
+    },
+    {
+      "heading": "Theorem (Least squares solution)",
+      "level": 2,
+      "text": "Let be a linear system. Then is a least squares\nsolution to if and only if is a solution to\n\n\nAx b x\nAx b x\nT T\n\tA Ax A b\nProof:\t \t1 2Let n\tA u u u\tth column ofi i\t\tu A\nis a solution to\t \tx Ax p\nis a least squares solution\tx\n( is the projection of onto )\tV\tp b\nis the projection of onto V\t Ax b\n1Let span{ ,..., } column space of .nV  \tu u A"
+    },
+    {
+      "heading": "Theorem (Least squares solution)",
+      "level": 2,
+      "text": "Proof:\t \t1 2Let n\tA u u u\tth column ofi i\t\tu A\nis a solution to\t \tx Ax p\nis a least squares solution\tx\n( is the projection of onto )\tV\tp b\nis the projection of onto V\t Ax b\nis orthogonal to V\t \tb Ax\n0 1\t( ) for all ,..., .i i n\t    \tu b Ax\n\tb Ax\n1u\t0\t\n2u0\t\nnu0\t( )T\n  \tA b Ax 0T T\n \tA Ax A b\n1Let span{ ,..., } column space of .nV  \tu u A"
+    },
+    {
+      "heading": "Back to our experiments!",
+      "level": 2,
+      "text": "1 2 3 4 5 6\n0 0 1 1 2 2\n0 1 2 0 1 2\n0.5 1.6 2.8 0.8 5.1 5.9\ni\nir\nis\nit\n2\n1\t1 1\n2\n2\t2 2\n2\n6\t6 6\n1\n1\n1\nt\tr s c t\tr s d\ne t\tr s\n   \n \t   \n \t   \n \t    \n    \n \t \n \tAx b\n0 0 1\n0 1 1\n1 2 1\n1 0 1\n4 1 1\n4 2 1\n \n \n \n \n  \n \n \n \n \nA\n0 5\n1 6\n2 8\n0 8\n5 1\n5 9\n.\n.\n.\n.\n.\n.\n \n \n \n \n  \n \n \n \n \nb"
+    },
+    {
+      "heading": "Back to our experiments!",
+      "level": 2,
+      "text": "34 14 10\n14 10 6\n10 6 6\nT\n \n   \n \n \nA A\n47 6\n24 1\n16 7\n.\n.\n.\nT\n \n   \n \n \nA b\nSolving34 14 10 47 6\n14 10 6 24 1\n10 6 6 16 7\n.\n.\n.\nc\nd\ne\n    \n    \n    \n    \n    \n0 9275 0 9225 0 3150\twe have . , . , . .\tc d e\t  "
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\n1 \t1 \t2 \t1\n1 \t2 \t1 \t1\n1 \t0 \t1 \t1\n1 \t1 \t0 \t1\nLet \tand \t.\n \t \t \n \t \t \n \t \t  \t\n \t \t \n \t \t  \t \t \nA \tbNote that \tis the\ncolumn space of \t.\nV\nA\nWe first obtain a least squares solution of \t.\t\tAx \tb"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\nWe first obtain a least squares solution of \t.\t\tAx \tb\nSolving \t:T \tT\n\tA Ax \tA b\n4 \t2 \t2 \t0\n2 \t6 \t4 \t4\n2 \t4 \t6 \t4\nx\ny\nz\n\t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t\n \t \t \t \t\n2\n5\n4\n5 ,\nx \tt\ny \tt \tt\nz \tt\n \t \t \t \t\n \t \t \t \t  \t\n \t \t \t\n \t \t \t\n \t \t \t\nsolving...\nInfinitely many\nleast squares solutions\n2\n5\n4\n5\n0\nchoose one:\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "1 \t1 1 \t1 \t1 2 0 1 \t2 1 1 0\n1 1 1 1\nLet \tspan{( , \t, , \t),( , , , ),( , , , )}. Find the\nprojection of ( , , , ) onto \t.\nV\nV\n \t \t\n6\n5\t2\n5 \t6\n5\t4\n5 \t2\n5\n2\n5\n1 1 1 1\n0\nis the projection of ( , , , ) onto \t.\tV\n \t\n \t  \t\n \t  \t\n \t  \t \t\n \t \t \t\n \t\nA\n2\n5\n4\n5\n0\nchoose one:\n \t\n \t\n \t\n \t\n \t"
+    },
+    {
+      "heading": "Orthonormal bases",
+      "level": 2,
+      "text": "Coordinate systems built on orthonormal bases are\nconvenient and has advantages.\northonormal basis\tnot orthonormal basis"
+    },
+    {
+      "heading": "Orthonormal bases",
+      "level": 2,
+      "text": "At the same time, it is often\nnecessary to shift between\nbases when we study\nvector spaces.\nWe will now study the\ntransition matrix arising\nbetween two orthonormal bases."
+    },
+    {
+      "heading": "Orthonormal bases",
+      "level": 2,
+      "text": "1 2\n1 2\nRecall that if { , ,..., }\nand { , ,..., } are two\northonormal bases for a vector\nspace , then the transition\nmatrix from to is\nk\nk\nS\nT\nV\nS T\n\n\nu u u\nv v v\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u\n1\n(column) coordinate vector\nof (from ) relative to\tS T\tu"
+    },
+    {
+      "heading": "Orthonormal bases",
+      "level": 2,
+      "text": "Then for all vectors ,\tV\t\tw\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u\n1\n(column) coordinate vector\nof (from ) relative to\tS T\tu\n  \t S T\n\tP w ww"
+    },
+    {
+      "heading": "Example (transition matrix between",
+      "level": 2,
+      "text": "two orthonormal bases)\n3\n1 \t2 \t3\n1 \t2 \t3\nLet \t{ \t, \t, \t} be the standard basis for \tand\n{ \t, \t, \t} where\nE\nS\n\n\ne \te \te\nu u \tu1 1 0 0\t( , , )\t\te\n2 0 1 0\t( , , )\t\te\n3 0 0 1\t( , , )\t\te1\n1 1 1 1\n3( , , )\t\tu2\n1 1 0 1\n2 ( , , )\t \tu3\n1 1 2 1\n6 ( , , )\t \tu\n3\nis an orthonormal basis for \t.\tE\n0 for alli j i j\t  \tu u\t1 1 2 3\tfor all , , .i i\t \tu\n3\nis also an orthonormal basis for \t.\tS\nWhat is the transition matrix from \tto \t?\tS \tE\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nS\nE"
+    },
+    {
+      "heading": "Example (transition matrix between",
+      "level": 2,
+      "text": "two orthonormal bases)\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n \n \n \nis the transition matrix from \tto \t.\tS \tE\n1 1 2 3\n1 1 1 1 1 1 1\n1 1 1\n3 3 3 3 3 3 3\n( , , ) , ,\n \n     \n \nu e e e\n2 1 2 3\n1 1 1 1 1\n1 0 1 0 0\n2 2 2 2 2\n( , , ) ( , , )\n\n     \tu e e e\n3 1 2 3\n1 1 2 1 1 2 1\n1 2 1\n6 6 6 6 6 6 6\n( , , ) ( , , )\n\n     \tu e e e"
+    },
+    {
+      "heading": "3 3\te u3 2\te u3 1\te u3 1 2 3( ) ( ) ( )\t  \te u u u",
+      "level": 2,
+      "text": "Example (transition matrix between\ntwo orthonormal bases)\nWhat about the transition matrix from \tto \t?\tE \tS\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nE\nS\n1 1 2 3( ) ( ) ( )\t  \te u u u\t?\t?\t?\n2 3\te u2 2\te u2 1\te u2 1 2 3( ) ( ) ( )\t  \te u u u\n1 2 3Since { , , } is an orthonormal basis,\ncomputing the coefficients is easy.\nu u u\n1 1\te u1 2\te u1 3\te u"
+    },
+    {
+      "heading": "3 1 2 3( ) ( ) ( )\t  \te u u u",
+      "level": 2,
+      "text": "Example (transition matrix between\ntwo orthonormal bases)\nWhat about the transition matrix from \tto \t?\tE \tS\nNeed to write\nvectors in \tin\nterms of vectors\nin \t.\nE\nS\n1 1 2 3( ) ( ) ( )\t  \te u u u1\n3\n1\n2\n1\n6\n2 1 2 3( ) ( ) ( )\t  \te u u u1\n302\n6\n\n1\n3\n1\n2\n\t1\n6\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n \n \n \nis the transition matrix from \tto \t.\tE \tS"
+    },
+    {
+      "heading": "Example (transition matrix between",
+      "level": 2,
+      "text": "two orthonormal bases)\nTransition matrix from \tto\tS \tE\tTransition matrix from \tto\tE \tS\n1\nObserve that\n) T\n\tQ P1\n2\nBut we also know that\n) (from Chapter 3)\n\tQ P\n1\nSo for this example. Is this a coincidence?T \n\tP P\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n  \n \n \nP\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n  \n \n \nQ"
+    },
+    {
+      "heading": "Definition (orthogonal matrix)",
+      "level": 2,
+      "text": "A square matrix is said to be orthogonal if\tA\n1 T\t \tA A(orthogonal matrices\nmust be invertible)\n'orthogonal' can be used to describe\nbetween two\nvectors ,\tu v\n0\t \tu v\na set S\tbetween a\nvector and\na space V\nu\n0 V\t   \tu v v\na matrix A"
+    },
+    {
+      "heading": "How to check if a matrix is orthogonal?",
+      "level": 2,
+      "text": "A square matrix is said to be orthogonal if\tA\n1 T\t \tA A(orthogonal matrices\nmust be invertible)\nBy 'half-price' theorem, it suffices to check\norT T\n \tAA I A A I"
+    },
+    {
+      "heading": "Example (orthogonal matrices)",
+      "level": 2,
+      "text": "The following are example of orthogonal matrices.\n1 0 0\n0 1 0\n0 0 1\n \n \n \n \n \n1 2\n3 6\n1 1 1\n3 6 2\n1 1 1\n3 6 2\n0\n\n \n \n \n \n "
+    },
+    {
+      "heading": "Orthogonal are ‘special’ invertible",
+      "level": 2,
+      "text": "matrices\n1\nRemember that orthogonal matrices are 'special'\ninvertible matrices where .T\t \tA A\nRecall also that we have the following:\nis an invertible square\nmatrix of order n\nA\nthe rows of forms a\nbasis for n\n A\nthe columns of forms a\nbasis for n\n A\nWhat about...\nis an orthogonal square\nmatrix of order n\nA\n??\t\nIf is 'special' will the rows\nor columns of be special?\nA\nA"
+    },
+    {
+      "heading": "Theorem (equivalent statements)",
+      "level": 2,
+      "text": "Let be a square matrix of order . The following\nstatements are equivalent.\nn\tA\n1) is orthogonal\tA\n2) The rows of forms an orthonormal basis for .n\nA\n3) The columns of forms an orthonormal basis for .n\nA"
+    },
+    {
+      "heading": "We will now prove that this is not a",
+      "level": 2,
+      "text": "coincidence…\n1 1 1\n3 3 3\n1 1\n2 2\n1 2 1\n6 6 6\n0 \n\n \n \n  \n \n \nQ\nTransition matrix from \tto\tS \tE\tTransition matrix from \tto\tE \tS\n1 1 1\n3 2 6\n1 2\n3 6\n1 1 1\n3 2 6\n0 \n\n \n \n  \n \n \nP\n1\nSo for this example (that is, is orthogonal).T \n\tP P P\nIf is the transition matrix between a pair of orthonormal\nbases for some vector space , will always be an\northogonal matrix?\nV\nP\nP"
+    },
+    {
+      "heading": "Theorem (transition matrix between",
+      "level": 2,
+      "text": "orthonormal bases)\nProof:\n1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nSince is an orthonormal basis,\tT\n1 1 1 1 1 2 2 1( ) ( ) ... ( )k k      \tu u v v u v v u v v\n1\nLet and be two orthonormal bases for a vector space and\nlet be the transition matrix from to . Then is an\northogonal matrix (that is, is the transition matrix\nfrom to ).\nT\nS T\nS T\nT S\n \nP P\nP P"
+    },
+    {
+      "heading": "Theorem (transition matrix between",
+      "level": 2,
+      "text": "orthonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n1 1 1 1 1 2 2 1( ) ( ) ... ( )k k      \tu u v v u v v u v v\nSince is an orthonormal basis,\tT\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v2 2 1 1 2 2 2 2( ) ( ) ... ( )k k      \tu u v v u v v u v v\n \t\n2 1\n2 2\n2\n2\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nTransition matrix from to\tS T\n  \t \t \t \t\t \t\t1 2 k\tT T T\n\tP u u u"
+    },
+    {
+      "heading": "Theorem (transition matrix between",
+      "level": 2,
+      "text": "orthonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\n \n1 1\n1 2\n1\n1\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\n \t\n2 1\n2 2\n2\n2\nT\nk\n\t \n \n   \n  \nu v\nu v\nu\nu v\nTransition matrix from to\tS T\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nu v u v u v\nu v u v u v\nP\nu v u v u v"
+    },
+    {
+      "heading": "Theorem (transition matrix between",
+      "level": 2,
+      "text": "orthonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\nTransition matrix from to\tS TSimilarly, we can find the\ntransition matrix from to\nto be\nT S\nSo .T\n\tQ P\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nu v u v u v\nu v u v u v\nP\nu v u v u v\n1 1 2 1 1\n1 2 2 2 2\n1 2\nk\nk\nk k k k\n  \t \n   \n   \n    \nv u v u v u\nv u v u v u\nQ\nv u v u v uNote that i j j i  \tu v v u"
+    },
+    {
+      "heading": "Theorem (transition matrix between",
+      "level": 2,
+      "text": "orthonormal bases)\nProof:\t1 2 1 2Let { , ,..., } and { , ,..., }.k kS T\t \tu u u v v v\nTransition matrix from to\tS T\n P\nTransition matrix from to\tT S\n Q\nSo .T\n\tQ P\n1\nBut we also know that , so we conclude that\n\tQ P\n1 , that is, is an orthogonal matrix.T \n\tP P P"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": "2\n1 0 0 1\tConsider the standard basis {( , ),( , )} of .\n1e2e\n1 2Note that and are in the directions of the axis\nand axis respectively.\nx\ny\n\n\ne e\ny\nx1e\n2e\ny\nx1e\n2e\nSuppose we\nrotate the\ncoordinates\txy \n"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": "We now have a new ' ' coordinate system.\tx y \n1 \t2\n2\nThen \t{ \t, \t} is also\nan orthonormal basis for \t.\nS \t \tu u\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n1 2Let and be unit vectors along the new axes '\nand ' respectively.\nx\ny\nu u\n2u1uorthogonal\tunit vectors\n1 \t2 \t1 \t2\n2\n{ \t, \t} and \t{ \t, \t}\nare two orthonormal bases\nfor \t.\nE \tS\t \t\te \te \tu u"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": "Let us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n1 \t2 \t1 \t2{ \t, \t} and \t{ \t, \t}\tE \tS\t \t\te \te \tu u1u\n\n1\tlength\ncos\n\nsin\n\n1 1 2(cos ) (sin )\n\n\t \tu e e"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": "Let us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n1 \t2 \t1 \t2{ \t, \t} and \t{ \t, \t}\tE \tS\t \t\te \te \tu u\n2u\n1\tlengthcos\n\nsin\n\n2 1 2( sin ) (cos )\n\n\t  \tu e e"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": "Let us find the transition matrix from \tto \t.\tS \tE\nSuppose we\nrotate the\ncoordinates\txy \ny\nx1e\n2e\n'\ty\n'\tx\n2u1u\n2 1 2( sin ) (cos )\n\n\t  \tu e e1 1 2(cos ) (sin )\n\n\t \tu e e\nTransition matrix from \tto\ncos \tsin\nsin \tcos\nS \tE\n \t\n \t\n\t \t\n \t  \t\n \t\nP\nis orthogonal and\nthe transition matrix\nfrom \tto \tis\ncos \tsin .\nsin \tcos\nT\nE \tS\n \t\n \t\n \t\n  \t \t\nP\nP"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": " 2\nLet \t( , \t) be a vector in \t, so \t('measured'\nusing the \tcoordinates).\nE\nx\nx y y\nxy\n \t\n \t  \t\n \t\n\nv \tv\ny\n'\ty\n'\tx\nx\n \tWhat is \t('measured'\nusing the \t' \t' \tcoordinates)?\nS\nx y \t\nv\n  \t T\nS \tE\n\tv \tP \tv\ntransition matrix\nfrom \tto\tE \tS\nv"
+    },
+    {
+      "heading": "Example (rotation of xy-coordinates)",
+      "level": 2,
+      "text": " 2\nLet \t( , \t) be a vector in \t, so \t('measured'\nusing the \tcoordinates).\nE\nx\nx y y\nxy\n \t\n \t  \t\n \t\n\nv \tv\ny\nx\n \tWhat is \t('measured'\nusing the \t' \t' \tcoordinates)?\nS\nx y \t\nv\n  \t T\nS \tE\n\tv \tP \tv\ncos sin\nsin cos\nx\ny\n \n \n  \n     \ncos sin\nsin cos\nx y\nx y\n \n \n\t \n    \n'\ty\n'\tx\n' cos sin\n' sin cos\nx x y\ny x y\n \n \n \n  "
+    },
+    {
+      "heading": "Recall diagonalization",
+      "level": 2,
+      "text": "1\nA square matrix is said to be diagonalizable if there\nexists an invertible matrix such that is a diagonal\nmatrix.\n\nA\nP P AP\n0\n0\nEigenvalues of A\nTo check whether is diagonalizable we need to determine\nif we have the required number (equal to the order of ) of\nlinearly independent eigenvectors.\nA\nA\n1\n2\t1\nk\n\n\n\n\n \n \n   \n \n \nP AP"
+    },
+    {
+      "heading": "Recall diagonalization example",
+      "level": 2,
+      "text": "1 \t1 \t1\n3 \t2 \t6\n1 \t1 \t1\n3 \t2 \t6\n1 \t2\n3 \t6\n0\nLet \t.\n \t\t \t\n \t\n \t \t\n \t\n \t\nR\n1 \t1 \t1\n1 \t1 \t1\n1 \t1 \t1\n \t\n \t  \t\n \t\n \t\nB\n1 \t1\n3 \t0 \t0\n0 \t0 \t0\n0 \t0 \t0\nThat is, \t. Thus \t.T \tT\t \t\n \t\n \t \t \t  \t\n \t\n \t\nR \tR \tR BR \tR \tBR\n3\n1\n1\n1\nspan\tE\n \t \n \t    \n \t \n \t \n0\n1 \t1\n1 \t0\n0 \t1\nspan \t,\tE\n \t\t \t\t \t  \t\n \t\t \t  \t \t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n3 \t0\tRecall that \tand \tare the eigenvalues of \tand\tB\nNote that \tis an orthogonal matrix.\tR\n1 \t1\n1 \t1\n0 \t2\nspan \t,\n \t\t \t\t \t  \t\n \t\t \t  \t \t\t \t \t  \t\n \t  \t\t \t\n \t  \t\t \t\n(G-S Process)"
+    },
+    {
+      "heading": "Definition (orthogonal diagonalization)",
+      "level": 2,
+      "text": "0\n0\nEigenvalues of A\n1\nA square matrix is said to be diagonalizable if there\nexists an invertible matrix such that is a diagonal\nmatrix.\n\nA\nP P AP\nA square matrix is said to be orthogonally diagonalizable\nif there exists an orthogonal matrix such that\nis a diagonal matrix.\nT\nA\nP P AP\n1\n2\t1\nk\n\n\n\n\n \n \n   \n \n \nP APT \tP AP"
+    },
+    {
+      "heading": "Definition (orthogonal diagonalization)",
+      "level": 2,
+      "text": "1\n2\tT\nk\n\n\n\n \n \n   \n \n \nP AP0\n0\nEigenvalues of A\nA square matrix is said to be orthogonally diagonalizable\nif there exists an orthogonal matrix such that\nis a diagonal matrix.\nT\nA\nP P AP\nis said to orthogonally diagonalize .\tP A"
+    },
+    {
+      "heading": "Theorem (characterization)",
+      "level": 2,
+      "text": "To check whether is diagonalizable we need to determine\nif we have the required number (equal to the order of ) of\nlinearly independent eigenvectors.\nA\nA\nHow do we know whether a matrix is orthogonally\ndiagonalizable?\nA square matrix is orthogonally diagonalizable if and only if\nit is symmetric.\nProof: Omitted."
+    },
+    {
+      "heading": "Algorithm (orthogonal diagonalization)",
+      "level": 2,
+      "text": "Given a symmetric matrix , we wish to find an orthogonal\nmatrix such that is a diagonal matrix.T\nA\nP P AP\nStep 1:\tSolve the characteristic equation\n0\tdet( )\n  \tI A\n1 2to find all the distinct eigenvalues , ,..., .k\n  \nStep 2:\tFor each eigenvalue ,i\n\n(a) Find a basis for the eigenspace ,i i\nS E\n\n\nas before\nas before"
+    },
+    {
+      "heading": "Algorithm (orthogonal diagonalization)",
+      "level": 2,
+      "text": "Step 2:\tFor each eigenvalue ,i\n\n(a) Find a basis for the eigenspace ,i i\nS E\n\n\n(b) Apply Gram-Schmidt Process to transform\ninto an orthonormal basis .\ni\ni\nS\nT\n\n\nNEW!\nStep 3:1 2 1 2Let ... , say { , ,..., },k nT T T T T\n \n     v v v\n \t1 2Then is an orthogonal matrix\nthat will orthogonally diagonalize .\nn\tP v v v\nA\nput as columns\nas before"
+    },
+    {
+      "heading": "Will this always work?",
+      "level": 2,
+      "text": "Step 3:1 2 1 2Let ... , say { , ,..., },k nT T T T T\n \n     v v v\n \t1 2Then is an orthogonal matrix\nthat will orthogonally diagonalize .\nn\tP v v v\nA\nput as columns\nas before\nWill I always have\nvectors in the set ?\tn TI promise you..."
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "1) All the eignevalues are real numbers, that is,\nthe eigenvalues of symmetric matrices are all real.\ni\n\n2) From previous discussion, we know that if we factorise\n1 2\n1 2det( ) ( ) ( ) ...( ) k\tr\tr r\nk\n\n     \t    \tI A\n1\tthen for each ,..., ,\ti k\t\nno. of vectors in basis dim( )i i iS E r\n\n \n1 2 ... kr r r n\t   \nBut for a symmetric matrix ,\tA\nno. of vectors in basis dim( ) for all .i i iS E r i\n\n "
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "2) From previous discussion, we know that if we factorise\n1 2\n1 2det( ) ( ) ( ) ...( ) k\tr\tr r\nk\n\n     \t    \tI A\n1 2 ... kr r r n\t   But for a symmetric matrix ,\tA\nno. of vectors in basis dim( ) for all .i i iT E r i\n\n  \n1 2\nSo the number of vectors in ( ... )k\nT T T T\n \n   \n1 2\nwill always be\nequal to ... .kr r r n\t   \ntold you...??\nno. of vectors in basis dim( ) for all .i i iS E r i\n\n "
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\nNote that each is an orthonormal set (since we\nperformed Gram-Schmidt Process to transform to ).\ni\ni i\nT\nS T\n\n\n\n{ } { } ... { }\t  1\nT\n\t2\nT\n\tk\nT\n\nall unit\nvectors"
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\nNote that each is an orthonormal set (since we\nperformed Gram-Schmidt Process to transform to ).\ni\ni i\nT\nS T\n\n\n\n{ } { } ... { }\t  1\nT\n\t2\nT\n\tk\nT\n\n0 (due to Gram-Schmidt Process)\t \t0?\t \n(See Question 6.26)"
+    },
+    {
+      "heading": "Some remarks",
+      "level": 2,
+      "text": "3) In Step 3, the set\n1 2 1 2... , say { , ,..., },k nT T T T T\n \n     v v v\nis always an orthonormal set.\n \t1 2\n4) Since is always an orthonormal set with vectors,\nthe matrix is always an\northogonal matrix.\nn\nT n\n\tP v v v"
+    },
+    {
+      "heading": "Example",
+      "level": 2,
+      "text": "Find an orthogonal matrix that orthogonally diagonalizes\nthe following symmetric matrix.\nP\n0 2 1\n2 3 2\n1 2 0\n\t \n  \n \n  "
+    },
+    {
+      "heading": "END OF LECTURE 19",
+      "level": 2,
+      "text": "Lecture 20\nLinear transformations from Rn to Rm\n(till end of Section 7.1)"
+    }
+  ]
+}

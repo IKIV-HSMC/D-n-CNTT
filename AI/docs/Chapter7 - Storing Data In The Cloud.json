@@ -1,0 +1,241 @@
+{
+  "original_filename": "Chapter7 - Storing Data In The Cloud.pdf",
+  "extracted_text": "WELCOME TO\nCLOUD COMPUTING\nCloud Data Storage\nPART 07\nChapter 7\nINTRODUCTION\nDifferentiating Cloud Systems1. Research the development\nprocess of network storage\nDifferentiating Cloud Systems3. Data security of cloud-\nbased storage services\nDifferentiating Cloud Systems\t4. Cloud-based backup\nsystem\nDifferentiating Cloud Systems\t6. Cloud-based database\nsolutions\nDifferentiating Cloud Systems2. Basics of data storage\nin the cloud Differentiating Cloud Systems5. Cloud-based data\nstorage for industry\nDifferentiating Cloud Systems7. Cloud-based block\nstorage\nPart 7: Cloud Data Storage\n✓ Network storage is a method of storing data on\nserver systems that are interconnected through\na network, allowing for efficient data sharing\nand management.\n❖ Definition of Network Storage\nPart 7: Cloud Data Storage\n✓ Network storage provides reliable and scalable data\nstorage solutions, meeting the growing storage needs\nof organizations and businesses.\n✓ It helps improve performance, data management, and\nsecurity while reducing operational costs.\n❖ The Importance of Network Storage\nPart 7: Cloud Data Storage\n✓ Initially, organizations often used large storage\nservers to store all data in a single location.\n✓ These systems are often based on internal hard\ndrives or arrays of hard disks connected directly\nto the server.\n❖ The First Stage of Network Storage\n➢ Centralized Storage\nPart 7: Cloud Data Storage\n❖ The First Stage of Network Storage\n➢ Challenges associated with centralized storage\nAbility of extension: As storage demand\nincreases, scaling centralized storage systems\nbecomes difficult due to space and hardware\nresource limitations.\nEfficiency: Data access performance decreases\nwhen many users access simultaneously, leading\nto bottlenecks.\nManage: Managing and maintaining large\nstorage systems is labor intensive and costly, and\nincreases the risk of data loss due to hardware or\nsoftware failures.\nPart 7: Cloud Data Storage\n✓ NAS is a storage device directly connected to a\nLAN (Local Area Network), allowing users and\ndevices on the network to access data easily.\n❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS)\nVidụ NAS:\nhttps://www.youtube.com/watch?v=fTAJtn-Qxng\nPart 7: Cloud Data Storage\n❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS) - Main components\nPart 7: Cloud Data Storage\n✓ Easy access\n✓ Share resources\n✓ Low cost\n❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS) -Benefits of NAS\nSAN & NAS:\nhttps://www.youtube.com/watch?v=3yZDDr0JKVc\nPart 7: Cloud Data Storage\n✓ SAN is a high-speed network that connects storage devices\nsuch as hard drives and tape drives to servers via protocols\nsuch as Fiber Channel or iSCSI.\n✓ The main purpose of SAN is to provide a centralized,\nscalable and high-performance storage system, helping\norganizations manage data more effectively.\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN)\nPart 7: Cloud Data Storage\n✓ Host Layer (Lớp máy chủ)\n✓ Fabric Layer (Lớp mạng trung gian)\n✓ Storage Layer (Lớp lưu trữ)\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Main components\nPart 7: Cloud Data Storage\n✓ Improve application availability\n✓ Enhance application performance\n✓ Simplify centralized management\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Advantages of SAN\nPart 7: Cloud Data Storage\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Disadvantages of SAN\nHigh Initial Cost\nComplex Configuration and Management\nLimited Scalability and Vendor Dependency\nSingle Points of Failure Without Redundancy\nHigh Power and Space Requirements\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ The emergence and development of cloud storage\nCloud storage emerged in the late 2000s, when services like\nAmazon S3, Google Cloud Storage, and Microsoft Azure\nBlob Storage began offering online data storage solutions.\nThe development of cloud technology and the need for large\ndata storage have promoted the birth and rapid development\nof cloud storage.\nPart 7: Cloud Data Storage\n✓ Ability of extension\n✓ Access anytime, anywhere\n✓ Cost savings\n❖ Cloud Storage\n➢ Benefits of cloud storage\nPart 7: Cloud Data Storage\n❖ Cloud Storage - Main components\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud Storage Architecture\n• Components of cloud storage architecture - Storage Servers\n✓ Roles and functions:\n• The storage server is the core component of the\ncloud storage system, responsible for storing\ndata and processing access requests from users.\n• They are often designed with large capacity and\nhigh performance to meet the needs of\ncontinuous data storage and retrieval.\nPart 7: Cloud Data Storag\n❖ Cloud Storage\n➢ Cloud Storage Architecture (CSA)\n▪ Components of CSA - Data Transfer Network\n✓ Roles and functions:\n• A data transmission network is a connection system\nbetween users and storage servers, ensuring data is\ntransferred quickly and safely.\n• They provide high bandwidth and low latency to\noptimize data access performance.\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud Storage Architecture (CSA)\n• Components of CSA - Management Services\n✓ Roles and functions:\n✓ Managed services are tools and software that\nsupport the management and monitoring of\nstorage operations in the cloud.\n✓ They provide functions such as resource\nmanagement, performance monitoring, and\nproblem alerts.\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud Storage Works\n• Data upload process\n✓ Users upload data to the cloud storage\nsystem via the user interface\n✓ Data is distributed and backed up on multiple\nservers to ensure availability and security\n✓ Users access data from anywhere with an Internet\nconnection through a cloud interface\nPart 7: Cloud Data Storage\n✓ Store data without a defined structure, such as text\ndocuments, images, videos, and other large data files.\nUnlike structured data such as relational databases,\nunstructured data does not have a fixed format.\n✓ Application: Unstructured storage is suitable for storing\nlarge and diverse data from many different sources, such\nas data from social networks, email, and IoT sensors.\n❖ Cloud Storage\n➢ Modern Trends - Unstructured Storage\nPart 7: Cloud Data Storage\n✓ Stores data as objects, each object includes data, metadata,\nand a unique ID.\n✓ Benefit:\n✓ Flexible scalability: Easily expand storage space by adding\nnew objects.\n✓ Low cost: Object storage typically costs less than other\nstorage methods.\n✓ Efficient data management capabilities: Metadata allows\ndata to be searched and managed effectively.\n❖ Cloud Storage\n➢ Modern Trends - Object Storage\nPart 7: Cloud Data Storage\n✓ SDS is a storage method that decouples the storage\nhardware from the storage management software,\nallowing for completely software management of\nstorage.\n❖ Cloud Storage\n➢ Modern Trends - Software-Defined Storage (SDS)\nPart 7: Cloud Data Storage\n✓ Combination of cloud storage and on-premises storage:\n• Hybrid storage combines the advantages of both\ncloud and on-premises storage, helping businesses\noptimize costs, performance, and security.\n• Businesses can store important and sensitive data\non-premises to ensure security, while storing less\nimportant data in the cloud to reduce costs.\n❖ Cloud Storage\n➢ Modern Trends - Hybrid Storage\nPart 7: Cloud Data Storage\n✓ Application:\n• Hybrid hosting is suitable for businesses\nthat need to balance performance, cost,\nand security, such as financial, healthcare,\nand government institutions.\n❖ Cloud Storage\n➢ Modern Trends - Hybrid Storage\nPart 7: Cloud Data Storage\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Threats to Data in the Cloud\n✓ Cyber attack\n✓ Data leak\n✓ Lost data\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Data Protection Measures in the Cloud\n✓ Data Encryption\n✓ Access Control\n✓ Backup and Recovery\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Threat Monitoring and Detection\n✓ Monitoring Systems\n✓ Intrusion Detection\n✓ Log Analysis\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Data Security Compliance and Regulations\n✓ Security regulations and standards\n✓ Ensure compliance\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Main Components of a Cloud Backup System\n✓ Data Sources\n✓ Cloud Infrastructure\n✓ Backup Management Software\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Cloud Data Backup Process\n✓ Step 1: Select backup data\n✓ Step 2: Transfer data to the cloud\n✓ Step 3: Store and manage backup data\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Benefits of Cloud Backup Systems\n✓ High Availability\n✓ Data Security\n✓ Cost Efficiency\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Challenges and Solutions for Cloud Backup\n✓ Challenge\n✓ Data security\n✓ Regulatory compliance\n✓ Solution\n✓ Encryption and security\n✓ Transport Optimization\n✓ Management and monitoring\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Benefits of Cloud Storage for Industry\n✓ Khả năng mở rộng (Scalability)\n✓ Tiết kiệm chi phí (Cost Efficiency)\n✓ Truy cập linh hoạt (Flexible Access)\n✓ Tăng cường bảo mật (Enhanced Security)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Cloud Storage Applications in Industry\n✓ Quản lý chuỗi cung ứng (Supply Chain\nManagement)\n✓ Quản lý sản xuất (Production Management)\n✓ Bảo trì dự đoán (Predictive Maintenance)\n✓ Phân tích dữ liệu lớn (Big Data Analytics)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Challenges of Cloud Storage in Industry\n✓ Bảo mật dữ liệu (Data Security)\n✓ Độ trễ (Latency)\n✓ Tuân thủ quy định (Regulatory Compliance)\n✓ Khả năng tích hợp (Integration)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Solutions and Support Tools\n✓ Cloud storage providers\n✓ Data management and security tools\n✓ Backup and recovery strategy\n✓ Integrated solution\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based database solutions\n➢ Solutions and Support Tools\n✓ Cloud database service providers\n• Amazon Web Services (AWS):\n• Microsoft Azure\n• Google Cloud Platform\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Cloud-based database solutions\n➢ Solutions and Support Tools\n✓ Database management tools\n• Tools from AWS, Azure, Google Cloud\n✓ Data backup and recovery strategy\n• Regular backups\n✓ Security and compliance solutions\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Definition and Types of Cloud Storage Blocks\n✓ Block storage: A method of storing data in\nthe form of individual blocks, each with a\nunique identifier, allowing quick and\nflexible access and management of data.\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Types of cloud blocks storage\n✓ Amazon Elastic Block Store (EBS)\n✓ Google Persistent Disk\n✓ Microsoft Azure Managed Disks\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Benefits of Block Storage\n✓ Hiệu suất cao (High Performance)\n✓ Khả năng mở rộng (Scalability)\n✓ Tính sẵn sàng và độ bền (Availability and Durability)\n✓ Tích hợp và tương thích (Integration and\nCompatibility)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Block Storage Applications\n✓ Lưu trữ cơ sở dữ liệu (Database Storage)\n✓ Lưu trữ máy ảo (Virtual Machine Storage)\n✓ Lưu trữ ứng dụng doanh nghiệp (Enterprise\nApplication Storage)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Challenges and Solutions for Block Storage\n✓ Bảo mật dữ liệu (Data Security)\n✓ Hiệu suất và độ trễ (Performance and Latency)\n✓ Quản lý và tối ưu hóa chi phí (Cost\nManagement and Optimization)\n✓ Tuân thủ quy định (Regulatory Compliance)\nPart 7: Cloud Data Storage\n❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Challenges and Solutions for Block Storage\n✓ Mã hóa dữ liệu (Data Encryption)\n✓ Sao lưu và phục hồi (Backup and Recovery)\n✓ Quản lý tài nguyên (Resource Management)\n✓ Đảm bảo tuân thủ (Compliance Assurance)\nTHANKS\nQ & A",
+  "sections": [
+    {
+      "heading": "WELCOME TO",
+      "level": 1,
+      "text": "CLOUD COMPUTING"
+    },
+    {
+      "heading": "Cloud Data Storage",
+      "level": 2,
+      "text": "PART 07"
+    },
+    {
+      "heading": "Chapter 7",
+      "level": 2,
+      "text": "INTRODUCTION\nDifferentiating Cloud Systems1. Research the development\nprocess of network storage\nDifferentiating Cloud Systems3. Data security of cloud-\nbased storage services\nDifferentiating Cloud Systems\t4. Cloud-based backup\nsystem\nDifferentiating Cloud Systems\t6. Cloud-based database\nsolutions\nDifferentiating Cloud Systems2. Basics of data storage\nin the cloud Differentiating Cloud Systems5. Cloud-based data\nstorage for industry\nDifferentiating Cloud Systems7. Cloud-based block\nstorage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Network storage is a method of storing data on\nserver systems that are interconnected through\na network, allowing for efficient data sharing\nand management.\n❖ Definition of Network Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Network storage provides reliable and scalable data\nstorage solutions, meeting the growing storage needs\nof organizations and businesses.\n✓ It helps improve performance, data management, and\nsecurity while reducing operational costs.\n❖ The Importance of Network Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Initially, organizations often used large storage\nservers to store all data in a single location.\n✓ These systems are often based on internal hard\ndrives or arrays of hard disks connected directly\nto the server.\n❖ The First Stage of Network Storage\n➢ Centralized Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ The First Stage of Network Storage\n➢ Challenges associated with centralized storage\nAbility of extension: As storage demand\nincreases, scaling centralized storage systems\nbecomes difficult due to space and hardware\nresource limitations.\nEfficiency: Data access performance decreases\nwhen many users access simultaneously, leading\nto bottlenecks.\nManage: Managing and maintaining large\nstorage systems is labor intensive and costly, and\nincreases the risk of data loss due to hardware or\nsoftware failures."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ NAS is a storage device directly connected to a\nLAN (Local Area Network), allowing users and\ndevices on the network to access data easily.\n❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS)\nVidụ NAS:\nhttps://www.youtube.com/watch?v=fTAJtn-Qxng"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS) - Main components"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Easy access\n✓ Share resources\n✓ Low cost\n❖ The First Stage of Network Storage\n➢ Network Attached Storage (NAS) -Benefits of NAS\nSAN & NAS:\nhttps://www.youtube.com/watch?v=3yZDDr0JKVc"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ SAN is a high-speed network that connects storage devices\nsuch as hard drives and tape drives to servers via protocols\nsuch as Fiber Channel or iSCSI.\n✓ The main purpose of SAN is to provide a centralized,\nscalable and high-performance storage system, helping\norganizations manage data more effectively.\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Host Layer (Lớp máy chủ)\n✓ Fabric Layer (Lớp mạng trung gian)\n✓ Storage Layer (Lớp lưu trữ)\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Main components"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Improve application availability\n✓ Enhance application performance\n✓ Simplify centralized management\n❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Advantages of SAN"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ The First Stage of Network Storage\n➢ Storage Area Network (SAN) - Disadvantages of SAN\nHigh Initial Cost\nComplex Configuration and Management\nLimited Scalability and Vendor Dependency\nSingle Points of Failure Without Redundancy\nHigh Power and Space Requirements"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ The emergence and development of cloud storage\nCloud storage emerged in the late 2000s, when services like\nAmazon S3, Google Cloud Storage, and Microsoft Azure\nBlob Storage began offering online data storage solutions.\nThe development of cloud technology and the need for large\ndata storage have promoted the birth and rapid development\nof cloud storage."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Ability of extension\n✓ Access anytime, anywhere\n✓ Cost savings\n❖ Cloud Storage\n➢ Benefits of cloud storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage - Main components"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud Storage Architecture\n• Components of cloud storage architecture - Storage Servers\n✓ Roles and functions:\n• The storage server is the core component of the\ncloud storage system, responsible for storing\ndata and processing access requests from users.\n• They are often designed with large capacity and\nhigh performance to meet the needs of\ncontinuous data storage and retrieval."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storag",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud Storage Architecture (CSA)\n▪ Components of CSA - Data Transfer Network\n✓ Roles and functions:\n• A data transmission network is a connection system\nbetween users and storage servers, ensuring data is\ntransferred quickly and safely.\n• They provide high bandwidth and low latency to\noptimize data access performance."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud Storage Architecture (CSA)\n• Components of CSA - Management Services\n✓ Roles and functions:\n✓ Managed services are tools and software that\nsupport the management and monitoring of\nstorage operations in the cloud.\n✓ They provide functions such as resource\nmanagement, performance monitoring, and\nproblem alerts."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud Storage Works\n• Data upload process\n✓ Users upload data to the cloud storage\nsystem via the user interface\n✓ Data is distributed and backed up on multiple\nservers to ensure availability and security\n✓ Users access data from anywhere with an Internet\nconnection through a cloud interface"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Store data without a defined structure, such as text\ndocuments, images, videos, and other large data files.\nUnlike structured data such as relational databases,\nunstructured data does not have a fixed format.\n✓ Application: Unstructured storage is suitable for storing\nlarge and diverse data from many different sources, such\nas data from social networks, email, and IoT sensors.\n❖ Cloud Storage\n➢ Modern Trends - Unstructured Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Stores data as objects, each object includes data, metadata,\nand a unique ID.\n✓ Benefit:\n✓ Flexible scalability: Easily expand storage space by adding\nnew objects.\n✓ Low cost: Object storage typically costs less than other\nstorage methods.\n✓ Efficient data management capabilities: Metadata allows\ndata to be searched and managed effectively.\n❖ Cloud Storage\n➢ Modern Trends - Object Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ SDS is a storage method that decouples the storage\nhardware from the storage management software,\nallowing for completely software management of\nstorage.\n❖ Cloud Storage\n➢ Modern Trends - Software-Defined Storage (SDS)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Combination of cloud storage and on-premises storage:\n• Hybrid storage combines the advantages of both\ncloud and on-premises storage, helping businesses\noptimize costs, performance, and security.\n• Businesses can store important and sensitive data\non-premises to ensure security, while storing less\nimportant data in the cloud to reduce costs.\n❖ Cloud Storage\n➢ Modern Trends - Hybrid Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "✓ Application:\n• Hybrid hosting is suitable for businesses\nthat need to balance performance, cost,\nand security, such as financial, healthcare,\nand government institutions.\n❖ Cloud Storage\n➢ Modern Trends - Hybrid Storage\nPart 7: Cloud Data Storage"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Threats to Data in the Cloud\n✓ Cyber attack\n✓ Data leak\n✓ Lost data"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Data Protection Measures in the Cloud\n✓ Data Encryption\n✓ Access Control\n✓ Backup and Recovery"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Threat Monitoring and Detection\n✓ Monitoring Systems\n✓ Intrusion Detection\n✓ Log Analysis"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Data security of cloud-based storage services\n▪ Data Security Compliance and Regulations\n✓ Security regulations and standards\n✓ Ensure compliance"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Main Components of a Cloud Backup System\n✓ Data Sources\n✓ Cloud Infrastructure\n✓ Backup Management Software"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Cloud Data Backup Process\n✓ Step 1: Select backup data\n✓ Step 2: Transfer data to the cloud\n✓ Step 3: Store and manage backup data"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Benefits of Cloud Backup Systems\n✓ High Availability\n✓ Data Security\n✓ Cost Efficiency"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based backup system\n▪ Challenges and Solutions for Cloud Backup\n✓ Challenge\n✓ Data security\n✓ Regulatory compliance\n✓ Solution\n✓ Encryption and security\n✓ Transport Optimization\n✓ Management and monitoring"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Benefits of Cloud Storage for Industry\n✓ Khả năng mở rộng (Scalability)\n✓ Tiết kiệm chi phí (Cost Efficiency)\n✓ Truy cập linh hoạt (Flexible Access)\n✓ Tăng cường bảo mật (Enhanced Security)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Cloud Storage Applications in Industry\n✓ Quản lý chuỗi cung ứng (Supply Chain\nManagement)\n✓ Quản lý sản xuất (Production Management)\n✓ Bảo trì dự đoán (Predictive Maintenance)\n✓ Phân tích dữ liệu lớn (Big Data Analytics)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Challenges of Cloud Storage in Industry\n✓ Bảo mật dữ liệu (Data Security)\n✓ Độ trễ (Latency)\n✓ Tuân thủ quy định (Regulatory Compliance)\n✓ Khả năng tích hợp (Integration)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based data storage for industry\n➢ Solutions and Support Tools\n✓ Cloud storage providers\n✓ Data management and security tools\n✓ Backup and recovery strategy\n✓ Integrated solution"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based database solutions\n➢ Solutions and Support Tools\n✓ Cloud database service providers\n• Amazon Web Services (AWS):\n• Microsoft Azure\n• Google Cloud Platform"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Cloud-based database solutions\n➢ Solutions and Support Tools\n✓ Database management tools\n• Tools from AWS, Azure, Google Cloud\n✓ Data backup and recovery strategy\n• Regular backups\n✓ Security and compliance solutions"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Definition and Types of Cloud Storage Blocks\n✓ Block storage: A method of storing data in\nthe form of individual blocks, each with a\nunique identifier, allowing quick and\nflexible access and management of data."
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Types of cloud blocks storage\n✓ Amazon Elastic Block Store (EBS)\n✓ Google Persistent Disk\n✓ Microsoft Azure Managed Disks"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Benefits of Block Storage\n✓ Hiệu suất cao (High Performance)\n✓ Khả năng mở rộng (Scalability)\n✓ Tính sẵn sàng và độ bền (Availability and Durability)\n✓ Tích hợp và tương thích (Integration and\nCompatibility)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Block Storage Applications\n✓ Lưu trữ cơ sở dữ liệu (Database Storage)\n✓ Lưu trữ máy ảo (Virtual Machine Storage)\n✓ Lưu trữ ứng dụng doanh nghiệp (Enterprise\nApplication Storage)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Challenges and Solutions for Block Storage\n✓ Bảo mật dữ liệu (Data Security)\n✓ Hiệu suất và độ trễ (Performance and Latency)\n✓ Quản lý và tối ưu hóa chi phí (Cost\nManagement and Optimization)\n✓ Tuân thủ quy định (Regulatory Compliance)"
+    },
+    {
+      "heading": "Part 7: Cloud Data Storage",
+      "level": 2,
+      "text": "❖ Cloud Storage\n➢ Block Storage based on Cloud Computing\n➢ Challenges and Solutions for Block Storage\n✓ Mã hóa dữ liệu (Data Encryption)\n✓ Sao lưu và phục hồi (Backup and Recovery)\n✓ Quản lý tài nguyên (Resource Management)\n✓ Đảm bảo tuân thủ (Compliance Assurance)"
+    },
+    {
+      "heading": "THANKS",
+      "level": 2,
+      "text": "Q & A"
+    }
+  ]
+}

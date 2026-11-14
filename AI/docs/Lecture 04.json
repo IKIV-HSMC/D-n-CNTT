@@ -1,0 +1,281 @@
+{
+  "original_filename": "Lecture 04.pdf",
+  "extracted_text": "What can row-echelon forms tell us about the\nsolution set of linear systems.\nStandard notations to use when performing\nelementary row operations.\nHomogeneous linear systems and why they are\nspecial.\nThree examples on the 'same' kind of problem.\nIntroduction to matrices\nMatrix operations\nThe numbers in the array are called entries.\nThe size of a matrix is if it has rows and\ncolumns.\nm n m\nn\n\nA matrix is a rectangular array of numbers.\n3 6 1 4 1\tis a matrix and the ( , )-entry of is .\t \tA A\n2 3\tWhat is the ( , )-entry of ?\tA\n3 2 4 1 1 0 11\n5 2 2 0 0 1\n4 1 20 10 2 1\n.\n.\n\n\t \n  \n \n  \nA\nA column matrix is a matrix with only one column.\n2\n3\n1\n0\n \n \n \n\t \n \n \nA row matrix is a matrix with only one row.\n \t\t1 1 0\t\n \t3 is both a row and a column matrix.\n11 12 1\n21 22 2\n1 2\n...\n... is a matrix.\n...\nn\nn\nm m mn\na a a\na a a m n\na a a\n \n \n  \n \n \n \nA\nWe can also write ( ) where is the\n( , )-entry of .\nij m n ija a\ni j\n\tA\nAija\nis the\n'row index'\ni\tis the\n'column index'\nj\nWe can also write ( ).ija\t\tA\n1 2 3\n4 5 6\n7 8 9\n \n   \n \n \nA\t11 12 231 2 6\t, ,\ta a a\t  \n3 4\nif is even\n( ) where if is oddij ij\ni j i j\nb b i j i j\n \t\n    \nB\n \n \n \n \n \n \nSquare matrices are matrices with the same number\nof rows and columns.\n \n0 0 0\n1 2\n2 0 0 0\n2 1 0 0 0\n \n   \n      \n \nA square matrix with rows and columns is said\nto be of order .\nn n\nn\nGiven a square matrix ( ) of order ,ija n\t\tA\n11 22 33, , ,..., are called the diagonal entries of .nna a a a A\n11 12 13 1\n21 22 23 2\n31 32 33 3\n1 2 3\n...\n...\n...\n...\nn\nn\nn\nn n n nn\na a a a\na a a a\na a a a\na a a a\n \n \n \n \n \n \n \n \n11 22 33The diagonal of is the sequence , , ,..., .nna a a a\tA\n, , are called the non-diagonal entries of .ija i j\t A\nA square matrix is a diagonal matrix if all its non-diagonal\nentries are zero.\n0\t( ) is diagonal whenever .ij ija a i j\t   \tA\n11\n22\n33\n0 0 0\n0 0 0\n0 0 0\n0 0 0\n...\n...\n...\n... nn\na\na\na\na\n \n \n \n \n \n \n \n \nA diagonal matrix is a scalar matrix if all its diagonal\nentries are the same.\n0\t( ) is scalar whenever and\nwhenever\n( is a constant).\nij ij\nij\na a i j\na c i j\nc\n   \n \nA\n0 0 0\n0 0 0\n0 0 0\n0 0 0\n...\n...\n...\n...\nc\nc\nc\nc\n \n \n \n \n \n \n \n \n1 0 0 0\n0 1 0 0\n0 0 1 0\n0 0 0 1\n...\n...\n...\n...\n \n \n \n \n \n \n \n \nis an identity matrix of order .n n\tI\n1\nA diagonal matrix is an identity matrix if all its diagonal\nentries are equal to .\nIf there is no danger of confusion, we simply write .\tI\nA zero matrix is a matrix with all entries equal to zero.\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n...\n...\n...\n...\n \n \n \n \n \n \n \n \nis a zero matrix.m n m n \t0\nIf there is no danger of confusion, we simply write .\t0\nA symmetric matrix ( ) is a square matrix whereija\n \n \n \n \n \n \n \n \n \n \n \n \nfor all , .ij jia a i j\t\nA square matrix ( ) is an upper triangular matrix ifija\n \n \n \n \n \n \n \n \n \n \n \n \n0 for all .ija i j\t \nA square matrix ( ) is an lower triangular matrix ifija\n \n \n \n \n \n \n \n \n \n \n \n \n0 for all .ija i j\t \nFor real numbers, we can add, subtract, multiply and\n(to some extent) divide. What about for matrices with\nreal number entries?\n,\tx y\t\nBefore we can write the 'equivalent' of an equation like\nwe need to define what is meant by ' '\nin terms of matrices\n\nTwo matrices and are said to be equal, written\tA B\n,\t\tA B\nif they have the same size (rows and columns) and\nfor all , .ij ija b i j\t\n1 1\n0 1\n \n   \nA1 y\nx z\n \n  \n \nB0 y\nx z\n \n  \n \nC\n1 1\n0 1 0\nx\t \n   \nD\nIf and are two matrices, then\tm n\t\tA B\n1) is a matrix such that\tm n\t \tA B\n( ).ij ija b\t  \tA B\n2) is a matrix such that\tm n\t \tA B\n( ).ij ija b\t  \tA B\nIf is a matrix and is a real number, then\tm n c\t\tA\n3) is a matrix such that\tc m n\t\tA\n( ).ijc ca\t\tA\n2 2\n1 0\n3 1\n \n   \n \n \nA\n1 0\n4 2\n0 3\n\t \n  \n \n \n \nB\n \tA B3\t \tA B\n1) You cannot add or subtract matrices that are\nnot of the same size.\n1\t2) is the same as ( ) .\t \tA A\n1\t3) is the same as ( ) .\t  \tA B A B\n4) Just like for real numbers, there are laws for\nmatrix operation which we can use.\n(Commutative Law for Matrix Addition)\nFor real numbers , , we have\tx y\n.\tx y y x\t  \nFor matrices , (of the same size), we have\tA B\n.\t  \tA B B A\n(Associative Law for Matrix Addition)\nFor real numbers , , we have\tx y z\n( ) ( ) .\tx y z x y z\t    \nFor matrices , , (of the same size), we have\tA B C\n( ) ( ) .\t    \tA B C A B C\nFor real numbers , , we have\tx y z\n( )\tx y z xy xz\t  \nFor matrices , (of the same size) and\nreal numbers , , we have\ta b\nA B\n( ) ;\ta a a\t  \tA B A B\nand\t( ) ( ).\txy z x yz\t\n( ) ;\ta b a b\t  \tA A A\nand\n( ) ( ) ( ).\ta b ab b a\t \tA A A\nRemember that all the following are just\nmatrix equations.\n( ) ;\ta a a\t  \tA B A B\t( ) ;\ta b a b\t  \tA A A\n( ) ( ) ( ).\ta b ab b a\t \tA A A\n.\t  \tA B B A\t( ) ( ) .\t    \tA B C A B C\nDo you remember how to prove that two matrices\nare equal?Size and ( , )-entry consideration.\ti j\nDo we need to\ndo this every time?\nNo! You can use\nthese laws without\nproof...\n3 2 2\t( )( )\t  \tA B C\n3 2 3 2 2\t( )( ) ( )( )\t    \tA B C\n3 2 3 2 3 2 2 2\t( ) ( ) ( ) ( )\t     \tA B C C\n5 5 6 4\t   \tA B C C\n5 5 10 .\t  \tA B C\nSince ( ) ( ),\t    \tA B C A B C\nwe may simply write\n1 2 ... k  \tA A A\nwithout any parentheses.\nLet be a matrix.\tA\n.\t   \tA A A\t0 0\n( )\t    \tA A A A 0.\n0 \tA 0.\nWe have already seen that we can add and subtract\nmatrices pretty much like what we do for real numbers.\nWhat about multiplication?\nFor real numbers , , is always defined.\tx y xy\nWhat about for matrices , ?\tA B\nLet ( ) and ( ) be two matrices.ij m p ij p na b  \tA B\n \n   \n \n \nA\nThen is a matrix\nwhose ( , )-entry is given by:\nm n\ni j\n\tAB\n1 1 2 2 ...i j i j ip pja b a b a b\t  \n \n \n \n  \n \n \n \n \nB\n1\np\nik kj\nk\na b\n\n \n1 2 ...i i ipa a a\nth\nrow of\ni \nA\n1\n2\nj\nj\npj\nb\nb\nb\nth column of\tj  B\nComputer where\tAB\n2 3 1\n0 1 1\n2 2 1\n\t \n  \n \n  \nA\n0 1 3 0\n1 1 0 3\n2 2 0 1\n \n  \n \n  \nB\n \n   \n \n \nAB\nFrom the way is defined, it is clear that the\nnumber of columns in must be EQUAL to the\nnumber of rows in .\nAB\nA\nB\n \n   \n \n \nA\n \n \n \n  \n \n \n \n \nB\n1 2 ...i i ipa a a\n1\n2\nj\nj\npj\nb\nb\nb\nnumber of columns in A\nnumber\nof rows\nin B\nWe know that for real numbers , we have .\tx y xy yx\t\nHowever, for matrices , , even when both and\nare defined, does not necessarily equal .\nA B AB\nBA AB BA\n2 1\n3 0\n \n  \n \nA2 2\n1 3\n\t \n   \nB\n \n  \n \nAB \n  \n \nBA\n0\tWe know that for real numbers , if ,\tx y xy \n0 0 0\tthen either or (or both ).\tx y\t  \n0 1 1 1\n0 1 0 0\nHowever, if and ,\n   \n    \n   \nA B\n0 0\n0 0\nthen .\n \n  \n \nAB 0\nSo but neither nor is the zero matrix.\t\tAB A B\t0\nPre-multiply of to \tA B AB\nPost-multiply of to \tA B BA\n(Associative Law for Matrix Multiplication)\n( ) ( )\t\tA BC AB C\n(Distributive Law for Matrix Addition and\nMultiplication)\n1 2 1 2( )\t  \tA B B AB AB\n1 2 1 2( )\t  \tC C A C A C A\nIf is a scalar, then\ta\n( ) ( ) ( )\ta a a\t \tAB A B A B\n(Distributive Law for Matrix Addition and\nMultiplication)\n1 2 1 2( )\t  \tA B B AB AB\n1 2 1 2( )\t  \tC C A C A C A\nLet be a matrix.\tm n\t\tA\nand\t \tA A\t0 0 0 0\n(What are the sizes of the zero matrices?)\nand\t \tAI A IA A\n(What are the sizes of the identity matrices?)\nLet \tbe a square matrix and \ta nonnegative integer.\nWe define\nn\tA\n0\n1\ntimes\nif\n... \tif\nn\nn\nn\nn\n\t\n  \n\nI\nA AA \tA\n1 ( \t)\n) m \tn \tm \tn\t\n\tA A \tA2) In general, ( \t)m \tm \tm\n\tAB \tA B\n1 \t0 \t0 \t1 \t0 \t1\n0 \t2 \t1 \t0 \t2 \t0\n \t \t \t \t \t\n \t \t \t \t \t \t \t\n \t \t \t \t \t\nA \tB \tAB\n2 2 \t0\n0 \t2\n( \t)  \t\n  \t\n \t\nAB\n2 \t2 1 \t0\n0 \t4\n \t\n  \t\n \t\nA B\nLet be a matrix, be a matrix.\nNote that will be a matrix.\nm p p n\nm n\n \n\nA B\nAB\nWrite as\n \n \n \n  \n \n \n \n \nA\nA\n1\n2\n:\n:\nm\na\na\na\n \t\t1 2th row of ... ...i i i ipi a a a\t \ta A\n \n \n   \n \n \nB1 2 ... ... nb b b\n1\n2\n:\tth column of\n:\nj\nj\nj\npj\nb\nb\nj\nb\n \n \n \n \t   \n \n \n \nb B\nFirst way of computing : entry by entry\tAB\n1 1 1 2 1\n2 1 2 2 2\n1 2\n...\n...\n: : :\n...\nn\nn\nm m m n\n \n \n   \n \n \na b a b a b\na b a b a b\nAB\na b a b a b\n( , )-entry ofi j i j\t\ta b AB\t \t\n1\n2\n1 2 ...\nj\nj\ni i ip\npj\nb\nb\na a a\nb\n \n \n   \n \n \n1\np\nik kj\nk\na b\n\n \nLet be a matrix, be a matrix.\tm p p n\t \tA B\nSecond way of computing : row by row\tAB\n1 1\n2 2\n: :\n: :\nm m\n   \n   \n   \n \t   \n   \n   \n   \n   \na a B\na a B\nAB B\na a B\nth row ofi i\t\ta B AB\t \t\t1 2 ...i i ipa a a\t B\nLet be a matrix, be a matrix.\tm p p n\t \tA B\nThird way of computing : column by column\tAB\n \t  \t1 2 1 2... ... ... ...n n \tAB A b b b Ab Ab Ab\nth column ofj j\t\tAb AB\n1\n2\n:\n:\nj\nj\npj\nb\nb\nb\n \n \n \n \t  \n \n \n \nA\nLet be a matrix, be a matrix.\tm p p n\t \tA B\n2 1 0 1 1\n1 1 1 1 2\n0 3 2 3 2\nLet ,\n\t   \n      \n   \n   \n   \nA B\n1 \tAb\n2 \tAb\n\tAB\n1 \ta B\n2 \ta B\n3 \ta B\ncan be represented by a matrix equation where\t\tAx b\n11 1 12 2 1 1\n21 1 22 2 2 2\n1 1 2 2\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n m\na x a x a x b\na x a x a x b\na x a x a x b\n   \t\n    \t\n\n\n    \n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\n\tAx b\n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\ncoefficient\nmatrixvariable\nmatrix\nconstant\nmatrix\ncan also be expressed as\t\tAx b\n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\n11 12 1 1\n21 22 2 2\n1 2\n1 2\n...\nn\nn\nn\nm m mn m\na a a b\na a a b\nx x x\na a a b\n       \n       \n          \n       \n       \n       \n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\n11 12 1 1\n21 22 2 2\n1 2\n1 2\n...\nn\nn\nn\nm m mn m\na a a b\na a a b\nx x x\na a a b\n       \n       \n          \n       \n       \n       \n1 1 2 2 ... where th column ofn n ix x x i\t    \tc c c b c A\n1c2c\tnc\n2 \t1\n2 \t2\n2 \t3 \t2\nx \ty \tz\nx \ty\nx \ty \tz\n \t \t\t\n  \t\t\n  \t \t\n1 \t2 \t1 \t1\n2 \t1 \t0 \t2\n1 \t2 \t3 \t2\nx\ny\nz\n\t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t \t \t \t \t\n1 \t2 \t1 \t1\n2 \t1 \t0 \t2\n1 \t2 \t3 \t2\nx \ty \tz\n\t \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t \t \t \t \t \t \t \t\nCan you find \t, \t,\nthat satisfies\nx y z\nLet ( ) be a matrix.ij m na m n \tA\nThe transpose of , denoted by , is a matrix\nwhose ( , )-entry is .\nT\nji\nn m\ni j a\n\tA A\n \n \n \n \n \n \n \n \nrows\tm\ncolumns\tn\nA\n \n \n \n \n \n \n \n \nrows\tn\ncolumns\tm\nT\nA\njia\nth row\ti\nth col\tj\nWrite down the transpose of the following matrices:\n3 0 1 2 0\n2 1 0 4 6\n1 1 1 1 0\n\t \n   \n  \nA\n1 1 0 3\n1 2 3 4\n0 3 3 1\n3 4 1 0\n\t \n \n  \t \n \n \nB\nA matrix is symmetric if and only if\tA\nT\n\tA A\n \n \n \n \n \n \n \n \nija\njia\nfor all , .ij jia a i j\t\nLet be a matrix.\tm n\t\tA\n1) ( )T T \tA A\n2) ( ) (transpose of sum equal\nsum of transpose).\nT T T\n  \tA B A B\n3) ( )T T\na a\t\tA A\n4) If is a matrix, then ( )\n(transpose of product equal to product of transpose,\nbut with order reversed).\nT T T\nn p\t \tB AB B A\nLecture 05:\nInverses of square matrices\nElementary matrices (till Example 2.4.5)",
+  "sections": [
+    {
+      "heading": "What can row-echelon forms tell us about the",
+      "level": 1,
+      "text": "solution set of linear systems.\nStandard notations to use when performing\nelementary row operations.\nHomogeneous linear systems and why they are\nspecial.\nThree examples on the 'same' kind of problem."
+    },
+    {
+      "heading": "Introduction to matrices",
+      "level": 2,
+      "text": "Matrix operations"
+    },
+    {
+      "heading": "The numbers in the array are called entries.",
+      "level": 2,
+      "text": "The size of a matrix is if it has rows and\ncolumns.\nm n m\nn\n\nA matrix is a rectangular array of numbers.\n3 6 1 4 1\tis a matrix and the ( , )-entry of is .\t \tA A\n2 3\tWhat is the ( , )-entry of ?\tA\n3 2 4 1 1 0 11\n5 2 2 0 0 1\n4 1 20 10 2 1\n.\n.\n\n\t \n  \n \n  \nA"
+    },
+    {
+      "heading": "A column matrix is a matrix with only one column.",
+      "level": 2,
+      "text": "2\n3\n1\n0\n \n \n \n\t \n \n \nA row matrix is a matrix with only one row.\n \t\t1 1 0\t\n \t3 is both a row and a column matrix."
+    },
+    {
+      "heading": "11 12 1",
+      "level": 2,
+      "text": "21 22 2\n1 2\n...\n... is a matrix.\n...\nn\nn\nm m mn\na a a\na a a m n\na a a\n \n \n  \n \n \n \nA\nWe can also write ( ) where is the\n( , )-entry of .\nij m n ija a\ni j\n\tA\nAija\nis the\n'row index'\ni\tis the\n'column index'\nj\nWe can also write ( ).ija\t\tA"
+    },
+    {
+      "heading": "1 2 3",
+      "level": 2,
+      "text": "4 5 6\n7 8 9\n \n   \n \n \nA\t11 12 231 2 6\t, ,\ta a a\t  \n3 4\nif is even\n( ) where if is oddij ij\ni j i j\nb b i j i j\n \t\n    \nB\n \n \n \n \n \n "
+    },
+    {
+      "heading": "Square matrices are matrices with the same number",
+      "level": 2,
+      "text": "of rows and columns.\n \n0 0 0\n1 2\n2 0 0 0\n2 1 0 0 0\n \n   \n      \n \nA square matrix with rows and columns is said\nto be of order .\nn n\nn"
+    },
+    {
+      "heading": "Given a square matrix ( ) of order ,ija n\t\tA",
+      "level": 2,
+      "text": "11 22 33, , ,..., are called the diagonal entries of .nna a a a A\n11 12 13 1\n21 22 23 2\n31 32 33 3\n1 2 3\n...\n...\n...\n...\nn\nn\nn\nn n n nn\na a a a\na a a a\na a a a\na a a a\n \n \n \n \n \n \n \n \n11 22 33The diagonal of is the sequence , , ,..., .nna a a a\tA\n, , are called the non-diagonal entries of .ija i j\t A"
+    },
+    {
+      "heading": "A square matrix is a diagonal matrix if all its non-diagonal",
+      "level": 2,
+      "text": "entries are zero.\n0\t( ) is diagonal whenever .ij ija a i j\t   \tA\n11\n22\n33\n0 0 0\n0 0 0\n0 0 0\n0 0 0\n...\n...\n...\n... nn\na\na\na\na\n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "A diagonal matrix is a scalar matrix if all its diagonal",
+      "level": 2,
+      "text": "entries are the same.\n0\t( ) is scalar whenever and\nwhenever\n( is a constant).\nij ij\nij\na a i j\na c i j\nc\n   \n \nA\n0 0 0\n0 0 0\n0 0 0\n0 0 0\n...\n...\n...\n...\nc\nc\nc\nc\n \n \n \n \n \n \n \n "
+    },
+    {
+      "heading": "1 0 0 0",
+      "level": 2,
+      "text": "0 1 0 0\n0 0 1 0\n0 0 0 1\n...\n...\n...\n...\n \n \n \n \n \n \n \n \nis an identity matrix of order .n n\tI\n1\nA diagonal matrix is an identity matrix if all its diagonal\nentries are equal to .\nIf there is no danger of confusion, we simply write .\tI"
+    },
+    {
+      "heading": "A zero matrix is a matrix with all entries equal to zero.",
+      "level": 2,
+      "text": "0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n...\n...\n...\n...\n \n \n \n \n \n \n \n \nis a zero matrix.m n m n \t0\nIf there is no danger of confusion, we simply write .\t0"
+    },
+    {
+      "heading": "A symmetric matrix ( ) is a square matrix whereija",
+      "level": 2,
+      "text": " \n \n \n \n \n \n \n \n \n \n \n \nfor all , .ij jia a i j\t"
+    },
+    {
+      "heading": "A square matrix ( ) is an upper triangular matrix ifija",
+      "level": 2,
+      "text": " \n \n \n \n \n \n \n \n \n \n \n \n0 for all .ija i j\t "
+    },
+    {
+      "heading": "A square matrix ( ) is an lower triangular matrix ifija",
+      "level": 2,
+      "text": " \n \n \n \n \n \n \n \n \n \n \n \n0 for all .ija i j\t "
+    },
+    {
+      "heading": "For real numbers, we can add, subtract, multiply and",
+      "level": 2,
+      "text": "(to some extent) divide. What about for matrices with\nreal number entries?\n,\tx y\t\nBefore we can write the 'equivalent' of an equation like\nwe need to define what is meant by ' '\nin terms of matrices\n"
+    },
+    {
+      "heading": "Two matrices and are said to be equal, written\tA B",
+      "level": 2,
+      "text": ",\t\tA B\nif they have the same size (rows and columns) and\nfor all , .ij ija b i j\t\n1 1\n0 1\n \n   \nA1 y\nx z\n \n  \n \nB0 y\nx z\n \n  \n \nC\n1 1\n0 1 0\nx\t \n   \nD"
+    },
+    {
+      "heading": "If and are two matrices, then\tm n\t\tA B",
+      "level": 2,
+      "text": "1) is a matrix such that\tm n\t \tA B\n( ).ij ija b\t  \tA B\n2) is a matrix such that\tm n\t \tA B\n( ).ij ija b\t  \tA B\nIf is a matrix and is a real number, then\tm n c\t\tA\n3) is a matrix such that\tc m n\t\tA\n( ).ijc ca\t\tA"
+    },
+    {
+      "heading": "2 2",
+      "level": 2,
+      "text": "1 0\n3 1\n \n   \n \n \nA\n1 0\n4 2\n0 3\n\t \n  \n \n \n \nB\n \tA B3\t \tA B"
+    },
+    {
+      "heading": "1) You cannot add or subtract matrices that are",
+      "level": 2,
+      "text": "not of the same size.\n1\t2) is the same as ( ) .\t \tA A\n1\t3) is the same as ( ) .\t  \tA B A B\n4) Just like for real numbers, there are laws for\nmatrix operation which we can use."
+    },
+    {
+      "heading": "(Commutative Law for Matrix Addition)",
+      "level": 2,
+      "text": "For real numbers , , we have\tx y\n.\tx y y x\t  \nFor matrices , (of the same size), we have\tA B\n.\t  \tA B B A"
+    },
+    {
+      "heading": "(Associative Law for Matrix Addition)",
+      "level": 2,
+      "text": "For real numbers , , we have\tx y z\n( ) ( ) .\tx y z x y z\t    \nFor matrices , , (of the same size), we have\tA B C\n( ) ( ) .\t    \tA B C A B C"
+    },
+    {
+      "heading": "For real numbers , , we have\tx y z",
+      "level": 2,
+      "text": "( )\tx y z xy xz\t  \nFor matrices , (of the same size) and\nreal numbers , , we have\ta b\nA B\n( ) ;\ta a a\t  \tA B A B\nand\t( ) ( ).\txy z x yz\t\n( ) ;\ta b a b\t  \tA A A\nand\n( ) ( ) ( ).\ta b ab b a\t \tA A A"
+    },
+    {
+      "heading": "Remember that all the following are just",
+      "level": 2,
+      "text": "matrix equations.\n( ) ;\ta a a\t  \tA B A B\t( ) ;\ta b a b\t  \tA A A\n( ) ( ) ( ).\ta b ab b a\t \tA A A\n.\t  \tA B B A\t( ) ( ) .\t    \tA B C A B C\nDo you remember how to prove that two matrices\nare equal?Size and ( , )-entry consideration.\ti j"
+    },
+    {
+      "heading": "Do we need to",
+      "level": 2,
+      "text": "do this every time?\nNo! You can use\nthese laws without\nproof..."
+    },
+    {
+      "heading": "3 2 2\t( )( )\t  \tA B C",
+      "level": 2,
+      "text": "3 2 3 2 2\t( )( ) ( )( )\t    \tA B C\n3 2 3 2 3 2 2 2\t( ) ( ) ( ) ( )\t     \tA B C C\n5 5 6 4\t   \tA B C C\n5 5 10 .\t  \tA B C"
+    },
+    {
+      "heading": "Since ( ) ( ),\t    \tA B C A B C",
+      "level": 2,
+      "text": "we may simply write\n1 2 ... k  \tA A A\nwithout any parentheses."
+    },
+    {
+      "heading": "Let be a matrix.\tA",
+      "level": 2,
+      "text": ".\t   \tA A A\t0 0\n( )\t    \tA A A A 0.\n0 \tA 0."
+    },
+    {
+      "heading": "We have already seen that we can add and subtract",
+      "level": 2,
+      "text": "matrices pretty much like what we do for real numbers.\nWhat about multiplication?\nFor real numbers , , is always defined.\tx y xy\nWhat about for matrices , ?\tA B"
+    },
+    {
+      "heading": "Let ( ) and ( ) be two matrices.ij m p ij p na b  \tA B",
+      "level": 2,
+      "text": " \n   \n \n \nA\nThen is a matrix\nwhose ( , )-entry is given by:\nm n\ni j\n\tAB\n1 1 2 2 ...i j i j ip pja b a b a b\t  \n \n \n \n  \n \n \n \n \nB\n1\np\nik kj\nk\na b\n\n \n1 2 ...i i ipa a a\nth\nrow of\ni \nA\n1\n2\nj\nj\npj\nb\nb\nb\nth column of\tj  B"
+    },
+    {
+      "heading": "Computer where\tAB",
+      "level": 2,
+      "text": "2 3 1\n0 1 1\n2 2 1\n\t \n  \n \n  \nA\n0 1 3 0\n1 1 0 3\n2 2 0 1\n \n  \n \n  \nB\n \n   \n \n \nAB"
+    },
+    {
+      "heading": "From the way is defined, it is clear that the",
+      "level": 2,
+      "text": "number of columns in must be EQUAL to the\nnumber of rows in .\nAB\nA\nB\n \n   \n \n \nA\n \n \n \n  \n \n \n \n \nB\n1 2 ...i i ipa a a\n1\n2\nj\nj\npj\nb\nb\nb\nnumber of columns in A\nnumber\nof rows\nin B"
+    },
+    {
+      "heading": "We know that for real numbers , we have .\tx y xy yx\t",
+      "level": 2,
+      "text": "However, for matrices , , even when both and\nare defined, does not necessarily equal .\nA B AB\nBA AB BA\n2 1\n3 0\n \n  \n \nA2 2\n1 3\n\t \n   \nB\n \n  \n \nAB \n  \n \nBA"
+    },
+    {
+      "heading": "0\tWe know that for real numbers , if ,\tx y xy ",
+      "level": 2,
+      "text": "0 0 0\tthen either or (or both ).\tx y\t  \n0 1 1 1\n0 1 0 0\nHowever, if and ,\n   \n    \n   \nA B\n0 0\n0 0\nthen .\n \n  \n \nAB 0\nSo but neither nor is the zero matrix.\t\tAB A B\t0"
+    },
+    {
+      "heading": "Pre-multiply of to \tA B AB",
+      "level": 2,
+      "text": "Post-multiply of to \tA B BA"
+    },
+    {
+      "heading": "(Associative Law for Matrix Multiplication)",
+      "level": 2,
+      "text": "( ) ( )\t\tA BC AB C\n(Distributive Law for Matrix Addition and\nMultiplication)\n1 2 1 2( )\t  \tA B B AB AB\n1 2 1 2( )\t  \tC C A C A C A"
+    },
+    {
+      "heading": "If is a scalar, then\ta",
+      "level": 2,
+      "text": "( ) ( ) ( )\ta a a\t \tAB A B A B\n(Distributive Law for Matrix Addition and\nMultiplication)\n1 2 1 2( )\t  \tA B B AB AB\n1 2 1 2( )\t  \tC C A C A C A"
+    },
+    {
+      "heading": "Let be a matrix.\tm n\t\tA",
+      "level": 2,
+      "text": "and\t \tA A\t0 0 0 0\n(What are the sizes of the zero matrices?)\nand\t \tAI A IA A\n(What are the sizes of the identity matrices?)"
+    },
+    {
+      "heading": "Let \tbe a square matrix and \ta nonnegative integer.",
+      "level": 2,
+      "text": "We define\nn\tA\n0\n1\ntimes\nif\n... \tif\nn\nn\nn\nn\n\t\n  \n\nI\nA AA \tA\n1 ( \t)\n) m \tn \tm \tn\t\n\tA A \tA2) In general, ( \t)m \tm \tm\n\tAB \tA B"
+    },
+    {
+      "heading": "1 \t0 \t0 \t1 \t0 \t1",
+      "level": 2,
+      "text": "0 \t2 \t1 \t0 \t2 \t0\n \t \t \t \t \t\n \t \t \t \t \t \t \t\n \t \t \t \t \t\nA \tB \tAB\n2 2 \t0\n0 \t2\n( \t)  \t\n  \t\n \t\nAB\n2 \t2 1 \t0\n0 \t4\n \t\n  \t\n \t\nA B"
+    },
+    {
+      "heading": "Let be a matrix, be a matrix.",
+      "level": 2,
+      "text": "Note that will be a matrix.\nm p p n\nm n\n \n\nA B\nAB\nWrite as\n \n \n \n  \n \n \n \n \nA\nA\n1\n2\n:\n:\nm\na\na\na\n \t\t1 2th row of ... ...i i i ipi a a a\t \ta A\n \n \n   \n \n \nB1 2 ... ... nb b b\n1\n2\n:\tth column of\n:\nj\nj\nj\npj\nb\nb\nj\nb\n \n \n \n \t   \n \n \n \nb B"
+    },
+    {
+      "heading": "First way of computing : entry by entry\tAB",
+      "level": 2,
+      "text": "1 1 1 2 1\n2 1 2 2 2\n1 2\n...\n...\n: : :\n...\nn\nn\nm m m n\n \n \n   \n \n \na b a b a b\na b a b a b\nAB\na b a b a b\n( , )-entry ofi j i j\t\ta b AB\t \t\n1\n2\n1 2 ...\nj\nj\ni i ip\npj\nb\nb\na a a\nb\n \n \n   \n \n \n1\np\nik kj\nk\na b\n\n \nLet be a matrix, be a matrix.\tm p p n\t \tA B"
+    },
+    {
+      "heading": "Second way of computing : row by row\tAB",
+      "level": 2,
+      "text": "1 1\n2 2\n: :\n: :\nm m\n   \n   \n   \n \t   \n   \n   \n   \n   \na a B\na a B\nAB B\na a B\nth row ofi i\t\ta B AB\t \t\t1 2 ...i i ipa a a\t B\nLet be a matrix, be a matrix.\tm p p n\t \tA B"
+    },
+    {
+      "heading": "Third way of computing : column by column\tAB",
+      "level": 2,
+      "text": " \t  \t1 2 1 2... ... ... ...n n \tAB A b b b Ab Ab Ab\nth column ofj j\t\tAb AB\n1\n2\n:\n:\nj\nj\npj\nb\nb\nb\n \n \n \n \t  \n \n \n \nA\nLet be a matrix, be a matrix.\tm p p n\t \tA B"
+    },
+    {
+      "heading": "2 1 0 1 1",
+      "level": 2,
+      "text": "1 1 1 1 2\n0 3 2 3 2\nLet ,\n\t   \n      \n   \n   \n   \nA B\n1 \tAb\n2 \tAb\n\tAB\n1 \ta B\n2 \ta B\n3 \ta B"
+    },
+    {
+      "heading": "can be represented by a matrix equation where\t\tAx b",
+      "level": 2,
+      "text": "11 1 12 2 1 1\n21 1 22 2 2 2\n1 1 2 2\n...\n...\n: : : :\n...\nn n\nn n\nm m mn n m\na x a x a x b\na x a x a x b\na x a x a x b\n   \t\n    \t\n\n\n    \n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb"
+    },
+    {
+      "heading": "\tAx b",
+      "level": 2,
+      "text": "11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\ncoefficient\nmatrixvariable\nmatrix\nconstant\nmatrix"
+    },
+    {
+      "heading": "can also be expressed as\t\tAx b",
+      "level": 2,
+      "text": "11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\n11 12 1 1\n21 22 2 2\n1 2\n1 2\n...\nn\nn\nn\nm m mn m\na a a b\na a a b\nx x x\na a a b\n       \n       \n          \n       \n       \n       "
+    },
+    {
+      "heading": "11 12 1",
+      "level": 2,
+      "text": "21 22 2\n1 2\n...\n...\n...\nn\nn\nm m mn\na a a\na a a\na a a\n \n \n   \n \n \nA\n1\n2\nn\nx\nx\nx\n \n \n   \n \n \nx\n1\n2\nm\nb\nb\nb\n \n \n   \n \n \nb\n11 12 1 1\n21 22 2 2\n1 2\n1 2\n...\nn\nn\nn\nm m mn m\na a a b\na a a b\nx x x\na a a b\n       \n       \n          \n       \n       \n       \n1 1 2 2 ... where th column ofn n ix x x i\t    \tc c c b c A\n1c2c\tnc"
+    },
+    {
+      "heading": "2 \t1",
+      "level": 2,
+      "text": "2 \t2\n2 \t3 \t2\nx \ty \tz\nx \ty\nx \ty \tz\n \t \t\t\n  \t\t\n  \t \t\n1 \t2 \t1 \t1\n2 \t1 \t0 \t2\n1 \t2 \t3 \t2\nx\ny\nz\n\t \t \t \t \t\n \t \t \t \t \t\n \t \t \t \t\n \t \t \t \t \t \t \t \t\n1 \t2 \t1 \t1\n2 \t1 \t0 \t2\n1 \t2 \t3 \t2\nx \ty \tz\n\t \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t\n \t \t \t \t \t \t \t \t \t \t \t \t \t \t\nCan you find \t, \t,\nthat satisfies\nx y z"
+    },
+    {
+      "heading": "Let ( ) be a matrix.ij m na m n \tA",
+      "level": 2,
+      "text": "The transpose of , denoted by , is a matrix\nwhose ( , )-entry is .\nT\nji\nn m\ni j a\n\tA A\n \n \n \n \n \n \n \n \nrows\tm\ncolumns\tn\nA\n \n \n \n \n \n \n \n \nrows\tn\ncolumns\tm\nT\nA\njia\nth row\ti\nth col\tj"
+    },
+    {
+      "heading": "Write down the transpose of the following matrices:",
+      "level": 2,
+      "text": "3 0 1 2 0\n2 1 0 4 6\n1 1 1 1 0\n\t \n   \n  \nA\n1 1 0 3\n1 2 3 4\n0 3 3 1\n3 4 1 0\n\t \n \n  \t \n \n \nB"
+    },
+    {
+      "heading": "A matrix is symmetric if and only if\tA",
+      "level": 2,
+      "text": "T\n\tA A\n \n \n \n \n \n \n \n \nija\njia\nfor all , .ij jia a i j\t"
+    },
+    {
+      "heading": "Let be a matrix.\tm n\t\tA",
+      "level": 2,
+      "text": "1) ( )T T \tA A\n2) ( ) (transpose of sum equal\nsum of transpose).\nT T T\n  \tA B A B\n3) ( )T T\na a\t\tA A\n4) If is a matrix, then ( )\n(transpose of product equal to product of transpose,\nbut with order reversed).\nT T T\nn p\t \tB AB B A"
+    },
+    {
+      "heading": "Lecture 05:",
+      "level": 2,
+      "text": "Inverses of square matrices\nElementary matrices (till Example 2.4.5)"
+    }
+  ]
+}

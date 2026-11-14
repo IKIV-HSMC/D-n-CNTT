@@ -1,0 +1,266 @@
+{
+  "original_filename": "Lecture 06.pdf",
+  "extracted_text": "Definition of invertible matrices.\nUniqueness of inverse.\nSome laws involving inverses.\nRepresenting an elementary row operation by a matrix.\nDefinition of an elementary matrix.\nElementary matrices are invertible and their\ninverses are also elementary matrices.\nElementary matrices (cont’d)\nDeterminants\nLinear system X\nAugmented matrix\nof linear system X\nLinear system Y\nAugmented matrix\nof linear system Y\nrow\nequivalent\nsame\nsolution set\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nelementary row\noperations \t\tA \tb\t \t\tC \td\none elementary\nrow operation\nLinear system X\nAugmented matrix\nof linear system X\nLinear system Y\nAugmented matrix\nof linear system Y\nrow\nequivalent\nsame\nsolution set\n \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\none elementary\nrow operation \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nThere exists an elementary matrix \tsuch that\tE\n \t \t \t\t\tC \td \tE \tA \tb\nand\n\n\nC \tEA\nd \tEb\n\tAu \tb\t \t\tEAu \tEb\t \t\tCu \td\nis a solution to\t \t\tu \tCx \td\nLet \tbe a solution to \t\tu \tAx \tb\n\n \t \t \t\t \t\tC \td \tEA \tEb\none elementary\nrow operation \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nThere exists an elementary matrix \tsuch that\tE\n \t \t \t\t\tC \td \tE \tA \tb\t \t \t \t\t \t\tC \td \tEA \tEb\nand\n\n\nC \tEA\nd \tEbLet \tbe a solution to \t\tv \tCx \td\n\tCv \td1 \t1\t \t\n \t\tE \tCv \tE \td\t \t\tAv \tb\nis a solution to\t \t\tv \tAx \tb\n\n1\n1\nand\n\n\n\n\nE \tC \tA\nE \td \tb\nIf is a square matrix, then the following statements\nare equivalent.\nA\n(If one of them is true, so are the rest. If one of\nthem is false, so are the rest.)\n1) is invertible.\tA\n2) has only the trivial solution.\t\tAx 0\n3) The reduced row-echelon form of is .\tA I\n4) can be expressed as a product of\nelementary matrices.\nA\n1\nSo what if we\nknow is invertible?\nHow can we find ?\nA\nA\nThe proof of the\nprevious theorem\nactually tells us how...\n1 2\nRecall that for any matrix , there exists elementary\nmatrices , ,..., such thatk\nA\nE E E\n1 1...k kE E E A\nis the reduced row-echelon form of .\tA\nIf is invertible, we know that\tA\n1 1...k k n\t \tE E E A I\n1 \t1By the '50%' remark in Lecture 05, since ( \t... \t)\nand \tare both square matrices of the same size,\nwe can conclude that\nk \tkE E \tE\nA\n1 1...k k n\t \tE E E A I\n1\n1 1( ... )k k\n\n \tE E E A\n \n \n \n \n \n2\nIf is a square matrix of order , consider the\nfollowing matrix:\nn\nn n\t\nA\nAnI\n1 1 2\tWhat if we premultiply ( ... ) to this\nmatrix?\nk k n n \tE E E\n \n \n \n \n \nAnI\n1\n1 1( ... )k k\n\n \tE E E A\n1 1( ... )k kE E E\t \tnA I\n \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n1 1...k k n\t \tE E E A I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A\n1 1( ... )k kE E E\t \tnA I\n \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A\nThis provides us with a way to find the inverse\nof an invertible matrix .\tA\nWhat happens if the matrix is not in\nQuestion:\nvertible?\tA\n1 1( ... )k kE E E\t \tnA I\n \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A\nWhat happens if the matrix is not in\nQuestion:\nvertible?\tA\nIf \tis singular, then its reduced row-echelon form\nwill not be the identity\nAnsw\nmat\ne :\n.\nr\nrix\nA\n \t1 1...k k R E E E\nwhen is singular\tA\nDetermine if the following matrix is invertible\nand if so, find its inverse.\n2 1 0\n1 2 0\n3 1 1\n \n  \n \n \n \nA\nDetermine if the following matrix is invertible\nand if so, find its inverse.\n1 1 1 1\n1 2 6 3\n1 2 6 4\n1 1 1 0\n \n \n    \t \n \n \nA\n1 1 1 1 1 0 0 0\n1 2 6 3 0 1 0 0\n1 2 6 4 0 0 1 0\n1 1 1 0 0 0 0 1\n \n \n \n  \t \n \n \n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 3 7 5 1 0 1 0\n0 0 0 1 1 0 0 1\n \n \n \n   \t \n   \n2 1R R\t\n3 1R R\t\n4 1R R\t\n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 3 7 5 1 0 1 0\n0 0 0 1 1 0 0 1\n \n \n \n   \t \n   \n3 2R R\t\n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 1 1 0 0 1\n \n \n \n\t \n   \nrow-echelon form\nhas only 3 leading\nentries\n4 3R R\t\n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 1 1 0 0 1\n \n \n \n\t \n   \n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 0 1 1 1 1\n \n \n \n\t \n    \n4\nThe reduced row-echelon form of can never\nbe , so is singular.\nA\nI A\n1\n0\tIf , then is invertible\nand .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nad bc c d\n\n \t\n\n \n \n    \n \n \n  \n \nA\nA\nWe have already seen (from Lecture 5) that:\nWe will now show:\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\n0 0\tCase 1: If , and .\ta c\t \n0\n0\na b b\nc d d\n   \n    \n   \nA2This matrix will not have as\nits reduced row-echelon form\nand so is not invertible.\nI\nSo we do not need to consider this case, since the\nhypothesis \"If is invertible\" is not satisfied.\tA\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\na b\nc d\n \n  \n \nA2 1\nc\naR R\t\n0 0 0\tCase 2: or . First suppose .\ta c a\t  \n0 cb\na\na b\nd\n \n  0 ad bc\na\na b\n\n \n  \n \n0 0\nSo if is invertible, we must have two leading entries\nand thus (that is, ).ad bc\na ad bc   \nA\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\n0 b\nc d\n \n  \n \nA2 1R R\t\n0\nSo if is invertible, we must have two leading entries\nand thus .\tb \nA\n0\tthis impl\tFor this ca ies\tse .\t, ad bc\t \n0 0 0 0\tCase 2: or . Now suppose , .\ta c a c\t   \n0\nc d\nb\n \n \n \n1\n0\tIf , then is invertible\nand .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nad bc c d\n\n \t\n\n \n \n    \n \n \n  \n \nA\nA\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\n0\tis invertible if and only if .\na b ad bc\nc d\n \n   \n \nA\nLet and be square matrices of the same size.\nIf , then\t\nA B\nAB I\n\tBA I1\t\n\tA B1\t\n\tB A\nProof:\nConsider the homogeneous linear system \tBx 0.\nIf we can show\nhas only the trivial\nsolution, then is\nStrategy\ninvertible.\n:\n\tBx\nB\n0\nIf , then\t\tAB I\n\tBA I1\t\n\tA B1\t\n\tB A\nProof:\nConsider the homogeneous linear system \tBx 0.\nIf we can show\nhas only the trivial\nsolution, then is\nStrategy\ninvertible.\n:\n\tBx\nB\n0\nLet be a solution to \tu Bx 0.\n\tBu 0\n \tABu A0\n \tIu 0\t \tu 0\n1\nSo has only the trivial solution and\nthus is invertible (that is, exists).\n \tBx u\nB B\n0 0\nFinally,BA1\t\n A A I\n1 1 1\n( )  \n \tA B B\n1\t\n \tA B\nIf , then\t\tAB I\n\tBA I1\t\n\tA B1\t\n\tB A\nProof:\n1\nSo has only the trivial solution and\nthus is invertible (that is, exists).\n \tBx u\nB B\n0 0\n\tAB I1 1\t \n \tABB IB1\t\n \tAI B\n1\nSince , is invertible and\n\tA B A\nIf is a square matrix such that\tA\n2 6 8 ,\t  \tA A I 0\n2 6 8\t  \tA A I 0\n6 8\t( )\t   \tA A I I\nprove that is invertible.\tA\n2 6 8\t   \tA A I\n6 8\t( )\t   \tA A Isomething\nwrong??\n1\n8 6\t[ ( )]\t   \tA A I I1 1\n8 6\t[ ( )]   \tA A I\nIf and are both square matrices of the same\nsize and is singular, then\nA B\nB\nand are both singular.\tAB BA\nNote that 'reversal' of role of \tand\ti \tj\n: \tmatrix\n: \telementary matrixi\np \tm\nm \tm\n\n\nA\nE\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\t1 :matrix resulting from multiplying\ncolumn \tof \tby\ti \tc\nAE\nA\n2 :matrix resulting from interchanging\ncolumns \tand \tof\ti \tj\nAE\nA\n3 :matrix resulting from adding \ttimes of\ncolumn \tof \tto column\nk\nj \ti\nAE\nA\n1 \t4 \t1 \t2\n0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n1 \t3\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0 2\n0 \t0 \t2 \t0\n0 \t0 \t0 \t1\n( \t)\tR\n \t\n \t\n \t  \t\n \t\n \t\nE1\n1 \t4 \t2 \t2\n0 \t3 \t4 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nAE\n2 times column 3\n1 \t4 \t1 \t2\n0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n2 \t1 \t4\n0 \t0 \t0 \t1\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n1 \t0 \t0 \t0\n( \t)\tR \tR\n \t\n \t\n \t \t\n \t\n \t\n \t\nE2\n2 \t4 \t1 \t1\n3 \t3 \t2 \t0\n0 \t1 \t0 \t1\n\t \t\n \t \t\n \t\n \t\n \t\nAE\ninterchange\ncolumns 1 and 4\n1 \t4 \t1 \t2\n0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n3 \t2 \t3\n1 \t0 \t0 \t0\n0 \t1 \t2 \t0 2\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n( \t)\tR \tR\n \t\n \t\n \t \t\n \t\n \t\n \t\nE3\n1 \t4 \t9 \t2\n0 \t3 \t8 \t3\n1 \t1 \t2 \t0\n\t \t\n \t \t\n \t\n \t \t\nAE\ncolumn 3 minus 2\ntimes column 2\n0\nRecall that we have have shown\nis invertible if and only if .\na b ad bc\nc d\n \n   \n \nA\nThe quantity is known as the determinant\nof .\nad bc\na b\nc d\n\n \n \n \nLet ( ) be a square matrix of order .ija n\t\tA\n1\tLet be a square matrix of order obtained\nby removing the th row and th column of .\nij n\ni j\n\tM\nA\n2 1 3 0\n4 1 3 1\n1 4 3 1\n0 0 1 1\n \n \n  \t \n  \nA11\n1 3 1\n4 3 1\n0 1 1\n\t \n  \n \n  \nM\n32\n2 3 0\n4 3 1\n0 1 1\n \n   \n  \nM\nLet ( ) be a square matrix of order .ija n\t\tA\n1\tLet be a square matrix of order obtained\nby removing the th row and th column of .\nij n\ni j\n\tM\nA\nThe determinant of is defined as\tA\n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  M\n1\t( ) det( ) is called the ( , )-cofactor of .i j\nij ijA i j\n  M A\n1 1\nTo know the determinant of a matrix, we need\nto know the determinants of ( ) ( ) matrices...\nn n\nn n\n\n  \n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  Mwow! this is\ncomplicated!\n1 1\n2 2\nTo know the determinant of a ( ) ( ) matrix,\nwe need to know the determinants of\n( ) ( ) matrices...\nn n\nn n\n  \n  \nThe determinant of is defined as\tA\n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  M\n1\t( ) det( ) is called the ( , )-cofactor of .i j\nij ijA i j\n  M A\nThis is known as cofactor expansion.\nThe determinant of ( ) is usually written asija\t\tA\na11 a12 ... a1n\na21 a22 ... a2n\nan1 an2 ... ann\na b\nc d\n \n  \n \nA\n 11 d\t\tM\t 1 1\n11 1\t( ) det\tA d d\n  \n 12 c\t\tM\t 1 2\n12 1\t( ) det\tA c c\n   \n11 12det( ) aA bA\t \tA\tad bc\t \nWe have seen\nthis expression\nbefore!\n0\nIf , then is invertible if and only if\ndet( ) .\na b\nc d\n \n  \n \n\nA A\nA\n1 3 4\n2 4 1\n4 2 9\nEvaluate .\n \n \nBy cofactor expansion,\n1 2 2 1\n3 1 4 9\n( ) ( ) \n    \n1 3 2 4\n4 1 4 2\n( ) ( ) \n    \n1 1\n1 3 4 4 1\n2 4 1 1 1 2 9\n4 2 9\n( ) ( ) \n \n    \n \nBy cofactor expansion,\n1 1\n1 3 4 4 1\n2 4 1 1 1 2 9\n4 2 9\n( ) ( ) \n \n    \n \n1 2 2 1\n3 1 4 9\n( ) ( ) \n    \n1 3 2 4\n4 1 4 2\n( ) ( ) \n    \n4 9 1 2\t( )\t    \t3 2 9 1 4\t( )\t     \n4 2 2 4 4\t( )\t   \n0.\t\nWhat is the determinant of the following matrix?\na b c\nd e f\ng h i\n \n   \n \n \nA\nAnswer:a b c a b\nd e f d e\ng h i g h\ndet( ) aei bfg cdh\t  \tA\tceg afh bdi\t  \nVerify this expression using cofactor expansion!\nWhat is the determinant of the following matrix?\na b c d\ne f g h\ni j k l\nm n o p\n \n \n   \n \n \nA\nAnswer:\nNo 'special formula'! Use cofactor expansion!\n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\nThis is actually performing cofactor expansion\nalong the first row of .\tA\nA =\na11 a12 ... a1n\na21 a22 ... a2n\nan1 an2 ... ann\næ\nè\nç\nç\nç\nç\nç\nö\nø\n÷\n÷\n÷\n÷\n÷\n11 12 1\n21 22 2\n1 2\n...\n...\n...\nn\nn\nn n nn\na a a\na a a\na a a\n \n \n   \n \n \nA\nIt turns out that we can compute det( ) by\nperforming cofactor expansion along any row\nor any column of .\nA\nA\n1 1 2 2det( ) ...i i i i in ina A a A a A\t   \tA\ncofactor expansion\nalong th row\ti\n1 1 2 2 ...j j j j nj nja A a A a A\t   \talong th column\tj\n1 3 4\n2 4 1 0\n4 2 9\nCheck that by cofactor expansion\nalong second row.\n \n\n \n2 3 1 3\n1 1 4 2\n( )  \n   \n2 1 2 2\n1 3 4 3 4 1 4\n2 4 1 2 1 4 1\n2 9 4 9\n4 2 9\n( ) ( ) \n    \n     \n  \n \n2 3 1 3\n1 1 4 2\n( )  \n   \n2 1 2 2\n1 3 4 3 4 1 4\n2 4 1 2 1 4 1\n2 9 4 9\n4 2 9\n( ) ( ) \n    \n     \n  \n \n2 27 8 4 9 16 1 2 12\t( ) ( ) ( )\t        \n38 28 10\t  \n0\t\nTry cofactor expansion along another row or\ncolumn!\nIf is a triangular matrix, then det( ) is the\nproduct of its diagonal entries.\nA A\n1\n1\n3\n0\n3\n \n \n \n  \n \n \n \n \nA\n00\tdet( ) \tA\n1\n2\n2\n3\n1\n4\n \n \n \n  \n \n \n \n \nA0\n1\n22 3 1 4 12\tdet( )       \tA\nProof is omitted.\nIf is a square matrix, then\tA\ndet( ) det( ).T\n\tA A\nProof is omitted.\n1 3 4\n2 4 1 0\n4 2 9\n \n\n \n1 2 4\n3 4 2 0\n4 1 9\n \n\n \n0\nThe determinant of a square matrix with two\nidentical rows is .\n0\nThe determinant of a square matrix with two\nidentical columns is .\nProof is omitted.\n1 0 1\n1 0 1 0\n1 1 1\n\n1 0 1 1\n2 3 2 3 0\n4 1 4 3\n1 2 1 0\n\n \n \nThe three theorems we have stated without\nproofs can all be proven using a technique known\nas Mathematical Induction.\nIf you are interested, you are encouraged to figure\nout the proofs.\nLecture 07:\nDeterminants (till end of Chapter 2)",
+  "sections": [
+    {
+      "heading": "Definition of invertible matrices.",
+      "level": 1,
+      "text": "Uniqueness of inverse.\nSome laws involving inverses.\nRepresenting an elementary row operation by a matrix.\nDefinition of an elementary matrix.\nElementary matrices are invertible and their\ninverses are also elementary matrices."
+    },
+    {
+      "heading": "Elementary matrices (cont’d)",
+      "level": 2,
+      "text": "Determinants"
+    },
+    {
+      "heading": "Linear system X",
+      "level": 2,
+      "text": "Augmented matrix\nof linear system X\nLinear system Y\nAugmented matrix\nof linear system Y\nrow\nequivalent\nsame\nsolution set\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nelementary row\noperations \t\tA \tb\t \t\tC \td"
+    },
+    {
+      "heading": "one elementary",
+      "level": 2,
+      "text": "row operation\nLinear system X\nAugmented matrix\nof linear system X\nLinear system Y\nAugmented matrix\nof linear system Y\nrow\nequivalent\nsame\nsolution set\n \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td"
+    },
+    {
+      "heading": "one elementary",
+      "level": 2,
+      "text": "row operation \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nThere exists an elementary matrix \tsuch that\tE\n \t \t \t\t\tC \td \tE \tA \tb\nand\n\n\nC \tEA\nd \tEb\n\tAu \tb\t \t\tEAu \tEb\t \t\tCu \td\nis a solution to\t \t\tu \tCx \td\nLet \tbe a solution to \t\tu \tAx \tb\n\n \t \t \t\t \t\tC \td \tEA \tEb"
+    },
+    {
+      "heading": "one elementary",
+      "level": 2,
+      "text": "row operation \t\tA \tb\t \t\tC \td\nWe want to show that \tand \thave the same\nsolution set.\n \t\tAx \tb \tCx \td\nThere exists an elementary matrix \tsuch that\tE\n \t \t \t\t\tC \td \tE \tA \tb\t \t \t \t\t \t\tC \td \tEA \tEb\nand\n\n\nC \tEA\nd \tEbLet \tbe a solution to \t\tv \tCx \td\n\tCv \td1 \t1\t \t\n \t\tE \tCv \tE \td\t \t\tAv \tb\nis a solution to\t \t\tv \tAx \tb\n\n1\n1\nand\n\n\n\n\nE \tC \tA\nE \td \tb"
+    },
+    {
+      "heading": "If is a square matrix, then the following statements",
+      "level": 2,
+      "text": "are equivalent.\nA\n(If one of them is true, so are the rest. If one of\nthem is false, so are the rest.)\n1) is invertible.\tA\n2) has only the trivial solution.\t\tAx 0\n3) The reduced row-echelon form of is .\tA I\n4) can be expressed as a product of\nelementary matrices.\nA"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "So what if we\nknow is invertible?\nHow can we find ?\nA\nA\nThe proof of the\nprevious theorem\nactually tells us how..."
+    },
+    {
+      "heading": "1 2",
+      "level": 2,
+      "text": "Recall that for any matrix , there exists elementary\nmatrices , ,..., such thatk\nA\nE E E\n1 1...k kE E E A\nis the reduced row-echelon form of .\tA\nIf is invertible, we know that\tA\n1 1...k k n\t \tE E E A I"
+    },
+    {
+      "heading": "1 \t1By the '50%' remark in Lecture 05, since ( \t... \t)",
+      "level": 2,
+      "text": "and \tare both square matrices of the same size,\nwe can conclude that\nk \tkE E \tE\nA\n1 1...k k n\t \tE E E A I\n1\n1 1( ... )k k\n\n \tE E E A\n \n \n \n \n \n2\nIf is a square matrix of order , consider the\nfollowing matrix:\nn\nn n\t\nA\nAnI"
+    },
+    {
+      "heading": "1 1 2\tWhat if we premultiply ( ... ) to this",
+      "level": 2,
+      "text": "matrix?\nk k n n \tE E E\n \n \n \n \n \nAnI\n1\n1 1( ... )k k\n\n \tE E E A\n1 1( ... )k kE E E\t \tnA I\n \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n1 1...k k n\t \tE E E A I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A"
+    },
+    {
+      "heading": "1 1( ... )k kE E E\t \tnA I",
+      "level": 2,
+      "text": " \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A\nThis provides us with a way to find the inverse\nof an invertible matrix .\tA\nWhat happens if the matrix is not in\nQuestion:\nvertible?\tA"
+    },
+    {
+      "heading": "1 1( ... )k kE E E\t \tnA I",
+      "level": 2,
+      "text": " \t1 1 1 1... ...k k k k n\t  E E E A E E E I\n \t1 1...n k k I E E E\n \t1\nn\n\n I A\nWhat happens if the matrix is not in\nQuestion:\nvertible?\tA\nIf \tis singular, then its reduced row-echelon form\nwill not be the identity\nAnsw\nmat\ne :\n.\nr\nrix\nA\n \t1 1...k k R E E E\nwhen is singular\tA"
+    },
+    {
+      "heading": "Determine if the following matrix is invertible",
+      "level": 2,
+      "text": "and if so, find its inverse.\n2 1 0\n1 2 0\n3 1 1\n \n  \n \n \n \nA"
+    },
+    {
+      "heading": "Determine if the following matrix is invertible",
+      "level": 2,
+      "text": "and if so, find its inverse.\n1 1 1 1\n1 2 6 3\n1 2 6 4\n1 1 1 0\n \n \n    \t \n \n \nA"
+    },
+    {
+      "heading": "1 1 1 1 1 0 0 0",
+      "level": 2,
+      "text": "1 2 6 3 0 1 0 0\n1 2 6 4 0 0 1 0\n1 1 1 0 0 0 0 1\n \n \n \n  \t \n \n \n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 3 7 5 1 0 1 0\n0 0 0 1 1 0 0 1\n \n \n \n   \t \n   \n2 1R R\t\n3 1R R\t\n4 1R R\t"
+    },
+    {
+      "heading": "1 1 1 1 1 0 0 0",
+      "level": 2,
+      "text": "0 3 7 4 1 1 0 0\n0 3 7 5 1 0 1 0\n0 0 0 1 1 0 0 1\n \n \n \n   \t \n   \n3 2R R\t\n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 1 1 0 0 1\n \n \n \n\t \n   "
+    },
+    {
+      "heading": "row-echelon form",
+      "level": 2,
+      "text": "has only 3 leading\nentries\n4 3R R\t\n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 1 1 0 0 1\n \n \n \n\t \n   \n1 1 1 1 1 0 0 0\n0 3 7 4 1 1 0 0\n0 0 0 1 0 1 1 0\n0 0 0 0 1 1 1 1\n \n \n \n\t \n    \n4\nThe reduced row-echelon form of can never\nbe , so is singular.\nA\nI A"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0\tIf , then is invertible\nand .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nad bc c d\n\n \t\n\n \n \n    \n \n \n  \n \nA\nA\nWe have already seen (from Lecture 5) that:\nWe will now show:\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA"
+    },
+    {
+      "heading": "0\tIf is invertible, then .",
+      "level": 2,
+      "text": "a b ad bc\nc d\n \n   \n \nA\n0 0\tCase 1: If , and .\ta c\t \n0\n0\na b b\nc d d\n   \n    \n   \nA2This matrix will not have as\nits reduced row-echelon form\nand so is not invertible.\nI\nSo we do not need to consider this case, since the\nhypothesis \"If is invertible\" is not satisfied.\tA"
+    },
+    {
+      "heading": "0\tIf is invertible, then .",
+      "level": 2,
+      "text": "a b ad bc\nc d\n \n   \n \nA\na b\nc d\n \n  \n \nA2 1\nc\naR R\t\n0 0 0\tCase 2: or . First suppose .\ta c a\t  \n0 cb\na\na b\nd\n \n  0 ad bc\na\na b\n\n \n  \n \n0 0\nSo if is invertible, we must have two leading entries\nand thus (that is, ).ad bc\na ad bc   \nA"
+    },
+    {
+      "heading": "0\tIf is invertible, then .",
+      "level": 2,
+      "text": "a b ad bc\nc d\n \n   \n \nA\n0 b\nc d\n \n  \n \nA2 1R R\t\n0\nSo if is invertible, we must have two leading entries\nand thus .\tb \nA\n0\tthis impl\tFor this ca ies\tse .\t, ad bc\t \n0 0 0 0\tCase 2: or . Now suppose , .\ta c a c\t   \n0\nc d\nb\n \n \n "
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0\tIf , then is invertible\nand .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nad bc c d\n\n \t\n\n \n \n    \n \n \n  \n \nA\nA\n0\tIf is invertible, then .\na b ad bc\nc d\n \n   \n \nA\n0\tis invertible if and only if .\na b ad bc\nc d\n \n   \n \nA"
+    },
+    {
+      "heading": "Let and be square matrices of the same size.",
+      "level": 2,
+      "text": "If , then\t\nA B\nAB I\n\tBA I1\t\n\tA B1\t\n\tB A\nProof:\nConsider the homogeneous linear system \tBx 0.\nIf we can show\nhas only the trivial\nsolution, then is\nStrategy\ninvertible.\n:\n\tBx\nB\n0"
+    },
+    {
+      "heading": "If , then\t\tAB I",
+      "level": 2,
+      "text": "\tBA I1\t\n\tA B1\t\n\tB A\nProof:\nConsider the homogeneous linear system \tBx 0.\nIf we can show\nhas only the trivial\nsolution, then is\nStrategy\ninvertible.\n:\n\tBx\nB\n0\nLet be a solution to \tu Bx 0.\n\tBu 0\n \tABu A0\n \tIu 0\t \tu 0\n1\nSo has only the trivial solution and\nthus is invertible (that is, exists).\n \tBx u\nB B\n0 0"
+    },
+    {
+      "heading": "Finally,BA1\t",
+      "level": 2,
+      "text": " A A I\n1 1 1\n( )  \n \tA B B\n1\t\n \tA B\nIf , then\t\tAB I\n\tBA I1\t\n\tA B1\t\n\tB A\nProof:\n1\nSo has only the trivial solution and\nthus is invertible (that is, exists).\n \tBx u\nB B\n0 0\n\tAB I1 1\t \n \tABB IB1\t\n \tAI B\n1\nSince , is invertible and\n\tA B A"
+    },
+    {
+      "heading": "If is a square matrix such that\tA",
+      "level": 2,
+      "text": "2 6 8 ,\t  \tA A I 0\n2 6 8\t  \tA A I 0\n6 8\t( )\t   \tA A I I\nprove that is invertible.\tA\n2 6 8\t   \tA A I\n6 8\t( )\t   \tA A Isomething\nwrong??\n1\n8 6\t[ ( )]\t   \tA A I I1 1\n8 6\t[ ( )]   \tA A I"
+    },
+    {
+      "heading": "If and are both square matrices of the same",
+      "level": 2,
+      "text": "size and is singular, then\nA B\nB\nand are both singular.\tAB BA"
+    },
+    {
+      "heading": "Note that 'reversal' of role of \tand\ti \tj",
+      "level": 2,
+      "text": ": \tmatrix\n: \telementary matrixi\np \tm\nm \tm\n\n\nA\nE\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\t1 :matrix resulting from multiplying\ncolumn \tof \tby\ti \tc\nAE\nA\n2 :matrix resulting from interchanging\ncolumns \tand \tof\ti \tj\nAE\nA\n3 :matrix resulting from adding \ttimes of\ncolumn \tof \tto column\nk\nj \ti\nAE\nA"
+    },
+    {
+      "heading": "1 \t4 \t1 \t2",
+      "level": 2,
+      "text": "0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n1 \t3\n1 \t0 \t0 \t0\n0 \t1 \t0 \t0 2\n0 \t0 \t2 \t0\n0 \t0 \t0 \t1\n( \t)\tR\n \t\n \t\n \t  \t\n \t\n \t\nE1\n1 \t4 \t2 \t2\n0 \t3 \t4 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nAE\n2 times column 3"
+    },
+    {
+      "heading": "1 \t4 \t1 \t2",
+      "level": 2,
+      "text": "0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n2 \t1 \t4\n0 \t0 \t0 \t1\n0 \t1 \t0 \t0\n0 \t0 \t1 \t0\n1 \t0 \t0 \t0\n( \t)\tR \tR\n \t\n \t\n \t \t\n \t\n \t\n \t\nE2\n2 \t4 \t1 \t1\n3 \t3 \t2 \t0\n0 \t1 \t0 \t1\n\t \t\n \t \t\n \t\n \t\n \t\nAE\ninterchange\ncolumns 1 and 4"
+    },
+    {
+      "heading": "1 \t4 \t1 \t2",
+      "level": 2,
+      "text": "0 \t3 \t2 \t3\n1 \t1 \t0 \t0\n\t \t\n \t \t\n \t\n \t\n \t\nA\n3 \t2 \t3\n1 \t0 \t0 \t0\n0 \t1 \t2 \t0 2\n0 \t0 \t1 \t0\n0 \t0 \t0 \t1\n( \t)\tR \tR\n \t\n \t\n \t \t\n \t\n \t\n \t\nE3\n1 \t4 \t9 \t2\n0 \t3 \t8 \t3\n1 \t1 \t2 \t0\n\t \t\n \t \t\n \t\n \t \t\nAE\ncolumn 3 minus 2\ntimes column 2"
+    },
+    {
+      "heading": "0",
+      "level": 2,
+      "text": "Recall that we have have shown\nis invertible if and only if .\na b ad bc\nc d\n \n   \n \nA\nThe quantity is known as the determinant\nof .\nad bc\na b\nc d\n\n \n \n "
+    },
+    {
+      "heading": "Let ( ) be a square matrix of order .ija n\t\tA",
+      "level": 2,
+      "text": "1\tLet be a square matrix of order obtained\nby removing the th row and th column of .\nij n\ni j\n\tM\nA\n2 1 3 0\n4 1 3 1\n1 4 3 1\n0 0 1 1\n \n \n  \t \n  \nA11\n1 3 1\n4 3 1\n0 1 1\n\t \n  \n \n  \nM\n32\n2 3 0\n4 3 1\n0 1 1\n \n   \n  \nM"
+    },
+    {
+      "heading": "Let ( ) be a square matrix of order .ija n\t\tA",
+      "level": 2,
+      "text": "1\tLet be a square matrix of order obtained\nby removing the th row and th column of .\nij n\ni j\n\tM\nA\nThe determinant of is defined as\tA\n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  M\n1\t( ) det( ) is called the ( , )-cofactor of .i j\nij ijA i j\n  M A"
+    },
+    {
+      "heading": "1 1",
+      "level": 2,
+      "text": "To know the determinant of a matrix, we need\nto know the determinants of ( ) ( ) matrices...\nn n\nn n\n\n  \n11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  Mwow! this is\ncomplicated!\n1 1\n2 2\nTo know the determinant of a ( ) ( ) matrix,\nwe need to know the determinants of\n( ) ( ) matrices...\nn n\nn n\n  \n  "
+    },
+    {
+      "heading": "The determinant of is defined as\tA",
+      "level": 2,
+      "text": "11\n11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\n1\twhere ( ) det( ).i j\nij ijA \n  M\n1\t( ) det( ) is called the ( , )-cofactor of .i j\nij ijA i j\n  M A\nThis is known as cofactor expansion."
+    },
+    {
+      "heading": "The determinant of ( ) is usually written asija\t\tA",
+      "level": 2,
+      "text": "a11 a12 ... a1n\na21 a22 ... a2n\nan1 an2 ... ann"
+    },
+    {
+      "heading": "a b",
+      "level": 2,
+      "text": "c d\n \n  \n \nA\n 11 d\t\tM\t 1 1\n11 1\t( ) det\tA d d\n  \n 12 c\t\tM\t 1 2\n12 1\t( ) det\tA c c\n   \n11 12det( ) aA bA\t \tA\tad bc\t \nWe have seen\nthis expression\nbefore!\n0\nIf , then is invertible if and only if\ndet( ) .\na b\nc d\n \n  \n \n\nA A\nA"
+    },
+    {
+      "heading": "1 3 4",
+      "level": 2,
+      "text": "2 4 1\n4 2 9\nEvaluate .\n \n \nBy cofactor expansion,\n1 2 2 1\n3 1 4 9\n( ) ( ) \n    \n1 3 2 4\n4 1 4 2\n( ) ( ) \n    \n1 1\n1 3 4 4 1\n2 4 1 1 1 2 9\n4 2 9\n( ) ( ) \n \n    \n "
+    },
+    {
+      "heading": "By cofactor expansion,",
+      "level": 2,
+      "text": "1 1\n1 3 4 4 1\n2 4 1 1 1 2 9\n4 2 9\n( ) ( ) \n \n    \n \n1 2 2 1\n3 1 4 9\n( ) ( ) \n    \n1 3 2 4\n4 1 4 2\n( ) ( ) \n    \n4 9 1 2\t( )\t    \t3 2 9 1 4\t( )\t     \n4 2 2 4 4\t( )\t   \n0.\t"
+    },
+    {
+      "heading": "What is the determinant of the following matrix?",
+      "level": 2,
+      "text": "a b c\nd e f\ng h i\n \n   \n \n \nA\nAnswer:a b c a b\nd e f d e\ng h i g h\ndet( ) aei bfg cdh\t  \tA\tceg afh bdi\t  \nVerify this expression using cofactor expansion!"
+    },
+    {
+      "heading": "What is the determinant of the following matrix?",
+      "level": 2,
+      "text": "a b c d\ne f g h\ni j k l\nm n o p\n \n \n   \n \n \nA\nAnswer:\nNo 'special formula'! Use cofactor expansion!"
+    },
+    {
+      "heading": "11",
+      "level": 2,
+      "text": "11 11 12 12 1 1\n1\n2\nif\ndet( ) ... ifn n\na n\na A a A a A n\n\t\n     \nA\nThis is actually performing cofactor expansion\nalong the first row of .\tA\nA =\na11 a12 ... a1n\na21 a22 ... a2n\nan1 an2 ... ann\næ\nè\nç\nç\nç\nç\nç\nö\nø\n÷\n÷\n÷\n÷\n÷"
+    },
+    {
+      "heading": "11 12 1",
+      "level": 2,
+      "text": "21 22 2\n1 2\n...\n...\n...\nn\nn\nn n nn\na a a\na a a\na a a\n \n \n   \n \n \nA\nIt turns out that we can compute det( ) by\nperforming cofactor expansion along any row\nor any column of .\nA\nA\n1 1 2 2det( ) ...i i i i in ina A a A a A\t   \tA\ncofactor expansion\nalong th row\ti\n1 1 2 2 ...j j j j nj nja A a A a A\t   \talong th column\tj"
+    },
+    {
+      "heading": "1 3 4",
+      "level": 2,
+      "text": "2 4 1 0\n4 2 9\nCheck that by cofactor expansion\nalong second row.\n \n\n \n2 3 1 3\n1 1 4 2\n( )  \n   \n2 1 2 2\n1 3 4 3 4 1 4\n2 4 1 2 1 4 1\n2 9 4 9\n4 2 9\n( ) ( ) \n    \n     \n  \n "
+    },
+    {
+      "heading": "2 3 1 3",
+      "level": 2,
+      "text": "1 1 4 2\n( )  \n   \n2 1 2 2\n1 3 4 3 4 1 4\n2 4 1 2 1 4 1\n2 9 4 9\n4 2 9\n( ) ( ) \n    \n     \n  \n \n2 27 8 4 9 16 1 2 12\t( ) ( ) ( )\t        \n38 28 10\t  \n0\t\nTry cofactor expansion along another row or\ncolumn!"
+    },
+    {
+      "heading": "If is a triangular matrix, then det( ) is the",
+      "level": 2,
+      "text": "product of its diagonal entries.\nA A\n1\n1\n3\n0\n3\n \n \n \n  \n \n \n \n \nA\n00\tdet( ) \tA\n1\n2\n2\n3\n1\n4\n \n \n \n  \n \n \n \n \nA0\n1\n22 3 1 4 12\tdet( )       \tA\nProof is omitted."
+    },
+    {
+      "heading": "If is a square matrix, then\tA",
+      "level": 2,
+      "text": "det( ) det( ).T\n\tA A\nProof is omitted.\n1 3 4\n2 4 1 0\n4 2 9\n \n\n \n1 2 4\n3 4 2 0\n4 1 9\n \n\n "
+    },
+    {
+      "heading": "0",
+      "level": 2,
+      "text": "The determinant of a square matrix with two\nidentical rows is .\n0\nThe determinant of a square matrix with two\nidentical columns is .\nProof is omitted.\n1 0 1\n1 0 1 0\n1 1 1\n\n1 0 1 1\n2 3 2 3 0\n4 1 4 3\n1 2 1 0\n\n \n "
+    },
+    {
+      "heading": "The three theorems we have stated without",
+      "level": 2,
+      "text": "proofs can all be proven using a technique known\nas Mathematical Induction.\nIf you are interested, you are encouraged to figure\nout the proofs."
+    },
+    {
+      "heading": "Lecture 07:",
+      "level": 2,
+      "text": "Determinants (till end of Chapter 2)"
+    }
+  ]
+}

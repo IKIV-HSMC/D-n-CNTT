@@ -1,0 +1,271 @@
+{
+  "original_filename": "Lecture 05.pdf",
+  "extracted_text": "Definition of matrices, entries, size of a matrix.\nSpecial types of matrices.\nMatrix operations and some laws.\nMatrix multiplication and differences with real\nnumber multiplication.\nDifferent ways to represent matrix multiplication.\nRepresenting a linear system by a matrix equation.\nMatrix transpose and some laws.\nInverses of square matrices\nElementary matrices\nIf is a real number, it is easy to solve\tx\n2 5,\tx \n1 1\n2 2\n2\n2 1\nsince corresponding to ' ', there is another\nnumber ' ' such that , allowing us to have\t \n1 1\n2 22 5\tx\t  \n5\n21 x\t  \n5\n2x\t \nIf is a matrix, how can we solve\tX\n2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n?\n \t   \n    \n   \n   \n   \nX\nIs there a matrix such that\n \n \n \n \n \n2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n \t     \n      \n     \n     \n     \nX\n2 1 1\n3 5 0\n0 1 4\n\t    \n      \n    \n    \n    \nX\n2 1 1\n3 5 0\n0 1 4\n\t  \n    \n  \n  \n  \nX\n(identity matrix)\t I\n2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n \t     \n      \n     \n     \n     \nX\nLet be a square matrix of order .\tn\tA\nis said to be an invertible matrix if there exists\nanother square matrix of the same order such\nthat\nA\nB\nn \tAB BA I\nIf such a exists, it is called an inverse of .\tB A\nis said to be singular if it has no inverse.\tA\nThe definition of an invertible matrix is an\nexistential one.\nCould there be more than one such ?\tB\n\"I tried very hard to find but I could not...\"\tB\n...does not mean does not exists!\tB\n2 0 1 2 1 1\n2 1 2 6 3 2\n3 1 0 5 2 2\nIs the inverse of ?\n \t   \n      \n   \n        \n2 0 1 2 1 1\n2 1 2 6 3 2\n3 1 0 5 2 2\nCheck\n \t    \n        \n    \n          \n2 1 1 2 0 1\n6 3 2 2 1 2\n5 2 2 3 1 0\nCheck\n \t    \n        \n    \n          \n2 1 1 3 1 1\n6 3 2 0 0 2\n5 2 2 1 0 1\nFind if .\n\t   \n      \n   \n        \nX X\n2 0 1 2 1 1 2 0 1 3 1 1\n2 1 2 6 3 2 2 1 2 0 0 2\n3 1 0 5 2 2 3 1 0 1 0 1\n    \t     \n          \n     \n            \nX\n7 2 3\n8 2 2\n9 3 5\n \t \n  \n \n  \nIX\n7 2 3\n8 2 2\n9 3 5\n.\n \t \n   \n \n  \nX\n(By definition\nof inverse)\n1 0\n1 0\nShow that is singular.\n \n \n \n1 0\n1 0\n2\nSuppose is invertible, then there must be a\nsquare matrix of order , say such that\na b\nc d\n \n \n \n \n \n \n1 0 1 0\n1 0 0 1\na b\nc d\n    \n    \n    \n1 0 1 0\n1 0 0 1\na b\nc d\n    \n    \n    \n1 0\n1 0\nThus it is impossible for to have an inverse,\nand so the matrix has to be singular.\n \n \n \n2 2\ta contradiction, by looking at the ( , )-entry\t\n0 1 0\n0 0 1\na b\nc d\n\t   \n       \n2 1 1\n6 3 2\n5 2 2\n2 0 1\n2 1 2\n3 1 0\nWe knew is invertible because\nwe were 'given' to 'test' whether\nand are both equal to .\n \n    \n \n    \n \t \n  \n \n \n \nA\nB\nAB BA I\n1 0\n1 0\nWe had to use contradiction to show that has\nno inverse. What if the matrix was bigger and more\ncomplicated?\n \n \n \nIs there a more\neffective way to\ncheck whether a\nmatrix is invertible?\nYes...but before that...\nIf is an invertible square matrix and\tA\n1 2\tAB AB\n1 2then .\t\tB B\nIf is an invertible square matrix and\tA\n1 2\tC A C A\n1 2then .\t\tC C\nIf is not an invertible matrix, the cancellation\nlaw may not hold:\nA\n1 0\n1 0 (known to be singular by previous example)\n \n  \n \nA\n1\n2 0\n0 1\n \n  \n \nB\n2\n2 0\n1 3\n \n  \n \nB\n1 2 1 2Check that , but .\t \tAB AB B B\nIf and are inverses of a square matrix , then\tB C A\n.\t\tB C\nInverses are unique!\nThat is, if is an invertible square matrix, then\nit has one and only one inverse.\nA\n1\nSince inverses are unique, we will write as the\ninverse of if is invertible.\n\nA\nA A\nIt turns out that to check whether a given square\nmatrix is the inverse of , we only need to check\neither\nB A\n\tAB I\n2 4\tThe reason will be explained in Section . .\nOR\t\tBA I\n1\n0\tLet . Show that if , then\nis invertible and .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b ad bc\nc d\n\n \t\n\n \n \n   \n \n \n  \n \nA\nA A\nSolution:\nCheck\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nc d\n\n \n\n \n \t  \t \n  \n1\n0\tLet . Show that if , then\nis invertible and .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b ad bc\nc d\n\n \t\n\n \n \n   \n \n \n  \n \nA\nA A\nSolution:\nCheck\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nc d\n\n \n\n \n  \n  \n \t \n1\n1) Let \tbe an invertible matrix (so \texists) and\na non zero scalar. Then \tis invertible and\tc \tc\n\nA \tA\nA\n1 \t1\t1\n( \t) \t.cc  \t\n\tA \tA\n1\n2) Let be an invertible matrix (so exists) then\nis invertible andT\n\nA A\nA\n1 1\n( ) ( ) .T T\t \n\tA A\nInverse of transpose\nequal transpose of\ninverse\n1\n1\n3) Let be an invertible matrix (so exists) then\nis invertible and\n\n\nA A\nA\n1 1\n( ) .  \tA A\n1 1\n4) Let and be two invertible matrices of the same\nsize (so and exists) then is invertible and \nA B\nA B AB\n1 1 1\n( ) .  \n\tAB B A\n*\nInverse of product\nequal product of\ninverse\n1 1\n4) Let and be two invertible matrices of the same\nsize (so and exists) then is invertible and \nA B\nA B AB\n1 1 1\n( ) .  \n\tAB B A\n1 2\n1 2\nAs an extension to the above, if , ,..., are\ninvertible matrices of the same size, then ( ... )\nis invertible and\nk\nk\nA A A\nA A A\n1 1 1 1\n1 2 2 1( ... ) ... .k k\n   \n\tA A A A A A\nLet be a square matrix and be a non negative\ninteger, then\nn\tA\n0\n1\ntimes\nif ;\n... if .\nn\nn\nn\nn\n\t\n  \n\nI\nA AA A\nIf is an invertible square matrix, then is\ninvertible and we define\nn\nA A\n1 1 1 1\ntimes\n( ) ...n n\nn\n    \n \tA A A A A1\nand ( \t)n \tn\t \t\n\tA \tA\n1 2\n1 3\n \n  \n \nA1 3 2\n1 1\n \t \n   \nA\n2 1 2 1 2\n1 3 1 3\n    \n     \n    \nA\n2 3 2 3 2\n1 1 1 1\n  \t    \n          \nA\nLet be a matrix.\tm n\t\tB\n \t1 1 0 0 0\t...\t\ta\n \n \n   \n \n \nB\n \t1 1 0 0 0\t...\n \n \n   \n \n \na B\n \t\t...\t\nfirst row of\t B\nLet be a matrix.\tm n\t\tB\n \t2 0 1 0 0\t...\t\ta\n \n \n   \n \n \nB\n \t2 0 1 0 0\t...\n \n \n   \n \n \na B\n \t\t...\t\nsecond row of\t B\nLet be a matrix.\tm n\t\tB\n \t\t0 0\t... ...i c\t\ta\n \n \n   \n \n \nB\n \t\t0 0\t... ...i c\n \n \n   \n \n \na B\n \t\t...\tc\t\ntimes th row of\tc i\t B\nth position\ti\nth row\ti\nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nrows\nm\ncolumns\tm\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\t\nNote that the product can be obtained by\nperforming elementary row operation to .icR B\n \n \n \n \n \n \nB\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\tBicR\nNote that the matrix can also be obtained by\nperforming on .i mcR I\n \n \n \n \n \n \nB\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\tBicR\nmIicR\nIt seems like we can 'represent' performing the\nelementary row operation on by\npre-multiplying a suitable matrix to .\nicR B\nB\nBicRC\nmIicRE\nThen we have .\t\tEB C\nLet's investigate the other two types of elementary\nrow operations!\n1\n0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n \nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\ti\nth row\tj\nth col\ti\tth col\tj\n \n \n   \n \n \nrow of\tj B\nrow of\ti B\nNote that the product can be obtained by\nperforming elementary row operation to .i jR R\t B\n \n \n \n \n \n \nB\n \n \n   \n \n \nBi jR R\t\n1\n0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n row of\tj B\nrow of\ti B\n1\n0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nB\n \n \n   \n \n \nBi jR R\trow of\tj B\nrow of\ti B\nNote that the matrix can also be obtained by\nperforming on .i j mR R\t ImI\ni jR R\t\nIt seems like we can 'represent' performing the\nelementary row operation on by\npre-multiplying a suitable matrix to .\ni jR R\t B\nB\nBi jR R\tC\nmI\tE\nThen we have .\t\tEB C\nLet's investigate the last type of elementary\nrow operation!\ni jR R\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\ti\nth row\tj\nth col\ti\tth col\tj\n \n \n   \n \n \nth row\tj\n(row \tof \t) \t(row \tof \t)\tj \tk \ti\t\tB \tB( \t)\ti \tj\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\tj\nth row\ti\nth col\tj\tth col\ti\n \n \n   \n \n \nth row\tj\n(row \tof \t) \t(row \tof \t)\tj \tk \ti\t\tB \tB\n( \t)\ti \tj\t\nNote that the product can be obtained by\nperforming elementary row operation \tto \t.j \tiR \tkR\t \tB\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \tth row\tj( )\ti j\t\nNote that the product can be obtained by\nperforming elementary row operation \tto \t.j \tiR \tkR\t \tB\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nth row\tj\n( )\ti j\t\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \tth row\tj\nNote that the matrix \tcan also be obtained by\nperforming \ton \t.j \ti \tmR \tkR\t \tImI\nj \tiR \tkR\t\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nNote that the matrix \tcan also be obtained by\nperforming \ton \t.j \ti \tmR \tkR\t \tImI\nj \tiR \tkR\t\nth row\tj\nIt seems like we can 'represent' performing the\nelementary row operation \ton \tby\npre-multiplying a suitable matrix to \t.\nj \tiR \tkR\t \tB\nB\nBj \tiR \tkR\tC\nmI\tE\nThen we have .\t\tEB C\nj \tiR \tkR\t\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n  \n \n \n \n \nE\n1\n1\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\t\n \n \n \n \n  \n \n \n \n \nE\n1\nis invertible and\nis shown below\n(check it!)\n\nE E\n1\nis invertible and\nis shown below\n(check it!)\n\nE E\n1\n0 1\n1 0\n1\n \n \n \n \n   \n \n \n \n \n \nE\n1\n1\n0 1\n1 0\n1\n\n \n \n \n \n   \n \n \n \n \n \nE\n1\nis invertible and\nis shown below\n(check it!)\n\nE E\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE\n1\n1\n1\n1\n1\nk\n\n \t\n \t\n \t\n\t \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE\n1\nis invertible and\nis shown below\n(check it!)\n\nE E\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE\n1\n1\n1\n1\n1\nk\n\n \t\n \t\n \t\n \t\n \t  \t\n \t\t\n \t\n \t\n \t\n \t\nE\nLet be a matrix. For each of the three types\nof elementary row operations we can perform on :\nm n\t\tA\nA\nA\nicR\ni jR R\t\nj \tiR \tkR\t\n1B\n2B\n3B\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\n1 2 3\tthere are matrices \t( \t, , ) such thati i \t\tE\n1 2 3\tfor , , .i i i\t \tE A B\nFurthermore, each is an invertible matrix.iE\nA square matrix is an elementary matrix if it can be\nobtained from an identity matrix by performing\na single elementary row operation.\nNote that all elementary matrices are invertible and\ntheir inverses are themselves elementary matrices.\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\nmI\n1\ni\tc R\ni jR R\t\nj \tiR \tkR\t\n1\n1\n\nE\n1\n2\n\nE\n1\n3\n\nE\n1\nNote that if an elementary matrix represents a\nsingle elementary row operation , represents\nthe elementary row operation that 'un-do' .\nX\nX\n\nE\nE\n1 2 1 2 1\n1 0 1 1\n0 2 3 1\n1 0 3 4\nLet . Find a sequence of elementary\nmatrices , ,..., such that ... is the\nreduced row-echelon form of .\nk k k\n\t \n   \n  \nA\nE E E E E E E A\nA\nWrite down the inverses of each of the elementary\nmatrices and describe which elementary row\noperation these inverses represent.\nLecture 06:\nElementary matrices (cont’d)\nDeterminants (till Example 2.5.13)",
+  "sections": [
+    {
+      "heading": "Definition of matrices, entries, size of a matrix.",
+      "level": 1,
+      "text": "Special types of matrices.\nMatrix operations and some laws.\nMatrix multiplication and differences with real\nnumber multiplication.\nDifferent ways to represent matrix multiplication.\nRepresenting a linear system by a matrix equation.\nMatrix transpose and some laws."
+    },
+    {
+      "heading": "Inverses of square matrices",
+      "level": 2,
+      "text": "Elementary matrices"
+    },
+    {
+      "heading": "If is a real number, it is easy to solve\tx",
+      "level": 2,
+      "text": "2 5,\tx \n1 1\n2 2\n2\n2 1\nsince corresponding to ' ', there is another\nnumber ' ' such that , allowing us to have\t \n1 1\n2 22 5\tx\t  \n5\n21 x\t  \n5\n2x\t "
+    },
+    {
+      "heading": "If is a matrix, how can we solve\tX",
+      "level": 2,
+      "text": "2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n?\n \t   \n    \n   \n   \n   \nX\nIs there a matrix such that\n \n \n \n \n \n2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n \t     \n      \n     \n     \n     \nX"
+    },
+    {
+      "heading": "2 1 1",
+      "level": 2,
+      "text": "3 5 0\n0 1 4\n\t    \n      \n    \n    \n    \nX\n2 1 1\n3 5 0\n0 1 4\n\t  \n    \n  \n  \n  \nX\n(identity matrix)\t I\n2 1 3 2 1 1\n0 1 3 3 5 0\n3 1 2 0 1 4\n \t     \n      \n     \n     \n     \nX"
+    },
+    {
+      "heading": "Let be a square matrix of order .\tn\tA",
+      "level": 2,
+      "text": "is said to be an invertible matrix if there exists\nanother square matrix of the same order such\nthat\nA\nB\nn \tAB BA I\nIf such a exists, it is called an inverse of .\tB A\nis said to be singular if it has no inverse.\tA"
+    },
+    {
+      "heading": "The definition of an invertible matrix is an",
+      "level": 2,
+      "text": "existential one.\nCould there be more than one such ?\tB\n\"I tried very hard to find but I could not...\"\tB\n...does not mean does not exists!\tB"
+    },
+    {
+      "heading": "2 0 1 2 1 1",
+      "level": 2,
+      "text": "2 1 2 6 3 2\n3 1 0 5 2 2\nIs the inverse of ?\n \t   \n      \n   \n        \n2 0 1 2 1 1\n2 1 2 6 3 2\n3 1 0 5 2 2\nCheck\n \t    \n        \n    \n          \n2 1 1 2 0 1\n6 3 2 2 1 2\n5 2 2 3 1 0\nCheck\n \t    \n        \n    \n          "
+    },
+    {
+      "heading": "2 1 1 3 1 1",
+      "level": 2,
+      "text": "6 3 2 0 0 2\n5 2 2 1 0 1\nFind if .\n\t   \n      \n   \n        \nX X\n2 0 1 2 1 1 2 0 1 3 1 1\n2 1 2 6 3 2 2 1 2 0 0 2\n3 1 0 5 2 2 3 1 0 1 0 1\n    \t     \n          \n     \n            \nX\n7 2 3\n8 2 2\n9 3 5\n \t \n  \n \n  \nIX\n7 2 3\n8 2 2\n9 3 5\n.\n \t \n   \n \n  \nX"
+    },
+    {
+      "heading": "(By definition",
+      "level": 2,
+      "text": "of inverse)\n1 0\n1 0\nShow that is singular.\n \n \n \n1 0\n1 0\n2\nSuppose is invertible, then there must be a\nsquare matrix of order , say such that\na b\nc d\n \n \n \n \n \n \n1 0 1 0\n1 0 0 1\na b\nc d\n    \n    \n    "
+    },
+    {
+      "heading": "1 0 1 0",
+      "level": 2,
+      "text": "1 0 0 1\na b\nc d\n    \n    \n    \n1 0\n1 0\nThus it is impossible for to have an inverse,\nand so the matrix has to be singular.\n \n \n \n2 2\ta contradiction, by looking at the ( , )-entry\t\n0 1 0\n0 0 1\na b\nc d\n\t   \n       "
+    },
+    {
+      "heading": "2 1 1",
+      "level": 2,
+      "text": "6 3 2\n5 2 2\n2 0 1\n2 1 2\n3 1 0\nWe knew is invertible because\nwe were 'given' to 'test' whether\nand are both equal to .\n \n    \n \n    \n \t \n  \n \n \n \nA\nB\nAB BA I\n1 0\n1 0\nWe had to use contradiction to show that has\nno inverse. What if the matrix was bigger and more\ncomplicated?\n \n \n "
+    },
+    {
+      "heading": "Is there a more",
+      "level": 2,
+      "text": "effective way to\ncheck whether a\nmatrix is invertible?\nYes...but before that..."
+    },
+    {
+      "heading": "If is an invertible square matrix and\tA",
+      "level": 2,
+      "text": "1 2\tAB AB\n1 2then .\t\tB B\nIf is an invertible square matrix and\tA\n1 2\tC A C A\n1 2then .\t\tC C"
+    },
+    {
+      "heading": "If is not an invertible matrix, the cancellation",
+      "level": 2,
+      "text": "law may not hold:\nA\n1 0\n1 0 (known to be singular by previous example)\n \n  \n \nA\n1\n2 0\n0 1\n \n  \n \nB\n2\n2 0\n1 3\n \n  \n \nB\n1 2 1 2Check that , but .\t \tAB AB B B"
+    },
+    {
+      "heading": "If and are inverses of a square matrix , then\tB C A",
+      "level": 2,
+      "text": ".\t\tB C\nInverses are unique!\nThat is, if is an invertible square matrix, then\nit has one and only one inverse.\nA\n1\nSince inverses are unique, we will write as the\ninverse of if is invertible.\n\nA\nA A"
+    },
+    {
+      "heading": "It turns out that to check whether a given square",
+      "level": 2,
+      "text": "matrix is the inverse of , we only need to check\neither\nB A\n\tAB I\n2 4\tThe reason will be explained in Section . .\nOR\t\tBA I"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0\tLet . Show that if , then\nis invertible and .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b ad bc\nc d\n\n \t\n\n \n \n   \n \n \n  \n \nA\nA A\nSolution:\nCheck\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nc d\n\n \n\n \n \t  \t \n  "
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0\tLet . Show that if , then\nis invertible and .\nd b\nad bc ad bc\nc a\nad bc ad bc\na b ad bc\nc d\n\n \t\n\n \n \n   \n \n \n  \n \nA\nA A\nSolution:\nCheck\nd b\nad bc ad bc\nc a\nad bc ad bc\na b\nc d\n\n \n\n \n  \n  \n \t "
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1) Let \tbe an invertible matrix (so \texists) and\na non zero scalar. Then \tis invertible and\tc \tc\n\nA \tA\nA\n1 \t1\t1\n( \t) \t.cc  \t\n\tA \tA"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "2) Let be an invertible matrix (so exists) then\nis invertible andT\n\nA A\nA\n1 1\n( ) ( ) .T T\t \n\tA A\nInverse of transpose\nequal transpose of\ninverse"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1\n3) Let be an invertible matrix (so exists) then\nis invertible and\n\n\nA A\nA\n1 1\n( ) .  \tA A"
+    },
+    {
+      "heading": "1 1",
+      "level": 2,
+      "text": "4) Let and be two invertible matrices of the same\nsize (so and exists) then is invertible and \nA B\nA B AB\n1 1 1\n( ) .  \n\tAB B A\n*\nInverse of product\nequal product of\ninverse"
+    },
+    {
+      "heading": "1 1",
+      "level": 2,
+      "text": "4) Let and be two invertible matrices of the same\nsize (so and exists) then is invertible and \nA B\nA B AB\n1 1 1\n( ) .  \n\tAB B A\n1 2\n1 2\nAs an extension to the above, if , ,..., are\ninvertible matrices of the same size, then ( ... )\nis invertible and\nk\nk\nA A A\nA A A\n1 1 1 1\n1 2 2 1( ... ) ... .k k\n   \n\tA A A A A A"
+    },
+    {
+      "heading": "Let be a square matrix and be a non negative",
+      "level": 2,
+      "text": "integer, then\nn\tA\n0\n1\ntimes\nif ;\n... if .\nn\nn\nn\nn\n\t\n  \n\nI\nA AA A\nIf is an invertible square matrix, then is\ninvertible and we define\nn\nA A\n1 1 1 1\ntimes\n( ) ...n n\nn\n    \n \tA A A A A1\nand ( \t)n \tn\t \t\n\tA \tA"
+    },
+    {
+      "heading": "1 2",
+      "level": 2,
+      "text": "1 3\n \n  \n \nA1 3 2\n1 1\n \t \n   \nA\n2 1 2 1 2\n1 3 1 3\n    \n     \n    \nA\n2 3 2 3 2\n1 1 1 1\n  \t    \n          \nA"
+    },
+    {
+      "heading": "Let be a matrix.\tm n\t\tB",
+      "level": 2,
+      "text": " \t1 1 0 0 0\t...\t\ta\n \n \n   \n \n \nB\n \t1 1 0 0 0\t...\n \n \n   \n \n \na B\n \t\t...\t\nfirst row of\t B"
+    },
+    {
+      "heading": "Let be a matrix.\tm n\t\tB",
+      "level": 2,
+      "text": " \t2 0 1 0 0\t...\t\ta\n \n \n   \n \n \nB\n \t2 0 1 0 0\t...\n \n \n   \n \n \na B\n \t\t...\t\nsecond row of\t B"
+    },
+    {
+      "heading": "Let be a matrix.\tm n\t\tB",
+      "level": 2,
+      "text": " \t\t0 0\t... ...i c\t\ta\n \n \n   \n \n \nB\n \t\t0 0\t... ...i c\n \n \n   \n \n \na B\n \t\t...\tc\t\ntimes th row of\tc i\t B\nth position\ti\nth row\ti"
+    },
+    {
+      "heading": "Let be a matrix. What is the product equal to?\tm n\t\tB",
+      "level": 2,
+      "text": " \n \n \n \n \n \nB\nrows\nm\ncolumns\tm\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\t"
+    },
+    {
+      "heading": "Note that the product can be obtained by",
+      "level": 2,
+      "text": "performing elementary row operation to .icR B\n \n \n \n \n \n \nB\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\tBicR"
+    },
+    {
+      "heading": "Note that the matrix can also be obtained by",
+      "level": 2,
+      "text": "performing on .i mcR I\n \n \n \n \n \n \nB\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n \n \n \n \n \nth row\ti\n \n \n   \n \n \nrow\tc i\tBicR\nmIicR"
+    },
+    {
+      "heading": "It seems like we can 'represent' performing the",
+      "level": 2,
+      "text": "elementary row operation on by\npre-multiplying a suitable matrix to .\nicR B\nB\nBicRC\nmIicRE\nThen we have .\t\tEB C\nLet's investigate the other two types of elementary\nrow operations!"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n \nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\ti\nth row\tj\nth col\ti\tth col\tj\n \n \n   \n \n \nrow of\tj B\nrow of\ti B"
+    },
+    {
+      "heading": "Note that the product can be obtained by",
+      "level": 2,
+      "text": "performing elementary row operation to .i jR R\t B\n \n \n \n \n \n \nB\n \n \n   \n \n \nBi jR R\t\n1\n0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n row of\tj B\nrow of\ti B"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "0 1\n1 0\n1\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nB\n \n \n   \n \n \nBi jR R\trow of\tj B\nrow of\ti B\nNote that the matrix can also be obtained by\nperforming on .i j mR R\t ImI\ni jR R\t"
+    },
+    {
+      "heading": "It seems like we can 'represent' performing the",
+      "level": 2,
+      "text": "elementary row operation on by\npre-multiplying a suitable matrix to .\ni jR R\t B\nB\nBi jR R\tC\nmI\tE\nThen we have .\t\tEB C\nLet's investigate the last type of elementary\nrow operation!\ni jR R\t"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\ti\nth row\tj\nth col\ti\tth col\tj\n \n \n   \n \n \nth row\tj\n(row \tof \t) \t(row \tof \t)\tj \tk \ti\t\tB \tB( \t)\ti \tj\t"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nLet be a matrix. What is the product equal to?\tm n\t\tB\n \n \n \n \n \n \nB\nth row\tj\nth row\ti\nth col\tj\tth col\ti\n \n \n   \n \n \nth row\tj\n(row \tof \t) \t(row \tof \t)\tj \tk \ti\t\tB \tB\n( \t)\ti \tj\t"
+    },
+    {
+      "heading": "Note that the product can be obtained by",
+      "level": 2,
+      "text": "performing elementary row operation \tto \t.j \tiR \tkR\t \tB\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \tth row\tj( )\ti j\t"
+    },
+    {
+      "heading": "Note that the product can be obtained by",
+      "level": 2,
+      "text": "performing elementary row operation \tto \t.j \tiR \tkR\t \tB\n \n \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nth row\tj\n( )\ti j\t"
+    },
+    {
+      "heading": " ",
+      "level": 2,
+      "text": " \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \tth row\tj\nNote that the matrix \tcan also be obtained by\nperforming \ton \t.j \ti \tmR \tkR\t \tImI\nj \tiR \tkR\t"
+    },
+    {
+      "heading": " ",
+      "level": 2,
+      "text": " \n \n \n \n \nB\n \n \n   \n \n \nBj \tiR \tkR\t\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\nNote that the matrix \tcan also be obtained by\nperforming \ton \t.j \ti \tmR \tkR\t \tImI\nj \tiR \tkR\t\nth row\tj"
+    },
+    {
+      "heading": "It seems like we can 'represent' performing the",
+      "level": 2,
+      "text": "elementary row operation \ton \tby\npre-multiplying a suitable matrix to \t.\nj \tiR \tkR\t \tB\nB\nBj \tiR \tkR\tC\nmI\tE\nThen we have .\t\tEB C\nj \tiR \tkR\t"
+    },
+    {
+      "heading": "1 0 0",
+      "level": 2,
+      "text": "0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\n \n \n \n \n  \n \n \n \n \nE\n1\n1\n1 0 0\n0 0\n1\n0 0 1\n... ... ...\n... ...\n... ... ...\nc\t\n \n \n \n \n  \n \n \n \n \nE\n1\nis invertible and\nis shown below\n(check it!)\n\nE E"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "is invertible and\nis shown below\n(check it!)\n\nE E\n1\n0 1\n1 0\n1\n \n \n \n \n   \n \n \n \n \n \nE\n1\n1\n0 1\n1 0\n1\n\n \n \n \n \n   \n \n \n \n \n \nE"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "is invertible and\nis shown below\n(check it!)\n\nE E\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE\n1\n1\n1\n1\n1\nk\n\n \t\n \t\n \t\n\t \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE"
+    },
+    {
+      "heading": "1",
+      "level": 2,
+      "text": "is invertible and\nis shown below\n(check it!)\n\nE E\n1\n1\n1\n1\nk\n \t\n \t\n \t\n \t\n \t  \t\n \t\n \t\n \t\n \t\n \t\nE\n1\n1\n1\n1\n1\nk\n\n \t\n \t\n \t\n \t\n \t  \t\n \t\t\n \t\n \t\n \t\n \t\nE"
+    },
+    {
+      "heading": "Let be a matrix. For each of the three types",
+      "level": 2,
+      "text": "of elementary row operations we can perform on :\nm n\t\tA\nA\nA\nicR\ni jR R\t\nj \tiR \tkR\t\n1B\n2B\n3B\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\n1 2 3\tthere are matrices \t( \t, , ) such thati i \t\tE\n1 2 3\tfor , , .i i i\t \tE A B\nFurthermore, each is an invertible matrix.iE"
+    },
+    {
+      "heading": "A square matrix is an elementary matrix if it can be",
+      "level": 2,
+      "text": "obtained from an identity matrix by performing\na single elementary row operation."
+    },
+    {
+      "heading": "Note that all elementary matrices are invertible and",
+      "level": 2,
+      "text": "their inverses are themselves elementary matrices.\nmI\nicR\ni jR R\t\nj \tiR \tkR\t\n1E\n2E\n3E\nmI\n1\ni\tc R\ni jR R\t\nj \tiR \tkR\t\n1\n1\n\nE\n1\n2\n\nE\n1\n3\n\nE\n1\nNote that if an elementary matrix represents a\nsingle elementary row operation , represents\nthe elementary row operation that 'un-do' .\nX\nX\n\nE\nE"
+    },
+    {
+      "heading": "1 2 1 2 1",
+      "level": 2,
+      "text": "1 0 1 1\n0 2 3 1\n1 0 3 4\nLet . Find a sequence of elementary\nmatrices , ,..., such that ... is the\nreduced row-echelon form of .\nk k k\n\t \n   \n  \nA\nE E E E E E E A\nA\nWrite down the inverses of each of the elementary\nmatrices and describe which elementary row\noperation these inverses represent."
+    },
+    {
+      "heading": "Lecture 06:",
+      "level": 2,
+      "text": "Elementary matrices (cont’d)\nDeterminants (till Example 2.5.13)"
+    }
+  ]
+}
