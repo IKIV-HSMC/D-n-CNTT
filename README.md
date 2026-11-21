@@ -1,6 +1,6 @@
 # DocMind – AI Document-to-Mindmap
 
-> DocMind hiện có tài khoản, môn học, upload PDF/DOCX/PPTX, trích xuất văn bản, pipeline AI hai bước có thể cấu hình provider và xuất mã nguồn Mermaid.
+> Người dùng có thể tạo và xem mindmap từ PDF/DOCX/PPTX mà không cần tài khoản. Đăng nhập hoặc đăng ký khi muốn lưu tài liệu, lịch sử học tập hoặc tải kết quả.
 
 ---
 
@@ -92,15 +92,18 @@ pytest tests/ -v
 
 ## API Endpoints
 
-Các API dữ liệu yêu cầu đăng nhập; phiên đăng nhập dùng cookie HTTPOnly.
+Các API tài khoản và dữ liệu trong thư viện yêu cầu đăng nhập; phiên đăng nhập dùng cookie HTTPOnly. API tạo mindmap khách không lưu file hay kết quả vào tài khoản.
 
 ### Tài khoản
 ```
 POST /api/auth/register
 POST /api/auth/login
+POST /api/auth/google
 POST /api/auth/logout
 GET  /api/auth/me
 ```
+
+Đăng nhập Google dùng Google Identity Services để gửi ID token tới backend. Backend xác minh chữ ký, audience và thời hạn token trước khi tạo cookie phiên. Đặt cùng một OAuth Client ID vào `GOOGLE_CLIENT_ID` và `NEXT_PUBLIC_GOOGLE_CLIENT_ID`. Trong Google Cloud Console, tạo OAuth Client ID loại **Web application** và thêm origin của frontend vào **Authorized JavaScript origins** (ví dụ `http://localhost:3000`; nếu truy cập qua Nginx, thêm `http://localhost:8080`). Luồng này không cần Client Secret hay redirect URI.
 
 ### Môn học
 ```
@@ -120,6 +123,26 @@ Fields:
   subject_id  - UUID môn học của tài khoản hiện tại (tùy chọn)
 ```
 
+### Tạo mindmap không cần tài khoản
+```
+POST /api/mindmap/guest?mode=engine
+Content-Type: multipart/form-data
+
+Fields:
+  file - File PDF, DOCX hoặc PPTX
+  mode - engine hoặc ai (query parameter)
+```
+
+File được xử lý tạm trong bộ nhớ. Để lưu kết quả vào thư viện, người dùng đăng nhập rồi gọi API dưới đây:
+```
+POST /api/documents/save-generated
+Content-Type: multipart/form-data
+
+Fields:
+  file        - Tài liệu nguồn
+  result_json - Kết quả mindmap nhận từ API guest
+```
+
 ### Danh sách tài liệu
 ```
 GET /api/documents?page=1&page_size=20&search=&status=&file_type=
@@ -137,6 +160,7 @@ DELETE /api/documents/{id}
 
 ### Mindmap
 ```
+POST /api/mindmap/guest?mode=engine # Tạo và xem kết quả tạm thời, không cần tài khoản
 POST /api/mindmap/{id}?mode=engine  # Xếp tác vụ nền, trả 202 + run_id
 POST /api/mindmap/{id}?mode=ai      # Hai bước AI: knowledge JSON → mindmap + flashcard
 GET  /api/mindmap/runs/{run_id}    # Trạng thái, tiến độ và kết quả khi hoàn tất
@@ -184,6 +208,8 @@ Gửi `{"rating":"again"}`, `{"rating":"hard"}`, `{"rating":"good"}` hoặc `{"r
 | `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | URL backend cho frontend |
 | `AUTH_SESSION_TTL_DAYS` | `7` | Thời hạn phiên đăng nhập |
 | `AUTH_COOKIE_SECURE` | `false` | Đặt `true` khi triển khai HTTPS |
+| `GOOGLE_CLIENT_ID` | trống | OAuth Client ID dùng để backend xác minh ID token Google |
+| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | trống | Cùng OAuth Client ID để hiển thị nút đăng nhập Google ở frontend |
 | `AI_STEP1_PROVIDER` | `ollama` | Provider chuẩn hóa kiến thức |
 | `AI_STEP2_PROVIDER` | `ollama` | Provider tạo mindmap và flashcard |
 | `AI_STEP1_MODEL` | model Ollama mặc định | Model cho bước 1; để trống dùng `OLLAMA_MODEL` |
@@ -208,7 +234,7 @@ docker compose down -v
 
 ## Tình trạng tính năng
 
-- [x] Tài khoản, cookie phiên và phân quyền tài liệu theo chủ sở hữu
+- [x] Tài khoản email/mật khẩu và Google Sign-In, cookie phiên và phân quyền tài liệu theo chủ sở hữu
 - [x] Tạo môn học, gắn và lọc tài liệu theo môn
 - [x] Pipeline hai bước AI: JSON kiến thức rồi Mermaid/Flashcard; provider cấu hình riêng cho từng bước
 - [x] Hàng đợi PostgreSQL và worker bền vững cho tác vụ AI dài; có tiến độ, lease và retry

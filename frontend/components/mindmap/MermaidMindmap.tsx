@@ -6,6 +6,8 @@ import { Code2, Download, Minus, Plus, Printer, RotateCcw } from 'lucide-react';
 interface MermaidMindmapProps {
   source: string;
   filename?: string;
+  canExport?: boolean;
+  onExportBlocked?: () => void;
 }
 
 function safeFilename(filename?: string) {
@@ -21,7 +23,12 @@ function downloadText(content: string, filename: string, type: string) {
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export function MermaidMindmap({ source, filename }: MermaidMindmapProps) {
+export function MermaidMindmap({
+  source,
+  filename,
+  canExport = true,
+  onExportBlocked,
+}: MermaidMindmapProps) {
   const diagramRef = useRef<HTMLDivElement>(null);
   const reactId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const [svg, setSvg] = useState('');
@@ -84,6 +91,14 @@ export function MermaidMindmap({ source, filename }: MermaidMindmapProps) {
     }, { once: true });
   };
 
+  const runExport = (action: () => void) => {
+    if (!canExport) {
+      onExportBlocked?.();
+      return;
+    }
+    action();
+  };
+
   return (
     <div className="overflow-hidden rounded-xl border border-[rgba(90,108,240,0.12)] bg-surface-800/40">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/5 px-3 py-2">
@@ -104,13 +119,13 @@ export function MermaidMindmap({ source, filename }: MermaidMindmapProps) {
           <button onClick={() => setShowSource((value) => !value)} className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] text-slate-400 hover:bg-white/5 hover:text-slate-200">
             <Code2 size={13} /> {showSource ? 'Ẩn mã' : 'Mã Mermaid'}
           </button>
-          <button onClick={() => downloadText(source, `${safeFilename(filename)}.mmd`, 'text/plain;charset=utf-8')} className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] text-slate-400 hover:bg-white/5 hover:text-slate-200">
+          <button onClick={() => runExport(() => downloadText(source, `${safeFilename(filename)}.mmd`, 'text/plain;charset=utf-8'))} title={canExport ? 'Tải mã Mermaid' : 'Đăng nhập để tải mindmap'} className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] text-slate-400 hover:bg-white/5 hover:text-slate-200">
             <Download size={13} /> .mmd
           </button>
-          <button disabled={!svg} onClick={() => downloadText(svg, `${safeFilename(filename)}.svg`, 'image/svg+xml;charset=utf-8')} className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] text-slate-400 hover:bg-white/5 hover:text-slate-200 disabled:opacity-40">
+          <button disabled={!svg} onClick={() => runExport(() => downloadText(svg, `${safeFilename(filename)}.svg`, 'image/svg+xml;charset=utf-8'))} title={canExport ? 'Tải sơ đồ SVG' : 'Đăng nhập để tải mindmap'} className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] text-slate-400 hover:bg-white/5 hover:text-slate-200 disabled:opacity-40">
             <Download size={13} /> SVG
           </button>
-          <button disabled={!svg} onClick={printAsPdf} className="inline-flex items-center gap-1 rounded-md bg-brand-500/15 px-2 py-1.5 text-[11px] text-brand-300 hover:bg-brand-500/25 disabled:opacity-40">
+          <button disabled={!svg} onClick={() => runExport(printAsPdf)} title={canExport ? 'In sơ đồ hoặc lưu thành PDF' : 'Đăng nhập để tải mindmap'} className="inline-flex items-center gap-1 rounded-md bg-brand-500/15 px-2 py-1.5 text-[11px] text-brand-300 hover:bg-brand-500/25 disabled:opacity-40">
             <Printer size={13} /> In / PDF
           </button>
         </div>

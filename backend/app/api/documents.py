@@ -1,5 +1,5 @@
 """
-Document API – 4 endpoints:
+Document API – upload, save, list, read, download and delete endpoints:
   POST   /api/documents/upload
   GET    /api/documents
   GET    /api/documents/{id}
@@ -9,6 +9,7 @@ import uuid
 from pathlib import Path
 from typing import Optional
 import json
+from datetime import datetime, timezone
 
 from fastapi import (
     APIRouter,
@@ -22,6 +23,7 @@ from fastapi import (
     status,
 )
 from fastapi.responses import FileResponse
+from pydantic import ValidationError
 from sqlalchemy import select, func, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -30,6 +32,7 @@ from app.api.dependencies import validate_request_origin
 from app.core.config import settings
 from app.core.database import get_db
 from app.models.document import Document, DocumentStatus
+from app.models.processing_run import ProcessingRun
 from app.models.subject import Subject
 from app.models.user import User
 from app.schemas.document import (
@@ -38,12 +41,14 @@ from app.schemas.document import (
     DocumentResponse,
     ErrorResponse,
 )
+from app.schemas.mindmap_save import GeneratedMindmapSave
 from app.services.file_validator import (
     FileTooLargeError,
     InvalidFileError,
     validate_and_read,
 )
-from app.services.text_extractor import extract_text_background
+from app.services.text_extractor import extract_text_background, extract_text_from_bytes
+from app.services.mindmap_generator import persist_mindmap_result
 
 router = APIRouter(
     prefix="/api/documents",
@@ -136,6 +141,104 @@ async def upload_document(
     )
 
     return DocumentResponse.model_validate(doc)
+
+
+# ── POST /save-generated (đưa mindmap khách vào thư viện) ────────────────────
+
+@router.post(
+    "/save-generated",
+    response_model=DocumentResponse,
+    status_code=status.HTTP_201_CREATED,
+    summary="Lưu mindmap đã tạo vào thư viện tài khoản",
+    responses={400: {"model": ErrorResponse}, 413: {"model": ErrorResponse}},
+)
+async def save_generated_document(
+    file: UploadFile = File(..., description="Tài liệu nguồn PDF, DOCX hoặc PPTX"),
+    result_json: str = Form(..., description="Kết quả mindmap đã tạo"),
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> DocumentResponse:
+    """Persist a guest result only after its owner has authenticated."""
+    try:
+        file_type, content = await validate_and_read(file, settings.max_upload_bytes)
+    except FileTooLargeError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE,
+            detail={"code": "FILE_TOO_LARGE", "message": str(exc)},
+        ) from exc
+    except InvalidFileError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "INVALID_FILE", "message": str(exc)},
+        ) from exc
+
+    try:
+        generated = GeneratedMindmapSave.model_validate_json(result_json)
+    except ValidationError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "INVALID_MINDMAP", "message": "Dữ liệu mindmap không hợp lệ."},
+        ) from exc
+
+    try:
+        extracted_text, page_count = extract_text_from_bytes(file_type, content)
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "UNREADABLE_FILE", "message": "Không thể đọc nội dung file này."},
+        ) from exc
+    if len(extracted_text.strip()) < 10:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "NO_EXTRACTABLE_TEXT", "message": "Tài liệu không có văn bản để lưu."},
+        )
+
+    original_filename = Path((file.filename or "tai-lieu").replace("\\", "/")).name[:255]
+    stored_name = f"{uuid.uuid4()}.{file_type}"
+    storage_dir = Path(settings.STORAGE_PATH)
+    storage_dir.mkdir(parents=True, exist_ok=True)
+    file_path = storage_dir / stored_name
+
+    document = Document(
+        original_filename=original_filename,
+        stored_filename=stored_name,
+        file_type=file_type,
+        file_size=len(content),
+        user_id=user.id,
+        status=DocumentStatus.extracted,
+        extracted_text=extracted_text,
+        page_count=page_count,
+    )
+    now = datetime.now(timezone.utc)
+    try:
+        file_path.write_bytes(content)
+        db.add(document)
+        await db.flush()
+
+        result_data = generated.model_dump(mode="json", exclude_none=True)
+        result_data["document_id"] = str(document.id)
+        result_data = await persist_mindmap_result(db, document, result_data)
+
+        db.add(ProcessingRun(
+            document_id=document.id,
+            user_id=user.id,
+            mode="ai" if generated.backend == "ai_pipeline" else "engine",
+            status="completed",
+            stage="completed",
+            progress=100,
+            attempts=1,
+            result_data=json.dumps(result_data, ensure_ascii=False),
+            started_at=now,
+            completed_at=now,
+        ))
+        await db.commit()
+    except Exception:
+        await db.rollback()
+        file_path.unlink(missing_ok=True)
+        raise
+
+    await db.refresh(document)
+    return DocumentResponse.model_validate(document)
 
 
 # ── GET / (danh sách + phân trang + tìm kiếm) ─────────────────────────────────

@@ -103,13 +103,32 @@ export function FlashcardPractice({ documentId }: FlashcardPracticeProps) {
         <span>{card.is_new ? 'Thẻ mới' : `Đã ôn ${card.total_reviews} lần`}</span>
       </div>
 
-      <div className="flex min-h-56 flex-col justify-center rounded-2xl border border-[rgba(90,108,240,0.18)] bg-surface-800/60 p-7 text-center">
-        <p className="mb-3 text-[10px] uppercase tracking-widest text-slate-500">
-          {revealed ? 'Đáp án' : 'Câu hỏi'}
-        </p>
-        <p className="whitespace-pre-wrap text-lg leading-relaxed text-slate-100">
-          {revealed ? card.back : card.front}
-        </p>
+      <div className="[perspective:1200px]">
+        <button
+          type="button"
+          onClick={() => setRevealed((value) => !value)}
+          disabled={submitting}
+          aria-pressed={revealed}
+          aria-label={revealed ? 'Lật về câu hỏi' : 'Lật thẻ để xem đáp án'}
+          className="group relative block min-h-56 w-full rounded-2xl text-center outline-none focus-visible:ring-2 focus-visible:ring-brand-400 disabled:cursor-wait"
+        >
+          <span
+            className="absolute inset-0 flex min-h-56 flex-col items-center justify-center rounded-2xl border border-brand-400/25 bg-gradient-to-br from-[#20254b] via-surface-800 to-[#282044] p-7 shadow-lg transition-transform duration-500 group-hover:border-brand-300/50"
+            style={{ transform: revealed ? 'rotateY(180deg)' : 'rotateY(0deg)', backfaceVisibility: 'hidden' }}
+          >
+            <span className="mb-3 text-[10px] uppercase tracking-widest text-brand-200">Câu hỏi</span>
+            <span className="whitespace-pre-wrap text-lg leading-relaxed text-slate-100">{card.front}</span>
+            <span className="mt-6 text-xs text-slate-500">Nhấn thẻ để lật xem đáp án</span>
+          </span>
+          <span
+            className="absolute inset-0 flex min-h-56 flex-col items-center justify-center rounded-2xl border border-emerald-400/25 bg-gradient-to-br from-[#12382f] via-surface-800 to-[#173044] p-7 shadow-lg transition-transform duration-500 group-hover:border-emerald-300/50"
+            style={{ transform: revealed ? 'rotateY(0deg)' : 'rotateY(-180deg)', backfaceVisibility: 'hidden' }}
+          >
+            <span className="mb-3 text-[10px] uppercase tracking-widest text-emerald-200">Đáp án</span>
+            <span className="whitespace-pre-wrap text-lg leading-relaxed text-emerald-50">{card.back}</span>
+            <span className="mt-6 text-xs text-emerald-100/60">Nhấn thẻ để quay lại câu hỏi</span>
+          </span>
+        </button>
       </div>
 
       {!revealed ? (

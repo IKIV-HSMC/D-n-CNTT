@@ -17,6 +17,10 @@ class CredentialsRequest(BaseModel):
         return normalized
 
 
+class GoogleCredentialRequest(BaseModel):
+    credential: str = Field(min_length=1, max_length=8192)
+
+
 class UserResponse(BaseModel):
     id: UUID4
     email: str

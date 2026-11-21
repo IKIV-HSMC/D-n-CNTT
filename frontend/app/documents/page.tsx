@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { BrainCircuit, Check, LogOut, Pencil, Plus, RefreshCw, Trash2, X } from 'lucide-react';
 import { DropZone } from '@/components/upload/DropZone';
@@ -160,7 +161,7 @@ export default function DocumentsPage() {
     try {
       await logout();
     } finally {
-      router.replace('/login');
+      router.replace('/');
     }
   };
 
@@ -242,9 +243,13 @@ export default function DocumentsPage() {
     <div className="min-h-screen pb-20 pt-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Header */}
       <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <div>
+        <Link
+          href="/"
+          aria-label="Quay về trang chủ DocMind AI"
+          className="group block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
+        >
           <div className="flex items-center gap-2 mb-1">
-            <BrainCircuit size={28} className="text-brand-400" />
+            <BrainCircuit size={28} className="text-brand-400 transition-transform group-hover:scale-105" />
             <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-purple-300">
               DocMind AI
             </h1>
@@ -252,7 +257,7 @@ export default function DocumentsPage() {
           <p className="text-sm text-slate-400">
             Chuyển đổi tài liệu của bạn thành Mindmap và Flashcard thông minh.
           </p>
-        </div>
+        </Link>
         <div className="flex items-center gap-3">
           <span className="hidden sm:block text-sm text-slate-400">{user.email}</span>
           <button

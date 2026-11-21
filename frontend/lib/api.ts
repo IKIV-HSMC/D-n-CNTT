@@ -2,7 +2,7 @@ import axios, { AxiosProgressEvent } from 'axios';
 import {
   Document, DocumentDetail, DocumentListResponse, DocumentFilters, MindmapResult,
   Subject, User, FlashcardSessionResponse, FlashcardReviewResult, ReviewRating,
-  ProcessingRun,
+  ProcessingRun, GuestMindmapResponse,
 } from './types';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
@@ -37,6 +37,9 @@ export const authApi = {
   },
   login(email: string, password: string): Promise<User> {
     return apiClient.post<User>('/api/auth/login', { email, password }).then((r) => r.data);
+  },
+  google(credential: string): Promise<User> {
+    return apiClient.post<User>('/api/auth/google', { credential }).then((r) => r.data);
   },
   me(): Promise<User> {
     return apiClient.get<User>('/api/auth/me').then((r) => r.data);
@@ -84,6 +87,19 @@ export const documentsApi = {
       .then((r) => r.data);
   },
 
+  /** Save a guest-generated result after authentication. */
+  saveGenerated(file: File, result: MindmapResult): Promise<Document> {
+    const form = new FormData();
+    form.append('file', file);
+    form.append('result_json', JSON.stringify(result));
+    return apiClient
+      .post<Document>('/api/documents/save-generated', form, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+        timeout: 120_000,
+      })
+      .then((r) => r.data);
+  },
+
   /** Danh sách documents với phân trang + filter */
   list(filters: Partial<DocumentFilters> = {}): Promise<DocumentListResponse> {
     const params: Record<string, string | number> = {
@@ -112,6 +128,19 @@ export const documentsApi = {
 // ── Mindmap API ────────────────────────────────────────────────────────────────
 
 export const mindmapApi = {
+  /** Generate in memory for a guest; nothing is stored until the user saves. */
+  generateGuest(file: File, mode: 'engine' | 'ai' = 'engine'): Promise<GuestMindmapResponse> {
+    const form = new FormData();
+    form.append('file', file);
+    return apiClient
+      .post<GuestMindmapResponse>('/api/mindmap/guest', form, {
+        params: { mode },
+        headers: { 'Content-Type': 'multipart/form-data' },
+        timeout: 600_000,
+      })
+      .then((r) => r.data);
+  },
+
   /** Xếp một tác vụ sinh mindmap + flashcards vào hàng đợi nền. */
   start(documentId: string, mode: 'engine' | 'ai' = 'engine'): Promise<ProcessingRun> {
     return apiClient

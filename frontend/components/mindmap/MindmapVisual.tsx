@@ -8,11 +8,14 @@ import { cn } from '@/lib/utils';
 interface MindmapVisualProps {
   nodes: MindmapNode[];
   filename?: string;
+  canExport?: boolean;
+  onExportBlocked?: () => void;
 }
 
 interface LayoutNode {
   id: string;
   label: string;
+  description: string;
   parentId: string | null;
   x: number;
   y: number;
@@ -39,7 +42,12 @@ const BRANCH_COLORS = [
   '#6366f1', // Indigo
 ];
 
-export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProps) {
+export function MindmapVisual({
+  nodes,
+  filename = 'docmind',
+  canExport = true,
+  onExportBlocked,
+}: MindmapVisualProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [zoom, setZoom] = useState(1);
   const [exporting, setExporting] = useState(false);
@@ -71,6 +79,7 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
     const HORIZONTAL_GAP = 90;
     const VERTICAL_GAP = 28;
     const NODE_HEIGHT = 42;
+    const DESCRIBED_NODE_HEIGHT = 64;
     const PADDING = 60;
 
     let currentY = PADDING;
@@ -85,28 +94,31 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
       colorIdx: number
     ): { y: number; height: number } {
       const children = childrenMap.get(node.id) ?? [];
-      const textLen = (node.label || '').length;
-      const width = Math.max(130, Math.min(260, textLen * 9 + 36));
+      const description = (node.description || '').replace(/\s+/g, ' ').trim();
+      const textLen = Math.max((node.label || '').length, Math.min(description.length, 38));
+      const width = Math.max(130, Math.min(300, textLen * 8 + 36));
+      const height = description ? DESCRIBED_NODE_HEIGHT : NODE_HEIGHT;
 
       if (children.length === 0) {
         // Node lá
         const y = currentY;
-        currentY += NODE_HEIGHT + VERTICAL_GAP;
+        currentY += height + VERTICAL_GAP;
 
         const layoutNode: LayoutNode = {
           id: node.id,
           label: node.label,
+          description,
           parentId: node.parent_id,
           x: 0, // sẽ gán x sau
           y,
           width,
-          height: NODE_HEIGHT,
+          height,
           depth,
           colorIndex: colorIdx,
         };
         calculatedNodes.push(layoutNode);
         idToLayoutNode.set(node.id, layoutNode);
-        return { y: y + NODE_HEIGHT / 2, height: NODE_HEIGHT };
+        return { y: y + height / 2, height };
       }
 
       // Có con: vị trí Y của cha là trung bình vị trí Y của các con
@@ -118,22 +130,23 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
       });
 
       const avgY = childYPositions.reduce((a, b) => a + b, 0) / childYPositions.length;
-      const nodeY = avgY - NODE_HEIGHT / 2;
+      const nodeY = avgY - height / 2;
 
       const layoutNode: LayoutNode = {
         id: node.id,
         label: node.label,
+        description,
         parentId: node.parent_id,
         x: 0,
         y: nodeY,
         width,
-        height: NODE_HEIGHT,
+        height,
         depth,
         colorIndex: colorIdx,
       };
       calculatedNodes.push(layoutNode);
       idToLayoutNode.set(node.id, layoutNode);
-      return { y: avgY, height: NODE_HEIGHT };
+      return { y: avgY, height };
     }
 
     // Duyệt qua các root
@@ -273,19 +286,19 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
       <div className="flex items-center justify-between px-2 py-1 bg-surface-800/40 rounded-xl border border-[rgba(90,108,240,0.12)]">
         <div className="flex items-center gap-2">
           <button
-            onClick={exportAsPng}
+            onClick={() => canExport ? exportAsPng() : onExportBlocked?.()}
             disabled={exporting}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-500/20 text-brand-300 hover:bg-brand-500/30 border border-brand-500/30 transition-all cursor-pointer disabled:opacity-50"
-            title="Xuất thành ảnh PNG chất lượng cao"
+            title={canExport ? 'Xuất thành ảnh PNG chất lượng cao' : 'Đăng nhập để tải mindmap'}
           >
             <ImageIcon size={14} />
             {exporting ? 'Đang xuất...' : 'Xuất ảnh PNG'}
           </button>
 
           <button
-            onClick={exportAsSvg}
+            onClick={() => canExport ? exportAsSvg() : onExportBlocked?.()}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-surface-700 hover:bg-surface-600 text-slate-300 border border-[rgba(255,255,255,0.08)] transition-all cursor-pointer"
-            title="Xuất file vector SVG không vỡ nét"
+            title={canExport ? 'Xuất file vector SVG không vỡ nét' : 'Đăng nhập để tải mindmap'}
           >
             <FileCode size={14} />
             Xuất SVG
@@ -400,6 +413,7 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
                     filter="url(#node-shadow)"
                     className="cursor-pointer"
                   >
+                    {n.description && <title>{`${n.label}\n${n.description}`}</title>}
                     {/* Hộp node */}
                     <rect
                       width={n.width}
@@ -423,10 +437,10 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
                       />
                     )}
 
-                    {/* Nhãn chữ */}
+                    {/* Nhãn và phần giải thích ngắn của node */}
                     <text
                       x={isRoot ? n.width / 2 : 14}
-                      y={n.height / 2 + 4}
+                      y={n.description ? 23 : n.height / 2 + 4}
                       textAnchor={isRoot ? 'middle' : 'start'}
                       fill={isRoot ? '#ffffff' : '#e2e8f0'}
                       fontSize={isRoot ? '13' : '12'}
@@ -435,6 +449,20 @@ export function MindmapVisual({ nodes, filename = 'docmind' }: MindmapVisualProp
                     >
                       {n.label}
                     </text>
+                    {n.description && (
+                      <text
+                        x={14}
+                        y={48}
+                        textAnchor="start"
+                        fill="#94a3b8"
+                        fontSize="10"
+                        fontFamily="Inter, -apple-system, sans-serif"
+                      >
+                        {n.description.length > Math.floor((n.width - 28) / 6)
+                          ? `${n.description.slice(0, Math.floor((n.width - 34) / 6)).trimEnd()}…`
+                          : n.description}
+                      </text>
+                    )}
                   </g>
                 );
               })}

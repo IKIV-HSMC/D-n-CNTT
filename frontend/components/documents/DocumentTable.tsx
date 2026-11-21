@@ -95,27 +95,34 @@ export function DocumentTable({
                     <td className="px-4 py-4 text-slate-400 whitespace-nowrap">{formatDate(doc.created_at)}</td>
                     <td className="px-4 py-4"><StatusBadge status={doc.status} /></td>
                     <td className="px-4 py-4">
-                      <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="flex items-center justify-end gap-1.5">
                         <button
+                          type="button"
                           onClick={() => onView(doc)}
-                          className="p-2 text-slate-500 hover:text-brand-400 hover:bg-brand-500/10 rounded-lg transition-all"
+                          className="p-2 text-slate-400 hover:text-brand-300 hover:bg-brand-500/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
                           title="Xem chi tiết"
+                          aria-label={`Xem chi tiết ${doc.original_filename}`}
                         >
                           <Eye size={16} />
                         </button>
                         {doc.status === 'extracted' && (
                           <button
+                            type="button"
                             onClick={() => onMindmap(doc)}
-                            className="p-2 text-slate-500 hover:text-purple-400 hover:bg-purple-500/10 rounded-lg transition-all"
+                            className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-purple-300 hover:bg-purple-500/10 hover:text-purple-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
                             title="Sinh Mindmap & Flashcard"
+                            aria-label={`Tạo mindmap và flashcard từ ${doc.original_filename}`}
                           >
                             <BrainCircuit size={16} />
+                            <span className="hidden xl:inline text-xs font-medium">Tạo mindmap</span>
                           </button>
                         )}
                         <button
+                          type="button"
                           onClick={() => onDelete(doc)}
-                          className="p-2 text-slate-500 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all"
+                          className="p-2 text-slate-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                           title="Xóa"
+                          aria-label={`Xóa ${doc.original_filename}`}
                         >
                           <Trash2 size={16} />
                         </button>

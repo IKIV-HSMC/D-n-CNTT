@@ -76,8 +76,12 @@ async def generate_learning_material(
     for index, chunk in enumerate(chunks, start=1):
         prompt = (
             f"Tài liệu: {normalized_title}\nĐoạn {index}/{len(chunks)}\n\n"
-            "Hãy trích xuất các mục kiến thức có trong đoạn dưới đây. Bảo toàn thuật ngữ, "
-            "không thêm kiến thức bên ngoài. Trả về đúng JSON theo schema: "
+            "Phân tích nội dung đoạn tài liệu và nhóm các ý theo chủ đề/khái niệm, không tạo một mục riêng cho từng câu hoặc từng dòng. "
+            "Bảo toàn định nghĩa, luận điểm, điều kiện, quy trình, ví dụ, số liệu và quan hệ nguyên nhân-kết quả có trong nguồn. "
+            "Mỗi fact phải đủ ngữ cảnh để người đọc hiểu khi đứng riêng; giữ lại một cụm dẫn chứng ngắn từ tài liệu khi cần. "
+            "Nếu đây là thơ hoặc văn học, tổ chức theo chủ đề, mạch nội dung/cảm xúc, hình ảnh, biện pháp nghệ thuật và tác dụng "
+            "khi có căn cứ; không biến từng câu thơ thành nhánh chính và không khẳng định ý nghĩa không được văn bản hỗ trợ. "
+            "Không thêm kiến thức bên ngoài. Trả về tiếng Việt nếu nguồn là tiếng Việt và đúng JSON theo schema: "
             '{"title":"...","summary":"...","sections":[{"heading":"...",'
             '"level":1,"summary":"...","facts":["..."]}]}\n\n'
             f"NỘI DUNG:\n{chunk}"
@@ -115,8 +119,16 @@ async def generate_learning_material(
     knowledge_json = knowledge.model_dump(mode="json")
     presentation_prompt = (
         "Từ JSON kiến thức đã chuẩn hóa, tạo mindmap dạng cây và flashcard để ôn tập. "
-        "Chỉ dùng dữ kiện có trong JSON. Nhãn mindmap ngắn; mỗi flashcard có câu hỏi "
-        "cụ thể và câu trả lời đầy đủ. Trả về đúng JSON: "
+        "Chỉ dùng dữ kiện có trong JSON. Mindmap phải thể hiện đủ các ý quan trọng và quan hệ giữa chúng: "
+        "một nút gốc, các nhánh chính theo chủ đề, rồi nút con cho luận điểm, chi tiết, ví dụ hoặc dẫn chứng. "
+        "Không làm sơ đồ phẳng bằng cách đưa mọi câu hoặc mọi dòng thành nhánh ngang hàng; không lặp ý. "
+        "Nhãn nút ngắn, mô tả của mỗi nút giải thích rõ nội dung và ngữ cảnh bằng câu hoàn chỉnh. "
+        "Với thơ/văn học, ưu tiên chủ đề, mạch cảm xúc/nội dung, hình ảnh, biện pháp nghệ thuật và tác dụng "
+        "được hỗ trợ bởi văn bản; không tự suy diễn.\n"
+        "Flashcard phải là câu hỏi-đáp án rõ ràng, tự hiểu được khi xem riêng: câu hỏi nêu đúng chủ đề/ngữ cảnh; "
+        "mỗi thẻ hỏi một ý; đáp án trả lời trực tiếp rồi giải thích ngắn bằng dữ kiện nguồn. "
+        "Không tạo câu hỏi điền từ ngẫu nhiên, câu hỏi mơ hồ kiểu 'nói về điều gì', hoặc thẻ trùng lặp. "
+        "Trả về tiếng Việt nếu nguồn là tiếng Việt và đúng JSON: "
         '{"mindmap":{"nodes":[{"id":"n1","label":"...","description":"...",'
         '"parent_id":null}]},"flashcards":[{"front":"...","back":"...",'
         '"node_id":"n1"}]}\n\n'
@@ -335,10 +347,15 @@ def build_mermaid(title: str, nodes: list[dict[str, Any]]) -> str:
         return "\n".join(lines)
 
     root_id = nodes[0]["id"]
+    known_ids = {node["id"] for node in nodes}
     for node in nodes:
-        parent = node["parent_id"]
+        # The first node is represented by the Mermaid root declaration above.
+        # Adding it to the child list creates a second root and makes Mermaid fail.
         if node["id"] == root_id:
-            parent = None
+            continue
+        parent = node["parent_id"]
+        if parent not in known_ids or parent == node["id"]:
+            parent = root_id
         children.setdefault(parent, []).append(node)
 
     visited: set[str] = set()
@@ -351,7 +368,9 @@ def build_mermaid(title: str, nodes: list[dict[str, Any]]) -> str:
             lines.append(f"{'  ' * (depth + 1)}{safe_label(node['label'])}")
             add_children(node["id"], depth + 1)
 
-    add_children(None, 0)
+    # Mermaid's declared root is indented by two spaces, so its first-level
+    # branches must start at four spaces (and each descendant adds two more).
+    add_children(root_id, 1)
     return "\n".join(lines)
 
 

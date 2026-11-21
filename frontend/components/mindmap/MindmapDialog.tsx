@@ -4,14 +4,15 @@ import React, { useState, useCallback, useEffect } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {
   X, BrainCircuit, Sparkles, Loader2, AlertCircle,
-  ChevronRight, RotateCcw, BookOpen, FlipHorizontal2,
+  ChevronRight, RotateCcw, BookOpen,
   GitBranch, ListTree, Download,
 } from 'lucide-react';
-import { Document, MindmapResult, MindmapNode, Flashcard, MindmapStatus, ProcessingRun } from '@/lib/types';
+import { Document, MindmapResult, MindmapNode, MindmapStatus, ProcessingRun } from '@/lib/types';
 import { flashcardsApi, mindmapApi } from '@/lib/api';
 import { cn } from '@/lib/utils';
 import { MindmapVisual } from './MindmapVisual';
 import { FlashcardPractice } from './FlashcardPractice';
+import { FlashcardQuiz } from './FlashcardQuiz';
 import { MermaidMindmap } from './MermaidMindmap';
 
 interface MindmapDialogProps {
@@ -99,37 +100,6 @@ function TreeNode({
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Flashcard component (flip effect)
-// ─────────────────────────────────────────────────────────────────────────────
-
-function FlashcardItem({ card, index }: { card: Flashcard; index: number }) {
-  const [flipped, setFlipped] = useState(false);
-  return (
-    <div
-      className="cursor-pointer"
-      onClick={() => setFlipped((f) => !f)}
-      title="Click để lật thẻ"
-    >
-      <div className="relative p-4 rounded-xl border border-[rgba(90,108,240,0.15)] bg-surface-800/60 hover:bg-surface-700/60 transition-colors min-h-[90px] flex flex-col justify-between">
-        <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider mb-2">
-          {flipped ? 'Đáp án' : `Thẻ #${index + 1}`}
-        </span>
-        <p className={cn(
-          'text-sm leading-relaxed',
-          flipped ? 'text-emerald-300' : 'text-slate-200',
-        )}>
-          {flipped ? card.back : card.front}
-        </p>
-        <div className="flex items-center gap-1 mt-2 text-[10px] text-slate-600">
-          <FlipHorizontal2 size={10} />
-          <span>{flipped ? 'Click để xem câu hỏi' : 'Click để xem đáp án'}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
 // Main Dialog
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -145,7 +115,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
   const [error, setError] = useState<string | null>(null);
   const [tab, setTab] = useState<TabKey>('mindmap');
   const [viewMode, setViewMode] = useState<MindmapViewMode>('visual');
-  const [genMode, setGenMode] = useState<GenerationMode>('engine');
+  const [genMode, setGenMode] = useState<GenerationMode>('ai');
   const [practiceMode, setPracticeMode] = useState(false);
   const [ankiLoading, setAnkiLoading] = useState(false);
   const [ankiError, setAnkiError] = useState<string | null>(null);
@@ -347,11 +317,11 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                     )}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-brand-300">📑 Bóc tách cấu trúc (Khuyên dùng)</span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Siêu nhanh</span>
+                      <span className="text-sm font-semibold text-brand-300">📑 Theo bố cục tài liệu</span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Nhanh · không tóm ý</span>
                     </div>
                     <p className="text-xs text-slate-400 leading-relaxed">
-                      Lấy chính xác theo các cấp Heading (H1, H2, H3), bullet points và định nghĩa gốc của bài học. Phân cấp sâu, chi tiết và không lo AI bịa hay thiếu ý.
+                      Bám theo Heading, bullet và định nghĩa có sẵn. Phù hợp tài liệu có mục lục rõ; văn xuôi hoặc thơ có thể thành sơ đồ phẳng và thẻ hỏi đáp đơn giản.
                     </p>
                   </div>
 
@@ -365,11 +335,11 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                     )}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-purple-300">🤖 Pipeline AI hai bước</span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">AI 1 → AI 2</span>
+                      <span className="text-sm font-semibold text-purple-300">🤖 Phân tích nội dung bằng AI</span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Khuyên dùng</span>
                     </div>
                     <p className="text-xs text-slate-400 leading-relaxed">
-                      AI 1 chuẩn hóa kiến thức thành JSON; AI 2 tạo mindmap Mermaid và flashcard. Provider và model được cấu hình ở backend.
+                      Gom các ý liên quan thành nhánh, giải thích từng ý và tạo câu hỏi-đáp án có ngữ cảnh. Cần cấu hình AI provider/model ở backend.
                     </p>
                   </div>
                 </div>
@@ -379,7 +349,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm transition-all shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40"
                 >
                   <Sparkles size={16} />
-                  Bắt đầu tạo Mindmap ({genMode === 'engine' ? 'Theo mục lục bài học' : 'Pipeline AI hai bước'})
+                  {genMode === 'ai' ? 'Phân tích nội dung và tạo Mindmap bằng AI' : 'Tạo Mindmap theo bố cục tài liệu'}
                 </button>
               </div>
             )}
@@ -484,7 +454,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                       title={result.backend === 'structure_engine' ? 'Chuyển sang pipeline AI hai bước' : 'Chuyển sang bóc tách theo mục lục bài học'}
                     >
                       <Sparkles size={11} />
-                      {result.backend === 'structure_engine' ? 'Dùng Pipeline AI' : 'Đổi sang Theo mục lục'}
+                      {result.backend === 'structure_engine' ? 'Phân tích sâu bằng AI' : 'Đổi sang theo bố cục'}
                     </button>
                     <button
                       onClick={() => generate(genMode)}
@@ -628,11 +598,7 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                       ) : result.flashcards.length === 0 ? (
                         <p className="py-6 text-center text-sm text-slate-500">Không có flashcard nào</p>
                       ) : (
-                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                          {result.flashcards.map((card, i) => (
-                            <FlashcardItem key={card.id ?? i} card={card} index={i} />
-                          ))}
-                        </div>
+                        <FlashcardQuiz cards={result.flashcards} nodes={result.mindmap?.nodes ?? []} />
                       )}
                     </>
                   )}

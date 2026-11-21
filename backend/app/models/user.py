@@ -9,11 +9,15 @@ from app.core.database import Base
 
 class User(Base):
     __tablename__ = "users"
-    __table_args__ = (UniqueConstraint("email", name="uq_users_email"),)
+    __table_args__ = (
+        UniqueConstraint("email", name="uq_users_email"),
+        UniqueConstraint("google_sub", name="uq_users_google_sub"),
+    )
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     email = Column(String(320), nullable=False)
     password_hash = Column(String(255), nullable=False)
+    google_sub = Column(String(255), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
 
 

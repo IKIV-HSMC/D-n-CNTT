@@ -17,9 +17,10 @@ const MAX_BYTES = MAX_MB * 1024 * 1024;
 interface DropZoneProps {
   onFilesSelected: (files: File[]) => void;
   disabled?: boolean;
+  multiple?: boolean;
 }
 
-export function DropZone({ onFilesSelected, disabled }: DropZoneProps) {
+export function DropZone({ onFilesSelected, disabled, multiple = true }: DropZoneProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [validationError, setValidationError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -141,7 +142,7 @@ export function DropZone({ onFilesSelected, disabled }: DropZoneProps) {
         <input
           ref={inputRef}
           type="file"
-          multiple
+          multiple={multiple}
           accept=".pdf,.docx,.pptx"
           className="hidden"
           onChange={(e) => handleFiles(e.target.files)}

@@ -1,14 +1,16 @@
 'use client';
 
 import React, { FormEvent, useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { BrainCircuit, Loader2 } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
+import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
 import { cn } from '@/lib/utils';
 
 export default function LoginPage() {
   const router = useRouter();
-  const { user, loading, login, register } = useAuth();
+  const { user, loading, login, googleLogin, register } = useAuth();
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +37,11 @@ export default function LoginPage() {
     }
   };
 
+  const handleGoogleLogin = async (credential: string) => {
+    await googleLogin(credential);
+    router.replace('/documents');
+  };
+
   if (loading || user) {
     return <div className="min-h-screen flex items-center justify-center text-slate-400">Đang kiểm tra phiên đăng nhập...</div>;
   }
@@ -47,7 +54,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-slate-100">DocMind AI</h1>
         </div>
         <p className="text-center text-sm text-slate-400 mb-8">
-          {mode === 'login' ? 'Đăng nhập để tiếp tục học tập' : 'Tạo tài khoản để lưu tài liệu và tiến độ học'}
+          {mode === 'login' ? 'Đăng nhập để lưu tài liệu và tiến độ học tập' : 'Tạo tài khoản để lưu tài liệu và kết quả mindmap'}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -90,6 +97,13 @@ export default function LoginPage() {
           </button>
         </form>
 
+        <div className="my-5 flex items-center gap-3 text-xs text-slate-500">
+          <span className="h-px flex-1 bg-white/10" />
+          <span>hoặc</span>
+          <span className="h-px flex-1 bg-white/10" />
+        </div>
+        <GoogleSignInButton onSuccess={handleGoogleLogin} />
+
         <p className="text-sm text-center text-slate-400 mt-6">
           {mode === 'login' ? 'Chưa có tài khoản?' : 'Đã có tài khoản?'}{' '}
           <button
@@ -99,6 +113,12 @@ export default function LoginPage() {
           >
             {mode === 'login' ? 'Đăng ký' : 'Đăng nhập'}
           </button>
+        </p>
+
+        <p className="mt-5 text-center text-sm">
+          <Link href="/" className="text-slate-500 hover:text-brand-300">
+            Tiếp tục tạo mindmap không cần tài khoản
+          </Link>
         </p>
       </section>
     </main>

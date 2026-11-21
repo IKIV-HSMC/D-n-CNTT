@@ -100,6 +100,17 @@ def _extract_pptx(content: bytes) -> tuple[str, int]:
     return _normalize(full_text), len(prs.slides)
 
 
+def extract_text_from_bytes(file_type: str, content: bytes) -> tuple[str, int]:
+    """Extract text from an uploaded file without writing it to disk."""
+    if file_type == "pdf":
+        return _extract_pdf(content)
+    if file_type == "docx":
+        return _extract_docx(content)
+    if file_type == "pptx":
+        return _extract_pptx(content)
+    raise ValueError(f"Loại file không hỗ trợ: {file_type}")
+
+
 def _save_extracted_json(
     file_path: str,
     doc_uuid: str,
@@ -147,14 +158,7 @@ async def extract_text_background(
             file_bytes = Path(file_path).read_bytes()
 
             # Trích xuất theo loại file
-            if file_type == "pdf":
-                text, page_count = _extract_pdf(file_bytes)
-            elif file_type == "docx":
-                text, page_count = _extract_docx(file_bytes)
-            elif file_type == "pptx":
-                text, page_count = _extract_pptx(file_bytes)
-            else:
-                raise ValueError(f"Loại file không hỗ trợ: {file_type}")
+            text, page_count = extract_text_from_bytes(file_type, file_bytes)
 
             # Kiểm tra file có text không (PDF scan)
             if not text or len(text.strip()) < 10:

@@ -130,7 +130,7 @@ export interface ReactFlowEdge {
 }
 
 export interface MindmapResult {
-  document_id: string;
+  document_id?: string;
   mindmap: { nodes: MindmapNode[] };
   flashcards: Flashcard[];
   mermaid?: string;
@@ -149,6 +149,12 @@ export interface MindmapResult {
     step2_model: string;
     chunk_count: number;
   };
+}
+
+export interface GuestMindmapResponse {
+  original_filename: string;
+  page_count: number;
+  result: MindmapResult;
 }
 
 export type MindmapStatus = 'idle' | 'loading' | 'success' | 'error';

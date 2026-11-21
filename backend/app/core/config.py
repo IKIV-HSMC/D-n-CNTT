@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     AUTH_COOKIE_NAME: str = "docmind_session"
     AUTH_SESSION_TTL_DAYS: int = 7
     AUTH_COOKIE_SECURE: bool = False
+    GOOGLE_CLIENT_ID: str = ""
 
     # CORS – lưu dưới dạng JSON string trong .env, parse thành list
     CORS_ORIGINS: List[str] = ["http://localhost:3000"]

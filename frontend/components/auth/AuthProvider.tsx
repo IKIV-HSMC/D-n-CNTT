@@ -8,6 +8,7 @@ interface AuthContextValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<User>;
+  googleLogin: (credential: string) => Promise<User>;
   register: (email: string, password: string) => Promise<User>;
   logout: () => Promise<void>;
 }
@@ -38,6 +39,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return nextUser;
   }, []);
 
+  const googleLogin = useCallback(async (credential: string) => {
+    const nextUser = await authApi.google(credential);
+    setUser(nextUser);
+    return nextUser;
+  }, []);
+
   const register = useCallback(async (email: string, password: string) => {
     const nextUser = await authApi.register(email, password);
     setUser(nextUser);
@@ -52,7 +59,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const value = useMemo(() => ({ user, loading, login, register, logout }), [user, loading, login, register, logout]);
+  const value = useMemo(
+    () => ({ user, loading, login, googleLogin, register, logout }),
+    [user, loading, login, googleLogin, register, logout],
+  );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 

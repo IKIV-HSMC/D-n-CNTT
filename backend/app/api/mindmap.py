@@ -23,7 +23,7 @@ import uuid
 from pathlib import Path
 from typing import Any, Literal, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
+from fastapi import APIRouter, Depends, File, HTTPException, Query, Response, UploadFile, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -35,8 +35,12 @@ from app.models.processing_run import ProcessingRun
 from app.models.user import User
 from app.schemas.document import ErrorResponse
 from app.schemas.flashcard import ProcessingRunResponse
-from app.services.ai_pipeline import build_mermaid
+from app.services.ai_pipeline import AIServiceError, build_mermaid
+from app.core.config import settings
+from app.services.file_validator import FileTooLargeError, InvalidFileError, validate_and_read
+from app.services.mindmap_generator import generate_mindmap_result
 from app.services.ollama_service import check_ollama_health
+from app.services.text_extractor import extract_text_from_bytes
 
 logger = logging.getLogger(__name__)
 
@@ -53,6 +57,70 @@ router = APIRouter(
 async def mindmap_health() -> dict[str, Any]:
     """Kiểm tra Ollama đang chạy và model cấu hình sẵn sàng."""
     return await check_ollama_health()
+
+
+# ── POST /guest – Sinh mindmap tạm thời, không lưu tài liệu ──────────────────
+
+@router.post(
+    "/guest",
+    summary="Tạo mindmap không cần tài khoản",
+    responses={400: {"model": ErrorResponse}, 413: {"model": ErrorResponse}},
+)
+async def generate_guest_mindmap(
+    file: UploadFile = File(..., description="File PDF, DOCX hoặc PPTX"),
+    mode: Literal["engine", "ai"] = Query("engine", description="Chế độ tạo mindmap"),
+) -> dict[str, Any]:
+    """Extract and generate a result in memory; guest input is not persisted."""
+    try:
+        file_type, content = await validate_and_read(file, settings.max_upload_bytes)
+    except FileTooLargeError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE,
+            detail={"code": "FILE_TOO_LARGE", "message": str(exc)},
+        ) from exc
+    except InvalidFileError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "INVALID_FILE", "message": str(exc)},
+        ) from exc
+
+    filename = Path((file.filename or "tai-lieu").replace("\\", "/")).name[:255]
+    try:
+        extracted_text, page_count = extract_text_from_bytes(file_type, content)
+    except Exception as exc:  # noqa: BLE001
+        logger.info("Guest upload could not be extracted: %s", exc)
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "UNREADABLE_FILE", "message": "Không thể đọc nội dung file này."},
+        ) from exc
+
+    if len(extracted_text.strip()) < 10:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "NO_EXTRACTABLE_TEXT",
+                "message": "Tài liệu chưa có văn bản để tạo mindmap (PDF scan ảnh chưa được hỗ trợ OCR).",
+            },
+        )
+
+    try:
+        result = await generate_mindmap_result(
+            mode=mode,
+            extracted_text=extracted_text,
+            original_filename=filename,
+        )
+    except AIServiceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail={"code": "AI_PROVIDER_ERROR", "message": str(exc)},
+        ) from exc
+
+    # No document row, processing run, or uploaded file is created for guests.
+    return {
+        "original_filename": filename,
+        "page_count": page_count,
+        "result": result,
+    }
 
 
 # ── POST /{id} – Sinh mindmap mới ────────────────────────────────────────────
