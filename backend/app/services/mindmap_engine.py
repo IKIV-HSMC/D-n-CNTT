@@ -36,6 +36,29 @@ SENT_SPLIT = re.compile(r"(?<=[\.\!\?])\s+(?=[A-ZÀ-ỸĐ“\"])")
 TOKEN_RE = re.compile(r"[\wÀ-ỹ/\-]+", re.UNICODE)
 
 
+# Nhận dạng các dòng rác: ngày tháng, mã môn học, số slide, XML tags
+NOISE_PATTERNS = [
+    re.compile(r"^\d{1,4}$"),
+    re.compile(r"^(?:trang|page|slide)\s*\d+(?:\s*(?:/\s*\d+|của\s*\d+))?$", re.I),
+    re.compile(r"^(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2},?\s+\d{4}$", re.I),
+    re.compile(r"^\d{1,2}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4}$"),
+    re.compile(r"^\d{4,}\s*[\-\–]\s*.+$", re.I),
+    re.compile(r"^[A-Z0-9_\-]{6,}$"),
+    re.compile(r"^(?:topics?\s+covered|mục\s+lục|nội\s+dung\s+chính|agenda|table\s+of\s+contents)$", re.I),
+    re.compile(r"^<\/?(?:a|p|w|m|r|s|d):", re.I),
+]
+
+def is_noise_line(line: str) -> bool:
+    s = line.strip()
+    if not s or len(s) < 2:
+        return True
+    if s.startswith('<') and s.endswith('>'):
+        return True
+    for pat in NOISE_PATTERNS:
+        if pat.match(s):
+            return True
+    return False
+
 # ----------------------------------------------------------------- cấu trúc
 @dataclass
 class Section:
@@ -305,8 +328,29 @@ def generate_for_section(sec: Section, idf: Idf) -> dict:
     b = Builder(idf)
     root = b.node(short(sec.title, 70), None)
     for k, v in sec.kv:
-        kid = b.node(short(k, 40), root)
+        kid = b.node(short(k, 40), root, cap(v, 280))
         b.card(f"Trong “{short(sec.title, 48)}”, “{short(k, 40)}” là gì / nói về điều gì?", cap(v), kid)
+    for p in sec.paras:
+        for s in SENT_SPLIT.split(p):
+            m = re.match(r"^(?P<t>[A-ZĐÀ-Ỹ][^,.:;]{2,45}?)s+làs+(?P<d>.{15,})$", s.strip())
+            if m:
+                term = m.group("t").strip()
+                definition = cap(s.strip())
+                kid = b.node(short(term, 40), root, definition)
+                b.card(f"Trong “{short(sec.title, 48)}”, “{short(term, 40)}” được định nghĩa như thế nào?", definition, kid)
+    if len(b.nodes) < 3 and sec.paras:
+        for p in sec.paras[:5]:
+            s_list = [sent.strip() for sent in SENT_SPLIT.split(p) if len(sent.strip()) >= 20]
+            for s in s_list:
+                words = s.split()
+                if 3 <= len(words) <= 12:
+                    sub_label = short(s, 40)
+                    kid = b.node(sub_label, root, s)
+                    b.card(f"Trong mục “{short(sec.title, 48)}”, nội dung của “{sub_label}” là gì?", s, kid)
+                    if len(b.nodes) >= 5:
+                        break
+            if len(b.nodes) >= 5:
+                break
     return {"mindmap": {"nodes": b.nodes}, "flashcards": b.cards}
 
 

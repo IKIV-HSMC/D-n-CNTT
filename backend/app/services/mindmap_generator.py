@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import uuid
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,8 @@ from app.models.flashcard import Flashcard
 from app.services.ai_pipeline import ProgressCallback, build_mermaid, generate_learning_material
 from app.services.mindmap_engine import generate as engine_generate
 
+logger = logging.getLogger(__name__)
+
 
 async def generate_mindmap_result(
     *,
@@ -24,7 +27,33 @@ async def generate_mindmap_result(
 ) -> dict[str, Any]:
     title = Path(original_filename).stem
     if mode == "ai":
-        result = await generate_learning_material(extracted_text, title, on_progress=on_progress)
+        try:
+            result = await generate_learning_material(extracted_text, title, on_progress=on_progress)
+            # Nếu AI chỉ trả về 1 node (bị rỗng hoặc lỗi parser), tự động bổ trợ từ engine bố cục
+            nodes = result.get("mindmap", {}).get("nodes", [])
+            if len(nodes) <= 1:
+                logger.warning("AI mode chỉ trả về <= 1 node, tự động bổ trợ từ bố cục tài liệu.")
+                engine_res = engine_generate(
+                    {"extracted_text": extracted_text, "original_filename": original_filename},
+                    title=title,
+                )
+                if len(engine_res.get("mindmap", {}).get("nodes", [])) > 1:
+                    result["mindmap"] = engine_res["mindmap"]
+                    if not result.get("flashcards"):
+                        result["flashcards"] = engine_res.get("flashcards", [])
+                    result["mermaid"] = build_mermaid(title, result["mindmap"].get("nodes", []))
+                    result["model"] = f"{result.get('model', 'ai')} (Tự động bổ trợ nhánh từ tài liệu)"
+        except Exception as exc:
+            logger.error("AI pipeline lỗi (%s), tự động chuyển sang bóc tách cấu trúc tài liệu", exc)
+            if on_progress is not None:
+                await on_progress("engine_fallback", 50)
+            result = engine_generate(
+                {"extracted_text": extracted_text, "original_filename": original_filename},
+                title=title,
+            )
+            result["backend"] = "structure_engine_fallback"
+            result["model"] = "Tự động khôi phục từ cấu trúc tài liệu (AI gặp lỗi)"
+            result["mermaid"] = build_mermaid(title, result["mindmap"].get("nodes", []))
     else:
         if on_progress is not None:
             await on_progress("engine", 45)

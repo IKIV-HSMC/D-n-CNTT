@@ -95,9 +95,13 @@ async def generate_learning_material(
             response_schema=_knowledge_schema(),
         )
         try:
-            knowledge_part = KnowledgeDocument.model_validate(_parse_json(raw))
-        except (ValidationError, ValueError, TypeError) as exc:
-            raise AIServiceError(f"AI bước 1 trả về dữ liệu không đúng schema (đoạn {index}).") from exc
+            parsed = _parse_json(raw)
+            healed = _heal_knowledge_payload(parsed, normalized_title, chunk)
+            knowledge_part = KnowledgeDocument.model_validate(healed)
+        except Exception as exc:
+            logger.warning("AI bước 1 đoạn %s lỗi schema (%s), tự động phục hồi", index, exc)
+            fallback_healed = _heal_knowledge_payload({}, normalized_title, chunk)
+            knowledge_part = KnowledgeDocument.model_validate(fallback_healed)
         if index == 1 and knowledge_part.title.strip():
             normalized_title = knowledge_part.title.strip()
         if knowledge_part.summary.strip():
@@ -146,9 +150,13 @@ async def generate_learning_material(
         response_schema=_presentation_schema(),
     )
     try:
-        presentation = PresentationDocument.model_validate(_parse_json(raw_presentation))
-    except (ValidationError, ValueError, TypeError) as exc:
-        raise AIServiceError("AI bước 2 trả về mindmap hoặc flashcard không đúng schema.") from exc
+        parsed_pres = _parse_json(raw_presentation)
+        healed_pres = _heal_presentation_payload(parsed_pres, normalized_title, knowledge=knowledge)
+        presentation = PresentationDocument.model_validate(healed_pres)
+    except Exception as exc:
+        logger.warning("AI bước 2 lỗi schema (%s), tự động phục hồi", exc)
+        fallback_pres = _heal_presentation_payload({}, normalized_title, knowledge=knowledge)
+        presentation = PresentationDocument.model_validate(fallback_pres)
 
     nodes = _normalize_nodes(presentation.mindmap.nodes)
     cards = [
@@ -207,20 +215,32 @@ async def _call_provider(
     try:
         async with httpx.AsyncClient(timeout=timeout) as client:
             if provider == "ollama":
-                response = await client.post(
-                    f"{settings.OLLAMA_HOST.rstrip('/')}/api/chat",
-                    json={
-                        "model": model,
-                        "messages": [
-                            {"role": "system", "content": system},
-                            {"role": "user", "content": prompt},
-                        ],
-                        "format": "json",
-                        "stream": False,
-                        "options": {"temperature": 0.2, "num_predict": 8192},
-                    },
-                )
-                response.raise_for_status()
+                payload = {
+                    "model": model,
+                    "messages": [
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": prompt},
+                    ],
+                    "format": response_schema if response_schema else "json",
+                    "stream": False,
+                    "options": {"temperature": 0.2, "num_predict": 8192},
+                }
+                try:
+                    response = await client.post(
+                        f"{settings.OLLAMA_HOST.rstrip('/')}/api/chat",
+                        json=payload,
+                    )
+                    response.raise_for_status()
+                except httpx.HTTPStatusError as err:
+                    if err.response.status_code == 400 and payload["format"] != "json":
+                        payload["format"] = "json"
+                        response = await client.post(
+                            f"{settings.OLLAMA_HOST.rstrip('/')}/api/chat",
+                            json=payload,
+                        )
+                        response.raise_for_status()
+                    else:
+                        raise
                 return response.json().get("message", {}).get("content", "")
 
             if provider == "openai":
@@ -286,7 +306,7 @@ async def _call_provider(
 
 def _parse_json(raw: Any) -> Any:
     if not isinstance(raw, str):
-        raise AIServiceError("AI provider không trả về văn bản JSON.")
+        return {}
     text = raw.strip()
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text, flags=re.IGNORECASE)
@@ -295,8 +315,218 @@ def _parse_json(raw: Any) -> Any:
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start >= 0 and end > start:
-            return json.loads(text[start:end + 1])
-        raise
+            try:
+                return json.loads(text[start:end + 1])
+            except Exception:
+                pass
+        return {}
+
+
+def _heal_knowledge_payload(data: Any, default_title: str, chunk: str) -> dict[str, Any]:
+    if not isinstance(data, dict):
+        data = {}
+
+    for root_key in ("knowledge", "data", "result", "output", "document"):
+        if root_key in data and isinstance(data[root_key], dict) and "sections" in data[root_key]:
+            data = data[root_key]
+            break
+
+    title = str(data.get("title") or default_title or "Tài liệu học tập").strip()[:200]
+    if not title:
+        title = "Tài liệu học tập"
+
+    summary = str(data.get("summary") or "").strip()[:4000]
+
+    raw_sections = data.get("sections")
+    if not isinstance(raw_sections, list):
+        raw_sections = []
+        for k, v in data.items():
+            if isinstance(v, list) and v:
+                raw_sections = v
+                break
+
+    clean_sections = []
+    for idx, s in enumerate(raw_sections, 1):
+        if not isinstance(s, dict):
+            continue
+        heading = (
+            s.get("heading")
+            or s.get("title")
+            or s.get("name")
+            or s.get("topic")
+            or s.get("label")
+            or ""
+        )
+        heading = str(heading).strip()[:180]
+        if not heading:
+            heading = f"Mục kiến thức {idx}"
+
+        try:
+            level = int(s.get("level", 1))
+            if level < 1:
+                level = 1
+            elif level > 5:
+                level = 5
+        except (ValueError, TypeError):
+            level = 1
+
+        sec_summary = str(s.get("summary") or s.get("description") or "").strip()[:1600]
+
+        raw_facts = s.get("facts") or s.get("points") or s.get("details") or []
+        if isinstance(raw_facts, str):
+            raw_facts = [line.strip() for line in raw_facts.split("\n") if len(line.strip()) > 3]
+        elif not isinstance(raw_facts, list):
+            raw_facts = []
+
+        clean_facts = [str(f).strip()[:500] for f in raw_facts if str(f).strip()]
+        if not clean_facts and sec_summary:
+            clean_facts = [sec_summary[:300]]
+
+        clean_sections.append({
+            "heading": heading,
+            "level": level,
+            "summary": sec_summary,
+            "facts": clean_facts[:20],
+        })
+
+    if not clean_sections:
+        lines = [l.strip() for l in chunk.split("\n") if len(l.strip()) > 5 and not l.strip().startswith("<")]
+        fb_heading = lines[0][:80] if lines else "Nội dung trọng tâm"
+        fb_facts = lines[1:5] if len(lines) > 1 else [chunk[:200]]
+        clean_sections.append({
+            "heading": fb_heading,
+            "level": 1,
+            "summary": summary or (lines[0] if lines else ""),
+            "facts": fb_facts,
+        })
+
+    return {
+        "title": title,
+        "summary": summary,
+        "sections": clean_sections[:MAX_SECTIONS],
+    }
+
+
+def _heal_presentation_payload(
+    data: Any,
+    default_title: str,
+    knowledge: KnowledgeDocument | None = None,
+) -> dict[str, Any]:
+    if not isinstance(data, dict):
+        data = {}
+
+    for root_key in ("presentation", "data", "result", "output"):
+        if root_key in data and isinstance(data[root_key], dict) and "mindmap" in data[root_key]:
+            data = data[root_key]
+            break
+
+    mindmap = data.get("mindmap")
+    if not isinstance(mindmap, dict):
+        mindmap = {}
+
+    raw_nodes = mindmap.get("nodes")
+    if not isinstance(raw_nodes, list):
+        raw_nodes = []
+
+    clean_nodes = []
+    for idx, n in enumerate(raw_nodes, 1):
+        if not isinstance(n, dict):
+            continue
+        nid = str(n.get("id") or f"node-{idx}").strip()
+        label = str(n.get("label") or n.get("title") or n.get("name") or "").strip()[:180]
+        if not label:
+            label = f"Nhánh {idx}"
+        desc = str(n.get("description") or n.get("summary") or "").strip()[:1600]
+        pid = n.get("parent_id")
+        if pid is not None:
+            pid = str(pid).strip()
+        clean_nodes.append({
+            "id": nid,
+            "label": label,
+            "description": desc,
+            "parent_id": pid,
+        })
+
+    # Cứu hộ thông minh: Nếu AI không trả về nodes hoặc chỉ trả về <= 1 node,
+    # tự động dựng toàn bộ cây Mindmap từ các Section & Facts đã trích xuất ở Bước 1
+    if len(clean_nodes) <= 1 and knowledge and knowledge.sections:
+        clean_nodes = [
+            {
+                "id": "root",
+                "label": default_title[:100] or "Chủ đề chính",
+                "description": knowledge.summary or "Tổng quan tài liệu",
+                "parent_id": None,
+            }
+        ]
+        for s_idx, sec in enumerate(knowledge.sections[:MAX_SECTIONS], 1):
+            sec_id = f"s{s_idx}"
+            clean_nodes.append({
+                "id": sec_id,
+                "label": sec.heading[:180],
+                "description": sec.summary or sec.heading,
+                "parent_id": "root",
+            })
+            for f_idx, fact in enumerate(sec.facts[:6], 1):
+                clean_nodes.append({
+                    "id": f"{sec_id}_f{f_idx}",
+                    "label": fact[:100],
+                    "description": fact,
+                    "parent_id": sec_id,
+                })
+
+    if not clean_nodes:
+        clean_nodes.append({
+            "id": "root",
+            "label": default_title[:100] or "Chủ đề chính",
+            "description": "Nội dung tổng quan",
+            "parent_id": None,
+        })
+
+    raw_cards = data.get("flashcards")
+    if not isinstance(raw_cards, list):
+        raw_cards = []
+
+    node_ids = {n["id"] for n in clean_nodes}
+    fb_id = clean_nodes[0]["id"]
+    clean_cards = []
+    for idx, c in enumerate(raw_cards, 1):
+        if not isinstance(c, dict):
+            continue
+        front = str(c.get("front") or c.get("question") or "").strip()[:1000]
+        back = str(c.get("back") or c.get("answer") or "").strip()[:2000]
+        nid = str(c.get("node_id") or fb_id).strip()
+        if nid not in node_ids:
+            nid = fb_id
+        if front and back:
+            clean_cards.append({
+                "front": front,
+                "back": back,
+                "node_id": nid,
+            })
+
+    # Cứu hộ Flashcards: Nếu AI bước 2 không tạo flashcard, tự động tạo từ sections & facts
+    if not clean_cards and knowledge and knowledge.sections:
+        for s_idx, sec in enumerate(knowledge.sections[:30], 1):
+            sec_id = f"s{s_idx}" if f"s{s_idx}" in node_ids else fb_id
+            if sec.summary:
+                clean_cards.append({
+                    "front": f"Khái niệm / mục đích của {sec.heading} là gì?",
+                    "back": sec.summary,
+                    "node_id": sec_id,
+                })
+            for fact in sec.facts[:2]:
+                if len(clean_cards) >= MAX_OUTPUT_CARDS:
+                    break
+                clean_cards.append({
+                    "front": f"Điểm mấu chốt trong {sec.heading} là gì?",
+                    "back": fact,
+                    "node_id": sec_id,
+                })
+
+    return {
+        "mindmap": {"nodes": clean_nodes[:MAX_OUTPUT_NODES]},
+        "flashcards": clean_cards[:MAX_OUTPUT_CARDS],
+    }
 
 
 def _normalize_nodes(items: list[MindmapNodeOutput]) -> list[dict[str, Any]]:
