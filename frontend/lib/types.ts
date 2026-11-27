@@ -77,6 +77,7 @@ export interface MindmapNode {
   label: string;
   description?: string;   // Giải thích ngắn của node (AI mode)
   parent_id: string | null;
+  color?: string;
 }
 
 export interface Flashcard {

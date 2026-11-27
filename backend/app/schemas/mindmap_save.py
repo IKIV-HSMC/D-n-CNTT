@@ -9,6 +9,16 @@ class MindmapNodeSave(BaseModel):
     label: str = Field(min_length=1, max_length=180)
     description: str = Field(default="", max_length=1600)
     parent_id: str | None = Field(default=None, max_length=80)
+    color: str | None = Field(default=None, max_length=40)
+
+    model_config = ConfigDict(extra="allow")
+
+
+class MindmapUpdateRequest(BaseModel):
+    nodes: list[MindmapNodeSave] | None = None
+    mermaid: str | None = Field(default=None, max_length=2_000_000)
+
+    model_config = ConfigDict(extra="allow")
 
 
 class MindmapGraphSave(BaseModel):

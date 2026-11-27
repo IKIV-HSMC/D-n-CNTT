@@ -33,6 +33,16 @@ export function GuestResultPanel({
   const [ankiLoading, setAnkiLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Quản lý các nút mindmap khi chỉnh sửa ở chế độ khách
+  const [localNodes, setLocalNodes] = useState(result.mindmap?.nodes ?? []);
+
+  const handleNodesChange = (updated: typeof localNodes) => {
+    setLocalNodes(updated);
+    if (result.mindmap) {
+      result.mindmap.nodes = updated;
+    }
+  };
+
   const downloadAnki = async () => {
     if (!canExport) {
       onAuthRequired('Đăng nhập hoặc đăng ký để tải bộ flashcard Anki.');
@@ -68,7 +78,7 @@ export function GuestResultPanel({
     }
   };
 
-  const nodeCount = result.mindmap?.nodes?.length ?? 0;
+  const nodeCount = localNodes.length || (result.mindmap?.nodes?.length ?? 0);
   const cardCount = result.flashcards?.length ?? 0;
 
   return (
@@ -147,10 +157,11 @@ export function GuestResultPanel({
               />
             ) : (
               <MindmapVisual
-                nodes={result.mindmap?.nodes ?? []}
+                nodes={localNodes}
                 filename={filename}
                 canExport={canExport}
                 onExportBlocked={() => onAuthRequired('Đăng nhập hoặc đăng ký để tải sơ đồ mindmap.')}
+                onNodesChange={handleNodesChange}
               />
             )}
           </div>

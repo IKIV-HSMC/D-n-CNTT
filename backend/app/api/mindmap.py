@@ -35,6 +35,7 @@ from app.models.processing_run import ProcessingRun
 from app.models.user import User
 from app.schemas.document import ErrorResponse
 from app.schemas.flashcard import ProcessingRunResponse
+from app.schemas.mindmap_save import MindmapUpdateRequest
 from app.services.ai_pipeline import AIServiceError, build_mermaid
 from app.core.config import settings
 from app.services.file_validator import FileTooLargeError, InvalidFileError, validate_and_read
@@ -305,6 +306,48 @@ async def get_mindmap(
     data = json.loads(mindmap_data)
     data["document_id"] = str(document_id)
     return data
+
+
+# ── PUT /{id} – Cập nhật mindmap đã chỉnh sửa ────────────────────────────────
+
+@router.put(
+    "/{document_id}",
+    summary="Cập nhật sơ đồ Mindmap đã chỉnh sửa",
+    responses={
+        404: {"model": ErrorResponse},
+        400: {"model": ErrorResponse},
+    },
+)
+async def update_mindmap(
+    document_id: uuid.UUID,
+    payload: MindmapUpdateRequest,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """Cập nhật các nút của mindmap, sinh lại Mermaid và Reactflow tương ứng."""
+    doc = await _get_or_404(db, document_id, user.id)
+
+    raw_data = getattr(doc, "mindmap_data", None)
+    current_data = json.loads(raw_data) if raw_data else {}
+
+    title = Path(doc.original_filename).stem
+
+    if payload.nodes is not None:
+        nodes = [node.model_dump() for node in payload.nodes]
+        current_data.setdefault("mindmap", {})["nodes"] = nodes
+        if payload.mermaid is None:
+            current_data["mermaid"] = build_mermaid(title, nodes)
+        current_data["reactflow"] = _mindmap_to_reactflow({"nodes": nodes})
+
+    if payload.mermaid is not None:
+        current_data["mermaid"] = payload.mermaid
+
+    current_data["document_id"] = str(document_id)
+
+    doc.mindmap_data = json.dumps(current_data, ensure_ascii=False)
+    await db.commit()
+
+    return current_data
 
 
 # ── GET /{id}/reactflow ───────────────────────────────────────────────────────

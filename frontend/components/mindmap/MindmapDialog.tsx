@@ -120,6 +120,72 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
   const [ankiLoading, setAnkiLoading] = useState(false);
   const [ankiError, setAnkiError] = useState<string | null>(null);
 
+  // Trạng thái chỉnh sửa sơ đồ (nodes)
+  const [currentNodes, setCurrentNodes] = useState<MindmapNode[]>([]);
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Trạng thái chỉnh sửa mã Mermaid
+  const [mermaidHasChanges, setMermaidHasChanges] = useState(false);
+
+  useEffect(() => {
+    if (result?.mindmap?.nodes) {
+      setCurrentNodes(result.mindmap.nodes);
+      setHasUnsavedChanges(false);
+    } else {
+      setCurrentNodes([]);
+      setHasUnsavedChanges(false);
+    }
+  }, [result]);
+
+  const handleNodesChange = (updatedNodes: MindmapNode[]) => {
+    setCurrentNodes(updatedNodes);
+    setHasUnsavedChanges(true);
+    setResult((prev) => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        mindmap: { ...prev.mindmap, nodes: updatedNodes },
+      };
+    });
+  };
+
+  const handleSaveMindmap = async () => {
+    if (!document?.id) return;
+    setIsSaving(true);
+    setError(null);
+    try {
+      const updated = await mindmapApi.update(document.id, currentNodes);
+      setResult(updated);
+      setHasUnsavedChanges(false);
+    } catch (err: unknown) {
+      const e = err as { displayMessage?: string };
+      setError(e.displayMessage || 'Không thể lưu sơ đồ mindmap');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleMermaidSourceChange = (newSource: string) => {
+    setMermaidHasChanges(true);
+    setResult((prev) => prev ? { ...prev, mermaid: newSource } : prev);
+  };
+
+  const handleSaveMermaid = async (newSource?: string) => {
+    if (!document?.id) return;
+    const src = newSource ?? result?.mermaid ?? '';
+    setIsSaving(true);
+    try {
+      await mindmapApi.updateMermaid(document.id, src);
+      setMermaidHasChanges(false);
+    } catch (err: unknown) {
+      const e = err as { displayMessage?: string };
+      setError(e.displayMessage || 'Không thể lưu mã Mermaid');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   const generate = useCallback(async (selectedMode: GenerationMode = genMode) => {
     if (!document) return;
     setGenMode(selectedMode);
@@ -254,9 +320,9 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
   };
 
   // Build tree khi có result
-  const tree = result ? buildTree(result.mindmap?.nodes ?? []) : null;
+  const tree = currentNodes.length ? buildTree(currentNodes) : (result ? buildTree(result.mindmap?.nodes ?? []) : null);
   const roots = tree?.get(null) ?? [];
-  const nodeCount = result?.mindmap?.nodes?.length ?? 0;
+  const nodeCount = currentNodes.length || (result?.mindmap?.nodes?.length ?? 0);
   const cardCount = result?.flashcards?.length ?? 0;
   const completedRunHistory = runHistory.filter((item) => item.status === 'completed');
   const isLatestRun = !completedRunHistory.length || run?.id === completedRunHistory[0].id;
@@ -538,8 +604,12 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                   {tab === 'mindmap' && (
                     viewMode === 'visual' ? (
                       <MindmapVisual
-                        nodes={result.mindmap?.nodes ?? []}
+                        nodes={currentNodes.length ? currentNodes : (result.mindmap?.nodes ?? [])}
                         filename={document?.original_filename}
+                        onNodesChange={handleNodesChange}
+                        onSave={handleSaveMindmap}
+                        isSaving={isSaving}
+                        hasUnsavedChanges={hasUnsavedChanges}
                       />
                     ) : viewMode === 'tree' ? (
                       <div className="rounded-xl border border-[rgba(90,108,240,0.12)] bg-surface-800/40 p-4">
@@ -557,6 +627,10 @@ export function MindmapDialog({ document, open, onClose }: MindmapDialogProps) {
                       <MermaidMindmap
                         source={result.mermaid ?? ''}
                         filename={document?.original_filename}
+                        onSourceChange={handleMermaidSourceChange}
+                        onSave={handleSaveMermaid}
+                        isSaving={isSaving}
+                        hasUnsavedChanges={mermaidHasChanges}
                       />
                     )
                   )}

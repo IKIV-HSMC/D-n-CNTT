@@ -100,8 +100,12 @@ async def generate_learning_material(
             knowledge_part = KnowledgeDocument.model_validate(healed)
         except Exception as exc:
             logger.warning("AI bước 1 đoạn %s lỗi schema (%s), tự động phục hồi", index, exc)
-            fallback_healed = _heal_knowledge_payload({}, normalized_title, chunk)
-            knowledge_part = KnowledgeDocument.model_validate(fallback_healed)
+            try:
+                fallback_healed = _heal_knowledge_payload({}, normalized_title, chunk)
+                knowledge_part = KnowledgeDocument.model_validate(fallback_healed)
+            except Exception as exc2:
+                logger.warning("AI bước 1 đoạn %s fallback cũng lỗi (%s), bỏ qua đoạn này", index, exc2)
+                continue
         if index == 1 and knowledge_part.title.strip():
             normalized_title = knowledge_part.title.strip()
         if knowledge_part.summary.strip():

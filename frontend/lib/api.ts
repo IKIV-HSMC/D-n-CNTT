@@ -1,6 +1,6 @@
 import axios, { AxiosProgressEvent } from 'axios';
 import {
-  Document, DocumentDetail, DocumentListResponse, DocumentFilters, MindmapResult,
+  Document, DocumentDetail, DocumentListResponse, DocumentFilters, MindmapResult, MindmapNode,
   Subject, User, FlashcardSessionResponse, FlashcardReviewResult, ReviewRating,
   ProcessingRun, GuestMindmapResponse,
 } from './types';
@@ -165,6 +165,16 @@ export const mindmapApi = {
   /** Lấy kết quả mindmap đã sinh trước đó */
   get(documentId: string): Promise<MindmapResult> {
     return apiClient.get<MindmapResult>(`/api/mindmap/${documentId}`).then((r) => r.data);
+  },
+
+  /** Cập nhật các node của mindmap đã chỉnh sửa */
+  update(documentId: string, nodes: MindmapNode[]): Promise<MindmapResult> {
+    return apiClient.put<MindmapResult>(`/api/mindmap/${documentId}`, { nodes }).then((r) => r.data);
+  },
+
+  /** Cập nhật mã nguồn Mermaid của mindmap */
+  updateMermaid(documentId: string, mermaid: string): Promise<MindmapResult> {
+    return apiClient.put<MindmapResult>(`/api/mindmap/${documentId}`, { mermaid }).then((r) => r.data);
   },
 
   /** Kiểm tra Ollama sẵn sàng chưa */
