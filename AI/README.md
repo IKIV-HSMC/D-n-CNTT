@@ -1,5 +1,23 @@
 # Doc → Mindmap & Flashcards: bộ công cụ đầy đủ
 
+## Tải & cài đặt Model đã huấn luyện (`AI/mindmap-model-gguf`)
+Do 2 file weights `.safetensors` (~5.88 GB) vượt quá giới hạn 100 MB/file của GitHub nên được chia nhỏ và lưu tại **GitHub Releases**:
+
+- **Link tải:** https://github.com/IKIV-HSMC/D-n-CNTT/releases/tag/model-v1.0
+
+### Các bước cài đặt (Windows):
+1. Truy cập link Release ở trên và tải **tất cả 6 file** về thư mục `AI/mindmap-model-gguf/`:
+   - `merge_model.bat`
+   - `model-00001-of-00002.safetensors.part1`
+   - `model-00001-of-00002.safetensors.part2`
+   - `model-00001-of-00002.safetensors.part3`
+   - `model-00002-of-00002.safetensors.part1`
+   - `model-00002-of-00002.safetensors.part2`
+2. Mở thư mục `AI/mindmap-model-gguf/` và nhấp đúp chạy file `merge_model.bat` (hoặc chạy trong CMD/PowerShell tại thư mục đó) để ghép lại thành 2 file hoàn chỉnh:
+   - `model-00001-of-00002.safetensors`
+   - `model-00002-of-00002.safetensors`
+3. Sau khi ghép xong thành công, bạn có thể xóa các file `.part*` và `merge_model.bat` để tiết kiệm dung lượng.
+
 ## Các file
 | File | Dùng để |
 |---|---|
